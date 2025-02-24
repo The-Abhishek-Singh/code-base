@@ -54,12 +54,20 @@ const ScrollCards = () => {
     }
   };
 
+  const handleScroll = () => {
+    // Track scroll position or trigger animations
+    const scrollY = window.scrollY;
+    console.log('Current scroll position:', scrollY);
+  };
+
   useEffect(() => {
     const allCards = document.querySelectorAll(".cards-scroll .card");
     const headerHeight = 70;
     const cardsCount = allCards.length;
     const cardSpacing = 5;
 
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
 
     const cardsClickHandler = (index) => {
       let topScrollValue = window.innerHeight * index - headerHeight * index;
@@ -119,7 +127,8 @@ const ScrollCards = () => {
 
       
 
-      return () => window.removeEventListener('scroll', handleScroll);
+      // Cleanup scroll listener
+      window.removeEventListener('scroll', handleScroll);
     }
   }, []);
 
