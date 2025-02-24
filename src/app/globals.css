@@ -15,3 +15,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
+
+
+.servicegradient{
+
+  background: linear-gradient(to bottom, #000000, #1E1E1E, #252525 , #232323, #141414 , #000000 );
+
+
+}
+
+
+
+
+/* Animations Only  */
+
+
+.mask1   {
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+}
