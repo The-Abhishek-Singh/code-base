@@ -8,7 +8,6 @@ const page = () => {
     <div>
       
 
-      <div className='h-20 w-full'></div>
       <div><ImageCarousel/></div>
       <div><Main/></div>
       <div><OurTeamGallery/></div>

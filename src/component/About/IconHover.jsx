@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 
 function IconHover({ icon: Icon }) {
   return (
@@ -22,8 +22,6 @@ function IconHover({ icon: Icon }) {
   );
 }
 
-IconHover.propTypes = {
-  icon: PropTypes.elementType.isRequired,
-};
+
 
 export default IconHover;
