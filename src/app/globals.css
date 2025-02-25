@@ -35,3 +35,44 @@ body {
       height: 400px;
   }
 }
+
+
+
+@media (min-width: 1550px) {
+  .custom-width001{
+    width: 25rem;
+    height: 500px;
+  }
+}
+@media (min-width: 1872px){
+  .custom-width001{
+    width: 28rem;
+    height: 600px;
+  }
+}
+@media(min-width: 2064px ){
+  .custom-width001{
+    width: 32rem;
+    height: 650px;
+  }
+}
+@media(min-width: 2320px ){
+  .custom-width001{
+    width: 35rem;
+    height: 700px;
+  }
+}
+@media(min-width: 2512px ){
+  .custom-width001{
+    width: 38rem;
+    height: 760px;
+  }
+}
+@media (640px <= width < 1550px) {
+  .custom-width001{
+      width: 20rem /* 320px */;
+  }
+  .custom-width001{
+      height: 440px;
+  }
+}

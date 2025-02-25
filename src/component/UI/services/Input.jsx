@@ -22,7 +22,7 @@ const Input = () => {
 
 <form
       onSubmit={handleSubmit}
-      className="bg-white text-black font-light sm:text-lg text-sm mt-4 rounded-2xl sm:w-[48%] w-[80%] sm:h-16 h-14 flex justify-end opacity-90"
+      className="bg-white text-black font-light sm:text-lg text-sm mt-[3vw] rounded-2xl sm:w-[48%] w-[80%] sm:h-16 h-14 flex justify-end opacity-90"
     >
       <div className='m-5'>
       <Search />

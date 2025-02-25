@@ -1,444 +1,355 @@
-"use client";
-import { motion } from "framer-motion";
-import Image from "next/image";
 import React from "react";
-import "@/styles/aboutUs.css";
-import IconHover from "../../component/About/IconHover";
-import { Goal, HandHeart, ScanEye } from "lucide-react";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-function AboutUs() {
+import IconHover from "@/component/About/IconHover";
+import { ScanEye, Goal, HandHeart } from "lucide-react";
+import Image from "next/image";
+import ScrollReveal from "@/component/About/ScrollReveal";
+function page() {
   return (
     <>
-    <div className="bg-black h-auto">
-      <div id="flexforpage1">
-      
-        <motion.div
-          initial={{ opacity: 0, x: -300 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.69,
-            type: "spring",
-          }}
-          id="page1"
-        >
-          <div className="line1">
-            <h5 style={{ color: "white" }}>&nbsp;About</h5>
-            <h2 style={{ color: "red" }}>
-              <span>&nbsp;</span>Careertronics
+      {/* <div className='bg-black h-15'></div> */}
+      <div className="bg-black min-h-screen py-12 font-poppins">
+        <div className="px-6 md:max-w-5xl lg:max-w-[88rem] mx-auto">
+          <div className="flex flex-col gap-24">
+            <ScrollReveal
+              animation="fadeSlideLeft"
+              duration={800}
+              easing="spring"
+              delay={50}
+            >
+              <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 rounded-3xl p-8 md:p-10 shadow-2xl">
+                {/* Content */}
+                <div className="space-y-1 mb-8">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1 h-8 bg-red-500"></div>
+                    <h2 className="!text-white text-xl font-semibold">About</h2>
+                  </div>
+                  <h1 className="!text-red-500 text-4xl md:text-5xl font-semibold tracking-tight pl-3">
+                    Careertronics
+                  </h1>
+                </div>
+                <div className="space-y-8 text-gray-100">
+                  <p className="text-sm sm:text-lg ">
+                    At Careertronic Global Services Pvt. Ltd. (CGSPL), we are
+                    driven by a singular purpose: to empower businesses and
+                    individuals to thrive in a fast-changing, interconnected
+                    world. Founded with a vision to provide innovative,
+                    high-quality services, we have become a global leader in
+                    Software Development, IT Training, Industrial Automation
+                    Training, Corporate & Industrial Training, Global Education,
+                    and Business Consulting.
+                  </p>
+                  <p className="text-lg hidden sm:block ">
+                    Our mission is to enable sustainable growth and long-term
+                    success for clients through tailored solutions. Whether
+                    it&apos;s driving digital transformation, enhancing
+                    professional skills, or exploring global education, we are
+                    committed to guiding you every step of the way.
+                  </p>
+                  <p className="text-lg hidden md:block ">
+                    With a focus on excellence, we help individuals advance
+                    their careers and organizations optimize performance,
+                    ensuring they stay competitive in an increasingly complex
+                    market.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-12">
+              <ScrollReveal
+                animation="slideUp"
+                duration={700}
+                easing="spring"
+                delay={0}
+                index={0}
+                stagger={150}
+              >
+                <div className="text-center p-2">
+                  <div className="flex justify-center items-center w-full h-auto mb-8">
+                    <IconHover icon={ScanEye} />
+                  </div>
+                  <h1 className="font-poppins text-3xl text-red-500 font-bold mb-7">
+                    OUR MISSION
+                  </h1>
+                  <div className="flex justify-center items-center w-full">
+                    <p className="text-sm lg:text-base !leading-relaxed max-w-lg text-center md:text-start">
+                      At Careertronic Global Services Pvt. Ltd. (CGSPL), we
+                      empower businesses and individuals through advanced
+                      technology, tailored training, and global education. Our
+                      mission is to deliver innovative solutions, drive
+                      sustainable growth, and build lasting partnerships for
+                      success in a digital world.
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal
+                animation="slideUp"
+                duration={700}
+                easing="spring"
+                delay={0}
+                index={1}
+                stagger={150}
+              >
+                <div className="text-center p-2">
+                  <div className="flex justify-center items-center w-full h-auto mb-8">
+                    <IconHover icon={Goal} />
+                  </div>
+                  <h1 className="font-poppins text-3xl text-red-500 font-bold mb-7">
+                    OUR VISION&nbsp;
+                  </h1>
+                  <div className="flex justify-center items-center w-full">
+                    <p className="text-sm lg:text-base !leading-relaxed max-w-lg text-center md:text-start">
+                      At Careertronic Global Services Pvt. Ltd. (CGSPL), we aim
+                      to be a global leader in IT solutions, training, and
+                      education, delivering innovative services that empower
+                      individuals and organizations. Our vision is to drive
+                      digital transformation, career growth, and success by
+                      equipping clients with the tools and knowledge to thrive
+                      in a dynamic world.
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal
+                animation="slideUp"
+                duration={700}
+                easing="spring"
+                delay={0}
+                index={2}
+                stagger={150}
+              >
+                <div className="text-center p-2">
+                  <div className="flex justify-center items-center w-full h-auto mb-8">
+                    <IconHover icon={HandHeart} />
+                  </div>
+                  <h1 className="font-poppins text-3xl text-red-500 font-bold mb-7 ">
+                    OUR VALUES
+                  </h1>
+                  <div className="flex flex-col justify-center items-center w-full">
+                    <p className="mb-2 text-sm lg:text-base !leading-relaxed max-w-md  text-center md:text-start">
+                      At Careertronic Global Services Pvt. Ltd. (CGSPL), our
+                      core values define our commitment to excellence and
+                      success for clients and partners:
+                    </p>
+                  </div>
+                  <ul className="list-disc  text-center md:text-start   list-inside text-sm lg:text-base !leading-relaxed">
+                    <li id="textPage2">
+                      <strong>Striving for Innovation</strong>
+                    </li>
+                    <li id="textPage2">
+                      <strong>Pursuing Excellence</strong>
+                    </li>
+                    <li id="textPage2">
+                      <strong>Customer-Centricity</strong>
+                    </li>
+                    <li id="textPage2">
+                      <strong>Upholding Integrity</strong>
+                    </li>
+                    <li id="textPage2">
+                      <strong>Promoting Collaboration</strong>
+                    </li>
+                  </ul>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            <div className="w-full max-w-7xl mx-auto flex flex-col gap-12">
+            <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-gray-900 rounded-[32px] p-8 lg:p-12 shadow-2xl">
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+        {/* Content Section */}
+        <div className="flex-1 space-y-6">
+          <ScrollReveal animation="slideDown" duration={900} easing="spring">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              What We <span className="text-red-500">Do</span>?
             </h2>
-          </div>
-          <p id="aboutText">
-            At Careertronic Global Services Pvt. Ltd. (CGSPL), we are driven by
-            a singular purpose: to empower businesses and individuals to thrive
-            in a fast-changing, interconnected world. Founded with a vision to
-            provide innovative, high-quality services, we have become a global
-            leader in Software Development, IT Training, Industrial Automation
-            Training, Corporate & Industrial Training, Global Education, and
-            Business Consulting.
-          </p>
-          <p id="aboutText">
-            Our mission is to enable sustainable growth and long-term success
-            for clients through tailored solutions. Whether it&apos;s driving
-            digital transformation, enhancing professional skills, or exploring
-            global education, we are committed to guiding you every step of the
-            way.
-          </p>
-          <p id="aboutText">
-            With a focus on excellence, we help individuals advance their
-            careers and organizations optimize performance, ensuring they stay
-            competitive in an increasingly complex market.
-          </p>
-        </motion.div>
-      </div>
-
-      <div id="page2" className="text-center">
-        <div className="row container" id="page2div2">
-          <div id="ourMission" className="col-xl-4 ">
-            <div id="ourMissionImage" className="flex justify-center">
-              <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1.4,
-                  type: "spring",
-                }}
-              >
-                <IconHover icon={ScanEye} />
-              </motion.div>
+          </ScrollReveal>
+          
+          <ScrollReveal animation="slideLeft" duration={800} delay={200} easing="smooth">
+            <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+              Our team holds a decade of experience in guiding your
+              overseas career. Careertronics stands as extraordinary
+              overseas portal, providing invaluable assistance to
+              professional navigating the complexities of international
+              employment.
+            </p>
+          </ScrollReveal>
+          
+          <ScrollReveal animation="slideLeft" duration={800} delay={400} easing="bouncy">
+            <p className="text-gray-200 hidden md:block text-base md:text-lg leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the
+              industry&apos;s standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived
+              not only five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset
+              sheets containing.
+            </p>
+          </ScrollReveal>
+        </div>
+        
+        {/* Image Section */}
+        <div className="flex-1 hidden lg:flex justify-center items-center">
+          <ScrollReveal animation="slideUp" duration={1200} delay={300} easing="gentle" className=" w-full">
+            <div className="relative w-full max-w-md h-[30rem]">
+              <Image
+                objectFit="contain"
+                layout="fill"
+                src="/about/page3img.svg"
+                alt="learner"
+              />
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 200 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 1.4,
-                type: "spring",
-              }}
-            >
-              <div id="ourMissionText">
-                <h1 id="mainTextPage2">OUR MISSION</h1>
-              </div>
-              <div>
-                <p id="textPage2">
-                  At Careertronic Global Services Pvt. Ltd. (CGSPL), we empower
-                  businesses and individuals through advanced technology,
-                  tailored training, and global education. Our mission is to
-                  deliver innovative solutions, drive sustainable growth, and
-                  build lasting partnerships for success in a digital world.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-          <div id="ourMission" className="col-xl-4">
-            <div id="ourMissionImage" className="flex justify-center">
-              <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1.4,
-                  type: "spring",
-                }}
-              >
-                <IconHover icon={Goal} />
-              </motion.div>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 200 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 1.4,
-                type: "spring",
-              }}
-            >
-              <div id="ourMissionText">
-                <h1 id="mainTextPage2">OUR VISION</h1>
-              </div>
-              <div>
-                <p id="textPage2">
-                  At Careertronic Global Services Pvt. Ltd. (CGSPL), we aim to
-                  be a global leader in IT solutions, training, and education,
-                  delivering innovative services that empower individuals and
-                  organizations. Our vision is to drive digital transformation,
-                  career growth, and success by equipping clients with the tools
-                  and knowledge to thrive in a dynamic world.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-          <div id="ourMission" className="col-xl-4">
-            <div id="ourMissionImage" className="flex justify-center">
-              <motion.div
-                initial={{ opacity: 0, y: -100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1.4,
-                  type: "spring",
-                }}
-              >
-                <IconHover icon={HandHeart} />
-              </motion.div>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 200 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 1.4,
-                type: "spring",
-              }}
-            >
-              <div id="ourMissionText">
-                <h1 id="mainTextPage2">OUR VALUES</h1>
-              </div>
-              <div>
-                <p id="textPage2">
-                  At Careertronic Global Services Pvt. Ltd. (CGSPL), our core
-                  values define our commitment to excellence and success for
-                  clients and partners:
-                </p>
-                <ul className="list-disc">
-                  <li id="textPage2">
-                    <strong>Striving for Innovation</strong>
-                  </li>
-                  <li id="textPage2">
-                    <strong>Pursuing Excellence</strong>
-                  </li>
-                  <li id="textPage2">
-                    <strong>Customer-Centricity</strong>
-                  </li>
-                  <li id="textPage2">
-                    <strong>Upholding Integrity</strong>
-                  </li>
-                  <li id="textPage2">
-                    <strong>Promoting Collaboration</strong>
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
-
-      <motion.div
-        id="page3"
-        className="page3 text-center"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <div id="page3div2" className="container-sm row">
-          <motion.div
-            id="page3left"
-            className="col-xl-7"
-            initial={{ opacity: 0, x: -200 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              bounce: 0.4,
-            }}
-          >
-            <div id="page3Heading">
-              <h1 id="page3h1">
-                <span id="Why">What we&nbsp;</span>
-                <span id="Careertronics">Do</span>
-                <span id="Why">?</span>
-              </h1>
+    </div>
+    <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-gray-900 rounded-[32px] p-8 lg:p-12 shadow-2xl">
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+        {/* Image Section */}
+        <div className="flex-1 hidden lg:flex justify-center items-center">
+          <ScrollReveal animation="slideRight" duration={1000} easing="bouncy" className=" w-full">
+            <div className="relative w-full max-w-md h-[30rem]">
+              <Image
+                objectFit="contain"
+                layout="fill"
+                src="/about/page4img.png"
+                alt="learner"
+              />
             </div>
-            <div id="page3Content">
-              <ul>
-                <li>
-                  <strong>Software Development:</strong>
-                  Customized solutions to optimize operations, enhance
-                  efficiency, and support business growth with scalable and
-                  reliable software.
-                </li>
-                <li>
-                  <strong>IT Training:</strong>
-                  Comprehensive programs to upskill professionals in
-                  cutting-edge technologies, equipping them for a dynamic IT
-                  landscape.
-                </li>
-                <li>
-                  <strong>Industrial Automation:</strong>
-                  Specialized training to improve manufacturing and robotics
-                  efficiency while reducing downtime.
-                </li>
-                <li>
-                  <strong>Corporate Training:</strong>
-                  Tailored solutions to enhance employee skills, leadership, and
-                  technical expertise, driving team success.
-                </li>
-                <li>
-                  <strong>Global Education:</strong>
-                  Guidance for students seeking international study and career
-                  opportunities with top global institutions.
-                </li>
-                <li>
-                  <strong>Business Consulting:</strong>
-                  Expert advice to overcome challenges, optimize operations, and
-                  implement growth strategies for success.
-                </li>
-              </ul>
-            </div>
-          </motion.div>
-          <motion.div
-            id="page3right1"
-            className="col-xl-5"
-            initial={{ opacity: 0, y: 200, scale: 0.5 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1.2,
-              type: "spring",
-              bounce: 0.4,
-            }}
-            whileHover={{
-              scale: 1.05,
-              transition: { duration: 0.3 },
-            }}
-          >
-            <Image
-              className="mx-auto"
-              id="page3image1"
-              src="/about/page3img.svg"
-              alt="What We Do Image"
-              width={500}
-              height={400}
-            />
-          </motion.div>
+          </ScrollReveal>
         </div>
-      </motion.div>
-
-      <motion.div
-        id="page3"
-        className="page4 text-center"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <div className="container-sm row vats-div-big">
-          <motion.div
-            id="page3right2"
-            className="vats-div-1 col-xl-5"
-            initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1.5,
-              type: "spring",
-              bounce: 0.3,
-            }}
-            whileHover={{
-              scale: 1.05,
-              transition: { duration: 0.3 },
-            }}
+        
+        {/* Content Section */}
+        <div className="flex-1 space-y-6">
+          <ScrollReveal animation="slideUp" duration={800} delay={200} easing="spring">
+            <h2 className="text-3xl md:text-3xl font-bold text-white">
+              Why Should You{" "}
+              <span className="text-red-500">Choose Us</span>?
+            </h2>
+          </ScrollReveal>
+          
+          <ScrollReveal 
+            animation="fadeSlideLeft" 
+            duration={700} 
+            delay={350} 
+            easing="gentle"
           >
-            <Image
-              id="page3image2"
-              src="/about/page4img.svg"
-              alt="Why Choose Us Image"
-              width={500}
-              height={400}
-            />
-          </motion.div>
-          <motion.div
-            id="page3left"
-            className="col-xl-7"
-            initial={{ opacity: 0, x: 200 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1,
-              type: "spring",
-              bounce: 0.4,
-            }}
+            <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+              Our team holds a decade of experience in guiding your
+              overseas career. Careertronics stands as extraordinary
+              overseas portal, providing invaluable assistance to
+              professional navigating the complexities of international
+              employment.
+            </p>
+          </ScrollReveal>
+          
+          <ScrollReveal 
+            animation="fadeSlideLeft" 
+            duration={700} 
+            delay={500} 
+            easing="smooth"
           >
-            <div id="page3Heading">
-              <h1 id="page3h1">
-                <span id="Why">Why Should You&nbsp;</span>
-                <span id="Careertronics">Choose Us</span>
-                <span id="Why">?</span>
-              </h1>
-            </div>
-            <div id="page3Content">
-              <ul>
-                <li>
-                  <strong>Global Reach:</strong>
-                  Delivering tailored solutions to global markets with a strong
-                  international presence and extensive network.
-                </li>
-                <li>
-                  <strong>Expertise:</strong>
-                  Skilled professionals in software, automation, IT training,
-                  and consulting, providing innovative solutions.
-                </li>
-                <li>
-                  <strong>Tailored Solutions:</strong>
-                  Personalized strategies aligned with unique goals, ensuring
-                  impactful outcomes for clients.
-                </li>
-                <li>
-                  <strong>End-to-End Support:</strong>
-                  Comprehensive assistance from start to finish for seamless
-                  execution and success.
-                </li>
-                <li>
-                  <strong>Proven Track Record:</strong>
-                  Trusted for quality, reliability, and exceeding expectations
-                  across diverse industries.
-                </li>
-              </ul>
-            </div>
-          </motion.div>
+            <p className="text-gray-200 hidden md:block text-base md:text-lg leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the
+              industry&apos;s standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived
+              not only five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset
+              sheets containing.
+            </p>
+          </ScrollReveal>
         </div>
-      </motion.div>
-
-      <motion.div
-        id="page3"
-        className="page5 text-center"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-      >
-        <div id="page3div2" className="container-sm row">
-          <motion.div
-            id="page3left"
-            className="col-xl-7"
-            initial={{ opacity: 0, y: 100, x: -100 }}
-            whileInView={{ opacity: 1, y: 0, x: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1.2,
-              type: "spring",
-              bounce: 0.4,
-            }}
+      </div>
+    </div>
+    <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-gray-900 rounded-[32px] p-8 lg:p-12 shadow-2xl">
+      <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+        {/* Content Section with staggered animations */}
+        <div className="flex-1 space-y-6">
+          <ScrollReveal 
+            animation="fadeSlideLeft" 
+            duration={600} 
+            easing="spring"
+            index={0}
+            stagger={150}
           >
-            <div id="page3Heading">
-              <h1 id="page3h1">
-                <span id="Why">Our Exceptional&nbsp;</span>
-                <span id="Careertronics">Team</span>
-                <span id="Why">!</span>
-              </h1>
-            </div>
-            <div id="page3Content" className="me-4 !pl-8">
-              <p>
-                At Careertronic Global Services, our greatest asset is our
-                exceptional team of passionate, skilled, and experienced
-                professionals, each dedicated to delivering innovative solutions
-                that drive your success. From software developers and IT
-                trainers to business consultants and global education advisors,
-                we have a diverse group of experts across every area of our
-                service offerings, ensuring that you receive the highest level
-                of expertise, care, and support. Our team thrives on
-                collaboration, constantly sharing insights, ideas, and best
-                practices to create solutions that are customized to your unique
-                needs. We are committed to fostering a culture of continuous
-                learning and growth, staying ahead of industry trends to deliver
-                the most relevant, cutting-edge services to our clients.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            id="page3right3"
-            className="col-xl-5"
-            initial={{ opacity: 0, y: 200, scale: 0.5 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 1.2,
-              type: "spring",
-              bounce: 0.4,
-            }}
-            whileHover={{
-              scale: 1.05,
-              transition: { duration: 0.3 },
-            }}
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Our Exceptional <span className="text-red-500">Team</span>!
+            </h2>
+          </ScrollReveal>
+          
+          {/* First paragraph with staggered animation */}
+          <ScrollReveal 
+            animation="fadeSlideLeft" 
+            duration={600} 
+            easing="spring"
+            index={1}
+            stagger={150}
           >
-            <Image
-              id="page3image3"
-              src="/about/page5img.svg"
-              alt="Our Team Image"
-              className="mx-auto"
-              width={500}
-              height={400}
-            />
-          </motion.div>
+            <p className="text-gray-200 text-base md:text-lg leading-relaxed">
+              Our team holds a decade of experience in guiding your
+              overseas career. Careertronics stands as extraordinary
+              overseas portal, providing invaluable assistance to
+              professional navigating the complexities of international
+              employment.
+            </p>
+          </ScrollReveal>
+          
+          {/* Second paragraph with staggered animation */}
+          <ScrollReveal 
+            animation="fadeSlideLeft" 
+            duration={600} 
+            easing="spring"
+            index={2}
+            stagger={150}
+          >
+            <p className="text-gray-200 text-base hidden md:block md:text-lg leading-relaxed">
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the
+              industry&apos;s standard dummy text ever since the 1500s,
+              when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived
+              not only five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset
+              sheets containing.
+            </p>
+          </ScrollReveal>
         </div>
-      </motion.div>
+        
+        {/* Image Section with unique animation */}
+        <div className="flex-1 hidden lg:flex justify-center items-center">
+          <ScrollReveal 
+            animation="slideDown" 
+            duration={1000} 
+            delay={300} 
+            easing="gentle"
+            className="w-full"
+          >
+            <div className="relative w-full max-w-md h-[30rem]">
+              <Image
+                objectFit="contain"
+                layout="fill"
+                src="/about/page5img.svg"
+                alt="learner"
+              />
+            </div>
+          </ScrollReveal>
+        </div>
+      </div>
+    </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
-export default AboutUs;
+export default page;
