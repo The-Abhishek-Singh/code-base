@@ -1,13 +1,11 @@
 import Image from "next/image";
-
 const Card = ({ images = [], title, description }) => {
   return (
     <div
-      className="bg-white shadow-lg rounded-lg sm:rounded-2xl lg:rounded-[1cm] p-3 sm:p-4 
-                    w-full max-w-full sm:max-w-[90%] md:max-w-[95%] lg:max-w-[450px] 
-                    h-auto min-h-[160px] sm:min-h-[180px] lg:min-h-[200px] 
-                    mx-auto sm:mx-2 md:mx-3 lg:ml-[2cm] 
-                    flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-0"
+      className="bg-white shadow-lg rounded-lg sm:rounded-2xl lg:rounded-[1cm] p-3 sm:p-4
+                    w-full max-w-full sm:max-w-[90%] md:max-w-[95%] lg:max-w-[400px]
+                    h-auto min-h-[160px] sm:min-h-[180px] lg:min-h-[200px]
+                    mx-auto flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-0"
     >
       {/* Images container - centered on mobile, left side on larger screens */}
       <div className="w-full sm:w-1/3 pb-3 sm:pb-0 sm:pr-4 flex justify-center sm:justify-start sm:flex-col sm:space-y-2">
@@ -22,7 +20,6 @@ const Card = ({ images = [], title, description }) => {
           </div>
         ))}
       </div>
-
       {/* Content container */}
       <div className="w-full sm:w-2/3 text-center sm:text-left">
         <h3 className="text-lg sm:text-xl text-black font-bold">{title}</h3>

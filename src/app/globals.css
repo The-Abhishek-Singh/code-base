@@ -24,39 +24,39 @@ body {
 }
 @media (min-width: 1550px) {
   .custom-width001{
-    width: 23rem;
-    height: 500px;
+    width: 20rem;
+    height: 465px;
   }
 }
 @media (min-width: 1840px){
   .custom-width001{
-    width: 25rem;
-    height: 550px;
+    width: 23rem;
+    height: 530px;
   }
 }
 @media(min-width: 2064px ){
   .custom-width001{
-    width: 32rem;
-    height: 650px;
+    width: 24rem;
+    height: 540px;
   }
 }
 @media(min-width: 2320px ){
   .custom-width001{
-    width: 27rem;
-    height: 600px;
+    width: 25rem;
+    height: 580px;
   }
 }
 @media(min-width: 2512px ){
   .custom-width001{
-    width: 38rem;
-    height: 760px;
+    width: 34rem;
+    height: 730px;
   }
 }
 @media (640px <= width < 1550px) {
   .custom-width001{
-      width: 19rem ;
+      width: 18rem ;
   }
   .custom-width001{
-      height: 410px;
+      height: 390px;
   }
 }

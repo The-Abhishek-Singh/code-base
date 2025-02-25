@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Link from "next/link";
 const OurTeamGallery = () => {
   const slides = ["/Partnerbg.png", "/partnerpg.png", "/OurTeam.png"];
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -131,6 +132,8 @@ const OurTeamGallery = () => {
           alt="Our Team"
           className="mt-8 mb-10 w-full max-w-xl rounded-[40px]"
         />
+      
+<Link href="/ourteam">
         <button
           className="text-white py-3 px-6 rounded hover:bg-red-600 transition-colors"
           style={{
@@ -140,6 +143,8 @@ const OurTeamGallery = () => {
         >
           Show All
         </button>
+        </Link>
+
       </div>
       {/* Marquee Animation Style */}
       <style jsx>{`

@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Card from "@/component/UI/Becomeap/Card";
 import Part from "@/component/UI/Becomeap/Part";
-
 const PartnerPage = () => {
   const steps = [
     {
@@ -10,38 +9,37 @@ const PartnerPage = () => {
       title: "Inquiry & Consultation",
       description:
         "Get in touch with us by filling out the form or contacting our partnership team directly.We'll schedule an initial consultation to discuss your interests, goals, and the partnership opportunities available.",
-      image: "/1.png",
+      image: "/becomeap/2.png",
     },
     {
       number: "02",
       title: "Due Diligence & Evaluation",
       description:
         "We evaluate the potential partnership to ensure a good fit.\nWe review market dynamics, your experience, and the specific needs of your region or business.",
-      image: "/3.png",
+      image: "/becomeap/3.png",
     },
     {
       number: "03",
       title: "Partnership Agreement",
       description:
         "Once everything is aligned, we'll finalize the partnership agreement,which includes all the terms, responsibilities, and expectations from both sides.",
-      image: "/4.png",
+      image: "/becomeap/4.png",
     },
     {
       number: "04",
       title: "Training & Onboarding",
       description:
         "As our partner, you'll undergo an extensive onboarding process where you'll receive training on operations, marketing, and service delivery.\nThis ensures you're equipped to run your franchise or partnership smoothly from day one.",
-      image: "/5.png",
+      image: "/becomeap/5.png",
     },
     {
       number: "05",
       title: "Ongoing Support & Growth",
       description:
         "As a partner, you'll receive continuous operational support,marketing assistance, and access to our technology infrastructure.\nOur team will work closely with you to help your business grow,\nachieve profitability, and succeed.",
-      image: "/7.png",
+      image: "/becomeap/6.png",
     },
   ];
-
   const benefits = [
     {
       images: ["/why1.png"],
@@ -80,7 +78,6 @@ const PartnerPage = () => {
         "Stay ahead with access to the latest technologies in AI, cloud computing, blockchain, and cybersecurity, positioning you in high-demand markets.",
     },
   ];
-
   return (
     <div className="w-full">
       {/* Partner Section */}
@@ -97,11 +94,9 @@ const PartnerPage = () => {
               priority
             />
           </div>
-
           {/* Dark vintage overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
         </div>
-
         {/* Content container - improved tablet layout */}
         <div className="absolute inset-0 flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2 text-left text-white px-4 sm:px-8 lg:px-12 py-6 md:py-8 lg:py-12 flex flex-col justify-center">
@@ -126,7 +121,6 @@ const PartnerPage = () => {
               Become a Partner
             </button>
           </div>
-
           {/* Partner image container - hidden on tablet screens (md breakpoint) */}
           <div className="w-full lg:w-1/2 flex items-center justify-center py-4 sm:py-6 lg:py-0 hidden sm:flex md:hidden lg:flex">
             <div className="relative w-[70%] sm:w-[60%] lg:w-[80%] aspect-[4/3]">
@@ -141,7 +135,6 @@ const PartnerPage = () => {
           </div>
         </div>
       </div>
-
       {/* Success Section */}
       <div className="bg-black p-4 sm:p-6 lg:p-10">
         <div
@@ -166,12 +159,11 @@ const PartnerPage = () => {
               empowering individuals through education and technology.
             </p>
           </div>
-
           {/* Success image container - fixed for tablet */}
           <div className="w-full md:w-1/2 flex justify-center items-center mt-6 md:mt-0">
             <div className="relative w-[80%] sm:w-[60%] md:w-[90%] h-48 sm:h-56 md:h-64 lg:h-72">
               <Image
-                src="/success.png"
+                src="/becomeap/success.png"
                 alt="Success Image"
                 layout="fill"
                 objectFit="contain"
@@ -182,7 +174,6 @@ const PartnerPage = () => {
           </div>
         </div>
       </div>
-
       {/* Why Partner Section - UPDATED with black background for title only */}
       <div className="bg-gray-100 p-4 sm:p-6 lg:p-10">
         {" "}
@@ -200,7 +191,6 @@ const PartnerPage = () => {
           ))}
         </div>
       </div>
-
       {/* Partnering with Careertronic Section - UPDATED with black background for title only */}
       <div className="bg-white p-2 sm:p-4">
         {" "}
@@ -220,5 +210,4 @@ const PartnerPage = () => {
     </div>
   );
 };
-
 export default PartnerPage;
