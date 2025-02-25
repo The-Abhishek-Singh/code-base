@@ -137,19 +137,16 @@ const ScrollCards = () => {
       <section className="common h-[0vh] w-full flex justify-center items-center">
       </section>
 
-      <div className=" p-8 text-center relative m-32">
-      <div className="absolute inset-0 flex items-center justify-center ">
-        <div className="relative w-[80%] h-16 bg-red-600 rounded-full overflow-hidden rounded-tr-lg rounded-bl-lg">
-          <div className="absolute inset-y-0 left-0 w-1/4 "></div>
-          <div className="absolute inset-y-0 right-0 w-1/4"></div>
-          <div className="absolute inset-0 flex items-center justify-center text-white font-bold">
-          OUR POPULAR SERVICES
-          </div>
-        </div>
-      </div>
-    </div>
+      <div className='flex justify-center m-20' >
+<div className='w-[80%] h-[80px] bg-red-600 flex  justify-center align-middle rounded-full rounded-tl-md rounded-br-sm bg-gradient-to-r from-[#D31C1F] to-[#AD0003] ' >
+
+<h1 className='text-white sm:text-3xl flex items-center text-xl' >Our Popular Services</h1>
+
+</div>
 
 
+  
+</div>
 
 
 

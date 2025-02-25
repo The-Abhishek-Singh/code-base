@@ -19,20 +19,19 @@ body {
 
 
 
-.servicegradient{
-
-  background: linear-gradient(to bottom, #000000, #1E1E1E, #252525 , #232323, #141414 , #000000 );
-
-
+.shadow-bg{
+  box-shadow: inset 0 -101px 77px 15px #000;
 }
-
-
-
-
-/* Animations Only  */
-
-
-.mask1   {
-  -webkit-mask-image: linear-gradient(black, transparent);
-  mask-image: linear-gradient(black, transparent);
+@media (min-width: 1550px) {
+  .custom-width001{
+    width: 27rem;
+  }
+}
+@media (640px <= width < 1550px) {
+  .custom-width001{
+      width: 20rem /* 320px */;
+  }
+  .custom-width001{
+      height: 400px;
+  }
 }
