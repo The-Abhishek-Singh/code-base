@@ -51,50 +51,50 @@ const head = () => {
 <h1 className='text-white sm:text-3xl flex items-center text-xl' > Careertronic services</h1>
 </div>
 </div>
-<div className='flex flex-wrap justify-center gap-12 p-16 content-center'>
+<div className='flex flex-wrap justify-center gap-28 p-16 '>
    <Servicesboxes
      title="SOFTWARE DEVELOPMENT & EXPORT SERVICES"
-     bgUrl="/image%2021.png"
+     bgUrl="/services/image%2021.png"
      shifturl="/services/first"
    />
    <Servicesboxes
      title="IT TRAINING & CERTIFICATION"
-     bgUrl="/div2.png"
+     bgUrl="/services/div2.png"
       shifturl="/services/first"
    />
    <Servicesboxes
      title="CLOUD SOLUTIONS & MIGRATION"
-     bgUrl="/div3.png"
+     bgUrl="/services/div3.png"
       shifturl="/services/first"
    />
    <Servicesboxes
      title="CYBERSECURITY SERVICES"
-     bgUrl="/div4.png"
+     bgUrl="/services/div4.png"
       shifturl="/services/first"
    />
    <Servicesboxes
      title="Study Abroad"
-     bgUrl="/div5.png"
+     bgUrl="/services/div5.png"
       shifturl="/services/first"
    />
    <Servicesboxes
      title="Work Abroad"
-     bgUrl="/div6.png"
+     bgUrl="/services/div6.png"
       shifturl="/services/first"
    />
    <Servicesboxes
      title="E-COMMERCE SOLUTIONS"
-     bgUrl="/div7.png"
+     bgUrl="/services/div7.png"
       shifturl="/services/first"
    />
    <Servicesboxes
      title="UI/UX DESIGN SERVICES"
-     bgUrl="/div8.png"
+     bgUrl="/services/div8.png"
       shifturl="/services/first"
    />
    <Servicesboxes
      title="IT INFRASTRUCTURE MANAGEMENT"
-     bgUrl="/div9.png"
+     bgUrl="/services/div9.png"
       shifturl="/services/first"
    />
 </div>

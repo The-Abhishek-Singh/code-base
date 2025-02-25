@@ -9,7 +9,7 @@ const PartnerPage = () => {
       number: "01",
       title: "Inquiry & Consultation",
       description:
-        "Get in touch with us by filling out the form or contacting our partnership team directly.\nWe'll schedule an initial consultation to discuss your interests, goals, and the partnership opportunities available.",
+        "Get in touch with us by filling out the form or contacting our partnership team directly.We'll schedule an initial consultation to discuss your interests, goals, and the partnership opportunities available.",
       image: "/1.png",
     },
     {
@@ -17,28 +17,28 @@ const PartnerPage = () => {
       title: "Due Diligence & Evaluation",
       description:
         "We evaluate the potential partnership to ensure a good fit.\nWe review market dynamics, your experience, and the specific needs of your region or business.",
-      image: "/2.png",
+      image: "/3.png",
     },
     {
       number: "03",
       title: "Partnership Agreement",
       description:
-        "Once everything is aligned, we'll finalize the partnership agreement,\nwhich includes all the terms, responsibilities, and expectations from both sides.",
-      image: "/3.png",
+        "Once everything is aligned, we'll finalize the partnership agreement,which includes all the terms, responsibilities, and expectations from both sides.",
+      image: "/4.png",
     },
     {
       number: "04",
       title: "Training & Onboarding",
       description:
-        "As our partner, you'll undergo an extensive onboarding process\nwhere you'll receive training on operations, marketing, and service delivery.\nThis ensures you're equipped to run your franchise or partnership smoothly from day one.",
-      image: "/4.png",
+        "As our partner, you'll undergo an extensive onboarding process where you'll receive training on operations, marketing, and service delivery.\nThis ensures you're equipped to run your franchise or partnership smoothly from day one.",
+      image: "/5.png",
     },
     {
       number: "05",
       title: "Ongoing Support & Growth",
       description:
-        "As a partner, you'll receive continuous operational support,\nmarketing assistance, and access to our technology infrastructure.\nOur team will work closely with you to help your business grow,\nachieve profitability, and succeed.",
-      image: "/5.png",
+        "As a partner, you'll receive continuous operational support,marketing assistance, and access to our technology infrastructure.\nOur team will work closely with you to help your business grow,\nachieve profitability, and succeed.",
+      image: "/7.png",
     },
   ];
 
@@ -183,12 +183,16 @@ const PartnerPage = () => {
         </div>
       </div>
 
-      {/* Why Partner Section */}
+      {/* Why Partner Section - UPDATED with black background for title only */}
       <div className="bg-gray-100 p-4 sm:p-6 lg:p-10">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black text-center p-3 sm:p-4 lg:p-5 mb-4 lg:mb-6">
-          Why <span className="text-red-500">Partner</span> with Us?
-        </h2>
-
+        {" "}
+        {/* Keeping the original gray background */}
+        {/* Black background for title only */}
+        <div className=" w-full mb-4 lg:mb-6">
+          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-black text-center p-3 sm:p-4 lg:p-5">
+            Why <span className="text-red-500">Partner</span> with Us?
+          </h2>
+        </div>
         {/* Cards grid - improved spacing and alignment */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8">
           {benefits.map((benefit, index) => (
@@ -197,11 +201,16 @@ const PartnerPage = () => {
         </div>
       </div>
 
-      {/* Partnering with Careertronic Section */}
+      {/* Partnering with Careertronic Section - UPDATED with black background for title only */}
       <div className="bg-white p-2 sm:p-4">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center mt-3 sm:mt-4 lg:mt-5 mb-6 sm:mb-8 lg:mb-12">
-          Partnering with <span className="text-red-500">Careertronic</span>
-        </h1>
+        {" "}
+        {/* Keeping the original white background */}
+        {/* Black background for title only */}
+        <div className=" w-full mb-6 sm:mb-8 lg:mb-12 ">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center  p-3 sm:p-4 lg:p-5">
+            Partnering with <span className="text-red-500">Careertronic</span>
+          </h1>
+        </div>
         <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           {steps.map((step, index) => (
             <Part key={index} {...step} />

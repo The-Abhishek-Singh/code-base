@@ -5,11 +5,11 @@ const Part = ({ number, title, description, image }) => {
   return (
     <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:space-x-4 lg:space-x-8 px-4 sm:px-6 lg:px-12 py-4 sm:py-6 lg:py-8">
       {/* Image Section - Full width on mobile, proper width on larger screens */}
-      <div className="w-full md:w-auto flex justify-center md:justify-start">
+      <div className="w-full md:w-auto flex justify-start md:justify-start">
         <img
           src={image}
           alt={title}
-          className="w-36 h-32 sm:w-44 sm:h-36 lg:w-52 lg:h-40 object-contain"
+          className="w-36 h-32 sm:w-44 sm:h-36 lg:w-52 lg:h-40 object-contain m-2 ml-24"
         />
       </div>
 

@@ -1,201 +1,213 @@
-'use client'
-import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { Code, Smartphone, Megaphone, GraduationCap, Brain, Link, FileUp as FileUser, School, Handshake } from 'lucide-react';
-import { motion } from 'framer-motion';
-
+"use client";
+import React, { useEffect, useRef } from "react";
+import Image from "next/image";
+import {
+  Code,
+  Cloud,
+  FileChartColumn,
+  Bitcoin,
+  Construction,
+  AppWindow,
+  BrainCircuit,
+} from "lucide-react";
+import { motion } from "framer-motion";
 const ScrollCards = () => {
   const cardRowRef = useRef(null);
-
-
-
   const cardsData = [
-   
     {
-      title: "SOFTWARE DEVELOPMENT & EXPORT SERVICES",
-      heading: "Software Development & Export Services",
+      title: "SOFTWARE DEVELOPMENT & EXPORT SERVICES ",
+      heading: "SOFTWARE DEVELOPMENT & EXPORT SERVICES ",
       image: "/1service.png",
-      content: "Our AI and ML solutions automate processes, enhance decision-making, and build intelligent systems that evolve over time. Using advanced technologies like natural language processing (NLP), chatbots, and predictive analytics, we help businesses improve customer interactions, increase operational efficiency, and stay competitive",
+      content:
+        " We specialize in software development and export services, delivering cutting-edge technology solutions tailored to your business needs. Our expertise spans custom software, web and mobile applications, AI-driven solutions, and cloud integrations, ensuring seamless digital transformation. With a focus on innovation and scalability, we help businesses enhance efficiency, drive growth, and stay ahead in the competitive tech landscape.",
     },
     {
-      title: "IT TRAINING",
-      heading: "IT TRAINING",
-      image: "/2service.png",
-      content: "At Careertronic Global Services, we offer industry-leading IT training programs designed to equip individuals with the skills and expertise needed to thrive in today's competitive digital landscape. Our training courses cover a wide range of cutting-edge technologies, each designed to provide you with a comprehensive understanding of the subject, along with real-world applications and career opportunities.",
-    },
-    {
-      title: "INDUSTRIAL AUTOMATION TRAINING",
-      heading: "INDUSTRIAL AUTOMATION TRAINING",
+      title: "IT & INDUSTRIAL AUTOMATION TRAINING",
+      heading: "IT & INDUSTRIAL AUTOMATION TRAINING",
       image: "/3service.png",
-      content: "Welcome to Careertronic's Industrial Automation Training Program, where we empower you with the skills, knowledge, and hands-on experience to thrive in the rapidly growing field of automation. Our comprehensive curriculum covers the latest technologies in PLCs, SCADA, robotics, and IoT, preparing you for successful careers in industries ranging from manufacturing to energy management, process control, and more.",
+      content:
+        "We provide IT and Industrial Automation Training, equipping professionals with the latest skills and knowledge to excel in a technology-driven world. Our comprehensive programs cover software development, industrial automation, AI, IoT, and cloud computing, ensuring hands-on expertise. With industry-aligned curriculum and expert guidance, we prepare individuals to adapt, innovate, and succeed in the evolving tech landscape.",
     },
-    
     {
-      title: "STUDY ABROAD",
-      heading: "STUDY ABROAD",
-      image: "/4service.png",
-      content: "Welcome to Careertronic's Industrial Automation Training Program, where we empower you with the skills, knowledge, and hands-on experience to thrive in the rapidly growing field of automation. Our comprehensive curriculum covers the latest technologies in PLCs, SCADA, robotics, and IoT, preparing you for successful careers in industries ranging from manufacturing to energy management, process control, and more.",
+      title: "CORPORATE & INDUSTRIAL TRAINING",
+      heading: "CORPORATE & INDUSTRIAL TRAINING",
+      image: "/2service.png",
+      content:
+        "Our Corporate & Industrial Training programs are tailored to enhance organizational performance and workforce productivity. We offer customized training solutions in IT, automation, and emerging technologies, ensuring employees gain practical skills and industry expertise. With expert-led sessions and real-world applications, we help businesses upskill their teams and stay ahead in a competitive landscape.",
     },
-    
+    {
+      title: "GLOBAL EDUCATION & STUDY ABROAD PROGRAMS",
+      heading: "GLOBAL EDUCATION & STUDY ABROAD PROGRAMS",
+      image: "/4service.png",
+      content:
+        "Our Global Education & Study Abroad Programs provide students and professionals with access to world-class educational opportunities and enriching cross-cultural experiences. We offer personalized guidance, university partnerships, and scholarship assistance to help individuals achieve their academic and career goals. With a focus on global exposure and skill development, we empower learners to excel in an increasingly interconnected world.",
+    },
+    {
+      title: "BUSINESS CONSULTING",
+      heading: "BUSINESS CONSULTING",
+      image: "/5service.jpeg",
+      content:
+        "Our Business Consulting services provide strategic expertise to help businesses overcome challenges, streamline operations, and drive sustainable growth. We offer data-driven insights, process optimization, and market analysis to enhance decision-making and competitiveness. With a focus on innovation and efficiency, we empower organizations to scale successfully in a dynamic business landscape.",
+    },
   ];
-
   const getIcon = (title) => {
     switch (title) {
-      case "SOFTWARE DEVELOPMENT & EXPORT SERVICES": return <Code size={20} />;
-      case "IT TRAINING": return <Smartphone size={20} />;
-      case "INDUSTRIAL AUTOMATION TRAINING": return <Brain size={20} />;
-      case "CORPORATE & INDUSTRIAL TRAINING": return <Megaphone size={20} />;
-      case "STUDY ABROAD": return <GraduationCap size={20} />;
-      case "WORK ABROAD": return <Link size={20} />;
-      case "BPO, KPO, RPO & BUSSINESS OUTSOURCING SOLUTION": return <Handshake size={20} />;
-      case "CAMPUS DRIVE MANAGEMENT": return <School size={20} />;
-      case "RESUME BUILDER": return <FileUser size={20} />;
-      default: return <Handshake size={20} />;
+      case "Artificial Intelligence & Machine Learning":
+        return <BrainCircuit size={20} />;
+      case "Cloud Computing & DevOps Solutions":
+        return <Cloud size={20} />;
+      case "App Development & Integration":
+        return <AppWindow size={20} />;
+      case "Software Maintenance & Support":
+        return <Construction size={20} />;
+      case "Data Science & Analytics":
+        return <FileChartColumn size={20} />;
+      case "Blockchain & IoT":
+        return <Bitcoin size={20} />;
+      default:
+        return <Cloud size={20} />;
     }
   };
-
-  const handleScroll = () => {
-    // Track scroll position or trigger animations
-    const scrollY = window.scrollY;
-    console.log('Current scroll position:', scrollY);
-  };
-
+  // Original scroll functionality for desktop
   useEffect(() => {
-    const allCards = document.querySelectorAll(".cards-scroll .card");
-    const headerHeight = 70;
-    const cardsCount = allCards.length;
-    const cardSpacing = 5;
-
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    const cardsClickHandler = (index) => {
-      let topScrollValue = window.innerHeight * index - headerHeight * index;
-      topScrollValue = Math.max(0, topScrollValue);
-
-      const element = allCards[index];
-      window.getComputedStyle(element);
-
-     
-
-      const finalOffset = topScrollValue + document.querySelector(".card-row").getBoundingClientRect().top + window.pageYOffset;
-      const duration = 800;
-      const startingY = window.pageYOffset;
-      const diff = finalOffset - startingY;
-      let start = null;
-
-      const easeInOutQuad = (t) => {
-        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    if (window.innerWidth >= 640) {
+      const allCards = document.querySelectorAll(".cards-scroll .card");
+      const headerHeight = 45;
+      const cardsCount = allCards.length;
+      const cardSpacing = 5;
+      const cardsClickHandler = (index) => {
+        let topScrollValue = window.innerHeight * index - headerHeight * index;
+        topScrollValue = Math.max(0, topScrollValue);
+        const element = allCards[index];
+        window.getComputedStyle(element);
+        const finalOffset =
+          topScrollValue +
+          document.querySelector(".card-row").getBoundingClientRect().top +
+          window.pageYOffset;
+        const duration = 800;
+        const startingY = window.pageYOffset;
+        const diff = finalOffset - startingY;
+        let start = null;
+        const easeInOutQuad = (t) => {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        };
+        const step = (timestamp) => {
+          if (!start) start = timestamp;
+          const time = timestamp - start;
+          const percent = easeInOutQuad(Math.min(time / duration, 1));
+          window.scrollTo(0, startingY + diff * percent);
+          if (time < duration) {
+            window.requestAnimationFrame(step);
+          }
+        };
+        window.requestAnimationFrame(step);
       };
-
-      const step = (timestamp) => {
-        if (!start) start = timestamp;
-        const time = timestamp - start;
-        const percent = easeInOutQuad(Math.min(time / duration, 1));
-        window.scrollTo(0, startingY + diff * percent);
-        if (time < duration) {
-          window.requestAnimationFrame(step);
-        }
-      };
-      window.requestAnimationFrame(step);
-    };
-
-    if (cardsCount) {
-      allCards.forEach((card, i) => {
-        const incValue = i * (headerHeight + cardSpacing);
-        const decValue = (cardsCount - i - 1) * (headerHeight + cardSpacing);
-        const heightValue = cardsCount * (headerHeight + cardSpacing) - (headerHeight + cardSpacing);
-        const totalHeaders = cardsCount * (headerHeight + cardSpacing);
-        const reduceValue = (cardsCount - i) * (headerHeight + cardSpacing);
-
-        let bottomValue = window.innerHeight - totalHeaders - reduceValue + headerHeight;
-        bottomValue = bottomValue > 0 ? "-" + bottomValue : Math.abs(bottomValue);
-        const fontSize = 20 + 4 * i;
-
-        // Modified setup without transform animation
-        card.style.fontSize = `${fontSize}px`;
-        card.style.marginTop =  `${incValue}px`;
-        card.style.marginBottom = `${decValue}px`;
-        card.style.top = `${incValue}px`;
-        card.style.bottom = `${bottomValue}px`;
-        card.style.maxWidth = `100%`;
-        card.style.maxHeight = `calc(100vh - ${heightValue - 3}px)`;
-     
-
-        card.addEventListener("click", () => cardsClickHandler(i));
-      });
-
-      
-
-      // Cleanup scroll listener
-      window.removeEventListener('scroll', handleScroll);
+      if (cardsCount) {
+        allCards.forEach((card, i) => {
+          const incValue = i * (headerHeight + cardSpacing);
+          const decValue = (cardsCount - i - 1) * (headerHeight + cardSpacing);
+          const heightValue =
+            cardsCount * (headerHeight + cardSpacing) -
+            (headerHeight + cardSpacing);
+          const totalHeaders = cardsCount * (headerHeight + cardSpacing);
+          const reduceValue = (cardsCount - i) * (headerHeight + cardSpacing);
+          let bottomValue =
+            window.innerHeight - totalHeaders - reduceValue + headerHeight;
+          bottomValue =
+            bottomValue > 0 ? "-" + bottomValue : Math.abs(bottomValue);
+          card.style.marginTop = `${incValue}px`;
+          card.style.marginBottom = `${decValue}px`;
+          card.style.top = `${incValue}px`;
+          card.style.bottom = `${bottomValue}px`;
+          card.style.maxWidth = `100%`;
+          card.style.maxHeight = `calc(100vh - ${heightValue - 3}px)`;
+          card.addEventListener("click", () => cardsClickHandler(i));
+        });
+      }
     }
   }, []);
-
   return (
-    <div className='bg-black'>
-      <section className="common h-[0vh] w-full flex justify-center items-center">
-      </section>
-
-      <div className='flex justify-center m-20' >
-<div className='w-[80%] h-[80px] bg-red-600 flex  justify-center align-middle rounded-full rounded-tl-md rounded-br-sm bg-gradient-to-r from-[#D31C1F] to-[#AD0003] ' >
-
-<h1 className='text-white sm:text-3xl flex items-center text-xl' >Our Popular Services</h1>
-
-</div>
-
-
-  
-</div>
-
-
-
-
-
-      <section className="cards-scroll px-2 lg:p-10 flex flex-col  bg-black">
-        <div className="card-row" ref={cardRowRef}>
+    <div>
+      {/* Desktop Version - Hidden on mobile */}
+      <div className="hidden sm:block">
+        <section className="common h-[0vh] w-full flex justify-center items-center"></section>
+        <section className="cards-scroll px-2 lg:p-10 flex flex-col">
+          <div className="card-row" ref={cardRowRef}>
+            {cardsData.map((card, index) => (
+              <div
+                key={`desktop-${index}`}
+                className="card overflow-hidden h-[100vh] w-full text-white bg-black sticky mx-auto"
+              >
+                <div className="card__header sm:px-10 2xl:px-20 bg-black w-full border-b-2 border-white/20 min-h-[45px] p-2 flex items-center justify-center md:justify-start cursor-pointer transition-all duration-300 hover:text-red-300">
+                  <motion.h2 className="text-lg 2xl:text-xl w-full xl:px-20 font-semibold flex items-center gap-2 cursor-pointer">
+                    {getIcon(card.title)}
+                    {card.title}
+                  </motion.h2>
+                </div>
+                <div className="card__body grid grid-cols-1 md:grid-cols-2 pb-0">
+                  <div className="flex p-2 2xl:p-10 items-center justify-center">
+                    <Image
+                      src={card.image}
+                      alt={card.heading}
+                      width={320}
+                      height={120}
+                      className="object-cover rounded-2xl 2xl:w-[25rem]"
+                    />
+                  </div>
+                  <div className="card__content text-left flex flex-col items-start 2xl:justify-center pt-2 sm:px-10 md:px-8">
+                    <h3 className="relative text-lg font-semibold mb-5 text-center lg:text-start underline underline-offset-8 after:content-[''] after:absolute after:w-2 after:h-2 after:bg-white after:rounded-full after:bottom-[-6px]">
+                      {card.heading}
+                    </h3>
+                    <p className="text-sm leading-relaxed font-medium text-center sm:text-start">
+                      {card.content}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section className="common h-[0vh] w-full flex justify-center items-center"></section>
+      </div>
+      {/* Mobile Version */}
+      <div className="block sm:hidden bg-black">
+        <div className="container mx-auto px-4 py-8">
           {cardsData.map((card, index) => (
-            <div
-              key={index}
-              className={`card overflow-hidden h-[100vh] w-full text-white bg-black sm:sticky mx-auto `}
+            <motion.div
+              key={`mobile-${index}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-8 bg-black/50 rounded-lg overflow-hidden shadow-lg border border-white/10"
             >
-              <div className="card__header md:px-20 bg-black
-               w-full border-b-2 border-white/20 min-h-[75px] p-2 flex items-center justify-center md:justify-start cursor-pointer transition-all duration-300 hover:text-red-300">
-                <motion.h2 className="text-xs sm:text-xl w-full xl:px-20 font-bold flex items-center gap-2 cursor-pointer">
+              <div className="bg-black p-4 border-b border-white/20">
+                <h2 className="text-white text-lg font-bold flex items-center gap-2">
                   {getIcon(card.title)}
                   {card.title}
-                </motion.h2>
+                </h2>
               </div>
-              <div className="card__body grid grid-cols-1 md:grid-cols-2 pb-0">
-                <div className="flex p-10 items-center justify-center">
+              <div className="p-4">
+                <div className="mb-4">
                   <Image
                     src={card.image}
                     alt={card.heading}
-                    width={450}
-                    height={250}
-                    className="object-cover rounded-2xl"
+                    width={350}
+                    height={150}
+                    className="w-full object-cover rounded-lg"
                   />
                 </div>
-                <div className="card__content text-left flex flex-col items-start justify-center lg:px-8">
-                  <h3 className="relative hidden md:block text-sm md:text-lg font-semibold mb-5 text-center lg:text-start underline underline-offset-8 after:content-[''] after:absolute after:w-2 after:h-2 after:bg-white after:rounded-full after:bottom-[-6px]">
-                    {card.heading}
-                  </h3>
-                  <p className="text-sm leading-relaxed font-medium text-center md:text-start p-2 md:p-0">
+                <div className="text-white">
+                  <h3 className="text-lg font-semibold mb-2">{card.heading}</h3>
+                  <p className="text-sm leading-relaxed opacity-90">
                     {card.content}
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </section>
-
-      <section className="common h-[0vh] w-full flex justify-center items-center">
-      </section>
+      </div>
     </div>
-
-    
   );
 };
-
 export default ScrollCards;

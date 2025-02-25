@@ -10,15 +10,18 @@ const Servicesboxes = ({ title, bgUrl, shifturl }) => {
         style={{ backgroundImage: `url(${bgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
         <div className='w-full h-auto flex flex-col align-bottom mt-auto items-center'>
-          <div className='mt-auto flex flex-col items-center'>
+          <div className='mt-auto flex flex-col items-center gap-10 w-auto'>
             
-            <h1 className='font-extrabold sm:text-3xl text-left text-lg'>{title}</h1>
-            <div className='bg-white h-auto md:w-[250px] w-[150px] rounded-xl border-2 border-red-500 flex justify-center items-center text-black text-lg align-bottom py-2'>
+            <h1 className='font-extrabold sm:text-2xl text-left text-lg'>{title}</h1>
+           
+          </div>
+
+          <div className='bg-white h-auto md:w-[250px] w-full rounded-xl border-2 border-red-500 flex justify-center items-center text-black text-lg align-bottom py-2'>
               <Link href={shifturl}>
                 <h1>Explore Now</h1>
               </Link>
             </div>
-          </div>
+
         </div>
       </div>
     </div>

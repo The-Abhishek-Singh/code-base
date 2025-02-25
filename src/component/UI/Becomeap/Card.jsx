@@ -4,7 +4,7 @@ const Card = ({ images = [], title, description }) => {
   return (
     <div
       className="bg-white shadow-lg rounded-lg sm:rounded-2xl lg:rounded-[1cm] p-3 sm:p-4 
-                    w-full max-w-full sm:max-w-[90%] md:max-w-[95%] lg:max-w-[400px] 
+                    w-full max-w-full sm:max-w-[90%] md:max-w-[95%] lg:max-w-[450px] 
                     h-auto min-h-[160px] sm:min-h-[180px] lg:min-h-[200px] 
                     mx-auto sm:mx-2 md:mx-3 lg:ml-[2cm] 
                     flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-0"
@@ -31,5 +31,4 @@ const Card = ({ images = [], title, description }) => {
     </div>
   );
 };
-
 export default Card;

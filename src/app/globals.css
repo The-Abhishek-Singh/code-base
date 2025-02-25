@@ -24,30 +24,14 @@ body {
 }
 @media (min-width: 1550px) {
   .custom-width001{
-    width: 27rem;
-  }
-}
-@media (640px <= width < 1550px) {
-  .custom-width001{
-      width: 20rem /* 320px */;
-  }
-  .custom-width001{
-      height: 400px;
-  }
-}
-
-
-
-@media (min-width: 1550px) {
-  .custom-width001{
-    width: 25rem;
+    width: 23rem;
     height: 500px;
   }
 }
-@media (min-width: 1872px){
+@media (min-width: 1840px){
   .custom-width001{
-    width: 28rem;
-    height: 600px;
+    width: 25rem;
+    height: 550px;
   }
 }
 @media(min-width: 2064px ){
@@ -58,8 +42,8 @@ body {
 }
 @media(min-width: 2320px ){
   .custom-width001{
-    width: 35rem;
-    height: 700px;
+    width: 27rem;
+    height: 600px;
   }
 }
 @media(min-width: 2512px ){
@@ -70,9 +54,9 @@ body {
 }
 @media (640px <= width < 1550px) {
   .custom-width001{
-      width: 20rem /* 320px */;
+      width: 19rem ;
   }
   .custom-width001{
-      height: 440px;
+      height: 410px;
   }
 }
