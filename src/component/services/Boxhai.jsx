@@ -11,9 +11,9 @@ const head = () => {
     <div className='h-full w-full servicegradient bg-gradient-to-b from-black via-[#1E1E1E] to-black'>
   <div className='flex flex-col lg:flex-row relative'>
    <div className='h-full w-full sm:pt-24 sm:px-24 px-6 py-5 justify-center flex flex-col gap-8'>
-  <div>
+  <div className='relative py-6 md:p-0'>
    <h1 className='text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-4 inline'>OUR SERVICES</h1>
-    <img src="/services/Removed.png" alt="Removed" className='float-right m-4 relative sm:w-[50%] md:w-[50%] lg:w-[500px] lg:-top-20'/>
+    <img src="/services/Removed.png" alt="Removed" className='float-right m-4 relative sm:w-[50%] md:w-[50%] lg:w-[500px] lg:-top-20 hidden sm:block'/>
     <p className='text-white font-light text-lg tracking-wider md:text-2xl lg:text-xl w-full paragraph mt-20 lg:leading-[2vw] lg:w-[65%]'>
     Careertronic Global Services provides customized solutions for individuals, businesses, and institutions, helping them thrive in the digital era. We offer career development programs, skill training, and job placement for professionals, while businesses benefit from process optimization, automation, and software integration to enhance efficiency and growth. Institutions gain access to digital transformation strategies and innovative technologies to improve operations. With a focus on innovation, efficiency, and success, we empower our clients to stay competitive and achieve their goals in an evolving digital landscape.
     </p>

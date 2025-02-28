@@ -16,7 +16,7 @@ const Servicesboxes = ({ title, bgUrl, shifturl }) => {
            
           </div>
 
-          <div className='bg-white h-auto md:w-[250px] w-full rounded-xl border-2 border-red-500 flex justify-center items-center text-black text-lg align-bottom py-2'>
+          <div className='bg-white h-auto  w-full rounded-xl border-2 border-red-500 flex justify-center items-center text-black text-lg align-bottom py-2'>
               <Link href={shifturl}>
                 <h1>Explore Now</h1>
               </Link>
