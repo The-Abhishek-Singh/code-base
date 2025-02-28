@@ -19,47 +19,48 @@ const teamMembers = [
     {
     name: 'Kritika',
     role: 'Expert UI/UX Designer & Front-end Developer',
-    imageUrl: '/Frame 326.jpg'
+    imageUrl: '/ourteam/Frame 326.jpg'
     },
     {
     name: 'Leelam',
     role: 'Expert UI/UX Designer & Front-end Developer',
-    imageUrl: '/Frame 319.jpg'
+    imageUrl: '/ourteam/Frame 319.jpg'
     },
     {
     name: 'Kunal',
     role: 'Expert UI/UX Designer & App Developer',
-    imageUrl: '/Frame 320.png'
+    imageUrl: '/ourteam/Frame.png'
     },
     {
     name: 'Abhishek',
     role: 'Expert UI/UX Designer & Front-end Developer',
-    imageUrl: '/Frame 327.jpg'
+    imageUrl: '/ourteam/Frame 327.jpg'
     },
     {
     name: 'Rounak',
     role: 'Expert Front-end Developer',
-    imageUrl: '/Frame 322.jpg'
+    imageUrl: '/ourteam/Frame 322.jpg'
     },
     {
     name: 'Vatsalya',
     role: 'Expert Full Stack Developer',
-    imageUrl: '/Frame 323.jpg'
+    imageUrl: '/ourteam/Frame 323.jpg'
     },
     {
     name: 'Divyanshu',
     role: 'Expert Front-end Developer',
-    imageUrl: '/Frame 324.jpg'
+    imageUrl: '/ourteam/Frame 324.jpg'
     },
     {
     name: 'Mithun',
     role: 'Expert Full Stack Developer',
-    imageUrl: '/Frame 325.jpg'
+    imageUrl: '/ourteam/Frame 325.jpg'
     }
 ];
 const page = () => {
   return (
     <div className="main-container h-auto w-full bg-black">
+
         <div className="relative h-20 z-1 bg-black"></div>
         <div className="relative hero-bg h-auto bg-black text-white">
             {/* Background with gradient overlay */}
@@ -114,7 +115,7 @@ const page = () => {
                     </div> */}
                     {/* Team image */}
                     <img
-                    src='/Frame 339.png'
+                    src='/ourteam/Frame 339.png'
                     alt="Team meeting with creative lighting"
                     className="w-full rounded-lg shadow-2xl relative -top-5"
                     />
@@ -128,7 +129,7 @@ const page = () => {
                     <div className="w-full md:w-1/2">
                     <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-900 p-1">
                         <img
-                        src="/Frame 340.png"
+                        src="/ourteam/Frame 340.png"
                         alt="Portrait of company founder"
                         className="w-full rounded-2xl"
                         />
@@ -188,7 +189,7 @@ const page = () => {
                     <div className="w-full md:w-1/2">
                     <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-900 p-1">
                         <img
-                        src="/Frame 341.png"
+                        src="/ourteam/Frame 341.png"
                         alt="Portrait of company founder"
                         className="w-full rounded-2xl"
                         />

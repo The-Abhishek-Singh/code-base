@@ -65,37 +65,40 @@ const head = () => {
    <Servicesboxes
      title="CLOUD SOLUTIONS & MIGRATION"
      bgUrl="/services/div3.png"
-      shifturl="/services/first"
+      shifturl="/services/CLOUD-SOLUTIONS-&-MIGRATION"
    />
    <Servicesboxes
      title="CYBERSECURITY SERVICES"
      bgUrl="/services/div4.png"
-      shifturl="/services/first"
+      shifturl="/services/CYBERSECURITY-SERVICES"
    />
    <Servicesboxes
      title="Study Abroad"
      bgUrl="/services/div5.png"
-      shifturl="/services/first"
+      shifturl="/services/Study-Abroad
+"
    />
    <Servicesboxes
      title="Work Abroad"
      bgUrl="/services/div6.png"
-      shifturl="/services/first"
+      shifturl="/services/Work-Abroad
+"
    />
    <Servicesboxes
      title="E-COMMERCE SOLUTIONS"
      bgUrl="/services/div7.png"
-      shifturl="/services/first"
+      shifturl="/services/E-COMMERCE-SOLUTIONS"
    />
    <Servicesboxes
      title="UI/UX DESIGN SERVICES"
      bgUrl="/services/div8.png"
-      shifturl="/services/first"
+      shifturl="/services/UI-UX-DESIGN-SERVICES
+"
    />
    <Servicesboxes
      title="IT INFRASTRUCTURE MANAGEMENT"
      bgUrl="/services/div9.png"
-      shifturl="/services/first"
+      shifturl="/services/IT-INFRASTRUCTURE-MANAGEMENT"
    />
 </div>
 </div>
