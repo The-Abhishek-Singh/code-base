@@ -5,26 +5,26 @@ const TeamMember = ({ name, role, imageUrl }) => (
       <img
         src={imageUrl}
         alt={name}
-        className="w-full h-full object-cover border border-white"
+        className="w-full h-full object-cover"
       />
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
         <div className="absolute bottom-0 p-6 space-y-2">
           <h3 className="text-3xl font-bold text-white">{name}</h3>
           <p className="text-gray-200 text-sm">{role}</p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 const teamMembers = [
     {
     name: 'Kritika',
     role: 'Expert UI/UX Designer & Front-end Developer',
-    imageUrl: '/Frame 326.png'
+    imageUrl: '/Frame 326.jpg'
     },
     {
     name: 'Leelam',
     role: 'Expert UI/UX Designer & Front-end Developer',
-    imageUrl: '/Frame 319.png'
+    imageUrl: '/Frame 319.jpg'
     },
     {
     name: 'Kunal',
@@ -34,39 +34,38 @@ const teamMembers = [
     {
     name: 'Abhishek',
     role: 'Expert UI/UX Designer & Front-end Developer',
-    imageUrl: '/Frame 327.png'
+    imageUrl: '/Frame 327.jpg'
     },
     {
     name: 'Rounak',
     role: 'Expert Front-end Developer',
-    imageUrl: '/Frame 322.png'
+    imageUrl: '/Frame 322.jpg'
     },
     {
     name: 'Vatsalya',
     role: 'Expert Full Stack Developer',
-    imageUrl: '/Frame 323.png'
+    imageUrl: '/Frame 323.jpg'
     },
     {
     name: 'Divyanshu',
     role: 'Expert Front-end Developer',
-    imageUrl: '/Frame 324.png'
+    imageUrl: '/Frame 324.jpg'
     },
     {
     name: 'Mithun',
     role: 'Expert Full Stack Developer',
-    imageUrl: '/Frame 325.png'
+    imageUrl: '/Frame 325.jpg'
     }
 ];
 const page = () => {
   return (
     <div className="main-container h-auto w-full bg-black">
-      
         <div className="relative h-20 z-1 bg-black"></div>
         <div className="relative hero-bg h-auto bg-black text-white">
             {/* Background with gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10" />
             {/* Main content container */}
-            <div className="relative z-10 container mx-auto lg:pl-36 py-5 pl-8 flex flex-col lg:pr-0 pr-8  md:flex-row items-center justify-between gap-12 mb-14">
+            <div className="relative z-10 container mx-auto lg:pl-28 py-5 pl-8 flex flex-col lg:pr-0 pr-8  md:flex-row items-center justify-between gap-12 mb-14">
                 {/* Text content section */}
                 <div className="w-full md:w-1/2 space-y-32">
                 <div className="space-y-2">
@@ -117,7 +116,7 @@ const page = () => {
                     <img
                     src='/Frame 339.png'
                     alt="Team meeting with creative lighting"
-                    className="w-full rounded-lg shadow-2xl"
+                    className="w-full rounded-lg shadow-2xl relative -top-5"
                     />
                 </div>
                 </div>
@@ -204,7 +203,7 @@ const page = () => {
                     MEET OUR TEAM
                     </h2>
                     {/* Team Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
                     {teamMembers.map((member, index) => (
                         <TeamMember
                         key={index}
@@ -216,7 +215,6 @@ const page = () => {
                     </div>
                 </div>
             </div>
-    
     </div>
   )
 }

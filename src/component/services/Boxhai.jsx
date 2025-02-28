@@ -60,7 +60,7 @@ const head = () => {
    <Servicesboxes
      title="IT TRAINING & CERTIFICATION"
      bgUrl="/services/div2.png"
-      shifturl="/services/first"
+      shifturl="/services/IT-TRAINING-&-CERTIFICATION"
    />
    <Servicesboxes
      title="CLOUD SOLUTIONS & MIGRATION"
