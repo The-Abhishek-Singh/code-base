@@ -41,7 +41,10 @@ const Navbar = () => {
   return (
     <nav
       className={`w-full bg-black border-b border-gray-200 mb-4 bg-opacity-90 fixed top-0 left-0 transition-all duration-300 ease-in-out z-50 ${
-        isVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        isVisible
+  ? "opacity-100 pointer-events-auto transition-opacity duration-500 ease-in-out"
+  : "opacity-0 transition-opacity duration-500 ease-in-out delay-200 pointer-events-none"
+
       }`}
     >
       <div className="w-full px-2 md:px-4">
