@@ -1,10 +1,12 @@
-import SoftwareServices from '@/component/servicespage/software'
+import SoftwareServices from '@/component/servicespage/Services'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-      <SoftwareServices/>
+
+        <SoftwareServices/>
+      
     </div>
   )
 }

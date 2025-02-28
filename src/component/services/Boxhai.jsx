@@ -10,7 +10,7 @@ const head = () => {
     <div className='h-20 bg-black'></div>
     <div className='h-full w-full servicegradient bg-gradient-to-b from-black via-[#1E1E1E] to-black'>
   <div className='flex flex-col lg:flex-row relative'>
-   <div className='h-full w-full sm:pt-24 sm:px-16 px-6 py-5 justify-center flex flex-col gap-8'>
+   <div className='h-full w-full sm:pt-24 sm:px-24 px-6 py-5 justify-center flex flex-col gap-8'>
   <div>
    <h1 className='text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-4 inline'>OUR SERVICES</h1>
     <img src="/services/Removed.png" alt="Removed" className='float-right m-4 relative sm:w-[50%] md:w-[50%] lg:w-[500px] lg:-top-20'/>
@@ -33,7 +33,7 @@ const head = () => {
    </div>
    {/* <div className='h-full lg:w-[50%] w-full py-10 px-16 flex items-center justify-center'></div> */}
     </div>
-    <div className='h-auto w-full flex p-6 items-center justify-around flex-wrap gap-2'>
+    <div className='h-auto w-full flex items-center justify-around flex-wrap gap-2 px-5 py-6'>
     <h1 className=''>Trusted By <br /> 600+ Companies  </h1>
     <h1 className=''>Google</h1>
     <h1 className=''>Facebook</h1>
@@ -55,7 +55,7 @@ const head = () => {
    <Servicesboxes
      title="SOFTWARE DEVELOPMENT & EXPORT SERVICES"
      bgUrl="/services/image%2021.png"
-     shifturl="/services/first"
+     shifturl="/services/SOFTWARE-DEVELOPMENT-&-EXPORT-SERVICES"
    />
    <Servicesboxes
      title="IT TRAINING & CERTIFICATION"
