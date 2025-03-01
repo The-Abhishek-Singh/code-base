@@ -2,7 +2,7 @@
 import React from "react";
 const Part = ({ number, title, description, image }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:space-x-4 lg:space-x-8 px-4 sm:px-6 lg:px-12 py-4 sm:py-6 lg:py-8">
+    <div className="flex flex-col  md:flex-row items-center md:items-start gap-4 md:space-x-4 lg:space-x-8 px-4 sm:px-6 lg:px-12 py-4 sm:py-6 lg:py-8">
       {/* Image Section - Full width on mobile, proper width on larger screens */}
       <div className="w-full md:w-auto flex justify-start md:justify-start">
         <img

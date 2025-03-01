@@ -17,7 +17,9 @@ const head = () => {
     <p className='text-white font-light text-lg tracking-wider md:text-2xl lg:text-xl w-full paragraph mt-2 mb-2 lg:mb-10 lg:leading-[2vw] lg:w-[65%]'>
     Careertronic Global Services provides customized solutions for individuals, businesses, and institutions, helping them thrive in the digital era. We offer career development programs, skill training, and job placement for professionals, while businesses benefit from process optimization, automation, and software integration to enhance efficiency and growth. Institutions gain access to digital transformation strategies and innovative technologies to improve operations. With a focus on innovation, efficiency, and success, we empower our clients to stay competitive and achieve their goals in an evolving digital landscape.
     </p>
-           <Input />
+           <Input
+           Data="Search for Services"
+           />
         <div className='flex gap-4 mt-[3vw]'>
         <div className='flex gap-2'>
         <Globe />

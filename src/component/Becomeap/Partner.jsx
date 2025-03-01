@@ -201,7 +201,7 @@ const PartnerPage = () => {
             Partnering with <span className="text-red-500">Careertronic</span>
           </h1>
         </div>
-        <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+        <div className="space-y-4 sm:space-y-6 lg:space-y-8 flex flex-col items-center">
           {steps.map((step, index) => (
             <Part key={index} {...step} />
           ))}

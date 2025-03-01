@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from "react";
 import { Search } from 'lucide-react';
 
-const Input = () => {
+const Input = ({Data}) => {
 
 
       const [course, setCourse] = useState("");
@@ -34,7 +34,7 @@ const Input = () => {
         type="text"
         value={course}
         onChange={(e) => setCourse(e.target.value)}
-        placeholder="Enter course name"
+        placeholder="{Data}"
         className="w-[60%] h-full px-4 rounded-l-2xl outline-none"
       />
       <button
