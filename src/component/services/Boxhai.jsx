@@ -10,11 +10,11 @@ const head = () => {
     <div className='h-20 bg-black'></div>
     <div className='h-full w-full servicegradient bg-gradient-to-b from-black via-[#1E1E1E] to-black'>
   <div className='flex flex-col lg:flex-row relative'>
-   <div className='h-full w-full sm:pt-24 sm:px-24 px-6 py-5 justify-center flex flex-col gap-8'>
+   <div className='h-full w-full md:pt-4 sm:px-24 px-6 py-5 justify-center flex flex-col gap-8'>
   <div className='relative py-6 md:p-0'>
-   <h1 className='text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-4 inline'>OUR SERVICES</h1>
+   <h1 className='text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-14 inline-block'>OUR SERVICES</h1>
     <img src="/services/Removed.png" alt="Removed" className='float-right m-4 relative sm:w-[50%] md:w-[50%] lg:w-[500px] lg:-top-20 hidden sm:block'/>
-    <p className='text-white font-light text-lg tracking-wider md:text-2xl lg:text-xl w-full paragraph mt-20 lg:leading-[2vw] lg:w-[65%]'>
+    <p className='text-white font-light text-lg tracking-wider md:text-2xl lg:text-xl w-full paragraph mt-2 mb-2 lg:mb-10 lg:leading-[2vw] lg:w-[65%]'>
     Careertronic Global Services provides customized solutions for individuals, businesses, and institutions, helping them thrive in the digital era. We offer career development programs, skill training, and job placement for professionals, while businesses benefit from process optimization, automation, and software integration to enhance efficiency and growth. Institutions gain access to digital transformation strategies and innovative technologies to improve operations. With a focus on innovation, efficiency, and success, we empower our clients to stay competitive and achieve their goals in an evolving digital landscape.
     </p>
            <Input />
@@ -33,15 +33,24 @@ const head = () => {
    </div>
    {/* <div className='h-full lg:w-[50%] w-full py-10 px-16 flex items-center justify-center'></div> */}
     </div>
-    <div className='h-auto w-full flex items-center justify-around flex-wrap gap-2 px-5 py-6'>
-    <h1 className=''>Trusted By <br /> 600+ Companies  </h1>
-    <h1 className=''>Google</h1>
-    <h1 className=''>Facebook</h1>
-    <h1 className=''>Meta</h1>
-    <h1 className=''>Amazone </h1>
-    <h1 className=''>Tata</h1>
-    <h1 className=''>Techno</h1>
-    <h1>Accenture</h1>
+    <div className='h-auto w-full flex  px-6 sm:px-16 lg:px-24 py-6 items-center justify-between flex-wrap gap-2'>
+    <h1 className=''>Trusted By <br className='md:inline hidden'/>600+ Companies <span className='md:hidden inline'>:</span>  </h1>
+      <h1 className='md:block hidden flex-shrink-0'>Google</h1>
+      <h1 className='md:block hidden flex-shrink-0'>Facebook</h1>
+      <h1 className='md:block hidden flex-shrink-0'>Meta</h1>
+      <h1 className='md:block hidden flex-shrink-0'>Amazone </h1>
+      <h1 className='md:block hidden flex-shrink-0'>Tata</h1>
+      <h1 className='md:block hidden flex-shrink-0'>Techno</h1>
+      <h1 className='md:block hidden flex-shrink-0'>Accenture</h1>
+    <div className='md:hidden flex flex-wrap gap-4'>
+      <h1>Google</h1>
+      <h1>Facebook</h1>
+      <h1>Meta</h1>
+      <h1>Amazone </h1>
+      <h1>Tata</h1>
+      <h1>Techno</h1>
+      <h1>Accenture</h1>
+    </div>
     </div>
     </div>
      {/* SECONE PART OF THE PAGE  */}

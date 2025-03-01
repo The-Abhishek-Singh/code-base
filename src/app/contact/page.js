@@ -61,7 +61,7 @@ const ContactUs = () => {
         </div>
       </div>
       {/* Contact Form Section */}
-      <div className="container bg-white mx-auto px-4 py-12 md:py-16">
+      <div className="container  bg-white mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold bg-light-50 text-red-600">Contact Us</h2>
           <p className="mt-4 text-gray-600">Any question or remarks? Just write us a message!</p>
@@ -156,7 +156,7 @@ const ContactUs = () => {
         </div>
       </div>
       {/* Office Locations */}
-      <div className="container bg-white mx-auto px-4 py-8 md:py-12">
+      <div className="container mb-24 bg-white mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {/* Head Office */}
           <div className="border border-gray-400 rounded-lg p-4 md:p-6">
