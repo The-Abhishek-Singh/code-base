@@ -15,10 +15,10 @@ export default function Home() {
       </Head>
       <main>
         {/* Hero Section */}
-        <section className="mx-auto my-4 sm:my-6 lg:my-8 xl:my-12 2xl:my-16 max-w-6xl xl:max-w-7xl 2xl:max-w-8xl px-4 sm:px-6 lg:px-8 xl:px-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between p-4 sm:p-8 lg:p-12 xl:p-16">
-            <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight mb-4 xl:mb-6">
+        <section className="mx-auto my-4 sm:my-6 lg:my-8 xl:my-12 2xl:my-16 xl:max-w-7xl  px-4 sm:px-6 lg:px-8 xl:px-12 2xl:m-0 2xl:p-0 2xl:h-screen 2xl:mb-0 ">
+          <div className="flex flex-col lg:flex-row items-center justify-between p-4 sm:p-8 lg:p-12 xl:p-16 2xl:p-0 2xl:m-0 2xl:w-[100%]" >
+            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 2xl:ml-[150px]  2xl:m-0 2xl:p-0 2xl:text-xl 2xl:w-full"> 
+              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl font-bold leading-tight mb-4 xl:mb-6 ">
                 YOUR
                 <br />
                 GATEWAY
@@ -27,7 +27,7 @@ export default function Home() {
                 <br />
                 EXCELLENCE
               </h1>
-              <p className="text-sm md:text-base xl:text-lg 2xl:text-xl text-gray-300 mb-6 xl:mb-8 max-w-xl 2xl:max-w-2xl">
+              <p className="text-sm md:text-base xl:text-lg 2xl:text-xl text-gray-300 mb-6 xl:mb-8 max-w-xl 2xl:max-w-2xl 2xl:mt-14 2xl:mb-14">
                 We offer tailored strategies, expert guidance, and innovative
                 solutions designed to propel your business forward.
               </p>
@@ -40,9 +40,9 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0">
-              <div className="relative w-full h-56 sm:h-64 md:h-80 lg:h-96 xl:h-112 2xl:h-128">
-                <div className="absolute inset-0 bg-gradient-to-r from-black via-red-700 to-black rounded-lg"></div>
+            <div className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0 2xl:mr-[-550px] 2xl:m-0 2xl:p-0 2xl:w-full 2xl:h-[800px] 2xl:overflow-visible 2xl:pt-0">
+              <div className="relative w-full h-56 sm:h-64 md:h-80 lg:h-96 xl:h-112 2xl:m-0 2xl:p-0 2xl:h-full 2xl:w-full ">
+                <div className="absolute inset-0 bg-gradient-to-r  from-black via-red-700 to-black rounded-lg"></div>
                 <Image
                   src="/Business/BS1.png"
                   alt="3D Red Building"
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </section>
         {/* Empowering Business Section */}
-        <section className="py-10 sm:py-16 lg:py-20 xl:py-24 2xl:py-32 bg-black">
+        <section className="py-10 sm:py-16 lg:py-20 xl:py-24 2xl:py-32 bg-black 2xl:mt-0 2xl:pt-0">
           <div className="max-w-6xl xl:max-w-7xl 2xl:max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <div className="text-center mb-10 sm:mb-16 xl:mb-20">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold uppercase mb-2 xl:mb-4">
