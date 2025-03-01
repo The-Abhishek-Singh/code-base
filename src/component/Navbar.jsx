@@ -34,6 +34,7 @@ const Navbar = () => {
     { title: "Home", link: "/" },
     { title: "About Us", link: "/about" },
     { title: "Services", link: "/services" },
+    { title: "Courses", link: "/courses" },
     { title: "Become a Partner", link: "/partner" },
     { title: "Contact Us", link: "/contact" },
     { title: "Business Consulting", link: "/consulting" },
