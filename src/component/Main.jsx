@@ -50,29 +50,29 @@ const ScrollCards = () => {
         "Our Business Consulting services provide strategic expertise to help businesses overcome challenges, streamline operations, and drive sustainable growth. We offer data-driven insights, process optimization, and market analysis to enhance decision-making and competitiveness. With a focus on innovation and efficiency, we empower organizations to scale successfully in a dynamic business landscape.",
     },
   ];
-  const getIcon = (title) => {
+  const getImage = (title) => {
     switch (title) {
-      case "Artificial Intelligence & Machine Learning":
-        return <BrainCircuit size={20} />;
-      case "Cloud Computing & DevOps Solutions":
-        return <Cloud size={20} />;
-      case "App Development & Integration":
-        return <AppWindow size={20} />;
-      case "Software Maintenance & Support":
-        return <Construction size={20} />;
-      case "Data Science & Analytics":
-        return <FileChartColumn size={20} />;
+      case "SOFTWARE DEVELOPMENT & EXPORT SERVICES ":
+        return "homeCollapse1.png";
+      case "IT & INDUSTRIAL AUTOMATION TRAINING":
+        return "homeCollapse2.png";
+      case "CORPORATE & INDUSTRIAL TRAINING":
+        return "homeCollapse3.png";
+      case "GLOBAL EDUCATION & STUDY ABROAD PROGRAMS":
+        return "homeCollapse4.png";
+      case "BUSINESS CONSULTING":
+        return "homeCollapse5.png";
       case "Blockchain & IoT":
-        return <Bitcoin size={20} />;
+        return "homeCollapse1.png";
       default:
-        return <Cloud size={20} />;
+        return "homeCollapse2.png";
     }
   };
   // Original scroll functionality for desktop
   useEffect(() => {
     if (window.innerWidth >= 640) {
       const allCards = document.querySelectorAll(".cards-scroll .card");
-      const headerHeight = 45;
+      const headerHeight = 63;
       const cardsCount = allCards.length;
       const cardSpacing = 5;
       const cardsClickHandler = (index) => {
@@ -131,16 +131,16 @@ const ScrollCards = () => {
       {/* Desktop Version - Hidden on mobile */}
       <div className="hidden sm:block">
         <section className="common h-[0vh] w-full flex justify-center items-center"></section>
-        <section className="cards-scroll px-2 lg:p-10 flex flex-col">
+        <section className="cards-scroll  flex flex-col">
           <div className="card-row" ref={cardRowRef}>
             {cardsData.map((card, index) => (
               <div
                 key={`desktop-${index}`}
-                className="card overflow-hidden h-[100vh] w-full text-white bg-black sticky mx-auto"
+                className="card overflow-hidden h-[100vh] w-full text-white bg-black sticky mx-auto shadow-[0_-8px_30px_5px_rgba(255,255,255,0.2)]"
               >
-                <div className="card__header sm:px-10 2xl:px-20 bg-black w-full border-b-2 border-white/20 min-h-[45px] p-2 flex items-center justify-center md:justify-start cursor-pointer transition-all duration-300 hover:text-red-300">
+                <div className="card__header sm:px-10 2xl:px-20 bg-black w-full border-b-2 border-white/20 min-h-[45px] p-2 flex items-center justify-center md:justify-start cursor-pointer transition-all duration-300 hover:text-red-300 ">
                   <motion.h2 className="text-lg 2xl:text-xl w-full xl:px-20 font-semibold flex items-center gap-2 cursor-pointer">
-                    {getIcon(card.title)}
+                  <img src={getImage(card.title)} alt={card.title} width="50" height="50" />
                     {card.title}
                   </motion.h2>
                 </div>
@@ -155,10 +155,10 @@ const ScrollCards = () => {
                     />
                   </div>
                   <div className="card__content text-left flex flex-col items-start 2xl:justify-center pt-2 sm:px-10 md:px-8">
-                    <h3 className="relative text-lg font-semibold mb-5 text-center lg:text-start underline underline-offset-8 after:content-[''] after:absolute after:w-2 after:h-2 after:bg-white after:rounded-full after:bottom-[-6px]">
+                    <h3 className="relative text-xl font-semibold mb-5 text-center lg:text-start underline underline-offset-8 after:content-[''] after:absolute after:w-2 after:h-2 after:bg-white after:rounded-full after:bottom-[-6px]">
                       {card.heading}
                     </h3>
-                    <p className="text-sm leading-relaxed font-medium text-center sm:text-start">
+                    <p className="text-xl leading-relaxed font-medium text-center sm:text-start">
                       {card.content}
                     </p>
                   </div>
@@ -178,11 +178,12 @@ const ScrollCards = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-8 bg-black/50 rounded-lg overflow-hidden shadow-lg border border-white/10"
+              className="mb-8 bg-black/50 rounded-lg overflow-hidden border border-white/10"
             >
-              <div className="bg-black p-4 border-b border-white/20">
+              <div className="bg-black p-4 border-b border-white/20 shadow-[0_-8px_15px_-3px_rgba(255,255,255,0.5)]">
                 <h2 className="text-white text-lg font-bold flex items-center gap-2">
-                  {getIcon(card.title)}
+                  {/* {getIcon(card.title)} */}
+                  <img src={getImage(card.title)} alt={card.title} width="40" height="40" />
                   {card.title}
                 </h2>
               </div>

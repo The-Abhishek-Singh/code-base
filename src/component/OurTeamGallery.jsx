@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
+import ScrollReveal from "@/component/About/ScrollReveal";
 const OurTeamGallery = () => {
   const slides = ["/Partnerbg.png", "/partnerpg.png", "/OurTeam.png"];
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -81,7 +82,7 @@ const OurTeamGallery = () => {
             className=" mt-12 block font-bold font-poppins text-xl sm:text-2xl md:text-3xl text-black hover:underline cursor-pointer"
           >
             <p>
-                View all <span className="text-red-500">Companies</span>
+              View all <span className="text-red-500">Companies</span>
             </p>
           </a>
         </div>
@@ -113,38 +114,50 @@ const OurTeamGallery = () => {
             "linear-gradient(90deg, hsla(230, 100%, 12%, 1) 0%, hsla(230, 100%, 12%, 1) 0%, hsla(230, 100%, 10%, 1) 31%)",
         }}
       >
-        <h1 className="text-3xl font-bold font-poppins">
-          <span className="text-white">
-            THE MINDS BEHIND <span className="text-red-500"> CAREERTRONIC</span>{" "}
-            TEAM
-          </span>
-        </h1>
-        <p className="text-white max-w-2xl leading-relaxed">
-          At Careertronic Global Services, our strength lies in our skilled and
-          passionate team, dedicated to delivering innovative solutions for your
-          success. We bring expertise across software development, IT training,
-          business consulting, and education advisory. Our commitment to
-          continuous learning ensures we stay ahead of industry trends,
-          providing cutting-edge solutions tailored to your needs.
-        </p>
-        <img
-          src="/OurTeam.png"
-          alt="Our Team"
-          className="mt-8 mb-10 w-full max-w-xl rounded-[40px]"
-        />
-      
-<Link href="/ourteam">
-        <button
-          className="text-white py-3 px-6 rounded hover:bg-red-600 transition-colors"
-          style={{
-            background:
-              "linear-gradient(90deg, hsla(0, 100%, 50%, 1) 0%, hsla(0, 100%, 30%, 1) 99%, hsla(3, 100%, 73%, 1) 100%)",
-          }}
+        <ScrollReveal
+          animation="fadeSlideLeft"
+          duration={800}
+          easing="spring"
+          delay={50}
         >
-          Show All
-        </button>
-        </Link>
-
+          <h1 className="text-3xl font-bold font-poppins">
+            <span className="text-white">
+              THE MINDS BEHIND{" "}
+              <span className="text-red-500"> CAREERTRONIC</span> TEAM
+            </span>
+          </h1>
+          <p className="text-white max-w-2xl leading-relaxed mt-5">
+            At Careertronic Global Services, our strength lies in our skilled
+            and passionate team, dedicated to delivering innovative solutions
+            for your success. We bring expertise across software development, IT
+            training, business consulting, and education advisory. Our
+            commitment to continuous learning ensures we stay ahead of industry
+            trends, providing cutting-edge solutions tailored to your needs.
+          </p>
+        </ScrollReveal>
+        <ScrollReveal animation="slideUp"
+                duration={700}
+                easing="spring"
+                delay={0}
+                index={0}
+                stagger={150}>
+          <img
+            src="/OurTeam.png"
+            alt="Our Team"
+            className="mt-8 mb-10 w-full max-w-xl rounded-[40px]"
+          />
+          <Link href="/ourteam">
+            <button
+              className="text-white py-3 px-6 rounded hover:bg-red-600 transition-colors"
+              style={{
+                background:
+                  "linear-gradient(90deg, hsla(0, 100%, 50%, 1) 0%, hsla(0, 100%, 30%, 1) 99%, hsla(3, 100%, 73%, 1) 100%)",
+              }}
+            >
+              Show All
+            </button>
+          </Link>
+        </ScrollReveal>
       </div>
       {/* Marquee Animation Style */}
       <style jsx>{`
