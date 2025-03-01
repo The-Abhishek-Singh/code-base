@@ -54,7 +54,7 @@ const Navbar = () => {
           <div className="flex items-center h-full w-[200px] xl:w-[250px]">
             <Link href="/" className="flex items-center gap-2 h-full xl:p-3">
               <Image
-                src="/Logo.png"
+                src="/navbar/Logo.png"
                 alt="Careertronics"
                 width={150}
                 height={50}
