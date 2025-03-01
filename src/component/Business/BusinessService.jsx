@@ -74,7 +74,7 @@ const BusinessService = () => {
       title: "Resource Management",
       description:
         "Capacity planning, resource allocation frameworks, utilization optimization, and performance tracking systems.",
-      iconSrc: "/Business/resource.png",
+      iconSrc: "/Business/Resource.png",
       borderColor: "border-gray-700",
     },
     {
