@@ -42,37 +42,37 @@ const PartnerPage = () => {
   ];
   const benefits = [
     {
-      images: ["/why1.png"],
+      images: ["/becomeap/why1.png"],
       title: "Proven Business Model",
       description:
         "Our tested franchise model offers a scalable framework with years of experience in IT, education, and outsourcing, ensuring your success through clear processes, strategic guidance, and ongoing support.",
     },
     {
-      images: ["/why2.png"],
+      images: ["/becomeap/why2.png"],
       title: "Comprehensive Support",
       description:
         "Receive extensive support including training, marketing assistance, operational guidance, and access to our CRM system to ensure smooth business operations.",
     },
     {
-      images: ["/why6.png"],
+      images: ["/becomeap/why6.png"],
       title: "Strong Brand Recognition",
       description:
         "Leverage CGSPL's established reputation in IT training, education consulting, and outsourcing to quickly build credibility and attract clients in your local market.",
     },
     {
-      images: ["/why3.png"],
+      images: ["/becomeap/why3.png"],
       title: "Diverse Revenue Streams",
       description:
         "Tap into multiple revenue channels: IT training, outsourcing services, industrial automation, education consulting, and corporate training & consulting.",
     },
     {
-      images: ["/why4.png"],
+      images: ["/becomeap/why4.png"],
       title: "Scalable Growth Opportunities",
       description:
         "Start small and scale quickly with our flexible model, equipped with the tools and resources to help you expand locally or globally.",
     },
     {
-      images: ["/whyl.png"],
+      images: ["/becomeap/whyl.png"],
       title: "Access to Cutting-Edge Technologies",
       description:
         "Stay ahead with access to the latest technologies in AI, cloud computing, blockchain, and cybersecurity, positioning you in high-demand markets.",
