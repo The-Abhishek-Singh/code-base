@@ -105,7 +105,7 @@ const head = () => {
           >
             <Servicesboxes
               title="WEB DEVELOPMENT "
-              bgUrl="/services/image%2021.png"
+              bgUrl="/Course/web.png"
               shifturl="/services/SOFTWARE-DEVELOPMENT-&-EXPORT-SERVICES"
             />
           </ScrollReveal>
@@ -119,7 +119,7 @@ const head = () => {
           >
             <Servicesboxes
               title="Application Development"
-              bgUrl="/services/div2.png"
+              bgUrl="/Course/mob.webp"
               shifturl="/services/IT-TRAINING-&-CERTIFICATION "
             />
           </ScrollReveal>
@@ -133,7 +133,7 @@ const head = () => {
           >
             <Servicesboxes
               title="DATA SCIENCE & AI"
-              bgUrl="/services/div3.png"
+              bgUrl="/Course/ds.jpg"
               shifturl="/services/CLOUD-SOLUTIONS-&-MIGRATION"
             />{" "}
           </ScrollReveal>
@@ -147,8 +147,8 @@ const head = () => {
           >
             <Servicesboxes
               title="INDUSTRIAL AUTOMATION"
-              bgUrl="/services/div4.png"
-              shifturl="/services/CYBERSECURITY-SERVICES "
+              bgUrl="/Course/automation.jpg "
+              shifturl="/services/CLOUD-SOLUTIONS-&-MIGRATION"
             />{" "}
           </ScrollReveal>
           <ScrollReveal
@@ -161,7 +161,7 @@ const head = () => {
           >
             <Servicesboxes
               title="AWS DEVOPS"
-              bgUrl="/services/div5.png"
+              bgUrl="/Course/aws.webp"
               shifturl="/services/Study-Abroad "
             />
           </ScrollReveal>
@@ -175,7 +175,7 @@ const head = () => {
           >
             <Servicesboxes
               title="CYBER SECURITY"
-              bgUrl="/services/div6.png"
+              bgUrl="/Course/security.jpeg"
               shifturl="/services/Work-Abroad "
             />
           </ScrollReveal>
@@ -189,7 +189,7 @@ const head = () => {
           >
             <Servicesboxes
               title="CLOUD COMPUTING"
-              bgUrl="/services/div7.png"
+              bgUrl="/Course/cloud.png"
               shifturl="/services/E-COMMERCE-SOLUTIONS"
             />
           </ScrollReveal>
@@ -203,8 +203,8 @@ const head = () => {
           >
             <Servicesboxes
               title="ETHICAL HACKING"
-              bgUrl="/services/div8.png"
-              shifturl="/services/UI-UX-DESIGN-SERVICES"
+              bgUrl="/Course/ethical.webp"
+              shifturl="/services/CLOUD-SOLUTIONS-&-MIGRATION"
             />
           </ScrollReveal>
           <ScrollReveal
@@ -217,7 +217,7 @@ const head = () => {
           >
             <Servicesboxes
               title="INFORMATION SECURITY"
-              bgUrl="/services/div9.png"
+              bgUrl="/Course/Info.png"
               shifturl="/services/IT-INFRASTRUCTURE-MANAGEMENT"
             />
           </ScrollReveal>
