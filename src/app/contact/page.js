@@ -28,6 +28,9 @@ const ContactUs = () => {
         </div>
       </div>
       {/* Contact Information Cards */}
+      
+     
+
       <div className="container mx-auto px-4 -mt-16 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-16">
           {/* Location Card */}
@@ -37,7 +40,10 @@ const ContactUs = () => {
             </div>
             <h3 className="text-white text-lg font-bold mb-1">Location</h3>
             <p className="text-gray-300 text-sm text-center px-2">
-              132 Dartmouth Street, Boston, Massachusetts 02156, United States
+              Address - Careertronic Global Services Private Limited
+              3rd Floor, KNR SQUARE, OPP The Platina, Gachibowli, Hyderabad,
+              Telangana, 500032
+              
             </p>
           </div>
           {/* Email Card */}
@@ -46,8 +52,8 @@ const ContactUs = () => {
               <FaEnvelope className="text-white text-3xl" />
             </div>
             <h3 className="text-white text-lg font-bold mb-1">Email</h3>
-            <p className="text-gray-300 text-sm">info@alia.com</p>
-            <p className="text-gray-300 text-sm">support@alia.com</p>
+            <p className="text-gray-300 text-sm"> Our friendly team is here to help.
+contact@careertronic.in </p>
           </div>
           {/* Phone Card */}
           <div className="bg-gradient-to-b from-gray-700 to-gray-900 p-5 rounded-xl text-center shadow-lg flex flex-col items-center border border-gray-600 w-full max-w-xs mx-auto h-auto md:h-64 sm:col-span-2 lg:col-span-1">
@@ -55,12 +61,15 @@ const ContactUs = () => {
               <FaPhone className="text-white text-3xl" />
             </div>
             <h3 className="text-white text-lg font-bold mb-1">Phone</h3>
-            <p className="text-gray-300 text-sm">+1 012 3456 789</p>
-            <p className="text-gray-300 text-sm">+91 012 3456 789</p>
+            <p className="text-gray-300 text-sm"> 
+              Mon-Sat from 10am to 7pm<br/></p>
+              <p>+(91) 8602755547</p>
+            <p> 9343202785</p>
           </div>
         </div>
       </div>
       {/* Contact Form Section */}
+      <div className='bg-white'>
       <div className="container  bg-white mx-auto px-4 py-12 md:py-16">
         <div className="text-center mb-8 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold bg-light-50 text-red-600">Contact Us</h2>
@@ -214,6 +223,7 @@ const ContactUs = () => {
                 contact@chanakyans.in
               </Link>
             </div>
+          </div>
           </div>
         </div>
       </div>
