@@ -5,49 +5,49 @@ const ServiceCarousel = () => {
   const [services, setServices] = useState([
     {
       id: 1,
-      name: "GROCERY DELIVERY",
+      name: "SOFTWARE DEVELOPMENT & EXPORT SERVICES",
       image: "/ServiceCarousel/food-app.svg",
       pageNum: 1,
       position: 2// left
     },
     {
       id: 2,
-      name: "LAUNDRY SERVICE",
+      name: "IT TRAINING & CERTIFICATION",
       image: "/ServiceCarousel/food-app.svg",
       pageNum: 2,
       position: 1 // middle
     },
     {
       id: 3,
-      name: "E-COMMERCE DELIVERY",
+      name: "CLOUD SOLUTIONS & MIGRATION",
       image: "/ServiceCarousel/food-app.svg",
       pageNum: 3,
       position: 0// right (highlighted)
     },
     {
       id: 4,
-      name: "FOOD DELIVERY",
+      name: "Study & Work Abroad",
       image: "/ServiceCarousel/food-app.svg",
       pageNum: 7,
       position: 3 // off-screen
     },
     {
       id: 5,
-      name: "LAUNDRY SERVICE",
+      name: "E-COMMERCE SOLUTIONS",
       image: "/ServiceCarousel/food-app.svg",
       pageNum: 6,
       position: 4
     },
     {
       id: 6,
-      name: "ONLINE CONSULTANT",
+      name: "IT INFRASTRUCTURE MANAGEMENT",
       image: "/ServiceCarousel/food-app.svg",
       pageNum: 5,
       position: 5
     },
     {
       id: 7,
-      name: "HOME SERVICES",
+      name: "CYBERSECURITY SERVICES",
       image: "/ServiceCarousel/food-app.svg",
       pageNum: 4,
       position: 6
