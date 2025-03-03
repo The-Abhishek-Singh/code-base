@@ -32,14 +32,14 @@ const OurTeamGallery = () => {
     { name: "CGI", logo: "/Marq/CGI.png" },
     { name: "CISCO", logo: "/Marq/CISCO.jpg" },
     { name: "cognizant", logo: "/Marq/COGNIZANT.png" },
-    { name: "Google", logo: "/Marq/google-icon-logo-svgrepo-com.svg" },
+    { name: "Google", logo: "/Marq/Google (1).png" },
     { name: "Hx", logo: "/Marq/Hexaware1.png" },
     { name: "iBm", logo: "/Marq/IBM.png" },
     { name: "infosys", logo: "/Marq/INFOSYS.png" },
     { name: "intuit", logo: "/Marq/INTUIT.png" },
     { name: "ms", logo: "/Marq/MICROSOFT.jpg" },
     { name: "Mindtree", logo: "/Marq/MINDTREE.png" },
-    { name: "Oracle", logo: "/Marq/or.png" },
+    { name: "Oracle", logo: "/Marq/ORACLE.png" },
     { name: "GATI", logo: "/Marq/Gati.png" },
     { name: "SAP", logo: "/Marq/SAP.png" },
     { name: "TCS", logo: "/Marq/tcs.png" },
@@ -182,7 +182,7 @@ const OurTeamGallery = () => {
         }
         @media (max-width: 640px) {
           .marquee {
-            animation-duration: 12s;
+            animation-duration: 20s;
           }
         }
       `}</style>

@@ -6,49 +6,49 @@ const ServiceCarousel = () => {
     {
       id: 1,
       name: "SOFTWARE DEVELOPMENT & EXPORT SERVICES",
-      image: "/ServiceCarousel/food-app.svg",
+      image: "/ServiceCarousel/Data.jpeg",
       pageNum: 1,
       position: 2// left
     },
     {
       id: 2,
       name: "IT TRAINING & CERTIFICATION",
-      image: "/ServiceCarousel/food-app.svg",
+      image: "/ServiceCarousel/Data.jpeg",
       pageNum: 2,
       position: 1 // middle
     },
     {
       id: 3,
       name: "CLOUD SOLUTIONS & MIGRATION",
-      image: "/ServiceCarousel/food-app.svg",
+      image: "/ServiceCarousel/Data.jpeg",
       pageNum: 3,
       position: 0// right (highlighted)
     },
     {
       id: 4,
       name: "Study & Work Abroad",
-      image: "/ServiceCarousel/food-app.svg",
+      image: "/ServiceCarousel/Data.jpeg",
       pageNum: 7,
       position: 3 // off-screen
     },
     {
       id: 5,
       name: "E-COMMERCE SOLUTIONS",
-      image: "/ServiceCarousel/food-app.svg",
+      image: "/ServiceCarousel/Data.jpeg",
       pageNum: 6,
       position: 4
     },
     {
       id: 6,
       name: "IT INFRASTRUCTURE MANAGEMENT",
-      image: "/ServiceCarousel/food-app.svg",
+      image: "/ServiceCarousel/Data.jpeg",
       pageNum: 5,
       position: 5
     },
     {
       id: 7,
       name: "CYBERSECURITY SERVICES",
-      image: "/ServiceCarousel/food-app.svg",
+      image: "/ServiceCarousel/Data.jpeg",
       pageNum: 4,
       position: 6
     },
