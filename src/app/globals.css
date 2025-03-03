@@ -60,3 +60,16 @@ body {
       height: 390px;
   }
 }
+
+
+.loader{
+  animation: animate 2.2s forwards 2.8s;
+}
+@keyframes animate {
+  0%{
+    top: 0;
+  }
+  100%{
+    top: -100%;
+  }
+}
