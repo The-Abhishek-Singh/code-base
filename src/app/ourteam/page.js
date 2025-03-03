@@ -61,12 +61,13 @@ const page = () => {
   return (
     <div className="main-container h-auto w-full bg-black">
 
-        <div className="relative h-20 z-1 bg-black"></div>
-        <div className="relative hero-bg h-auto bg-black text-white">
+        
+        <div className="relative min-h-screen text-white  flex justify-center items-center"
+        style={{backgroundImage: `url('/ourteam/CircleBg.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
             {/* Background with gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10" />
+            <div className="absolute inset-0  bg-zinc-900/70  z-0" />
             {/* Main content container */}
-            <div className="relative z-10 container mx-auto lg:pl-28 py-5 pl-8 flex flex-col lg:pr-0 pr-8  md:flex-row items-center justify-between gap-12 mb-14">
+            <div className="relative z-10 container mx-auto lg:pl-16  py-5 pl-8 flex flex-col lg:pr-0 pr-8  md:flex-row items-center justify-between gap-12 mb-14">
                 {/* Text content section */}
                 <div className="w-full md:w-1/2 space-y-32">
                 <div className="space-y-2">
@@ -82,9 +83,9 @@ const page = () => {
                 </div>
                 <div className="space-y-5 flex relative z-10 justify-between w-[60vw] lg:gap-0 gap-5">
                 {/* Decorative line */}
-                <div className="absolute top-0 left-0">
+                <div className="absolute top-0 left-0 z-10">
                     <div className="container mx-auto w-full">
-                    <div className="w-[75vw] h-1 bg-yellow-600" />
+                    <div className="w-[75vw] h-1 bg-yellow-600/50" />
                     </div>
                 </div>
                     <p className="sm:text-lg lg:w-[30%] text-sm text-gray-300">
@@ -96,32 +97,14 @@ const page = () => {
                 </div>
                 </div>
                 {/* Image section */}
-                <div className="w-full md:w-1/2 mb-14">
-                <div className="relative">
-                    {/* Decorative lighting effect */}
-                    {/* <div className="absolute -top-8 right-0 w-full">
-                    <div className="grid grid-cols-4 gap-4">
-                        {[...Array(8)].map((_, i) => (
-                        <div
-                            key={i}
-                            className="w-16 h-16 rounded-full bg-amber-500/20 blur-xl"
-                            style={{
-                            transform: `translateY(${i % 2 * 10}px)`,
-                            opacity: 0.5 + (i / 16)
-                            }}
-                        />
-                        ))}
-                    </div>
-                    </div> */}
+                
+            </div>
                     {/* Team image */}
                     <img
                     src='/ourteam/Frame 339.png'
                     alt="Team meeting with creative lighting"
-                    className="w-full rounded-lg shadow-2xl relative -top-5"
+                    className="w-full rounded-lg shadow-2xl relative md:absolute right-0 z-0 top-0 md:w-[48%]"
                     />
-                </div>
-                </div>
-            </div>
             </div>
             <div className="h-auto bg-[#161616] text-white p-8 mt-20">
                 <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
