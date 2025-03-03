@@ -90,7 +90,7 @@ const head = () => {
           <div className="w-[80%] h-[80px] bg-red-600 flex  justify-center align-middle rounded-full rounded-tl-md rounded-br-sm bg-gradient-to-r from-[#D31C1F] to-[#AD0003] ">
             <h1 className="text-white sm:text-3xl flex items-center text-xl">
               {" "}
-              Careertronic services
+              Careertronic COURSES
             </h1>
           </div>
         </div>
@@ -104,7 +104,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="SOFTWARE DEVELOPMENT & EXPORT SERVICES"
+              title="WEB DEVELOPMENT "
               bgUrl="/services/image%2021.png"
               shifturl="/services/SOFTWARE-DEVELOPMENT-&-EXPORT-SERVICES"
             />
@@ -118,7 +118,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="IT TRAINING & CERTIFICATION"
+              title="Application Development"
               bgUrl="/services/div2.png"
               shifturl="/services/IT-TRAINING-&-CERTIFICATION "
             />
@@ -132,7 +132,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="CLOUD SOLUTIONS & MIGRATION"
+              title="DATA SCIENCE & AI"
               bgUrl="/services/div3.png"
               shifturl="/services/CLOUD-SOLUTIONS-&-MIGRATION"
             />{" "}
@@ -146,7 +146,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="CYBERSECURITY SERVICES"
+              title="INDUSTRIAL AUTOMATION"
               bgUrl="/services/div4.png"
               shifturl="/services/CYBERSECURITY-SERVICES "
             />{" "}
@@ -160,7 +160,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="Study Abroad"
+              title="AWS DEVOPS"
               bgUrl="/services/div5.png"
               shifturl="/services/Study-Abroad "
             />
@@ -174,7 +174,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="Work Abroad"
+              title="CYBER SECURITY"
               bgUrl="/services/div6.png"
               shifturl="/services/Work-Abroad "
             />
@@ -188,7 +188,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="E-COMMERCE SOLUTIONS"
+              title="CLOUD COMPUTING"
               bgUrl="/services/div7.png"
               shifturl="/services/E-COMMERCE-SOLUTIONS"
             />
@@ -202,7 +202,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="UI/UX DESIGN SERVICES"
+              title="ETHICAL HACKING"
               bgUrl="/services/div8.png"
               shifturl="/services/UI-UX-DESIGN-SERVICES"
             />
@@ -216,7 +216,7 @@ const head = () => {
             stagger={150}
           >
             <Servicesboxes
-              title="IT INFRASTRUCTURE MANAGEMENT"
+              title="INFORMATION SECURITY"
               bgUrl="/services/div9.png"
               shifturl="/services/IT-INFRASTRUCTURE-MANAGEMENT"
             />

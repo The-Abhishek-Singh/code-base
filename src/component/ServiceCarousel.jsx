@@ -6,49 +6,49 @@ const ServiceCarousel = () => {
     {
       id: 1,
       name: "SOFTWARE DEVELOPMENT & EXPORT SERVICES",
-      image: "/ServiceCarousel/Data.jpeg",
+      image: "/ServiceCarousel/DATA.svg",
       pageNum: 1,
       position: 2// left
     },
     {
       id: 2,
       name: "IT TRAINING & CERTIFICATION",
-      image: "/ServiceCarousel/Data.jpeg",
+      image: "/ServiceCarousel/DATA.svg",
       pageNum: 2,
       position: 1 // middle
     },
     {
       id: 3,
       name: "CLOUD SOLUTIONS & MIGRATION",
-      image: "/ServiceCarousel/Data.jpeg",
+      image: "/ServiceCarousel/DATA.svg",
       pageNum: 3,
       position: 0// right (highlighted)
     },
     {
       id: 4,
       name: "Study & Work Abroad",
-      image: "/ServiceCarousel/Data.jpeg",
+      image: "/ServiceCarousel/DATA.svg",
       pageNum: 7,
       position: 3 // off-screen
     },
     {
       id: 5,
       name: "E-COMMERCE SOLUTIONS",
-      image: "/ServiceCarousel/Data.jpeg",
+      image: "/ServiceCarousel/DATA.svg",
       pageNum: 6,
       position: 4
     },
     {
       id: 6,
       name: "IT INFRASTRUCTURE MANAGEMENT",
-      image: "/ServiceCarousel/Data.jpeg",
+      image: "/ServiceCarousel/DATA.svg",
       pageNum: 5,
       position: 5
     },
     {
       id: 7,
       name: "CYBERSECURITY SERVICES",
-      image: "/ServiceCarousel/Data.jpeg",
+      image: "/ServiceCarousel/DATA.svg",
       pageNum: 4,
       position: 6
     },
@@ -169,7 +169,7 @@ const ServiceCarousel = () => {
           </div>
         </div>
         {/* Right section - Content */}
-        <div className="sm:text-left w-full flex flex-col justify-center text-center sm:block sm:w-1/2 mb-12">
+        <div className="sm:text-left w-full flex flex-col justify-center text-center sm:block sm:w-1/2 mb-12 ">
           <h2 className="hidden sm:block text-3xl mb-4 mt-4 md:mt-12 font-bold  leading-tight md:leading-snug  md:tracking-wide text-white">
             Creating Strong <br />
             Solutions to Drive{" "}
