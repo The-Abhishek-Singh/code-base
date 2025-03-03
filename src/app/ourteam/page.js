@@ -30,7 +30,7 @@ const teamMembers = [
   },
   {
     name: "Abhishek",
-    role: "Expert UI/UX Designer & Front-end Developer",
+    role: "Expert UI/UX Designer & Full-Stack Developer",
     imageUrl: "/ourteam/Frame 327.jpg",
   },
   {
@@ -229,7 +229,7 @@ const page = () => {
               stagger={150}
             >
               <h3 className="text-3xl font-medium text-white">
-                Miss. Hi manshi Bhagwani
+                Miss. Himanshi Bhagwani
               </h3>
             </ScrollReveal>
             <ScrollReveal
