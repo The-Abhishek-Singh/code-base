@@ -42,7 +42,7 @@ export default function Home() {
             </div>
             <div className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0 2xl:mr-[-550px] 2xl:m-0 2xl:p-0 2xl:w-full 2xl:h-[800px] 2xl:overflow-visible 2xl:pt-0">
               <div className="relative w-full h-56 sm:h-64 md:h-80 lg:h-96 xl:h-112 2xl:m-0 2xl:p-0 2xl:h-full 2xl:w-full ">
-                <div className="absolute inset-0 bg-gradient-to-r  from-black via-red-700 to-black rounded-lg"></div>
+              
                 <Image
                   src="/Business/BS1.png"
                   alt="3D Red Building"

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Card from "@/component/UI/Becomeap/Card";
 import Part from "@/component/UI/Becomeap/Part";
+import ScrollReveal from "../About/ScrollReveal";
 const PartnerPage = () => {
   const steps = [
     {
@@ -100,37 +101,66 @@ const PartnerPage = () => {
         {/* Content container - improved tablet layout */}
         <div className="absolute inset-0 flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2 text-left text-white px-4 sm:px-8 lg:px-12 py-6 md:py-8 lg:py-12 flex flex-col justify-center">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-              Become a Partner with
-              <br />
-              Careertronic Global Services(P)Ltd
-            </h1>
-            <p className="text-xs sm:text-sm leading-relaxed">
-              At Careertronic Global Services Pvt. Ltd. (CGSPL), we believe in
-              the power of collaboration and mutual growth. By partnering with
-              us, you gain access to a proven business model, cutting-edge
-              services, and a globally recognized brand that is revolutionizing
-              the world of IT training, education, outsourcing, and automation.
-              Whether you're an entrepreneur looking to expand your business, an
-              institution interested in offering world-class training programs,
-              or a corporate entity seeking tailored outsourcing solutions,
-              CGSPL offers a range of partnership opportunities that deliver
-              long-term success.
-            </p>
-            <button className="mt-6 lg:mt-8 px-6 py-3 lg:px-8 lg:py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-md text-lg lg:text-xl self-start">
-              Become a Partner
-            </button>
+            <ScrollReveal
+              animation="fadeSlideLeft"
+              duration={800}
+              easing="spring"
+              delay={0}
+            >
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+                Become a Partner with
+                <br />
+                Careertronic Global Services(P)Ltd
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="fadeSlideLeft"
+              duration={800}
+              easing="spring"
+              delay={60}
+            >
+              <p className="text-xs sm:text-sm leading-relaxed">
+                At Careertronic Global Services Pvt. Ltd. (CGSPL), we believe in
+                the power of collaboration and mutual growth. By partnering with
+                us, you gain access to a proven business model, cutting-edge
+                services, and a globally recognized brand that is
+                revolutionizing the world of IT training, education,
+                outsourcing, and automation. Whether you're an entrepreneur
+                looking to expand your business, an institution interested in
+                offering world-class training programs, or a corporate entity
+                seeking tailored outsourcing solutions, CGSPL offers a range of
+                partnership opportunities that deliver long-term success.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="fadeSlideLeft"
+              duration={800}
+              easing="spring"
+              delay={150}
+            >
+              <button className="mt-6 lg:mt-8 px-6 py-3 lg:px-8 lg:py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-md text-lg lg:text-xl self-start hover:bg-white hover:text-black transition">
+                Become a Partner
+              </button>
+            </ScrollReveal>
           </div>
           {/* Partner image container - hidden on tablet screens (md breakpoint) */}
-          <div className="w-full lg:w-1/2 flex items-center justify-center py-4 sm:py-6 lg:py-0 hidden sm:flex md:hidden lg:flex">
+          <div className="w-full lg:w-1/2 flex items-center justify-center py-4 sm:py-6 lg:py-0 sm:flex md:hidden lg:flex">
             <div className="relative w-[70%] sm:w-[60%] lg:w-[80%] aspect-[4/3]">
-              <Image
-                src="/partnerpg.png"
-                alt="Partner Image"
-                layout="fill"
-                objectFit="contain"
-                priority
-              />
+              <ScrollReveal
+                animation="slideLeft"
+                duration={800}
+                easing="spring"
+                delay={0}
+              >
+                <Image
+                  src="/partnerpg.png"
+                  height={800}
+                  width={800}
+                  alt="Partner Image"
+                  objectFit="contain"
+                  priority
+                />
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -145,31 +175,55 @@ const PartnerPage = () => {
           }}
         >
           <div className="w-full md:w-1/2 text-red-800 md:pr-6 lg:pr-12">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl text-white font-bold mb-4">
-              Our Commitment to{" "}
-              <span className="text-red-500"> Your Success</span>
-            </h2>
-            <p className="text-sm sm:text-base lg:text-xl text-white leading-relaxed">
-              At CGSPL, we don't just offer a partnership; we offer a long-term
-              relationship that fosters growth, innovation, and mutual success.
-              We're committed to providing the tools, resources, and expertise
-              you need to build a thriving business. By partnering with us,
-              you're joining a global network of professionals dedicated to
-              bridging skill gaps, driving digital transformation, and
-              empowering individuals through education and technology.
-            </p>
+            <ScrollReveal
+              animation="slideRight"
+              duration={800}
+              easing="spring"
+              delay={0}
+            >
+              <h2 className="text-xl sm:text-2xl lg:text-3xl text-white font-bold mb-4">
+                Our Commitment to{" "}
+                <span className="text-red-500"> Your Success</span>
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="slideRight"
+              duration={800}
+              easing="spring"
+              delay={80}
+            >
+              <p className="text-sm sm:text-base lg:text-xl text-white leading-relaxed">
+                At CGSPL, we don't just offer a partnership; we offer a
+                long-term relationship that fosters growth, innovation, and
+                mutual success. We're committed to providing the tools,
+                resources, and expertise you need to build a thriving business.
+                By partnering with us, you're joining a global network of
+                professionals dedicated to bridging skill gaps, driving digital
+                transformation, and empowering individuals through education and
+                technology.
+              </p>
+            </ScrollReveal>
           </div>
           {/* Success image container - fixed for tablet */}
-          <div className="w-full md:w-1/2 flex justify-center items-center mt-6 md:mt-0">
+          <div className="w-full md:w-1/2 flex justify-between items-center mt-6 md:mt-0">
             <div className="relative w-[80%] sm:w-[60%] md:w-[90%] h-48 sm:h-56 md:h-64 lg:h-72">
-              <Image
-                src="/becomeap/success.png"
-                alt="Success Image"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg "
-                priority
-              />
+              <ScrollReveal
+                animation="slideLeft"
+                duration={800}
+                easing="spring"
+                delay={0}
+              >
+                <Image
+                  src="/becomeap/success.png"
+                  alt="Success Image"
+                  height={300}
+                  width={300}
+                  // layout="fill"
+                  objectFit="contain"
+                  className="rounded-lg"
+                  priority
+                />
+              </ScrollReveal>
             </div>
           </div>
         </div>
@@ -180,14 +234,28 @@ const PartnerPage = () => {
         {/* Keeping the original gray background */}
         {/* Black background for title only */}
         <div className=" w-full mb-4 lg:mb-6">
-          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-black text-center p-3 sm:p-4 lg:p-5">
-            Why <span className="text-red-500">Partner</span> with Us?
-          </h2>
+          <ScrollReveal
+            animation="slideDown"
+            duration={800}
+            easing="spring"
+            delay={0}
+          >
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-black text-center p-3 sm:p-4 lg:p-5">
+              Why <span className="text-red-500">Partner</span> with Us?
+            </h2>
+          </ScrollReveal>
         </div>
         {/* Cards grid - improved spacing and alignment */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 px-2 sm:px-4 md:px-8">
           {benefits.map((benefit, index) => (
-            <Card key={index} {...benefit} />
+            <ScrollReveal
+              animation="slideRight"
+              duration={800}
+              easing="spring"
+              delay={50 * index}
+            >
+              <Card key={index} {...benefit} />
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -197,13 +265,27 @@ const PartnerPage = () => {
         {/* Keeping the original white background */}
         {/* Black background for title only */}
         <div className=" w-full mb-6 sm:mb-8 lg:mb-12 ">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center  p-3 sm:p-4 lg:p-5">
-            Partnering with <span className="text-red-500">Careertronic</span>
-          </h1>
+          <ScrollReveal
+            animation="slideDown"
+            duration={800}
+            easing="spring"
+            delay={0}
+          >
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black text-center  p-3 sm:p-4 lg:p-5">
+              Partnering with <span className="text-red-500">Careertronic</span>
+            </h1>
+          </ScrollReveal>
         </div>
         <div className="space-y-4 sm:space-y-6 lg:space-y-8 flex flex-col items-center">
           {steps.map((step, index) => (
+            <ScrollReveal
+            animation="slideLeft"
+            duration={800}
+            easing="spring"
+            delay={50*index}
+          >
             <Part key={index} {...step} />
+            </ScrollReveal>
           ))}
         </div>
       </div>
