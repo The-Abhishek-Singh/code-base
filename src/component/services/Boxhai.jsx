@@ -120,7 +120,7 @@ const head = () => {
             <Servicesboxes
               title="IT TRAINING & CERTIFICATION"
               bgUrl="/services/div2.png"
-              shifturl="/services/first"
+              shifturl="/services/IT-TRAINING-&-CERTIFICATION "
             />
           </ScrollReveal>
           <ScrollReveal
@@ -134,7 +134,7 @@ const head = () => {
             <Servicesboxes
               title="CLOUD SOLUTIONS & MIGRATION"
               bgUrl="/services/div3.png"
-              shifturl="/services/first"
+              shifturl="/services/CLOUD-SOLUTIONS-&-MIGRATION"
             />{" "}
           </ScrollReveal>
           <ScrollReveal
@@ -148,7 +148,7 @@ const head = () => {
             <Servicesboxes
               title="CYBERSECURITY SERVICES"
               bgUrl="/services/div4.png"
-              shifturl="/services/first"
+              shifturl="/services/CYBERSECURITY-SERVICES "
             />{" "}
           </ScrollReveal>
           <ScrollReveal
@@ -162,7 +162,7 @@ const head = () => {
             <Servicesboxes
               title="Study Abroad"
               bgUrl="/services/div5.png"
-              shifturl="/services/first"
+              shifturl="/services/Study-Abroad "
             />
           </ScrollReveal>
           <ScrollReveal
@@ -176,7 +176,7 @@ const head = () => {
             <Servicesboxes
               title="Work Abroad"
               bgUrl="/services/div6.png"
-              shifturl="/services/first"
+              shifturl="/services/Work-Abroad "
             />
           </ScrollReveal>
           <ScrollReveal
@@ -190,7 +190,7 @@ const head = () => {
             <Servicesboxes
               title="E-COMMERCE SOLUTIONS"
               bgUrl="/services/div7.png"
-              shifturl="/services/first"
+              shifturl="/services/E-COMMERCE-SOLUTIONS"
             />
           </ScrollReveal>
           <ScrollReveal
@@ -204,7 +204,7 @@ const head = () => {
             <Servicesboxes
               title="UI/UX DESIGN SERVICES"
               bgUrl="/services/div8.png"
-              shifturl="/services/first"
+              shifturl="/services/UI-UX-DESIGN-SERVICES"
             />
           </ScrollReveal>
           <ScrollReveal
@@ -218,7 +218,7 @@ const head = () => {
             <Servicesboxes
               title="IT INFRASTRUCTURE MANAGEMENT"
               bgUrl="/services/div9.png"
-              shifturl="/services/first"
+              shifturl="/services/IT-INFRASTRUCTURE-MANAGEMENT"
             />
           </ScrollReveal>
         </div>
