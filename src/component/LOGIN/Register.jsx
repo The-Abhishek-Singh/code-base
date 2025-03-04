@@ -398,8 +398,8 @@ const Form = () => {
 
         <p className="text-sm text-white text-center mt-2">
           Already have an account?{" "}
-          <Link href="/login" className="text-red-800 hover:underline">
-            Signin
+          <Link href="/Login" className="text-red-800 hover:underline">
+            LOGIN
           </Link>
         </p>
       </div>

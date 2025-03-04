@@ -15,9 +15,9 @@ export default function Home() {
       </Head>
       <main>
         {/* Hero Section */}
-        <section className="mx-auto my-4 sm:my-6 lg:my-8 xl:my-12 2xl:my-16 xl:max-w-7xl  px-4 sm:px-6 lg:px-8 xl:px-12 2xl:m-0 2xl:p-0 2xl:h-screen 2xl:mb-0 ">
-          <div className="flex flex-col lg:flex-row items-center justify-between p-4 sm:p-8 lg:p-12 xl:p-16 2xl:p-0 2xl:m-0 2xl:w-[100%]" >
-            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 2xl:ml-[150px]  2xl:m-0 2xl:p-0 2xl:text-xl 2xl:w-full"> 
+        <section className="mx-auto my-4 sm:my-6 lg:my-8 xl:w-[100dvw]  px-4 sm:px-6 lg:px-8 2xl:m-0 2xl:px-20 2xl:h-auto 2xl:mb-0">
+          <div className="flex flex-col lg:flex-row items-center justify-between sm:p-8 lg:p-12 xl:p-16 2xl:p-0 2xl:m-0" >
+            <div className="w-full lg:w-1/2 mb-8 lg:mb-0 2xl:m-0 2xl:p-0 2xl:text-xl 2xl:w-full">
               <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-8xl font-bold leading-tight mb-4 xl:mb-6 ">
                 YOUR
                 <br />
@@ -40,15 +40,15 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0 2xl:mr-[-550px] 2xl:m-0 2xl:p-0 2xl:w-full 2xl:h-[800px] 2xl:overflow-visible 2xl:pt-0">
-              <div className="relative w-full h-56 sm:h-64 md:h-80 lg:h-96 xl:h-112 2xl:m-0 2xl:p-0 2xl:h-full 2xl:w-full ">
-              
+            <div className="w-full lg:w-1/2 flex justify-center mt-6 lg:mt-0 2xl:m-0 2xl:p-0 2xl:w-full 2xl:h-[800px] 2xl:overflow-visible 2xl:pt-0">
+              <div className="relative sm:h-64 md:h-80 lg:h-96 xl:h-112 2xl:m-0 2xl:p-0 2xl:h-full 2xl:w-full flex items-center justify-center">
                 <Image
                   src="/Business/BS1.png"
                   alt="3D Red Building"
-                  layout="fill"
+                  height={700}
+                  width={700}
                   objectFit="cover"
-                  className="rounded-lg"
+                  className=""
                   priority
                 />
               </div>

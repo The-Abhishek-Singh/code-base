@@ -114,12 +114,12 @@ const PasswordRecovery = () => {
               
               <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-0">
                 <div className="text-sm">
-                  <a href="#" className="font-medium text-red-600 hover:text-red-500">
+                  <a href="/Login" className="font-medium text-red-600 hover:text-red-500">
                     Back to Login
                   </a>
                 </div>
                 <div className="text-sm">
-                  <a href="#" className="font-medium text-red-600 hover:text-red-500">
+                  <a href="/register" className="font-medium text-red-600 hover:text-red-500">
                     Register
                   </a>
                 </div>
