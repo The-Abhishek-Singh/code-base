@@ -157,7 +157,7 @@ const ServiceCarousel = () => {
   };
   const visibleSlides = getVisibleSlides();
   return (
-    <div className="bg-black  mt-4  py-[20vh]">
+    <div className="bg-black  mt-4  py-[25vh]">
       <div className="w-full px-5 md:max-w-5xl lg:max-w-[88rem]  sm:gap-8 mx-auto flex flex-col sm:flex-row pt-6 pb-4 h-80 sm:h-[26rem] md:h-full">
         {/* Left section - Carousel */}
         <div className="w-full sm:w-1/2 mb-0">
