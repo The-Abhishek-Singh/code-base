@@ -225,30 +225,32 @@ const ServiceCarousel = () => {
             </h2>
           </div>
           <div className="h-32 relative overflow-hidden mt-4 md:my-8">
-            {services.map((service) => (
-              <h1
-                key={service.id}
-                className={`
-                  ${window.innerWidth < 640
-                  ? "text-md"
-                  : window.innerWidth < 768
-                  ? "text-md"
-                  : window.innerWidth < 1024
-                  ? "text-xl"
-                  : window.innerWidth < 1280
-                  ? "text-4xl"
-                  : window.innerWidth < 1920
-                  ? "text-6xl"
-                  : "text-6xl"  } font-bold bg-gradient-to-b from-neutral-50 from-40% to-[#171717] bg-clip-text text-transparent absolute transition-all duration-500 w-full ${
-                  service.position === 2
-                    ? "opacity-100 transform translate-y-0"
-                    : "opacity-0 transform -translate-y-full"
-                }`}
-              >
-                {service.name}
-              </h1>
-            ))}
-          </div>
+  {services.map((service) => (
+    <h1
+      key={service.id}
+      className={`
+        ${screenSize === "sm"
+          ? "text-md"
+          : screenSize === "md"
+          ? "text-md"
+          : screenSize === "lg"
+          ? "text-xl"
+          : screenSize === "xl"
+          ? "text-4xl"
+          : screenSize === "xxl"
+          ? "text-6xl"
+          : "text-6xl"
+        } font-bold bg-gradient-to-b from-neutral-50 from-40% to-[#171717] bg-clip-text text-transparent absolute transition-all duration-500 w-full ${
+        service.position === 2
+          ? "opacity-100 transform translate-y-0"
+          : "opacity-0 transform -translate-y-full"
+      }`}
+    >
+      {service.name}
+    </h1>
+  ))}
+</div>
+
           <div className=" flex items-center justify-center sm:block -mt-12 sm:mt-0">
             <button className="bg-red-500 hover:bg-red-600 text-white px-3  sm:px-4 sm:py-1 md:px-6 md:py-2 rounded-lg mb-5 flex items-center text-xl transition-all duration-300 transform hover:scale-105">
             Our Offerings <span className="ml-3 text-2xl">→</span>
