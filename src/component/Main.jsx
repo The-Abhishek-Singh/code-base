@@ -127,7 +127,7 @@ const ScrollCards = () => {
     }
   }, []);
   return (
-    <div>
+    <div className="-mt-[15vh]">
       {/* Desktop Version - Hidden on mobile */}
       <div className="hidden sm:block">
         <section className="common h-[0vh] w-full flex justify-center items-center"></section>
