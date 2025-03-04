@@ -81,12 +81,14 @@ const Navbar = () => {
             {/* Search button */}
             <SearchModal />
             {/* Login button */}
+            <Link href="/Login">
             <button className="flex items-center justify-center bg-transparent border border-red-700 text-white p-2 rounded-lg hover:bg-red-700 transition-colors md:w-[90px] md:h-[40px]">
               <LogIn className="w-4 xl:w-4.5 h-4 xl:h-4.5" />
               <span className="ml-2 hidden sm:inline text-xs xl:text-sm">
                 Login
               </span>
             </button>
+            </Link>
             {/* Mobile menu button */}
             <button
               onClick={toggleMenu}

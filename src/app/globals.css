@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
 
 body {
   color: var(--foreground);
@@ -15,61 +13,67 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-
-
-.shadow-bg{
+.shadow-bg {
   box-shadow: inset 0 -175px 77px 15px #000;
 }
+
 @media (min-width: 1550px) {
-  .custom-width001{
+  .custom-width001 {
     width: 20rem;
     height: 465px;
   }
 }
-@media (min-width: 1840px){
-  .custom-width001{
+
+@media (min-width: 1840px) {
+  .custom-width001 {
     width: 23rem;
     height: 530px;
   }
 }
-@media(min-width: 2064px ){
-  .custom-width001{
+
+@media (min-width: 2064px) {
+  .custom-width001 {
     width: 24rem;
     height: 540px;
   }
 }
-@media(min-width: 2320px ){
-  .custom-width001{
+
+@media (min-width: 2320px) {
+  .custom-width001 {
     width: 25rem;
     height: 580px;
   }
 }
-@media(min-width: 2512px ){
-  .custom-width001{
+
+@media (min-width: 2512px) {
+  .custom-width001 {
     width: 34rem;
     height: 730px;
   }
 }
+
 @media (640px <= width < 1550px) {
-  .custom-width001{
-      width: 18rem ;
+  .custom-width001 {
+    width: 18rem;
   }
-  .custom-width001{
-      height: 390px;
+  .custom-width001 {
+    height: 390px;
   }
 }
 
-
-.loader{
+.loader {
   animation: animate 2.2s forwards 2.8s;
 }
+
 @keyframes animate {
-  0%{
+  0% {
     top: 0;
   }
-  100%{
+  100% {
     top: -100%;
   }
+}
+
+.bg-\[url\(\'\/login\/ima\.png\'\)\] {
+  background-image: url('/login/ima.png');
 }
