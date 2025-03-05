@@ -4,7 +4,7 @@ import Button from './Button'
 const Card = (props) => {
   return (
     <div 
-    className="card relative w-full h-full m-auto text-black border border-black overflow-hidden contaiNer">
+    className="card relative w-full h-full m-auto text-black border border-black overflow-hidden contaiNer ">
         <div className='w-full'>
         <img src={props.img} className=" card-img-top h-full w-full " alt="..." />
         </div>

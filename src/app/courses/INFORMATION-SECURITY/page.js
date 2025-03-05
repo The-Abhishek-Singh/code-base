@@ -281,7 +281,7 @@ return (
         <div className="mb-2 p-4">
         <Heading text='OTHER COURSES' color="black" bgColor="white"/>
       </div>
-          <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5">
+          <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 mb-40">
             {cardData.map((item,index) => (
               <Card
                 key={index}
