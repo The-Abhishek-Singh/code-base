@@ -1,185 +1,134 @@
-"use client";
-
-import React from "react";
-
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+import Image from "next/image";
 const Footer = () => {
   return (
-    <>
-      <footer
-        className="relative flex justify-center bg-black text-white py-10 lg:h-[550px] border-b border-gray-200"
-        style={{
-          backgroundImage: "url('/Footerbggg.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-70"></div>
-
-        {/* Content */}
-        <div className="relative flex flex-col mx-5 justify-around py-5 items-center md:items-start container w-full h-full">
-          {/* Top Section - Logo and Description */}
-          <div className="mb-12 w-full">
-            <div className="flex flex-col items-center md:flex-row md:items-start gap-10 mb-4">
-              <div>
-                <h2 className="text-red-600 flex justify-center flex-col md:flex-row md:justify-start items-center font-semibold md:flex-none text-2xl mb-2">
-                  <img
-                    src="/FooterLogo.png"
-                    alt="Careertronics"
-                    className="w-20 h-16"
-                  />
-                  Careertronic
-                </h2>
-                <p className="text-gray-300 text-center  md:text-start px-5 sm:px-32 md:px-0 text-md max-w-2xl">
-                  Explore our services today and discover how we can empower
-                  your business or career.
-                </p>
-              </div>
+    <footer className="text-white py-10 px-6 md:px-20 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/Footerbggg.png"
+          alt="Footer Background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="opacity-50"
+        />
+      </div>
+      <div className="relative max-w-7xl mx-auto">
+        {/* Top Section */}
+        <div className="flex flex-col md:flex-col md:justify-between border-b border-gray-700 pb-8">
+          <div className="flex flex-row mb-6 md:mb-0">
+            <div>
+              <Image
+                src="/FooterLogo.png"
+                alt="Careertronic Logo"
+                width={120}
+                height={80}
+              />
+            </div>
+            <div className="mt-5 ml-5">
+              <h2 className="text-2xl font-bold text-red-500 mt-2">
+                CAREERTRONIC
+              </h2>
+              <p className="mt-2 w-90 text-gray-400">
+                Explore our services today and discover how we can empower your
+                business or career.
+              </p>
             </div>
           </div>
-
-          {/* Main Footer Content */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:w-full">
-            {/* Products Section */}
-            <div className="flex flex-col  items-center">
-              <h3 className="font-semibold text-lg mb-4">Products</h3>
-              <ul className="space-y-2 flex flex-col justify-center items-center">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    MDBootstrap
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    MDWordPress
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    BrandFlow
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    Bootstrap Angular
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Useful Links Section */}
-            <div className="flex flex-col  items-center">
-              <h3 className="font-semibold text-lg mb-4">Useful links</h3>
-              <ul className="space-y-2 flex flex-col justify-center items-center">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    Your Account
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    Become an Affiliate
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    Shipping Rates
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Support Section */}
-            <div className="flex flex-col  items-center">
-              <h3 className="font-semibold text-lg mb-4">Support</h3>
-              <ul className="space-y-2 flex flex-col justify-center items-center">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    Help
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-white underline-animation"
-                  >
-                    Customer care
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Section */}
-            <div className="flex flex-col  items-center">
-              <h3 className="font-semibold text-lg mb-4">Contact Details</h3>
-              <p className="text-gray-300 mb-2">Raipur, India</p>
-              <p className="text-gray-300 mb-4 text-center">
-                Chanakyans Education Foundation
+          {/* Footer Links */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+            <div>
+              <h3 className="font-semibold mb-2">Reach us</h3>
+              <p className="text-gray-400">📞:telephone_receiver: +1012 3456 789</p>
+              <p className="text-gray-400">📧:e-mail: demo@gmail.com</p>
+              <p className="text-gray-400">
+              📍:round_drawing_pin: 132 Dartmouth Street Boston, <br /> Massachusetts 02156
+                United States
               </p>
-              <p className="text-gray-300">+ 01 234 567 88</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Company</h3>
+              <ul className="text-gray-400 space-y-1">
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+                <li>Business consulting</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Legal</h3>
+              <ul className="text-gray-400 space-y-1">
+                <li>Privacy Policy</li>
+                <li>Terms & Services</li>
+                <li>Terms of Use</li>
+                <li>Refund Policy</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Quick Links</h3>
+              <ul className="text-gray-400 space-y-1">
+                <li>Software training</li>
+                <li>Industrial training</li>
+                <li>Custom Software development</li>
+                <li>Become a Franchise partner</li>
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
-
-      <div className="text-center bg-[#191817] p-3 text-white">
-        <article className="text-gray-500 text-sm text-center sm:text-left flex justify-center items-center">
-          Copyright © 2024
-          <span className="text-red-500 mx-1">
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row md:justify-between items-center mt-6">
+          {/* Social Media */}
+          <div className="flex space-x-4">
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaLinkedinIn size={20} />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaTwitter size={20} />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaFacebookF size={20} />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaInstagram size={20} />
+            </a>
+            <a href="#" className="text-gray-400 hover:text-white">
+              <FaYoutube size={20} />
+            </a>
+          </div>
+          {/* Newsletter Subscription */}
+          <div className="mt-4 md:mt-0">
+            <form className="flex">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="p-2 text-black rounded-l-md outline-none"
+              />
+              <button className="bg-red-500 text-white px-4 rounded-r-md">
+                Subscribe
+              </button>
+            </form>
+            <p className="text-gray-400 text-sm mt-2">
+              * We will send you weekly updates for better tool management.
+            </p>
+          </div>
+        </div>
+        {/* Copyright */}
+        <div className="text-center text-gray-500 text-sm mt-6">
+          Copyright © 2024{" "}
+          <span className="text-red-500">
             Careertronic Global Services Pvt. Ltd
-          </span>
+          </span>{" "}
           | All rights reserved
-        </article>
+        </div>
       </div>
-
-      {/* Tailwind Custom Style for Underline Animation */}
-      <style jsx>{`
-        .underline-animation {
-          position: relative;
-          display: inline-block;
-        }
-
-        .underline-animation::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: -2px;
-          width: 0;
-          height: 2px;
-          background-color: red;
-          transition: width 0.3s ease-in-out;
-        }
-
-        .underline-animation:hover::after {
-          width: 100%;
-        }
-      `}</style>
-    </>
+    </footer>
   );
 };
-
 export default Footer;
