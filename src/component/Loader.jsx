@@ -55,11 +55,11 @@ const Loader = () => {
               <ScrollReveal animation="slideUp" duration={1200} easing="spring" delay={200}>
                 <p className="sm:text-sm md:text-lg lg:text-xl text-lg font-mono text-white select-none">Accelerate your career growth with</p>
               </ScrollReveal>
-              {/* <ScrollReveal animation="slideUp" duration={1200} easing="spring" delay={1200}> */}
-              <div className="container hidden sm:block">
-                  <h1 className="expanding-div md:text-5xl sm:text-3xl lg:text-7xl text-4xl text-red-600 tracking-normal font-normal select-none">Careertronics</h1>
-              </div>
-              {/* </ScrollReveal> */}
+              <ScrollReveal animation="slideUp" duration={1200} easing="spring" delay={1200}>
+              
+                  <h1 className=" md:text-5xl sm:text-3xl lg:text-7xl text-4xl text-red-600 tracking-normal font-normal select-none">Careertronics</h1>
+              
+              </ScrollReveal>
               </div>
               </div>
             </div>
@@ -172,11 +172,7 @@ const Loader = () => {
     600px 1200px #FFF, 850px 950px #FFF, 1400px 400px #FFF,
     500px 500px #FFF, 1800px 200px #FFF, 300px 1000px #FFF,
     1200px 1800px #FFF, 800px 300px #FFF, 1500px 1700px #FFF,
-    200px 1500px #FFF, 1900px 900px #FFF, 400px 700px #FFF,
-    1100px 1600px #FFF, 700px 1900px #FFF, 1300px 100px #FFF,
-    300px 1300px #FFF, 1000px 600px #FFF, 200px 1400px #FFF,
-    1100px 500px #FFF, 150px 1500px #FFF, 1200px 400px #FFF,
-    50px 1600px #FFF, 1300px 300px #FFF, 100px 1700px #FFF;
+    200px 1500px #FFF, 1900px 900px #FFF, 400px 700px #FFF;
   animation: animStar 50s linear infinite;
 }
 .stars-medium {
@@ -198,8 +194,6 @@ const Loader = () => {
     600px 300px #FFF, 1700px 1200px #FFF, 200px 800px #FFF,
     1300px 600px #FFF, 800px 1500px #FFF, 1100px 400px #FFF,
     500px 1700px #FFF, 1800px 500px #FFF, 300px 1100px #FFF,
-    700px 1000px #FFF, 600px 1100px #FFF, 800px 900px #FFF,
-    500px 1200px #FFF, 900px 800px #FFF, 400px 1300px #FFF,
     1000px 700px #FFF, 300px 1400px #FFF, 1100px 600px #FFF;
   animation: animStar 30s linear infinite;
 }
@@ -220,10 +214,7 @@ const Loader = () => {
     300px 1600px #FFF, 1200px 400px #FFF, 800px 1800px #FFF,
     1600px 200px #FFF, 400px 1400px #FFF, 1900px 700px #FFF,
     100px 1100px #FFF, 1500px 900px #FFF, 700px 500px #FFF,
-    1800px 1600px #FFF, 500px 1300px #FFF, 1100px 800px #FFF,
-    700px 1100px #FFF, 600px 1200px #FFF, 800px 1000px #FFF,
-    500px 1300px #FFF, 900px 900px #FFF, 400px 1400px #FFF,
-    1000px 800px #FFF, 300px 1500px #FFF, 1100px 700px #FFF;
+    1800px 1600px #FFF, 500px 1300px #FFF, 1100px 800px #FFF;
   animation: animStar 15s linear infinite;
 }
       `}</style>
