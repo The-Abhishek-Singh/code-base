@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Head>
         <title>Business Excellence Gateway</title>
         <meta
