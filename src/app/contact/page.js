@@ -6,9 +6,6 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhone,
-  FaTwitter,
-  FaLinkedin,
-  FaFacebook,
 } from "react-icons/fa";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
@@ -176,7 +173,9 @@ const ContactUs = () => {
               </div>
               <h3 className="text-white text-lg font-bold mb-1">Location</h3>
               <p className="text-gray-300 text-sm text-center px-2">
-                132 Dartmouth Street, Boston, Massachusetts 02156, United States
+                 Careertronic Global Services Private Limited
+                 3rd Floor, KNR SQUARE, OPP The Platina, Gachibowli,
+                 Hyderabad, Telangana, 500032
               </p>
             </div>
           </ScrollReveal>
@@ -193,8 +192,8 @@ const ContactUs = () => {
                 <FaEnvelope className="text-white text-3xl" />
               </div>
               <h3 className="text-white text-lg font-bold mb-1">Email</h3>
-              <p className="text-gray-300 text-sm">info@alia.com</p>
-              <p className="text-gray-300 text-sm">support@alia.com</p>
+              <p className="text-gray-300 text-sm"> Feel Free to Reach Us at</p>
+              <p className="text-gray-300 text-sm"> contact@careertronics.in </p>
             </div>
           </ScrollReveal>
           <ScrollReveal
@@ -210,8 +209,10 @@ const ContactUs = () => {
                 <FaPhone className="text-white text-3xl" />
               </div>
               <h3 className="text-white text-lg font-bold mb-1">Phone</h3>
-              <p className="text-gray-300 text-sm">+1 012 3456 789</p>
-              <p className="text-gray-300 text-sm">+91 012 3456 789</p>
+              <p className="text-gray-300 text-sm">Call Us
+                                                       <br/>Mon-Sat from 10am to 7pm</p>
+              <p className="text-gray-300 text-sm"> +91 9343202785 <br/>
+                                                      +91 8602755547</p>
             </div>
           </ScrollReveal>
         </div>
@@ -439,121 +440,128 @@ const ContactUs = () => {
         </div>
       </div>
 
-      {/* Office Locations */}
-      <div className="container mb-24 bg-white mx-auto px-4 py-8 md:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {/* Head Office */}
-          <ScrollReveal
-            animation="slideUp"
-            duration={800}
-            easing="spring"
-            delay={150}
-            stagger={150}
-          >
-            <div className="border border-gray-400 rounded-lg p-4 md:p-6">
-              <h3 className="text-lg md:text-xl font-bold text-red-600 mb-3 md:mb-4">
-                HEAD OFFICE
-              </h3>
-              <p className="text-gray-700 mb-3 md:mb-4">
-                Gachibowli, Hyderabad, Telangana 500032
-              </p>
-              <div className="flex items-center mb-2">
-                <div className="mr-2 text-red-600">
-                  <FaPhone />
-                </div>
-                <span className="text-gray-700 text-sm md:text-base">
-                  +91 8602755547
-                </span>
-              </div>
-              <div className="flex items-center">
-                <div className="mr-2 text-red-600">
-                  <FaEnvelope />
-                </div>
-                <Link
-                  href="mailto:contact@chanakyans.in"
-                  className="text-gray-700 hover:text-red-600 text-sm md:text-base"
-                >
-                  contact@chanakyans.in
-                </Link>
-              </div>
+   <div className="container mb-24 bg-white mx-auto px-4 py-8 md:py-12">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+    {/* Head Office */}
+    <ScrollReveal
+      animation="slideUp"
+      duration={800}
+      easing="spring"
+      delay={150}
+      stagger={150}
+    >
+      <div className="border border-gray-400 rounded-lg p-4 md:p-6 flex flex-col h-full min-h-[250px] max-h-[280px]">
+        <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2">
+          HEAD OFFICE
+        </h3>
+        
+        <p className="text-gray-700 mb-1 flex-grow text-sm"> 
+          KNR SQUARE, OPP The Platina, Gachibowli, Hyderabad, Telangana 500032 
+        </p>
+        <div className="space-y-0.5">
+          <div className="flex items-center">
+            <div className="mr-2 text-red-600">
+              <FaPhone className="text-sm" />
             </div>
-          </ScrollReveal>
-
-          {/* Branch Office 1 */}
-          <ScrollReveal
-            animation="slideUp"
-            duration={800}
-            easing="spring"
-            delay={150}
-            stagger={150}
-          >
-            <div className="border border-gray-400 rounded-lg p-4 md:p-6">
-              <h3 className="text-lg md:text-xl font-bold text-red-600 mb-3 md:mb-4">
-                BRANCH OFFICE
-              </h3>
-              <p className="text-gray-700 mb-3 md:mb-4">
-                Off No-4, Agrasen Chowk, Nehru Nagar, Bhilai 490020
-              </p>
-              <div className="flex items-center mb-2">
-                <div className="mr-2 text-red-600">
-                  <FaPhone />
-                </div>
-                <span className="text-gray-700 text-sm md:text-base">
-                  +91 8602755547
-                </span>
-              </div>
-              <div className="flex items-center">
-                <div className="mr-2 text-red-600">
-                  <FaEnvelope />
-                </div>
-                <Link
-                  href="mailto:contact@chanakyans.in"
-                  className="text-gray-700 hover:text-red-600 text-sm md:text-base"
-                >
-                  contact@chanakyans.in
-                </Link>
-              </div>
+            <span className="text-gray-700 text-xs md:text-sm">
+              +91 8602755547
+            </span>
+          </div>
+          <div className="flex items-center">
+            <div className="mr-2 text-red-600">
+              <FaEnvelope className="text-sm" />
             </div>
-          </ScrollReveal>
-          {/* Branch Office 2 */}
-          <ScrollReveal
-            animation="slideUp"
-            duration={800}
-            easing="spring"
-            delay={150}
-            stagger={150}
-          >
-            <div className="border border-gray-400 rounded-lg p-4 md:p-6 sm:col-span-2 lg:col-span-1">
-              <h3 className="text-lg md:text-xl font-bold text-red-600 mb-3 md:mb-4">
-                BRANCH OFFICE
-              </h3>
-              <p className="text-gray-700 mb-3 md:mb-4">
-                E-108, Sector 1, Devendra Nagar, Raipur 492004
-              </p>
-              <div className="flex items-center mb-2">
-                <div className="mr-2 text-red-600">
-                  <FaPhone />
-                </div>
-                <span className="text-gray-700 text-sm md:text-base">
-                  +91 8602755547
-                </span>
-              </div>
-              <div className="flex items-center">
-                <div className="mr-2 text-red-600">
-                  <FaEnvelope />
-                </div>
-                <Link
-                  href="mailto:contact@chanakyans.in"
-                  className="text-gray-700 hover:text-red-600 text-sm md:text-base"
-                >
-                  contact@chanakyans.in
-                </Link>
-              </div>
-            </div>
-          </ScrollReveal>
+            <Link
+              href="mailto:contact@chanakyans.in"
+              className="text-gray-700 hover:text-red-600 text-xs md:text-sm"
+            >
+              contact@chanakyans.in
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </ScrollReveal>
+
+    {/* Branch Office 1 */}
+    <ScrollReveal
+      animation="slideUp"
+      duration={800}
+      easing="spring"
+      delay={150}
+      stagger={150}
+    >
+      <div className="border border-gray-400 rounded-lg p-4 md:p-6 flex flex-col h-full min-h-[250px] max-h-[280px]">
+        <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2">
+          BRANCH OFFICE
+        </h3>
+        <p className="text-gray-700 mb-1 flex-grow text-sm">
+          Off No-4, Agrasen Chowk, Nehru Nagar, Bhilai 490020
+        </p>
+        <div className="space-y-0.5">
+          <div className="flex items-center">
+            <div className="mr-2 text-red-600">
+              <FaPhone className="text-sm" />
+            </div>
+            <span className="text-gray-700 text-xs md:text-sm">
+              +91 8602755547
+            </span>
+          </div>
+          <div className="flex items-center">
+            <div className="mr-2 text-red-600">
+              <FaEnvelope className="text-sm" />
+            </div>
+            <Link
+              href="mailto:contact@chanakyans.in"
+              className="text-gray-700 hover:text-red-600 text-xs md:text-sm"
+            >
+              contact@chanakyans.in
+            </Link>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+
+    {/* Branch Office 2 */}
+    <ScrollReveal
+      animation="slideUp"
+      duration={800}
+      easing="spring"
+      delay={150}
+      stagger={150}
+    >
+      <div className="border border-gray-400 rounded-lg p-4 md:p-6 flex flex-col h-full min-h-[250px] max-h-[280px]">
+        <h3 className="text-lg md:text-xl font-bold text-red-600 mb-2">
+          BRANCH OFFICE
+        </h3>
+        <p className="text-gray-700 mb-1 flex-grow text-sm">
+          E-108, Sector 1, Devendra Nagar, Raipur 492004
+        </p>
+        <div className="space-y-0.5">
+          <div className="flex items-center">
+            <div className="mr-2 text-red-600">
+              <FaPhone className="text-sm" />
+            </div>
+            <span className="text-gray-700 text-xs md:text-sm">
+              +91 8602755547
+            </span>
+          </div>
+          <div className="flex items-center">
+            <div className="mr-2 text-red-600">
+              <FaEnvelope className="text-sm" />
+            </div>
+            <Link
+              href="mailto:contact@chanakyans.in"
+              className="text-gray-700 hover:text-red-600 text-xs md:text-sm"
+            >
+              contact@chanakyans.in
+            </Link>
+          </div>
+        </div>
+      </div>
+    </ScrollReveal>
+  </div>
+</div>
+</div>
   );
 };
 

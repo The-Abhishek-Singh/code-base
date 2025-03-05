@@ -129,7 +129,7 @@ const ScrollCards = () => {
   return (
     <div>
       {/* Desktop Version - Hidden on mobile */}
-      <div className="hidden sm:block">
+      <div className="hidden sm:block -mt-[16vh]">
         <section className="common h-[0vh] w-full flex justify-center items-center"></section>
         <section className="cards-scroll  flex flex-col">
           <div className="card-row" ref={cardRowRef}>
