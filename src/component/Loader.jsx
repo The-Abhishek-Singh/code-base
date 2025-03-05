@@ -2,14 +2,10 @@
 import React, { useState, useEffect } from "react";
 import ScrollReveal from './ScrollReveal';
 const Loading = () => {
-  const [isLoaderVisible, setIsLoaderVisible] = useState(true);
-  useEffect(() => {
-    setIsLoaderVisible(true);
-  }, []);
-  return isLoaderVisible ? (
-    <>
-        <div className="spinner absolute sm:bottom-[1.2rem] bottom-[3.5rem] right-64"/>
-        <div className="loading flex absolute sm:bottom-8 bottom-[4.2rem] sm:right-8 right-5">
+  return(
+    <div className="absolute flex items-center bottom-5 gap-5 w-full md:justify-end justify-center mr-12">
+        <div className="spinner h-10 w-10"/>
+        <div className="loading flex md:text-5xl text-3xl">
           <div>P</div>
           <div>R</div>
           <div>E</div>
@@ -21,8 +17,8 @@ const Loading = () => {
           <div>N</div>
           <div>G</div>
         </div>
-    </>
-  ) : null;
+    </div>
+  );
 }
 const Loader = () => {
   return (
@@ -60,7 +56,7 @@ const Loader = () => {
                 <p className="sm:text-sm md:text-lg lg:text-xl text-lg font-mono text-white select-none">Accelerate your career growth with</p>
               </ScrollReveal>
               {/* <ScrollReveal animation="slideUp" duration={1200} easing="spring" delay={1200}> */}
-              <div className="container">
+              <div className="container hidden sm:block">
                   <h1 className="expanding-div md:text-5xl sm:text-3xl lg:text-7xl text-4xl text-red-600 tracking-normal font-normal select-none">Careertronics</h1>
               </div>
               {/* </ScrollReveal> */}
@@ -70,10 +66,8 @@ const Loader = () => {
           </span>
         </h1>
       </div>
-      <Loading />
       <style>{`
       .loading div {
-   font-size: 35px;
    font-family: 'Courier New', Courier, monospace;
    font-weight: 600;
    animation: blur 3s linear forwards;
@@ -92,15 +86,15 @@ const Loader = () => {
     }
   95% {
     filter: blur(0);
-    opacity: .85;
+    opacity: .35;
   }
    100%{
    opacity: 0;
    }
   }
   .spinner {
-     width: 48px;
-     height: 48px;
+  // height: 50px;
+  // width: 50px;
      display: grid;
      color: #fff;
      background: radial-gradient(farthest-side, currentColor calc(100% - 7px),#0000 calc(100% - 6px) 0);
@@ -114,7 +108,7 @@ const Loader = () => {
      grid-area: 1/1;
      background: linear-gradient(currentColor 0 0) center,
               linear-gradient(currentColor 0 0) center;
-     background-size: 100% 11px,11px 100%;
+     background-size: 90% 8px,8px 90%;
      background-repeat: no-repeat;
     }
     .spinner::after {
@@ -180,15 +174,9 @@ const Loader = () => {
     1200px 1800px #FFF, 800px 300px #FFF, 1500px 1700px #FFF,
     200px 1500px #FFF, 1900px 900px #FFF, 400px 700px #FFF,
     1100px 1600px #FFF, 700px 1900px #FFF, 1300px 100px #FFF,
-    50px 1200px #FFF, 1750px 1500px #FFF, 250px 600px #FFF,
-    1550px 300px #FFF, 900px 1700px #FFF, 1850px 1100px #FFF,
-    900px 1300px #FFF, 1250px 800px #FFF, 1600px 600px #FFF,
-    600px 1000px #FFF, 700px 900px #FFF, 500px 1100px #FFF,
-    800px 800px #FFF, 400px 1200px #FFF, 900px 700px #FFF,
     300px 1300px #FFF, 1000px 600px #FFF, 200px 1400px #FFF,
     1100px 500px #FFF, 150px 1500px #FFF, 1200px 400px #FFF,
-    50px 1600px #FFF, 1300px 300px #FFF, 100px 1700px #FFF,
-    1400px 200px #FFF, 150px 1800px #FFF, 1500px 100px #FFF;
+    50px 1600px #FFF, 1300px 300px #FFF, 100px 1700px #FFF;
   animation: animStar 50s linear infinite;
 }
 .stars-medium {
@@ -212,8 +200,7 @@ const Loader = () => {
     500px 1700px #FFF, 1800px 500px #FFF, 300px 1100px #FFF,
     700px 1000px #FFF, 600px 1100px #FFF, 800px 900px #FFF,
     500px 1200px #FFF, 900px 800px #FFF, 400px 1300px #FFF,
-    1000px 700px #FFF, 300px 1400px #FFF, 1100px 600px #FFF,
-    200px 1500px #FFF, 1200px 500px #FFF, 150px 1600px #FFF;
+    1000px 700px #FFF, 300px 1400px #FFF, 1100px 600px #FFF;
   animation: animStar 30s linear infinite;
 }
 .stars-large {
@@ -236,12 +223,12 @@ const Loader = () => {
     1800px 1600px #FFF, 500px 1300px #FFF, 1100px 800px #FFF,
     700px 1100px #FFF, 600px 1200px #FFF, 800px 1000px #FFF,
     500px 1300px #FFF, 900px 900px #FFF, 400px 1400px #FFF,
-    1000px 800px #FFF, 300px 1500px #FFF, 1100px 700px #FFF,
-    200px 1600px #FFF, 1200px 600px #FFF, 150px 1700px #FFF;
+    1000px 800px #FFF, 300px 1500px #FFF, 1100px 700px #FFF;
   animation: animStar 15s linear infinite;
 }
       `}</style>
     </div>
+    <Loading />
     </div>
   );
 };
