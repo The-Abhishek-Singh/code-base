@@ -36,8 +36,8 @@ const Navbar = () => {
     { title: "Services", link: "/services" },
     { title: "Courses", link: "/courses" },
     { title: "Become a Partner", link: "/partner" },
-    { title: "Contact Us", link: "/contact" },
     { title: "Business Consulting", link: "/consulting" },
+    { title: "Contact Us", link: "/contact" },
   ];
   return (
     <nav
