@@ -8,12 +8,15 @@ const Loading = () => {
   }, []);
   return isLoaderVisible ? (
     <>
-        <div className="spinner absolute bottom-[1.2rem] right-60"/>
+        <div className="spinner absolute bottom-[1.2rem] right-80"/>
         <div className="loading flex absolute bottom-8 right-8">
-          <div>L</div>
-          <div>O</div>
-          <div>A</div>
-          <div>D</div>
+          <div>P</div>
+          <div>R</div>
+          <div>E</div>
+          <div>S</div>
+          <div>E</div>
+          <div>N</div>
+          <div>T</div>
           <div>I</div>
           <div>N</div>
           <div>G</div>
