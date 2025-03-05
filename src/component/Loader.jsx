@@ -1,13 +1,33 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ScrollReveal from './ScrollReveal';
-const Loader = () => {
+const Loading = () => {
+  const [isLoaderVisible, setIsLoaderVisible] = useState(true);
+  useEffect(() => {
+    setIsLoaderVisible(true);
+  }, []);
+  return isLoaderVisible ? (
+    <>
+        <div className="spinner absolute bottom-[1.2rem] right-60"/>
+        <div className="loading flex absolute bottom-8 right-8">
+          <div>L</div>
+          <div>O</div>
+          <div>A</div>
+          <div>D</div>
+          <div>I</div>
+          <div>N</div>
+          <div>G</div>
+        </div>
+    </>
+  ) : null;
+}
 
+const Loader = () => {
   return (
-    <div  className="loader w-full h-full bg-[#c1392ac5] fixed z-50 flex items-center justify-center">
+    <div className="loader w-full h-full fixed z-50 flex items-center justify-center">
       <div className="relative h-screen w-full overflow-hidden">
       {/* Stars background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,#000_0%,#111_100%)]">
+      <div className="absolute inset-0 bg-black">
         {/* Small stars */}
         <div className="stars-small"></div>
         {/* Medium stars */}
@@ -19,7 +39,7 @@ const Loader = () => {
       <div className="absolute left-0 right-0 top-1/2 -mt-16 text-center">
         <h1 className="font-sans text-5xl font-light tracking-widest text-white">
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
-            <div className="flex items-center justify-center mx-auto relative bg-red-500 w-full">
+            <div className="flex items-center justify-center mx-auto relative w-full">
               <div className='absolute flex gap-8 sm:flex-row flex-col items-center justify-center'>
               <ScrollReveal animation="flipIn" duration={1200} easing="bouncy">
               <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0  sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 h-20 w-20">
@@ -48,7 +68,73 @@ const Loader = () => {
           </span>
         </h1>
       </div>
+      <Loading />
       <style>{`
+
+        
+   
+  .loading div {
+   font-size: 35px;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 600;
+   animation: blur 3s linear forwards;
+   line-height: 20px;
+   transition: all .5s;
+   letter-spacing: 0.2em;
+   color: #fff;
+  }
+  @keyframes blur {
+  0%{
+   opacity: .8;
+  }
+  50% {
+    filter: blur(5px);
+    opacity: 0.5;
+    }
+  95% {
+    filter: blur(0);
+    opacity: .85;
+  }
+   100%{
+   opacity: 0;
+   }
+  }
+  .spinner {
+     width: 48px;
+     height: 48px;
+     display: grid;
+     color: #fff;
+     background: radial-gradient(farthest-side, currentColor calc(100% - 7px),#0000 calc(100% - 6px) 0);
+     -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 15px),#000 calc(100% - 13px));
+     border-radius: 50%;
+     animation: spinner-sm4bhi 4.5s forwards;
+    }
+    .spinner::before,
+    .spinner::after {
+     content: "";
+     grid-area: 1/1;
+     background: linear-gradient(currentColor 0 0) center,
+              linear-gradient(currentColor 0 0) center;
+     background-size: 100% 11px,11px 100%;
+     background-repeat: no-repeat;
+    }
+    .spinner::after {
+     transform: rotate(45deg);
+    }
+    @keyframes spinner-sm4bhi {
+      0%{
+        opacity: .8;
+    }
+      100% {
+        opacity: 0;
+      transform: rotate(1turn);
+     }
+    }
+
+
+
+
+
         @keyframes animStar {
           from { transform: translateY(0); }
           to { transform: translateY(-2000px); }
