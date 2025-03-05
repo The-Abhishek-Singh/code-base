@@ -100,7 +100,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden ">
       {/* Toast Container - This is essential for showing the toast notifications */}
       <ToastContainer
         position="top-center"

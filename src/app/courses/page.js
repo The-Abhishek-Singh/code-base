@@ -5,7 +5,7 @@ import Input from '@/component/UI/services/Input';
 import Servicesboxes from '@/component/UI/services/Servicesboxes';
 const head = () => {
   return (
-    <>
+    <div className='overflow-x-hidden'>
     {/* Fake Nav */}
     <div className='h-20 bg-black'></div>
     <div className='h-full w-full servicegradient bg-gradient-to-b from-black via-[#1E1E1E] to-black'>
@@ -116,7 +116,7 @@ const head = () => {
     
         </div>
 </div>
-  </>
+  </div>
   )
 }
 export default head

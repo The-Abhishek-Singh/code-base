@@ -7,7 +7,7 @@ function page() {
   return (
     <>
       {/* <div className='bg-black h-15'></div> */}
-      <div className="bg-black min-h-screen py-12 font-poppins">
+      <div className="bg-black min-h-screen py-12 font-poppins overflow-x-hidden">
         <div className="px-6 md:max-w-5xl lg:max-w-[88rem] mx-auto">
           <div className="flex flex-col gap-24">
             <ScrollReveal

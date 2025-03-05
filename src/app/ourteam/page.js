@@ -56,7 +56,7 @@ const teamMembers = [
 ];
 const page = () => {
   return (
-    <div className="main-container h-auto w-full bg-black">
+    <div className="main-container h-auto w-full bg-black overflow-x-hidden ">
       <div className="relative h-10 z-1 bg-black"></div>
       <div className="relative hero-bg h-auto bg-black text-white">
         {/* Background with gradient overlay */}

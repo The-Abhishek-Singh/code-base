@@ -4,7 +4,7 @@ import WhyUs from '@/component/Business/WhyUs'
 import React from 'react'
 const page = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden' >
     <div><BusinessConsulting/></div>
     <div><BusinessService/></div>
     <div><WhyUs/></div>
