@@ -80,88 +80,93 @@ const PartnerPage = () => {
     },
   ];
   return (
-     < div className="w-full">
+    <div className="w-full">
       {/* Partner Section */}
-      <div className="relative w-full min-h-screen flex items-center bg-black overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full">
-          <Image
-            src="/Partnerbg.png"
-            alt="Become a Partner Background"
-            fill
-            className="opacity-70 object-cover"
-            priority
-          />
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
-        {/* Content Container */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Text Content */}
-            <div className="text-white text-center lg:text-left space-y-4 lg:space-y-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                Become a Partner with
-                <br />
-                Careertronic Global Services
-              </h1>
-              <p className="text-sm sm:text-base lg:text-lg xl:text-xl opacity-90 leading-relaxed">
-                At Careertronic Global Services Pvt. Ltd. (CGSPL), we believe in
-                the power of collaboration and mutual growth. By partnering with
-                us, you gain access to a proven business model, cutting-edge
-                services, and a globally recognized brand that is revolutionizing
-                the world of IT training, education, outsourcing, and automation.
-              </p>
-              <button className="px-6 py-3 lg:px-8 lg:py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg text-base sm:text-lg lg:text-xl transition-all duration-300 ease-in-out transform hover:scale-105">
-                Become a Partner
-              </button>
+      <div className="w-full">
+        {/* Partner Section */}
+        <div className="relative w-full min-h-screen flex items-center bg-black overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 w-full h-full">
+            <Image
+              src="/Partnerbg.png"
+              alt="Become a Partner Background"
+              fill
+              className="opacity-70 object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
+          {/* Content Container */}
+          <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 lg:px-16 2xl:px-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[1.2fr_1fr] gap-12 items-center">
+              {/* Text Content */}
+              <div className="text-white space-y-6 lg:space-y-10 xl:text-left min-w-[500px]">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
+                  Become a Partner with
+                  <br />
+                  Careertronic Global Services
+                </h1>
+                <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl opacity-90 leading-relaxed">
+                  At Careertronic Global Services Pvt. Ltd. (CGSPL), we believe
+                  in the power of collaboration and mutual growth. By partnering
+                  with us, you gain access to a proven business model,
+                  cutting-edge services, and a globally recognized brand that is
+                  revolutionizing the world of IT training, education,
+                  outsourcing, and automation.
+                </p>
+                <button className="px-6 py-3 lg:px-8 lg:py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg text-lg lg:text-xl transition-all duration-300 ease-in-out transform hover:scale-105">
+                  Become a Partner
+                </button>
+              </div>
+              {/* Partner Image */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="w-64 sm:w-72 md:w-80 lg:w-96 xl:w-[450px] 2xl:w-[500px] aspect-square relative">
+                  <Image
+                    src="/partnerpg.png"
+                    alt="Partner Image"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
-            {/* Partner Image - Conditionally Rendered */}
-            <div className="hidden lg:flex justify-center items-center">
-              <div className="w-full max-w-md aspect-square relative">
-                <Image
-                  src="/partnerpg.png"
-                  alt="Partner Image"
-                  fill
-                  className="object-contain"
-                  priority
-                />
+          </div>
+        </div>
+        {/* Success Section */}
+        <div className="bg-black py-16">
+          <div className="max-w-[1500px] mx-auto px-6 lg:px-16 2xl:px-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[1.2fr_1fr] gap-12 items-center bg-gradient-to-r from-black via-gray-800 to-black rounded-2xl p-8 lg:p-14">
+              {/* Success Text */}
+              <div className="text-white space-y-6 lg:space-y-10 min-w-[500px]">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
+                  Our Commitment to{" "}
+                  <span className="text-red-500">Your Success</span>
+                </h2>
+                <p className="text-sm sm:text-base lg:text-lg xl:text-xl 2xl:text-2xl opacity-90 leading-relaxed">
+                  At CGSPL, we don't just offer a partnership; we offer a
+                  long-term relationship that fosters growth, innovation, and
+                  mutual success. We're committed to providing the tools,
+                  resources, and expertise you need to build a thriving
+                  business.
+                </p>
+              </div>
+              {/* Success Image */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="w-64 sm:w-72 md:w-80 lg:w-96 xl:w-[450px] 2xl:w-[500px] aspect-square relative">
+                  <Image
+                    src="/becomeap/success.png"
+                    alt="Success Image"
+                    fill
+                    className="object-contain rounded-lg"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Success Section */}
-      <  div className="bg-black ">
-        <div div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-gradient-to-r from-black via-gray- to-black rounded-2xl p-4 sm:p-6 lg:p-10">
-            {/* Success Text */}
-            <div className="text-white space-y-4 lg:space-y-6">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold">
-                Our Commitment to
-                <span className="text-red-500"> Your Success</span>
-              </h2>
-              <p className="text-sm sm:text-base lg:text-lg xl:text-xl opacity-90 leading-relaxed">
-                At CGSPL, we don't just offer a partnership; we offer a
-                long-term relationship that fosters growth, innovation, and
-                mutual success. We're committed to providing the tools,
-                resources, and expertise you need to build a thriving business.
-              </p>
-            </div>
-            {/* Success Image - Conditionally Rendered */}
-            <div className="hidden lg:flex justify-center items-center">
-              <div className="w-full max-w-md aspect-square relative">
-                <Image
-                  src="/becomeap/success.png"
-                  alt="Success Image"
-                  fill
-                  className="object-contain rounded-lg"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
       {/* Why Partner Section - UPDATED with black background for title only */}
       <div className="bg-gray-100 p-4 sm:p-6 lg:p-10">
         {" "}
@@ -225,13 +230,6 @@ const PartnerPage = () => {
         </div>
       </div>
     </div>
-    </div>
   );
 };
 export default PartnerPage;
-
-
-
-
-
-

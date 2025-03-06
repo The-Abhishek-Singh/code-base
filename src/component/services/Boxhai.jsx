@@ -4,6 +4,41 @@ import { Globe,Handshake } from 'lucide-react';
 import Input from '@/component/UI/services/Input';
 import Servicesboxes from '@/component/UI/services/Servicesboxes';
 const head = () => {
+
+
+
+
+  const companies = [
+    { name: "ABB", logo: "/Marq/ABB.png" },
+    { name: "Accenture", logo: "/Marq/accenture-7.svg" },
+    { name: "Adani", logo: "/Marq/AdaniPower.png" },
+    { name: "Allen", logo: "/Marq/Allen-Bradley.jpg" },
+    { name: "Atos", logo: "/Marq/ATOS.png" },
+    { name: "Barclays", logo: "/Marq/Barclays.png" },
+    { name: "Capgemini", logo: "/Marq/CAPGEMINI.jpg" },
+    { name: "ceat", logo: "/Marq/ceat.png" },
+    { name: "CGI", logo: "/Marq/CGI.png" },
+    { name: "CISCO", logo: "/Marq/CISCO.jpg" },
+    { name: "cognizant", logo: "/Marq/COGNIZANT.png" },
+    { name: "Google", logo: "/Marq/Google (1).png" },
+    { name: "Hx", logo: "/Marq/Hexaware1.png" },
+    { name: "iBm", logo: "/Marq/IBM.png" },
+    { name: "infosys", logo: "/Marq/INFOSYS.png" },
+    { name: "intuit", logo: "/Marq/INTUIT.png" },
+    { name: "ms", logo: "/Marq/MICROSOFT.jpg" },
+    { name: "Mindtree", logo: "/Marq/MINDTREE.png" },
+    { name: "Oracle", logo: "/Marq/ORACLE.png" },
+    { name: "GATI", logo: "/Marq/Gati.png" },
+    { name: "SAP", logo: "/Marq/SAP.png" },
+    { name: "TCS", logo: "/Marq/tcs.png" },
+    { name: "Oracle", logo: "/Marq/wipro.jpg" },
+  ];
+
+
+
+
+
+
   return (
     <>
     {/* Fake Nav */}
@@ -33,25 +68,64 @@ const head = () => {
    </div>
    {/* <div className='h-full lg:w-[50%] w-full py-10 px-16 flex items-center justify-center'></div> */}
     </div>
-    <div className='h-auto w-full flex  px-6 sm:px-16 lg:px-24 py-6 items-center justify-between flex-wrap gap-2'>
-    <h1 className=''>Trusted By <br className='md:inline hidden'/>600+ Companies <span className='md:hidden inline'>:</span>  </h1>
-      <h1 className='md:block hidden flex-shrink-0'>Google</h1>
-      <h1 className='md:block hidden flex-shrink-0'>Facebook</h1>
-      <h1 className='md:block hidden flex-shrink-0'>Meta</h1>
-      <h1 className='md:block hidden flex-shrink-0'>Amazone </h1>
-      <h1 className='md:block hidden flex-shrink-0'>Tata</h1>
-      <h1 className='md:block hidden flex-shrink-0'>Techno</h1>
-      <h1 className='md:block hidden flex-shrink-0'>Accenture</h1>
-    <div className='md:hidden flex flex-wrap gap-4'>
-      <h1>Google</h1>
-      <h1>Facebook</h1>
-      <h1>Meta</h1>
-      <h1>Amazone </h1>
-      <h1>Tata</h1>
-      <h1>Techno</h1>
-      <h1>Accenture</h1>
-    </div>
-    </div>
+   {/* Company Logos Marquee */}
+   <div className="relative  py-10 overflow-hidden">
+          <div className="marquee-container relative">
+            <div className="marquee flex space-x-16 items-center">
+              {companies.concat(companies).map((company, index) => (
+                <div key={index} className="flex items-center px-4">
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 object-contain opacity-90 transition-opacity duration-500"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+         
+        </div>
+
+
+
+
+      {/* Marquee Animation Style */}
+      <style jsx>{`
+        .marquee-container {
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          margin-top: 20px;
+        }
+        .marquee {
+          display: flex;
+          animation: marquee-scroll 15s linear infinite;
+          width: max-content;
+        }
+        @keyframes marquee-scroll {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        @media (max-width: 640px) {
+          .marquee {
+            animation-duration: 20s;
+          }
+        }
+      `}</style>
+
+
+
+
+
+
+
+
+
+
     </div>
      {/* SECONE PART OF THE PAGE  */}
 <div className='h-auto w-full  mt-28'>
@@ -64,47 +138,47 @@ const head = () => {
    <Servicesboxes
      title="SOFTWARE DEVELOPMENT & EXPORT SERVICES"
      bgUrl="/services/image%2021.png"
-     shifturl="/courses/Application-Development "
+     shifturl="/services/SOFTWARE-DEVELOPMENT-&-EXPORT-SERVICES"
    />
    <Servicesboxes
      title="IT TRAINING & CERTIFICATION"
      bgUrl="/services/div2.png"
-      shifturl="/courses/Application-Development "
+      shifturl="/services/IT-TRAINING-&-CERTIFICATION"
    />
    <Servicesboxes
      title="CLOUD SOLUTIONS & MIGRATION"
      bgUrl="/services/div3.png"
-      shifturl="/courses/Application-Development "
+      shifturl="/services/CLOUD-SOLUTIONS-&-MIGRATION" 
    />
    <Servicesboxes
      title="CYBERSECURITY SERVICES"
      bgUrl="/services/div4.png"
-      shifturl="/courses/Application-Development "
+      shifturl="/services/CYBERSECURITY-SERVICES"
    />
    <Servicesboxes
      title="Study Abroad"
      bgUrl="/services/div5.png"
-      shifturl="/courses/Application-Development "
+      shifturl="/services/Study-Abroad"
    />
    <Servicesboxes
      title="Work Abroad"
      bgUrl="/services/div6.png"
-      shifturl="/courses/Application-Development "
+      shifturl="/services/Work-Abroad"
    />
    <Servicesboxes
      title="E-COMMERCE SOLUTIONS"
      bgUrl="/services/div7.png"
-      shifturl="/courses/Application-Development "
+      shifturl="/services/E-COMMERCE-SOLUTIONS"
    />
    <Servicesboxes
      title="UI/UX DESIGN SERVICES"
      bgUrl="/services/div8.png"
-      shifturl="/courses/Application-Development "
+      shifturl="/services/UI/UX-DESIGN-SERVICES"
    />
    <Servicesboxes
      title="IT INFRASTRUCTURE MANAGEMENT"
      bgUrl="/services/div9.png"
-      shifturl="/courses/Application-Development "
+      shifturl="/services/IT-INFRASTRUCTURE-MANAGEMENT "
    />
 </div>
 </div>

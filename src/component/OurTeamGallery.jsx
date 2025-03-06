@@ -4,22 +4,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
 import ScrollReveal from "@/component/About/ScrollReveal";
 const OurTeamGallery = () => {
-  const slides = ["/Partnerbg.png", "/partnerpg.png", "/OurTeam.png"];
-  const [currentSlide, setCurrentSlide] = useState(0);
-  useEffect(() => {
-    const slideInterval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 3000);
-    return () => clearInterval(slideInterval);
-  }, []);
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? slides.length - 1 : prevSlide - 1
-    );
-  };
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-  };
+
   const companies = [
     { name: "ABB", logo: "/Marq/ABB.png" },
     { name: "Accenture", logo: "/Marq/accenture-7.svg" },
@@ -55,25 +40,7 @@ const OurTeamGallery = () => {
           </h1>
         </div>
         <div className="relative w-full max-w-5xl mx-auto overflow-hidden">
-          <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96 bg-gray-100 rounded-xl shadow-lg">
-            <img
-              src={slides[currentSlide]}
-              alt={`Slide ${currentSlide + 1}`}
-              className="w-full h-full object-cover rounded-xl"
-            />
-            <button
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full opacity-75 hover:opacity-100"
-              onClick={prevSlide}
-            >
-              <FaChevronLeft size={20} />
-            </button>
-            <button
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full opacity-75 hover:opacity-100"
-              onClick={nextSlide}
-            >
-              <FaChevronRight size={20} />
-            </button>
-          </div>
+       
         </div>
         {/* View all Companies */}
         <div className="text-center my-16 sm:my-20">
