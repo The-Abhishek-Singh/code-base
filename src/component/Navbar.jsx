@@ -3,7 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, LogIn } from "lucide-react";
-import SearchModal from "./UI/NavSearch";
+// import SearchModal from "./UI/NavSearch";
+import SearchModal from "@/component/UI/search/SearchModal";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);

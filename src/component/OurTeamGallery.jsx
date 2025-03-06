@@ -29,6 +29,11 @@ const OurTeamGallery = () => {
     { name: "SAP", logo: "/Marq/SAP.png" },
     { name: "TCS", logo: "/Marq/tcs.png" },
     { name: "Oracle", logo: "/Marq/wipro.jpg" },
+    { name: "amazon", logo: "/Marq/Amazon.png" },
+    { name: "tech-mahindra", logo: "/Marq/TechM.png" },
+    { name: "honeywell", logo: "/Marq/HONEYWELL.png" },
+    { name: "sharda", logo: "/Marq/Sharda-Steel-website-logo-01 (1).svg" },
+    { name: "siemen", logo: "/Marq/siemens.jpg" },
   ];
   return (
     <div className="bg-white">
