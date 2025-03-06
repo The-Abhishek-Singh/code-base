@@ -171,7 +171,7 @@ const head = () => {
    <Servicesboxes
      title="UI/UX DESIGN SERVICES"
      bgUrl="/services/div8.png"
-      shifturl="/services/UI/UX-DESIGN-SERVICES"
+      shifturl="/services/UI-UX-DESIGN-SERVICES"
    />
    <Servicesboxes
      title="IT INFRASTRUCTURE MANAGEMENT"
