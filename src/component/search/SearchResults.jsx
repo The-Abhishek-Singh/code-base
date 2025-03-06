@@ -17,10 +17,9 @@ function SearchResults() {
       slug: 'WEB-DEVELOPMENT'
     },
     { 
-      title: 'Data Science Fundamentals', 
-      imageSrc: '/path/to/datascience.jpg',
-      description: 'Master data analysis and visualization',
-      slug: 'data-science'
+      title: 'DATA SCIENCE & AI', 
+   
+      slug: 'DATA-SCIENCE-&-AI'
     },
     { 
       title: 'UI/UX Design', 
