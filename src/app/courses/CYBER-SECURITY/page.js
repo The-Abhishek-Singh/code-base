@@ -154,7 +154,7 @@ export default function Home(){
   return (
   <>
       <div className="h-auto">
-      <Navbar />
+      
       <div className="relative h-20 z-1 bg-black"></div>
       
       {/* Frame 1 */}
@@ -376,7 +376,7 @@ export default function Home(){
             ))}
           </div>
         </div>
-        <Footer />
+      
     </>
   );
 };
