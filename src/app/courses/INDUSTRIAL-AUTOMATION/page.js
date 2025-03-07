@@ -1,12 +1,13 @@
 "use client"
 import React, { useState, useEffect, useRef} from "react";
-import Button from "@/component/course/Button";
+import Button from '@/component/course/Button';
 import CourseSection from "@/component/course/CourseSection";
-import Forms from '@/component/course/Forms'
+import Forms from '@/component/course/Forms';
 import Image from "next/image";
-import Card from '@/component/course/Card'
+import Card from '@/component/course/Card';
 import { CardHoverEffect } from "@/component/course/CardHoverEffect";
 import Heading from "@/component/course/Heading";
+
 
 const faqData = [
   { question: "Who provides the Course certificate and how long is it valid for?", answer: "The course certificate is provided by the respective platform or institution offering the course, such as Udemy, Coursera, CodeChef, or other recognized organizations. The validity of the certificate depends on the issuing platform; most certificates do not have an expiration date and remain valid for a lifetime. However, some industry-specific certifications may require periodic renewal." },
@@ -14,127 +15,176 @@ const faqData = [
   { question: "What do I need to do to unlock my certificate?", answer: "To unlock your certificate, you must complete all required coding exercises, pass assessments, and meet the platform’s completion criteria. Once done, your certificate will be available for download in your account." },
   { question: "Do you provide any practice tests as part of this FULL STACK course?", answer: "Yes, the course includes practice tests to help you assess your skills in front-end, back-end, databases, and deployment. These tests ensure hands-on learning and better preparation for real-world projects." }
 ];
+
 export default function Home(){
-  // FAQ Section
+
+  // FAQ Section 
   const [openIndex, setOpenIndex] = useState(null);
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  // Card Data Last Section
+
+
+  // Card Data Last Section 
   const cardData = [
     {
       cardTitle : 'FULL STACK DEVELOPMENT',
-      cardContent : 'Our Full Stack Development course equips you with the skills to build dynamic, interactive, and scalable web applications from scratch. Enroll today and start mastering FULL STACK DEVELOPMENT!',
-      cardImg : '/coursePage/2.png'
+      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
+      cardImg : '/2.png' 
+    },
+    {
+      cardTitle : 'MOBILE APPLICATION DEVELOPMENT',
+      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps',
+      cardImg : '/1.png' 
     },
     {
       cardTitle : 'DATA SCIENCE & AI',
-      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps',
-      cardImg : '/coursePage/95.png'
-    },
-    {
-      cardTitle : 'INDUSTRIAL AUTOMATION',
       cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
-      cardImg : '/coursePage/96.png'
+      cardImg : '/95.png' 
     },
     {
       cardTitle : 'AWS DEVOPS',
       cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
-      cardImg : '/coursePage/92.png'
+      cardImg : '/92.png' 
     },
     {
       cardTitle : 'CLOUD COMPUTING',
       cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
-      cardImg : '/coursePage/93.png'
+      cardImg : '/93.png' 
     },
     {
       cardTitle : 'CYBER SECURITY, ETHICAL HACKING & INFORMATION SECURITY',
       cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms.',
-      cardImg : '/coursePage/94.png'
+      cardImg : '/94.png' 
     }
   ]
+
+
   // Course Data Section (Pale Background Section)
   const courseData = [
     {
-      title: "Introduction to Mobile Development",
+      title: "Introduction to Industrial Automation",
       modules: [
-        "Overview of mobile platforms",
-        "Mobile development environments",
-        "Introduction to mobile app design principles",
+        "Automation",
+        "Different components & control systems used in automation"
       ],
     },
     {
-      title: "User Interface Design",
+      title: "Instrumentation & Sensor Basics",
       modules: [
-        "User experience (UX) considerations for mobile applications",
-        "Designing responsive and adaptive interfaces",
-        "Interaction design and usability testing",
+        "Measurement basics",
+        "Process instrumentation fundamentals  Temperature, Pressure, Flow, Level",
+        "Machine monitoring sensors – Load cell, Speed transducers, Proximity sensors",
       ],
     },
     {
-      title: "Mobile Application Architecture",
+      title: "PLC  Programmable Logic Controller",
       modules: [
-        "Client-server architecture for mobile apps",
-        "Data handling and storage options",
-        "Security considerations in mobile development",
+        "Understanding  of  Motor  terminology",
+        "Primary purpose of Motor Control Motor Starting Solutions",
+        "Introduction to AC Drive Types of AC Drive Introduction to DC Drives",
+        "Electrical switchgears & Panel design",
+      ]
+    },
+    {
+      title: "Motors & Variable Speed Drives",
+      modules: [
+        "Understanding  of  Motor  terminologyData Handling with NumPy",
+        "Primary purpose of Motor Control Motor Starting Solutions",
+        "Introduction to AC Drive Types of AC Drive Introduction to DC Drives",
+        "Electrical switchgears & Panel design"
       ],
     },
     {
-      title: "Programming for Mobile Platforms",
+      title: "HMI & SCADA",
       modules: [
-        "Introduction to programming languages",
-        "Integrating APIs and services",
-        "Handling asynchronous operations",
+        "Concept of HMI & SCADA Hardware HMI types & selection",
+        "PC based HM",
+        "Features of SCADA"
       ],
     },
     {
-      title: "Testing and Debugging Mobile Applications",
+      title: "PLC & HMI Programming",
       modules: [
-        "Testing strategies for mobile apps",
-        "Debugging techniques and tools",
-        "Performance optimization",
+        "Concept of IEC 61131-3 & PLC programming",
+        "Understanding and using Ladder, Function Block, Structured Text, Sequence Flow Chart",
+        "HMI Programming SCADA Programming"
       ],
     },
     {
-      title: "Deployment and Maintenance",
+      title: "Factory Automation Applications",
       modules: [
-        "App deployment to app stores",
-        "Version control and app updates",
-        "Monitoring and analytics",
+        "Plastic Injection moulding & extrusion machine",
+        "Pharmaceutical machine",
+        "Textile machine, Packaging machine"
+      ],
+    },
+    {
+      title: "Process Automation Applications",
+      modules: [
+        "Steel plant applications Chemical plant applications Power plant applications",
+        "O&G applications Sugar plant applications Pulp & Paper applications",
+      ],
+    },
+    {
+      title: "Process Controllers  Single & Multi-loop PID Controllers",
+      modules: [
+        "Understanding PID – Mother of all controls",
+        "Features and Programming",
+      ],
+    },
+    {
+        title: "DCS Systems",
+        modules: [
+            "DCS systems - software & hardware",
+            "Programming of DCS systems Alarm System Management",
+      ],
+    },
+    {
+      title: "Industrial IoT & Infrastructure Automation Applications",
+      modules: [
+        "What is Industrial IoT? How IoT works & its enterprise view",
+        "How IoT works & its enterprise view Industrial IoT Framework, IoT Hardware",
+        "3C – Connect, Collect, Consume",
+        "Application Notes"
       ],
     },
   ];
 
-return (
-  <div className="bg-white overflow-x-hidden " >
+  return (
+  <>
       <div className="h-auto">
-      
-  
+    
+      {/* <Loader /> */}
       <div className="relative h-20 z-1 bg-black"></div>
+      
       {/* Frame 1 */}
       <div className="frame1 h-auto w-full flex flex-col lg:flex-row bg-black">
         <div className="left w-full lg:w-[60%] h-auto bg-black py-4 lg:py-7 px-4 lg:px-6">
+
         <div className="p-3 flex justify-center lg:justify-start">
-        <Heading text="APPLICATION DEVELOPMENT" color='white' bgColor='black'/>
+
+        <Heading text="INDUSTRIAL AUTOMATION" color='white' bgColor='black'/>
       </div>
-        <p className="text-lg pl-[1rem] md:text-md text-white">Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!</p>
+        <p className="text-lg pl-[1rem] md:text-md text-white">Industrial automation encompasses the use of control systems such as computers, robots, and information technologies to handle various processes and machinery in an industry, replacing human intervention. A typical Industrial Automation program equips students with the knowledge and skills to design, operate, and troubleshoot automated systems across manufacturing and industrial settings.</p>
           <ul className="p-3 lg:p-5 list-disc">
+
+
             {/* List items with responsive text */}
-            <li className="ls-img text-white text-xl md:text-base">
-              <p>A deep understanding of both client-side and server-side Application development</p>
-            </li>
-            <li className="ls-img text-white text-xl md:text-base">
-              <p>Expertise in building full-scale, production-ready App development</p>
+            <li className="ls-img text-white text-xl md:text-base ">
+              <p>Access to a global community of Data Science & AI professionals.</p>
             </li>
             <li className="ls-img text-white text-xl md:text-base">
               <p>Learn from 40+ hrs of Learning from beginner to advance</p>
             </li>
             <li className="ls-img text-white text-xl md:text-base">
-              <p>The ability to collaborate effectively in any development team</p>
+              <p>Industry-relevant curriculum designed by experts</p>
             </li>
             <li className="ls-img text-white text-xl md:text-base">
-              <p>A strong portfolio of projects to showcase your skills to potential employers or clients</p>
+              <p>Hands-on projects that simulate real-world data problems.</p>
             </li>
+
+
             {/* Other list items remain same structure */}
           </ul>
           <div className="w-full h-auto flex flex-col md:flex-row gap-2 justify-evenly">
@@ -147,30 +197,56 @@ return (
         </div>
       </div>
       </div>
+
+
       {/* Skills Section */}
-      <div className="w-full h-auto text-black p-4 md:p-10 lg:p-20">
+      <div className="w-full h-auto text-black p-4 md:p-6 lg:p-8">
       <div className="p-6 flex justify-center">
         <Heading text="Skills" color='black' bgColor='white'/>
       </div>
-        <ul className="w-full text-black grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-y-[2rem] md:gap-x-20 p-4 md:p-[5%] mb-5">
+        <ul className="w-full text-black grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-y-[2rem] md:gap-x-20 p-4 md:p-[5%] mb-5 list-disc">
           {/* Skills list items */}
-          <li className="text-sm md:text-base">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>Introduction to Mobile Development</p>
+          <li>
+            <p className="text-xl xl:text-2xl">Introduction to Industrial Automation</p>
           </li>
-          <li className="text-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>Programming for Mobile Platforms</p>
+          <li>
+            <p className="text-xl xl:text-2xl">PLC & HMI Programming</p>
           </li>
-          <li className="text-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>User Interface Design</p>
+          <li>
+            <p className="text-xl xl:text-2xl">Instrumentation & Sensor Basics</p>
           </li>
-          <li className="text-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>Testing and Debugging Mobile Applications</p>
+          <li>
+            <p className="text-xl xl:text-2xl">Factory Automation Applications</p>
           </li>
-          <li className="text-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>Mobile Application Architecture</p>
+          <li>
+            <p className="text-xl xl:text-2xl">PLC  Programmable Logic Controller</p>
           </li>
-          <li className="texts-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block" >•</span>Deployment and Maintenance</p>
+          <li>
+            <p className="text-xl xl:text-2xl">Process Automation Applications</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Motors & Variable Speed Drives</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Process Controllers  Single & Multi-loop PID Controllers</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">DCS Systems</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">DCS Systems</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Industrial Data Communication & Networking</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Natural Language Processing</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Industrial IoT & Infrastructure Automation Applications</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Projects 1 & 2</p>
           </li>
         </ul>
         <div className="w-full h-auto flex items-center justify-center">
@@ -180,8 +256,10 @@ return (
           </div>
         </div>
       </div>
+
       {/* Advisor Section */}
-      <div className=" bg-[url(/coursePage/UntitledDesign.png)] w-full h-auto bg-zinc-800/80 text-white p-4 md:p-10 mb-[5rem]">
+      <div className="bg w-full h-auto bg-zinc-800/80 text-white p-4 md:p-10 mb-[5rem]">
+
       <div className="mb-2">
         <Heading text="Advisors" color='white' bgColor='black'/>
       </div>
@@ -202,22 +280,24 @@ return (
       </div>
       {/* Curriculum Section */}
       <div className="h-auto w-full p-4 md:p-5">
+
       <div className="mb-9">
-        <Heading text="MOBILE APPLICATION DEVELOPMENT COURSE CURRICULUM" color='black' bgColor='white'/>
+        <Heading text="DATA SCIENCE & AI COURSE CURRICULUM" color='black' bgColor='white'/>
       </div>
         <div className="bg-[#EEE4E4] container-course-section h-auto w-full backdrop-blur-2xl mb-[5rem]">
           <div className="w-10 h-10"></div>
           <div className="max-w-3xl mx-auto p-4 md:p-6">
             {courseData.map((section, index) => (
-              <CourseSection key={index} title={section.title} modules={section.modules} />
+              <CourseSection key={index} idx={index + 1} title={section.title} modules={section.modules} />
             ))}
           </div>
         </div>
       </div>
         {/* FAQ Section */}
       <div className="h-auto w-full bg-white mb-[5rem]">
+
       <div className="mb-2 p-4">
-        <Heading text="Frequently Asked Questions" color='black' bgColor='white'/>
+        <Heading text="INDUSTRIAL AUTOMATION CERTIFICATE FAQs" color='black' bgColor='white'/>
       </div>
         <div className="bg-[#222] h-full w-full flex flex-col lg:flex-row lg:justify-around">
           <div className="right w-full lg:w-[60%] p-4">
@@ -240,7 +320,7 @@ return (
                   </div>
           </div>
           <div className="left w-[60%] mx-auto lg:my-auto lg:w-[20%] h-full bg-red-500 p-4 md:p-8 flex items-center justify-center">
-            <Image src="/coursePage/Certificate.png" alt="Example Image" width={500} height={300} priority className="w-full h-auto" />
+            <Image src="/Certificate.png" alt="Example Image" width={500} height={300} priority className="w-full h-auto" />
           </div>
         </div>
       </div>
@@ -281,19 +361,19 @@ return (
         <div className="mb-2 p-4">
         <Heading text='OTHER COURSES' color="black" bgColor="white"/>
       </div>
-          <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 mb-40">
+          <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5">
             {cardData.map((item,index) => (
-              <Card
-                key={index}
-                title={item.cardTitle}
-                content={item.cardContent}
+              <Card 
+                key={index} 
+                title={item.cardTitle} 
+                content={item.cardContent} 
                 img={item.cardImg}
                 className="w-full"
               />
             ))}
           </div>
         </div>
-        
-        </div>
+      
+    </>
   );
 };

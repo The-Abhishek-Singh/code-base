@@ -1,10 +1,10 @@
 "use client"
 import React, { useState, useEffect, useRef} from "react";
-import Button from "@/component/course/Button";
+import Button from '@/component/course/Button';
 import CourseSection from "@/component/course/CourseSection";
-import Forms from '@/component/course/Forms'
+import Forms from '@/component/course/Forms';
 import Image from "next/image";
-import Card from '@/component/course/Card'
+import Card from '@/component/course/Card';
 import { CardHoverEffect } from "@/component/course/CardHoverEffect";
 import Heading from "@/component/course/Heading";
 
@@ -14,127 +14,180 @@ const faqData = [
   { question: "What do I need to do to unlock my certificate?", answer: "To unlock your certificate, you must complete all required coding exercises, pass assessments, and meet the platform’s completion criteria. Once done, your certificate will be available for download in your account." },
   { question: "Do you provide any practice tests as part of this FULL STACK course?", answer: "Yes, the course includes practice tests to help you assess your skills in front-end, back-end, databases, and deployment. These tests ensure hands-on learning and better preparation for real-world projects." }
 ];
+
 export default function Home(){
-  // FAQ Section
+
+  // FAQ Section 
   const [openIndex, setOpenIndex] = useState(null);
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  // Card Data Last Section
+
+
+  // Card Data Last Section 
   const cardData = [
     {
       cardTitle : 'FULL STACK DEVELOPMENT',
-      cardContent : 'Our Full Stack Development course equips you with the skills to build dynamic, interactive, and scalable web applications from scratch. Enroll today and start mastering FULL STACK DEVELOPMENT!',
-      cardImg : '/coursePage/2.png'
+      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
+      cardImg : '/2.png' 
+    },
+    {
+      cardTitle : 'MOBILE APPLICATION DEVELOPMENT',
+      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps',
+      cardImg : '/1.png' 
     },
     {
       cardTitle : 'DATA SCIENCE & AI',
-      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps',
-      cardImg : '/coursePage/95.png'
+      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
+      cardImg : '/95.png' 
     },
     {
       cardTitle : 'INDUSTRIAL AUTOMATION',
       cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
-      cardImg : '/coursePage/96.png'
-    },
-    {
-      cardTitle : 'AWS DEVOPS',
-      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
-      cardImg : '/coursePage/92.png'
-    },
-    {
-      cardTitle : 'CLOUD COMPUTING',
-      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
-      cardImg : '/coursePage/93.png'
+      cardImg : '/96.png' 
     },
     {
       cardTitle : 'CYBER SECURITY, ETHICAL HACKING & INFORMATION SECURITY',
+      cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!',
+      cardImg : '/94.png' 
+    },
+    {
+      cardTitle : 'AWS DEVOPS',
       cardContent : 'Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms.',
-      cardImg : '/coursePage/94.png'
+      cardImg : '/92.png' 
     }
   ]
+
+
   // Course Data Section (Pale Background Section)
   const courseData = [
     {
-      title: "Introduction to Mobile Development",
+      title: "Overview of Cloud",
       modules: [
-        "Overview of mobile platforms",
-        "Mobile development environments",
-        "Introduction to mobile app design principles",
+        "What is Cloud Computing & Why Cloud Computing",
+        "Public, Private & Hybrid Cloud",
+        "Virtualization"
       ],
     },
     {
-      title: "User Interface Design",
+      title: "AWS Overview",
       modules: [
-        "User experience (UX) considerations for mobile applications",
-        "Designing responsive and adaptive interfaces",
-        "Interaction design and usability testing",
+        "What is AWS & AWS Marketplace",
+        "AWS Management Console & Dashboard & AWS Region & Availability Zones",
+        "Exploring Different Services",
       ],
     },
     {
-      title: "Mobile Application Architecture",
+      title: "Computing, AMI",
       modules: [
-        "Client-server architecture for mobile apps",
-        "Data handling and storage options",
-        "Security considerations in mobile development",
+        "What is EC2 & Termination Protection & EC2 Types",
+        "AMI, resources use in computing, key pairs",
+        "Security Groups, Elastic Beanstalk",
+        "Lightsail, Lamda",
+      ]
+    },
+    {
+      title: "Linux",
+      modules: [
+        "Overview Of Linux, Basic Commands of Linux",
+        "Vi, Nano Editor, File & Directories",
+        "File-Systems",
+        "Permissions, Package Manager"
       ],
     },
     {
-      title: "Programming for Mobile Platforms",
+      title: "Storage & Backup",
       modules: [
-        "Introduction to programming languages",
-        "Integrating APIs and services",
-        "Handling asynchronous operations",
+        "Elastic Block Storage(EBS), ObjectBasedStorage(S3)",
+        "File Uploading on S3, S3Permission &Policy",
+        "NetworkStorage, Snapshot, Backup"
       ],
     },
     {
-      title: "Testing and Debugging Mobile Applications",
+      title: "Identity Access Management(IAM)",
       modules: [
-        "Testing strategies for mobile apps",
-        "Debugging techniques and tools",
-        "Performance optimization",
+        "Overview of IAM, Protection of AWS Account",
+        "IAM Users & User Groups, Creating Custom Policie",
+        "Creating Roles"
       ],
     },
     {
-      title: "Deployment and Maintenance",
+      title: "Load Balancing & Auto Scaling",
       modules: [
-        "App deployment to app stores",
-        "Version control and app updates",
-        "Monitoring and analytics",
+        "LoadBalancer, Types Of LoadBalancer, How to use LoadBalancer",
+        "Introduction to Auto Scaling,  Types Of AutoScaling",
+        "How to Use AutoScaling, Policies of Auto Scaling"
       ],
     },
+    {
+      title: "VPC",
+      modules: [
+        "Introduction to VPC, IPAddress, MACAddress, CIDR, Elastic IP",
+        "Components of VPC, Creating Custom VPC, Private, Public Subnet, VPCPeering",
+      ],
+    },
+    {
+      title: "Relational Database Service(RDS) & Cloud Front & Route 53",
+      modules: [
+        "What is DBMS, RDS, Different types of Database Engine",
+        "Describe Cloud Front,Create Cloud Front Distribution, Cache Memory",
+        "What is Route 53, Domain Names & Hosting, Hosted Zones, DNS"
+      ],
+    },
+    {
+      title: "Monitoring Services & Application services",
+      modules: [
+        "Introduction to Cloud Watch, Dashboard Creation, Alarm Creation",
+        "Introduction to SNS & SES SQS, Topic Creation, Subscription",
+      ],
+    },
+    {
+      title: "AWS Troubleshooting & security & cost management",
+      modules: [
+        "Troubleshooting EC2 Instance, Cloud Watch, ELB, Cloud fron",
+        "AWS Firewall, AWS Guard, Amazon Inspector, WAF & Shield",
+        "Backup, Disaster Recovery, HighAvailability Design, Migration",
+        "AWS Budget, Cost Explorer, Billing",
+      ],
+    }
   ];
 
-return (
-  <div className="bg-white overflow-x-hidden " >
+  return (
+  <>
       <div className="h-auto">
-      
-  
+    
       <div className="relative h-20 z-1 bg-black"></div>
+      
       {/* Frame 1 */}
       <div className="frame1 h-auto w-full flex flex-col lg:flex-row bg-black">
         <div className="left w-full lg:w-[60%] h-auto bg-black py-4 lg:py-7 px-4 lg:px-6">
+
         <div className="p-3 flex justify-center lg:justify-start">
-        <Heading text="APPLICATION DEVELOPMENT" color='white' bgColor='black'/>
+
+        <Heading text="CLOUD COMPUTING" color='white' bgColor='black'/>
       </div>
-        <p className="text-lg pl-[1rem] md:text-md text-white">Our Mobile Application Development course equips you with the skills to design, develop, and deploy mobile applications for both iOS and Android platforms. Learn to create user-friendly, high-performance apps!</p>
+        <p className="text-lg pl-[1rem] md:text-md text-white">This course provides a comprehensive introduction to cloud computing, with a special focus on utilizing cloud technologies for building, hosting, and scaling websites. By the end of the course, students will have hands-on experience in deploying websites to the cloud, managing infrastructure, and leveraging cloud services to optimize performance, security, and scalability.</p>
           <ul className="p-3 lg:p-5 list-disc">
+
+
             {/* List items with responsive text */}
-            <li className="ls-img text-white text-xl md:text-base">
-              <p>A deep understanding of both client-side and server-side Application development</p>
+            <li className="ls-img text-white text-xl md:text-base ">
+              <p>Understand core cloud computing concepts and services.</p>
             </li>
             <li className="ls-img text-white text-xl md:text-base">
-              <p>Expertise in building full-scale, production-ready App development</p>
+              <p>Learn advanced cloud features for enhanced performance.</p>
             </li>
             <li className="ls-img text-white text-xl md:text-base">
-              <p>Learn from 40+ hrs of Learning from beginner to advance</p>
+              <p>Deploy and maintain a website using cloud services.</p>
             </li>
             <li className="ls-img text-white text-xl md:text-base">
-              <p>The ability to collaborate effectively in any development team</p>
+              <p>Secure, scale, and optimize websites in the cloud environment.</p>
             </li>
             <li className="ls-img text-white text-xl md:text-base">
-              <p>A strong portfolio of projects to showcase your skills to potential employers or clients</p>
+              <p>Gain practical experience with major cloud platforms.</p>
             </li>
+
+
             {/* Other list items remain same structure */}
           </ul>
           <div className="w-full h-auto flex flex-col md:flex-row gap-2 justify-evenly">
@@ -147,30 +200,65 @@ return (
         </div>
       </div>
       </div>
+
+
       {/* Skills Section */}
-      <div className="w-full h-auto text-black p-4 md:p-10 lg:p-20">
+      <div className="w-full h-auto text-black p-4 md:p-6 lg:p-8">
       <div className="p-6 flex justify-center">
         <Heading text="Skills" color='black' bgColor='white'/>
       </div>
-        <ul className="w-full text-black grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-y-[2rem] md:gap-x-20 p-4 md:p-[5%] mb-5">
+        <ul className="w-full text-black grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-y-[2rem] md:gap-x-20 p-4 md:p-[5%] mb-5 list-disc">
           {/* Skills list items */}
-          <li className="text-sm md:text-base">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>Introduction to Mobile Development</p>
+          <li>
+            <p className="text-xl xl:text-2xl">Overview of Cloud</p>
           </li>
-          <li className="text-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>Programming for Mobile Platforms</p>
+          <li>
+            <p className="text-xl xl:text-2xl">VPC</p>
           </li>
-          <li className="text-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>User Interface Design</p>
+          <li>
+            <p className="text-xl xl:text-2xl">AWS Overview</p>
           </li>
-          <li className="text-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>Testing and Debugging Mobile Applications</p>
+          <li>
+            <p className="text-xl xl:text-2xl">Relational Database Service(RDS)</p>
           </li>
-          <li className="text-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block">•</span>Mobile Application Architecture</p>
+          <li>
+            <p className="text-xl xl:text-2xl">Computing, AMI</p>
           </li>
-          <li className="texts-sm md:text-base flex items-center">
-            <p className="flex items-center"><span className="text-red-700 mr-2 text-2xl inline-block" >•</span>Deployment and Maintenance</p>
+          <li>
+            <p className="text-xl xl:text-2xl">Cloud Front</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Linux</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Route 53</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Storage & Backup</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Monitoring Services</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Identity Access Management(IAM)</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Application Services</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Load Balancing & Auto Scaling</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">AWS Troubleshooting</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">AWS Security</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">AWS Cost Management</p>
+          </li>
+          <li>
+            <p className="text-xl xl:text-2xl">Architecture, Design, Recovery & Migration</p>
           </li>
         </ul>
         <div className="w-full h-auto flex items-center justify-center">
@@ -180,8 +268,10 @@ return (
           </div>
         </div>
       </div>
+
       {/* Advisor Section */}
-      <div className=" bg-[url(/coursePage/UntitledDesign.png)] w-full h-auto bg-zinc-800/80 text-white p-4 md:p-10 mb-[5rem]">
+      <div className="bg w-full h-auto bg-zinc-800/80 text-white p-4 md:p-10 mb-[5rem]">
+
       <div className="mb-2">
         <Heading text="Advisors" color='white' bgColor='black'/>
       </div>
@@ -202,22 +292,24 @@ return (
       </div>
       {/* Curriculum Section */}
       <div className="h-auto w-full p-4 md:p-5">
+
       <div className="mb-9">
-        <Heading text="MOBILE APPLICATION DEVELOPMENT COURSE CURRICULUM" color='black' bgColor='white'/>
+        <Heading text="CLOUD COMPUTING COURSE CURRICULUM" color='black' bgColor='white'/>
       </div>
         <div className="bg-[#EEE4E4] container-course-section h-auto w-full backdrop-blur-2xl mb-[5rem]">
           <div className="w-10 h-10"></div>
           <div className="max-w-3xl mx-auto p-4 md:p-6">
             {courseData.map((section, index) => (
-              <CourseSection key={index} title={section.title} modules={section.modules} />
+              <CourseSection key={index} idx={index + 1} title={section.title} modules={section.modules} />
             ))}
           </div>
         </div>
       </div>
         {/* FAQ Section */}
       <div className="h-auto w-full bg-white mb-[5rem]">
+
       <div className="mb-2 p-4">
-        <Heading text="Frequently Asked Questions" color='black' bgColor='white'/>
+        <Heading text="CLOUD COMPUTING CERTIFICATE FAQs" color='black' bgColor='white'/>
       </div>
         <div className="bg-[#222] h-full w-full flex flex-col lg:flex-row lg:justify-around">
           <div className="right w-full lg:w-[60%] p-4">
@@ -240,7 +332,7 @@ return (
                   </div>
           </div>
           <div className="left w-[60%] mx-auto lg:my-auto lg:w-[20%] h-full bg-red-500 p-4 md:p-8 flex items-center justify-center">
-            <Image src="/coursePage/Certificate.png" alt="Example Image" width={500} height={300} priority className="w-full h-auto" />
+            <Image src="/Certificate.png" alt="Example Image" width={500} height={300} priority className="w-full h-auto" />
           </div>
         </div>
       </div>
@@ -281,19 +373,19 @@ return (
         <div className="mb-2 p-4">
         <Heading text='OTHER COURSES' color="black" bgColor="white"/>
       </div>
-          <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5 mb-40">
+          <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 sm:gap-4 md:gap-5 p-3 sm:p-4 md:p-5">
             {cardData.map((item,index) => (
-              <Card
-                key={index}
-                title={item.cardTitle}
-                content={item.cardContent}
+              <Card 
+                key={index} 
+                title={item.cardTitle} 
+                content={item.cardContent} 
                 img={item.cardImg}
                 className="w-full"
               />
             ))}
           </div>
         </div>
-        
-        </div>
+      
+    </>
   );
 };

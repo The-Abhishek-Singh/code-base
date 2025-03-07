@@ -38,7 +38,7 @@ const Footer = () => {
               </h2>
               <p className="mt-2 w-90 text-gray-400">
                 Explore our services today and discover how we can empower your
-                business or career.
+                business or career. 
               </p>
             </div>
           </div>
@@ -46,38 +46,37 @@ const Footer = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
             <div>
               <h3 className="font-semibold mb-2">Reach us</h3>
-              <p className="text-gray-400">📞:telephone_receiver: +1012 3456 789</p>
-              <p className="text-gray-400">📧:e-mail: demo@gmail.com</p>
-              <p className="text-gray-400">
-              📍:round_drawing_pin: 132 Dartmouth Street Boston, <br /> Massachusetts 02156
-                United States
+              <p className="text-gray-400 hover:text-red-500">📞 Contact: +91 9343202785</p>
+              <p className="text-gray-400 hover:text-red-500">📧 mail: contact@careertronics.in</p>
+              <p className="text-gray-400 hover:text-red-500">
+              📍E-108, Sector 1, Devendra Nagar, <span className="ml-5">Raipur 492004</span> 
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-2">Company</h3>
-              <ul className="text-gray-400 space-y-1">
-                <li>About</li>
-                <li>Contact</li>
-                <li>Services</li>
-                <li>Business consulting</li>
+              <ul className="text-gray-400 space-y-1 ">
+                <li className="hover:text-red-500">About</li>
+                <li className="hover:text-red-500">Contact</li>
+                <li className="hover:text-red-500">Services</li>
+                <li className="hover:text-red-500">Business consulting</li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-2">Legal</h3>
               <ul className="text-gray-400 space-y-1">
-                <li>Privacy Policy</li>
-                <li>Terms & Services</li>
-                <li>Terms of Use</li>
-                <li>Refund Policy</li>
+                <li className="hover:text-red-500">Privacy Policy</li>
+                <li className="hover:text-red-500">Terms & Services</li>
+                <li className="hover:text-red-500">Terms of Use</li>
+                <li className="hover:text-red-500">Refund Policy</li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-2">Quick Links</h3>
               <ul className="text-gray-400 space-y-1">
-                <li>Software training</li>
-                <li>Industrial training</li>
-                <li>Custom Software development</li>
-                <li>Become a Franchise partner</li>
+                <li className="hover:text-red-500">Software training</li>
+                <li className="hover:text-red-500">Industrial training</li>
+                <li className="hover:text-red-500">Custom Software development</li>
+                <li className="hover:text-red-500">Become a Franchise partner</li>
               </ul>
             </div>
           </div>

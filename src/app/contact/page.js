@@ -100,7 +100,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-full overflow-x-hidden ">
+    <div className="w-full overflow-x-hidden  ">
       {/* Toast Container - This is essential for showing the toast notifications */}
       <ToastContainer
         position="top-center"
@@ -219,7 +219,7 @@ const ContactUs = () => {
       </div>
 
       {/* Contact Form Section */}
-      <div className="container bg-white mx-auto px-4 py-12 md:py-16">
+      <div className="container bg-white mx-auto px-4 py-12 md:py-16 ">
         <div className="text-center mb-8 md:mb-16">
           <ScrollReveal
             animation="slideUp"
