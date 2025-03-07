@@ -3,7 +3,7 @@ const Card = ({ images = [], title, description }) => {
   return (
     <div
       className="bg-white shadow-lg rounded-lg sm:rounded-2xl lg:rounded-[1cm] p-6
-                 sm:h-72 w-full h-auto 2xl:h-60 md:h-56 mx-auto sm:mx-0
+                 sm:h-72 w-full h-auto 2xl:h-60 md:h-72 mx-auto sm:mx-0 
                  flex flex-col sm:flex-row items-center justify-center sm:items-start gap-6"
     >
       {/* Images container - centered on mobile, left side on larger screens */}

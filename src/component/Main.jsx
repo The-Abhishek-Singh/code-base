@@ -1,15 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import {
-  Code,
-  Cloud,
-  FileChartColumn,
-  Bitcoin,
-  Construction,
-  AppWindow,
-  BrainCircuit,
-} from "lucide-react";
 import { motion } from "framer-motion";
 const ScrollCards = () => {
   const cardRowRef = useRef(null);
@@ -20,43 +11,44 @@ const ScrollCards = () => {
       image: "/1service.png",
       content:
         " We specialize in software development and export services, delivering cutting-edge technology solutions tailored to your business needs. Our expertise spans custom software, web and mobile applications, AI-driven solutions, and cloud integrations, ensuring seamless digital transformation. With a focus on innovation and scalability, we help businesses enhance efficiency, drive growth, and stay ahead in the competitive tech landscape.",
-    },
-    {
-      title: "IT & INDUSTRIAL AUTOMATION TRAINING",
-      heading: "IT & INDUSTRIAL AUTOMATION TRAINING",
+      },
+      {
+        title: "IT & INDUSTRIAL AUTOMATION TRAINING",
+        heading: "IT & INDUSTRIAL AUTOMATION TRAINING",
       image: "/3service.png",
       content:
-        "We provide IT and Industrial Automation Training, equipping professionals with the latest skills and knowledge to excel in a technology-driven world. Our comprehensive programs cover software development, industrial automation, AI, IoT, and cloud computing, ensuring hands-on expertise. With industry-aligned curriculum and expert guidance, we prepare individuals to adapt, innovate, and succeed in the evolving tech landscape.",
+      "We provide IT and Industrial Automation Training, equipping professionals with the latest skills and knowledge to excel in a technology-driven world. Our comprehensive programs cover software development, industrial automation, AI, IoT, and cloud computing, ensuring hands-on expertise. With industry-aligned curriculum and expert guidance, we prepare individuals to adapt, innovate, and succeed in the evolving tech landscape.",
     },
     {
       title: "CORPORATE & INDUSTRIAL TRAINING",
       heading: "CORPORATE & INDUSTRIAL TRAINING",
       image: "/2service.png",
       content:
-        "Our Corporate & Industrial Training programs are tailored to enhance organizational performance and workforce productivity. We offer customized training solutions in IT, automation, and emerging technologies, ensuring employees gain practical skills and industry expertise. With expert-led sessions and real-world applications, we help businesses upskill their teams and stay ahead in a competitive landscape.",
+      "Our Corporate & Industrial Training programs are tailored to enhance organizational performance and workforce productivity. We offer customized training solutions in IT, automation, and emerging technologies, ensuring employees gain practical skills and industry expertise. With expert-led sessions and real-world applications, we help businesses upskill their teams and stay ahead in a competitive landscape.",
     },
     {
       title: "GLOBAL EDUCATION & STUDY ABROAD PROGRAMS",
       heading: "GLOBAL EDUCATION & STUDY ABROAD PROGRAMS",
       image: "/4service.png",
       content:
-        "Our Global Education & Study Abroad Programs provide students and professionals with access to world-class educational opportunities and enriching cross-cultural experiences. We offer personalized guidance, university partnerships, and scholarship assistance to help individuals achieve their academic and career goals. With a focus on global exposure and skill development, we empower learners to excel in an increasingly interconnected world.",
+      "Our Global Education & Study Abroad Programs provide students and professionals with access to world-class educational opportunities and enriching cross-cultural experiences. We offer personalized guidance, university partnerships, and scholarship assistance to help individuals achieve their academic and career goals. With a focus on global exposure and skill development, we empower learners to excel in an increasingly interconnected world.",
     },
     {
       title: "BUSINESS CONSULTING",
       heading: "BUSINESS CONSULTING",
       image: "/5service.jpeg",
       content:
-        "Our Business Consulting services provide strategic expertise to help businesses overcome challenges, streamline operations, and drive sustainable growth. We offer data-driven insights, process optimization, and market analysis to enhance decision-making and competitiveness. With a focus on innovation and efficiency, we empower organizations to scale successfully in a dynamic business landscape.",
+      "Our Business Consulting services provide strategic expertise to help businesses overcome challenges, streamline operations, and drive sustainable growth. We offer data-driven insights, process optimization, and market analysis to enhance decision-making and competitiveness. With a focus on innovation and efficiency, we empower organizations to scale successfully in a dynamic business landscape.",
     },
   ];
+  const cards = cardsData || defaultCardsData;
   const getImage = (title) => {
     switch (title) {
       case "SOFTWARE DEVELOPMENT & EXPORT SERVICES ":
         return "homeCollapse1.png";
-      case "IT & INDUSTRIAL AUTOMATION TRAINING":
-        return "homeCollapse2.png";
-      case "CORPORATE & INDUSTRIAL TRAINING":
+        case "IT & INDUSTRIAL AUTOMATION TRAINING":
+          return "homeCollapse2.png";
+          case "CORPORATE & INDUSTRIAL TRAINING":
         return "homeCollapse3.png";
       case "GLOBAL EDUCATION & STUDY ABROAD PROGRAMS":
         return "homeCollapse4.png";
@@ -125,22 +117,27 @@ const ScrollCards = () => {
         });
       }
     }
-  }, []);
+  }, [cards]);
   return (
     <div>
       {/* Desktop Version - Hidden on mobile */}
       <div className="hidden sm:block -mt-[16vh]">
-        <section className="common h-[0vh] w-full flex justify-center items-center"></section>
-        <section className="cards-scroll  flex flex-col">
+        <section className="common h-[0vh] w-full justify-center items-center"></section>
+        <section className="cards-scroll flex flex-col">
           <div className="card-row" ref={cardRowRef}>
             {cardsData.map((card, index) => (
               <div
                 key={`desktop-${index}`}
-                className="card overflow-hidden h-[100vh] w-full text-white bg-black sticky mx-auto shadow-[0_-8px_30px_5px_rgba(255,255,255,0.2)]"
+                className="card overflow-hidden h-[100vh] w-full text-white bg-black sticky mx-auto"
               >
                 <div className="card__header sm:px-10 2xl:px-20 bg-black w-full border-b-2 border-white/20 min-h-[45px] p-2 flex items-center justify-center md:justify-start cursor-pointer transition-all duration-300 hover:text-red-300 ">
                   <motion.h2 className="text-lg 2xl:text-xl w-full xl:px-20 font-semibold flex items-center gap-2 cursor-pointer">
-                  <img src={getImage(card.title)} alt={card.title} width="50" height="50" />
+                    <img
+                      src={getImage(card.title)}
+                      alt={card.title}
+                      width="50"
+                      height="50"
+                    />
                     {card.title}
                   </motion.h2>
                 </div>
@@ -158,7 +155,7 @@ const ScrollCards = () => {
                     <h3 className="relative text-xl font-semibold mb-5 text-center lg:text-start underline underline-offset-8 after:content-[''] after:absolute after:w-2 after:h-2 after:bg-white after:rounded-full after:bottom-[-6px]">
                       {card.heading}
                     </h3>
-                    <p className="text-xl leading-relaxed font-medium text-center sm:text-start">
+                    <p className="text-lg leading-relaxed font-medium text-center sm:text-start">
                       {card.content}
                     </p>
                   </div>
@@ -169,24 +166,31 @@ const ScrollCards = () => {
         </section>
         <section className="common h-[0vh] w-full flex justify-center items-center"></section>
       </div>
+
       {/* Mobile Version */}
+
       <div className="block sm:hidden bg-black">
-        <div className="container mx-auto px-4 py-8">
-          {cardsData.map((card, index) => (
+        <div className="container flex flex-col mx-auto px-4 py-8">
+          {cards.map((card, index) => (
             <motion.div
               key={`mobile-${index}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mb-8 bg-black/50 rounded-lg overflow-hidden border border-white/10"
+              className="mb-8 bg-black/50 rounded-lg overflow-hidden shadow-lg border border-white/10"
             >
-              <div className="bg-black p-4 border-b border-white/20 shadow-[0_-8px_15px_-3px_rgba(255,255,255,0.5)]">
+              <div className="bg-black p-4 border-b border-white/20">
                 <h2 className="text-white text-lg font-bold flex items-center gap-2">
-                  {/* {getIcon(card.title)} */}
-                  <img src={getImage(card.title)} alt={card.title} width="40" height="40" />
+                  <img
+                    src={getImage(card.title)}
+                    alt={card.title}
+                    width="50"
+                    height="50"
+                  />
                   {card.title}
                 </h2>
               </div>
+
               <div className="p-4">
                 <div className="mb-4">
                   <Image
@@ -197,9 +201,10 @@ const ScrollCards = () => {
                     className="w-full object-cover rounded-lg"
                   />
                 </div>
+
                 <div className="text-white">
                   <h3 className="text-lg font-semibold mb-2">{card.heading}</h3>
-                  <p className="text-sm leading-relaxed opacity-90">
+                  <p className="text-lg leading-relaxed opacity-90">
                     {card.content}
                   </p>
                 </div>

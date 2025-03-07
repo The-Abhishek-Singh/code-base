@@ -97,10 +97,10 @@ const PartnerPage = () => {
             <div className="absolute inset-0 bg-black/60"></div>
           </div>
           {/* Content Container */}
-          <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 lg:px-16 2xl:px-24">
+          <div className="relative z-10 w-full max-w-[1500px] mx-auto px-6 lg:px-16 2xl:px-2">
             <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[1.2fr_1fr] gap-12 items-center">
               {/* Text Content */}
-              <div className="text-white space-y-6 lg:space-y-10 xl:text-left min-w-[500px]">
+              <div className="text-white space-y-6 lg:space-y-10 xl:text-left min-w-[290px] ">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
                   Become a Partner with
                   <br />
@@ -138,7 +138,7 @@ const PartnerPage = () => {
           <div className="max-w-[1500px] mx-auto px-6 lg:px-16 2xl:px-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[1.2fr_1fr] gap-12 items-center bg-gradient-to-r from-black via-gray-800 to-black rounded-2xl p-8 lg:p-14">
               {/* Success Text */}
-              <div className="text-white space-y-6 lg:space-y-10 min-w-[500px]">
+              <div className="text-white space-y-6 lg:space-y-10 min-w-[275px]">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold">
                   Our Commitment to{" "}
                   <span className="text-red-500">Your Success</span>
@@ -168,7 +168,7 @@ const PartnerPage = () => {
         </div>
       </div>
       {/* Why Partner Section - UPDATED with black background for title only */}
-      <div className="bg-gray-100 p-4 sm:p-6 lg:p-10">
+      <div className="bg-gray-100 p-4 sm:p-1 lg:p-10">
         {" "}
         <div className=" w-full mb-4 lg:mb-6">
           <ScrollReveal
