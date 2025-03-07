@@ -168,7 +168,16 @@ export default function Home() {
   return (
     <>
       <div className="h-auto">
+<<<<<<< HEAD
         <div className="relative h-20 z-1 bg-black"></div>
+=======
+      
+      <div className="relative h-20 z-1 bg-black"></div>
+      
+      {/* Frame 1 */}
+      <div className="frame1 h-auto w-full flex flex-col lg:flex-row bg-black">
+        <div className="left w-full lg:w-[60%] h-auto bg-black py-4 lg:py-7 px-4 lg:px-6">
+>>>>>>> 14de4ee8d6469e1ed226a723a55db13501b16cfb
 
         {/* Frame 1 */}
         <div className="frame1 h-auto w-full flex flex-col lg:flex-row bg-black">
@@ -329,6 +338,7 @@ export default function Home() {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </div>
       {/* FAQ Section */}
       <div className="h-auto w-full bg-white mb-[5rem]">
@@ -457,6 +467,9 @@ export default function Home() {
         </div>
       </div>
       <Footer />
+=======
+      
+>>>>>>> 14de4ee8d6469e1ed226a723a55db13501b16cfb
     </>
   );
 }
