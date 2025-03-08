@@ -61,27 +61,41 @@ const SoftwareServices = () => {
   ];
 
   return (
-    <div className="relative w-full bg-black">
-      {/* Hero Section with Dark Background */}
-     
 
-      <ServicesContent
-      title=" SOFTWARE DEVELOPMENT & EXPORT SERVICES"
-      description="  At Careertronic Global Services, we offer a comprehensive suite of services that
+<div className="relative w-full  bg-black">
+      {/* Background Video */}
+
+      <video
+        className="absolute top-0 left-0 w-full object-fit "
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* Content Section */}
+
+      <div className="relative z-10">
+        <ServicesContent
+          title="SOFTWARE DEVELOPMENT & EXPORT SERVICES"
+          description=" At Careertronic Global Services, we offer a comprehensive suite of services that
       cater to the diverse needs of individuals, businesses, and institutions. Whether
       you're looking to advance your career, optimize your business processes, or
       implement cutting-edge software solutions, we have the expertise and tools to
       help you succeed in today's fast-paced digital landscape. Explore our range of
       services below and discover how Careertronic can drive growth, efficiency, and
       innovation for your business or career."
-      backgroundImage="/servicepages/bgggg.png"
-      sectionTitle="Our Web Solutions"
-    />
+          sectionTitle="Our Web Solutions"
+        />
 
-              <ScrollCards cardsData={softwareServicesData} customIcons={softwareIcons}/>
-
-            </div>
-    
+        <ScrollCards
+          cardsData={softwareServicesData}
+          customIcons={softwareIcons}
+        />
+      </div>
+    </div>
   );
 };
 

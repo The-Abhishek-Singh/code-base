@@ -17,72 +17,98 @@ const SoftwareServices = () => {
 
   const softwareServicesData = [
     {
-      title: "Artificial Intelligence & Machine Learning",
-      heading: "Artificial Intelligence & Machine Learning",
-      image: "/servicepages/1stservice.png",
-      content: "Our AI and ML solutions automate processes, enhance decision-making, and build intelligent systems that evolve over time. Using advanced technologies like natural language processing (NLP), chatbots, and predictive analytics, we help businesses improve customer interactions, increase operational efficiency, and stay competitive",
+      title: "Data Science, Artificial Intelligence, and Machine Learning Program",
+      heading: "Data Science, Artificial Intelligence, and Machine Learning Program",
+      image: "/ServiceImg/ITservice/Data.jpg", 
+      content: "Welcome to our Data Science, AI, and ML Program – a comprehensive training designed to equip you with essential skills in data analysis, machine learning, and artificial intelligence. Whether you're a beginner or a professional, this course offers hands-on experience with cutting-edge tools and techniques. ",
       iconType: "brainCircuit"
     },
     {
-      title: "Cloud Computing & DevOps Solutions",
-      heading: "Cloud Computing & DevOps Solutions",
-      image: "/servicepages/2ndservice.png",
-      content: "We help you leverage the power of cloud technologies to create flexible, scalable, and cost-efficient infrastructure. Our DevOps practices ensure smooth collaboration between development and operations teams, streamlining workflows and accelerating delivery times, so your business can scale efficiently and stay agile.",
+      title: "Cybersecurity & Ethical Hacking Training Program",
+      heading: "Cybersecurity & Ethical Hacking Training Program ",
+      image: "/ServiceImg/ITservice/cybersecurity.jpg",
+      content: "Welcome to our Cybersecurity & Ethical Hacking Training Program, designed to equip you with the skills needed to protect digital infrastructures and combat cyber threats. This comprehensive program offers hands-on training, expert guidance, and industry-recognized certifications, preparing you for a successful career in cybersecurity and ethical hacking.",
       iconType: "cloud"
     },
     {
-      title: "App Development & Integration",
-      heading: "App Development & Integration",
-      image: "/servicepages/3rdservice.png",
-      content: "Our team develops high-performance mobile and web applications designed to provide superior user experiences. We also offer seamless system integration to ensure your applications work harmoniously with existing platforms, maximizing efficiency and business outcomes.",
+      title: "Cloud Computing & DevOps",
+      heading: "Cloud Computing & DevOps",
+      image: "/ServiceImg/ITservice/devops.webp",
+      content: "In today’s rapidly evolving IT landscape, Cloud Computing and DevOps have emerged as critical drivers of efficiency, scalability, and automation. This course offers a comprehensive journey through the core concepts, tools, and practices that power cloud computing platforms and DevOps methodologies.",
       iconType: "appWindow"
     },
     {
-      title: "Software Maintenance & Support",
-      heading: "Software Maintenance & Support",
-      image: "/servicepages/4thservice.png",
-      content: "We provide ongoing maintenance and support to ensure that your software remains up-to-date, secure, and optimized for peak performance. Our support services include bug fixes, updates, performance enhancements, and troubleshooting to ensure the long-term success of your software solutions.",
+      title: "Full Stack Website and App Development Course",
+      heading: "Full Stack Website and App Development Course",
+      image: "/ServiceImg/ITservice/fullstack.jpg",
+      content: "In today’s digital world, businesses need full-stack developers to create both front-end and back-end solutions. This course covers essential technologies, from HTML, CSS, and JavaScript for front-end development to Node.js, Express.js, mobile app development, and database management for back-end tasks. ",
       iconType: "construction"
     },
     {
-      title: "Data Science & Analytics",
-      heading: "Data Science & Analytics",
-      image: "/servicepages/5thservice.png",
-      content: "Data Science and Analytics involve extracting valuable insights from large datasets to drive informed decision-making and optimize business operations. Data analytics helps turn raw data into actionable information, while data science enables deeper insights, improving efficiency and competitive advantage.",
+      title: "Accounting & Taxation Course",
+      heading: "Accounting & Taxation Course",
+      image: "/ServiceImg/ITservice/tax.jpg",
+      content: "At Careertronic, we revolutionize learning in Accounting, Taxation, Audit, and HR domains by offering practical guidance through advanced simulation software and gamification techniques. Whether you’re learning online or offline, our programs equip you with real-world skills, helping you understand and implement concepts that will level-up your career.",
       iconType: "fileChartColumn"
     },
     {
-      title: "Blockchain & IoT",
-      heading: "Blockchain & IoT",
-      image: "/servicepages/Image11.jpg",
-      content: "Embrace the transformative power of blockchain and IoT technologies to enhance security, transparency, and efficiency in your business processes. Our blockchain development services, including smart contracts, cryptocurrency solutions, and decentralized applications (DApps), help streamline operations and build trust.",
-      iconType: "bitcoin"
+      title: "Robotics",
+      heading: "Robotics",
+      image: "/ServiceImg/ITservice/robo.png",
+      content: "Welcome to the world of Robotics—a field that blends engineering, artificial intelligence, and automation to create intelligent machines that can revolutionize industries. At Careertronic, we offer a comprehensive Robotics Training Program designed to equip you with the skills to build, program, and operate robots across various applications, from industrial automation to medical robotics.",
+      iconType: "fileChartColumn"
     },
+    {
+      title: "Coding for kids",
+      heading: "Coding for kids",
+      image: "/ServiceImg/ITservice/kids.jpg",
+      content: "In today’s digital world, coding is more than just a skill—it’s a superpower! At Careertronic, we believe in empowering the next generation of innovators by introducing them to coding in a fun, engaging, and hands-on way. Our Coding for Kids program is designed to make learning programming exciting and accessible for children aged 6 to 16, setting them up for a future of creativity, problem-solving, and tech-driven success.",
+      iconType: "fileChartColumn"
+    },
+    {
+      title: "UI & UX Designer",
+      heading: "UI & UX Designer",
+      image: "/ServiceImg/ITservice/uiux.webp",
+      content: "In the digital-first world, a strong user experience (UX) and user interface (UI) design are crucial to the success of websites, apps, and digital products. As businesses compete to provide superior user experiences, the demand for skilled UI/UX designers is skyrocketing.",
+      iconType: "fileChartColumn"
+    },
+    
   ];
 
   return (
-    <div className="relative w-full bg-black">
-      {/* Hero Section with Dark Background */}
-     
 
-      <ServicesContent
-      title=" SOFTWARE DEVELOPMENT & EXPORT SERVICES"
-      description="  At Careertronic Global Services, we offer a comprehensive suite of services that
-      cater to the diverse needs of individuals, businesses, and institutions. Whether
-      you're looking to advance your career, optimize your business processes, or
-      implement cutting-edge software solutions, we have the expertise and tools to
-      help you succeed in today's fast-paced digital landscape. Explore our range of
-      services below and discover how Careertronic can drive growth, efficiency, and
-      innovation for your business or career."
-      backgroundImage="/servicepages/bgggg.png"
-      sectionTitle="Our Web Solutions"
-    />
+ <div className="relative w-full bg-black">
+      {/* Background Video */}
 
-              <ScrollCards cardsData={softwareServicesData} customIcons={softwareIcons}/>
+      <video
+        className=" absolute top-0 left-0 w-full object-fit "
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* Content Section */}
 
-            </div>
-    
+      <div className="relative z-10">
+        <ServicesContent
+          title="IT-TRAINING-&-CERTIFICATION "
+          description="At Careertronic Global Services, we offer industry-leading IT training programs designed to equip individuals with the skills and expertise needed to thrive in today's competitive digital landscape. Our training courses cover a wide range of cutting-edge technologies, each designed to provide you with a comprehensive understanding of the subject, along with real-world applications and career opportunities.
+Our certified trainers are industry experts with years of experience, ensuring that you receive top-tier education and guidance. Whether you're looking to start a new career, enhance your current skills, or make a career transition, our training programs are tailored to help you achieve your professional goals.
+"
+          sectionTitle="Our Web Solutions"
+        />
+
+        <ScrollCards
+          cardsData={softwareServicesData}
+          customIcons={softwareIcons}
+        />
+      </div>
+    </div>
   );
 };
 
 export default SoftwareServices;
+

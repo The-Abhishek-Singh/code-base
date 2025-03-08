@@ -17,71 +17,68 @@ const SoftwareServices = () => {
 
   const softwareServicesData = [
     {
-      title: "Artificial Intelligence & Machine Learning",
-      heading: "Artificial Intelligence & Machine Learning",
-      image: "/servicepages/1stservice.png",
-      content: "Our AI and ML solutions automate processes, enhance decision-making, and build intelligent systems that evolve over time. Using advanced technologies like natural language processing (NLP), chatbots, and predictive analytics, we help businesses improve customer interactions, increase operational efficiency, and stay competitive",
+      title: "Why Work Abroad?",
+      heading: "Why Work Abroad?",
+      image: "/ServiceImg/Work/work1.jpg",
+      content: "Working abroad boosts your career with international experience, higher earning potential, and unique opportunities for skill development. It offers cultural immersion and helps build a global professional network, enhancing your overall personal and professional growth.",
       iconType: "brainCircuit"
     },
     {
-      title: "Cloud Computing & DevOps Solutions",
-      heading: "Cloud Computing & DevOps Solutions",
-      image: "/servicepages/2ndservice.png",
-      content: "We help you leverage the power of cloud technologies to create flexible, scalable, and cost-efficient infrastructure. Our DevOps practices ensure smooth collaboration between development and operations teams, streamlining workflows and accelerating delivery times, so your business can scale efficiently and stay agile.",
+      title: "Our Services",
+      heading: "Our Services",
+      image: "/ServiceImg/Work/work2.jpg",
+      content: "Careertronic Global Services provides end-to-end support for securing employment abroad, including job search assistance, resume and interview preparation, visa and work permit guidance, and relocation help. We also offer post-arrival support and personalized career counseling to ensure a smooth transition and successful career abroad.",
       iconType: "cloud"
     },
     {
-      title: "App Development & Integration",
-      heading: "App Development & Integration",
-      image: "/servicepages/3rdservice.png",
-      content: "Our team develops high-performance mobile and web applications designed to provide superior user experiences. We also offer seamless system integration to ensure your applications work harmoniously with existing platforms, maximizing efficiency and business outcomes.",
+      title: "Global Job Markets & Career Opportunities",
+      heading: "Global Job Markets & Career Opportunities",
+      image: "/ServiceImg/Work/work3.png",
+      content: "Working abroad offers opportunities in high-demand industries like Technology, Healthcare, Engineering, Finance, Education, Hospitality, and Marketing. We help connect you with employers worldwide to secure the ideal job in your field.",
       iconType: "appWindow"
     },
+    
     {
-      title: "Software Maintenance & Support",
-      heading: "Software Maintenance & Support",
-      image: "/servicepages/4thservice.png",
-      content: "We provide ongoing maintenance and support to ensure that your software remains up-to-date, secure, and optimized for peak performance. Our support services include bug fixes, updates, performance enhancements, and troubleshooting to ensure the long-term success of your software solutions.",
-      iconType: "construction"
-    },
-    {
-      title: "Data Science & Analytics",
-      heading: "Data Science & Analytics",
-      image: "/servicepages/5thservice.png",
-      content: "Data Science and Analytics involve extracting valuable insights from large datasets to drive informed decision-making and optimize business operations. Data analytics helps turn raw data into actionable information, while data science enables deeper insights, improving efficiency and competitive advantage.",
-      iconType: "fileChartColumn"
-    },
-    {
-      title: "Blockchain & IoT",
-      heading: "Blockchain & IoT",
-      image: "/servicepages/Image11.jpg",
-      content: "Embrace the transformative power of blockchain and IoT technologies to enhance security, transparency, and efficiency in your business processes. Our blockchain development services, including smart contracts, cryptocurrency solutions, and decentralized applications (DApps), help streamline operations and build trust.",
+      title: "Why Choose Us?",
+      heading: "Why Choose Us?",
+      image: "/ServiceImg/Work/work4.jpg",
+      content: "We offer expert guidance and tailored support to help you secure a job abroad, from job search to visa processing and post-arrival assistance. With our global network of top employers, we connect you to the best opportunities and ensure your success in building a career overseas.",
       iconType: "bitcoin"
     },
   ];
 
   return (
-    <div className="relative w-full bg-black">
-      {/* Hero Section with Dark Background */}
-     
 
-      <ServicesContent
-      title=" SOFTWARE DEVELOPMENT & EXPORT SERVICES"
-      description="  At Careertronic Global Services, we offer a comprehensive suite of services that
-      cater to the diverse needs of individuals, businesses, and institutions. Whether
-      you're looking to advance your career, optimize your business processes, or
-      implement cutting-edge software solutions, we have the expertise and tools to
-      help you succeed in today's fast-paced digital landscape. Explore our range of
-      services below and discover how Careertronic can drive growth, efficiency, and
-      innovation for your business or career."
-      backgroundImage="/servicepages/bgggg.png"
-      sectionTitle="Our Web Solutions"
-    />
+<div className="relative w-full bg-black">
+      {/* Background Video */}
 
-              <ScrollCards cardsData={softwareServicesData} customIcons={softwareIcons}/>
+      <video
+        className=" absolute top-0 left-0 w-full object-fit "
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* Content Section */}
 
-            </div>
-    
+      <div className="relative z-10">
+        <ServicesContent
+          title="WORK-ABROAD"
+          description="In today’s competitive world, expanding your career beyond borders can open doors to incredible opportunities. At Careertronic Global Services, we help professionals like you explore international job prospects, gain valuable global experience, and secure positions with top employers worldwide. Whether you seek better career growth, a higher salary, or the chance to work in a dynamic multicultural environment, our expert guidance ensures a smooth journey. From personalized career planning and job placement assistance to visa support and skill enhancement, we provide end-to-end support to help you succeed globally.
+
+Start your global career today! Book a free consultation and take the first step toward a brighter future. "
+          sectionTitle="Our Web Solutions"
+        />
+
+        <ScrollCards
+          cardsData={softwareServicesData}
+          customIcons={softwareIcons}
+        />
+      </div>
+    </div>
   );
 };
 

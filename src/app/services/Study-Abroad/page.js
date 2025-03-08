@@ -17,71 +17,67 @@ const SoftwareServices = () => {
 
   const softwareServicesData = [
     {
-      title: "Artificial Intelligence & Machine Learning",
-      heading: "Artificial Intelligence & Machine Learning",
-      image: "/servicepages/1stservice.png",
-      content: "Our AI and ML solutions automate processes, enhance decision-making, and build intelligent systems that evolve over time. Using advanced technologies like natural language processing (NLP), chatbots, and predictive analytics, we help businesses improve customer interactions, increase operational efficiency, and stay competitive",
+      title: "Why Choose to Study Abroad?",
+      heading: "Why Choose to Study Abroad?",
+      image: "/ServiceImg/Abroad/study1.jpg",
+      content: "Studying abroad offers world-class education at top universities, providing a global curriculum and cutting-edge courses. Immersing yourself in new cultures broadens your perspectives and personal growth while building a global network of valuable connections. This experience sharpens key skills like problem-solving, adaptability, and communication, preparing you for success in a competitive job market.",
       iconType: "brainCircuit"
     },
     {
-      title: "Cloud Computing & DevOps Solutions",
-      heading: "Cloud Computing & DevOps Solutions",
-      image: "/servicepages/2ndservice.png",
-      content: "We help you leverage the power of cloud technologies to create flexible, scalable, and cost-efficient infrastructure. Our DevOps practices ensure smooth collaboration between development and operations teams, streamlining workflows and accelerating delivery times, so your business can scale efficiently and stay agile.",
+      title: "Our Study Abroad Services",
+      heading: "Our Study Abroad Services",
+      image: "/ServiceImg/Abroad/study2.jpg",
+      content: "At Careertronic Global Services, we offer comprehensive support for your study abroad journey, from selecting the right course and university to assisting with applications and securing a student visa. We provide financial planning guidance, help with accommodation and travel arrangements, and offer pre-departure and post-arrival support.",
       iconType: "cloud"
     },
     {
-      title: "App Development & Integration",
-      heading: "App Development & Integration",
-      image: "/servicepages/3rdservice.png",
-      content: "Our team develops high-performance mobile and web applications designed to provide superior user experiences. We also offer seamless system integration to ensure your applications work harmoniously with existing platforms, maximizing efficiency and business outcomes.",
+      title: "Popular Study Abroad Destinations",
+      heading: "Popular Study Abroad Destinations",
+      image: "/ServiceImg/Abroad/study3.jpg",
+      content: "We assist students in applying to top universities across the United States, United Kingdom, Australia, Canada, Germany, and Singapore. These countries offer world-class education, diverse cultural experiences, and opportunities for global networking.",
       iconType: "appWindow"
     },
     {
-      title: "Software Maintenance & Support",
-      heading: "Software Maintenance & Support",
-      image: "/servicepages/4thservice.png",
-      content: "We provide ongoing maintenance and support to ensure that your software remains up-to-date, secure, and optimized for peak performance. Our support services include bug fixes, updates, performance enhancements, and troubleshooting to ensure the long-term success of your software solutions.",
+      title: "Why Careertronic Global Services?",
+      heading: "Why Careertronic Global Services?",
+      image: "/ServiceImg/Abroad/study4.jpg",
+      content: "At Careertronic Global Services, our experienced consultants offer expert guidance and personalized counseling to help you make informed decisions about your study abroad journey. With a proven track record of successful student placements, we provide end-to-end support, from university selection to visa approval and settling abroad.",
       iconType: "construction"
     },
-    {
-      title: "Data Science & Analytics",
-      heading: "Data Science & Analytics",
-      image: "/servicepages/5thservice.png",
-      content: "Data Science and Analytics involve extracting valuable insights from large datasets to drive informed decision-making and optimize business operations. Data analytics helps turn raw data into actionable information, while data science enables deeper insights, improving efficiency and competitive advantage.",
-      iconType: "fileChartColumn"
-    },
-    {
-      title: "Blockchain & IoT",
-      heading: "Blockchain & IoT",
-      image: "/servicepages/Image11.jpg",
-      content: "Embrace the transformative power of blockchain and IoT technologies to enhance security, transparency, and efficiency in your business processes. Our blockchain development services, including smart contracts, cryptocurrency solutions, and decentralized applications (DApps), help streamline operations and build trust.",
-      iconType: "bitcoin"
-    },
+
   ];
 
   return (
-    <div className="relative w-full bg-black">
-      {/* Hero Section with Dark Background */}
-     
 
-      <ServicesContent
-      title=" SOFTWARE DEVELOPMENT & EXPORT SERVICES"
-      description="  At Careertronic Global Services, we offer a comprehensive suite of services that
-      cater to the diverse needs of individuals, businesses, and institutions. Whether
-      you're looking to advance your career, optimize your business processes, or
-      implement cutting-edge software solutions, we have the expertise and tools to
-      help you succeed in today's fast-paced digital landscape. Explore our range of
-      services below and discover how Careertronic can drive growth, efficiency, and
-      innovation for your business or career."
-      backgroundImage="/servicepages/bgggg.png"
-      sectionTitle="Our Web Solutions"
-    />
+<div className="relative w-full bg-black">
+      {/* Background Video */}
 
-              <ScrollCards cardsData={softwareServicesData} customIcons={softwareIcons}/>
+      <video
+        className=" absolute top-0 left-0 w-full object-fit "
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* Content Section */}
 
-            </div>
-    
+      <div className="relative z-10">
+        <ServicesContent
+          title="STUDY-ABROAD"
+          description="At Careertronic Global Services, we believe that education is the gateway to a brighter future. We are here to help turn your dream of studying abroad into a reality, providing expert guidance, personalized support, and comprehensive services every step of the way.
+Whether you're looking to pursue undergraduate, postgraduate, or professional courses, we partner with over 1,000+ top institutions across 32+ countries worldwide. Our extensive network of prestigious universities ensures that you have access to the best academic programs suited to your career goals. "
+          sectionTitle="Our Web Solutions"
+        />
+
+        <ScrollCards
+          cardsData={softwareServicesData}
+          customIcons={softwareIcons}
+        />
+      </div>
+    </div>
   );
 };
 

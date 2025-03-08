@@ -1,24 +1,34 @@
-'use client'
-import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { Code, Cloud, FileChartColumn, Bitcoin, Construction, Link, FileUp as FileUser, AppWindow, BrainCircuit } from 'lucide-react';
-import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
+"use client";
+import React, { useEffect, useRef } from "react";
+import Image from "next/image";
+import {
+  Code,
+  Cloud,
+  FileChartColumn,
+  Bitcoin,
+  Construction,
+  Link,
+  FileUp as FileUser,
+  AppWindow,
+  BrainCircuit,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 
 const ScrollCards = ({ cardsData, customIcons }) => {
   const cardRowRef = useRef(null);
 
   // Default icons map
   const defaultIconsMap = {
-    "brainCircuit": BrainCircuit,
-    "cloud": Cloud,
-    "appWindow": AppWindow,
-    "construction": Construction,
-    "fileChartColumn": FileChartColumn,
-    "bitcoin": Bitcoin,
-    "code": Code,
-    "link": Link,
-    "fileUser": FileUser
+    brainCircuit: BrainCircuit,
+    cloud: Cloud,
+    appWindow: AppWindow,
+    construction: Construction,
+    fileChartColumn: FileChartColumn,
+    bitcoin: Bitcoin,
+    code: Code,
+    link: Link,
+    fileUser: FileUser,
   };
 
   // Merge custom icons with default icons
@@ -31,8 +41,8 @@ const ScrollCards = ({ cardsData, customIcons }) => {
       heading: "Default Card Example",
       image: "/placeholder.png",
       content: "This is a default card shown when no data is provided.",
-      iconType: "cloud"
-    }
+      iconType: "cloud",
+    },
   ];
 
   // Use provided cardsData or default if not provided
@@ -40,16 +50,20 @@ const ScrollCards = ({ cardsData, customIcons }) => {
 
   const getIcon = (iconType, size = 20) => {
     if (!iconType) return <Cloud size={size} />;
-    
+
     const IconComponent = iconMap[iconType];
-    return IconComponent ? <IconComponent size={size} /> : <Cloud size={size} />;
+    return IconComponent ? (
+      <IconComponent size={size} />
+    ) : (
+      <Cloud size={size} />
+    );
   };
 
   // Original scroll functionality for desktop
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.innerWidth >= 640) {
+    if (typeof window !== "undefined" && window.innerWidth >= 640) {
       const allCards = document.querySelectorAll(".cards-scroll .card");
-      const headerHeight = 45;
+      const headerHeight = 39.8;
       const cardsCount = allCards.length;
       const cardSpacing = 5;
 
@@ -58,7 +72,10 @@ const ScrollCards = ({ cardsData, customIcons }) => {
         topScrollValue = Math.max(0, topScrollValue);
         const element = allCards[index];
         window.getComputedStyle(element);
-        const finalOffset = topScrollValue + document.querySelector(".card-row").getBoundingClientRect().top + window.pageYOffset;
+        const finalOffset =
+          topScrollValue +
+          document.querySelector(".card-row").getBoundingClientRect().top +
+          window.pageYOffset;
         const duration = 800;
         const startingY = window.pageYOffset;
         const diff = finalOffset - startingY;
@@ -84,13 +101,17 @@ const ScrollCards = ({ cardsData, customIcons }) => {
         allCards.forEach((card, i) => {
           const incValue = i * (headerHeight + cardSpacing);
           const decValue = (cardsCount - i - 1) * (headerHeight + cardSpacing);
-          const heightValue = cardsCount * (headerHeight + cardSpacing) - (headerHeight + cardSpacing);
+          const heightValue =
+            cardsCount * (headerHeight + cardSpacing) -
+            (headerHeight + cardSpacing);
           const totalHeaders = cardsCount * (headerHeight + cardSpacing);
           const reduceValue = (cardsCount - i) * (headerHeight + cardSpacing);
 
-          let bottomValue = window.innerHeight - totalHeaders - reduceValue + headerHeight;
-          bottomValue = bottomValue > 0 ? "-" + bottomValue : Math.abs(bottomValue);
-          
+          let bottomValue =
+            window.innerHeight - totalHeaders - reduceValue + headerHeight;
+          bottomValue =
+            bottomValue > 0 ? "-" + bottomValue : Math.abs(bottomValue);
+
           card.style.marginTop = `${incValue}px`;
           card.style.marginBottom = `${decValue}px`;
           card.style.top = `${incValue}px`;
@@ -108,10 +129,9 @@ const ScrollCards = ({ cardsData, customIcons }) => {
     <div>
       {/* Desktop Version - Hidden on mobile */}
       <div className="hidden sm:block">
-        <section className="common h-[0vh] w-full flex justify-center items-center">
-        </section>
+        <section className="common h-[0vh] w-full flex justify-center items-center"></section>
 
-        <section className="cards-scroll px-2 lg:p-10 flex flex-col">
+        <section className="cards-scroll  flex flex-col">
           <div className="card-row" ref={cardRowRef}>
             {cards.map((card, index) => (
               <div
@@ -148,8 +168,7 @@ const ScrollCards = ({ cardsData, customIcons }) => {
           </div>
         </section>
 
-        <section className="common h-[0vh] w-full flex justify-center items-center">
-        </section>
+        <section className="common h-[0vh] w-full flex justify-center items-center"></section>
       </div>
 
       {/* Mobile Version */}
@@ -169,7 +188,7 @@ const ScrollCards = ({ cardsData, customIcons }) => {
                   {card.title}
                 </h2>
               </div>
-              
+
               <div className="p-4">
                 <div className="mb-4">
                   <Image
@@ -180,7 +199,7 @@ const ScrollCards = ({ cardsData, customIcons }) => {
                     className="w-full object-cover rounded-lg"
                   />
                 </div>
-                
+
                 <div className="text-white">
                   <h3 className="text-lg font-semibold mb-2">{card.heading}</h3>
                   <p className="text-sm leading-relaxed opacity-90">
