@@ -17,7 +17,7 @@ const Footer = () => {
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="opacity-50"
+          className="opacity-0"
         />
       </div>
       <div className="relative max-w-7xl mx-auto">
@@ -82,43 +82,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row md:justify-between items-center mt-6">
-          {/* Social Media */}
-          <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
-              <FaLinkedinIn size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <FaTwitter size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <FaFacebookF size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <FaInstagram size={20} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <FaYoutube size={20} />
-            </a>
-          </div>
-          {/* Newsletter Subscription */}
-          <div className="mt-4 md:mt-0">
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="p-2 text-black rounded-l-md outline-none"
-              />
-              <button className="bg-red-500 text-white px-4 rounded-r-md">
-                Subscribe
-              </button>
-            </form>
-            <p className="text-gray-400 text-sm mt-2">
-              * We will send you weekly updates for better tool management.
-            </p>
-          </div>
-        </div>
-        {/* Copyright */}
+       
         <div className="text-center text-gray-500 text-sm mt-6">
           Copyright © 2024{" "}
           <span className="text-red-500">
