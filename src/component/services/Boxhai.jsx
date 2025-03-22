@@ -32,8 +32,7 @@ const head = () => {
 
   return (
     <>
-      {/* Fake Nav */}
-      <div className="h-20 bg-black"></div>
+   
       <div className="h-full w-full servicegradient bg-gradient-to-b from-black via-[#1E1E1E] to-black">
         <div className="flex flex-col lg:flex-row relative">
           <div className="h-full w-full md:pt-20 sm:px-16 lg:px-24 px-6 justify-center flex flex-col gap-8">
@@ -118,7 +117,7 @@ const head = () => {
           {/* <div className='h-full lg:w-[50%] w-full py-10 px-16 flex items-center justify-center'></div> */}
         </div>
         {/* Company Logos Marquee */}
-        <div className="relative  py-10 overflow-hidden">
+        <div className="relative  overflow-hidden p-0">
           <div className="marquee-container relative">
             <div className="marquee flex space-x-16 items-center">
               {companies.concat(companies).map((company, index) => (
@@ -164,7 +163,7 @@ const head = () => {
       </div>
       {/* SECONE PART OF THE PAGE  */}
       <div className="h-auto w-full  mt-28">
-        <div className="flex justify-center">
+        <div className="flex justify-center my-24 mt-0">
           <div className="w-[80%] h-[80px] bg-red-600 flex  justify-center align-middle rounded-full rounded-tl-md rounded-br-sm bg-gradient-to-r from-[#D31C1F] to-[#AD0003] ">
             <h1 className="text-white sm:text-3xl flex items-center text-xl">
               {" "}
