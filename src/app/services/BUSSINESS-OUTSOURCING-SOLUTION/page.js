@@ -1,18 +1,25 @@
-"use client"
-import React from 'react';
-import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading"
-import { Code, Cloud, FileChartColumn, Bitcoin, Construction, Link, FileUp as FileUser, AppWindow, BrainCircuit } from 'lucide-react';
-import ServicesContent from "@/component/UI/servicespage/ServicesUI"
+"use client";
+import React from "react";
+import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading";
+import {
+  Cloud,
+  FileChartColumn,
+  Bitcoin,
+  Construction,
+  AppWindow,
+  BrainCircuit,
+} from "lucide-react";
+import ServicesContent from "@/component/UI/servicespage/ServicesUI";
+import VantaBackground from "@/component/VantaBackground";
+
 const SoftwareServices = () => {
-
-
   const softwareIcons = {
-    "brainCircuit": BrainCircuit,
-    "cloud": Cloud,
-    "appWindow": AppWindow,
-    "construction": Construction,
-    "fileChartColumn": FileChartColumn,
-    "bitcoin": Bitcoin
+    brainCircuit: BrainCircuit,
+    cloud: Cloud,
+    appWindow: AppWindow,
+    construction: Construction,
+    fileChartColumn: FileChartColumn,
+    bitcoin: Bitcoin,
   };
 
   const softwareServicesData = [
@@ -20,67 +27,69 @@ const SoftwareServices = () => {
       title: "What is Outsourcing and Why Should You Consider It?",
       heading: "What is Outsourcing and Why Should You Consider It?",
       image: "/ServiceImg/BPO/bpo1.png",
-      content: "Outsourcing allows businesses to reduce costs, improve efficiency, and focus on core functions by delegating non-core tasks to specialized third-party providers. Careertronic Global Services offers end-to-end solutions across BPO, KPO, RPO, and more, enabling companies to scale operations and access expert knowledge.",
-      iconType: "brainCircuit"
+      content:
+        "Outsourcing enables businesses to delegate non-core tasks to specialized third-party providers, helping them reduce operational costs, improve efficiency, and focus on strategic goals. Careertronic Global Services delivers end-to-end solutions across BPO, KPO, and RPO, offering expert support to streamline operations and drive growth.",
+      iconType: "brainCircuit",
     },
     {
       title: "Our Outsourcing Services",
       heading: "Our Outsourcing Services",
       image: "/ServiceImg/BPO/bpo4.jpeg",
-      content: "Careertronic Global Services offers tailored outsourcing solutions across BPO, KPO, RPO, and custom business services, including IT support, HR, and supply chain management. Our expertise helps businesses streamline operations, reduce costs, and access specialized skills to enhance efficiency and growth.",
-      iconType: "cloud"
+      content:
+        "Careertronic Global Services offers customized outsourcing solutions across business process outsourcing (BPO), knowledge process outsourcing (KPO), recruitment process outsourcing (RPO), IT support, human resources, and supply chain management. Our goal is to help businesses optimize workflows, minimize overhead costs, and leverage specialized expertise for increased productivity.",
+      iconType: "cloud",
     },
     {
       title: "Why Choose Careertronic for Outsourcing?",
       heading: "Why Choose Careertronic for Outsourcing?",
       image: "/ServiceImg/BPO/bpo3.webp",
-      content: "Careertronic Global Services offers tailored outsourcing solutions designed to meet your unique business needs, with expertise across industries like IT, finance, healthcare, and legal. Our cost-effective, scalable, and technology-driven approach helps businesses reduce costs, improve efficiency, and expand globally with multilingual support.",
-      iconType: "appWindow"
+      content:
+        "Careertronic Global Services stands out by providing industry-specific outsourcing solutions tailored to unique business challenges. With expertise spanning IT, finance, healthcare, and legal sectors, we ensure cost-effective, scalable, and technology-driven solutions to enhance efficiency, expand global reach, and provide multilingual support.",
+      iconType: "appWindow",
     },
     {
       title: "How We Work",
       heading: "How We Work",
       image: "/ServiceImg/BPO/bpo2.jpeg",
-      content: "We begin by understanding your business needs and designing customized outsourcing solutions. Our team seamlessly implements the solution, provides ongoing support, and regularly reviews and optimizes processes to ensure continued efficiency and value.",
-      iconType: "construction"
+      content:
+        "Our approach begins with an in-depth understanding of your business needs. We then design tailored outsourcing solutions that align with your goals. Implementation is seamless, backed by ongoing support and periodic process optimizations to ensure sustained efficiency and maximum value.",
+      iconType: "construction",
     },
-  
   ];
 
-  return (
-  <div className="relative w-full bg-black">
-      {/* Background Video */}
+   return (
+     <div className="relative w-full ">
+       <div className="relative z-10">
+         <VantaBackground
+           className="z-50"
+           color={"#AB0003"} //RED color
+           backgroundColor={"#000000"} // Dark background
+           points={10} // More connection points
+           maxDistance={25} // Slightly increased connection distance
+           spacing={22}
+           showDots={true}
+         >
+           <div className="opacity-90">
+             <ServicesContent
+               title="BPO, KPO, RPO, and Business Outsourcing Solutions"
+               description="Careertronic Global Services is dedicated to empowering businesses and individuals with innovative, technology-driven solutions designed to streamline operations, enhance efficiency, and foster sustainable growth.
 
-      <video
-        className=" absolute top-0 left-0 w-full object-fit "
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* Content Section */}
+For businesses, we offer end-to-end services, including business process outsourcing (BPO), IT consulting, and workflow automation, helping organizations reduce costs, improve productivity, and scale effectively. Our expertise spans multiple industries, ensuring tailored solutions that align with your unique challenges and goals.
 
-      <div className="relative z-10">
-        <ServicesContent
-          title="BPO, KPO, RPO, and Business Outsourcing Solutions"
-          description=" Unlock Business Efficiency with Careertronic's Outsourcing Solutions
+For individuals, we provide career development support, skill enhancement programs, and professional training to equip you with the tools needed to thrive in today’s competitive job market.
 
-In today’s fast-paced business landscape, efficiency is the key to success. Careertronic’s Outsourcing Solutions empower businesses to streamline operations, reduce costs, and boost productivity through our specialized BPO (Business Process Outsourcing), KPO (Knowledge Process Outsourcing), RPO (Recruitment Process Outsourcing), and Business Outsourcing services. Whether you need expert assistance in customer support, data management, recruitment, finance, or other critical functions, we provide scalable, high-quality solutions tailored to your business needs. By outsourcing to our skilled professionals, you can focus on your core business strategies while we handle the rest with efficiency and precision.
-
-Discover our outsourcing solutions today! Schedule a free consultation and take the first step toward optimizing your business operations"
-          sectionTitle="Our Web Solutions"
-        />
-
-        <ScrollCards
-          cardsData={softwareServicesData}
-          customIcons={softwareIcons}
-        />
-      </div>
-    </div>
-  );
+At Careertronic, we don’t just provide services—we create transformative experiences that drive success. Whether you're looking to expand your business, optimize processes, or advance your career, our solutions are designed to help you navigate the digital age with confidence and efficiency. Explore how Careertronic can accelerate your progress and take you to the next level."
+               sectionTitle="Our Web Solutions"
+             />
+           </div>
+         </VantaBackground>
+         <ScrollCards
+           cardsData={softwareServicesData}
+           customIcons={softwareIcons}
+         />
+       </div>
+     </div>
+   );
 };
 
 export default SoftwareServices;

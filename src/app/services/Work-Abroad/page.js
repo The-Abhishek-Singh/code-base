@@ -3,6 +3,7 @@ import React from 'react';
 import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading"
 import { Code, Cloud, FileChartColumn, Bitcoin, Construction, Link, FileUp as FileUser, AppWindow, BrainCircuit } from 'lucide-react';
 import ServicesContent from "@/component/UI/servicespage/ServicesUI"
+import VantaBackground from '@/component/VantaBackground';
 const SoftwareServices = () => {
 
 
@@ -47,24 +48,20 @@ const SoftwareServices = () => {
     },
   ];
 
-  return (
 
-<div className="relative w-full bg-black">
-      {/* Background Video */}
-
-      <video
-        className=" absolute top-0 left-0 w-full object-fit "
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* Content Section */}
-
-      <div className="relative z-10">
+ return (
+            <div className="relative w-full ">
+              <div className="relative z-10">
+                <VantaBackground
+                  className="z-50"
+                  color={"#AB0003"} //RED color
+                  backgroundColor={"#000000"} // Dark background
+                  points={10} // More connection points
+                  maxDistance={25} // Slightly increased connection distance
+                  spacing={22}
+                  showDots={true}
+                >
+                  <div className="opacity-90">
         <ServicesContent
           title="WORK-ABROAD"
           description="In today’s competitive world, expanding your career beyond borders can open doors to incredible opportunities. At Careertronic Global Services, we help professionals like you explore international job prospects, gain valuable global experience, and secure positions with top employers worldwide. Whether you seek better career growth, a higher salary, or the chance to work in a dynamic multicultural environment, our expert guidance ensures a smooth journey. From personalized career planning and job placement assistance to visa support and skill enhancement, we provide end-to-end support to help you succeed globally.
@@ -72,7 +69,8 @@ const SoftwareServices = () => {
 Start your global career today! Book a free consultation and take the first step toward a brighter future. "
           sectionTitle="Our Web Solutions"
         />
-
+</div>
+</VantaBackground>
         <ScrollCards
           cardsData={softwareServicesData}
           customIcons={softwareIcons}

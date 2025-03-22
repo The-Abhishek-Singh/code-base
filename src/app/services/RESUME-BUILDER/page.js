@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import VantaBackground from "@/component/VantaBackground";
 import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading";
 import {
   Code,
@@ -58,30 +59,28 @@ const SoftwareServices = () => {
     },
   ];
 
-  return (
-    <div className="relative w-full bg-black">
-      {/* Background Video */}
-
-      <video
-        className="absolute top-0 left-0 w-full object-fit "
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* Content Section */}
-
-      <div className="relative z-10">
+    return (
+            <div className="relative w-full ">
+              <div className="relative z-10">
+                <VantaBackground
+                  className="z-50"
+                  color={"#AB0003"} //RED color
+                  backgroundColor={"#000000"} // Dark background
+                  points={10} // More connection points
+                  maxDistance={25} // Slightly increased connection distance
+                  spacing={22}
+                  showDots={true}
+                >
+                  <div className="opacity-90">
         <ServicesContent
           title="RESUME BUILDER"
           description="Fast. Easy. Effective.
           If a sheet of paper represents your entire work life, personality, and skills, it better be an impressive one. Let Careertronic do the heavy lifting for you with our powerful and easy-to-use CV Maker Online. Whether you're a recent graduate or an experienced professional, we make sure your resume reflects the best version of you."
           sectionTitle="Our Web Solutions"
         />
+</div>
 
+</VantaBackground>
         <ScrollCards
           cardsData={softwareServicesData}
           customIcons={softwareIcons}

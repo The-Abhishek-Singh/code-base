@@ -3,6 +3,7 @@ import React from 'react';
 import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading"
 import { Code, Cloud, FileChartColumn, Bitcoin, Construction, Link, FileUp as FileUser, AppWindow, BrainCircuit } from 'lucide-react';
 import ServicesContent from "@/component/UI/servicespage/ServicesUI"
+import VantaBackground from '@/component/VantaBackground';
 const SoftwareServices = () => {
 
 
@@ -47,33 +48,32 @@ const SoftwareServices = () => {
     },
   ];
 
-  return (
-    <div className="relative w-full bg-black">
-      {/* Background Video */}
-
-      <video
-        className=" absolute top-0 left-0 w-full object-fit "
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* Content Section */}
-
-      <div className="relative z-10">
+   return (
+            <div className="relative w-full ">
+              <div className="relative z-10">
+                <VantaBackground
+                  className="z-50"
+                  color={"#AB0003"} //RED color
+                  backgroundColor={"#000000"} // Dark background
+                  points={10} // More connection points
+                  maxDistance={25} // Slightly increased connection distance
+                  spacing={22}
+                  showDots={true}
+                >
+                  <div className="opacity-90">
         <ServicesContent
           title="CORPORATE-&-INDUSTRIAL-TRAINING"
-          description=" Elevate Your Workforce with Careertronic’s Corporate & Industrial Training Solutions
-      Empower your employees with cutting-edge skills and knowledge that drive innovation, boost productivity, and keep your organization competitive in an ever-evolving market.
-       Call to Action (CTA):
-       Transform Your Workforce Today
-        Get in Touch for Customized Training Solutions"
+          description="Elevate Your Workforce with Careertronic’s Corporate & Industrial Training
+
+Stay ahead in the competitive market with Careertronic’s customized training solutions designed to upskill your workforce. Our expert-led programs focus on technical skills, leadership, and industry-specific knowledge, ensuring employees stay efficient and adaptable.
+
+With hands-on learning and flexible training options, we help businesses bridge skill gaps and boost productivity. Whether it's IT, management, or specialized industry training, we tailor solutions to your needs.
+
+🚀 Transform Your Workforce Today! Get in touch for customized training solutions that drive real results."
           sectionTitle="Our Web Solutions"
         />
-
+</div>
+</VantaBackground>
         <ScrollCards
           cardsData={softwareServicesData}
           customIcons={softwareIcons}

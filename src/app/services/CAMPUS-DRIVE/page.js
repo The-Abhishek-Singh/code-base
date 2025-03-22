@@ -3,6 +3,7 @@ import React from 'react';
 import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading"
 import { Code, Cloud, FileChartColumn, Bitcoin, Construction, Link, FileUp as FileUser, AppWindow, BrainCircuit } from 'lucide-react';
 import ServicesContent from "@/component/UI/servicespage/ServicesUI"
+import VantaBackground from '@/component/VantaBackground';
 const SoftwareServices = () => {
 
 
@@ -46,41 +47,35 @@ const SoftwareServices = () => {
     },
   ];
 
-  return (
-
-
-
-     <div className="relative w-full bg-black">
-      {/* Background Video */}
-
-      <video
-        className=" absolute top-0 left-0 w-full object-fit "
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* Content Section */}
-
-      <div className="relative z-10">
-        <ServicesContent
-          title=" CAMPUS DRIVE MANAGEMENT"
-          description="At Careertronic, we specialize in organizing and managing campus drives that connect top-tier talent with leading employers. Our seamless and efficient campus recruitment solutions ensure that colleges and universities can easily facilitate hiring drives, helping students secure exciting job opportunities while offering companies access to a diverse pool of qualified candidates.
+          return (
+            <div className="relative w-full ">
+              <div className="relative z-10">
+                <VantaBackground
+                  className="z-50"
+                  color={"#AB0003"} //RED color
+                  backgroundColor={"#000000"} // Dark background
+                  points={10} // More connection points
+                  maxDistance={25} // Slightly increased connection distance
+                  spacing={22}
+                  showDots={true}
+                >
+                  <div className="opacity-90">
+                    <ServicesContent
+                      title=" CAMPUS DRIVE MANAGEMENT"
+                      description="At Careertronic, we specialize in organizing and managing campus drives that connect top-tier talent with leading employers. Our seamless and efficient campus recruitment solutions ensure that colleges and universities can easily facilitate hiring drives, helping students secure exciting job opportunities while offering companies access to a diverse pool of qualified candidates.
 We understand that campus drives are a crucial part of the recruitment process, and we are here to streamline every step—from planning and coordination to execution and follow-up. Our platform empowers colleges to manage multiple campus drives with ease, ensuring smooth operations and successful placements for both students and employers.
-" 
-          sectionTitle="Our Web Solutions"
-        />
-
-        <ScrollCards
-          cardsData={softwareServicesData}
-          customIcons={softwareIcons}
-        />
-      </div>
-    </div>
-  );
+"
+                      sectionTitle="Our Web Solutions"
+                    />
+                  </div>
+                </VantaBackground>
+                <ScrollCards
+                  cardsData={softwareServicesData}
+                  customIcons={softwareIcons}
+                />
+              </div>
+            </div>
+          );
 };
 
 export default SoftwareServices;

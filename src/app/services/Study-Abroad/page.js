@@ -3,6 +3,7 @@ import React from 'react';
 import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading"
 import { Code, Cloud, FileChartColumn, Bitcoin, Construction, Link, FileUp as FileUser, AppWindow, BrainCircuit } from 'lucide-react';
 import ServicesContent from "@/component/UI/servicespage/ServicesUI"
+import VantaBackground from '@/component/VantaBackground';
 const SoftwareServices = () => {
 
 
@@ -48,30 +49,27 @@ const SoftwareServices = () => {
   ];
 
   return (
-
-<div className="relative w-full bg-black">
-      {/* Background Video */}
-
-      <video
-        className=" absolute top-0 left-0 w-full object-fit "
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/ServiceImg/vedio1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      {/* Content Section */}
-
-      <div className="relative z-10">
+            <div className="relative w-full ">
+              <div className="relative z-10">
+                <VantaBackground
+                  className="z-50"
+                  color={"#AB0003"} //RED color
+                  backgroundColor={"#000000"} // Dark background
+                  points={10} // More connection points
+                  maxDistance={25} // Slightly increased connection distance
+                  spacing={22}
+                  showDots={true}
+                >
+                  <div className="opacity-90">
         <ServicesContent
           title="STUDY-ABROAD"
           description="At Careertronic Global Services, we believe that education is the gateway to a brighter future. We are here to help turn your dream of studying abroad into a reality, providing expert guidance, personalized support, and comprehensive services every step of the way.
 Whether you're looking to pursue undergraduate, postgraduate, or professional courses, we partner with over 1,000+ top institutions across 32+ countries worldwide. Our extensive network of prestigious universities ensures that you have access to the best academic programs suited to your career goals. "
           sectionTitle="Our Web Solutions"
         />
+</div>
 
+</VantaBackground>
         <ScrollCards
           cardsData={softwareServicesData}
           customIcons={softwareIcons}

@@ -14,7 +14,7 @@ const ServicesContent = ({
         style={{ backgroundImage: `url('${backgroundImage}')` }}
       >
         {/* Background Overlay */}
-        <div className="absolute inset-0 overflow-hidden bg-black opacity-60"></div>
+        <div className="absolute inset-0 overflow-hidden bg-black opacity-5"></div>
 
         <div className="relative z-10 max-w-6xl mx-auto lg:mx-20 px-4 sm:mt-20">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">
