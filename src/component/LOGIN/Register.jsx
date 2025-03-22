@@ -39,22 +39,16 @@ const Register = () => {
   );
 };
 
-const Welcome = () => {
-  return (
-    <div className="w-[88%] h-2/5 md:h-[90%] md:w-3/5 flex flex-col justify-center items-center bg-[#000000] pt-20 pr-20 pl-20">
-      <div className="bg-[url('/login/ima.png')] bg-cover bg-center bg-no-repeat w-full h-full flex flex-col justify-center items-center text-black/70">
-        <div className="w-full h-full bg-black/65 text-center align-text-center flex items-center justify-center">
-          <h1 className="text-white text-xl sm:text-2xl md:text-4xl lg:text-5xl leading-relaxed">
-            Welcome To <br />{" "}
-            <span className="font-semibold pt-6 text-red-700">
-              Careertronic
-            </span>
-          </h1>
-        </div>
-      </div>
+const Welcome = () => (
+  
+  <div className="w-full md:w-3/5 h-64 md:h-screen flex items-center justify-center  bg-cover bg-center bg-[url('/login/ima.png')] my-[10vh]">
+    <div className="w-full h-full bg-black/70 flex items-center justify-center">
+      <h1 className="text-white text-3xl md:text-5xl font-semibold text-center">
+        Welcome To <br /> <span className="text-red-700">Careertronic</span>
+      </h1>
     </div>
-  );
-};
+  </div>
+);
 
 const Form = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -396,12 +390,12 @@ const Form = () => {
           </button>
         </form>
 
-        <p className="text-sm text-white text-center mt-2">
+        {/* <p className="text-sm text-white text-center mt-2">
           Already have an account?{" "}
           <Link href="/Login" className="text-red-800 hover:underline">
             LOGIN
           </Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );

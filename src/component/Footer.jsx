@@ -49,7 +49,7 @@ const Footer = () => {
               <p className="text-gray-400 hover:text-red-500">📞 Contact: +91 9343202785</p>
               <p className="text-gray-400 hover:text-red-500">📧 mail: contact@careertronics.in</p>
               <p className="text-gray-400 hover:text-red-500">
-              📍E-108, Sector 1, Devendra Nagar, <span className="ml-5">Raipur 492004</span> 
+              📍3rd Floor, KNR SQUARE, OPP The Platina Gachibowli,Hyderabad, Telangana, 500032
               </p>
             </div>
             <div>

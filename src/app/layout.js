@@ -9,7 +9,7 @@ import NeonCursor from "@/component/About/NeonCursor";
 
 export const metadata = {
   
-  title: "About Us - Careertronic",
+  title: "Careertronic",
   description: "Know about careertronic and it's services",
 };
 
