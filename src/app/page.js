@@ -1,5 +1,3 @@
-
-import Loader from '@/component/Loader';
 import Main from '@/component/Main';
 import OurTeamGallery from '@/component/OurTeamGallery';
 import ServiceCarousel from '@/component/ServiceCarousel';
@@ -10,8 +8,6 @@ const page = () => {
     <div>
       
     <div className='-mt-24'>
-      <Loader/>
-
       </div>
 
       <div> <ServiceCarousel/>  </div>
