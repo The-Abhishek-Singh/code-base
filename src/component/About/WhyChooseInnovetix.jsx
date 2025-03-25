@@ -134,7 +134,7 @@ const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
                         width={40}
                         height={40}
                         alt={`${feature.title} ${feature.subtitle} icon`}
-                        className="filter invert"
+                        className=""
                       />
                     </ScrollReveal>
                     {index === 4 && (
@@ -144,7 +144,7 @@ const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
                           width={20}
                           height={22.3}
                           alt="toggle"
-                          className="absolute filter invert"
+                          className="absolute"
                         />
                       </ScrollReveal>
                     )}

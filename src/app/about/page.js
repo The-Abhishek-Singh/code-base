@@ -96,7 +96,7 @@ function page() {
                 <div className="pt-4">
                   <Button
                     className="
-  bg-red-600 text-black hover:bg-red-700
+  bg-red-600 text-white hover:bg-red-700
   px-6 py-4 text-base
   sm:px-8 sm:py-5 sm:text-lg
   md:px-10 md:py-6 md:text-xl
