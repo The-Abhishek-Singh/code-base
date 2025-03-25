@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "@/component/UI/button";
 import StatsAndCommitments from "@/component/About/StatsAndCommitments";
 import BlueNWhite from "@/component/About/BlueNWhite";
-import WhyChooseInnovetix from "@/component/About/WhyChooseInnovetix";
+import WhyChooseInnovetix from "@/component/About/WhyChoosecareertronic";
 // import ScrollReveal from "@/components/ScrollReveal";
 import ScrollReveal from "@/component/ScrollReveal";
 // import { Card } from "@/components/ui/card";
