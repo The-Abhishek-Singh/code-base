@@ -232,9 +232,9 @@ const StatsAndCommitments = () => {
         <ScrollReveal animation="fadeSlideUp" delay={400} duration={900}>
           <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Partner with <span className="text-red-600">Careertronics</span> to Accelerate Your Career Growth
+              Partner with <span className="text-red-600">Careertronic</span> to Accelerate Your Career Growth
             </h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-white">
               We're committed to connecting talented professionals with innovative organizations across the tech landscape. 
               Our approach emphasizes diversity, professional development, and creating lasting career opportunities that benefit both individuals and organizations.
             </p>

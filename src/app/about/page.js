@@ -11,7 +11,7 @@ function page() {
   const missionTitle = "Our Mission";
   const missionPoints = [
     "Our mission is to harness the power of cutting-edge technology and innovative strategies to provide sustainable solutions that drive growth, enhance productivity, and improve well-being.",
-    "At Innovetix, we believe in blending traditional values with modern advancements to create a future that benefits everyone.",
+    "At Careertronic, we believe in blending traditional values with modern advancements to create a future that benefits everyone.",
   ];
 
   const missionImage = "/about/mission.svg";
@@ -36,12 +36,12 @@ function page() {
 
   const whoWeAreTitle = "Who We Are";
   const whoWeArePoints = [
-    "Innovetix is a global leader in providing advisory, technology, and implementation solutions. We partner with clients to drive transformation across industries, helping them navigate challenges, optimize operations, and accelerate growth.",
+    "Careertronics is a global leader in providing advisory, technology, and implementation solutions. We partner with clients to drive transformation across industries, helping them navigate challenges, optimize operations, and accelerate growth.",
     "Our team of experts brings unmatched industry knowledge, combined with cutting-edge technology, to deliver actionable insights and impactful results.",
   ];
   const OurHistoryTitle = "Our History";
   const OurHistoryPoints = [
-    "Founded with a vision to drive positive change in the business world, Innovetix has grown into a trusted partner for organizations worldwide. Over the years, we have built a legacy of success, helping clients across industries embrace innovation, transform operations, and achieve lasting value. Our rich history reflects our commitment to excellence and our passion for shaping a brighter future.",
+    "Founded with a vision to drive positive change in the business world, Careertronics into a trusted partner for organizations worldwide. Over the years, we have built a legacy of success, helping clients across industries embrace innovation, transform operations, and achieve lasting value. Our rich history reflects our commitment to excellence and our passion for shaping a brighter future.",
   ];
 
   return (
