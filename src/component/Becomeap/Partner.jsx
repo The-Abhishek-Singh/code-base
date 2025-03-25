@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Card from "../UI/Becomeap/Card";
 import Part from "../UI/Becomeap/Part";
-import ScrollReveal from "../About/ScrollReveal";
+import ScrollReveal from "@/component/ScrollReveal";
 const PartnerPage = () => {
   const steps = [
     {

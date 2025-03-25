@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
-import ScrollReveal from "@/component/About/ScrollReveal";
+
 const OurTeamGallery = () => {
 
   const slides = ["/Partnerbg.png", "/partnerpg.png", "/OurTeam.png"];
@@ -113,12 +113,12 @@ const OurTeamGallery = () => {
       <div
         className="text-red-500 p-16 flex flex-col items-center text-center space-y-8 bg-black"
       >
-        <ScrollReveal
+        {/* <ScrollReveal
           animation="fadeSlideLeft"
           duration={800}
           easing="spring"
           delay={50}
-        >
+        > */}
           <h1 className="text-3xl font-bold font-poppins">
             <span className="text-white">
               THE MINDS BEHIND{" "}
@@ -133,15 +133,15 @@ const OurTeamGallery = () => {
             commitment to continuous learning ensures we stay ahead of industry
             trends, providing cutting-edge solutions tailored to your needs.
           </p>
-        </ScrollReveal>
-        <ScrollReveal
+        {/* </ScrollReveal> */}
+        {/* <ScrollReveal
           animation="slideUp"
           duration={700}
           easing="spring"
           delay={0}
           index={0}
           stagger={150}
-        >
+        > */}
           <img
             src="/OurTeam.png"
             alt="Our Team"
@@ -158,7 +158,7 @@ const OurTeamGallery = () => {
               Show All
             </button>
           </Link>
-        </ScrollReveal>
+        {/* </ScrollReveal> */}
       </div>
       {/* Marquee Animation Style */}
       <style jsx>{`

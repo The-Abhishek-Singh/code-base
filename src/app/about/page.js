@@ -1,399 +1,194 @@
 import React from "react";
-import IconHover from "@/component/About/IconHover";
-import { ScanEye, Goal, HandHeart } from "lucide-react";
-import Image from "next/image";
-import ScrollReveal from "@/component/About/ScrollReveal";
+// import { Button } from "@/components/ui/button";
+import { Button } from "@/component/UI/button";
+import StatsAndCommitments from "@/component/About/StatsAndCommitments";
+import BlueNWhite from "@/component/About/BlueNWhite";
+import WhyChooseInnovetix from "@/component/About/WhyChooseInnovetix";
+// import ScrollReveal from "@/components/ScrollReveal";
+import ScrollReveal from "@/component/ScrollReveal";
+// import { Card } from "@/components/ui/card";
 function page() {
+  const missionTitle = "Our Mission";
+  const missionPoints = [
+    "Our mission is to harness the power of cutting-edge technology and innovative strategies to provide sustainable solutions that drive growth, enhance productivity, and improve well-being.",
+    "At Innovetix, we believe in blending traditional values with modern advancements to create a future that benefits everyone.",
+  ];
+
+  const missionImage = "/about/mission.svg";
+
+  const visionTitle = "Our Vision";
+  const visionPoints = [
+    "To be a global leader in providing innovative and transformative solutions across industries, helping businesses grow, and empowering individuals to take charge of their health and success.",
+    "We envision a world where technology seamlessly integrates with everyday life, creating opportunities, fostering meaningful relationships, and improving quality of life.",
+  ];
+
+  const visionImage = "/about/vision.svg";
+  const valuesTitle = "Our Values";
+  const valuesPoints = [
+    "Innovation: Constantly evolving to incorporate the latest technology and advancements in our solutions.",
+    "Excellence: Delivering the highest quality service and results for our clients.",
+    "Integrity: Building trust through transparency, reliability, and ethical practices.",
+    "Customer-Centric: Understanding our clients' needs and delivering solutions that are tailored to their specific goals and challenges.",
+    "Collaboration: Working together with clients, partners, and stakeholders to achieve shared success.",
+  ];
+
+  const valuesImage = "/about/values.svg"; // Update this with the actual image path
+
+  const whoWeAreTitle = "Who We Are";
+  const whoWeArePoints = [
+    "Innovetix is a global leader in providing advisory, technology, and implementation solutions. We partner with clients to drive transformation across industries, helping them navigate challenges, optimize operations, and accelerate growth.",
+    "Our team of experts brings unmatched industry knowledge, combined with cutting-edge technology, to deliver actionable insights and impactful results.",
+  ];
+  const OurHistoryTitle = "Our History";
+  const OurHistoryPoints = [
+    "Founded with a vision to drive positive change in the business world, Innovetix has grown into a trusted partner for organizations worldwide. Over the years, we have built a legacy of success, helping clients across industries embrace innovation, transform operations, and achieve lasting value. Our rich history reflects our commitment to excellence and our passion for shaping a brighter future.",
+  ];
+
   return (
     <>
-      {/* <div className='bg-black h-15'></div> */}
-      <div className="bg-black min-h-screen py-12 font-poppins overflow-x-hidden">
-        <div className="px-6 md:max-w-5xl lg:max-w-[88rem] mx-auto">
-          <div className="flex flex-col gap-24">
-            <ScrollReveal
-              animation="fadeSlideLeft"
-              duration={800}
-              easing="spring"
-              delay={50}
+      {/* sec 1 */}
+      <div className="bg-gradient-to-b from-[#040404] to-[#201F37] overflow-hidden">
+        <div className="px-10 md:max-w-5xl lg:max-w-6xl mx-auto flex flex-col pb-12 sm:pb-20 pt-32">
+          <div className="flex gap-10 items-center">
+            <div
+              className="space-y-6 w-full text-center sm:text-left sm:w-1/2 md:w-7/12
+          
+          lg:min-w-[32rem]"
             >
-              <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 rounded-3xl p-8 md:p-10 shadow-2xl">
-                {/* Content */}
-                <div className="space-y-1 mb-8">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-1 h-8 bg-red-500"></div>
-                    <h2 className="!text-white text-xl font-semibold">About</h2>
-                  </div>
-                  <h1 className="!text-red-500 text-4xl md:text-5xl font-semibold tracking-tight pl-3">
-                    Careertronics
-                  </h1>
-                </div>
-                <div className="space-y-8 text-gray-100">
-                  <p className="text-sm sm:text-lg ">
-                    At Careertronic Global Services Pvt. Ltd. (CGSPL), we are
-                    driven by a singular purpose: to empower businesses and
-                    individuals to thrive in a fast-changing, interconnected
-                    world. Founded with a vision to provide innovative,
-                    high-quality services, we have grown into a trusted global
-                    leader in Software Development, IT Training, Industrial
-                    Automation Training, Corporate & Industrial Training, Global
-                    Education, and Business Consulting. Our mission is simple
-                    yet powerful: to enable sustainable growth and long-term
-                    success for our clients by offering customized solutions
-                    that are tailored to meet their specific goals. Whether
-                    you're a business looking to drive digital transformation, a
-                    professional seeking to enhance your skillset, or an
-                    individual exploring global education opportunities, we are
-                    here to guide you every step of the way. Through our
-                    expertise and commitment to excellence, we are dedicated to
-                    not only advancing career opportunities for individuals
-                    across the globe but also helping organizations optimize
-                    their operations, improve performance, and stay ahead of the
-                    competition in an increasingly complex market.
-                  </p>
-                  <p className="text-lg hidden sm:block ">
-                    Our mission is to enable sustainable growth and long-term
-                    success for clients through tailored solutions. Whether
-                    it&apos;s driving digital transformation, enhancing
-                    professional skills, or exploring global education, we are
-                    committed to guiding you every step of the way.
-                  </p>
-                  <p className="text-lg hidden md:block ">
-                    With a focus on excellence, we help individuals advance
-                    their careers and organizations optimize performance,
-                    ensuring they stay competitive in an increasingly complex
-                    market.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
+              <ScrollReveal animation="fadeIn" duration={1200} delay={200}>
+                <h2
+                  className="text-7xl md:text-8xl lg:text-8xl font-bold tracking-wide text-black"
+                  style={{
+                    textShadow:
+                      "-1px 0 #7e7e7e, 0 1px #7e7e7e, 1px 0 #7e7e7e, 0 -1px #7e7e7e",
+                  }}   
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-12">
-              <ScrollReveal
-                animation="slideUp"
-                duration={700}
-                easing="spring"
-                delay={0}
-                index={0}
-                stagger={150}
-              >
-                <div className="text-center p-2">
-                  <div className="flex justify-center items-center w-full h-auto mb-8">
-                    <IconHover icon={ScanEye} />
-                  </div>
-                  <h1 className="font-poppins text-3xl text-red-500 font-bold mb-7">
-                    OUR MISSION
-                  </h1>
-                  <div className="flex justify-center items-center w-full">
-                    <p className="text-sm lg:text-base !leading-relaxed max-w-lg text-center md:text-start">
-                      At Careertronic Global Services Pvt. Ltd. (CGSPL), we
-                      empower businesses and individuals through technology,
-                      training, and global opportunities. Our mission is to
-                      provide cutting-edge software solutions, advanced
-                      training, and world-class education services that drive
-                      innovation and competitiveness. With a customer-centric
-                      approach, we deliver tailored solutions that create
-                      measurable impact, foster growth, and ensure long-term
-                      success in an evolving digital landscape.
-                    </p>
-                  </div>
-                </div>
+                >
+                  ABOUT US
+                </h2>
+              </ScrollReveal>
+
+              <ScrollReveal animation="slightRight" duration={800} delay={400}>
+                <h3 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+                  We're Your Digital Technological Partners
+                </h3>
               </ScrollReveal>
 
               <ScrollReveal
-                animation="slideUp"
-                duration={700}
-                easing="spring"
-                delay={0}
-                index={1}
-                stagger={150}
+                animation="fadeIn"
+                duration={800}
+                delay={600}
+                easing="gentle"
               >
-                <div className="text-center p-2">
-                  <div className="flex justify-center items-center w-full h-auto mb-8">
-                    <IconHover icon={Goal} />
-                  </div>
-                  <h1 className="font-poppins text-3xl text-red-500 font-bold mb-7">
-                    OUR VISION&nbsp;
-                  </h1>
-                  <div className="flex justify-center items-center w-full">
-                    <p className="text-sm lg:text-base !leading-relaxed max-w-lg text-center md:text-start">
-                      At Careertronic Global Services Pvt. Ltd. (CGSPL), we
-                      strive to be a global leader in IT solutions, training,
-                      and education. Our vision is to drive digital
-                      transformation, career development, and business success
-                      by equipping individuals and organizations with the tools
-                      and knowledge needed to thrive. Through continuous
-                      innovation and excellence, we aim to create a future where
-                      technology and education empower growth, opportunity, and
-                      progress worldwide.
-                    </p>
-                  </div>
-                </div>
+                <p className="text-gray-300 text-lg">
+                  At Careertronics, we are a forward-thinking,
+                  results-driven company that strives to create impactful
+                  solutions for businesses and individuals.
+                </p>
               </ScrollReveal>
 
               <ScrollReveal
-                animation="slideUp"
-                duration={700}
-                easing="spring"
-                delay={0}
-                index={2}
-                stagger={150}
+                animation="slightUp"
+                duration={800}
+                delay={800}
+                easing="bouncy"
               >
-                <div className="text-center p-2">
-                  <div className="flex justify-center items-center w-full h-auto mb-8">
-                    <IconHover icon={HandHeart} />
-                  </div>
-                  <h1 className="font-poppins text-3xl text-red-500 font-bold mb-7 ">
-                    OUR VALUES
-                  </h1>
-                  <div className="flex flex-col justify-center items-center w-full">
-                    <p className="mb-2 text-sm lg:text-base !leading-relaxed max-w-md  text-center md:text-start">
-                      At Careertronic Global Services Pvt. Ltd. (CGSPL), our
-                      core values define our dedication to excellence,
-                      innovation, and client success. We believe in fostering a
-                      culture of Integrity, Customer-Centricity, Collaboration,
-                      and Continuous Improvement. By upholding these values, we
-                      ensure high-quality solutions, strong partnerships, and
-                      sustainable impact, helping businesses and individuals
-                      navigate the challenges of a dynamic, technology-driven
-                      world.
-                    </p>
-                  </div>
+                <div className="pt-4">
+                  <Button
+                    className="
+  bg-red-600 text-black hover:bg-red-700
+  px-6 py-4 text-base
+  sm:px-8 sm:py-5 sm:text-lg
+  md:px-10 md:py-6 md:text-xl
+  lg:px-12 lg:py-7 lg:text-2xl
+  rounded-md font-medium transition-all
+"
+                  >
+                    Get Started
+                  </Button>
                 </div>
               </ScrollReveal>
             </div>
 
-            <div className="w-full max-w-7xl mx-auto flex flex-col gap-12">
-              <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-gray-900 rounded-[32px] p-8 lg:p-12 shadow-2xl">
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-                  {/* Content Section */}
-                  <div className="flex-1 space-y-6">
-                    <ScrollReveal
-                      animation="slideDown"
-                      duration={900}
-                      easing="spring"
-                    >
-                      <h2 className="text-3xl md:text-4xl font-bold text-white">
-                        What We <span className="text-red-500">Do</span>?
-                      </h2>
-                    </ScrollReveal>
-
-                    <ScrollReveal
-                      animation="slideLeft"
-                      duration={800}
-                      delay={200}
-                      easing="smooth"
-                    >
-                      <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                        Our team holds a decade of experience in guiding your
-                        overseas career. Careertronics stands as extraordinary
-                        overseas portal, providing invaluable assistance to
-                        professional navigating the complexities of
-                        international employment.
-                      </p>
-                    </ScrollReveal>
-
-                    <ScrollReveal
-                      animation="slideLeft"
-                      duration={800}
-                      delay={400}
-                      easing="bouncy"
-                    >
-                      <p className="text-gray-200 hidden md:block text-base md:text-lg leading-relaxed">
-                        Careertronic Global Services provides a diverse range of
-                        solutions for businesses, professionals, and students
-                        worldwide. We specialize in software development and
-                        export, delivering customized solutions to enhance
-                        efficiency and growth. Our IT and industrial automation
-                        training programs help professionals and businesses stay
-                        ahead in technology and manufacturing. We also offer
-                        corporate and industrial training to boost employee
-                        performance and leadership skills. Through our global
-                        education services, we connect students with top
-                        institutions for international study and career
-                        opportunities. Additionally, our business consulting
-                        services provide expert guidance to navigate challenges,
-                        optimize operations, and drive sustainable success.
-                      </p>
-                    </ScrollReveal>
-                  </div>
-
-                  {/* Image Section */}
-                  <div className="flex-1 hidden lg:flex justify-center items-center">
-                    <ScrollReveal
-                      animation="slideUp"
-                      duration={1200}
-                      delay={300}
-                      easing="gentle"
-                      className=" w-full"
-                    >
-                      <div className="relative w-full max-w-md h-[30rem]">
-                        <Image
-                          objectFit="contain"
-                          layout="fill"
-                          src="/about/what.jpg"
-                          alt="learner"
-                        />
-                      </div>
-                    </ScrollReveal>
-                  </div>
-                </div>
+            <div
+              className="hidden sm:block relative  w-1/2 md:w-5/12  
+          h-[23rem]
+          md:h-[27rem]
+          lg:h-[30rem]"
+            >
+              <div
+                className="absolute justify-start -translate-y-1/2 top-1/3 
+            w-48
+            sm:translate-x-[35%] sm:right-1/2 sm:bottom-8
+            md:w-56
+            lg:w-72 lg:translate-x-0 lg:right-auto"
+              >
+                <ScrollReveal
+                  animation="fadeSlideLeft"
+                  duration={1000}
+                  delay={300}
+                  easing="spring"
+                >
+                  <img src="/about/hero1.svg" alt="About Hero 1" />
+                </ScrollReveal>
               </div>
-              <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-gray-900 rounded-[32px] p-8 lg:p-12 shadow-2xl">
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-                  {/* Image Section */}
-                  <div className="flex-1 hidden lg:flex justify-center items-center">
-                    <ScrollReveal
-                      animation="slideRight"
-                      duration={1000}
-                      easing="bouncy"
-                      className=" w-full"
-                    >
-                      <div className="relative w-full max-w-md h-[30rem]">
-                        <Image
-                          objectFit="contain"
-                          layout="fill"
-                          src="/about/why.jpg"
-                          alt="learner"
-                        />
-                      </div>
-                    </ScrollReveal>
-                  </div>
 
-                  {/* Content Section */}
-                  <div className="flex-1 space-y-6">
-                    <ScrollReveal
-                      animation="slideUp"
-                      duration={800}
-                      delay={200}
-                      easing="spring"
-                    >
-                      <h2 className="text-3xl md:text-3xl font-bold text-white">
-                        Why Should You{" "}
-                        <span className="text-red-500">Choose Us</span>?
-                      </h2>
-                    </ScrollReveal>
-
-                    <ScrollReveal
-                      animation="fadeSlideLeft"
-                      duration={700}
-                      delay={350}
-                      easing="gentle"
-                    >
-                      <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                        Our expert team delivers tailored solutions in software
-                        development, industrial automation, IT training, and
-                        business consulting. We focus on value-driven strategies
-                        that address immediate needs while ensuring long-term
-                        success. With a proven track record across industries,
-                        we are committed to quality, innovation, and exceeding
-                        client expectations.
-                      </p>
-                    </ScrollReveal>
-
-                    <ScrollReveal
-                      animation="fadeSlideLeft"
-                      duration={700}
-                      delay={500}
-                      easing="smooth"
-                    >
-                      <p className="text-gray-200 hidden md:block text-base md:text-lg leading-relaxed">
-                        Careertronic Global Services operates on a global scale,
-                        offering innovative and high-quality solutions that meet
-                        international standards. With a strong presence in
-                        multiple countries, we cater to businesses,
-                        professionals, and students worldwide, ensuring they
-                        receive world-class services designed to help them stay
-                        ahead in an interconnected world. Our extensive network
-                        allows us to deliver cutting-edge solutions tailored to
-                        the unique needs of various industries, enabling our
-                        clients to thrive in competitive global markets.
-                      </p>
-                    </ScrollReveal>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gradient-to-br from-zinc-900 via-zinc-800 to-gray-900 rounded-[32px] p-8 lg:p-12 shadow-2xl">
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-                  {/* Content Section with staggered animations */}
-                  <div className="flex-1 space-y-6">
-                    <ScrollReveal
-                      animation="fadeSlideLeft"
-                      duration={600}
-                      easing="spring"
-                      index={0}
-                      stagger={150}
-                    >
-                      <h2 className="text-3xl md:text-4xl font-bold text-white">
-                        Our Exceptional{" "}
-                        <span className="text-red-500">Team</span>!
-                      </h2>
-                    </ScrollReveal>
-
-                    {/* First paragraph with staggered animation */}
-                    <ScrollReveal
-                      animation="fadeSlideLeft"
-                      duration={600}
-                      easing="spring"
-                      index={1}
-                      stagger={150}
-                    >
-                      <p className="text-gray-200 text-base md:text-lg leading-relaxed">
-                        At Careertronic Global Services, our greatest asset is
-                        our exceptional team of passionate, skilled, and
-                        experienced professionals, each dedicated to delivering
-                        innovative solutions that drive your success. From
-                        software developers and IT trainers to business
-                        consultants and global education advisors, we have a
-                        diverse group of experts across every area of our
-                        service offerings, ensuring that you receive the highest
-                        level of expertise, care, and support.
-                      </p>
-                    </ScrollReveal>
-
-                    {/* Second paragraph with staggered animation */}
-                    <ScrollReveal
-                      animation="fadeSlideLeft"
-                      duration={600}
-                      easing="spring"
-                      index={2}
-                      stagger={150}
-                    >
-                      <p className="text-gray-200 text-base hidden md:block md:text-lg leading-relaxed">
-                        Our team thrives on collaboration, constantly sharing
-                        insights, ideas, and best practices to create solutions
-                        that are customized to your unique needs. We are
-                        committed to fostering a culture of continuous learning
-                        and growth, staying ahead of industry trends to deliver
-                        the most relevant, cutting-edge services to our clients.
-                      </p>
-                    </ScrollReveal>
-                  </div>
-
-                  {/* Image Section with unique animation */}
-                  <div className="flex-1 hidden lg:flex justify-center items-center">
-                    <ScrollReveal
-                      animation="slideDown"
-                      duration={1000}
-                      delay={300}
-                      easing="gentle"
-                      className="w-full"
-                    >
-                      <div className="relative w-full max-w-md h-[30rem]">
-                        <Image
-                          objectFit="contain"
-                          layout="fill"
-                          src="/about/what.jpg"
-                          alt="learner"
-                        />
-                      </div>
-                    </ScrollReveal>
-                  </div>
-                </div>
+              <div
+                className="absolute justify-start bottom-0 
+            w-48
+            sm:right-1/2 sm:translate-x-[65%] sm:bottom-8
+            md:w-56 
+            lg:translate-x-0 lg:w-72 lg:left-24 lg:bottom-0
+            xl:left-40 
+            "
+              >
+                <ScrollReveal
+                  animation="fadeSlideUp"
+                  duration={1000}
+                  delay={600}
+                  easing="bouncy"
+                >
+                  <img src="/about/hero2.svg" alt="About Hero 2" />
+                </ScrollReveal>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* sec 1 end */}
+      <div className="p-6 md:p-16 max-w-2xl md:max-w-4xl mx-auto lg:max-w-full ">
+        <StatsAndCommitments />
+      </div>
+      <BlueNWhite
+        missionTitle={missionTitle}
+        missionPoints={missionPoints}
+        missionImage={missionImage}
+        visionTitle={visionTitle}
+        visionPoints={visionPoints}
+        visionImage={visionImage}
+      />
+      <BlueNWhite
+        missionTitle={valuesTitle}
+        missionPoints={valuesPoints}
+        missionImage={valuesImage}
+        missionNumber={3}
+        visionTitle={whoWeAreTitle}
+        visionPoints={whoWeArePoints}
+        visionImage={visionImage}
+        visionNumber={4}
+      />
+      <BlueNWhite
+        missionTitle={OurHistoryTitle}
+        missionPoints={OurHistoryPoints}
+        missionNumber={5}
+        missionImage={valuesImage}
+        visionHidden={1}
+        visionTitle={whoWeAreTitle}
+        visionPoints={whoWeArePoints}
+        visionNumber={4}
+        noPoints={1}
+      />
+      <WhyChooseInnovetix />
     </>
   );
 }

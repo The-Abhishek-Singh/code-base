@@ -2,7 +2,7 @@
 import "./globals.css";
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
-import NeonCursor from "@/component/About/NeonCursor";
+// import NeonCursor from "@/component/About/NeonCursor";
 
 
 
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <Navbar/>
 
       <div className='h-20 w-full bg-black'></div>
-        <NeonCursor/>
+        {/* <NeonCursor/> */}
         {children}
 
 <Footer/>
