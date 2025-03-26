@@ -61,11 +61,11 @@ const head = () => {
                 {/*  */}
                 {/* spline */}
 
-                <img
+                {/* <img
                   src="/services/Removed.png"
                   alt="Removed"
                   className="float-right m-4 relative lg:-top-20 sm:w-[50%] md:w-[50%] lg:w-[500px] sm:block hidden"
-                />
+                /> */}
                 
               </ScrollReveal>
               <ScrollReveal
