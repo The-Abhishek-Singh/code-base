@@ -85,7 +85,7 @@ const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
       <div className={`${paddBot ? "py-16" : "pt-16"} px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto`}>
         <ScrollReveal animation="fadeSlideDown" duration={1100} easing="spring">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-3 text-red-600">Why Choose CareerTronics?</h2>
+            <h2 className="text-3xl font-bold mb-3 text-red-600">Why Choose Careertronic?</h2>
             <p className="max-w-sm sm:max-w-2xl mx-auto text-gray-700">
               With a deep passion for transforming careers and a strong track record in
               delivering cutting-edge career solutions, we have successfully worked
