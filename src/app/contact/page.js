@@ -94,8 +94,8 @@ const ContactPage = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold text-red-900 mb-4">
-            Connect with CareerTronics
+          <h1 className="text-5xl font-bold text-red-500 mb-4">
+            Connect with Careertronic
           </h1>
           <p className="text-xl text-gray-800 max-w-3xl mx-auto">
             Unlock Your Potential with Our Expert Career Solutions. 
@@ -152,7 +152,7 @@ const ContactPage = () => {
               onSubmit={handleSubmit}
               className="bg-white shadow-xl rounded-2xl p-8 border border-red-100 space-y-6"
             >
-              <h3 className="text-2xl font-bold text-center text-red-900 mb-6">
+              <h3 className="text-2xl font-bold text-center text-red-500 mb-6">
                 Send Us a Message
               </h3>
 

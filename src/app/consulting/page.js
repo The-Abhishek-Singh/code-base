@@ -6,8 +6,9 @@ const page = () => {
   return (
     <div className='overflow-x-hidden' >
     <div><BusinessConsulting/></div>
-    <div><BusinessService/></div>
     <div><WhyUs/></div>
+    <div><BusinessService/></div>
+
     </div>
   )
 }
