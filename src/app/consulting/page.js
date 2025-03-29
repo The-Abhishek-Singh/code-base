@@ -4,10 +4,11 @@ import WhyUs from '@/component/Business/WhyUs'
 import React from 'react'
 const page = () => {
   return (
-    <div className='overflow-x-hidden' >
+    <div className='overflow-hidden' >
     <div><BusinessConsulting/></div>
-    <div><BusinessService/></div>
     <div><WhyUs/></div>
+    <div><BusinessService/></div>
+
     </div>
   )
 }
