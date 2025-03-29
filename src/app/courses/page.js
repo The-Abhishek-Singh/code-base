@@ -141,7 +141,7 @@ const head = () => {
           <Servicesboxes
             title="WEB DEVELOPMENT "
             bgUrl="/Course/wd1.webp"
-            shifturl="/courses/WEB DEVELOPMENT"
+            shifturl="/courses/WEB-DEVELOPMENT"
            
           />
 
