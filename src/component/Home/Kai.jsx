@@ -193,7 +193,7 @@ const ServicesList = () => {
       </h1>
 
     </div>
-        <div className="relative w-full max-w-6xl mx-auto overflow-hidden ">
+        <div className="relative w-full max-w-6xl  overflow-hidden ">
         <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[29rem] bg-gray-100 rounded-xl shadow-lg mb-8 sm:mb-16 md:mb-20 lg:mb-[10rem] lg:w-[90rem] max-w-full sm:max-w-[90%] md:max-w-[85%] lg:max-w-3xl xl:max-w-6xl">
             <img
               src={slides[currentSlide]}
