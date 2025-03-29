@@ -28,7 +28,7 @@ const OnboardingSection = () => {
     <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black  sm:mt-[0rem] mt-[15rem]">
       
         <div className="flex flex-col items-center justify-center h-screen w-screen bg-gradient-to-b from-[#2C2C2C] to-[#000000] p-6 mb-10">
-          <div className="w-full max-w-7xl flex flex-col md:flex-row items-center text-white flex-grow justify-evenly sm-mt[29rem] mt-[29rem] mb-[10rem]">
+          <div className="w-full max-w-7xl flex flex-col md:flex-row items-center text-white flex-grow justify-evenly sm-mt[29rem] mt-[14rem] mb-[10rem]">
             {/* Left Side: Text Content */}
 
             
