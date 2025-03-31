@@ -1,113 +1,463 @@
-"use client"
-import React from 'react';
-import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading"
-import { Code, Cloud, FileChartColumn, Bitcoin, Construction, Link, FileUp as FileUser, AppWindow, BrainCircuit } from 'lucide-react';
-import ServicesContent from "@/component/UI/servicespage/ServicesUI"
-import VantaBackground from '@/component/VantaBackground';
-const SoftwareServices = () => {
+'use client';
+import React, { useState, useEffect, useRef } from 'react';
+import { ArrowRight, Code, Book, Award, Laptop, Layers, Users, BookOpen } from 'lucide-react';
 
-
-  const softwareIcons = {
-    "brainCircuit": BrainCircuit,
-    "cloud": Cloud,
-    "appWindow": AppWindow,
-    "construction": Construction,
-    "fileChartColumn": FileChartColumn,
-    "bitcoin": Bitcoin
-  };
-
-  const softwareServicesData = [
-    {
-      title: "Data Science, Artificial Intelligence, and Machine Learning Program",
-      heading: "Data Science, Artificial Intelligence, and Machine Learning Program",
-      image: "/ServiceImg/ITservice/Data.jpg", 
-      content: "Welcome to our Data Science, AI, and ML Program – a comprehensive training designed to equip you with essential skills in data analysis, machine learning, and artificial intelligence. Whether you're a beginner or a professional, this course offers hands-on experience with cutting-edge tools and techniques. ",
-      iconType: "brainCircuit"
-    },
-    {
-      title: "Cybersecurity & Ethical Hacking Training Program",
-      heading: "Cybersecurity & Ethical Hacking Training Program ",
-      image: "/ServiceImg/ITservice/cybersecurity.jpg",
-      content: "Welcome to our Cybersecurity & Ethical Hacking Training Program, designed to equip you with the skills needed to protect digital infrastructures and combat cyber threats. This comprehensive program offers hands-on training, expert guidance, and industry-recognized certifications, preparing you for a successful career in cybersecurity and ethical hacking.",
-      iconType: "cloud"
-    },
-    {
-      title: "Cloud Computing & DevOps",
-      heading: "Cloud Computing & DevOps",
-      image: "/ServiceImg/ITservice/devops.webp",
-      content: "In today’s rapidly evolving IT landscape, Cloud Computing and DevOps have emerged as critical drivers of efficiency, scalability, and automation. This course offers a comprehensive journey through the core concepts, tools, and practices that power cloud computing platforms and DevOps methodologies.",
-      iconType: "appWindow"
-    },
-    {
-      title: "Full Stack Website and App Development Course",
-      heading: "Full Stack Website and App Development Course",
-      image: "/ServiceImg/ITservice/fullstack.jpg",
-      content: "In today’s digital world, businesses need full-stack developers to create both front-end and back-end solutions. This course covers essential technologies, from HTML, CSS, and JavaScript for front-end development to Node.js, Express.js, mobile app development, and database management for back-end tasks. ",
-      iconType: "construction"
-    },
-    {
-      title: "Accounting & Taxation Course",
-      heading: "Accounting & Taxation Course",
-      image: "/ServiceImg/ITservice/tax.jpg",
-      content: "At Careertronic, we revolutionize learning in Accounting, Taxation, Audit, and HR domains by offering practical guidance through advanced simulation software and gamification techniques. Whether you’re learning online or offline, our programs equip you with real-world skills, helping you understand and implement concepts that will level-up your career.",
-      iconType: "fileChartColumn"
-    },
-    {
-      title: "Robotics",
-      heading: "Robotics",
-      image: "/ServiceImg/ITservice/robo.png",
-      content: "Welcome to the world of Robotics—a field that blends engineering, artificial intelligence, and automation to create intelligent machines that can revolutionize industries. At Careertronic, we offer a comprehensive Robotics Training Program designed to equip you with the skills to build, program, and operate robots across various applications, from industrial automation to medical robotics.",
-      iconType: "fileChartColumn"
-    },
-    {
-      title: "Coding for kids",
-      heading: "Coding for kids",
-      image: "/ServiceImg/ITservice/kids.jpg",
-      content: "In today’s digital world, coding is more than just a skill—it’s a superpower! At Careertronic, we believe in empowering the next generation of innovators by introducing them to coding in a fun, engaging, and hands-on way. Our Coding for Kids program is designed to make learning programming exciting and accessible for children aged 6 to 16, setting them up for a future of creativity, problem-solving, and tech-driven success.",
-      iconType: "fileChartColumn"
-    },
-    {
-      title: "UI & UX Designer",
-      heading: "UI & UX Designer",
-      image: "/ServiceImg/ITservice/uiux.webp",
-      content: "In the digital-first world, a strong user experience (UX) and user interface (UI) design are crucial to the success of websites, apps, and digital products. As businesses compete to provide superior user experiences, the demand for skilled UI/UX designers is skyrocketing.",
-      iconType: "fileChartColumn"
-    },
+const ITTrainingPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [scrollY, setScrollY] = useState(0);
+  const servicesRef = useRef(null);
+  const processRef = useRef(null);
+  const whyUsRef = useRef(null);
+  
+  // Track scroll position for parallax effects
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
     
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Animate services sequentially with a more dynamic effect
+    const timer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setActiveIndex(prev => {
+          if (prev === null) return 0;
+          if (prev >= 5) {
+            clearInterval(interval);
+            return 5;
+          }
+          return prev + 1;
+        });
+      }, 150); // Slightly faster for more dynamic feel
+      
+      return () => clearInterval(interval);
+    }, 300); // Start animations sooner
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Observer for scroll-triggered animations
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.2,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, options);
+
+    const sections = document.querySelectorAll('.observe-section');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach(section => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
+  const services = [
+    {
+      title: "Technical Certification Programs",
+      description: "Industry-recognized certification courses designed to validate your IT skills and boost your career.",
+      icon: <Award className="h-10 w-10 text-blue-500" />
+    },
+    {
+      title: "Cybersecurity Training",
+      description: "Comprehensive security training covering threat detection, prevention, and response strategies.",
+      icon: <Layers className="h-10 w-10 text-blue-500" />
+    },
+    {
+      title: "Cloud Computing Courses",
+      description: "Master AWS, Azure, Google Cloud and multi-cloud environments with hands-on practical training.",
+      icon: <Laptop className="h-10 w-10 text-blue-500" />
+    },
+    {
+      title: "Programming & Development",
+      description: "Learn in-demand programming languages and frameworks through project-based instruction.",
+      icon: <Code className="h-10 w-10 text-blue-500" />
+    },
+    {
+      title: "IT Infrastructure & Networking",
+      description: "Build expertise in network design, implementation, and management with hands-on labs.",
+      icon: <Book className="h-10 w-10 text-blue-500" />
+    },
+    {
+      title: "Enterprise IT Management",
+      description: "Training programs for IT leadership, project management, and enterprise architecture.",
+      icon: <Users className="h-10 w-10 text-blue-500" />
+    }
   ];
 
-    return (
-            <div className="relative w-full ">
-              <div className="relative z-10">
-                <VantaBackground
-                  className="z-50"
-                  color={"#AB0003"} //RED color
-                  backgroundColor={"#000000"} // Dark background
-                  points={10} // More connection points
-                  maxDistance={25} // Slightly increased connection distance
-                  spacing={22}
-                  showDots={true}
-                >
-                  <div className="opacity-90">
-        <ServicesContent
-          title="IT-TRAINING-&-CERTIFICATION "
-          description="At Careertronic Global Services, we offer industry-leading IT training programs designed to equip individuals with the skills and expertise needed to thrive in today's competitive digital landscape. Our training courses cover a wide range of cutting-edge technologies, each designed to provide you with a comprehensive understanding of the subject, along with real-world applications and career opportunities.
-Our certified trainers are industry experts with years of experience, ensuring that you receive top-tier education and guidance. Whether you're looking to start a new career, enhance your current skills, or make a career transition, our training programs are tailored to help you achieve your professional goals.
-"
-          sectionTitle="Our Web Solutions"
-        />
+  const processSteps = [
+    "Skills Assessment",
+    "Custom Learning Path",
+    "Expert-Led Training",
+    "Hands-On Labs",
+    "Certification Prep",
+    "Career Support"
+  ];
+
+  // Function to generate gradient animation
+  const generateGradientAnimation = (index) => {
+    const delay = index * 0.1;
+    return {
+      animation: `gradient-shift 8s ease infinite ${delay}s`,
+    };
+  };
+
+  return (
+    <div className="min-h-screen bg-black text-white overflow-hidden">
+      {/* Animated background lines */}
+      <div className="fixed inset-0 z-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full">
+          {[...Array(10)].map((_, i) => (
+            <div 
+              key={i} 
+              className="absolute h-px bg-gradient-to-r from-blue-500 to-transparent" 
+              style={{
+                top: `${i * 10}%`, 
+                width: '100%',
+                transform: `translateX(${Math.sin(scrollY / 1000 + i) * 5}%)`,
+                opacity: 0.5 + Math.sin(scrollY / 1000 + i) * 0.5,
+                transition: 'transform 0.5s ease-out'
+              }}
+            />
+          ))}
+          {[...Array(10)].map((_, i) => (
+            <div 
+              key={i} 
+              className="absolute w-px bg-gradient-to-b from-blue-500 to-transparent" 
+              style={{
+                left: `${i * 10}%`, 
+                height: '100%',
+                transform: `translateY(${Math.cos(scrollY / 1000 + i) * 5}%)`,
+                opacity: 0.5 + Math.cos(scrollY / 1000 + i) * 0.5,
+                transition: 'transform 0.5s ease-out'
+              }}
+            />
+          ))}
         </div>
-        </VantaBackground>
-
-
-        <ScrollCards
-          cardsData={softwareServicesData}
-          customIcons={softwareIcons}
-        />
       </div>
+
+      {/* Hero Section with particles */}
+      <div className="bg-gradient-to-r from-black to-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-10"></div>
+         
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-blue-500 to-transparent"></div>
+        </div>
+        <div className="container mx-auto px-4 py-32 relative z-10">
+          <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-600 animate-text-gradient">
+              IT Training & Certification Programs
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-2xl text-gray-300 transform transition-all duration-1000 delay-500" 
+               style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
+              Accelerate your IT career with industry-leading certifications and hands-on technical training.
+            </p>
+            <button className="bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg flex items-center group transition-all duration-300 transform hover:scale-105 hover:bg-blue-700 relative overflow-hidden">
+              <span className="relative z-10 flex items-center">
+                Explore Courses 
+                <ArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-500 group-hover:translate-x-2" />
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Section with staggered animations */}
+      <div ref={servicesRef} className="container mx-auto px-4 py-24 observe-section">
+        <div className="text-center mb-16">
+          <h2 className={`text-3xl md:text-4xl font-bold mb-4 relative inline-block ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 animate-gradient-x">Our Training Programs</span>
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 transform scale-x-0 transition-transform duration-1000 delay-500 origin-left" style={{ transform: isVisible ? 'scaleX(1)' : 'scaleX(0)' }}></span>
+          </h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto transform transition-all duration-1000 delay-700"
+             style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
+            Comprehensive IT training solutions designed to build in-demand skills and advance your career.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div 
+              key={index} 
+              className={`bg-gray-900 p-8 rounded-lg transform transition-all duration-700 hover:bg-gray-800 border border-gray-800 hover:border-blue-500 group relative overflow-hidden ${
+                activeIndex !== null && index <= activeIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <div className="absolute -inset-px bg-gradient-to-r from-blue-500 to-transparent opacity-0 group-hover:opacity-20 rounded-lg transform scale-0 group-hover:scale-100 transition-all duration-500"></div>
+              <div className="mb-6 group relative">
+                <div className="transform transition-all duration-500 group-hover:scale-110 group-hover:text-blue-400 relative">
+                  {service.icon}
+                  <div className="absolute -inset-4 bg-blue-500 rounded-full opacity-0 group-hover:opacity-10 transform scale-0 group-hover:scale-100 transition-all duration-700"></div>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white relative inline-block">
+                {service.title}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-500"></span>
+              </h3>
+              <p className="text-gray-400 transition-all duration-300 group-hover:text-gray-300">{service.description}</p>
+              <div className="absolute bottom-0 right-0 h-16 w-16 bg-gradient-to-tl from-blue-500 to-transparent rounded-tl-full opacity-0 group-hover:opacity-10 transform translate-y-full group-hover:translate-y-0 transition-all duration-700"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Training Process Section with connected animation */}
+      <div ref={processRef} className="bg-gray-900 py-24 relative overflow-hidden observe-section">
+        <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+        
+        {/* Animated background effect */}
+        <div className="absolute inset-0 z-0">
+          <div 
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent"
+            style={{
+              transform: `translate(${Math.sin(scrollY / 1000) * 10}%, ${Math.cos(scrollY / 1000) * 10}%)`,
+              transition: 'transform 1s ease-out'
+            }}
+          ></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 transform transition-all duration-1000" 
+               style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 animate-gradient-x">
+              Our Training Approach
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              A comprehensive methodology that ensures effective learning and successful certification.
+            </p>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-4 md:gap-0 relative">
+            {/* Animated connection line */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-900/50 via-blue-500/50 to-blue-900/50 transform -translate-y-1/2 z-0">
+              <div className="absolute top-0 left-0 right-0 h-full bg-blue-500/80 animate-pulse"></div>
+            </div>
+            
+            {processSteps.map((step, index) => (
+              <div key={index} className="group w-full md:w-auto relative z-10" style={{ transitionDelay: `${index * 150}ms` }}>
+                <div 
+                  className="relative bg-black bg-opacity-50 backdrop-blur-sm rounded-lg p-6 md:mx-1 h-full flex flex-col items-center justify-center text-center border-t border-gray-800 group-hover:border-blue-500 transition-all duration-500 group-hover:bg-black group-hover:bg-opacity-70 transform group-hover:-translate-y-3"
+                >
+                  <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg group-hover:shadow-blue-500/20 relative overflow-hidden">
+                      {index + 1}
+                      <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transform scale-0 group-hover:scale-100 transition-all duration-700 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div className="mt-6">
+                    <span className="font-medium text-gray-300 group-hover:text-white transition-colors duration-300">{step}</span>
+                  </div>
+                  <div className="absolute inset-0 border border-transparent group-hover:border-blue-500/30 rounded-lg transform scale-105 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                </div>
+                {index < processSteps.length - 1 && (
+                  <div className="hidden md:block absolute w-8 h-1 top-1/2 right-0 transform translate-x-4 z-20">
+                    <div className="h-full w-full bg-blue-500 animate-pulse"></div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us Section with animated reveals */}
+      <div ref={whyUsRef} className="container mx-auto px-4 py-24 observe-section">
+        <div className="text-center mb-16 transform transition-all duration-1000" 
+             style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 animate-gradient-x">Why Choose Our Training</h2>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            We deliver excellence through expert instruction, hands-on learning, and ongoing career support.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-gray-900 p-8 rounded-lg transition-all duration-500 hover:bg-gray-800 border border-gray-800 hover:border-blue-500 group relative overflow-hidden transform hover:-translate-y-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <h3 className="text-xl font-semibold mb-4 text-white relative pb-2 inline-block">
+              Expert-Led Training
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            </h3>
+            <ul className="space-y-4 text-gray-300">
+              {["Industry professionals with real-world experience", "Certified instructors for each technology domain", "Small class sizes with personalized attention"].map((item, i) => (
+                <li key={i} className="flex items-start transform transition-all duration-500 hover:translate-x-2 relative pl-6">
+                  <span className="absolute left-0 top-0 text-blue-500 font-bold transition-all duration-300 group-hover:text-blue-400">✓</span>
+                  <span className="relative">
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-blue-500/30 group-hover:w-full transition-all duration-700 delay-100"></span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className="bg-gray-900 p-8 rounded-lg transition-all duration-500 hover:bg-gray-800 border border-gray-800 hover:border-blue-500 group relative overflow-hidden transform hover:-translate-y-2">
+            <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <h3 className="text-xl font-semibold mb-4 text-white relative pb-2 inline-block">
+              Career Advancement
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            </h3>
+            <ul className="space-y-4 text-gray-300">
+              {["High certification pass rates", "Job placement assistance", "Resume and interview preparation coaching"].map((item, i) => (
+                <li key={i} className="flex items-start transform transition-all duration-500 hover:translate-x-2 relative pl-6">
+                  <span className="absolute left-0 top-0 text-blue-500 font-bold transition-all duration-300 group-hover:text-blue-400">✓</span>
+                  <span className="relative">
+                    {item}
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-blue-500/30 group-hover:w-full transition-all duration-700 delay-100"></span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Section with floating elements */}
+      <div className="py-24 relative overflow-hidden observe-section">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          
+          {/* Dynamic floating orbs */}
+          {[...Array(3)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full bg-gradient-to-br from-blue-500 to-blue-800 blur-3xl"
+              style={{
+                width: `${100 + i * 50}px`,
+                height: `${100 + i * 50}px`,
+                top: `${20 + i * 20}%`,
+                left: `${20 + i * 25}%`,
+                opacity: 0.05 + i * 0.02,
+                transform: `translate(${Math.sin(scrollY / 1000 + i) * 50}px, ${Math.cos(scrollY / 1000 + i) * 50}px)`,
+                transition: 'transform 3s ease-out'
+              }}
+            />
+          ))}
+          
+          {/* Additional floating elements on the right side */}
+          {[...Array(3)].map((_, i) => (
+            <div 
+              key={i}
+              className="absolute rounded-full bg-gradient-to-br from-blue-600 to-blue-900 blur-3xl"
+              style={{
+                width: `${80 + i * 40}px`,
+                height: `${80 + i * 40}px`,
+                top: `${50 - i * 15}%`,
+                right: `${15 + i * 10}%`,
+                opacity: 0.05 + i * 0.01,
+                transform: `translate(${Math.cos(scrollY / 1000 + i) * 40}px, ${Math.sin(scrollY / 1000 + i) * 40}px)`,
+                transition: 'transform 3s ease-out'
+              }}
+            />
+          ))}
+        </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-600 animate-gradient-x">Ready to Advance Your IT Career?</h2>
+          <p className="text-xl mb-10 max-w-2xl mx-auto text-gray-300 transform transition-all duration-1000" 
+             style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
+            Enroll in our IT training programs and certifications to gain the skills employers are looking for.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-600/20 relative overflow-hidden group">
+              <span className="relative z-10 flex items-center justify-center">
+                Browse Courses
+                <span className="absolute inset-0 bg-white rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left opacity-10"></span>
+              </span>
+              <span className="absolute -inset-px bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></span>
+            </button>
+            <button className="bg-transparent border-2 border-blue-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:border-blue-400 hover:bg-black hover:bg-opacity-50 group relative overflow-hidden">
+              <span className="relative z-10 flex items-center justify-center">
+                Request Program Guide
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></span>
+              </span>
+              <span className="absolute -inset-px bg-gradient-to-r from-blue-500 to-transparent rounded-lg opacity-0 group-hover:opacity-30 blur-sm transition-opacity duration-500"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Add CSS Animations */}
+      <style jsx global>{`
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+        }
+        
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 0.2;
+          }
+          50% {
+            opacity: 0.8;
+          }
+        }
+        
+        @keyframes gradient-shift {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+        
+        @keyframes animate-gradient-x {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+        
+        .animate-gradient-x {
+          background-size: 200% 200%;
+          animation: animate-gradient-x 3s ease infinite;
+        }
+        
+        .animate-text-gradient {
+          background-size: 200% auto;
+          animation: animate-gradient-x 4s ease infinite;
+        }
+        
+        .observe-section {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .observe-section.animate-in {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      `}</style>
     </div>
   );
 };
 
-export default SoftwareServices;
-
+export default ITTrainingPage;
