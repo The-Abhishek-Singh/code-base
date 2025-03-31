@@ -1,91 +1,14 @@
-"use client";
-import React, { useState } from "react";
-import { 
-  FaMapMarkerAlt, 
-  FaEnvelope, 
-  FaPhone, 
-  FaLinkedin, 
-  FaTwitter, 
-  FaCheckCircle,
-  FaRocket,
-  FaTeamspeak,
-  FaComments,
-  FaAddressCard
-} from "react-icons/fa";
-import { motion } from "framer-motion";
-import axios from "axios";
+import Learning from '@/component/UI/course/Learning'
+import Update from '@/component/UI/course/Update'
+import React from 'react'
 
-// Custom Section Component
-const ContactSection = ({ icon: Icon, title, description, children }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    className="bg-white shadow-xl rounded-2xl p-6 border border-red-100 hover:shadow-2xl transition-all duration-300 space-y-4"
-  >
-    <div className="flex items-center space-x-4 mb-4">
-      <Icon className="text-red-600 text-3xl" />
-      <h3 className="text-xl font-bold text-red-900">{title}</h3>
-    </div>
-    <p className="text-gray-700 mb-4">{description}</p>
-    {children}
-  </motion.div>
-);
-
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    service: "",
-    message: ""
-  });
-
-  const [submissionStatus, setSubmissionStatus] = useState({
-    loading: false,
-    success: false,
-    error: false
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmissionStatus({ loading: true, success: false, error: false });
-
-    try {
-      const response = await axios.post("/api/contact", formData);
-      
-      setSubmissionStatus({ 
-        loading: false, 
-        success: true, 
-        error: false 
-      });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        service: "",
-        message: ""
-      });
-    } catch (error) {
-      setSubmissionStatus({ 
-        loading: false, 
-        success: false, 
-        error: true 
-      });
-    }
-  };
-
+const page = () => {
   return (
+<<<<<<< HEAD
+    <div>
+<div><Update/></div>
+<div><Learning/></div>
+=======
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <motion.div 
@@ -102,45 +25,11 @@ const ContactPage = () => {
             Let's transform your professional journey together.
           </p>
         </motion.div>
+>>>>>>> 567ae33d9e02a612740804f23440e392033f7e67
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contact Information */}
-          <ContactSection 
-            icon={FaAddressCard}
-            title="Contact Details"
-            description="Reach out and let's start your career transformation."
-          >
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <FaMapMarkerAlt className="text-red-600" />
-                <p className="text-gray-800">
-                  3rd Floor, KNR SQUARE, Gachibowli, Hyderabad, Telangana 500032
-                </p>
-              </div>
-              <div className="flex items-center space-x-4">
-                <FaEnvelope className="text-red-600" />
-                <a 
-                  href="mailto:contact@careertronics.in" 
-                  className="text-gray-800 hover:text-red-700 transition"
-                >
-                  contact@careertronics.in
-                </a>
-              </div>
-              <div className="flex items-center space-x-4">
-                <FaPhone className="text-red-600" />
-                <p className="text-gray-800">+91 9343202785 | +91 8602755547</p>
-              </div>
-            </div>
-            <div className="mt-6 flex space-x-4">
-              <a href="#" className="text-gray-600 hover:text-red-700 transition">
-                <FaLinkedin className="text-2xl" />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-red-700 transition">
-                <FaTwitter className="text-2xl" />
-              </a>
-            </div>
-          </ContactSection>
 
+<<<<<<< HEAD
+=======
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -290,8 +179,9 @@ const ContactPage = () => {
           </ContactSection>
         </div>
       </div>
+>>>>>>> 567ae33d9e02a612740804f23440e392033f7e67
     </div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default page
