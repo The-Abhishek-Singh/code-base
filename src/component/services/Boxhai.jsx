@@ -5,7 +5,8 @@ import { Globe, Handshake } from "lucide-react";
 // import Input from "@/component/UI/services/Input";
 import Servicesboxes from "@/component/UI/services/Servicesboxes";
 import ScrollReveal from "../ScrollReveal";
-import Travel from "./Travel";
+import Robocourse from "../Robocourse";
+
 
 
 const head = () => {
@@ -35,8 +36,10 @@ const head = () => {
 
   return (
     <>
+
+    <Robocourse />
    
-      <div className="h-full w-full servicegradient bg-gradient-to-b from-black via-[#1E1E1E] to-black">
+      <div className="h-full w-full">
         <div className="flex flex-col lg:flex-row relative">
           <div className="h-full w-full md:pt-0 sm:px-16 lg:px-0 px-6 justify-center flex flex-col gap-8">
             <div className="relative py-6 md:p-0">
@@ -64,7 +67,7 @@ const head = () => {
                 {/*  */}
                 {/* spline */}
                 
-                <Travel />
+              
                 
 
                 {/* <img
@@ -97,25 +100,8 @@ const head = () => {
                 </p> */}
               </ScrollReveal>
             
-              <ScrollReveal
-                animation="slideUp"
-                duration={1000}
-                easing="spring"
-                delay={100}
-                index={0}
-                stagger={150}
-              >
-                <div className="flex gap-4 mt-[2vw]">
-                  <div className="flex gap-2">
-                    <Globe />
-                    <h1>Globally Recognize </h1>
-                  </div>
-                  <div className="flex gap-2">
-                    <Handshake />
-                    <h1>No Commitment</h1>
-                  </div>
-                </div>
-              </ScrollReveal>
+             
+              
             </div>
 
             {/* <div className=''></div> */}

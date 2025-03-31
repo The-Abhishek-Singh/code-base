@@ -23,7 +23,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const items = [
-    { title: "Home", link: "/" },
+    { title: "Home", link: "/home" },
     { title: "About Us", link: "/about" },
     { title: "Services", link: "/services" },
     { title: "Courses", link: "/courses" },

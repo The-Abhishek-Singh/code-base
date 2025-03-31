@@ -13,6 +13,7 @@
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.8.1",
     "class-variance-authority": "^0.7.1",
+    "gsap": "^3.12.7",
     "lucide-react": "^0.475.0",
     "motion": "^12.4.7",
     "motion-dom": "^12.5.0",
