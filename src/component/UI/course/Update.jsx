@@ -1,33 +1,34 @@
-
 "use client";
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-
-
   const featuredCourses = [
     {
       id: 1,
       title: "Web-Development",
       rating: 5,
       category: "Development",
-      image: "/Course/wd1.webp", // Consistent image path
+      image: "/Course/wd1.webp",
+      enrollUrl: "/courses/web-development", // Added enrollment URL
     },
     {
       id: 2,
       title: "App-Development",
       rating: 5,
       category: "Programming",
-      image: "/Course/app1.jpg", // Fixed incomplete path
+      image: "/Course/app1.jpg",
+      enrollUrl: "/courses/app-development", // Added enrollment URL
     },
     {
       id: 3,
       title: "Data Science and Machine Learning Essentials",
       rating: 5,
       category: "Data Science",
-      image: "/Course/data.jpg", // Fixed incomplete path
+      image: "/Course/data.jpg",
+      enrollUrl: "/courses/data-science", // Added enrollment URL
     },
     {
       id: 4,
@@ -35,6 +36,7 @@ export default function Home() {
       rating: 5,
       category: "Cybersecurity",
       image: "/Course/ethical.jpg",
+      enrollUrl: "/courses/cybersecurity", // Added enrollment URL
     },
     {
       id: 5,
@@ -42,6 +44,7 @@ export default function Home() {
       rating: 5,
       category: "Cloud",
       image: "/Course/cloud.png",
+      enrollUrl: "/courses/cloud-computing", // Added enrollment URL
     },
     {
       id: 6,
@@ -49,6 +52,7 @@ export default function Home() {
       rating: 5,
       category: "Networking",
       image: "/Course/aws.jpg",
+      enrollUrl: "/courses/aws", // Added enrollment URL
     },
     {
       id: 7,
@@ -56,6 +60,7 @@ export default function Home() {
       rating: 5,
       category: "Automation",
       image: "/Course/automation.jpg",
+      enrollUrl: "/courses/industrial-automation", // Added enrollment URL
     },
     {
       id: 8,
@@ -63,6 +68,7 @@ export default function Home() {
       rating: 5,
       category: "Security",
       image: "/Course/ethical.jpg",
+      enrollUrl: "/courses/information-security", // Added enrollment URL
     },
   ];
 
@@ -128,14 +134,6 @@ export default function Home() {
             </button>
           </div>
           <div className="relative">
-            {/* <div
-              className="absolute -inset-4 blur-xl rounded-full"
-              style={{
-                background:
-                  "linear-gradient(to right, rgba(220, 38, 38, 0.2), rgba(124, 58, 237, 0.2))",
-                animation: "pulse 3s ease infinite",
-              }}
-            ></div> */}
             <div className="relative z-10">
               <Image
                 src="/images/hero-image.jpg"
@@ -173,7 +171,7 @@ export default function Home() {
                   {/* Image with hover zoom effect */}
                   {course.image ? (
                     <div className="relative w-full h-full overflow-hidden">
-                      <div 
+                      <div
                         className="h-full w-full transition-transform duration-300 hover:scale-110"
                         style={{ transformOrigin: "center" }}
                       >
@@ -217,9 +215,11 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="mt-auto">
-                    <button className="w-full py-2 bg-red-600 text-white rounded transition-colors duration-300 hover:bg-red-800">
-                      Enroll Now
-                    </button>
+                    <Link href={course.enrollUrl}>
+                      <button className="w-full py-2 bg-red-600 text-white rounded transition-colors duration-300 hover:bg-red-800">
+                        Enroll Now
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
