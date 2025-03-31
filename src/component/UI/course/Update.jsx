@@ -5,6 +5,49 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  // Carousel state and data
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const carouselImages = [
+    {
+      src: "/Course/crousel/1.jpg",
+      alt: "IT Skills Training",
+      caption: "Cutting-edge IT training",
+    },
+    {
+      src: "/Course/crousel/2.jpg",
+      alt: "Web Development",
+      caption: "Learn modern web development",
+    },
+    {
+      src: "/Course/crousel/3.jpg",
+      alt: "Data Science",
+      caption: "Master data science skills",
+    },
+  ];
+
+  // Carousel auto-rotation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Manual carousel navigation
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide(
+      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
+    );
+  };
+
   const featuredCourses = [
     {
       id: 1,
@@ -104,7 +147,7 @@ export default function Home() {
         `}</style>
       </Head>
 
-      {/* Hero Section */}
+      {/* Hero Section with Carousel */}
       <section className="py-20 relative z-20">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6">
@@ -133,15 +176,92 @@ export default function Home() {
               ></span>
             </button>
           </div>
-          <div className="relative">
-            <div className="relative z-10">
-              <Image
-                src="/images/hero-image.jpg"
-                alt="IT Skills Training"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
+
+          {/* Carousel Component */}
+          <div className="relative rounded-lg overflow-hidden shadow-2xl">
+            {/* Main Carousel Container */}
+            <div className="relative h-80 md:h-96 w-full">
+              {/* Carousel Slides */}
+              {carouselImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ${
+                    index === currentSlide
+                      ? "opacity-100 z-10"
+                      : "opacity-0 z-0"
+                  }`}
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-lg"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                      <p className="text-white text-lg font-medium">
+                        {image.caption}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {/* Navigation Arrows
+              <button
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-50 rounded-full p-2 text-white hover:bg-opacity-70 transition-all duration-300"
+                onClick={prevSlide}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 z-20 bg-black bg-opacity-50 rounded-full p-2 text-white hover:bg-opacity-70 transition-all duration-300"
+                onClick={nextSlide}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button> */}
+
+              {/* Carousel Indicators
+              <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center space-x-2">
+                {carouselImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                      index === currentSlide
+                        ? "bg-red-600 w-4"
+                        : "bg-white bg-opacity-50"
+                    }`}
+                  />
+                ))}
+              </div> */}
             </div>
           </div>
         </div>
