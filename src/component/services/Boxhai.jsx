@@ -2,9 +2,13 @@
 import React from "react";
 import { Globe, Handshake } from "lucide-react";
 // import Spline from '@splinetool/react-spline/next';
-import Input from "@/component/UI/services/Input";
+// import Input from "@/component/UI/services/Input";
 import Servicesboxes from "@/component/UI/services/Servicesboxes";
 import ScrollReveal from "../ScrollReveal";
+import Robocourse from "../Robocourse";
+
+
+
 const head = () => {
   const companies = [
     { name: "ABB", logo: "/Marq/ABB.png" },
@@ -32,10 +36,12 @@ const head = () => {
 
   return (
     <>
+
+    <Robocourse />
    
-      <div className="h-full w-full servicegradient bg-gradient-to-b from-black via-[#1E1E1E] to-black">
+      <div className="h-full w-full">
         <div className="flex flex-col lg:flex-row relative">
-          <div className="h-full w-full md:pt-20 sm:px-16 lg:px-24 px-6 justify-center flex flex-col gap-8">
+          <div className="h-full w-full md:pt-0 sm:px-16 lg:px-0 px-6 justify-center flex flex-col gap-8">
             <div className="relative py-6 md:p-0">
               <ScrollReveal
                 animation="slideRight"
@@ -45,9 +51,9 @@ const head = () => {
                 index={0}
                 stagger={150}
               >
-                <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-7 inline-block">
+                {/* <h1 className="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-7 inline-block">
                   OUR SERVICES
-                </h1>
+                </h1> */}
               </ScrollReveal>
 
               <ScrollReveal
@@ -60,6 +66,9 @@ const head = () => {
               >
                 {/*  */}
                 {/* spline */}
+                
+              
+                
 
                 {/* <img
                   src="/services/Removed.png"
@@ -76,7 +85,7 @@ const head = () => {
                 index={0}
                 stagger={150}
               >
-                <p className="text-white font-light text-sm tracking-wider md:text-2xl lg:text-xl paragraph mt-2 mb-2 lg:mb-10 lg:leading-[2vw] lg:w-[65%]">
+                {/* <p className="text-white font-light text-sm tracking-wider md:text-2xl lg:text-xl paragraph mt-2 mb-2 lg:mb-10 lg:leading-[2vw] lg:w-[65%]">
                   Careertronic Global Services provides customized solutions for
                   individuals, businesses, and institutions, helping them thrive
                   in the digital era. We offer career development programs,
@@ -88,28 +97,11 @@ const head = () => {
                   focus on innovation, efficiency, and success, we empower our
                   clients to stay competitive and achieve their goals in an
                   evolving digital landscape.
-                </p>
+                </p> */}
               </ScrollReveal>
-              <Input />
-              <ScrollReveal
-                animation="slideUp"
-                duration={1000}
-                easing="spring"
-                delay={100}
-                index={0}
-                stagger={150}
-              >
-                <div className="flex gap-4 mt-[2vw]">
-                  <div className="flex gap-2">
-                    <Globe />
-                    <h1>Globally Recognize </h1>
-                  </div>
-                  <div className="flex gap-2">
-                    <Handshake />
-                    <h1>No Commitment</h1>
-                  </div>
-                </div>
-              </ScrollReveal>
+            
+             
+              
             </div>
 
             {/* <div className=''></div> */}
@@ -171,7 +163,7 @@ const head = () => {
             </h1>
           </div>
         </div>
-        <div className="w-[90%] mx-auto md:gap-20 lg:gap-16 gap-12 py-16 px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:grid-rows-3">
+        <div className="w-full mx-auto md:gap-20 lg:gap-8 gap-12 py-16 px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:grid-rows-3">
           <ScrollReveal
             animation="slideLeft"
             duration={800}

@@ -127,7 +127,7 @@ const Form = () => {
                     .form-card2:hover {
                       transform: scale(0.98);
                       border-radius: 20px;
-                      }`}</style>;
+                      }`}</style>
                       </>
   );
 }

@@ -8,7 +8,6 @@ import Kai from "@/component/Home/Kai";
 import RightImage from "@/component/UI/Home/RightImage";
 import ComponentPage from "@/component/StickyCard";
 import StickyCard from "@/component/StickyCard";
-import AdvancedPreloader from "@/component/preloader";
 
 const OnboardingSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -27,11 +26,6 @@ const OnboardingSection = () => {
 
   return (
     <>
-
-
-<AdvancedPreloader />
-
-
       <StickyCard />
       <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black  sm:mt-[0rem] mt-[15rem]">
         {/* Partner Logos Section */}

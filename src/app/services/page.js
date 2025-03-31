@@ -4,7 +4,7 @@ import Boxhai from "@/component/services/Boxhai";
 const page = () => {
   return (
     <div>
-    <div className='overflow-x-hidden' >
+    <div className='overflow-hidden' >
       
       <Boxhai />
       </div>
