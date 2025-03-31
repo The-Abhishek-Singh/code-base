@@ -13,56 +13,56 @@ export default function Home() {
       title: "Web-Development",
       rating: 5,
       category: "Development",
-      image: "/course/wd1.webp", // Consistent image path
+      image: "/Course/wd1.webp", // Consistent image path
     },
     {
       id: 2,
       title: "App-Development",
       rating: 5,
       category: "Programming",
-      image: "/course/app1.jpg", // Fixed incomplete path
+      image: "/Course/app1.jpg", // Fixed incomplete path
     },
     {
       id: 3,
       title: "Data Science and Machine Learning Essentials",
       rating: 5,
       category: "Data Science",
-      image: "/course/data.jpg",
+      image: "/Course/data.jpg", // Fixed incomplete path
     },
     {
       id: 4,
       title: " Cybersecurity & Ethical Hacking ",
       rating: 5,
       category: "Cybersecurity",
-      image: "/course/cyber.jpg",
+      image: "/Course/ethical.jpg",
     },
     {
       id: 5,
       title: "Cloud Computing ",
       rating: 5,
       category: "Cloud",
-      image: "/course/cloud.png",
+      image: "/Course/cloud.png",
     },
     {
       id: 6,
       title: "AWS",
       rating: 5,
       category: "Networking",
-      image: "/course/aws.jpg",
+      image: "/Course/aws.jpg",
     },
     {
       id: 7,
       title: "INDUSTRIAL AUTOMATION",
       rating: 5,
       category: "Automation",
-      image: "/course/automation.jpg",
+      image: "/Course/automation.jpg",
     },
     {
       id: 8,
       title: "Information Security",
       rating: 5,
       category: "Security",
-      image: "/course/ethical.jpg",
+      image: "/Course/ethical.jpg",
     },
   ];
 

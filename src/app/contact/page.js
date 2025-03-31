@@ -1,17 +1,94 @@
-import Learning from '@/component/UI/course/Learning'
-import Update from '@/component/UI/course/Update'
-import React from 'react'
+"use client";
+import React, { useState } from "react";
+import {
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhone,
+  FaLinkedin,
+  FaTwitter,
+  FaCheckCircle,
+  FaRocket,
+  FaTeamspeak,
+  FaComments,
+  FaAddressCard,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
+import axios from "axios";
 
-const page = () => {
+// Custom Section Component
+const ContactSection = ({ icon: Icon, title, description, children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    className="bg-white shadow-xl rounded-2xl p-6 border border-red-100 hover:shadow-2xl transition-all duration-300 space-y-4"
+  >
+    <div className="flex items-center space-x-4 mb-4">
+      <Icon className="text-red-600 text-3xl" />
+      <h3 className="text-xl font-bold text-red-900">{title}</h3>
+    </div>
+    <p className="text-gray-700 mb-4">{description}</p>
+    {children}
+  </motion.div>
+);
+
+const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    service: "",
+    message: "",
+  });
+
+  const [submissionStatus, setSubmissionStatus] = useState({
+    loading: false,
+    success: false,
+    error: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmissionStatus({ loading: true, success: false, error: false });
+
+    try {
+      const response = await axios.post("/api/contact", formData);
+
+      setSubmissionStatus({
+        loading: false,
+        success: true,
+        error: false,
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        service: "",
+        message: "",
+      });
+    } catch (error) {
+      setSubmissionStatus({
+        loading: false,
+        success: false,
+        error: true,
+      });
+    }
+  };
+
   return (
-<<<<<<< HEAD
-    <div>
-<div><Update/></div>
-<div><Learning/></div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       <div className="container mx-auto px-4 py-16 lg:py-24">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -21,15 +98,55 @@ const page = () => {
             Connect with Careertronic
           </h1>
           <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-            Unlock Your Potential with Our Expert Career Solutions. 
-            Let's transform your professional journey together.
+            Unlock Your Potential with Our Expert Career Solutions. Let's
+            transform your professional journey together.
           </p>
         </motion.div>
->>>>>>> 567ae33d9e02a612740804f23440e392033f7e67
 
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Contact Information */}
+          <ContactSection
+            icon={FaAddressCard}
+            title="Contact Details"
+            description="Reach out and let's start your career transformation."
+          >
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <FaMapMarkerAlt className="text-red-600" />
+                <p className="text-gray-800">
+                  3rd Floor, KNR SQUARE, Gachibowli, Hyderabad, Telangana 500032
+                </p>
+              </div>
+              <div className="flex items-center space-x-4">
+                <FaEnvelope className="text-red-600" />
+                <a
+                  href="mailto:contact@careertronics.in"
+                  className="text-gray-800 hover:text-red-700 transition"
+                >
+                  contact@careertronics.in
+                </a>
+              </div>
+              <div className="flex items-center space-x-4">
+                <FaPhone className="text-red-600" />
+                <p className="text-gray-800">+91 9343202785 | +91 8602755547</p>
+              </div>
+            </div>
+            <div className="mt-6 flex space-x-4">
+              <a
+                href="#"
+                className="text-gray-600 hover:text-red-700 transition"
+              >
+                <FaLinkedin className="text-2xl" />
+              </a>
+              <a
+                href="#"
+                className="text-gray-600 hover:text-red-700 transition"
+              >
+                <FaTwitter className="text-2xl" />
+              </a>
+            </div>
+          </ContactSection>
 
-<<<<<<< HEAD
-=======
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -37,7 +154,7 @@ const page = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <form 
+            <form
               onSubmit={handleSubmit}
               className="bg-white shadow-xl rounded-2xl p-8 border border-red-100 space-y-6"
             >
@@ -132,7 +249,7 @@ const page = () => {
 
         {/* Additional Sections */}
         <div className="grid md:grid-cols-2 gap-8 mt-16">
-          <ContactSection 
+          <ContactSection
             icon={FaTeamspeak}
             title="Why Choose Us"
             description="Your Career, Our Passion: Tailored Solutions for Tech Professionals"
@@ -157,7 +274,7 @@ const page = () => {
             </ul>
           </ContactSection>
 
-          <ContactSection 
+          <ContactSection
             icon={FaComments}
             title="Consultation Process"
             description="Your Journey to Success, Simplified and Strategic"
@@ -166,7 +283,7 @@ const page = () => {
               {[
                 { step: 1, name: "Initial Consultation" },
                 { step: 2, name: "Profile Assessment" },
-                { step: 3, name: "Strategic Placement" }
+                { step: 3, name: "Strategic Placement" },
               ].map(({ step, name }) => (
                 <div key={step} className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center text-red-700 font-bold">
@@ -179,9 +296,8 @@ const page = () => {
           </ContactSection>
         </div>
       </div>
->>>>>>> 567ae33d9e02a612740804f23440e392033f7e67
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default ContactPage;
