@@ -9,17 +9,17 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselImages = [
     {
-      src: "/Course/crousel/1.jpg",
+      src: "/Course/crousel/crousel1.png",
       alt: "IT Skills Training",
       caption: "Cutting-edge IT training",
     },
     {
-      src: "/Course/crousel/2.jpg",
+      src: "/Course/crousel/crousel2.png",
       alt: "Web Development",
       caption: "Learn modern web development",
     },
     {
-      src: "/Course/crousel/3.jpg",
+      src: "/Course/crousel/crousel3.png",
       alt: "Data Science",
       caption: "Master data science skills",
     },
@@ -79,7 +79,7 @@ export default function Home() {
       rating: 5,
       category: "Cybersecurity",
       image: "/Course/ethical.jpg",
-      enrollUrl: "/courses/cybersecurity", // Added enrollment URL
+      enrollUrl: "/courses/cybersecurity", 
     },
     {
       id: 5,
@@ -87,7 +87,7 @@ export default function Home() {
       rating: 5,
       category: "Cloud",
       image: "/Course/cloud.png",
-      enrollUrl: "/courses/cloud-computing", // Added enrollment URL
+      enrollUrl: "/courses/cloud-computing", 
     },
     {
       id: 6,
@@ -95,7 +95,7 @@ export default function Home() {
       rating: 5,
       category: "Networking",
       image: "/Course/aws.jpg",
-      enrollUrl: "/courses/aws", // Added enrollment URL
+      enrollUrl: "/courses/aws", 
     },
     {
       id: 7,
@@ -103,7 +103,7 @@ export default function Home() {
       rating: 5,
       category: "Automation",
       image: "/Course/automation.jpg",
-      enrollUrl: "/courses/industrial-automation", // Added enrollment URL
+      enrollUrl: "/courses/industrial-automation", 
     },
     {
       id: 8,
@@ -111,7 +111,7 @@ export default function Home() {
       rating: 5,
       category: "Security",
       image: "/Course/ethical.jpg",
-      enrollUrl: "/courses/information-security", // Added enrollment URL
+      enrollUrl: "/courses/information-security", 
     },
   ];
 
@@ -268,7 +268,7 @@ export default function Home() {
       </section>
 
       {/* Featured Courses Section */}
-      <section className="py-16 relative z-20">
+      <section className="py-16 relative z-20 pt-28">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Featured Online Courses</h2>
