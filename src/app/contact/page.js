@@ -1,19 +1,23 @@
 "use client";
 import React, { useState } from "react";
-import {
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaPhone,
-  FaLinkedin,
-  FaTwitter,
+import { 
+  FaMapMarkerAlt, 
+  FaEnvelope, 
+  FaPhone, 
+  FaLinkedin, 
+  FaTwitter, 
   FaCheckCircle,
   FaRocket,
   FaTeamspeak,
   FaComments,
-  FaAddressCard,
+  FaAddressCard
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import axios from "axios";
+import Form from "@/component/contact/Form";
+import Iframe from "@/component/contact/Iframe";
+
+import { Phone, Mail } from "lucide-react";
 
 // Custom Section Component
 const ContactSection = ({ icon: Icon, title, description, children }) => (
@@ -38,22 +42,30 @@ const ContactPage = () => {
     email: "",
     company: "",
     service: "",
-    message: "",
+    message: ""
   });
 
   const [submissionStatus, setSubmissionStatus] = useState({
     loading: false,
     success: false,
-    error: false,
+    error: false
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
-      [name]: value,
+      [name]: value
     }));
   };
+
+  const contacts = [
+    { title: "HEAD OFFICE",description: "Gachibowli, Hyderabad, Telangana 500032", phone: "+91 8602755547", email: "contact@careertronics.in",  },
+    { title: "BRANCH OFFICE",description: "E-108, Sector 1, Devendra Nagar,Raipur 492004" , phone: "+91 8602755547", email: "contact@careertronics.in", },
+    { title: "BRANCH OFFICE",description: "Off No-4, Agrasen Chowk, Nehru Nagar, Bhilai 490020", phone: "+91 8602755547", email: "contact@careertronics.in",  },
+
+  ];
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -61,26 +73,26 @@ const ContactPage = () => {
 
     try {
       const response = await axios.post("/api/contact", formData);
-
-      setSubmissionStatus({
-        loading: false,
-        success: true,
-        error: false,
+      
+      setSubmissionStatus({ 
+        loading: false, 
+        success: true, 
+        error: false 
       });
-
+      
       // Reset form
       setFormData({
         name: "",
         email: "",
         company: "",
         service: "",
-        message: "",
+        message: ""
       });
     } catch (error) {
-      setSubmissionStatus({
-        loading: false,
-        success: false,
-        error: true,
+      setSubmissionStatus({ 
+        loading: false, 
+        success: false, 
+        error: true 
       });
     }
   };
@@ -88,7 +100,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       <div className="container mx-auto px-4 py-16 lg:py-24">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -98,14 +110,14 @@ const ContactPage = () => {
             Connect with Careertronic
           </h1>
           <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-            Unlock Your Potential with Our Expert Career Solutions. Let's
-            transform your professional journey together.
+            Unlock Your Potential with Our Expert Career Solutions. 
+            Let's transform your professional journey together.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Information */}
-          <ContactSection
+          <ContactSection 
             icon={FaAddressCard}
             title="Contact Details"
             description="Reach out and let's start your career transformation."
@@ -119,8 +131,8 @@ const ContactPage = () => {
               </div>
               <div className="flex items-center space-x-4">
                 <FaEnvelope className="text-red-600" />
-                <a
-                  href="mailto:contact@careertronics.in"
+                <a 
+                  href="mailto:contact@careertronics.in" 
                   className="text-gray-800 hover:text-red-700 transition"
                 >
                   contact@careertronics.in
@@ -132,16 +144,10 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="mt-6 flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-600 hover:text-red-700 transition"
-              >
+              <a href="#" className="text-gray-600 hover:text-red-700 transition">
                 <FaLinkedin className="text-2xl" />
               </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-red-700 transition"
-              >
+              <a href="#" className="text-gray-600 hover:text-red-700 transition">
                 <FaTwitter className="text-2xl" />
               </a>
             </div>
@@ -154,102 +160,15 @@ const ContactPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white shadow-xl rounded-2xl p-8 border border-red-100 space-y-6"
-            >
-              <h3 className="text-2xl font-bold text-center text-red-500 mb-6">
-                Send Us a Message
-              </h3>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Your Email"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Company Name (Optional)"
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                />
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-700"
-                >
-                  <option value="">Select Service</option>
-                  <option value="career-consulting">Career Consulting</option>
-                  <option value="tech-recruitment">Tech Recruitment</option>
-                  <option value="training">Training & Development</option>
-                  <option value="other">Other Inquiry</option>
-                </select>
-              </div>
-
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Your Message"
-                rows="5"
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-              ></textarea>
-
-              <button
-                type="submit"
-                disabled={submissionStatus.loading}
-                className="w-full bg-red-700 text-white p-3 rounded-lg hover:bg-red-800 transition duration-300 flex items-center justify-center space-x-2"
-              >
-                {submissionStatus.loading ? (
-                  <span>Sending...</span>
-                ) : (
-                  <>
-                    <FaRocket />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </button>
-
-              {submissionStatus.success && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative flex items-center">
-                  <FaCheckCircle className="mr-2" />
-                  Message sent successfully!
-                </div>
-              )}
-
-              {submissionStatus.error && (
-                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
-                  Failed to send message. Please try again.
-                </div>
-              )}
-            </form>
+           <Form />
+           
           </motion.div>
         </div>
 
         {/* Additional Sections */}
         <div className="grid md:grid-cols-2 gap-8 mt-16">
-          <ContactSection
+          <ContactSection 
             icon={FaTeamspeak}
             title="Why Choose Us"
             description="Your Career, Our Passion: Tailored Solutions for Tech Professionals"
@@ -274,7 +193,7 @@ const ContactPage = () => {
             </ul>
           </ContactSection>
 
-          <ContactSection
+          <ContactSection 
             icon={FaComments}
             title="Consultation Process"
             description="Your Journey to Success, Simplified and Strategic"
@@ -283,7 +202,7 @@ const ContactPage = () => {
               {[
                 { step: 1, name: "Initial Consultation" },
                 { step: 2, name: "Profile Assessment" },
-                { step: 3, name: "Strategic Placement" },
+                { step: 3, name: "Strategic Placement" }
               ].map(({ step, name }) => (
                 <div key={step} className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center text-red-700 font-bold">
@@ -296,6 +215,48 @@ const ContactPage = () => {
           </ContactSection>
         </div>
       </div>
+
+
+
+
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem] p-[1rem]">
+        {contacts.map((contact, index) => (
+          // Replace Card with div
+          <div key={index} className="p-4 shadow-md rounded-2xl bg-white border border-gray-200">
+            {/* Replace CardContent with div */}
+            <div className="flex flex-col items-center gap-4">
+              <h2 className="text-lg font-semibold text-red-800">{contact.title}</h2>
+              <p className="text-black text-sm text-center font-bold-200">{contact.description}</p>
+              <div className="flex flex-col items-start gap-2 text-gray-600">
+                <div className="flex items-center gap-2 w-full">
+                  <Phone className="w-5 h-5" />
+                  <span className="flex-1">{contact.phone}</span>
+                </div>
+                <div className="flex items-center gap-2 w-full">
+                  <Mail className="w-5 h-5" />
+                  <span className="flex-1">{contact.email}</span>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        ))}
+      </div>
+          
+
+
+
+
+
+
+     <Iframe />
+
+
+
+     
+
+
     </div>
   );
 };

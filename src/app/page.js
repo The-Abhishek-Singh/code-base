@@ -5,7 +5,7 @@ import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Kai from "@/component/Home/Kai";
-import RightImage from "@/component/UI/Home/RightImage";
+//import RightImage from "@/component/UI/Home/RightImage";
 import ComponentPage from "@/component/StickyCard";
 import StickyCard from "@/component/StickyCard";
 import AdvancedPreloader from "@/component/preloader";

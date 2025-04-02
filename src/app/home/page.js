@@ -5,7 +5,7 @@ import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Kai from "@/component/Home/Kai";
-import RightImage from "@/component/UI/Home/RightImage";
+// import RightImage from "@/component/UI/Home/RightImage";
 import ComponentPage from "@/component/StickyCard";
 import StickyCard from "@/component/StickyCard";
 
@@ -27,9 +27,9 @@ const OnboardingSection = () => {
   return (
     <>
       <StickyCard />
-      <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black  sm:mt-[0rem] mt-[15rem]">
+      <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black  sm:mt-[2rem] mt-[0rem]">
         {/* Partner Logos Section */}
-        <div className="w-full   text-white mt-20  sm:mt-[21rem]  ">
+        <div className="w-full   text-white mt-4  sm:mt-[rem]  ">
           <h2 className="lg:text-3xl font-semibold mb-4  text-center">
             We partner with the best
           </h2>

@@ -85,12 +85,12 @@ export default function ComponentPage() {
         {/* Right section - scrollable with perfectly aligned sticky cards */}
         <div
           ref={rightSectionRef}
-          className="h-screen overflow-y-auto pr-16 absolute right-0 w-full" style={{scrollbarWidth: "none"}}
+          className="h-[100vh] overflow-y-auto pr-16 absolute right-0 w-full" style={{scrollbarWidth: "none"}}
         >
           <div className="flex flex-col gap-64 p-68 items-end">
             {/* First card */}
             <div
-              className="w-1/2 h-96 sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg mt-32 overflow-hidden"
+              className="w-1/2 h-[17rem] sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg mt-32 overflow-hidden"
               style={{
                 backgroundImage: "url('/mainHome/CBG.png')",
                 backgroundSize: 'cover',
@@ -105,7 +105,7 @@ export default function ComponentPage() {
 
             {/* Second card */}
             <div
-              className="w-1/2 h-96 sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg overflow-hidden"
+              className="w-1/2 h-[17rem] sticky top-1/2 transform translate-y-[-13%] p-4 rounded-lg overflow-hidden"
               style={{
                 backgroundImage: "url('/mainHome/CBG.png')",
                 backgroundSize: 'cover',
@@ -120,7 +120,7 @@ export default function ComponentPage() {
 
             {/* Third card */}
             <div
-              className="w-1/2 h-96 sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg overflow-hidden"
+              className="w-1/2 h-[17rem] sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg overflow-hidden"
               style={{
                 backgroundImage: "url('/mainHome/CBG.png')",
                 backgroundSize: 'cover',
@@ -135,7 +135,7 @@ export default function ComponentPage() {
 
             {/* Fourth card */}
             <div
-              className="w-1/2 h-96 sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg overflow-hidden"
+              className="w-1/2 h-[17rem] sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg overflow-hidden"
               style={{
                 backgroundImage: "url('/mainHome/CBG.png')",
                 backgroundSize: 'cover',

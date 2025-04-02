@@ -97,6 +97,32 @@ const ServicesList = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Counter logic for stats section
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
+  const target1 = 250000;
+  const target2 = 849000000;
+  
+  useEffect(() => {
+      const animateCount = (setCount, target) => {
+        let start = 0;
+        const duration = 2000; // Duration in milliseconds
+        const stepTime = Math.max(duration / target, 1);
+  
+        const counter = setInterval(() => {
+          start += Math.ceil(target / (duration / stepTime));
+          if (start >= target) {
+            start = target;
+            clearInterval(counter);
+          }
+          setCount(start);
+        }, stepTime);
+      };
+  
+      animateCount(setCount1, target1);
+      animateCount(setCount2, target2);
+    }, []);
+
   return (
     <div 
       ref={sectionRef} 
@@ -114,7 +140,7 @@ const ServicesList = () => {
       >
         {/* Red Line Starting from First Node */}
         <div
-          className="absolute left-0 top-0 w-1 bg-red-500 transition-all duration-1000  "
+          className="absolute left-0 top-0 w-1 bg-red-500 transition-all duration-[3000ms]  "
           style={{ 
             height: `${scrollHeight}px`
           }}
@@ -194,7 +220,7 @@ const ServicesList = () => {
 
     </div>
         <div className="relative w-full max-w-6xl  overflow-hidden ">
-        <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[29rem] bg-gray-100 rounded-xl shadow-lg mb-8 sm:mb-16 md:mb-20 lg:mb-[10rem] lg:w-[90rem] max-w-full sm:max-w-[90%] md:max-w-[85%] lg:max-w-3xl xl:max-w-6xl">
+        <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96 xl:h-[29rem] bg-gray-100 rounded-xl shadow-lg mb-8 sm:mb-16 md:mb-20 lg:mb-[10rem] lg:w-[90rem] max-w-full sm:max-w-[90%] md:max-w-[100%] lg:max-w-3xl xl:max-w-6xl">
             <img
               src={slides[currentSlide]}
               alt={`Slide ${currentSlide + 1}`}
@@ -224,14 +250,22 @@ const ServicesList = () => {
       {/* Stats Section */}
       
       <div className="bg-white text-black py-10 px-4 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-16 lg:space-x-24 w-full max-w-6xl mx-auto">
-  <div className="text-center">
-    <h3 className="text-red-500 text-3xl font-bold pb-2">127K</h3>
-    <p className="text-sm md:text-base">small to medium startups<br/>already using our product</p>
-  </div>
-  <div className="text-center">
-    <h3 className="text-red-500 text-3xl font-bold pb-2">428M</h3>
-    <p className="text-sm md:text-base">data endpoints integrated<br/>into custom reports</p>
-  </div>
+      <div>
+        <h3 className="text-red-500 text-3xl font-bold pb-2">
+          {count1.toLocaleString()}
+        </h3>
+        <p className="text-sm md:text-base">
+          small to medium startups<br />already using our product
+        </p>
+      </div>
+      <div>
+        <h3 className="text-red-500 text-3xl font-bold pb-2">
+          {count2.toLocaleString()}
+        </h3>
+        <p className="text-sm md:text-base">
+          data endpoints integrated<br />into custom reports
+        </p>
+      </div>
   <div className="text-center">
     <h3 className="text-red-500 text-3xl font-bold pb-2">Top 3</h3>
     <p className="text-sm md:text-base">in SaaS, fintech and more <br /> subcategories</p>
@@ -259,7 +293,7 @@ const ServicesList = () => {
       </p>
       
       {/* Image Section */}
-      <div className="mt-6 flex justify-center w-[85vw]  h-[35vw] mx-auto mb-20">
+      <div className="mt-6 flex justify-center w-[70vw]  h-[30vw] mx-auto mb-20">
       <Image
     src="/ourteam/leader.jpeg"
     alt="Gallery"

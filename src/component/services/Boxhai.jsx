@@ -163,7 +163,7 @@ const head = () => {
             </h1>
           </div>
         </div>
-        <div className="w-full mx-auto md:gap-20 lg:gap-8 gap-12 py-16 px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:grid-rows-3">
+        <div className="w-full mx-auto md:gap-[2rem] lg:gap-8 gap-12 py-16 px-4 flex flex-wrap justify-center lg:grid lg:grid-cols-3 lg:grid-rows-3">
           <ScrollReveal
             animation="slideLeft"
             duration={800}
