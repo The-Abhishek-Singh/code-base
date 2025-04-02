@@ -162,7 +162,7 @@ const SoftwareServicesPage = () => {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-transparent"></div>
           <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-red-500 to-transparent"></div>
         </div>
-        <div className="container mx-auto px-4 py-32 relative z-10">
+        <div className="container mx-auto flex justify-center px-4 py-32 relative z-10">
           <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600 animate-text-gradient">
               Software Development & Export Services
@@ -187,7 +187,7 @@ const SoftwareServicesPage = () => {
         <div className="text-center mb-16">
           <h2 className={`text-3xl md:text-4xl font-bold mb-4 relative inline-block ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 animate-gradient-x">Our Services</span>
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-red-400 transform scale-x-0 transition-transform duration-1000 delay-500 origin-left" style={{ transform: isVisible ? 'scaleX(1)' : 'scaleX(0)' }}></span>
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-gray-600 to-black transform scale-x-0 transition-transform duration-1000 delay-500 origin-left" style={{ transform: isVisible ? 'scaleX(1)' : 'scaleX(0)' }}></span>
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto transform transition-all duration-1000 delay-700"
              style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
@@ -199,7 +199,7 @@ const SoftwareServicesPage = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className={`bg-gray-900 p-8 rounded-lg transform transition-all duration-700 hover:bg-gray-800 border border-gray-800 hover:border-red-500 group relative overflow-hidden ${
+              className={` p-8 rounded-lg transform transition-all duration-700 border border-gray-600 hover:border-red-500 group relative overflow-hidden ${
                 activeIndex !== null && index <= activeIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -241,7 +241,7 @@ const SoftwareServicesPage = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 transform transition-all duration-1000" 
                style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 animate-gradient-x">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 animate-gradient-x ">
               Our Development Process
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
@@ -293,7 +293,7 @@ const SoftwareServicesPage = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-900 p-8 rounded-lg transition-all duration-500 hover:bg-gray-800 border border-gray-800 hover:border-red-500 group relative overflow-hidden transform hover:-translate-y-2">
+          <div className=" p-8 rounded-lg transition-all duration-500 border border-gray-500 hover:border-red-500 group relative overflow-hidden transform hover:-translate-y-2">
             <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <h3 className="text-xl font-semibold mb-4 text-white relative pb-2 inline-block">
               Technical Excellence
@@ -312,7 +312,7 @@ const SoftwareServicesPage = () => {
             </ul>
           </div>
           
-          <div className="bg-gray-900 p-8 rounded-lg transition-all duration-500 hover:bg-gray-800 border border-gray-800 hover:border-red-500 group relative overflow-hidden transform hover:-translate-y-2">
+          <div className="p-8 rounded-lg transition-all duration-500  border border-gray-500 hover:border-red-500 group relative overflow-hidden transform hover:-translate-y-2">
             <div className="absolute inset-0 bg-gradient-to-bl from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <h3 className="text-xl font-semibold mb-4 text-white relative pb-2 inline-block">
               Global Delivery Capabilities
