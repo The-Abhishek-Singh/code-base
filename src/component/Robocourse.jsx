@@ -35,7 +35,7 @@ const Robocourse = () => {
       <div className='h-[50vh] lg:h-screen w-full bg-black flex relative md:mt-0 lg:mt-[-4%] flex-col justify-center min-h-[90vh-6rem]'>
         {/* CONTENT DIV */}
         <div className='md:min-w-[40rem] sm:mt-[-10vh] md:ml-[4%] xl:ml-[10%] md:mt-[5%] lg:mt-[6%] z-50'>
-          <h1 className='text-3xl font-extrabold tracking-wide my-[2rem] text-red-500'>
+          <h1 className='lg:text-[1.5rem] text-3xl font-extrabold tracking-wide my-[2rem] text-red-500 '>
             Elevate Your Career, Elevate Your Business <br />
           </h1>
           <p className='font-semibold lg:max-w-[35rem] text-gray-400'>
