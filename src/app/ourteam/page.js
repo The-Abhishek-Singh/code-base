@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import ScrollReveal from "@/component/About/ScrollReveal";
+import ScrollReveal from "@/components/About/ScrollReveal";
 const TeamMember = ({ name, role, imageUrl }) => (
   <div className="relative group overflow-hidden h-full rounded-3xl">
     <img src={imageUrl} alt={name} className="w-full h-full object-cover" />

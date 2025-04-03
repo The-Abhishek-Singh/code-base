@@ -1,19 +1,23 @@
 "use client";
 import React, { useState } from "react";
-import {
-  FaMapMarkerAlt,
-  FaEnvelope,
-  FaPhone,
-  FaLinkedin,
-  FaTwitter,
+import { 
+  FaMapMarkerAlt, 
+  FaEnvelope, 
+  FaPhone, 
+  FaLinkedin, 
+  FaTwitter, 
   FaCheckCircle,
   FaRocket,
   FaTeamspeak,
   FaComments,
-  FaAddressCard,
+  FaAddressCard
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import axios from "axios";
+import Form from "@/components/contact/Form";
+import Iframe from "@/components/contact/Iframe";
+
+import { Phone, Mail } from "lucide-react";
 
 import Form from "@/component/contact/Form";
 
@@ -43,24 +47,25 @@ const ContactPage = () => {
     email: "",
     company: "",
     service: "",
-    message: "",
+    message: ""
   });
 
   const [submissionStatus, setSubmissionStatus] = useState({
     loading: false,
     success: false,
-    error: false,
+    error: false
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
-      [name]: value,
+      [name]: value
     }));
   };
 
   const contacts = [
+<<<<<<< HEAD
     {
       title: "HEAD OFFICE",
       description: "Gachibowli, Hyderabad, Telangana 500032",
@@ -81,32 +86,41 @@ const ContactPage = () => {
     },
   ];
 
+=======
+    { title: "HEAD OFFICE",description: "Gachibowli, Hyderabad, Telangana 500032", phone: "+91 8602755547", email: "contact@careertronics.in",  },
+    { title: "BRANCH OFFICE",description: "E-108, Sector 1, Devendra Nagar,Raipur 492004" , phone: "+91 8602755547", email: "contact@careertronics.in", },
+    { title: "BRANCH OFFICE",description: "Off No-4, Agrasen Chowk, Nehru Nagar, Bhilai 490020", phone: "+91 8602755547", email: "contact@careertronics.in",  },
+
+  ];
+
+
+>>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmissionStatus({ loading: true, success: false, error: false });
 
     try {
       const response = await axios.post("/api/contact", formData);
-
-      setSubmissionStatus({
-        loading: false,
-        success: true,
-        error: false,
+      
+      setSubmissionStatus({ 
+        loading: false, 
+        success: true, 
+        error: false 
       });
-
+      
       // Reset form
       setFormData({
         name: "",
         email: "",
         company: "",
         service: "",
-        message: "",
+        message: ""
       });
     } catch (error) {
-      setSubmissionStatus({
-        loading: false,
-        success: false,
-        error: true,
+      setSubmissionStatus({ 
+        loading: false, 
+        success: false, 
+        error: true 
       });
     }
   };
@@ -114,7 +128,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 to-white">
       <div className="container mx-auto px-4 py-16 lg:py-24">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -124,18 +138,19 @@ const ContactPage = () => {
             Connect with Careertronic
           </h1>
           <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-            Unlock Your Potential with Our Expert Career Solutions. Let's
-            transform your professional journey together.
+            Unlock Your Potential with Our Expert Career Solutions. 
+            Let's transform your professional journey together.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Information */}
-          <ContactSection
+          <ContactSection 
             icon={FaAddressCard}
             title="Contact Details"
             description="Reach out and let's start your career transformation."
           >
+            
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <FaMapMarkerAlt className="text-red-600" />
@@ -145,8 +160,8 @@ const ContactPage = () => {
               </div>
               <div className="flex items-center space-x-4">
                 <FaEnvelope className="text-red-600" />
-                <a
-                  href="mailto:contact@careertronics.in"
+                <a 
+                  href="mailto:contact@careertronics.in" 
                   className="text-gray-800 hover:text-red-700 transition"
                 >
                   contact@careertronics.in
@@ -158,16 +173,10 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="mt-6 flex space-x-4">
-              <a
-                href="#"
-                className="text-gray-600 hover:text-red-700 transition"
-              >
+              <a href="#" className="text-gray-600 hover:text-red-700 transition">
                 <FaLinkedin className="text-2xl" />
               </a>
-              <a
-                href="#"
-                className="text-gray-600 hover:text-red-700 transition"
-              >
+              <a href="#" className="text-gray-600 hover:text-red-700 transition">
                 <FaTwitter className="text-2xl" />
               </a>
             </div>
@@ -180,13 +189,19 @@ const ContactPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
+<<<<<<< HEAD
             <Form />
+=======
+
+           <Form />
+           
+>>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8
           </motion.div>
         </div>
 
         {/* Additional Sections */}
         <div className="grid md:grid-cols-2 gap-8 mt-16">
-          <ContactSection
+          <ContactSection 
             icon={FaTeamspeak}
             title="Why Choose Us"
             description="Your Career, Our Passion: Tailored Solutions for Tech Professionals"
@@ -211,7 +226,7 @@ const ContactPage = () => {
             </ul>
           </ContactSection>
 
-          <ContactSection
+          <ContactSection 
             icon={FaComments}
             title="Consultation Process"
             description="Your Journey to Success, Simplified and Strategic"
@@ -220,7 +235,7 @@ const ContactPage = () => {
               {[
                 { step: 1, name: "Initial Consultation" },
                 { step: 2, name: "Profile Assessment" },
-                { step: 3, name: "Strategic Placement" },
+                { step: 3, name: "Strategic Placement" }
               ].map(({ step, name }) => (
                 <div key={step} className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center text-red-700 font-bold">
@@ -234,6 +249,7 @@ const ContactPage = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem] p-[1rem]">
         {contacts.map((contact, index) => (
           <motion.div
@@ -273,6 +289,57 @@ const ContactPage = () => {
       </div>
 
       {/* <Iframe /> */}
+=======
+
+
+
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem] p-[1rem]">
+  {contacts.map((contact, index) => (
+    <motion.div 
+      key={index} 
+      className="p-4 shadow-md rounded-2xl bg-white border border-gray-200"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ 
+        duration: 0.9, 
+        delay: index * 0.2,
+        ease: "easeOut"
+      }}
+      viewport={{ 
+      
+        amount: 0.5 
+      }}
+    >
+      <div className="flex flex-col items-center gap-4 hover:*:shadow-lg transition-shadow duration-300">
+        <h2 className="text-lg font-semibold text-red-800">{contact.title}</h2>
+        <p className="text-black text-sm text-center font-bold-200">{contact.description}</p>
+        <div className="flex flex-col items-start gap-2 text-gray-600">
+          <div className="flex items-center gap-2 w-full">
+            <Phone className="w-5 h-5" />
+            <span className="flex-1">{contact.phone}</span>
+          </div>
+          <div className="flex items-center gap-2 w-full">
+            <Mail className="w-5 h-5" />
+            <span className="flex-1">{contact.email}</span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
+
+
+
+
+
+     <Iframe />
+
+
+
+     
+>>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8
 
 
     </div>

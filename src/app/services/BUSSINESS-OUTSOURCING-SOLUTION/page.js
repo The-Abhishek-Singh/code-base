@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading";
+import ScrollCards from "@/components/UI/servicespage/StackwithFixedHeading";
 import {
   Cloud,
   FileChartColumn,
@@ -9,8 +9,8 @@ import {
   AppWindow,
   BrainCircuit,
 } from "lucide-react";
-import ServicesContent from "@/component/UI/servicespage/ServicesUI";
-import VantaBackground from "@/component/VantaBackground";
+import ServicesContent from "@/components/UI/servicespage/ServicesUI";
+import VantaBackground from "@/components/VantaBackground";
 
 const SoftwareServices = () => {
   const softwareIcons = {

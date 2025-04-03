@@ -1,5 +1,5 @@
-import Learning from '@/component/UI/course/Learning'
-import Update from '@/component/UI/course/Update'
+import Learning from '@/components/UI/course/Learning'
+import Update from '@/components/UI/course/Update'
 import React from 'react'
 
 const page = () => {

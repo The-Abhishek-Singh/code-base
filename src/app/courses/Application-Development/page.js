@@ -3,12 +3,12 @@ import React from 'react';
 // import Navbar from '@/component/Navbar';
 import Image from 'next/image'
 import Form from '@/component/course/Forms';
-import Button from '@/component/course/Button';
-import DevOpsSkills from '@/component/course/DevOpsSkills';
-import DevOpsCourseSection from '@/component/course/DevOpsCourseSection';
-import CourseRoadmap from '@/component/course/CourseRoadmap';
-import FAQSection from '@/component/course/FAQSection';
-import FeeStructure from '@/component/course/FeeStructure';
+import Button from '@/components/course/Button';
+import DevOpsSkills from '@/components/course/DevOpsSkills';
+import DevOpsCourseSection from '@/components/course/DevOpsCourseSection';
+import CourseRoadmap from '@/components/course/CourseRoadmap';
+import FAQSection from '@/components/course/FAQSection';
+import FeeStructure from '@/components/course/FeeStructure';
 // import MentorsSection from '@/component/course/MentorsSection';
 import { FaTools, FaServer, FaLayerGroup } from "react-icons/fa";
 

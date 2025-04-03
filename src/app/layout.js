@@ -1,7 +1,7 @@
 
 import "./globals.css";
-import Navbar from "@/component/Navbar";
-import Footer from "@/component/Footer";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 // import NeonCursor from "@/component/About/NeonCursor";
 
 

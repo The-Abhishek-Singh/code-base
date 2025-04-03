@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
-import VantaBackground from "@/component/VantaBackground";
-import ScrollCards from "@/component/UI/servicespage/StackwithFixedHeading";
+import VantaBackground from "@/components/VantaBackground";
+import ScrollCards from "@/components/UI/servicespage/StackwithFixedHeading";
 import {
   Code,
   Cloud,
@@ -13,7 +13,7 @@ import {
   AppWindow,
   BrainCircuit,
 } from "lucide-react";
-import ServicesContent from "@/component/UI/servicespage/ServicesUI";
+import ServicesContent from "@/components/UI/servicespage/ServicesUI";
 const SoftwareServices = () => {
   const softwareIcons = {
     brainCircuit: BrainCircuit,
