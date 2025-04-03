@@ -1,14 +1,3 @@
-<<<<<<< HEAD:src/component/contact/Form.jsx
-import React, { useState } from "react";
-import styled from "styled-components";
-
-const Form = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-=======
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -18,81 +7,40 @@ const Form = () => {
     email: '',
     subject: '',
     message: ''
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
   });
   const [submitting, setSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [errors, setErrors] = useState({});
 
   const subjectOptions = [
-<<<<<<< HEAD:src/component/contact/Form.jsx
-    "General Inquiry",
-    "Support Request",
-    "Business Opportunity",
-    "Feedback",
-    "Other",
-=======
     'General Inquiry',
     'Support Request',
     'Business Opportunity',
     'Feedback',
     'Other'
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
   ];
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-<<<<<<< HEAD:src/component/contact/Form.jsx
-      [e.target.name]: e.target.value,
-=======
       [e.target.name]: e.target.value
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
     });
   };
 
   const validateForm = () => {
     const newErrors = {};
-<<<<<<< HEAD:src/component/contact/Form.jsx
-    if (!formData.name.trim()) newErrors.name = "Name is required";
-    if (!formData.email.trim()) newErrors.email = "Email is required";
-    if (!/^\S+@\S+\.\S+$/.test(formData.email))
-      newErrors.email = "Email is invalid";
-    if (!formData.subject.trim()) newErrors.subject = "Subject is required";
-    if (!formData.message.trim()) newErrors.message = "Message is required";
-
-=======
     if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
     if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = 'Email is invalid';
     if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
     
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD:src/component/contact/Form.jsx
-
-    if (!validateForm()) return;
-
-    setSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
-      setSubmitStatus("error");
-    } finally {
-      setSubmitting(false);
-      // Reset success message after 3 seconds
-      if (submitStatus === "success") {
-=======
     
     if (!validateForm()) return;
     
@@ -109,7 +57,6 @@ const Form = () => {
       setSubmitting(false);
       // Reset success message after 3 seconds
       if (submitStatus === 'success') {
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
         setTimeout(() => setSubmitStatus(null), 3000);
       }
     }
@@ -121,44 +68,6 @@ const Form = () => {
         <div className="form-card2">
           <form className="form" onSubmit={handleSubmit}>
             <p className="form-heading">Get In Touch</p>
-<<<<<<< HEAD:src/component/contact/Form.jsx
-
-            <div className={`form-field ${errors.name ? "error" : ""}`}>
-              <input
-                required
-                placeholder="Name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="input-field"
-                type="text"
-              />
-              {errors.name && (
-                <span className="error-message">{errors.name}</span>
-              )}
-            </div>
-
-            <div className={`form-field ${errors.email ? "error" : ""}`}>
-              <input
-                required
-                placeholder="Email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="input-field"
-                type="email"
-              />
-              {errors.email && (
-                <span className="error-message">{errors.email}</span>
-              )}
-            </div>
-
-            <div
-              className={`form-field subject-field ${
-                errors.subject ? "error" : ""
-              }`}
-            >
-=======
             
             <div className={`form-field ${errors.name ? 'error' : ''}`}>
               <input 
@@ -187,7 +96,6 @@ const Form = () => {
             </div>
             
             <div className={`form-field subject-field ${errors.subject ? 'error' : ''}`}>
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
               <select
                 required
                 name="subject"
@@ -195,57 +103,6 @@ const Form = () => {
                 onChange={handleChange}
                 className="input-field subject-select"
               >
-<<<<<<< HEAD:src/component/contact/Form.jsx
-                <option value="" disabled>
-                  Select Subject
-                </option>
-                {subjectOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-              {errors.subject && (
-                <span className="error-message">{errors.subject}</span>
-              )}
-            </div>
-
-            <div className={`form-field ${errors.message ? "error" : ""}`}>
-              <textarea
-                required
-                placeholder="Message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                cols={30}
-                rows={3}
-                className="input-field"
-              />
-              {errors.message && (
-                <span className="error-message">{errors.message}</span>
-              )}
-            </div>
-
-            <div className="message-status-area">
-              {submitStatus === "success" && (
-                <div className="success-message">
-                  Message sent successfully!
-                </div>
-              )}
-              {submitStatus === "error" && (
-                <div className="error-message">
-                  Failed to send message. Please try again.
-                </div>
-              )}
-            </div>
-
-            <button
-              type="submit"
-              className="sendMessage-btn"
-              disabled={submitting}
-            >
-              {submitting ? "Sending..." : "Send Message"}
-=======
                 <option value="" disabled>Select Subject</option>
                 {subjectOptions.map(option => (
                   <option key={option} value={option}>{option}</option>
@@ -283,18 +140,13 @@ const Form = () => {
               disabled={submitting}
             >
               {submitting ? 'Sending...' : 'Send Message'}
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
             </button>
           </form>
         </div>
       </div>
     </StyledWrapper>
   );
-<<<<<<< HEAD:src/component/contact/Form.jsx
-};
-=======
 }
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
 
 const StyledWrapper = styled.div`
   .form {
@@ -312,11 +164,7 @@ const StyledWrapper = styled.div`
   .form-heading {
     text-align: center;
     margin: 2em;
-<<<<<<< HEAD:src/component/contact/Form.jsx
-    color: #ff0000;
-=======
     color: #FF0000;
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
     font-size: 1.2em;
     background-color: transparent;
     align-self: center;
@@ -331,11 +179,7 @@ const StyledWrapper = styled.div`
     border-radius: 10px;
     padding: 0.6em;
     border: none;
-<<<<<<< HEAD:src/component/contact/Form.jsx
-
-=======
     
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
     outline: none;
     color: black;
     background-color: #fffff;
@@ -360,12 +204,7 @@ const StyledWrapper = styled.div`
 
   .subject-select {
     appearance: none;
-<<<<<<< HEAD:src/component/contact/Form.jsx
-    background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2364ffda%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E")
-      right 0.7em top 50% no-repeat;
-=======
     background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2364ffda%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E") right 0.7em top 50% no-repeat;
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
     background-size: 0.65em auto;
     padding-right: 1.5em;
   }
@@ -403,27 +242,16 @@ const StyledWrapper = styled.div`
     border: none;
     outline: none;
     background-color: transparent;
-<<<<<<< HEAD:src/component/contact/Form.jsx
-    color: #ff0000;
-    font-weight: bold;
-    outline: 1px solid #cf3838;
-=======
     color: #FF0000;
     font-weight: bold;
     outline: 1px solid #CF3838;
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
     transition: all ease-in-out 0.3s;
   }
 
   .sendMessage-btn:hover:not(:disabled) {
     transition: all ease-in-out 0.3s;
-<<<<<<< HEAD:src/component/contact/Form.jsx
-    background-color: ##ff0000;
-    color: #ff0000;
-=======
     background-color: ##FF0000;
     color: #FF0000;
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
     cursor: pointer;
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
   }
@@ -434,11 +262,7 @@ const StyledWrapper = styled.div`
   }
 
   .form-card1 {
-<<<<<<< HEAD:src/component/contact/Form.jsx
-    background-image: linear-gradient(163deg, #ff0000 0%, #cf3838 100%);
-=======
     background-image: linear-gradient(163deg, #FF0000 0%, #CF3838 100%);
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx
     border-radius: 22px;
     transition: all 0.3s;
   }
@@ -458,8 +282,4 @@ const StyledWrapper = styled.div`
   }
 `;
 
-<<<<<<< HEAD:src/component/contact/Form.jsx
 export default Form;
-=======
-export default Form;
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8:src/components/contact/Form.jsx

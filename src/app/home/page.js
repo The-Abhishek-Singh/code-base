@@ -4,19 +4,16 @@ import Mrq from "@/components/Home/Mrq";
 import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-<<<<<<< HEAD
 import Kai from "@/component/Home/Kai";
 import RightImage from "@/component/UI/Home/RightImage";
 import ComponentPage from "@/component/StickyCard";
 import StickyCard from "@/component/StickyCard";
 import ResumeBuilderLanding from "@/component/Resume";
 import JobPortalLanding from "@/component/job";
-=======
 import Kai from "@/components/Home/Kai";
 // import RightImage from "@/component/UI/Home/RightImage";
 import ComponentPage from "@/components/StickyCard";
 import StickyCard from "@/components/StickyCard";
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8
 
 const OnboardingSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -36,14 +33,14 @@ const OnboardingSection = () => {
   return (
     <>
       <StickyCard />
-<<<<<<< HEAD
+
       <ResumeBuilderLanding/>
       <JobPortalLanding/>
 
       <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black  sm:mt-[0rem] mt-[15rem]">
-=======
+
       <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black  sm:mt-[2rem] mt-[0rem]">
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8
+
         {/* Partner Logos Section */}
         <div className="w-full   text-white mt-4  sm:mt-[rem]  ">
           <h2 className="lg:text-3xl font-semibold mb-4  text-center">

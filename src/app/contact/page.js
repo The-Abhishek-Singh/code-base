@@ -19,11 +19,6 @@ import Iframe from "@/components/contact/Iframe";
 
 import { Phone, Mail } from "lucide-react";
 
-import Form from "@/component/contact/Form";
-
-
-import { Phone, Mail } from "lucide-react";
-
 // Custom Section Component
 const ContactSection = ({ icon: Icon, title, description, children }) => (
   <motion.div
@@ -65,28 +60,6 @@ const ContactPage = () => {
   };
 
   const contacts = [
-<<<<<<< HEAD
-    {
-      title: "HEAD OFFICE",
-      description: "Gachibowli, Hyderabad, Telangana 500032",
-      phone: "+91 8602755547",
-      email: "contact@careertronics.in",
-    },
-    {
-      title: "BRANCH OFFICE",
-      description: "E-108, Sector 1, Devendra Nagar,Raipur 492004",
-      phone: "+91 8602755547",
-      email: "contact@careertronics.in",
-    },
-    {
-      title: "BRANCH OFFICE",
-      description: "Off No-4, Agrasen Chowk, Nehru Nagar, Bhilai 490020",
-      phone: "+91 8602755547",
-      email: "contact@careertronics.in",
-    },
-  ];
-
-=======
     { title: "HEAD OFFICE",description: "Gachibowli, Hyderabad, Telangana 500032", phone: "+91 8602755547", email: "contact@careertronics.in",  },
     { title: "BRANCH OFFICE",description: "E-108, Sector 1, Devendra Nagar,Raipur 492004" , phone: "+91 8602755547", email: "contact@careertronics.in", },
     { title: "BRANCH OFFICE",description: "Off No-4, Agrasen Chowk, Nehru Nagar, Bhilai 490020", phone: "+91 8602755547", email: "contact@careertronics.in",  },
@@ -94,7 +67,6 @@ const ContactPage = () => {
   ];
 
 
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmissionStatus({ loading: true, success: false, error: false });
@@ -189,13 +161,9 @@ const ContactPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-<<<<<<< HEAD
-            <Form />
-=======
 
            <Form />
            
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8
           </motion.div>
         </div>
 
@@ -249,47 +217,6 @@ const ContactPage = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem] p-[1rem]">
-        {contacts.map((contact, index) => (
-          <motion.div
-            key={index}
-            className="p-4 shadow-md rounded-2xl bg-white border border-gray-200"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.9,
-              delay: index * 0.2,
-              ease: "easeOut",
-            }}
-            viewport={{
-              amount: 0.5,
-            }}
-          >
-            <div className="flex flex-col items-center gap-4 hover:*:shadow-lg transition-shadow duration-300">
-              <h2 className="text-lg font-semibold text-red-800">
-                {contact.title}
-              </h2>
-              <p className="text-black text-sm text-center font-bold-200">
-                {contact.description}
-              </p>
-              <div className="flex flex-col items-start gap-2 text-gray-600">
-                <div className="flex items-center gap-2 w-full">
-                  <Phone className="w-5 h-5" />
-                  <span className="flex-1">{contact.phone}</span>
-                </div>
-                <div className="flex items-center gap-2 w-full">
-                  <Mail className="w-5 h-5" />
-                  <span className="flex-1">{contact.email}</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* <Iframe /> */}
-=======
 
 
 
@@ -339,7 +266,6 @@ const ContactPage = () => {
 
 
      
->>>>>>> 1f02b09db461c739c23ff2c08c9fd9d82ba4cfa8
 
 
     </div>
