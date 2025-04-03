@@ -14,8 +14,8 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import axios from "axios";
-import Form from "@/component/contact/Form";
-import Iframe from "@/component/contact/Iframe";
+import Form from "@/components/contact/Form";
+import Iframe from "@/components/contact/Iframe";
 
 import { Phone, Mail } from "lucide-react";
 
@@ -122,6 +122,7 @@ const ContactPage = () => {
             title="Contact Details"
             description="Reach out and let's start your career transformation."
           >
+            
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
                 <FaMapMarkerAlt className="text-red-600" />
@@ -221,29 +222,39 @@ const ContactPage = () => {
 
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem] p-[1rem]">
-        {contacts.map((contact, index) => (
-          // Replace Card with div
-          <div key={index} className="p-4 shadow-md rounded-2xl bg-white border border-gray-200">
-            {/* Replace CardContent with div */}
-            <div className="flex flex-col items-center gap-4">
-              <h2 className="text-lg font-semibold text-red-800">{contact.title}</h2>
-              <p className="text-black text-sm text-center font-bold-200">{contact.description}</p>
-              <div className="flex flex-col items-start gap-2 text-gray-600">
-                <div className="flex items-center gap-2 w-full">
-                  <Phone className="w-5 h-5" />
-                  <span className="flex-1">{contact.phone}</span>
-                </div>
-                <div className="flex items-center gap-2 w-full">
-                  <Mail className="w-5 h-5" />
-                  <span className="flex-1">{contact.email}</span>
-                </div>
-              </div>
-          
-            </div>
+  {contacts.map((contact, index) => (
+    <motion.div 
+      key={index} 
+      className="p-4 shadow-md rounded-2xl bg-white border border-gray-200"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ 
+        duration: 0.9, 
+        delay: index * 0.2,
+        ease: "easeOut"
+      }}
+      viewport={{ 
+      
+        amount: 0.5 
+      }}
+    >
+      <div className="flex flex-col items-center gap-4 hover:*:shadow-lg transition-shadow duration-300">
+        <h2 className="text-lg font-semibold text-red-800">{contact.title}</h2>
+        <p className="text-black text-sm text-center font-bold-200">{contact.description}</p>
+        <div className="flex flex-col items-start gap-2 text-gray-600">
+          <div className="flex items-center gap-2 w-full">
+            <Phone className="w-5 h-5" />
+            <span className="flex-1">{contact.phone}</span>
           </div>
-        ))}
+          <div className="flex items-center gap-2 w-full">
+            <Mail className="w-5 h-5" />
+            <span className="flex-1">{contact.email}</span>
+          </div>
+        </div>
       </div>
-          
+    </motion.div>
+  ))}
+</div>
 
 
 

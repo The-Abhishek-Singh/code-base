@@ -1,5 +1,5 @@
 import React from 'react';
-import Boxhai from "@/component/services/Boxhai";
+import Boxhai from "@/components/services/Boxhai";
 
 const page = () => {
   return (

@@ -1,4 +1,4 @@
-import Partner from '@/component/Becomeap/Partner'
+import Partner from '@/components/Becomeap/Partner'
 import React from 'react'
 
 const page = () => {

@@ -1,11 +1,11 @@
 import React from "react";
 // import { Button } from "@/components/ui/button";
-import { Button } from "@/component/UI/button";
-import StatsAndCommitments from "@/component/About/StatsAndCommitments";
-import BlueNWhite from "@/component/About/BlueNWhite";
-import WhyChooseInnovetix from "@/component/About/WhyChoosecareertronic";
+import { Button } from "@/components/UI/button";
+import StatsAndCommitments from "@/components/About/StatsAndCommitments";
+import BlueNWhite from "@/components/About/BlueNWhite";
+import WhyChooseInnovetix from "@/components/About/WhyChoosecareertronic";
 // import ScrollReveal from "@/components/ScrollReveal";
-import ScrollReveal from "@/component/ScrollReveal";
+import ScrollReveal from "@/components/ScrollReveal";
 // import { Card } from "@/components/ui/card";
 function page() {
   const missionTitle = "Our Mission";

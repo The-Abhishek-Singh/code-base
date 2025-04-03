@@ -1,6 +1,6 @@
-import BusinessConsulting from '@/component/Business/BusinessConsulting'
-import BusinessService from '@/component/Business/BusinessService'
-import WhyUs from '@/component/Business/WhyUs'
+import BusinessConsulting from '@/components/Business/BusinessConsulting'
+import BusinessService from '@/components/Business/BusinessService'
+import WhyUs from '@/components/Business/WhyUs'
 import React from 'react'
 const page = () => {
   return (

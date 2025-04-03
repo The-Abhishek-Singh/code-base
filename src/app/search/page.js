@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import SearchModal from '@/component/UI/search/SearchModal';
+import SearchModal from '@/components/UI/search/SearchModal';
 
 // Create a client-side only wrapper component
 const ClientOnly = ({ children }) => {
@@ -18,7 +18,7 @@ const ClientOnly = ({ children }) => {
 
 // Dynamically import SearchResults with SSR disabled
 const SearchResults = dynamic(
-  () => import('@/component/search/SearchResults'),
+  () => import('@/components/search/SearchResults'),
   { ssr: false }
 );
 

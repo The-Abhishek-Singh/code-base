@@ -1,14 +1,14 @@
 "use client";
 
-import Mrq from "@/component/Home/Mrq";
+import Mrq from "@/components/Home/Mrq";
 import React from "react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Kai from "@/component/Home/Kai";
+import Kai from "@/components/Home/Kai";
 //import RightImage from "@/component/UI/Home/RightImage";
-import ComponentPage from "@/component/StickyCard";
-import StickyCard from "@/component/StickyCard";
-import AdvancedPreloader from "@/component/preloader";
+import ComponentPage from "@/components/StickyCard";
+import StickyCard from "@/components/StickyCard";
+import AdvancedPreloader from "@/components/preloader";
 
 const OnboardingSection = () => {
   const [scrollY, setScrollY] = useState(0);
