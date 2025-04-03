@@ -1,9 +1,14 @@
-import Shipping from '@/component/Policy/Shipping'
+// import Shipping from '@/component/Policy/Shipping'/
+import ShippingDeliveryPolicy from '@/components/Policy/Shipping'
 import React from 'react'
 
 const page = () => {
   return (
-    <div><Shipping/></div>
+    <div>
+    
+    <ShippingDeliveryPolicy/>
+
+    </div>
   )
 }
 
