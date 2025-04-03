@@ -8,6 +8,8 @@ import Kai from "@/component/Home/Kai";
 import RightImage from "@/component/UI/Home/RightImage";
 import ComponentPage from "@/component/StickyCard";
 import StickyCard from "@/component/StickyCard";
+import ResumeBuilderLanding from "@/component/Resume";
+import JobPortalLanding from "@/component/job";
 
 const OnboardingSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -27,6 +29,9 @@ const OnboardingSection = () => {
   return (
     <>
       <StickyCard />
+      <ResumeBuilderLanding/>
+      <JobPortalLanding/>
+
       <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black  sm:mt-[0rem] mt-[15rem]">
         {/* Partner Logos Section */}
         <div className="w-full   text-white mt-20  sm:mt-[21rem]  ">
@@ -56,7 +61,6 @@ const OnboardingSection = () => {
             <span className="mt-2">that will make your business grow</span>
           </h2>
         </div>
-
         <Kai />
       </div>
     </>

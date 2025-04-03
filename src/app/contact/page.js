@@ -15,6 +15,11 @@ import {
 import { motion } from "framer-motion";
 import axios from "axios";
 
+import Form from "@/component/contact/Form";
+
+
+import { Phone, Mail } from "lucide-react";
+
 // Custom Section Component
 const ContactSection = ({ icon: Icon, title, description, children }) => (
   <motion.div
@@ -54,6 +59,27 @@ const ContactPage = () => {
       [name]: value,
     }));
   };
+
+  const contacts = [
+    {
+      title: "HEAD OFFICE",
+      description: "Gachibowli, Hyderabad, Telangana 500032",
+      phone: "+91 8602755547",
+      email: "contact@careertronics.in",
+    },
+    {
+      title: "BRANCH OFFICE",
+      description: "E-108, Sector 1, Devendra Nagar,Raipur 492004",
+      phone: "+91 8602755547",
+      email: "contact@careertronics.in",
+    },
+    {
+      title: "BRANCH OFFICE",
+      description: "Off No-4, Agrasen Chowk, Nehru Nagar, Bhilai 490020",
+      phone: "+91 8602755547",
+      email: "contact@careertronics.in",
+    },
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -154,96 +180,7 @@ const ContactPage = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <form
-              onSubmit={handleSubmit}
-              className="bg-white shadow-xl rounded-2xl p-8 border border-red-100 space-y-6"
-            >
-              <h3 className="text-2xl font-bold text-center text-red-500 mb-6">
-                Send Us a Message
-              </h3>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Your Email"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="Company Name (Optional)"
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                />
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 text-gray-700"
-                >
-                  <option value="">Select Service</option>
-                  <option value="career-consulting">Career Consulting</option>
-                  <option value="tech-recruitment">Tech Recruitment</option>
-                  <option value="training">Training & Development</option>
-                  <option value="other">Other Inquiry</option>
-                </select>
-              </div>
-
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Your Message"
-                rows="5"
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-              ></textarea>
-
-              <button
-                type="submit"
-                disabled={submissionStatus.loading}
-                className="w-full bg-red-700 text-white p-3 rounded-lg hover:bg-red-800 transition duration-300 flex items-center justify-center space-x-2"
-              >
-                {submissionStatus.loading ? (
-                  <span>Sending...</span>
-                ) : (
-                  <>
-                    <FaRocket />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </button>
-
-              {submissionStatus.success && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative flex items-center">
-                  <FaCheckCircle className="mr-2" />
-                  Message sent successfully!
-                </div>
-              )}
-
-              {submissionStatus.error && (
-                <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
-                  Failed to send message. Please try again.
-                </div>
-              )}
-            </form>
+            <Form />
           </motion.div>
         </div>
 
@@ -296,6 +233,48 @@ const ContactPage = () => {
           </ContactSection>
         </div>
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[4rem] p-[1rem]">
+        {contacts.map((contact, index) => (
+          <motion.div
+            key={index}
+            className="p-4 shadow-md rounded-2xl bg-white border border-gray-200"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.9,
+              delay: index * 0.2,
+              ease: "easeOut",
+            }}
+            viewport={{
+              amount: 0.5,
+            }}
+          >
+            <div className="flex flex-col items-center gap-4 hover:*:shadow-lg transition-shadow duration-300">
+              <h2 className="text-lg font-semibold text-red-800">
+                {contact.title}
+              </h2>
+              <p className="text-black text-sm text-center font-bold-200">
+                {contact.description}
+              </p>
+              <div className="flex flex-col items-start gap-2 text-gray-600">
+                <div className="flex items-center gap-2 w-full">
+                  <Phone className="w-5 h-5" />
+                  <span className="flex-1">{contact.phone}</span>
+                </div>
+                <div className="flex items-center gap-2 w-full">
+                  <Mail className="w-5 h-5" />
+                  <span className="flex-1">{contact.email}</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* <Iframe /> */}
+
+
     </div>
   );
 };

@@ -1,3 +1,4 @@
+"use client";
 import {
   FaFacebookF,
   FaTwitter,
@@ -6,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="text-white py-10 px-6 md:px-20 relative">
@@ -38,7 +40,7 @@ const Footer = () => {
               </h2>
               <p className="mt-2 w-90 text-gray-400">
                 Explore our services today and discover how we can empower your
-                business or career. 
+                business or career.
               </p>
             </div>
           </div>
@@ -46,10 +48,15 @@ const Footer = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
             <div>
               <h3 className="font-semibold mb-2">Reach us</h3>
-              <p className="text-gray-400 hover:text-red-500">📞 Contact: +91 9343202785</p>
-              <p className="text-gray-400 hover:text-red-500">📧 mail: contact@careertronics.in</p>
               <p className="text-gray-400 hover:text-red-500">
-              📍3rd Floor, KNR SQUARE, OPP The Platina Gachibowli,Hyderabad, Telangana, 500032
+                📞 Contact: +91 9343202785
+              </p>
+              <p className="text-gray-400 hover:text-red-500">
+                📧 mail: contact@careertronics.in
+              </p>
+              <p className="text-gray-400 hover:text-red-500">
+                📍3rd Floor, KNR SQUARE, OPP The Platina Gachibowli,Hyderabad,
+                Telangana, 500032
               </p>
             </div>
             <div>
@@ -61,13 +68,38 @@ const Footer = () => {
                 <li className="hover:text-red-500">Business consulting</li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <h3 className="font-semibold mb-2">Legal</h3>
               <ul className="text-gray-400 space-y-1">
-                <li className="hover:text-red-500">Privacy Policy</li>
+               <li className="hover:text-red-500">Privacy</li>
                 <li className="hover:text-red-500">Terms & Services</li>
                 <li className="hover:text-red-500">Terms of Use</li>
                 <li className="hover:text-red-500">Refund Policy</li>
+              </ul>
+            </div> */}
+            <div>
+              <h3 className="font-semibold mb-2">Legal</h3>
+              <ul className="text-gray-400 space-y-1">
+                <li>
+                  <Link href="/Policy" className="hover:text-red-500">
+                    Privacy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/Terms" className="hover:text-red-500">
+                    Terms & Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cancel" className="hover:text-red-500">
+                    Cancellation and Refund
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/shipping" className="hover:text-red-500">
+                    Shipping and Delivery Policy
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -75,8 +107,12 @@ const Footer = () => {
               <ul className="text-gray-400 space-y-1">
                 <li className="hover:text-red-500">Software training</li>
                 <li className="hover:text-red-500">Industrial training</li>
-                <li className="hover:text-red-500">Custom Software development</li>
-                <li className="hover:text-red-500">Become a Franchise partner</li>
+                <li className="hover:text-red-500">
+                  Custom Software development
+                </li>
+                <li className="hover:text-red-500">
+                  Become a Franchise partner
+                </li>
               </ul>
             </div>
           </div>
@@ -131,3 +167,4 @@ const Footer = () => {
   );
 };
 export default Footer;
+
