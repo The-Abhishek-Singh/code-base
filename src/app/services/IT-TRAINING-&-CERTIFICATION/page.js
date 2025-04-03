@@ -74,32 +74,32 @@ const ITTrainingPage = () => {
     {
       title: "Technical Certification Programs",
       description: "Industry-recognized certification courses designed to validate your IT skills and boost your career.",
-      icon: <Award className="h-10 w-10 text-blue-500" />
+      icon: <Award className="h-10 w-10 text-red-500" />
     },
     {
       title: "Cybersecurity Training",
       description: "Comprehensive security training covering threat detection, prevention, and response strategies.",
-      icon: <Layers className="h-10 w-10 text-blue-500" />
+      icon: <Layers className="h-10 w-10 text-red-500" />
     },
     {
       title: "Cloud Computing Courses",
       description: "Master AWS, Azure, Google Cloud and multi-cloud environments with hands-on practical training.",
-      icon: <Laptop className="h-10 w-10 text-blue-500" />
+      icon: <Laptop className="h-10 w-10 text-red-500" />
     },
     {
       title: "Programming & Development",
       description: "Learn in-demand programming languages and frameworks through project-based instruction.",
-      icon: <Code className="h-10 w-10 text-blue-500" />
+      icon: <Code className="h-10 w-10 text-red-500" />
     },
     {
       title: "IT Infrastructure & Networking",
       description: "Build expertise in network design, implementation, and management with hands-on labs.",
-      icon: <Book className="h-10 w-10 text-blue-500" />
+      icon: <Book className="h-10 w-10 text-red-500" />
     },
     {
       title: "Enterprise IT Management",
       description: "Training programs for IT leadership, project management, and enterprise architecture.",
-      icon: <Users className="h-10 w-10 text-blue-500" />
+      icon: <Users className="h-10 w-10 text-red-500" />
     }
   ];
 
@@ -128,7 +128,7 @@ const ITTrainingPage = () => {
           {[...Array(10)].map((_, i) => (
             <div 
               key={i} 
-              className="absolute h-px bg-gradient-to-r from-blue-500 to-transparent" 
+              className="absolute h-px bg-gradient-to-r from-red-500 to-transparent" 
               style={{
                 top: `${i * 10}%`, 
                 width: '100%',
@@ -141,7 +141,7 @@ const ITTrainingPage = () => {
           {[...Array(10)].map((_, i) => (
             <div 
               key={i} 
-              className="absolute w-px bg-gradient-to-b from-blue-500 to-transparent" 
+              className="absolute w-px bg-gradient-to-b from-red-500 to-transparent" 
               style={{
                 left: `${i * 10}%`, 
                 height: '100%',
@@ -159,24 +159,24 @@ const ITTrainingPage = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 opacity-10"></div>
          
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-transparent"></div>
-          <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-blue-500 to-transparent"></div>
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-transparent"></div>
+          <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-red-500 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 py-32 relative z-10">
           <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-600 animate-text-gradient">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-600 animate-text-gradient">
               IT Training & Certification Programs
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-2xl text-gray-300 transform transition-all duration-1000 delay-500" 
                style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
               Accelerate your IT career with industry-leading certifications and hands-on technical training.
             </p>
-            <button className="bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg flex items-center group transition-all duration-300 transform hover:scale-105 hover:bg-blue-700 relative overflow-hidden">
+            <button className="bg-red-600 text-white font-semibold px-8 py-4 rounded-lg flex items-center group transition-all duration-300 transform hover:scale-105 hover:bg-red-700 relative overflow-hidden">
               <span className="relative z-10 flex items-center">
                 Explore Courses 
                 <ArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-500 group-hover:translate-x-2" />
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-red-700 to-red-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></span>
             </button>
           </div>
         </div>
@@ -186,8 +186,8 @@ const ITTrainingPage = () => {
       <div ref={servicesRef} className="container mx-auto px-4 py-24 observe-section">
         <div className="text-center mb-16">
           <h2 className={`text-3xl md:text-4xl font-bold mb-4 relative inline-block ${isVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 animate-gradient-x">Our Training Programs</span>
-            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400 transform scale-x-0 transition-transform duration-1000 delay-500 origin-left" style={{ transform: isVisible ? 'scaleX(1)' : 'scaleX(0)' }}></span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 animate-gradient-x">Our Training Programs</span>
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-red-400 transform scale-x-0 transition-transform duration-1000 delay-500 origin-left" style={{ transform: isVisible ? 'scaleX(1)' : 'scaleX(0)' }}></span>
           </h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto transform transition-all duration-1000 delay-700"
              style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
@@ -199,24 +199,24 @@ const ITTrainingPage = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className={`bg-gray-900 p-8 rounded-lg transform transition-all duration-700 hover:bg-gray-800 border border-gray-800 hover:border-blue-500 group relative overflow-hidden ${
+              className={`bg-gray-900 p-8 rounded-lg transform transition-all duration-700 hover:bg-gray-800 border border-gray-800 hover:border-red-500 group relative overflow-hidden ${
                 activeIndex !== null && index <= activeIndex ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="absolute -inset-px bg-gradient-to-r from-blue-500 to-transparent opacity-0 group-hover:opacity-20 rounded-lg transform scale-0 group-hover:scale-100 transition-all duration-500"></div>
+              <div className="absolute -inset-px bg-gradient-to-r from-red-500 to-transparent opacity-0 group-hover:opacity-20 rounded-lg transform scale-0 group-hover:scale-100 transition-all duration-500"></div>
               <div className="mb-6 group relative">
-                <div className="transform transition-all duration-500 group-hover:scale-110 group-hover:text-blue-400 relative">
+                <div className="transform transition-all duration-500 group-hover:scale-110 group-hover:text-red-400 relative">
                   {service.icon}
-                  <div className="absolute -inset-4 bg-blue-500 rounded-full opacity-0 group-hover:opacity-10 transform scale-0 group-hover:scale-100 transition-all duration-700"></div>
+                  <div className="absolute -inset-4 bg-red-500 rounded-full opacity-0 group-hover:opacity-10 transform scale-0 group-hover:scale-100 transition-all duration-700"></div>
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white relative inline-block">
                 {service.title}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-500"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-500"></span>
               </h3>
               <p className="text-gray-400 transition-all duration-300 group-hover:text-gray-300">{service.description}</p>
-              <div className="absolute bottom-0 right-0 h-16 w-16 bg-gradient-to-tl from-blue-500 to-transparent rounded-tl-full opacity-0 group-hover:opacity-10 transform translate-y-full group-hover:translate-y-0 transition-all duration-700"></div>
+              <div className="absolute bottom-0 right-0 h-16 w-16 bg-gradient-to-tl from-red-500 to-transparent rounded-tl-full opacity-0 group-hover:opacity-10 transform translate-y-full group-hover:translate-y-0 transition-all duration-700"></div>
             </div>
           ))}
         </div>
@@ -230,7 +230,7 @@ const ITTrainingPage = () => {
         {/* Animated background effect */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-900/10 via-transparent to-transparent"
             style={{
               transform: `translate(${Math.sin(scrollY / 1000) * 10}%, ${Math.cos(scrollY / 1000) * 10}%)`,
               transition: 'transform 1s ease-out'
@@ -241,7 +241,7 @@ const ITTrainingPage = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 transform transition-all duration-1000" 
                style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 animate-gradient-x">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 animate-gradient-x">
               Our Training Approach
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
@@ -251,17 +251,17 @@ const ITTrainingPage = () => {
 
           <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-4 md:gap-0 relative">
             {/* Animated connection line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-blue-900/50 via-blue-500/50 to-blue-900/50 transform -translate-y-1/2 z-0">
-              <div className="absolute top-0 left-0 right-0 h-full bg-blue-500/80 animate-pulse"></div>
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-red-900/50 via-red-500/50 to-red-900/50 transform -translate-y-1/2 z-0">
+              <div className="absolute top-0 left-0 right-0 h-full bg-red-500/80 animate-pulse"></div>
             </div>
             
             {processSteps.map((step, index) => (
               <div key={index} className="group w-full md:w-auto relative z-10" style={{ transitionDelay: `${index * 150}ms` }}>
                 <div 
-                  className="relative bg-black bg-opacity-50 backdrop-blur-sm rounded-lg p-6 md:mx-1 h-full flex flex-col items-center justify-center text-center border-t border-gray-800 group-hover:border-blue-500 transition-all duration-500 group-hover:bg-black group-hover:bg-opacity-70 transform group-hover:-translate-y-3"
+                  className="relative bg-black bg-opacity-50 backdrop-blur-sm rounded-lg p-6 md:mx-1 h-full flex flex-col items-center justify-center text-center border-t border-gray-800 group-hover:border-red-500 transition-all duration-500 group-hover:bg-black group-hover:bg-opacity-70 transform group-hover:-translate-y-3"
                 >
                   <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg group-hover:shadow-blue-500/20 relative overflow-hidden">
+                    <div className="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold transition-all duration-500 group-hover:scale-110 group-hover:rotate-12 group-hover:shadow-lg group-hover:shadow-red-500/20 relative overflow-hidden">
                       {index + 1}
                       <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transform scale-0 group-hover:scale-100 transition-all duration-700 rounded-full"></div>
                     </div>
@@ -269,11 +269,11 @@ const ITTrainingPage = () => {
                   <div className="mt-6">
                     <span className="font-medium text-gray-300 group-hover:text-white transition-colors duration-300">{step}</span>
                   </div>
-                  <div className="absolute inset-0 border border-transparent group-hover:border-blue-500/30 rounded-lg transform scale-105 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                  <div className="absolute inset-0 border border-transparent group-hover:border-red-500/30 rounded-lg transform scale-105 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
                 </div>
                 {index < processSteps.length - 1 && (
                   <div className="hidden md:block absolute w-8 h-1 top-1/2 right-0 transform translate-x-4 z-20">
-                    <div className="h-full w-full bg-blue-500 animate-pulse"></div>
+                    <div className="h-full w-full bg-red-500 animate-pulse"></div>
                   </div>
                 )}
               </div>
@@ -286,45 +286,45 @@ const ITTrainingPage = () => {
       <div ref={whyUsRef} className="container mx-auto px-4 py-24 observe-section">
         <div className="text-center mb-16 transform transition-all duration-1000" 
              style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 animate-gradient-x">Why Choose Our Training</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 animate-gradient-x">Why Choose Our Training</h2>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             We deliver excellence through expert instruction, hands-on learning, and ongoing career support.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-900 p-8 rounded-lg transition-all duration-500 hover:bg-gray-800 border border-gray-800 hover:border-blue-500 group relative overflow-hidden transform hover:-translate-y-2">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <div className="bg-gray-900 p-8 rounded-lg transition-all duration-500 hover:bg-gray-800 border border-gray-800 hover:border-red-500 group relative overflow-hidden transform hover:-translate-y-2">
+            <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <h3 className="text-xl font-semibold mb-4 text-white relative pb-2 inline-block">
               Expert-Led Training
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             </h3>
             <ul className="space-y-4 text-gray-300">
               {["Industry professionals with real-world experience", "Certified instructors for each technology domain", "Small class sizes with personalized attention"].map((item, i) => (
                 <li key={i} className="flex items-start transform transition-all duration-500 hover:translate-x-2 relative pl-6">
-                  <span className="absolute left-0 top-0 text-blue-500 font-bold transition-all duration-300 group-hover:text-blue-400">✓</span>
+                  <span className="absolute left-0 top-0 text-red-500 font-bold transition-all duration-300 group-hover:text-red-400">✓</span>
                   <span className="relative">
                     {item}
-                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-blue-500/30 group-hover:w-full transition-all duration-700 delay-100"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-500/30 group-hover:w-full transition-all duration-700 delay-100"></span>
                   </span>
                 </li>
               ))}
             </ul>
           </div>
           
-          <div className="bg-gray-900 p-8 rounded-lg transition-all duration-500 hover:bg-gray-800 border border-gray-800 hover:border-blue-500 group relative overflow-hidden transform hover:-translate-y-2">
-            <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          <div className="bg-gray-900 p-8 rounded-lg transition-all duration-500 hover:bg-gray-800 border border-gray-800 hover:border-red-500 group relative overflow-hidden transform hover:-translate-y-2">
+            <div className="absolute inset-0 bg-gradient-to-bl from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <h3 className="text-xl font-semibold mb-4 text-white relative pb-2 inline-block">
               Career Advancement
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             </h3>
             <ul className="space-y-4 text-gray-300">
               {["High certification pass rates", "Job placement assistance", "Resume and interview preparation coaching"].map((item, i) => (
                 <li key={i} className="flex items-start transform transition-all duration-500 hover:translate-x-2 relative pl-6">
-                  <span className="absolute left-0 top-0 text-blue-500 font-bold transition-all duration-300 group-hover:text-blue-400">✓</span>
+                  <span className="absolute left-0 top-0 text-red-500 font-bold transition-all duration-300 group-hover:text-red-400">✓</span>
                   <span className="relative">
                     {item}
-                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-blue-500/30 group-hover:w-full transition-all duration-700 delay-100"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-500/30 group-hover:w-full transition-all duration-700 delay-100"></span>
                   </span>
                 </li>
               ))}
@@ -342,7 +342,7 @@ const ITTrainingPage = () => {
           {[...Array(3)].map((_, i) => (
             <div 
               key={i}
-              className="absolute rounded-full bg-gradient-to-br from-blue-500 to-blue-800 blur-3xl"
+              className="absolute rounded-full bg-gradient-to-br from-red-500 to-red-800 blur-3xl"
               style={{
                 width: `${100 + i * 50}px`,
                 height: `${100 + i * 50}px`,
@@ -359,7 +359,7 @@ const ITTrainingPage = () => {
           {[...Array(3)].map((_, i) => (
             <div 
               key={i}
-              className="absolute rounded-full bg-gradient-to-br from-blue-600 to-blue-900 blur-3xl"
+              className="absolute rounded-full bg-gradient-to-br from-red-600 to-red-900 blur-3xl"
               style={{
                 width: `${80 + i * 40}px`,
                 height: `${80 + i * 40}px`,
@@ -373,25 +373,25 @@ const ITTrainingPage = () => {
           ))}
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-600 animate-gradient-x">Ready to Advance Your IT Career?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-red-400 to-red-600 animate-gradient-x">Ready to Advance Your IT Career?</h2>
           <p className="text-xl mb-10 max-w-2xl mx-auto text-gray-300 transform transition-all duration-1000" 
              style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(20px)' }}>
             Enroll in our IT training programs and certifications to gain the skills employers are looking for.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-600/20 relative overflow-hidden group">
+            <button className="bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-red-600/20 relative overflow-hidden group">
               <span className="relative z-10 flex items-center justify-center">
                 Browse Courses
                 <span className="absolute inset-0 bg-white rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left opacity-10"></span>
               </span>
-              <span className="absolute -inset-px bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></span>
+              <span className="absolute -inset-px bg-gradient-to-r from-red-600 to-red-500 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></span>
             </button>
-            <button className="bg-transparent border-2 border-blue-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:border-blue-400 hover:bg-black hover:bg-opacity-50 group relative overflow-hidden">
+            <button className="bg-transparent border-2 border-red-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:border-red-400 hover:bg-black hover:bg-opacity-50 group relative overflow-hidden">
               <span className="relative z-10 flex items-center justify-center">
                 Request Program Guide
-                <span className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></span>
+                <span className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent rounded-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></span>
               </span>
-              <span className="absolute -inset-px bg-gradient-to-r from-blue-500 to-transparent rounded-lg opacity-0 group-hover:opacity-30 blur-sm transition-opacity duration-500"></span>
+              <span className="absolute -inset-px bg-gradient-to-r from-red-500 to-transparent rounded-lg opacity-0 group-hover:opacity-30 blur-sm transition-opacity duration-500"></span>
             </button>
           </div>
         </div>
