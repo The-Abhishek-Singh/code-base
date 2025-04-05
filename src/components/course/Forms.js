@@ -1,13 +1,12 @@
 import React from 'react';
 
-const Form = () => {
-
+const Form = (props) => {
   return (
     <>
       <div className="form-card1">
         <div className="form-card2">
-          <form className="form">
-            <h1 className="form-heading text-black text-3xl">ENQUIRY FOR COURSE !!</h1>
+          <form className="form gap-[10px] sm:gap-[25px]">
+            <h1 className="form-heading text-black text-2xl sm:text-3xl sm:m-4 m-2">{props.text}</h1>
             <div className="form-field">
               <input required placeholder="Name" className="input-field" type="text" />
             </div>
@@ -15,8 +14,8 @@ const Form = () => {
               <input required placeholder="Email" className="input-field" type="email" />
             </div>
 
-            <div className='grid gap-2 grid-cols-5' >
-              <div className="form-field  col-span-1">
+            <div className='grid gap-2 grid-cols-[70px_1fr]' >
+              <div className="form-field ">
                 <input 
                   required 
                   placeholder="+91" 
@@ -25,7 +24,7 @@ const Form = () => {
                   maxLength="5"
                   />
                 </div>
-                <div className="form-field flex gap-2  col-span-4">
+                <div className="form-field flex gap-2">
                 <input 
                   required 
                   placeholder="Enter Mobile Number" 
@@ -48,7 +47,6 @@ const Form = () => {
           align-self: center;
           font-family: inherit;
           height: auto;
-          gap: 10px;
           padding-inline: 2em;
           padding-bottom: 0.2em;
           background-color: #fff;
@@ -58,7 +56,6 @@ const Form = () => {
           
           .form-heading {
             text-align: center;
-            margin: 1em;
             // font-size: 1em;
             background-color: transparent;
             align-self: center;
@@ -69,13 +66,13 @@ const Form = () => {
               align-items: center;
               justify-content: center;
               gap: 0.2em;
+              border: 1px solid #555;
               border-radius: 10px;
               padding: 0.4em;
-              border: none;
               outline: none;
               color: white;
               background-color: #fff;
-              box-shadow: inset 2px 3px 5px rgb(5, 5, 5);
+              // box-shadow: inset 2px 3px 5px rgb(5, 5, 5);
               }
               
               .input-field {
@@ -106,12 +103,12 @@ const Form = () => {
               background-color: #CB3939;
               color: #fff;
               cursor: pointer;
-              box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+              // box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
               }
               
               .form-card1 {
                 background-image: linear-gradient(163deg, #CB3939 0%, #CB3939 100%);
-                border-radius: 22px;
+                border-radius: 40px;
                 transition: all 0.3s;
                 }
                 
@@ -120,7 +117,7 @@ const Form = () => {
                   }
                   
                   .form-card2 {
-                    border-radius: 0;
+                    border-radius: 22px;
                     transition: all 0.2s;
                     }
                     

@@ -55,7 +55,7 @@ export default function Home() {
       rating: 5,
       category: "Development",
       image: "/Course/wd1.webp",
-      enrollUrl: "/courses/web-development", // Added enrollment URL
+      enrollUrl: "/courses/WEB-DEVELOPMENT", // Added enrollment URL
     },
     {
       id: 2,
@@ -63,7 +63,7 @@ export default function Home() {
       rating: 5,
       category: "Programming",
       image: "/Course/app1.jpg",
-      enrollUrl: "/courses/app-development", // Added enrollment URL
+      enrollUrl: "/courses/Application-Development", // Added enrollment URL
     },
     {
       id: 3,
@@ -71,15 +71,15 @@ export default function Home() {
       rating: 5,
       category: "Data Science",
       image: "/Course/data.jpg",
-      enrollUrl: "/courses/data-science", // Added enrollment URL
+      enrollUrl: "/courses/DATA-SCIENCE-&-AI", // Added enrollment URL
     },
     {
       id: 4,
-      title: " Cybersecurity & Ethical Hacking ",
+      title: " Cybersecurity",
       rating: 5,
       category: "Cybersecurity",
       image: "/Course/ethical.jpg",
-      enrollUrl: "/courses/cybersecurity", 
+      enrollUrl: "/courses/CYBER-SECURITY", 
     },
     {
       id: 5,
@@ -87,15 +87,15 @@ export default function Home() {
       rating: 5,
       category: "Cloud",
       image: "/Course/cloud.png",
-      enrollUrl: "/courses/cloud-computing", 
+      enrollUrl: "/courses/CYBER-SECURITY", 
     },
     {
       id: 6,
-      title: "AWS",
+      title: "AWS & DEVOPS",
       rating: 5,
       category: "Networking",
       image: "/Course/aws.jpg",
-      enrollUrl: "/courses/aws", 
+      enrollUrl: "/courses/AWS-DEVOPS", 
     },
     {
       id: 7,
@@ -103,7 +103,7 @@ export default function Home() {
       rating: 5,
       category: "Automation",
       image: "/Course/automation.jpg",
-      enrollUrl: "/courses/industrial-automation", 
+      enrollUrl: "/courses/INDUSTRIAL-AUTOMATION", 
     },
     {
       id: 8,
@@ -111,7 +111,7 @@ export default function Home() {
       rating: 5,
       category: "Security",
       image: "/Course/ethical.jpg",
-      enrollUrl: "/courses/information-security", 
+      enrollUrl: "/courses/INFORMATION-SECURITY", 
     },
   ];
 

@@ -102,8 +102,10 @@ const Footer = () => {
                 <li className="hover:text-red-500">
                   Custom Software development
                 </li>
-                <li className="hover:text-red-500">
-                  Become a Franchise partner
+                <li>
+                  <Link href="/Franchise" className="hover:text-red-500">
+                    Become Franchise Partner
+                  </Link>
                 </li>
               </ul>
             </div>
