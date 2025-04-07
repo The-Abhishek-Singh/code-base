@@ -196,7 +196,7 @@ function page(){
             <div className='absolute h-[200px] w-[200px] top-32 left-48 rounded-full bg-[#1DD9FF] blur-[180px]'/>
             <Image src='/coursePage/100.png' alt='#' width={100} height={100} className='absolute bottom-0 h-auto w-full'/>
             <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
-                <div className='left h-fit xl:w-1/2 w-full mt-20 xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
+                <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
                 <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
                 ONLINE Amazon Web Services COURSE
@@ -216,7 +216,7 @@ function page(){
                 <Button text='Explore Now' />
                 </ScrollReveal>   
                 </div>
-                  <div className='right h-fit xl:w-1/2 w-full xl:mt-20 xl:p-28 md:px-48 p-4'>
+                  <div className='right h-fit xl:w-1/2 w-full xl:p-28 md:px-48 p-4'>
                   <ScrollReveal animation='slideLeft' delay={400} easing='smooth'>
                       <div className='h-full w-full'>
                       <Form text='Free Career Counselling is just a call away!'/>
@@ -226,7 +226,9 @@ function page(){
 
             </div>
             <ScrollReveal animation='scaleUp' delay={200} easing='smooth' className='relative bottom-0 -translate-x-1/2 w-full z-20'>
-            <div className='h-auto sm:w-[85%] w-[75%] rounded-lg px-5 py-3 bg-[#fff] relative bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 flex justify-between z-20'>
+            <div className='h-auto sm:w-[85%] w-[75%] rounded-lg px-5 py-3 bg-[#fff] relative bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 flex justify-between
+            
+            '>
             <ScrollReveal animation='slideUp' delay={800} easing='spring' className='relative flex flex-col sm:flex-row w-full text-black gap-5'>
                 <div className='flex flex-col sm:flex-row w-full text-black gap-5'>
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
@@ -435,6 +437,7 @@ function page(){
            <div className="mt-10 grid md:grid-cols-3 gap-6">
              {projects.map((project, index) => (
               <ScrollReveal
+              key={project.title}
               animation="scaleUp"
               duration={1200}
               delay={200}

@@ -2,21 +2,25 @@ import React from 'react';
 
 const mentors = [
   {
+    id: 101,
     name: 'Anshuman Singh',
     title: 'Founder at Scaler, ex - meta',
     image: 'https://via.placeholder.com/300', // Replace with actual image URL
   },
   {
+    id: 102,
     name: 'Naman Balla',
     title: 'Founder at Scaler, ex - meta',
     image: 'https://via.placeholder.com/300', // Replace with actual image URL
   },
   {
+    id: 103,
     name: 'Anshuman Singh',
     title: 'Founder at Scaler, ex - meta',
     image: 'https://via.placeholder.com/300', // Replace with actual image URL
   },
   {
+    id: 104,
     name: 'Anshuman Singh',
     title: 'Founder at Scaler, ex - meta',
     image: 'https://via.placeholder.com/300', // Replace with actual image URL
@@ -25,14 +29,17 @@ const mentors = [
 
 const reviews = [
   {
+    id: 201,
     reviewer: 'Riya',
     text: 'The training was awesome. The instructor has done a great job. He was very patient throughout the sessions and took additional time to explain the concepts further when we had queries.',
   },
   {
+    id: 202,
     reviewer: 'Riya',
     text: 'The training was awesome. The instructor has done a great job. He was very patient throughout the sessions and took additional time to explain the concepts further when we had queries.',
   },
   {
+    id: 203,
     reviewer: 'Riya',
     text: 'The training was awesome. The instructor has done a great job. He was very patient throughout the sessions and took additional time to explain the concepts further when we had queries.',
   }
@@ -68,9 +75,9 @@ const MentorsSection = () => {
         gap: '1.5rem',
         marginBottom: '3rem'
       }}>
-        {mentors.map((mentor, index) => (
+        {mentors.map((mentor) => (
           <div 
-            key={index} 
+            key={mentor.id} 
             style={{
               backgroundColor: 'white',
               borderRadius: '0.5rem',
@@ -124,9 +131,9 @@ const MentorsSection = () => {
         gridTemplateColumns: 'repeat(3, 1fr)',
         gap: '1.5rem'
       }}>
-        {reviews.map((review, index) => (
+        {reviews.map((review) => (
           <div 
-            key={index} 
+            key={review.id} 
             style={{
               backgroundColor: 'white',
               borderRadius: '0.5rem',

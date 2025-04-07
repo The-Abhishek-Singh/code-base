@@ -94,11 +94,31 @@ const FAQSection = () => {
   // Sample FAQ data
   const sections = ['General', 'Pricing', 'Features', 'Support', 'Security'];
   const faqData = {
-    General: ['What is your product?', 'How do I get started?', 'Is there a free trial?'],
-    Pricing: ['How much does it cost?', 'Do you offer discounts?', 'What payment methods do you accept?'],
-    Features: ['What are the key features?', 'How does feature X work?', 'Can I integrate with other tools?'],
-    Support: ['How can I contact support?', 'What are your support hours?', 'Do you have documentation?'],
-    Security: ['Is my data secure?', 'Do you support 2FA?', 'What encryption do you use?']
+    General: [
+      {id: 1, question: 'What is your product?'},
+      {id: 2, question: 'How do I get started?'},
+      {id: 3, question: 'Is there a free trial?'}
+    ],
+    Pricing: [
+      {id: 4, question: 'How much does it cost?'},
+      {id: 5, question: 'Do you offer discounts?'},
+      {id: 6, question: 'What payment methods do you accept?'}
+    ],
+    Features: [
+      {id: 7, question: 'What are the key features?'},
+      {id: 8, question: 'How does feature X work?'},
+      {id: 9, question: 'Can I integrate with other tools?'}
+    ],
+    Support: [
+      {id: 10, question: 'How can I contact support?'},
+      {id: 11, question: 'What are your support hours?'},
+      {id: 12, question: 'Do you have documentation?'}
+    ],
+    Security: [
+      {id: 13, question: 'Is my data secure?'},
+      {id: 14, question: 'Do you support 2FA?'},
+      {id: 15, question: 'What encryption do you use?'}
+    ]
   };
 
   // Close mobile menu when clicking outside
@@ -207,8 +227,8 @@ const FAQSection = () => {
             {activeSection}
           </h3>
           <div className="space-y-4">
-            {faqData[activeSection].map((question, index) => (
-              <FAQItem key={index} question={question} />
+            {faqData[activeSection].map((item) => (
+              <FAQItem key={item.id} question={item.question} />
             ))}
           </div>
           </ScrollReveal>
