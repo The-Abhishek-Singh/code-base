@@ -445,9 +445,9 @@ export default function BecomeAFranchise() {
             index={0}
             stagger={150}
           >
-             <Button>
+             {/* <Button>
               Apply Now
-            </Button>
+            </Button> */}
           </ScrollReveal>
         </div>
       </div>
