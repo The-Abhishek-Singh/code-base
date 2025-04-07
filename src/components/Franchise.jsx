@@ -447,7 +447,7 @@ export default function BecomeAFranchise() {
             index={0}
             stagger={150}
           >
-            <Button className="bg-red-600 text-white hover:bg-red-700 px-8 py-3 rounded-md shadow-lg font-semibold">
+             <Button variant="default" size="lg">
               Apply Now
             </Button>
           </ScrollReveal>
