@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../UI/button";
+import Button from "../UI/button";
 import Image from "next/image";
 import ScrollReveal from "../ScrollReveal";
 

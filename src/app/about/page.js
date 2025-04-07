@@ -1,6 +1,6 @@
 import React from "react";
 // import { Button } from "@/components/ui/button";
-import { Button } from "@/components/UI/button";
+import Button from "@/components/UI/button";
 import StatsAndCommitments from "@/components/About/StatsAndCommitments";
 import BlueNWhite from "@/components/About/BlueNWhite";
 import WhyChooseInnovetix from "@/components/About/WhyChoosecareertronic";
@@ -102,7 +102,7 @@ function page() {
   md:px-10 md:py-6 md:text-xl
   lg:px-12 lg:py-7 lg:text-2xl
   rounded-md font-medium transition-all
-"
+" variant="default" size="lg"
                   >
                     Get Started
                   </Button>

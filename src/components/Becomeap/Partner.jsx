@@ -189,6 +189,7 @@ const PartnerPage = () => {
         >
           {benefits.map((benefit, index) => (
             <ScrollReveal
+              key={benefit.title}
               animation="slideRight"
               duration={800}
               easing="spring"
@@ -219,6 +220,7 @@ const PartnerPage = () => {
         <div className="space-y-4 sm:space-y-6 lg:space-y-8 flex flex-col items-center">
           {steps.map((step, index) => (
             <ScrollReveal
+              key={step.number}
               animation="slideLeft"
               duration={800}
               easing="spring"

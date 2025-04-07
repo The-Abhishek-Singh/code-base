@@ -199,17 +199,17 @@ function page(){
                 <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
                 <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
-                  ONLINE DEVOPS & CLOUD COMPUTING COURSE
+                  ONLINE CLOUD COMPUTING COURSE
                 </div>
                 </ScrollReveal>
                 <ScrollReveal animation='fadeIn' delay={300} easing='spring'>
                   <h1 className='xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-bold'>
-                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>DevOps & Cloud Computing</span>
+                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Cloud Computing</span>
                   </h1>
                 </ScrollReveal>
                 <ScrollReveal animation='slideUp' delay={500} easing='smooth'>
                   <p className='lg:text-xl sm:text-lg tracking-wide'>
-                      DevOps and Cloud Computing is a course that covers the principles, tools, and practices used in modern software development and deployment. It focuses on DevOps, which integrates development and operations to improve collaboration, automate processes, and accelerate software delivery. The course also explores Cloud Computing, enabling scalable, on-demand access to computing resources.
+                  Cloud Computing is a course that introduces the fundamentals of delivering computing services over the internet. It covers key concepts such as virtualization, cloud service models (IaaS, PaaS, SaaS), deployment models (public, private, hybrid), and cloud architecture. The course also explores platforms like AWS, Microsoft Azure, and Google Cloud, providing hands-on experience in deploying and managing cloud-based applications and infrastructure efficiently and securely.
                   </p>
                 </ScrollReveal>
                 <ScrollReveal animation='scaleUp' delay={700} easing='bouncy'>
