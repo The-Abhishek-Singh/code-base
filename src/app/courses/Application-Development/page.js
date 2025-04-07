@@ -194,7 +194,7 @@ function page(){
         {/* Hero Section */}
         <div className='min-h-[75vh] 2xl:min-h-[50vh] w-full bg-zinc-950 relative'>
             <div className='absolute h-[200px] w-[200px] top-32 left-48 rounded-full bg-[#1DD9FF] blur-[180px]'/>
-            <Image src='/coursePage/100.png' alt='#' width={100} height={100} className='absolute bottom-0 h-auto w-full'/>
+            <Image src='/coursePage/100.png' alt='#' width={600} height={600} className='absolute bottom-0 left-0 h-auto w-full'/>
             <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
                 <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
@@ -223,7 +223,6 @@ function page(){
                       </div>
                   </ScrollReveal>
                   </div>
-
             </div>
             <ScrollReveal animation='scaleUp' delay={200} easing='smooth' className='relative bottom-0 -translate-x-1/2 w-full z-20'>
             <div className='h-auto sm:w-[85%] w-[75%] rounded-lg px-5 py-3 bg-[#fff] relative bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 flex justify-between'>
@@ -258,9 +257,9 @@ function page(){
         <div className="relative h-full">
             <Image src='/coursePage/103.png' alt='.' width={450} height={450} className='absolute -bottom-1 left-0 w-auto h-auto max-w-full max-h-[60vh]'/>
             <ScrollReveal animation='fadeIn' delay={700} easing='spring' className='relative h-full'> 
-                <Image src='/coursePage/102.png' alt='..' width={400} height={400} className='absolute bottom-80 left-72 w-auto h-auto max-w-[80%] hidden lg:block'/>
+                <Image src='/coursePage/102.png' alt='..' width={400} height={400} className='absolute bottom-80 left-72 w-auto h-auto max-w-[60%] hidden lg:block'/>
             </ScrollReveal>
-                <Image src='/coursePage/101.png' alt='...' width={1000} height={1000} className='absolute -bottom-1 left-0 h-auto 3xl:max-w-[50%] w-full'/>
+                <Image src='/coursePage/101.png' alt='...' width={1000} height={1000} className='absolute -bottom-1 left-0 h-auto xl:max-w-full 2xl:w-[700px] w-full'/>
         </div>
     </div>
     
@@ -273,7 +272,7 @@ function page(){
         </ScrollReveal>
         
         {/* Steps Section - Reorganizes on smaller screens */}
-        <div className="flex flex-col md:flex-row w-full p-2 md:p-4 gap-6 md:gap-2 lg:gap-4 xl:gap-8 mt-8 lg:mt-0">
+        <div className="flex flex-col md:flex-row w-full justify-around p-2 md:p-4 gap-6 md:gap-2 lg:gap-4 xl:gap-8 mt-8 lg:mt-0">
             {/* Step 1 */}
             <ScrollReveal animation='scaleUp' delay={600} easing='spring'>
                 <div className="flex flex-col items-center mb-2 sm:mb-4 md:mb-0 flex-1">
@@ -288,7 +287,7 @@ function page(){
             </ScrollReveal>
 
             {/* Arrow 1 - Changes direction on mobile */}
-            <ScrollReveal animation='fadeIn' delay={900} easing='gentle' className="hidden md:flex items-center justify-center mx-0 sm:mx-1 lg:mx-2 xl:mx-4 relative self-center flex-shrink">
+            <ScrollReveal animation='fadeIn' delay={900} easing='gentle' className="hidden md:flex items-center justify-center mx-0 sm:mx-1 lg:mx-2 xl:mx-4 relative self-center flex-shrink-0">
                 <Image src='/coursePage/Vector.png' alt="Arrow" width={60} height={60} className="relative bottom-7 w-6 h-auto md:w-8 lg:w-10 xl:w-auto"/>
             </ScrollReveal>
             {/* Mobile down arrow instead of right arrow */}
@@ -313,7 +312,7 @@ function page(){
             </ScrollReveal>
 
             {/* Arrow 2 - Changes direction on mobile */}
-            <ScrollReveal animation='fadeIn' delay={1100} easing='gentle' className="hidden md:flex items-center justify-center mx-0 sm:mx-1 lg:mx-2 xl:mx-4 relative self-center flex-shrink">
+            <ScrollReveal animation='fadeIn' delay={1100} easing='gentle' className="hidden md:flex items-center justify-center mx-0 sm:mx-1 lg:mx-2 xl:mx-4 relative self-center flex-shrink-0">
                 <Image src='/coursePage/Vector.png' alt="Arrow" width={60} height={60} className="relative bottom-7 w-6 h-auto md:w-8 lg:w-10 xl:w-auto"/>
             </ScrollReveal>
             {/* Mobile down arrow instead of right arrow */}
