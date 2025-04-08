@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { ArrowRight, Cpu, Shield, Settings, Laptop, Zap, Users, BarChart, BookOpen, Award, Briefcase, Globe, LineChart, Code } from 'lucide-react';
 
 const CorporateIndustrialTrainingPage = () => {
@@ -379,6 +380,7 @@ const CorporateIndustrialTrainingPage = () => {
             Partner with us to develop customized training solutions that enhance your team's capabilities and drive business growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <Link href={'/contact'}>
             <button className="bg-gradient-to-r from-red-700 to-red-800 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-red-600/20 relative overflow-hidden group">
               <span className="relative z-10 flex items-center justify-center">
                 Request Consultation
@@ -386,6 +388,7 @@ const CorporateIndustrialTrainingPage = () => {
               </span>
               <span className="absolute -inset-px bg-gradient-to-r from-red-600 to-red-700 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></span>
             </button>
+          </Link>
             <button className="bg-transparent border-2 border-gray-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:border-red-400 hover:bg-black hover:bg-opacity-50 group relative overflow-hidden">
               <span className="relative z-10 flex items-center justify-center">
                 Download Solutions Catalog

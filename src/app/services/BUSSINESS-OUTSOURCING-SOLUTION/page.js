@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Globe, Briefcase, Award, Building, MapPin, Zap, Users, GraduationCap, Shield, Heart, Plane, Camera, DollarSign, Code, Database, Headphones, Clock, FileText, PieChart } from 'lucide-react';
+import Link from 'next/link';
 
 const BusinessOutsourcingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -379,6 +380,7 @@ const BusinessOutsourcingPage = () => {
             Take the first step toward optimized operations, reduced costs, and accelerated business growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <Link href={'/contact'}>
             <button className="bg-gradient-to-r from-red-700 to-red-800 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-red-600/20 relative overflow-hidden group">
               <span className="relative z-10 flex items-center justify-center">
                 Free Consultation
@@ -386,6 +388,7 @@ const BusinessOutsourcingPage = () => {
               </span>
               <span className="absolute -inset-px bg-gradient-to-r from-red-600 to-red-700 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></span>
             </button>
+          </Link>
             <button className="bg-transparent border-2 border-gray-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:border-red-400 hover:bg-black hover:bg-opacity-50 group relative overflow-hidden">
               <span className="relative z-10 flex items-center justify-center">
                 Download Outsourcing Guide

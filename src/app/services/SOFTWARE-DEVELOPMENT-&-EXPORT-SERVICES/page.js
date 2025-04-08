@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { ArrowRight, Code, Database, Globe, Laptop, Server, Users } from 'lucide-react';
 
 const SoftwareServicesPage = () => {
@@ -379,6 +380,7 @@ const SoftwareServicesPage = () => {
             Let's discuss how our software development and export services can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <Link href={'/contact'}>
             <button className="bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-lg hover:shadow-red-600/20 relative overflow-hidden group">
               <span className="relative z-10 flex items-center justify-center">
                 Contact Us
@@ -386,6 +388,7 @@ const SoftwareServicesPage = () => {
               </span>
               <span className="absolute -inset-px bg-gradient-to-r from-red-600 to-red-500 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></span>
             </button>
+          </Link>
             <button className="bg-transparent border-2 border-red-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:border-red-400 hover:bg-black hover:bg-opacity-50 group relative overflow-hidden">
               <span className="relative z-10 flex items-center justify-center">
                 Request a Quote
