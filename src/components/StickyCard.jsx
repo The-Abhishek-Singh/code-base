@@ -1,179 +1,157 @@
-"use client"
+'use client';
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
-import React, { useEffect, useRef, useState } from 'react';
-
-export default function ComponentPage() {
-  const rightSectionRef = useRef(null);
-  const leftSectionRef = useRef(null);
-  const [hasScrolledPastCards, setHasScrolledPastCards] = useState(false);
+export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  
+  // Sample carousel data
+  const slides = [
+    {
+      id: 1,
+      title: "Welcome to Our Platform",
+      subtitle: "Discover the future of digital experiences",
+      imageUrl: "/Dholu.png", // Replace with your image path
+      ctaText: "Get Started",
+    },
+    {
+      id: 2,
+      title: "Innovative Solutions",
+      subtitle: "Designed for modern businesses",
+      imageUrl: "/paglu.png", // Placeholder image
+      ctaText: "Learn More",
+    },
+    {
+      id: 3,
+      title: "Join Our Community",
+      subtitle: "Connect with industry experts",
+      imageUrl: "/Bholu.png", // Placeholder image
+      ctaText: "Sign Up Now",
+    },
+  ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (!rightSectionRef.current) return;
-
-      const rightSection = rightSectionRef.current;
-      const scrollPosition = rightSection.scrollTop;
-      const maxScroll = rightSection.scrollHeight - rightSection.clientHeight;
-      
-      // Check if we've scrolled past all cards
-      // The last card is at the bottom of the container plus some extra space
-      const allCardsHeight = rightSection.scrollHeight - 100; // Estimate where cards end
-      
-      if (scrollPosition >= allCardsHeight) {
-        setHasScrolledPastCards(true);
-      } else {
-        setHasScrolledPastCards(false);
-      }
-
-      // If we're near the end of the right section scrolling
-      if (scrollPosition > maxScroll - 100) {
-        // Calculate how much "overflow" scroll to apply to the main document
-        const overflowAmount = scrollPosition - (maxScroll - 100);
-        // Apply a delayed scroll to the whole document
-        setTimeout(() => {
-          window.scrollTo({
-            top: overflowAmount * 0.5, // Adjust the multiplier to control the scroll speed
-            behavior: 'smooth'
-          });
-        }, 200); // 200ms delay
-      }
-    };
-
-    const rightSection = rightSectionRef.current;
-    if (rightSection) {
-      rightSection.addEventListener('scroll', handleScroll);
-    }
-
-    return () => {
-      if (rightSection) {
-        rightSection.removeEventListener('scroll', handleScroll);
-      }
-    };
+    const interval = setInterval(() => {
+      setCurrentSlide(prevSlide => (prevSlide + 1) % slides.length);
+    }, 6000);
+    
+    return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    setIsAnimating(true);
+    const timer = setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+    
+    return () => clearTimeout(timer);
+  }, [currentSlide]);
+
+  const goToSlide = (index) => {
+    if (isAnimating) return;
+    setCurrentSlide(index);
+  };
+
+  const goToNextSlide = () => {
+    if (isAnimating) return;
+    setCurrentSlide((currentSlide + 1) % slides.length);
+  };
+
+  const goToPrevSlide = () => {
+    if (isAnimating) return;
+    setCurrentSlide((currentSlide - 1 + slides.length) % slides.length);
+  };
+
   return (
-    <div className="flex flex-col min-h-screen relative">
-      {/* Main content area */}
-      <div
-        className="flex flex-row h-full p-70 "
-        style={{
-          backgroundImage: "url('/mainHome/CBG1.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Left section - sticky */}
-        <div
-          ref={leftSectionRef}
-          className="w-1/2 sticky h-screen flex flex-col justify-center px-16 z-0 bg-opacity-80"
-        >
-          <h1 className="text-5xl font-bold mb-4">
-            Fast-Track Your Success with Effortless <span className='text-red-600'>Onboarding</span>
-          </h1>
-          <p className="mb-6">
-            Careertronic ensures a smooth, hassle-free onboarding experience...
-          </p>
-          <div className="flex gap-4">
-            <button className="bg-red-600 hover:border-s-8 hover:border-white text-white px-6 py-2 rounded">
-              Get Started
-            </button>
-            <button className="border px-6 py-2 rounded hover:bg-white hover:text-black">Book a demo</button>
+    <div className="relative h-screen w-full overflow-hidden bg-black -mt-16">
+      
+      {/* Carousel container */}
+      <div className="relative h-full w-full">
+        {/* Slides */}
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 h-full w-full transition-opacity duration-500 ease-in-out ${
+              currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+          >
+            {/* Background image or color */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ 
+                backgroundImage: `url(${slide.imageUrl})`,
+                backgroundPosition: 'center',
+              }}
+            ></div>
+            
+            {/* Top gradient overlay */}
+            <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent z-10"></div>
+            
+            {/* Bottom gradient overlay */}
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10"></div>
+            
+            {/* Center overlay gradient for better text visibility */}
+            <div className="absolute inset-0 bg-black/30 z-10"></div>
+            
+            {/* Content container */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 sm:px-6 lg:px-8">
+              <div className={`transform transition-all duration-700 delay-200 ${
+                currentSlide === index ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+              }`}>
+                <h2 className="text-white text-4xl md:text-6xl font-bold mb-4 text-center">
+                  {slide.title}
+                </h2>
+                <p className="text-gray-200 text-xl md:text-2xl mb-8 text-center max-w-3xl mx-auto">
+                  {slide.subtitle}
+                </p>
+                <div className="flex justify-center">
+                  <button className="bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-md font-medium text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg">
+                    {slide.ctaText}
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
 
-        {/* Right section - scrollable with perfectly aligned sticky cards */}
-        <div
-          ref={rightSectionRef}
-          className="h-[100vh] overflow-y-auto pr-16 absolute right-0 w-full" style={{scrollbarWidth: "none"}}
+        {/* Navigation arrows */}
+        <button 
+          onClick={goToPrevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 backdrop-blur-sm"
+          aria-label="Previous slide"
         >
-          <div className="flex flex-col gap-64 p-68 items-end">
-            {/* First card */}
-            <div
-              className="w-1/2 h-[17rem] sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg mt-32 overflow-hidden"
-              style={{
-                backgroundImage: "url('/mainHome/CBG.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              <div className="bg-opacity-70 p-4 h-full rounded-lg">
-                <h2 className="text-xl font-bold">Feature 1</h2>
-                <p>Content for feature 1</p>
-              </div>
-            </div>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        
+        <button 
+          onClick={goToNextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 text-white p-4 rounded-full transition-all duration-300 backdrop-blur-sm"
+          aria-label="Next slide"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
 
-            {/* Second card */}
-            <div
-              className="w-1/2 h-[17rem] sticky top-1/2 transform translate-y-[-13%] p-4 rounded-lg overflow-hidden"
-              style={{
-                backgroundImage: "url('/mainHome/CBG.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              <div className="bg-opacity-70 p-4 h-full rounded-lg">
-                <h2 className="text-xl font-bold">Feature 2</h2>
-                <p>Content for feature 2</p>
-              </div>
-            </div>
-
-            {/* Third card */}
-            <div
-              className="w-1/2 h-[17rem] sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg overflow-hidden"
-              style={{
-                backgroundImage: "url('/mainHome/CBG.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              <div className="bg-opacity-70 p-4 h-full rounded-lg">
-                <h2 className="text-xl font-bold">Feature 3</h2>
-                <p>Content for feature 3</p>
-              </div>
-            </div>
-
-            {/* Fourth card */}
-            <div
-              className="w-1/2 h-[17rem] sticky top-1/2 transform -translate-y-1/2 p-4 rounded-lg overflow-hidden"
-              style={{
-                backgroundImage: "url('/mainHome/CBG.png')",
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              <div className="bg-opacity-70 p-4 h-full rounded-lg">
-                <h2 className="text-xl font-bold">Feature 4</h2>
-                <p>Content for feature 4</p>
-              </div>
-            </div>
+        {/* Slide indicators */}
+        <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center">
+          <div className="flex space-x-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? 'bg-red-600 w-8' : 'bg-white/50 hover:bg-white/70'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              ></button>
+            ))}
           </div>
         </div>
       </div>
-      
-      {/* Additional content that appears after scrolling past cards */}
-      {hasScrolledPastCards && (
-        <div className="w-full bg-gray-100 py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8">Additional Content</h2>
-            <p className="mb-4">This content appears after scrolling past all cards.</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-3">Feature Details</h3>
-                <p>More information about our features and capabilities.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-3">Testimonials</h3>
-                <p>See what our customers are saying about us.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-xl font-semibold mb-3">Contact Us</h3>
-                <p>Get in touch with our team for more information.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
