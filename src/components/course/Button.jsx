@@ -1,10 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Button = (props) => {
   return (
     <>
-      <button className='btn-Comp'> {props.text}
-      </button>
+    <Link href={'/contact'}>
+      <button className='btn-Comp'> {props.text}</button>
       <style>{`
         .btn-Comp {
         position: relative;
@@ -79,6 +80,7 @@ const Button = (props) => {
         transition: box-shadow 0.2s ease-in;
         }`}
         </style>
+        </Link>
       </>
   );
 }

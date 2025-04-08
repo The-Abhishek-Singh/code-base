@@ -213,7 +213,7 @@ function page(){
                   </p>
                 </ScrollReveal>
                 <ScrollReveal animation='scaleUp' delay={700} easing='bouncy'>
-                <Button text='Explore Now' />
+                <Button text='Enquire Now' />
                 </ScrollReveal>   
                 </div>
                   <div className='right h-fit xl:w-1/2 w-full xl:p-28 md:px-48 p-4'>
