@@ -15,7 +15,7 @@ export default function ContactPage() {
 
       <div className="min-h-screen bg-black text-white overflow-hidden">
         {/* Background gradient */}
-        <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-black to-red-800/40 z-0"></div>
+        <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-black to-black z-0"></div>
 
         {/* Floating elements */}
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">

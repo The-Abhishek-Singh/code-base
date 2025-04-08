@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 import ScrollReveal from "../ScrollReveal";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -102,8 +103,8 @@ const ServicesList = () => {
   // Counter logic for stats section
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
-  const target1 = 127000;
-  const target2 = 428000000;
+  const target1 = 1000;
+  const target2 = 80000;
 
   useEffect(() => {
     const animateCount = (setCount, target) => {
@@ -142,37 +143,58 @@ const ServicesList = () => {
       className="min-h-screen bg-black flex flex-col items-center p-0 space-y-12 relative"
     >
       {/* Vertical Line Container */}
-      <div
-        ref={lineContainerRef}
-        className="fixed left-1/2 transform -translate-x-1/2 w-1 sm:ml-[-36px] ml-[16px] top-[340px]"
-        style={{
-          top: firstNodeRef.current
-            ? `${firstNodeRef.current.getBoundingClientRect().top + 2}px` // Adding offset to align with dot center
-            : "0",
-        }}
-      >
-        {/* Red Line Starting from First Node */}
-        <div
-          className="absolute left-0 top-12 w-1 bg-red-700 transition-all duration-[3000ms] max-[425px]:left-[-3px]"
-          style={{
-            height: `${scrollHeight}px`,
-            maxHeight:
-              typeof window !== "undefined"
-                ? window.innerWidth >= 1700
-                  ? `calc(100vh - 5px)` // For 4K/UHD screens (1700px+)
-                  : window.innerWidth >= 1440
-                  ? `calc(75vh - 6px)` // For 1440px screens
-                  : window.innerWidth >= 1024
-                  ? `calc(104vh - 6px)` // For XL/large screens
-                  : window.innerWidth >= 768
-                  ? `calc(125vh - 6px)` // For medium screens
-                  : window.innerWidth >= 425
-                  ? `calc(250vh- 6px)` // For small screens (320px-767px)
-                  : `calc(190vh - 6px)` // For extra small screens (<320px)
-                : `calc(200vh - 6px)`,
-          }}
-        ></div>
-      </div>
+<div
+  ref={lineContainerRef}
+  className="fixed left-1/2 transform -translate-x-1/2 w-1 sm:ml-[-36px] ml-[16px] top-[340px]"
+  style={{
+    top: firstNodeRef.current
+      ? `${firstNodeRef.current.getBoundingClientRect().top + 2}px`
+      : "0",
+  }}
+>
+  {/* Red Line Starting from First Node */}
+  <div
+    className="absolute left-[50%] transform -translate-x-1/2 top-12 w-1 bg-red-700 transition-all duration-[3000ms]"
+    style={{
+      height: `${scrollHeight}px`,
+      maxHeight: typeof window !== "undefined"
+        ? window.innerWidth >= 1700
+          ? `calc(100vh - 5px)`
+          : window.innerWidth >= 1440
+            ? `calc(75vh - 6px)`
+            : window.innerWidth >= 1024
+              ? `calc(104vh - 6px)`
+              : window.innerWidth >= 768
+                ? `calc(125vh - 6px)`
+                : window.innerWidth >= 425
+                  ? `calc(250vh - 6px)`
+                  : `calc(190vh - 6px)`
+        : `calc(200vh - 6px)`,
+    }}
+  ></div>
+</div>
+
+{/* Timeline dot */}
+<div
+  className="absolute w-6 h-6 bg-black border-2 border-white rounded-full
+    left-1/2 
+    max-[425px]:-translate-x-[16%]
+    sm:-translate-x-[200%]
+    md:-translate-x-[250%]
+    lg:-translate-x-[200%]
+    xl:-translate-x-[180%]
+    2xl:-translate-x-[170%]
+    top-9
+    sm:top-9
+    flex items-center justify-center"
+  style={{
+    zIndex: 10,
+    boxShadow: "0 0 0 1px rgba(255,255,255,0.1)",
+  }}
+>
+  {/* Inner dot - creates a hole effect */}
+  <div className="w-2 h-2 bg-red-700 rounded-full"></div>
+</div>
 
       {services.map((service, index) => (
         <div
@@ -657,7 +679,7 @@ const ServicesList = () => {
 
       {/* Stats Section */}
 
-      <div className="bg-white text-black py-10 px-4 flex flex-col md:flex-row justify-evenly items-center space-y-6 md:space-y-0 md:space-x-16 lg:space-x-24 w-screen max-w-[110rem] mx-auto">
+      <div className="bg-white text-black py-10 px-4 flex flex-col md:flex-row justify-evenly items-center space-y-6 md:space-y-0 md:space-x-16 lg:space-x-24 w-screen max-w-[110rem] mx-auto my-20">
         <div>
           <h3 className="text-red-500 text-3xl font-bold pb-2">
             {count1.toLocaleString()}
@@ -696,7 +718,7 @@ const ServicesList = () => {
           <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
         </h2>
         {/* Description */}
-        <p className="mt-4 max-w-3xl mx-auto text-xl leading-relaxed">
+        <p className="max-w-3xl mx-auto text-xl leading-relaxed my-16">
           At Careertronic Global Services, our strength lies in our skilled and
           passionate team, dedicated to delivering innovative solutions for your
           success. From software developers and IT trainers to business
@@ -719,9 +741,11 @@ const ServicesList = () => {
 
         {/* Button */}
         <div className="mt-6">
+        <Link href={'/ourteam'}>
           <button className="bg-red-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
             Show All
           </button>
+        </Link>
         </div>
       </div>
     </div>
