@@ -31,7 +31,7 @@ const Navbar = () => {
     }
   };
   const items = [
-    { title: "Home", link: "/" },
+    { title: "Home", link: "/home" },
     { title: "About Us", link: "/about" },
     { title: "Services", link: "/services" },
     { title: "Courses", link: "/courses" },
