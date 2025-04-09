@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../UI/button";
 import Image from "next/image";
+import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
 
 const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
@@ -264,9 +265,11 @@ const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
           delay={900}
           easing="bouncy"
         >
+          <Link href={'/contact'}>
           <Button className="bg-red-600 text-white hover:bg-red-700 px-8 py-3 rounded-md shadow-lg font-semibold">
             Get Started
           </Button>
+          </Link>
         </ScrollReveal>
       </div>
     </div>

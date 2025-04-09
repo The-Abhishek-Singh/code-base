@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Card from "../UI/Becomeap/Card";
 import Part from "../UI/Becomeap/Part";
+import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
 const PartnerPage = () => {
   const steps = [
@@ -114,9 +115,12 @@ const PartnerPage = () => {
                   revolutionizing the world of IT training, education,
                   outsourcing, and automation.
                 </p>
-                <button className="px-6 py-3 lg:px-8 lg:py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg text-lg lg:text-xl transition-all duration-300 ease-in-out transform hover:scale-105">
+                <Link href={'/contact'}>
+                <button
+                className="px-6 py-3 lg:px-8 lg:py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg text-lg lg:text-xl transition-all duration-300 ease-in-out transform hover:scale-105 mt-5"> 
                   Become a Partner
-                </button>
+                  </button>
+                </Link>
               </div>
               {/* Partner Image */}
               <div className="flex justify-center lg:justify-end">

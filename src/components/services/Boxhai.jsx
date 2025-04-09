@@ -154,7 +154,7 @@ const head = () => {
         `}</style>
       </div>
       {/* SECONE PART OF THE PAGE  */}
-      <div className="h-auto w-full  mt-28">
+      <div className="h-auto w-full mt-28" id="services">
         <div className="flex justify-center my-24 mt-0">
           <div className="w-[80%] h-[80px] bg-red-600 flex  justify-center align-middle rounded-full rounded-tl-md rounded-br-sm bg-gradient-to-r from-[#D31C1F] to-[#AD0003] ">
             <h1 className="text-white sm:text-3xl flex items-center text-xl">

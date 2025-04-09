@@ -392,6 +392,9 @@ const LearningPlatform = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {supportOptions.map((option) => (
+              <Link
+                href={'/contact'}
+                >
               <div
                 key={option.id}
                 className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl p-6 text-center transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden shadow-lg hover:shadow-red-900/20"
@@ -406,13 +409,11 @@ const LearningPlatform = () => {
                   {option.title}
                 </h3>
                 <p className="text-gray-400 text-sm">{option.description}</p>
-                <Link
-                  href="#"
-                  className="inline-block mt-4 text-red-500 hover:text-red-400 text-sm font-medium group-hover:underline"
-                >
+                  <p className="inline-block mt-4 text-red-500 hover:text-red-400 text-sm font-medium group-hover:underline">
                   Contact Us
-                </Link>
+                  </p>
               </div>
+            </Link>
             ))}
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 // import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import Button from "@/components/UI/button";
 import StatsAndCommitments from "@/components/About/StatsAndCommitments";
 import BlueNWhite from "@/components/About/BlueNWhite";
@@ -94,18 +95,20 @@ function page() {
                 easing="bouncy"
               >
                 <div className="pt-4">
+                <Link href={'/contact'}>
                   <Button
                     className="
-  bg-red-600 text-white hover:bg-red-700
-  px-6 py-4 text-base
-  sm:px-8 sm:py-5 sm:text-lg
-  md:px-10 md:py-6 md:text-xl
-  lg:px-12 lg:py-7 lg:text-2xl
-  rounded-md font-medium transition-all
-" variant="default" size="lg"
-                  >
+                    bg-red-600 text-white hover:bg-red-700
+                    px-6 py-4 text-base
+                    sm:px-8 sm:py-5 sm:text-lg
+                    md:px-10 md:py-6 md:text-xl
+                    lg:px-12 lg:py-7 lg:text-2xl
+                    rounded-md font-medium transition-all
+                    " variant="default" size="lg"
+                    >
                     Get Started
                   </Button>
+                </Link>
                 </div>
               </ScrollReveal>
             </div>

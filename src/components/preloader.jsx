@@ -160,7 +160,7 @@ const AdvancedPreloader = ({ onComplete }) => {
       {
         opacity: 0,
         scale: 0.2,
-        rotation: -180,
+        // rotation: -180,
         boxShadow: "0 0 0px 0px rgba(255,0,0,0)",
       },
       {

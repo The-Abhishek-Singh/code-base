@@ -63,43 +63,119 @@ const ServicesList = () => {
   const sectionRef = useRef(null);
   const lineContainerRef = useRef(null);
 
+  // In your component, add new state and refs
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimer = useRef(null);
+  const dotPositionsRef = useRef([]);
+  // Update the useEffect for scroll handling
   useEffect(() => {
+    // Function to collect all dot positions
+    const collectDotPositions = () => {
+      const dots = document.querySelectorAll(".timeline-dot");
+      const positions = [];
+      dots.forEach((dot) => {
+        const rect = dot.getBoundingClientRect();
+        positions.push(rect.top + window.scrollY);
+      });
+      dotPositionsRef.current = positions;
+    };
+    // Initial collection
+    collectDotPositions();
+    // Re-collect on resize
+    window.addEventListener("resize", collectDotPositions);
     const handleScroll = () => {
       if (
         firstNodeRef.current &&
         lastDescriptionRef.current &&
         lineContainerRef.current
       ) {
+        // Clear any existing timer immediately
+        if (scrollTimer.current) {
+          clearTimeout(scrollTimer.current);
+        }
+        // Always set scrolling state when handling scroll
+        setIsScrolling(true);
         const firstNodeRect = firstNodeRef.current.getBoundingClientRect();
         const lastDescriptionRect =
           lastDescriptionRef.current.getBoundingClientRect();
-        const lineContainerRect =
-          lineContainerRef.current.getBoundingClientRect();
-
-        // Calculate total scroll distance from first title's top
-        const totalDistance = lastDescriptionRect.bottom - firstNodeRect.top;
-
-        // Calculate scroll progress relative to first title
-        const firstTitleRect = firstNodeRef.current.getBoundingClientRect();
-
-        const scrollProgress = Math.max(
-          0,
-          Math.min(window.scrollY - firstTitleRect.top, totalDistance)
-        );
-
-        // Only set scroll height if scrolled past the first title
-        if (window.scrollY > firstTitleRect.top) {
-          setScrollHeight(scrollProgress);
+        const scrollPos = window.scrollY;
+        // Calculate maximum height based on content
+        const maxAllowedHeight =
+          lastDescriptionRect.bottom - firstNodeRect.top - 50;
+        // Make the line more responsive with a smaller offset
+        const startPosition = firstNodeRect.top + window.scrollY;
+        if (scrollPos >= startPosition - 500) {
+          const scrollProgress = scrollPos - (startPosition - 500);
+          // Ensure we don't exceed the maximum height
+          setScrollHeight(
+            Math.min(Math.max(0, scrollProgress), maxAllowedHeight)
+          );
         } else {
-          setScrollHeight(0); // Reset height if not scrolled past
+          setScrollHeight(0);
         }
+        scrollTimer.current = setTimeout(() => {
+          setIsScrolling(false);
+        }, 50);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", collectDotPositions);
+      if (scrollTimer.current) {
+        clearTimeout(scrollTimer.current);
+      }
+    };
   }, []);
-
+  // Modify the IntersectionObserver configuration
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          // Start with initial height but make it ready for scrolling
+          setIsScrolling(true);
+          setScrollHeight(0);
+          // Quick initial animation to show the line is active
+          let startTime = null;
+          const duration = 500;
+          const initialHeight = 0;
+          // Set a reasonable maximum height for initial animation
+          const targetHeight = 100;
+          const animateLine = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easing = (t) => t;
+            // Ensure we don't exceed the maximum height
+            const currentHeight = Math.min(
+              initialHeight + (targetHeight - initialHeight) * easing(progress),
+              targetHeight
+            );
+            setScrollHeight(currentHeight);
+            if (progress < 1) {
+              requestAnimationFrame(animateLine);
+            } else {
+              setIsScrolling(false);
+              // Trigger scroll handler with controlled event
+              const scrollEvent = new Event("scroll");
+              window.dispatchEvent(scrollEvent);
+            }
+          };
+          requestAnimationFrame(animateLine);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px 0px 0px",
+      }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
   // Counter logic for stats section
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -139,152 +215,149 @@ const ServicesList = () => {
 
   return (
     <div
-      ref={sectionRef}
-      className="min-h-screen bg-black flex flex-col items-center p-0 space-y-12 relative"
+    ref={sectionRef}
+    className="min-h-screen bg-black flex flex-col items-center p-0 space-y-12 relative"
+  >
+    {/* Vertical Line Container */}
+    <div
+      ref={lineContainerRef}
+      className="fixed left-1/2 transform -translate-x-1/2 w-1 sm:ml-[-36px] ml-[16px] top-[340px]"
+      style={{
+        top: firstNodeRef.current
+          ? `${firstNodeRef.current.getBoundingClientRect().top + 2}px` // Adding offset to align with dot center
+          : "0",
+      }}
     >
-      {/* Vertical Line Container */}
-<div
-  ref={lineContainerRef}
-  className="fixed left-1/2 transform -translate-x-1/2 w-1 sm:ml-[-36px] ml-[16px] top-[340px]"
-  style={{
-    top: firstNodeRef.current
-      ? `${firstNodeRef.current.getBoundingClientRect().top + 2}px`
-      : "0",
-  }}
->
-  {/* Red Line Starting from First Node */}
-  <div
-    className="absolute left-[50%] transform -translate-x-1/2 top-12 w-1 bg-red-700 transition-all duration-[3000ms]"
-    style={{
-      height: `${scrollHeight}px`,
-      maxHeight: typeof window !== "undefined"
-        ? window.innerWidth >= 1700
-          ? `calc(100vh - 5px)`
-          : window.innerWidth >= 1440
-            ? `calc(75vh - 6px)`
-            : window.innerWidth >= 1024
-              ? `calc(104vh - 6px)`
-              : window.innerWidth >= 768
-                ? `calc(125vh - 6px)`
+      {/* Red Line Starting from First Node */}
+      <div
+        className="absolute left-1/2 transform -translate-x-1/2 top-12 w-1 bg-red-700"
+        style={{
+          height: `${scrollHeight}px`,
+          minHeight: "0px",
+          transition: isScrolling ? "none" : "height 0.1s ease-out",
+          maxHeight:
+            typeof window !== "undefined"
+              ? window.innerWidth >= 1700
+                ? `calc(75vh - 5px)`
+                : window.innerWidth >= 1440
+                ? `calc(75vh - 6px)`
+                : window.innerWidth >= 1024
+                ? `calc(80vh - 6px)`
+                : window.innerWidth >= 768
+                ? `calc(100vh - 6px)`
                 : window.innerWidth >= 425
-                  ? `calc(250vh - 6px)`
-                  : `calc(190vh - 6px)`
-        : `calc(200vh - 6px)`,
-    }}
-  ></div>
-</div>
-
-{/* Timeline dot */}
-<div
-  className="absolute w-6 h-6 bg-black border-2 border-white rounded-full
-    left-1/2 
-    max-[425px]:-translate-x-[16%]
-    sm:-translate-x-[200%]
-    md:-translate-x-[250%]
-    lg:-translate-x-[200%]
-    xl:-translate-x-[180%]
-    2xl:-translate-x-[170%]
-    top-9
-    sm:top-9
-    flex items-center justify-center"
-  style={{
-    zIndex: 10,
-    boxShadow: "0 0 0 1px rgba(255,255,255,0.1)",
-  }}
->
-  {/* Inner dot - creates a hole effect */}
-  <div className="w-2 h-2 bg-red-700 rounded-full"></div>
-</div>
-
-      {services.map((service, index) => (
-        <div
-          key={index}
-          ref={index === 0 ? firstNodeRef : null}
-          className="flex w-full max-w-[67rem] justify-between items-center relative py-8  "
-        >
-          <div className="w-[61%] text-right pr-52 flex items-center relative lg:pl-[53px] min-[1440px]:pl-[13px]  md:pl-[28px]">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-black text-5xl font-extrabold mr-[1.5rem] -mt-[20px]">
-              {service.number}
-            </span>
-            <span className="text-white font-medium leading-tight relative inline-block pb-2 text-[1.25rem] max-[425px]:text-[1.25rem]">
-              {/* Title with Line Break at "&" */}
-              <div className="text-lg-custom font-medium text-start max-[375px]:text-[0.95rem] max-[320px]:text-[0.85rem] max-[425px]:text-[1.00rem] max-[425px]:leading-tight relative">
-                {service.title === "IT & industrial automation training" ? (
-                  <>
-                    IT & industrial
-                    <br />
-                    <span className="whitespace-nowrap">
-                      automation training
-                    </span>
-                    <span
-                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "140%" }}
-                    ></span>
-                  </>
-                ) : service.title === "Corporate & industrial training" ? (
-                  <>
-                    Corporate
-                    <br />
-                    <span className="whitespace-nowrap">
-                      industrial training
-                    </span>
-                    <span
-                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "143%" }}
-                    ></span>
-                  </>
-                ) : service.title ===
-                    "Global education & study abroad programs" ||
-                  service.title ===
-                    "Software development &  export services" ? (
-                  <>
-                    {service.title}
-                    {/* Custom underline only for these specific titles */}
-                    <span
-                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "107%", right: "-2rem" }}
-                    ></span>
-                  </>
-                ) : (
-                  <>
-                    {service.title.split(" & ").map((part, i) => (
-                      <React.Fragment key={i}>
-                        {part}
-                        {i < service.title.split(" & ").length - 1 && <br />}
-                        {i < service.title.split(" & ").length - 1 && " &"}
-                      </React.Fragment>
-                    ))}
-                    <span
-                      className="absolute left-0 bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "auto", right: 0 }}
-                    ></span>
-                  </>
-                )}
-              </div>
-            </span>
-
-            <div className="w-[57%] hidden min-[769px]:flex xl:block">
-              <img
-                src={service.icon}
-                alt={service.title}
-                className="w-16 h-16 md:w-20 md:h-20 md:mx-auto"
-              />
+                ? `calc(150vh - 6px)`
+                : `calc(250vh - 6px)`
+              : `calc(250vh - 6px)`,
+          zIndex: 5,
+        }}
+      ></div>
+    </div>
+    {services.map((service, index) => (
+      <div
+        key={index}
+        ref={index === 0 ? firstNodeRef : null}
+        className="flex w-full max-w-[67rem] justify-between items-center relative py-8  "
+      >
+        <div className="w-[61%] text-right pr-52 flex items-center relative lg:pl-[53px] min-[1440px]:pl-[13px]  md:pl-[28px]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-black text-5xl font-extrabold mr-[1.5rem] -mt-[20px]">
+            {service.number}
+          </span>
+          <span className="text-white font-medium leading-tight relative inline-block pb-2 text-[1.25rem] max-[425px]:text-[1.25rem]">
+            {/* Title with Line Break at "&" */}
+            <div className="text-lg-custom font-medium text-start max-[375px]:text-[0.95rem] max-[320px]:text-[0.85rem] max-[425px]:text-[1.00rem] max-[425px]:leading-tight relative">
+              {service.title === "IT & industrial automation training" ? (
+                <>
+                  IT & industrial
+                  <br />
+                  <span className="whitespace-nowrap">
+                    automation training
+                  </span>
+                  <span
+                    className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                    style={{ width: "140%" }}
+                  ></span>
+                </>
+              ) : service.title === "Corporate & industrial training" ? (
+                <>
+                  Corporate
+                  <br />
+                  <span className="whitespace-nowrap">
+                    industrial training
+                  </span>
+                  <span
+                    className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                    style={{ width: "143%" }}
+                  ></span>
+                </>
+              ) : service.title ===
+                  "Global education & study abroad programs" ||
+                service.title ===
+                  "Software development &  export services" ? (
+                <>
+                  {service.title}
+                  {/* Custom underline only for these specific titles */}
+                  <span
+                    className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                    style={{ width: "107%", right: "-2rem" }}
+                  ></span>
+                </>
+              ) : (
+                <>
+                  {service.title.split(" & ").map((part, i) => (
+                    <React.Fragment key={i}>
+                      {part}
+                      {i < service.title.split(" & ").length - 1 && <br />}
+                      {i < service.title.split(" & ").length - 1 && " &"}
+                    </React.Fragment>
+                  ))}
+                  <span
+                    className="absolute left-0 bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                    style={{ width: "auto", right: 0 }}
+                  ></span>
+                </>
+              )}
             </div>
-          </div>
-          <div
-            className="absolute left-1/2 transform max-[425px]:-translate-x-[-5%] min-[426px]:-translate-x-[200%] top-9 w-6 h-6 bg-black border-2 border-white rounded-full "
-            style={{ zIndex: 10 }}
-          ></div>
-          <div
-            ref={index === services.length - 1 ? lastDescriptionRef : null}
-            className="w-1/2 text-left  pl-0 max-[425px]:pl-0 flex items-center  lg:pl-0 md:w-[50%]"
-          >
-            <p className="text-white lg:text-[16px] md:pr-[25px]">
-              {service.description}
-            </p>
+          </span>
+          <div className="w-[57%] hidden min-[769px]:flex md:hidden">
+            <img
+              src={service.icon}
+              alt={service.title}
+              className="w-16 h-16 md:w-20 md:h-20 md:mx-auto"
+            />
           </div>
         </div>
-      ))}
+        <div
+          className="absolute w-6 h-6 bg-black border-2 border-white rounded-full
+ left-1/2
+ max-[425px]:-translate-x-[-5%]
+ sm:-translate-x-[200%]
+ md:-translate-x-[200%]
+ lg:-translate-x-[220%]
+ xl:-translate-x-[200%]
+ 2xl:-translate-x-[200%]
+ top-9
+ sm:top-9
+ flex items-center justify-center
+ timeline-dot"
+          style={{
+            zIndex: 10,
+            boxShadow: "0 0 0 1px rgba(255,255,255,0.1)",
+          }}
+        >
+          {/* Optional: Add a small red dot in the center to enhance line alignment */}
+          <div className="w-2 h-2 bg-red-700 rounded-full"></div>
+        </div>
+        <div
+          ref={index === services.length - 1 ? lastDescriptionRef : null}
+          className="w-1/2 text-left  pl-0 max-[425px]:pl-0 flex items-center  lg:pl-0 md:w-[50%]"
+        >
+          <p className="text-white lg:text-[16px] md:pr-[25px]">
+            {service.description}
+          </p>
+        </div>
+      </div>
+    ))}
 
       {/* Our Gallery section starts from here */}
 

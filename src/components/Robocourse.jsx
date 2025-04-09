@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 import ShineButton from './Button';
 
 const Robocourse = () => {
@@ -42,7 +43,9 @@ const Robocourse = () => {
             Careertronic Global Services offers tailored solutions for individuals, businesses, and institutions, helping you advance your career, optimize processes, and implement innovative software for growth and success in the digital world.
           </p>
           {/* TOGGLE BUTTON */}
+          <a href='#services'>
           <ShineButton />
+          </a>
         </div>
 
         {/* 3D MODEL VIEWER */}
