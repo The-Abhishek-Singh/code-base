@@ -25,8 +25,9 @@ export default function RootLayout({ children }) {
       <div className='h-20 w-full bg-black'></div>
         {/* <NeonCursor/> */}
         {children}
-
+<div className="z-50 opacity-100">
 <Footer/>
+</div>
 
       </body>
     </html>

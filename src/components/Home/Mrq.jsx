@@ -26,7 +26,7 @@ const Mrq = () => {
     ];
 
     return (
-        <div className="marquee-wrapper my-8 ">
+        <div className="marquee-wrapper my-8 bg-black z-20 ">
             <style jsx>{`
                 .marquee-wrapper {
                     background-color: rgba(0, 0, 0, 0.05);

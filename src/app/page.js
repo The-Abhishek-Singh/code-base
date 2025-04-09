@@ -1,55 +1,61 @@
 "use client";
 
 import Mrq from "@/components/Home/Mrq";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Kai from "@/components/Home/Kai";
-
 import StickyCard from "@/components/StickyCard";
 import ResumeBuilderLanding from "@/components/Resume";
 import JobPortalLanding from "@/components/job";
 import Hero from "@/components/Hero";
 import AdvancedPreloader from "@/components/preloader";
 
-
 const OnboardingSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const [lineHeight, setLineHeight] = useState("0%");
-
+  const [heroVisible, setHeroVisible] = useState(true);
+  
   useEffect(() => {
     const handleScroll = () => {
       const newScrollY = window.scrollY;
       setScrollY(newScrollY);
-      const maxHeight =
+      
+      // Hide hero when we've scrolled past the viewport height
+      if (newScrollY > window.innerHeight) {
+        setHeroVisible(false);
+      } else {
+        setHeroVisible(true);
+      }
+      
+      const maxHeight = 
         document.documentElement.scrollHeight - window.innerHeight;
       setLineHeight(`${(newScrollY / maxHeight) * 100}%`);
     };
-
+    
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []); // Removed `scrollY` from dependencies
+  }, []);
 
   return (
     <>
-
-  <AdvancedPreloader/>
-
-
-<Hero/>
-    
-
-<StickyCard />
-
-
-    
-
-  
-
+      <AdvancedPreloader />
       
-      {/* <ResumeBuilderLanding /> */}
-      {/* <JobPortalLanding /> */}
-
-      {/* Removed duplicate wrapper div */}
-      <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black sm:mt-[0rem] mt-[15rem]">
+      {/* Hero fixed at the top but only visible initially */}
+      {heroVisible && (
+        <div className="fixed  w-full h-screen z-10">
+          <Hero />
+        </div>
+      )}
+      
+      {/* Empty spacer to create scrollable area equal to hero height */}
+      <div className="h-screen w-full"></div>
+      
+      {/* StickyCard section - will come up and overlay the Hero */}
+      <div className="relative z-20">
+        <StickyCard />
+      </div>
+      
+      {/* Rest of your content */}
+      <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black">
         {/* Partner Logos Section */}
         <div className="w-full text-white mt-4 sm:mt-[2rem]">
           <h2 className="lg:text-3xl font-semibold mb-4 text-center">
@@ -57,7 +63,7 @@ const OnboardingSection = () => {
           </h2>
         </div>
         <Mrq />
-
+        
         {/* White color area gradient */}
         <div className="relative w-full h-[300px] bg-black overflow-hidden">
           <div
@@ -65,7 +71,7 @@ const OnboardingSection = () => {
             style={{ clipPath: "polygon(-15% 0%, 37% 100%, 119% 0%)" }}
           ></div>
         </div>
-
+        
         {/* Card Area */}
         <div className="flex items-center justify-center min-h-auto bg-black p-4">
           <h2 className="text-white text-5xl text-center font-light mt-24 gap-2">
@@ -78,7 +84,7 @@ const OnboardingSection = () => {
             <span className="mt-2">that will make your business grow</span>
           </h2>
         </div>
-
+        
         <Kai />
       </div>
     </>
