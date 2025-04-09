@@ -41,7 +41,7 @@ const OnboardingSection = () => {
       
       {/* Hero fixed at the top but only visible initially */}
       {heroVisible && (
-        <div className="fixed  w-full h-screen z-10">
+        <div className="fixed top-0 left-0 w-full h-screen z-10">
           <Hero />
         </div>
       )}
