@@ -2,6 +2,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import ScrollReveal from "../ScrollReveal";
 export default function Home() {
   return (
@@ -83,9 +84,11 @@ export default function Home() {
                   index={0}
                   stagger={150}
                 >
+                  <Link href={'/contact'}>
                   <button className="bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 xl:px-8 py-2 xl:py-3 rounded-full transition duration-300 text-sm sm:text-base xl:text-lg">
                     Get Started
                   </button>
+                  </Link>
                 </ScrollReveal>
                 <ScrollReveal
                   animation="slideUp"
@@ -94,9 +97,11 @@ export default function Home() {
                   index={0}
                   stagger={150}
                 >
+                  <Link href={'/services'}>
                   <button className="border border-white hover:bg-white hover:text-black text-white px-4 sm:px-6 xl:px-8 py-2 xl:py-3 rounded-full transition duration-300 text-sm sm:text-base xl:text-lg">
                     Our Services
                   </button>
+                  </Link>
                 </ScrollReveal>
               </div>
             </div>

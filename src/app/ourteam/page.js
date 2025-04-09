@@ -298,6 +298,7 @@ const page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
             {teamMembers.map((member, index) => (
               <ScrollReveal
+                key={index}
                 animation="slideUp"
                 duration={800}
                 easing="spring"

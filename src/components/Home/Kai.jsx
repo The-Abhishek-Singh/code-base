@@ -176,13 +176,51 @@ const ServicesList = () => {
     }
     return () => observer.disconnect();
   }, []);
-  // Counter logic for stats section
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  const target1 = 1000;
-  const target2 = 80000;
+ 
+    // Counter logic for stats section
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
+    const target1 = 1000;
+    const target2 = 80000;
+    const statsRef = useRef(null);
+    const [isStatsVisible, setIsStatsVisible] = useState(false);
+  
 
+  
+  // Add Intersection Observer for the stats section
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsStatsVisible(true);
+        } else {
+          setIsStatsVisible(false);
+          setCount1(0);
+          setCount2(0);
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px",
+      }
+    );
+    
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+    
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, []);
+
+  // Modified counter animation that only runs when stats section is visible
+  useEffect(() => {
+    if (!isStatsVisible) return;
+    
     const animateCount = (setCount, target) => {
       let start = 0;
       const duration = 2000; // Duration in milliseconds
@@ -196,139 +234,146 @@ const ServicesList = () => {
         }
         setCount(start);
       }, stepTime);
+      
+      return counter;
     };
 
-    animateCount(setCount1, target1);
-    animateCount(setCount2, target2);
-  }, []);
+    const counter1 = animateCount(setCount1, target1);
+    const counter2 = animateCount(setCount2, target2);
+
+    return () => {
+      clearInterval(counter1);
+      clearInterval(counter2);
+    };
+  }, [isStatsVisible]);
 
   const videoRef1 = useRef(null);
-    const videoRef2 = useRef(null);
-    
-    const handleMouseEnter = (ref) => {
-      if (ref.current) ref.current.play();
-    };
-  
-    const handleMouseLeave = (ref) => {
-      if (ref.current) ref.current.pause();
-    };
+  const videoRef2 = useRef(null);
+
+  const handleMouseEnter = (ref) => {
+    if (ref.current) ref.current.play();
+  };
+
+  const handleMouseLeave = (ref) => {
+    if (ref.current) ref.current.pause();
+  };
 
   return (
     <div
-    ref={sectionRef}
-    className="min-h-screen bg-black flex flex-col items-center p-0 space-y-12 relative"
-  >
-    {/* Vertical Line Container */}
-    <div
-      ref={lineContainerRef}
-      className="fixed left-1/2 transform -translate-x-1/2 w-1 sm:ml-[-36px] ml-[16px] top-[340px]"
-      style={{
-        top: firstNodeRef.current
-          ? `${firstNodeRef.current.getBoundingClientRect().top + 2}px` // Adding offset to align with dot center
-          : "0",
-      }}
+      ref={sectionRef}
+      className="min-h-screen bg-black flex flex-col items-center p-0 space-y-12 relative"
     >
-      {/* Red Line Starting from First Node */}
+      {/* Vertical Line Container */}
       <div
-        className="absolute left-1/2 transform -translate-x-1/2 top-12 w-1 bg-red-700"
+        ref={lineContainerRef}
+        className="fixed left-1/2 transform -translate-x-1/2 w-1 sm:ml-[-36px] ml-[16px] top-[340px]"
         style={{
-          height: `${scrollHeight}px`,
-          minHeight: "0px",
-          transition: isScrolling ? "none" : "height 0.1s ease-out",
-          maxHeight:
-            typeof window !== "undefined"
-              ? window.innerWidth >= 1700
-                ? `calc(75vh - 5px)`
-                : window.innerWidth >= 1440
-                ? `calc(75vh - 6px)`
-                : window.innerWidth >= 1024
-                ? `calc(80vh - 6px)`
-                : window.innerWidth >= 768
-                ? `calc(100vh - 6px)`
-                : window.innerWidth >= 425
-                ? `calc(150vh - 6px)`
-                : `calc(250vh - 6px)`
-              : `calc(250vh - 6px)`,
-          zIndex: 5,
+          top: firstNodeRef.current
+            ? `${firstNodeRef.current.getBoundingClientRect().top + 2}px` // Adding offset to align with dot center
+            : "0",
         }}
-      ></div>
-    </div>
-    {services.map((service, index) => (
-      <div
-        key={index}
-        ref={index === 0 ? firstNodeRef : null}
-        className="flex w-full max-w-[67rem] justify-between items-center relative py-8  "
       >
-        <div className="w-[61%] text-right pr-52 flex items-center relative lg:pl-[53px] min-[1440px]:pl-[13px]  md:pl-[28px]">
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-black text-5xl font-extrabold mr-[1.5rem] -mt-[20px]">
-            {service.number}
-          </span>
-          <span className="text-white font-medium leading-tight relative inline-block pb-2 text-[1.25rem] max-[425px]:text-[1.25rem]">
-            {/* Title with Line Break at "&" */}
-            <div className="text-lg-custom font-medium text-start max-[375px]:text-[0.95rem] max-[320px]:text-[0.85rem] max-[425px]:text-[1.00rem] max-[425px]:leading-tight relative">
-              {service.title === "IT & industrial automation training" ? (
-                <>
-                  IT & industrial
-                  <br />
-                  <span className="whitespace-nowrap">
-                    automation training
-                  </span>
-                  <span
-                    className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                    style={{ width: "140%" }}
-                  ></span>
-                </>
-              ) : service.title === "Corporate & industrial training" ? (
-                <>
-                  Corporate
-                  <br />
-                  <span className="whitespace-nowrap">
-                    industrial training
-                  </span>
-                  <span
-                    className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                    style={{ width: "143%" }}
-                  ></span>
-                </>
-              ) : service.title ===
-                  "Global education & study abroad programs" ||
-                service.title ===
-                  "Software development &  export services" ? (
-                <>
-                  {service.title}
-                  {/* Custom underline only for these specific titles */}
-                  <span
-                    className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                    style={{ width: "107%", right: "-2rem" }}
-                  ></span>
-                </>
-              ) : (
-                <>
-                  {service.title.split(" & ").map((part, i) => (
-                    <React.Fragment key={i}>
-                      {part}
-                      {i < service.title.split(" & ").length - 1 && <br />}
-                      {i < service.title.split(" & ").length - 1 && " &"}
-                    </React.Fragment>
-                  ))}
-                  <span
-                    className="absolute left-0 bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                    style={{ width: "auto", right: 0 }}
-                  ></span>
-                </>
-              )}
-            </div>
-          </span>
-          <div className="w-[57%] hidden min-[769px]:flex md:hidden">
-            <img
-              src={service.icon}
-              alt={service.title}
-              className="w-16 h-16 md:w-20 md:h-20 md:mx-auto"
-            />
-          </div>
-        </div>
+        {/* Red Line Starting from First Node */}
         <div
-          className="absolute w-6 h-6 bg-black border-2 border-white rounded-full
+          className="absolute left-1/2 transform -translate-x-1/2 top-12 w-1 bg-red-700"
+          style={{
+            height: `${scrollHeight}px`,
+            minHeight: "0px",
+            transition: isScrolling ? "none" : "height 0.1s ease-out",
+            maxHeight:
+              typeof window !== "undefined"
+                ? window.innerWidth >= 1700
+                  ? `calc(75vh - 5px)`
+                  : window.innerWidth >= 1440
+                  ? `calc(75vh - 6px)`
+                  : window.innerWidth >= 1024
+                  ? `calc(80vh - 6px)`
+                  : window.innerWidth >= 768
+                  ? `calc(100vh - 6px)`
+                  : window.innerWidth >= 425
+                  ? `calc(150vh - 6px)`
+                  : `calc(250vh - 6px)`
+                : `calc(250vh - 6px)`,
+            zIndex: 5,
+          }}
+        ></div>
+      </div>
+      {services.map((service, index) => (
+        <div
+          key={index}
+          ref={index === 0 ? firstNodeRef : null}
+          className="flex w-full max-w-[67rem] justify-between items-center relative py-8  "
+        >
+          <div className="w-[61%] text-right pr-52 flex items-center relative lg:pl-[53px] min-[1440px]:pl-[13px]  md:pl-[28px]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-black text-5xl font-extrabold mr-[1.5rem] -mt-[20px]">
+              {service.number}
+            </span>
+            <span className="text-white font-medium leading-tight relative inline-block pb-2 text-[1.25rem] max-[425px]:text-[1.25rem]">
+              {/* Title with Line Break at "&" */}
+              <div className="text-lg-custom font-medium text-start max-[375px]:text-[0.95rem] max-[320px]:text-[0.85rem] max-[425px]:text-[1.00rem] max-[425px]:leading-tight relative">
+                {service.title === "IT & industrial automation training" ? (
+                  <>
+                    IT & industrial
+                    <br />
+                    <span className="whitespace-nowrap">
+                      automation training
+                    </span>
+                    <span
+                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                      style={{ width: "140%" }}
+                    ></span>
+                  </>
+                ) : service.title === "Corporate & industrial training" ? (
+                  <>
+                    Corporate
+                    <br />
+                    <span className="whitespace-nowrap">
+                      industrial training
+                    </span>
+                    <span
+                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                      style={{ width: "143%" }}
+                    ></span>
+                  </>
+                ) : service.title ===
+                    "Global education & study abroad programs" ||
+                  service.title ===
+                    "Software development &  export services" ? (
+                  <>
+                    {service.title}
+                    {/* Custom underline only for these specific titles */}
+                    <span
+                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                      style={{ width: "107%", right: "-2rem" }}
+                    ></span>
+                  </>
+                ) : (
+                  <>
+                    {service.title.split(" & ").map((part, i) => (
+                      <React.Fragment key={i}>
+                        {part}
+                        {i < service.title.split(" & ").length - 1 && <br />}
+                        {i < service.title.split(" & ").length - 1 && " &"}
+                      </React.Fragment>
+                    ))}
+                    <span
+                      className="absolute left-0 bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                      style={{ width: "auto", right: 0 }}
+                    ></span>
+                  </>
+                )}
+              </div>
+            </span>
+            <div className="w-[57%] hidden min-[769px]:flex md:hidden">
+              <img
+                src={service.icon}
+                alt={service.title}
+                className="w-16 h-16 md:w-20 md:h-20 md:mx-auto"
+              />
+            </div>
+          </div>
+          <div
+            className="absolute w-6 h-6 bg-black border-2 border-white rounded-full
  left-1/2
  max-[425px]:-translate-x-[-5%]
  sm:-translate-x-[200%]
@@ -340,24 +385,24 @@ const ServicesList = () => {
  sm:top-9
  flex items-center justify-center
  timeline-dot"
-          style={{
-            zIndex: 10,
-            boxShadow: "0 0 0 1px rgba(255,255,255,0.1)",
-          }}
-        >
-          {/* Optional: Add a small red dot in the center to enhance line alignment */}
-          <div className="w-2 h-2 bg-red-700 rounded-full"></div>
+            style={{
+              zIndex: 10,
+              boxShadow: "0 0 0 1px rgba(255,255,255,0.1)",
+            }}
+          >
+            {/* Optional: Add a small red dot in the center to enhance line alignment */}
+            <div className="w-2 h-2 bg-red-700 rounded-full"></div>
+          </div>
+          <div
+            ref={index === services.length - 1 ? lastDescriptionRef : null}
+            className="w-1/2 text-left  pl-0 max-[425px]:pl-0 flex items-center  lg:pl-0 md:w-[50%]"
+          >
+            <p className="text-white lg:text-[16px] md:pr-[25px]">
+              {service.description}
+            </p>
+          </div>
         </div>
-        <div
-          ref={index === services.length - 1 ? lastDescriptionRef : null}
-          className="w-1/2 text-left  pl-0 max-[425px]:pl-0 flex items-center  lg:pl-0 md:w-[50%]"
-        >
-          <p className="text-white lg:text-[16px] md:pr-[25px]">
-            {service.description}
-          </p>
-        </div>
-      </div>
-    ))}
+      ))}
 
       {/* Our Gallery section starts from here */}
 
@@ -381,447 +426,458 @@ const ServicesList = () => {
   />
 </div> */}
 
-<div className="px-4 sm:px-8 lg:px-16 space-y-10 w-full lg:w-[100%] p-20">
-  <div className="text-center py-8 sm:py-10 relative">
-    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-poppins inline-block relative">
-      Our <span className="text-red-500">Gallery</span>
-      <span className="absolute left-0 bottom-0 h-1 bg-gradient-to-r from-gray-500 to-transparent w-full transform translate-y-1"></span>
-    </h1>
-  </div>
-    
-  <div className="bg-black text-white">
-    {/* Mobile layout - single column for extra small screens with much larger size */}
-    <div className="grid grid-cols-1 gap-8 sm:hidden mx-auto w-[18rem]">
-      {/* Live Classroom - Featured item first on mobile with significantly increased height */}
-      <ScrollReveal
-        animation="slideUp"
-        duration={600}
-        delay={100}
-        easing="spring">
-        <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-96">
-          <div className="absolute inset-0 z-0 overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            src="/coursePage/CodingBackground.mp4"
-            alt="Live Classroom"
-            className="w-full h-full object-fill rounded opacity-40"
-          />
+        <div className="px-4 sm:px-8 lg:px-16 space-y-10 w-full lg:w-[100%] p-20">
+          <div className="text-center py-8 sm:py-10 relative">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-poppins inline-block relative">
+              Our <span className="text-red-500">Gallery</span>
+              <span className="absolute left-0 bottom-0 h-1 bg-gradient-to-r from-gray-500 to-transparent w-full transform translate-y-1"></span>
+            </h1>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 z-10 text-center"></div>
-        </div>
-      </ScrollReveal>
 
-      {/* Other items with significantly increased height */}
-      <ScrollReveal
-        animation="slideUp"
-        duration={600}
-        delay={100}
-        easing="spring">
-        <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <img
-              src="/coursePage/practice.webp"
-              alt="Practice"
-              className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
+          <div className="bg-black text-white">
+            {/* Mobile layout - single column for extra small screens with much larger size */}
+            <div className="grid grid-cols-1 gap-8 sm:hidden mx-auto w-[18rem]">
+              {/* Live Classroom - Featured item first on mobile with significantly increased height */}
+              <ScrollReveal
+                animation="slideUp"
+                duration={600}
+                delay={100}
+                easing="spring"
+              >
+                <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-96">
+                  <div className="absolute inset-0 z-0 overflow-hidden">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      src="/coursePage/CodingBackground.mp4"
+                      alt="Live Classroom"
+                      className="w-full h-full object-fill rounded opacity-40"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10 text-center"></div>
+                </div>
+              </ScrollReveal>
+
+              {/* Other items with significantly increased height */}
+              <ScrollReveal
+                animation="slideUp"
+                duration={600}
+                delay={100}
+                easing="spring"
+              >
+                <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                  <div className="absolute inset-0 z-0 overflow-hidden">
+                    <img
+                      src="/coursePage/practice.webp"
+                      alt="Practice"
+                      className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal
+                animation="slideUp"
+                duration={600}
+                delay={100}
+                easing="spring"
+              >
+                <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                  <div className="absolute inset-0 z-0 overflow-hidden">
+                    <img
+                      src="/coursePage/mentors.png"
+                      alt="Mentorship"
+                      className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal
+                animation="slideUp"
+                duration={600}
+                delay={100}
+                easing="spring"
+              >
+                <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                  <div className="absolute inset-0 z-0 overflow-hidden">
+                    <video
+                      src="/coursePage/TypingCode.mp4"
+                      ref={videoRef2}
+                      autoPlay
+                      muted
+                      alt="Live Classroom"
+                      className="w-full h-full object-fill rounded opacity-40"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal
+                animation="slideUp"
+                duration={600}
+                delay={100}
+                easing="spring"
+              >
+                <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                  <div className="absolute inset-0 z-0 overflow-hidden">
+                    <img
+                      src="/coursePage/ai.avif"
+                      alt="AI Assistance"
+                      className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal
+                animation="slideUp"
+                duration={600}
+                delay={100}
+                easing="spring"
+              >
+                <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                  <div className="absolute inset-0 z-0 overflow-hidden">
+                    <img
+                      src="/coursePage/soln.avif"
+                      alt="Situational Problems"
+                      className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+                </div>
+              </ScrollReveal>
+
+              <ScrollReveal
+                animation="slideUp"
+                duration={600}
+                delay={100}
+                easing="spring"
+              >
+                <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                  <div className="absolute inset-0 z-0 overflow-hidden">
+                    <img
+                      src="/coursePage/course3.png"
+                      alt="teaching"
+                      className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Small tablet layout - modified for screens between sm and md breakpoints */}
+            <div className="hidden sm:grid sm:grid-cols-2 gap-8 md:hidden mx-auto w-[35rem] px-4">
+              {/* Live Classroom - Featured item with larger size */}
+              <div className="col-span-2 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-96">
+                <div className="absolute inset-0 z-0">
+                  <video
+                    ref={videoRef1}
+                    autoPlay
+                    muted
+                    loop
+                    src="/coursePage/CodingBackground.mp4"
+                    alt="Live Classroom"
+                    className="w-full h-full object-fill rounded opacity-40"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10 text-center"></div>
+              </div>
+
+              {/* Other items with increased height */}
+              <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                  <img
+                    src="/coursePage/practice.webp"
+                    alt="Practice"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+              </div>
+
+              <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                  <img
+                    src="/coursePage/mentors.png"
+                    alt="Mentorship"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+              </div>
+
+              <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                  <video
+                    src="/coursePage/TypingCode.mp4"
+                    autoPlay
+                    muted
+                    alt="Live Classroom"
+                    className="w-full h-full object-fill rounded opacity-40"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+              </div>
+
+              <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                  <img
+                    src="/coursePage/ai.avif"
+                    alt="AI Assistance"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+              </div>
+
+              <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                  <img
+                    src="/coursePage/soln.avif"
+                    alt="Situational Problems"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+              </div>
+
+              <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                  <img
+                    src="/coursePage/course3.png"
+                    alt="teaching"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
+              </div>
+            </div>
+
+            {/* Desktop layout - complex grid */}
+            <div className="hidden md:grid md:grid-cols-4 md:grid-rows-6 md:gap-4 md:h-[550px] relative w-full">
+              {/* Practice with Assignments */}
+              <ScrollReveal
+                animation="slightLeft"
+                duration={700}
+                delay={100}
+                easing="gentle"
+                className="row-span-2 bg-black  text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
+              >
+                <div className="absolute inset-0 z-0">
+                  <img
+                    src="/coursePage/practice.webp"
+                    alt="Practice"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
+              </ScrollReveal>
+
+              {/* 1:1 Guidance */}
+              <ScrollReveal
+                animation="fadeIn"
+                duration={900}
+                delay={300}
+                easing="spring"
+                className="row-span-2 col-start-1 row-start-3 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
+              >
+                <div className="absolute inset-0 z-0 ">
+                  <img
+                    src="/coursePage/mentors.png"
+                    alt="Mentorship"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
+              </ScrollReveal>
+
+              {/* Situational Problem & Solution */}
+              <ScrollReveal
+                animation="fadeIn"
+                duration={900}
+                delay={300}
+                easing="spring"
+                className="row-span-2 col-start-1 row-start-5 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
+              >
+                <div className="absolute inset-0 z-0 ">
+                  <img
+                    src="/coursePage/soln.avif"
+                    alt="Situational Problems"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
+              </ScrollReveal>
+
+              {/* Live Classroom */}
+              <ScrollReveal
+                animation="slideUp"
+                duration={900}
+                delay={300}
+                easing="spring"
+                className="col-span-2 row-span-4 col-start-2 row-start-1 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
+              >
+                <div className="absolute inset-0 z-0">
+                  <video
+                    ref={videoRef1}
+                    onMouseEnter={() => handleMouseEnter(videoRef1)}
+                    onMouseLeave={() => handleMouseLeave(videoRef1)}
+                    autoPlay
+                    muted
+                    loop
+                    src="/coursePage/CodingBackground.mp4"
+                    alt="Live Classroom"
+                    className="w-full h-full object-fill rounded opacity-40"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center"></div>
+              </ScrollReveal>
+
+              {/* Cloud Sandbox */}
+              <ScrollReveal
+                animation="fadeIn"
+                duration={900}
+                delay={300}
+                easing="spring"
+                className="col-span-2 row-span-2 col-start-2 row-start-5 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
+              >
+                <div className="absolute inset-0 z-0">
+                  <video
+                    src="/coursePage/TypingCode.mp4"
+                    ref={videoRef2}
+                    onMouseEnter={() => handleMouseEnter(videoRef2)}
+                    onMouseLeave={() => handleMouseLeave(videoRef2)}
+                    autoPlay
+                    muted
+                    alt="Live Classroom"
+                    className="w-full h-full object-fill rounded opacity-40"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
+              </ScrollReveal>
+
+              {/* AI-Assisted Problem Solving */}
+              <ScrollReveal
+                animation="slideLeft"
+                duration={900}
+                delay={300}
+                easing="spring"
+                className="row-span-3 col-start-4 row-start-1 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
+              >
+                <div className="absolute inset-0 z-0 ">
+                  <img
+                    src="/coursePage/ai.avif"
+                    alt="AI Assistance"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center"></div>
+              </ScrollReveal>
+
+              {/* Teaching Assistance */}
+              <ScrollReveal
+                animation="slideLeft"
+                duration={900}
+                delay={300}
+                easing="spring"
+                className="row-span-3 col-start-4 row-start-4 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
+              >
+                <div className="absolute inset-0 z-0 ">
+                  <img
+                    src="/coursePage/course3.png"
+                    alt="teaching"
+                    className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center"></div>
+              </ScrollReveal>
+            </div>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
         </div>
-      </ScrollReveal>
 
-      <ScrollReveal
-        animation="slideUp"
-        duration={600}
-        delay={100}
-        easing="spring">
-        <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <img
-              src="/coursePage/mentors.png"
-              alt="Mentorship"
-              className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-        </div>
-      </ScrollReveal>
-  
-      <ScrollReveal
-        animation="slideUp"
-        duration={600}
-        delay={100}
-        easing="spring">
-        <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <video
-            src="/coursePage/TypingCode.mp4"
-            ref={videoRef2}
-            autoPlay
-            muted
-            alt="Live Classroom"
-            className="w-full h-full object-fill rounded opacity-40"
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-        </div>
-      </ScrollReveal>
+        {/* Stats Section */}
 
-      <ScrollReveal
-        animation="slideUp"
-        duration={600}
-        delay={100}
-        easing="spring">
-        <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <img
-              src="/coursePage/ai.avif"
-              alt="AI Assistance"
-              className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-        </div>
-      </ScrollReveal>
-
-      <ScrollReveal
-        animation="slideUp"
-        duration={600}
-        delay={100}
-        easing="spring">
-        <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <img
-              src="/coursePage/soln.avif"
-              alt="Situational Problems"
-              className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-        </div>
-      </ScrollReveal>
-
-      <ScrollReveal
-        animation="slideUp"
-        duration={600}
-        delay={100}
-        easing="spring">
-        <div className="bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-          <div className="absolute inset-0 z-0 overflow-hidden">
-            <img
-              src="/coursePage/course3.png"
-              alt="teaching"
-              className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-            />
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-        </div>
-      </ScrollReveal>
-    </div>
-
-    {/* Small tablet layout - modified for screens between sm and md breakpoints */}
-    <div className="hidden sm:grid sm:grid-cols-2 gap-8 md:hidden mx-auto w-[35rem] px-4">
-      {/* Live Classroom - Featured item with larger size */}
-      <div className="col-span-2 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-96">
-        <div className="absolute inset-0 z-0">
-        <video
-            ref={videoRef1}
-            autoPlay
-            muted
-            loop
-            src="/coursePage/CodingBackground.mp4"
-            alt="Live Classroom"
-            className="w-full h-full object-fill rounded opacity-40"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-10 text-center"></div>
-      </div>
-
-      {/* Other items with increased height */}
-      <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <img
-            src="/coursePage/practice.webp"
-            alt="Practice"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-      </div>
-
-      <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <img
-            src="/coursePage/mentors.png"
-            alt="Mentorship"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-      </div>
-
-      <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-        <video
-            src="/coursePage/TypingCode.mp4"
-            autoPlay
-            muted
-            alt="Live Classroom"
-            className="w-full h-full object-fill rounded opacity-40"
-            />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-      </div>
-
-      <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <img
-            src="/coursePage/ai.avif"
-            alt="AI Assistance"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-      </div>
-
-      <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <img
-            src="/coursePage/soln.avif"
-            alt="Situational Problems"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-      </div>
-
-      <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <img
-            src="/coursePage/course3.png"
-            alt="teaching"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-6 z-10"></div>
-      </div>
-    </div>
-
-    {/* Desktop layout - complex grid */}
-    <div className="hidden md:grid md:grid-cols-4 md:grid-rows-6 md:gap-4 md:h-[550px] relative w-full">
-      {/* Practice with Assignments */}
-      <ScrollReveal
-        animation="slightLeft"
-        duration={700}
-        delay={100}
-        easing="gentle"
-        className="row-span-2 bg-black  text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
-      >
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/coursePage/practice.webp"
-            alt="Practice"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
-      </ScrollReveal>
-
-      {/* 1:1 Guidance */}
-      <ScrollReveal
-        animation="fadeIn"
-        duration={900}
-        delay={300}
-        easing="spring"
-        className="row-span-2 col-start-1 row-start-3 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
-      >
-        <div className="absolute inset-0 z-0 ">
-          <img
-            src="/coursePage/mentors.png"
-            alt="Mentorship"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
-      </ScrollReveal>
-
-      {/* Situational Problem & Solution */}
-      <ScrollReveal
-        animation="fadeIn"
-        duration={900}
-        delay={300}
-        easing="spring"
-        className="row-span-2 col-start-1 row-start-5 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
-      >
-        <div className="absolute inset-0 z-0 ">
-          <img
-            src="/coursePage/soln.avif"
-            alt="Situational Problems"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
-      </ScrollReveal>
-
-      {/* Live Classroom */}
-      <ScrollReveal
-        animation="slideUp"
-        duration={900} 
-        delay={300}
-        easing="spring"
-        className="col-span-2 row-span-4 col-start-2 row-start-1 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
-      >
-        <div className="absolute inset-0 z-0">
-          <video
-            ref={videoRef1}
-            onMouseEnter={() => handleMouseEnter(videoRef1)}
-            onMouseLeave={() => handleMouseLeave(videoRef1)}
-            autoPlay
-            muted
-            loop
-            src="/coursePage/CodingBackground.mp4"
-            alt="Live Classroom"
-            className="w-full h-full object-fill rounded opacity-40"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center"></div>
-      </ScrollReveal>
-
-      {/* Cloud Sandbox */}
-      <ScrollReveal
-        animation="fadeIn"
-        duration={900}
-        delay={300}
-        easing="spring"
-        className="col-span-2 row-span-2 col-start-2 row-start-5 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
-      >
-        <div className="absolute inset-0 z-0">
-        <video
-            src="/coursePage/TypingCode.mp4"
-            ref={videoRef2}
-            onMouseEnter={() => handleMouseEnter(videoRef2)}
-            onMouseLeave={() => handleMouseLeave(videoRef2)}
-            autoPlay
-            muted
-            alt="Live Classroom"
-            className="w-full h-full object-fill rounded opacity-40"
-            />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
-      </ScrollReveal>
-
-      {/* AI-Assisted Problem Solving */}
-      <ScrollReveal
-        animation="slideLeft"
-        duration={900}
-        delay={300}
-        easing="spring"
-        className="row-span-3 col-start-4 row-start-1 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
-      >        
-        <div className="absolute inset-0 z-0 ">
-          <img
-            src="/coursePage/ai.avif"
-            alt="AI Assistance"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center"></div>
-      </ScrollReveal>
-
-      {/* Teaching Assistance */}
-      <ScrollReveal
-        animation="slideLeft"
-        duration={900}
-        delay={300}
-        easing="spring"
-        className="row-span-3 col-start-4 row-start-4 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-full overflow-hidden"
-      >
-        <div className="absolute inset-0 z-0 ">
-          <img
-            src="/coursePage/course3.png"
-            alt="teaching"
-            className="w-full h-full object-cover rounded opacity-40 transition-transform duration-300 ease-in-out hover:scale-105"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center"></div>
-      </ScrollReveal>
-    </div>
-  </div>
-</div>
-
-      {/* Stats Section */}
-
-      <div className="bg-white text-black py-10 px-4 flex flex-col md:flex-row justify-evenly items-center space-y-6 md:space-y-0 md:space-x-16 lg:space-x-24 w-screen max-w-[110rem] mx-auto my-20">
-        <div>
-          <h3 className="text-red-500 text-3xl font-bold pb-2">
-            {count1.toLocaleString()}
-          </h3>
-          <p className="text-sm md:text-base">
-            small to medium startups
-            <br />
-            already using our product
-          </p>
-        </div>
-        <div>
-          <h3 className="text-red-500 text-3xl font-bold pb-2">
-            {count2.toLocaleString()}
-          </h3>
-          <p className="text-sm md:text-base">
-            data endpoints integrated
-            <br />
-            into custom reports
-          </p>
-        </div>
-        <div className="text-center">
-          <h3 className="text-red-500 text-3xl font-bold pb-2">Top 3</h3>
-          <p className="text-sm md:text-base">
-            in SaaS, fintech and more <br /> subcategories
-          </p>
-        </div>
-      </div>
-
-      {/* Our Team section start here */}
-
-      <div className="bg-black text-white py-10 px-4 text-center">
-        {/* Title Section */}
-        <h2 className="text-3xl font-bold inline-block relative pb-2">
-          The Minds Behind <span className="text-red-500">CAREERTRONIC</span>{" "}
-          TEAM
-          <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
-        </h2>
-        {/* Description */}
-        <p className="max-w-3xl mx-auto text-xl leading-relaxed my-16">
-          At Careertronic Global Services, our strength lies in our skilled and
-          passionate team, dedicated to delivering innovative solutions for your
-          success. From software developers and IT trainers to business
-          consultants and education advisors, we bring expertise across all our
-          services. We collaborate, innovate, and grow, ensuring cutting-edge
-          solutions tailored to your needs. With a commitment to continuous
-          learning, we stay ahead of industry trends to drive your success.
+        <div 
+      ref={statsRef}
+      className="bg-white text-black py-10 px-4 flex flex-col md:flex-row justify-evenly items-center space-y-6 md:space-y-0 md:space-x-16 lg:space-x-24 w-screen max-w-[110rem] mx-auto my-20"
+    >
+      <div>
+        <h3 className="text-red-500 text-3xl font-bold pb-2">
+          {count1.toLocaleString()}
+        </h3>
+        <p className="text-sm md:text-base">
+          small to medium startups
+          <br />
+          already using our product
         </p>
-
-        {/* Image Section */}
-        <div className="mt-6 flex justify-center w-[70vw]  h-[30vw] mx-auto mb-20">
-          <Image
-            src="/ourteam/leader.jpeg"
-            alt="Gallery"
-            width={800}
-            height={400}
-            className="w-full rounded-lg shadow-lg object-cover"
-          />
-        </div>
-
-        {/* Button */}
-        <div className="mt-6">
-        <Link href={'/ourteam'}>
-          <button className="bg-red-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
-            Show All
-          </button>
-        </Link>
-        </div>
+      </div>
+      <div>
+        <h3 className="text-red-500 text-3xl font-bold pb-2">
+          {count2.toLocaleString()}
+        </h3>
+        <p className="text-sm md:text-base">
+          data endpoints integrated
+          <br />
+          into custom reports
+        </p>
+      </div>
+      <div className="text-center">
+        <h3 className="text-red-500 text-3xl font-bold pb-2">Top 3</h3>
+        <p className="text-sm md:text-base">
+          in SaaS, fintech and more <br /> subcategories
+        </p>
       </div>
     </div>
+
+        {/* Our Team section start here */}
+
+        <div className="bg-black text-white py-10 px-4 text-center">
+          {/* Title Section */}
+          <h2 className="text-3xl font-bold inline-block relative pb-2">
+            The Minds Behind <span className="text-red-500">CAREERTRONIC</span>{" "}
+            TEAM
+            <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
+          </h2>
+          {/* Description */}
+          <p className="max-w-3xl mx-auto text-xl leading-relaxed my-16">
+            At Careertronic Global Services, our strength lies in our skilled
+            and passionate team, dedicated to delivering innovative solutions
+            for your success. From software developers and IT trainers to
+            business consultants and education advisors, we bring expertise
+            across all our services. We collaborate, innovate, and grow,
+            ensuring cutting-edge solutions tailored to your needs. With a
+            commitment to continuous learning, we stay ahead of industry trends
+            to drive your success.
+          </p>
+
+          {/* Image Section */}
+          <div className="mt-6 flex justify-center w-[70vw]  h-[30vw] mx-auto mb-20">
+            <Image
+              src="/ourteam/leader.jpeg"
+              alt="Gallery"
+              width={800}
+              height={400}
+              className="w-full rounded-lg shadow-lg object-cover"
+            />
+          </div>
+
+          {/* Button */}
+          <div className="mt-6">
+            <Link href={"/ourteam"}>
+              <button className="bg-red-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
+                Show All
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
