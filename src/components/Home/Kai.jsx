@@ -180,8 +180,10 @@ const ServicesList = () => {
     // Counter logic for stats section
     const [count1, setCount1] = useState(0);
     const [count2, setCount2] = useState(0);
+    const [topCount, setTopCount] = useState(0);
     const target1 = 1000;
     const target2 = 80000;
+    const targetTop = 3;
     const statsRef = useRef(null);
     const [isStatsVisible, setIsStatsVisible] = useState(false);
   
@@ -240,10 +242,12 @@ const ServicesList = () => {
 
     const counter1 = animateCount(setCount1, target1);
     const counter2 = animateCount(setCount2, target2);
+    const counterTop = animateCount(setTopCount, targetTop);
 
     return () => {
       clearInterval(counter1);
       clearInterval(counter2);
+      clearInterval(counterTop);
     };
   }, [isStatsVisible]);
 
@@ -829,7 +833,7 @@ const ServicesList = () => {
         </p>
       </div>
       <div className="text-center">
-        <h3 className="text-red-500 text-3xl font-bold pb-2">Top 3</h3>
+        <h3 className="text-red-500 text-3xl font-bold pb-2">Top {topCount}</h3>
         <p className="text-sm md:text-base">
           in SaaS, fintech and more <br /> subcategories
         </p>

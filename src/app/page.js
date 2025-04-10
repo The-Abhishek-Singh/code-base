@@ -62,7 +62,6 @@ const OnboardingSection = () => {
             We partner with the best
           </h2>
         </div>
-        <Mrq />
         
         {/* White color area gradient */}
         <div className="relative w-full h-[300px] bg-black overflow-hidden">
@@ -70,6 +69,7 @@ const OnboardingSection = () => {
             className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-[#000000] to-[#2C2C2C]"
             style={{ clipPath: "polygon(-15% 0%, 37% 100%, 119% 0%)" }}
           ></div>
+        <Mrq />
         </div>
         
         {/* Card Area */}
