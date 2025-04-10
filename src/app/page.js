@@ -57,7 +57,7 @@ const OnboardingSection = () => {
       {/* Rest of your content */}
       <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black">
         {/* Partner Logos Section */}
-        <div className="w-full text-white mt-4 sm:mt-[5rem]">
+        <div className="w-full text-white mt-4 sm:mt-[8rem] mb-16">
           <h2 className="lg:text-3xl font-semibold mb-4 text-center">
             We partner with the best
           </h2>

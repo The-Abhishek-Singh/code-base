@@ -382,7 +382,7 @@ const ServicesList = () => {
  max-[425px]:-translate-x-[-5%]
  sm:-translate-x-[200%]
  md:-translate-x-[200%]
- lg:-translate-x-[220%]
+ lg:-translate-x-[205%]
  xl:-translate-x-[200%]
  2xl:-translate-x-[200%]
  top-9
@@ -665,7 +665,7 @@ const ServicesList = () => {
             </div>
 
             {/* Desktop layout - complex grid */}
-            <div className="hidden md:grid md:grid-cols-4 md:grid-rows-6 md:gap-4 md:h-[650px] relative w-full">
+            <div className="hidden md:grid md:grid-cols-4 md:grid-rows-6 md:gap-4 md:h-[700px] relative w-full">
               {/* Practice with Assignments */}
               <ScrollReveal
                 animation="slightLeft"
