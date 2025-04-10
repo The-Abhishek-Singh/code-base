@@ -238,7 +238,7 @@ const LearningPlatform = () => {
         {/**trusted by  */}
         <div className="relative bg-linear-to-b from-red-900-to-black rounded-2xl p-8 mb-12 text-center border border-gray-800 shadow-xl shadow-red-900/10 backdrop-blur-md overflow-hidden">
           {/* Central Glowing Red Ball Effect */}
-          <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[300px] h-[250px] bg-red-900 rounded-full blur-[90px] opacity-40" />
+          {/* <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[550px] h-[250px] bg-red-900 rounded-full blur-[90px] opacity-40" /> */}
 
           {/* Side Blurred Gradients */}
           <div className="absolute top-0 left-0 w-[150px] h-full bg-gradient-to-r from-black via-black/60 to-transparent blur-lg" />
@@ -276,7 +276,7 @@ const LearningPlatform = () => {
         </div>
 
         {/* Hero Section with animated gradient overlay and video background */}
-        <div className="relative rounded-2xl overflow-hidden mb-16 h-96 shadow-2xl shadow-red-900/20 group">
+        <div className="relative rounded-2xl overflow-hidden mb-16 h-96 shadow-2xl inset-shadow-red-900/20 group">
           {/* Video background */}
           <div className="absolute inset-0 w-full h-full">
             <video
@@ -295,11 +295,11 @@ const LearningPlatform = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/90 z-10"></div>
 
             {/* Red accent gradients */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-red-900/30 to-transparent opacity-70 z-20 group-hover:opacity-90 transition-opacity duration-700"></div>
+            <div className="absolute z-20"></div>
           </div>
 
           {/* Content */}
-          <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent z-30">
+          <div className="absolute bottom-0 left-0 right-0 p-8 z-30">
             <h2 className="text-3xl sm:text-4xl font-bold mb-2 text-white">
               Start your <span className="text-red-500">learning journey</span>{" "}
               today!
@@ -311,7 +311,7 @@ const LearningPlatform = () => {
             </p>
             <Link
               href="#"
-              className="inline-block px-6 py-3  text-white font-bold rounded-full hover:from-red-600 hover:to-red-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg shadow-red-600/30"
+              className="inline-block px-6 py-3  text-white font-bold rounded-full hover:from-red-600 hover:to-red-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-"
             >
               Enroll Now
             </Link>

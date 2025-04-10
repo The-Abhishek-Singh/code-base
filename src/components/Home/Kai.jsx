@@ -661,7 +661,7 @@ const ServicesList = () => {
             </div>
 
             {/* Desktop layout - complex grid */}
-            <div className="hidden md:grid md:grid-cols-4 md:grid-rows-6 md:gap-4 md:h-[550px] relative w-full">
+            <div className="hidden md:grid md:grid-cols-4 md:grid-rows-6 md:gap-4 md:h-[650px] relative w-full">
               {/* Practice with Assignments */}
               <ScrollReveal
                 animation="slightLeft"

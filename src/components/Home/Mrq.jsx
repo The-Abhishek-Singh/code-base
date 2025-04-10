@@ -26,7 +26,7 @@ const Mrq = () => {
     ];
 
     return (
-        <div className="marquee-wrapper my-8 bg-black z-20 ">
+        <div className="marquee-wrapper my-8 bg-black relative -top-12">
             <style jsx>{`
                 .marquee-wrapper {
                     background-color: rgba(0, 0, 0, 0.05);
@@ -36,7 +36,7 @@ const Mrq = () => {
                     position: relative;
                     width: 100%;
                     overflow: hidden;
-                    white-space: nowrap;
+                    white-space: nowrap
                 }
                 .marquee-content {
                     display: flex;
@@ -81,7 +81,7 @@ const Mrq = () => {
                                 className="company-image w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 object-contain opacity-80"
                             />
                             <span className="text-gray-800 dark:text-white ml-2 font-medium">
-                                {company.name}
+                                {/* {company.name} */}
                             </span>
                         </div>
                     ))}

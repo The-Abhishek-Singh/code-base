@@ -56,19 +56,20 @@ const OnboardingSection = () => {
       {/* Rest of your content */}
       <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black">
         {/* Partner Logos Section */}
-        <div className="w-full text-white mt-4 sm:mt-[2rem]">
+        <div className="w-full text-white mt-4 sm:mt-[5rem]">
           <h2 className="lg:text-3xl font-semibold mb-4 text-center">
             We partner with the best
           </h2>
         </div>
-        <Mrq />
         
         {/* White color area gradient */}
         <div className="relative w-full h-[300px] bg-black overflow-hidden">
           <div
             className="absolute left-0 bottom-0 w-full h-full bg-gradient-to-b from-[#000000] to-[#2C2C2C]"
             style={{ clipPath: "polygon(-15% 0%, 37% 100%, 119% 0%)" }}
-          ></div>
+            >
+          </div>
+          <Mrq />
         </div>
         
         {/* Card Area */}
