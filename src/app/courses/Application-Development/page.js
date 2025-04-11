@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Form from '@/components/course/Forms';
 import Button from '@/components/course/Button';
 import DevOpsSkills from '@/components/course/DevOpsSkills';
-import DevOpsCourseSection from '@/components/course/DevOpsCourseSection';
+import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
@@ -32,12 +32,12 @@ function page(){
       review: "As a backend developer, this course helped me improve my architectural thinking. Learning about CAP theorem, database sharding, and security best practices gave me a deeper understanding of system scalability. Definitely worth it!.",
       rating: 5,
     },
-  ]
+    ];
   const projects = [
       {
-        title: "Master Production Issue Handling",
+        title: "Master UI/UX Implementation",
         description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
+          "Learn how to design and develop intuitive, responsive interfaces using modern front-end libraries like React or Vue. Gain experience in creating seamless user experiences with real-world design systems and usability principles",
         icon: <FaTools className="text-white text-3xl" />,
       },
       {
@@ -52,8 +52,8 @@ function page(){
           "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
         icon: <FaLayerGroup className="text-white text-3xl" />,
       },
-      ];
-    const courses1 = [
+    ];
+  const courses1 = [
       {
         title: "PYTHON",
         duration: "1 Month",
@@ -96,7 +96,7 @@ function page(){
         }
       }
     ];
-    const courses2 = [
+  const courses2 = [
       {
         title: "Program Tools",
         duration: "1 Month",
@@ -141,7 +141,7 @@ function page(){
         }
       }
     ];
-    const courses3 = [
+  const courses3 = [
       {
         title: "System Design",
         duration: "1 Month",
@@ -186,7 +186,21 @@ function page(){
           "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
         }
       }
-      ];
+    ];
+  const courseDesc = [
+    {
+      title: 'Full-Stack Development Skills',
+      description: 'Master both front-end and back-end technologies to become a versatile developer. Be job-ready for roles like Full-Stack Developer, Web Developer, and App Engineer with this hands-on application development course.'
+    },
+    {
+      title: 'Industry-Recognized Certification',
+      description: 'Boost your resume with certification that validates your skills in real-world application development. Increase your chances of landing interviews and getting shortlisted for top tech roles.'
+    },
+    {
+      title: 'Real Projects & Code Labs',
+      description: 'Build 10+ real-world applications and participate in live coding labs. Gain practical experience in debugging, deploying, and maintaining full-stack applications using modern frameworks and tools.'
+    }
+    ]
   return (
     <div className='h-auto w-full'>
         <Navbar />
@@ -266,8 +280,8 @@ function page(){
     {/* Content Section */}
     <div className='w-full lg:w-[55%] flex p-4 sm:p-6 md:p-10 lg:p-20 flex-col justify-around relative'>
         <ScrollReveal animation='fadeIn' delay={200} easing='smooth'>
-            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight'>
-                How Can We Turn You Into an Expert in DevOps & Cloud Computing?
+            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight capitalize'>
+                How Can We Turn You Into an Expert in Application Development?
             </h1>
         </ScrollReveal>
         
@@ -356,7 +370,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <DevOpsCourseSection />
+            <CourseSection courseName={'application development'} courseDescription={courseDesc}/>
         </div>
 
         {/* Our Curriculum Section */}
@@ -419,7 +433,7 @@ function page(){
           delay={200}
           easing="gentle">
           <h3 className="text-lg font-semibold text-gray-500 uppercase">
-            Gain Real-World DevOps & Cloud Experience!
+            GAIN REAL-WORLD APPLICATION DEVELOPMENT EXPERIENCE!
           </h3>
           </ScrollReveal>
           <ScrollReveal

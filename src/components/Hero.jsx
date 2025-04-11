@@ -119,11 +119,11 @@ const Hero = () => {
         }}
       >
         {/* CONTENT DIV */}
-        <div 
-          className='sm:mt-[-25vh] md:mt-[15vh] md:min-w-[20rem] md:ml-[4%] xl:ml-[5%] lg:mt-[-35vh] xl:mt-[-25vh] 2xl:mt-[-9vh] z-40'
+        <div
+        className='sm:mt-[25vh] md:mt-[34vh] md:min-w-[20rem] max-[642px]:mt-[10rem] max-[490px]:mt-[10rem] max-[485px]:mt-[15rem] md:ml-[4%] xl:ml-[5%] lg:mt-[-20vh] xl:mt-[-25vh] 2xl:mt-[-9vh] z-40 max-[425px]:mt-[-5vh] text-[1rem] max-[484px]:mt-[15vh] max-[485px]:text-[0.8rem]' 
         >
           <h1 
-            className='sm:max-w-full md:max-w-[50rem] lg:max-w-[40rem] xl:max-w-[50rem] 2xl:max-w-[60rem] text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold tracking-wide my-[2rem] z-40'
+          className='sm:max-w-full md:max-w-[50rem] lg:max-w-[40rem] xl:max-w-[50rem] 2xl:max-w-[60rem] text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold tracking-wide my-[2rem] z-40 max-[425px]:text-2xl'
             style={{ 
               opacity: elementsVisible ? 1 : 0,
               transform: elementsVisible ? 'none' : 'translateY(20px)',

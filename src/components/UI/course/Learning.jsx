@@ -394,9 +394,9 @@ const LearningPlatform = () => {
             {supportOptions.map((option) => (
               <Link
                 href={'/contact'}
+                key={option.id}
                 >
               <div
-                key={option.id}
                 className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-xl p-6 text-center transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden shadow-lg hover:shadow-red-900/20"
               >
                 {/* Red glow effect on hover */}

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Form from '@/components/course/Forms';
 import Button from '@/components/course/Button';
 import DevOpsSkills from '@/components/course/DevOpsSkills';
-import DevOpsCourseSection from '@/components/course/DevOpsCourseSection';
+import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
@@ -267,8 +267,8 @@ function page(){
     {/* Content Section */}
     <div className='w-full lg:w-[55%] flex p-4 sm:p-6 md:p-10 lg:p-20 flex-col justify-around relative'>
         <ScrollReveal animation='fadeIn' delay={200} easing='smooth'>
-            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight'>
-                How Can We Turn You Into an Expert in DevOps & Cloud Computing?
+            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight capitalize'>
+                How Can We Turn You Into an Expert in data science & AI?
             </h1>
         </ScrollReveal>
         
@@ -357,7 +357,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <DevOpsCourseSection />
+            <CourseSection courseName={'Data science & AI'} />
         </div>
 
         {/* Our Curriculum Section */}

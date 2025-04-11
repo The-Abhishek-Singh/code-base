@@ -315,7 +315,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-4 flex flex-col" style={{ height: "180px" }}>
-                  <h3 className="font-bold text-lg mb-2 transition-colors duration-300 hover:text-red-500">
+                  <h3 className="font-bold text-lg mb-2 transition-colors duration-300 hover:text-red-500 uppercase">
                     {course.title}
                   </h3>
                   <div className="flex items-center mb-4">

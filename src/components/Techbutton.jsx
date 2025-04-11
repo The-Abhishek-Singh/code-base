@@ -8,7 +8,7 @@ const PlayButton = () => {
     <button
       className="relative text-red-600 shadow-red-600 text-xl tracking-[0.3rem] font-bold hover:text-white backdrop-blur-lg bg-gradient-to-tr from-transparent via-[rgba(180,180,180,0.3)] to-transparent rounded-md py-2 px-6 shadow hover:shadow-white duration-700 min-w-28 h-11 overflow-hidden"
     >
-      <div>EXPLORE</div>
+      <div className='text-sm max-[344px]:text-xs'>EXPLORE</div>
       
       {/* Shine effect element */}
       <div className="absolute inset-0 pointer-events-none">

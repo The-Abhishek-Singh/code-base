@@ -11,10 +11,11 @@ const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
       count: "300+",
       description: "Career Advisors",
       profiles: [
-        "/about/dev.svg",
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
+        
+        "https://randomuser.me/api/portraits/men/32.jpg",
+        "https://randomuser.me/api/portraits/men/75.jpg",
+        "https://randomuser.me/api/portraits/women/65.jpg",
+        "https://randomuser.me/api/portraits/women/81.jpg",
       ],
     },
     {
@@ -22,10 +23,10 @@ const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
       count: "150+",
       description: "Corporate Partners",
       profiles: [
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
+        "https://randomuser.me/api/portraits/men/41.jpg",
+        "https://randomuser.me/api/portraits/women/44.jpg",
+        "https://i.pravatar.cc/100?img=1",
+        "https://i.pravatar.cc/100?img=3",
       ],
     },
     {
@@ -33,10 +34,10 @@ const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
       count: "5000+",
       description: "Successful Placements",
       profiles: [
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
+        "https://i.pravatar.cc/100?img=4",
+        "https://i.pravatar.cc/100?img=5",
+        "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=128&h=128&q=80&fit=crop",
+        "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=128&h=128&q=80&fit=crop",
       ],
     },
     {
@@ -44,10 +45,10 @@ const WhyChooseCareerTronics = ({ bottomSection = true, paddBot = true }) => {
       count: "25+",
       description: "Training Programs",
       profiles: [
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
-        "/api/placeholder/40/40",
+        "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?w=128&h=128&q=80&fit=crop",
+        "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=128&h=128&q=80&fit=crop",
+        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=128&h=128&q=80&fit=crop",
+        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=128&h=128&q=80&fit=crop",
       ],
     },
   ];
