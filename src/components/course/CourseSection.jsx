@@ -72,29 +72,7 @@ const DevOpsCourseSection = (props) => {
         <p className="text-gray-300 mb-4 text-base md:text-lg font-semibold">{desc.description}</p>
       </div>
 </ScrollReveal>
-
     ))}
-    {/* Card 2
-    <ScrollReveal animation="slideUp" duration={1200} delay={600} easing="spring" className='grid'>
-          <div className="bg-black bg-opacity-50 border border-[#1DD9FF] p-6 md:p-8 rounded-lg relative">
-            <div className="bg-gradient-to-b from-white to-transparent bg-clip-text text-transparent font-bold text-4xl md:text-8xl h-10 w-10 md:h-20 md:w-20 flex items-center justify-center mb-4">2</div>
-            <div className="text-xl md:text-2xl font-bold text-white mb-3">Architect-Level Certification</div>
-            <p className="text-gray-300 mb-4 text-base md:text-lg font-semibold">
-              Boost your resume by preparing up to Architect-level certifications and increase your chances of getting shortlisted.
-            </p>
-          </div>
-    </ScrollReveal>
-
-    Card 3
-    <ScrollReveal animation="slideUp" duration={1200} delay={800} easing="spring" className='grid'>
-          <div className="bg-black bg-opacity-50 border border-[#1DD9FF] p-6 md:p-8 rounded-lg relative md:col-span-2 lg:col-span-1">
-            <div className="bg-gradient-to-b from-white to-transparent bg-clip-text text-transparent font-bold text-4xl md:text-8xl h-10 w-10 md:h-20 md:w-20 flex items-center justify-center mb-4">3</div>
-            <div className="text-xl md:text-2xl font-bold text-white mb-3">Real-World DevOps and Cloud Computing Mastery</div>
-            <p className="text-gray-300 mb-4 text-base md:text-lg font-semibold">
-              Dive into our exclusive sandbox environment assignments featuring 50+ real-life case studies. Strengthen your DevOps and Cloud Computing skills through hands-on debugging and practical experience.
-            </p>
-          </div>
-    </ScrollReveal> */}
   </div>
 </div>
   );

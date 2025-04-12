@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaTools, FaServer, FaLayerGroup } from "react-icons/fa";
+import { FaLaptopCode, FaShoppingCart, FaRocket } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
 
 function page(){
@@ -32,26 +32,6 @@ function page(){
       rating: 5,
     },
   ]
-  const projects = [
-      {
-        title: "Master Production Issue Handling",
-        description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
-        icon: <FaTools className="text-white text-3xl" />,
-      },
-      {
-        title: "Effortless Infrastructure Setup",
-        description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
-        icon: <FaServer className="text-white text-3xl" />,
-      },
-      {
-        title: "Streamline CI/CD Process",
-        description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
-        icon: <FaLayerGroup className="text-white text-3xl" />,
-      },
-      ];
     const courses1 = [
       {
         title: "PYTHON",
@@ -95,6 +75,40 @@ function page(){
         }
       }
     ];
+      const projects = [
+          {
+            title: "Responsive Portfolio Website",
+            description:
+              "Learn how to design and develop a modern, mobile-friendly personal portfolio using HTML, CSS, and JavaScript. Showcase your skills and stand out to recruiters.",
+            icon: <FaLaptopCode className="text-white text-3xl" />,
+          },
+          {
+            title: " E-Commerce Storefront",
+            description:
+              "Build a fully functional online store with shopping cart, product filters, and payment gateway using React.js, Node.js, and MongoDB.",
+            icon: <FaShoppingCart className="text-white text-3xl" />,
+          },
+          {
+            title: "Deploy & Optimize Web Apps",
+            description:
+              "Master deployment pipelines with GitHub, Netlify, and Vercel. Learn how to optimize performance and SEO to ensure blazing-fast, user-friendly experiences.",
+            icon: <FaRocket className="text-white text-3xl" />,
+          },
+          ];
+          const courseDesc = [
+            {
+              title: 'Full-Stack Career Opportunities',
+              description: 'Be job-ready for roles like Frontend Developer, Backend Developer, and Full-Stack Engineer with this all-in-one Web Development certification course.' 
+            },
+            {
+              title: 'Portfolio-Ready Projects',
+              description: 'Boost your resume by building 10+ real-world projects, from e-commerce platforms to social media dashboards—giving you the edge in any job interview.'
+            },
+            {
+              title: 'Real-World Coding & Deployment Mastery',
+              description: 'Dive into sandboxed coding challenges, Git/GitHub workflows, and deployment using Netlify, Vercel & AWS. Strengthen your dev skills with hands-on practice from start to scale.'
+            }
+          ];      
     const courses2 = [
       {
         title: "Program Tools",
@@ -356,7 +370,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <CourseSection courseName={'web development'}/>
+            <CourseSection courseName={'web development'} courseDescription={courseDesc} />
         </div>
 
         {/* Our Curriculum Section */}
@@ -419,7 +433,7 @@ function page(){
           delay={200}
           easing="gentle">
           <h3 className="text-lg font-semibold text-gray-500 uppercase">
-            Gain Real-World DevOps & Cloud Experience!
+            Gain Real-World web development Experience!
           </h3>
           </ScrollReveal>
           <ScrollReveal
@@ -469,7 +483,7 @@ function page(){
             delay={200}
             easing="smooth">
            <h2 className="text-lg font-semibold text-gray-400 uppercase">
-             DevOps & Cloud Computing Curriculum
+             web development Curriculum
            </h2>
           </ScrollReveal>
           <ScrollReveal
@@ -1087,8 +1101,8 @@ function page(){
              <h2 className="text-lg font-semibold text-black uppercase text-center mb-4">
                Meet Mentors & Instructors
              </h2>
-             <h1 className="text-4xl font-bold text-center mb-12">
-               Tap into the wisdom of DevOps & Cloud Computing Experts
+             <h1 className="text-4xl font-bold text-center mb-12 capitalize">
+               Tap into the wisdom of web development Experts
              </h1>
             </ScrollReveal>
 
@@ -1176,7 +1190,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure />
+            <FeeStructure courseName={'Web Development'}/>
         </div>
 
         {/* FAQ Section */}

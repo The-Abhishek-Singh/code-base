@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaTools, FaServer, FaLayerGroup } from "react-icons/fa";
+import { FaPencilAlt, FaDatabase, FaCloudUploadAlt } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
 
 
@@ -37,20 +37,20 @@ function page(){
       {
         title: "Master UI/UX Implementation",
         description:
-          "Learn how to design and develop intuitive, responsive interfaces using modern front-end libraries like React or Vue. Gain experience in creating seamless user experiences with real-world design systems and usability principles",
-        icon: <FaTools className="text-white text-3xl" />,
+        "Learn to craft intuitive and responsive user interfaces using frameworks like React or Vue. Apply real-world design patterns and build seamless user experiences across devices.",
+        icon: <FaPencilAlt className="text-white text-3xl" />,
       },
       {
-        title: "Effortless Infrastructure Setup",
+        title: "Seamless Backend Integration",
         description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
-        icon: <FaServer className="text-white text-3xl" />,
+          "Build powerful backends with Node.js or Django. Learn to create and integrate RESTful APIs, handle authentication, and manage scalable databases using real-world architectures.",
+        icon: <FaDatabase className="text-white text-3xl" />,
       },
       {
-        title: "Streamline CI/CD Process",
+        title: "Automated App Deployment",
         description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
-        icon: <FaLayerGroup className="text-white text-3xl" />,
+          "Master the deployment lifecycle using platforms like Heroku, Vercel, or AWS. Implement CI/CD pipelines and ensure smooth version control and rollout of full-stack applications.",
+        icon: <FaCloudUploadAlt className="text-white text-3xl" />,
       },
     ];
   const courses1 = [
@@ -1189,7 +1189,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure />
+            <FeeStructure courseName={'application development'} />
         </div>
 
         {/* FAQ Section */}

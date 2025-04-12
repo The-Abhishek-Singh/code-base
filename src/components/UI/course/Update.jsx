@@ -68,7 +68,7 @@ export default function Home() {
     {
       id: 3,
       // title: "Data Science and Machine Learning Essentials",
-      title: "Data Science and Artificial Intelligence",
+      title: "Data Science & Artificial Intelligence",
       rating: 5,
       category: "Data Science",
       image: "/Course/data.jpg",
@@ -76,7 +76,7 @@ export default function Home() {
     },
     {
       id: 4,
-      title: " Cybersecurity",
+      title: " Cybersecurity, ethical hacking & information security",
       rating: 5,
       category: "Cybersecurity",
       image: "/Course/ethical.jpg",
@@ -84,7 +84,7 @@ export default function Home() {
     },
     {
       id: 5,
-      title: "Cloud Computing ",
+      title: "Cloud Computing & AWS",
       rating: 5,
       category: "Cloud",
       image: "/Course/cloud.png",
@@ -92,8 +92,7 @@ export default function Home() {
     },
     {
       id: 6,
-      // title: "AWS & DEVOPS",
-      title: "AWS",
+      title: "AWS-DEVOPS",
       rating: 5,
       category: "Networking",
       image: "/Course/aws.jpg",
@@ -109,7 +108,7 @@ export default function Home() {
     },
     {
       id: 8,
-      title: "Information Security",
+      title: "Data Analytics",
       rating: 5,
       category: "Security",
       image: "/Course/ethical.jpg",
@@ -314,7 +313,7 @@ export default function Home() {
                     {course.category}
                   </div>
                 </div>
-                <div className="p-4 flex flex-col" style={{ height: "180px" }}>
+                <div className="p-2 flex flex-col" style={{ height: "180px" }}>
                   <h3 className="font-bold text-lg mb-2 transition-colors duration-300 hover:text-red-500 uppercase">
                     {course.title}
                   </h3>

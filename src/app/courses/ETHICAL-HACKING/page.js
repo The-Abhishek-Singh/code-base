@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaTools, FaServer, FaLayerGroup } from "react-icons/fa";
+import { FaLock, FaCogs, FaCloud } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
 
 
@@ -34,25 +34,39 @@ function page(){
     },
   ]
   const projects = [
-      {
-        title: "Master Production Issue Handling",
-        description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
-        icon: <FaTools className="text-white text-3xl" />,
-      },
-      {
-        title: "Effortless Infrastructure Setup",
-        description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
-        icon: <FaServer className="text-white text-3xl" />,
-      },
-      {
-        title: "Streamline CI/CD Process",
-        description:
-          "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
-        icon: <FaLayerGroup className="text-white text-3xl" />,
-      },
-      ];
+    {
+      title: "Secure Cloud Architecture",
+      description:
+        "Design and deploy a secure, scalable infrastructure on AWS using EC2, VPC, IAM, and Security Groups. Learn the best practices of cloud security and access control.",
+      icon: <FaLock className="text-white text-3xl" />,
+    },
+    {
+      title: "Serverless App with Lambda & API Gateway",
+      description:
+        "Build a fully serverless backend using AWS Lambda, API Gateway, and DynamoDB. Trigger functions on-demand and manage APIs with zero server maintenance.",
+      icon: <FaCogs className="text-white text-3xl" />,
+    },
+    {
+      title: "S3 + CloudFront Website Hosting",
+      description:
+        "Host a static website using Amazon S3 and deliver it globally with CloudFront. Learn to configure buckets, set permissions, and optimize for performance and low latency.",
+      icon: <FaCloud className="text-white text-3xl" />,
+    },
+    ];
+  const courseDesc = [
+    {
+      title: 'High-Demand Cloud Roles',
+      description: 'Be job-ready for roles like Cloud Engineer, Solutions Architect, and DevOps Engineer with this comprehensive AWS certification course designed for today’s tech landscape.' 
+    },
+    {
+      title: 'Certification-Driven Learning',
+      description: 'Prepare for industry-recognized AWS certifications like Cloud Practitioner, Solutions Architect Associate & more—with structured modules, quizzes, and expert mentoring to maximize success.'
+    },
+    {
+      title: 'Hands-On Cloud Infrastructure Mastery',
+      description: 'Gain real-world experience with live AWS environments. Set up EC2 instances, configure S3, deploy scalable apps, and automate with IAM & Lambda. Practice what the pros do—hands-on.'
+    }
+  ];
     const courses1 = [
       {
         title: "PYTHON",
@@ -357,7 +371,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <CourseSection courseName={'ethical hacking'}/>
+            <CourseSection courseName={'ethical hacking'} courseDescription={courseDesc}/>
         </div>
 
         {/* Our Curriculum Section */}

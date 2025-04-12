@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const FeeStructure = () => {
+const FeeStructure = (props) => {
   return (
     <div className="h-auto bg-zinc-950 p-4 sm:p-6 md:p-8 text-white">
     <div>
@@ -14,8 +14,8 @@ const FeeStructure = () => {
       <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 md:mb-8">
         Meet Mentors & Instructors
       </h2>
-      <h3 className="text-lg sm:text-xl mb-6 sm:mb-8">
-        Tap into the wisdom of DevOps & Cloud Computing Experts
+      <h3 className="text-lg sm:text-xl mb-6 sm:mb-8 capitalize">
+        Tap into the wisdom of {props.courseName} Experts
       </h3>
       </ScrollReveal>
   
@@ -25,7 +25,7 @@ const FeeStructure = () => {
         {/* Left Card - Program */}
         <div className="grid grid-cols-[2fr_1fr] grid-rows-[auto_1fr_auto] gap-4 bg-gradient-to-b from-black via-red-800 to-red-900 text-white rounded-lg shadow-xl w-full md:w-1/2 p-4 sm:p-6 border-2 sm:border-4 border-red-900">
   {/* Title - spans full width */}
-  <h2 className="text-xl sm:text-2xl font-bold mb-2 col-span-2">DevOps & Cloud Computing Program</h2>
+  <h2 className="text-xl sm:text-2xl font-bold mb-2 col-span-2 capitalize">{props.courseName} Program</h2>
   
   {/* Features list - left column */}
   <div className="flex flex-col">
@@ -103,7 +103,7 @@ const FeeStructure = () => {
         {/* Right Card - Program + Degree */}
         <div className="grid grid-cols-[2fr_1fr] grid-rows-[auto_1fr_auto] gap-4 bg-gradient-to-b from-black via-red-800 to-red-900 text-white rounded-lg shadow-xl w-full md:w-1/2 p-4 sm:p-6 border-2 sm:border-4 border-red-900">
   {/* Title - spans full width */}
-  <h2 className="text-xl sm:text-2xl font-bold mb-2 col-span-2">DevOps & Cloud Computing Program + Degree</h2>
+  <h2 className="text-xl sm:text-2xl font-bold mb-2 col-span-2 capitalize">{props.courseName} Program + Degree</h2>
   
   {/* Features list - left column */}
   <div className="flex flex-col">
