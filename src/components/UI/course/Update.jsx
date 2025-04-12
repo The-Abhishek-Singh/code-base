@@ -88,7 +88,7 @@ export default function Home() {
       rating: 5,
       category: "Cloud",
       image: "/Course/cloud.png",
-      enrollUrl: "/courses/CLOUD-COMPUTING", 
+      enrollUrl: "/courses/CLOUD-COMPUTING-&-AWS", 
     },
     {
       id: 6,
@@ -112,7 +112,7 @@ export default function Home() {
       rating: 5,
       category: "Security",
       image: "/Course/ethical.jpg",
-      enrollUrl: "/courses/INFORMATION-SECURITY", 
+      enrollUrl: "/courses/DATA-ANALYTICS", 
     },
   ];
 
