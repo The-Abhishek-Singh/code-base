@@ -1,59 +1,68 @@
 "use client";
 import React from "react";
 import ScrollReveal from "@/components/About/ScrollReveal";
+
 const TeamMember = ({ name, role, imageUrl }) => (
-  <div className="relative group overflow-hidden h-full rounded-3xl">
-    <img src={imageUrl} alt={name} className="w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
-      <div className="absolute bottom-0 p-6 space-y-2">
-        <h3 className="text-3xl font-bold text-white">{name}</h3>
-        <p className="text-gray-200 text-sm">{role}</p>
+  <div className="relative group overflow-hidden rounded-3xl h-full">
+    <div className="aspect-ratio-box pb-[150%] relative">
+      <img
+        src={imageUrl}
+        alt={name}
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+        <div className="absolute bottom-0 p-6 space-y-2">
+          <h3 className="text-3xl font-bold text-white">{name}</h3>
+          <p className="text-gray-200 text-sm">{role}</p>
+        </div>
       </div>
     </div>
   </div>
 );
+
 const teamMembers = [
   {
     name: "Kritika",
     role: "Expert UI/UX Designer & Front-end Developer",
-    imageUrl: "/ourteam/Frame 326.jpg",
+    imageUrl: "/ourteam/kritika.jpg",
   },
   {
     name: "Leelam",
     role: "Expert UI/UX Designer & Front-end Developer",
-    imageUrl: "/ourteam/Frame 319.jpg",
+    imageUrl: "/ourteam/leelam.png",
   },
   {
     name: "Kunal",
     role: "Expert UI/UX Designer & App Developer",
-    imageUrl: "/ourteam/Frame.png",
+    imageUrl: "/ourteam/kunal.jpg",
   },
   {
     name: "Abhishek",
-    role: "Expert UI/UX Designer & Full-Stack Developer",
-    imageUrl: "/ourteam/Frame 327.jpg",
+    role: "Expert Full-Stack Developer",
+    imageUrl: "/ourteam/abhi.jpg",
   },
   {
     name: "Rounak",
-    role: "Expert Front-end Developer",
-    imageUrl: "/ourteam/Frame 322.jpg",
+    role: " Expert Full-Stack Developer",
+    imageUrl: "/ourteam/rounak.jpg",
   },
   {
     name: "Vatsalya",
     role: "Expert Full Stack Developer",
-    imageUrl: "/ourteam/Frame 323.jpg",
+    imageUrl: "/ourteam/vatsalya.jpg",
   },
   {
     name: "Divyanshu",
     role: "Expert Front-end Developer",
-    imageUrl: "/ourteam/Frame 324.jpg",
+    imageUrl: "/ourteam/divyanshu.jpg",
   },
   {
     name: "Mithun",
     role: "Expert Full Stack Developer",
-    imageUrl: "/ourteam/Frame 325.jpg",
+    imageUrl: "/ourteam/mithun.jpg",
   },
 ];
+
 const page = () => {
   return (
     <div className="main-container h-auto w-full bg-black overflow-x-hidden ">
@@ -135,6 +144,8 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      {/* First founder section */}
       <div className="h-auto bg-[#161616] text-white p-8 mt-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Image Container */}
@@ -208,6 +219,8 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      {/* Second founder section */}
       <div className="h-auto bg-[#161616] text-white p-8 mt-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Content Container */}
@@ -281,6 +294,82 @@ const page = () => {
           </div>
         </div>
       </div>
+
+      {/* Third executive section - AI Expert */}
+      <div className="h-auto bg-[#161616] text-white p-8 mt-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          {/* Image Container */}
+          <div className="w-full md:w-1/2">
+            <ScrollReveal
+              animation="slideLeft"
+              duration={800}
+              easing="spring"
+              delay={50}
+            >
+              <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-900 p-1">
+                <img
+                  src="/ourteam/Frame 341.png"
+                  alt="Portrait of AI Expert"
+                  className="w-full rounded-2xl"
+                />
+              </div>
+            </ScrollReveal>
+          </div>
+          {/* Content Container */}
+          <div className="w-full md:w-1/2 space-y-6">
+            <ScrollReveal
+              animation="fadeSlideLeft"
+              duration={800}
+              easing="spring"
+              delay={50}
+              stagger={150}
+            >
+              <h2 className="text-5xl font-bold text-white">AI-Expert</h2>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="fadeSlideLeft"
+              duration={800}
+              easing="spring"
+              delay={0}
+              stagger={150}
+            >
+              <h3 className="text-3xl font-medium text-white">
+                Miss. Namrata Choubey
+              </h3>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="fadeSlideLeft"
+              duration={800}
+              easing="spring"
+              delay={100}
+              stagger={150}
+            >
+              <p className="text-lg text-gray-300 leading-relaxed">
+                A technical visionary with extensive experience in building
+                scalable systems, our CTO leads the company's technological
+                innovation. With expertise in emerging technologies and software
+                architecture, they ensure that our solutions remain cutting-edge
+                while addressing complex business challenges for our clients.
+              </p>
+            </ScrollReveal>
+            <div className="pt-4">
+              <ScrollReveal
+                animation="fadeSlideLeft"
+                duration={800}
+                easing="spring"
+                delay={200}
+                stagger={150}
+              >
+                <p className="text-lg text-gray-300">
+                  Experience: <span className="font-semibold">7yr+</span>
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Team members grid */}
       <div className="min-h-screen bg-[#161616] py-20 px-4 mt-20">
         <div className="max-w-7xl mx-auto">
           {/* Section Title */}
@@ -295,14 +384,14 @@ const page = () => {
             </h2>
           </ScrollReveal>
           {/* Team Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <ScrollReveal
                 key={index}
                 animation="slideUp"
                 duration={800}
                 easing="spring"
-                delay={50 * index*2}
+                delay={50 * index * 2}
                 stagger={150}
               >
                 <TeamMember
@@ -319,4 +408,5 @@ const page = () => {
     </div>
   );
 };
+
 export default page;
