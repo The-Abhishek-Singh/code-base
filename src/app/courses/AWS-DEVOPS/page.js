@@ -206,6 +206,132 @@ function page(){
         }
       }
       ];
+      const jobRoles = [
+        { 
+          logo: '/coursePage/Amazon.png', 
+          logoAlt: 'Amazon Logo', 
+          title: 'Amazon',
+          company: 'Amazon'
+        },
+        { 
+          logo: '/coursePage/msp.png', 
+          logoAlt: 'MSP Logo', 
+          title: 'Managed Service Provider',
+          company: 'MSP'
+        },
+        { 
+          logo: '/coursePage/philips.jpeg', 
+          logoAlt: 'Philips Logo', 
+          title: 'Philips',
+          company: 'Philips Engineering Solutions'
+        },
+        {
+          logo: '/coursePage/IBM.png',
+          logoAlt: 'IBM Logo',
+          title: 'IBM',
+          company: 'International Business Machines'
+        },
+        {
+          logo: '/coursePage/MICROSOFT.jpg',
+          logoAlt: 'Microsoft Logo',
+          title: 'Microsoft',
+          company: 'Microsoft Corporation'
+        },
+        {
+          logo: '/coursePage/Relince.jpg',
+          logoAlt: 'Reliance Logo',
+          title: 'Reliance Industries',
+          company: 'Reliance'
+        },
+        {
+          logo: '/coursePage/paytm.jpeg',
+          logoAlt: 'Paytm Logo',
+          title: 'Paytm',
+          company: 'One97 Communications'
+        },
+        {
+          logo: '/coursePage/samsung.jpeg',
+          logoAlt: 'Samsung Logo',
+          title: 'Samsung',
+          company: 'Samsung Electronics'
+        },
+        {
+          logo: '/coursePage/salesforce.png',
+          logoAlt: 'Salesforce Logo',
+          title: 'Salesforce',
+          company: 'Salesforce Inc.'
+        },
+        {
+          logo: '/coursePage/wipro.jpg',
+          logoAlt: 'Wipro Logo',
+          title: 'Wipro',
+          company: 'Wipro Limited'
+        },
+        {
+          logo: '/coursePage/Wonololo.jpeg',
+          logoAlt: 'Wonolo Logo',
+          title: 'Wonolo',
+          company: 'Work Now Locally'
+        },
+        {
+          logo: '/coursePage/Zensar.webp',
+          logoAlt: 'Zensar Logo',
+          title: 'Zensar Technologies',
+          company: 'Zensar'
+        },
+        {
+          logo: '/coursePage/tcs.png',
+          logoAlt: 'TCS Logo',
+          title: 'TCS',
+          company: 'Tata Consultancy Services'
+        },
+        {
+          logo: '/coursePage/SSM.png',
+          logoAlt: 'SSM Logo',
+          title: 'E-info',
+          company: 'Suruhanjaya Syarikat Malaysia'
+        },
+        {
+          logo: '/coursePage/Skit.jpg',
+          logoAlt: 'Skit Logo',
+          title: 'Skit AI',
+          company: 'Skit'
+        },
+        {
+          logo: '/coursePage/Presistent.jpg',
+          logoAlt: 'Persistent Logo',
+          title: 'Persistent Systems',
+          company: 'Persistent'
+        },
+        {
+          logo: '/coursePage/ola.jpg',
+          logoAlt: 'Ola Logo',
+          title: 'Ola Cabs',
+          company: 'ANI Technologies Pvt. Ltd.'
+        },
+        {
+          logo: '/coursePage/grow.webp',
+          logoAlt: 'Groww Logo',
+          title: 'Groww',
+          company: 'Groww (Nextbillion Technology)'
+        },
+        {
+          logo: '/coursePage/Digit.webp',
+          logoAlt: 'Digit Logo',
+          title: 'Digit Insurance',
+          company: 'Go Digit General Insurance'
+        }
+      ];
+const skills = [
+  'AWS', 'EC2', 'S3', 'VPC', 'CloudFormation',
+  'Lambda', 'ECS', 'EKS', 'Fargate', 'IAM',
+  'Route 53', 'CloudFront', 'CloudWatch', 'RDS', 'Redshift',
+  'Terraform', 'Ansible', 'Docker', 'Kubernetes', 'Jenkins',
+  'Git', 'GitHub', 'GitLab CI/CD', 'CodePipeline', 'CodeBuild',
+  'CodeDeploy', 'CI/CD', 'ELB', 'Auto Scaling', 'CloudTrail',
+  'Bash Scripting', 'Linux', 'Prometheus', 'Grafana', 'ArgoCD',
+  'Nagios', 'DataDog', 'Splunk', 'ELK Stack', 'Secrets Manager'
+];
   return (
     <div className='h-auto w-full'>
         <Navbar />
@@ -370,7 +496,7 @@ function page(){
             </ScrollReveal>
             <ScrollReveal animation='scaleUp' delay={800} easing='spring'>
                 <div className='w-full border-4 border-red-600 rounded-lg'>
-                    <DevOpsSkills />
+                    <DevOpsSkills skills={skills} jobRoles={jobRoles} />
                 </div>
             </ScrollReveal>
             </div>

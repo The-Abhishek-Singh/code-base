@@ -296,7 +296,134 @@ const courses6 = [
       title: 'Real Projects & Code Labs',
       description: 'Build 10+ real-world applications and participate in live coding labs. Gain practical experience in debugging, deploying, and maintaining full-stack applications using modern frameworks and tools.'
     }
-    ]
+    ];
+    const jobRoles = [
+      { 
+        logo: '/coursePage/Amazon.png', 
+        logoAlt: 'Amazon Logo', 
+        title: 'Amazon',
+        company: 'Amazon'
+      },
+      { 
+        logo: '/coursePage/msp.png', 
+        logoAlt: 'MSP Logo', 
+        title: 'Managed Service Provider',
+        company: 'MSP'
+      },
+      { 
+        logo: '/coursePage/philips.jpeg', 
+        logoAlt: 'Philips Logo', 
+        title: 'Philips',
+        company: 'Philips Engineering Solutions'
+      },
+      {
+        logo: '/coursePage/IBM.png',
+        logoAlt: 'IBM Logo',
+        title: 'IBM',
+        company: 'International Business Machines'
+      },
+      {
+        logo: '/coursePage/MICROSOFT.jpg',
+        logoAlt: 'Microsoft Logo',
+        title: 'Microsoft',
+        company: 'Microsoft Corporation'
+      },
+      {
+        logo: '/coursePage/Relince.jpg',
+        logoAlt: 'Reliance Logo',
+        title: 'Reliance Industries',
+        company: 'Reliance'
+      },
+      {
+        logo: '/coursePage/paytm.jpeg',
+        logoAlt: 'Paytm Logo',
+        title: 'Paytm',
+        company: 'One97 Communications'
+      },
+      {
+        logo: '/coursePage/samsung.jpeg',
+        logoAlt: 'Samsung Logo',
+        title: 'Samsung',
+        company: 'Samsung Electronics'
+      },
+      {
+        logo: '/coursePage/salesforce.png',
+        logoAlt: 'Salesforce Logo',
+        title: 'Salesforce',
+        company: 'Salesforce Inc.'
+      },
+      {
+        logo: '/coursePage/wipro.jpg',
+        logoAlt: 'Wipro Logo',
+        title: 'Wipro',
+        company: 'Wipro Limited'
+      },
+      {
+        logo: '/coursePage/Wonololo.jpeg',
+        logoAlt: 'Wonolo Logo',
+        title: 'Wonolo',
+        company: 'Work Now Locally'
+      },
+      {
+        logo: '/coursePage/Zensar.webp',
+        logoAlt: 'Zensar Logo',
+        title: 'Zensar Technologies',
+        company: 'Zensar'
+      },
+      {
+        logo: '/coursePage/tcs.png',
+        logoAlt: 'TCS Logo',
+        title: 'TCS',
+        company: 'Tata Consultancy Services'
+      },
+      {
+        logo: '/coursePage/SSM.png',
+        logoAlt: 'SSM Logo',
+        title: 'E-info',
+        company: 'Suruhanjaya Syarikat Malaysia'
+      },
+      {
+        logo: '/coursePage/Skit.jpg',
+        logoAlt: 'Skit Logo',
+        title: 'Skit AI',
+        company: 'Skit'
+      },
+      {
+        logo: '/coursePage/Presistent.jpg',
+        logoAlt: 'Persistent Logo',
+        title: 'Persistent Systems',
+        company: 'Persistent'
+      },
+      {
+        logo: '/coursePage/ola.jpg',
+        logoAlt: 'Ola Logo',
+        title: 'Ola Cabs',
+        company: 'ANI Technologies Pvt. Ltd.'
+      },
+      {
+        logo: '/coursePage/grow.webp',
+        logoAlt: 'Groww Logo',
+        title: 'Groww',
+        company: 'Groww (Nextbillion Technology)'
+      },
+      {
+        logo: '/coursePage/Digit.webp',
+        logoAlt: 'Digit Logo',
+        title: 'Digit Insurance',
+        company: 'Go Digit General Insurance'
+      }
+    ];
+        
+const skills = [
+  'Java', 'Kotlin', 'Swift', 'Dart', 'Flutter',
+  'React Native', 'Xamarin', 'Android Studio', 'Xcode', 'Firebase',
+  'SQLite', 'Room DB', 'Core Data', 'Realm', 'Jetpack Compose',
+  'MVVM', 'MVC', 'MVP', 'REST API', 'GraphQL',
+  'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'PostgreSQL',
+  'Git', 'GitHub', 'Figma', 'Adobe XD', 'Socket.IO',
+  'Push Notifications', 'In-App Purchases', 'App Store', 'Play Store', 'CI/CD'
+];
+
   return (
     <div className='h-auto w-full'>
         <Navbar />
@@ -458,7 +585,7 @@ const courses6 = [
             </ScrollReveal>
             <ScrollReveal animation='scaleUp' delay={800} easing='spring'>
                 <div className='w-full border-4 border-red-600 rounded-lg'>
-                    <DevOpsSkills />
+                    <DevOpsSkills skills={skills} jobRoles={jobRoles}/>
                 </div>
             </ScrollReveal>
             </div>

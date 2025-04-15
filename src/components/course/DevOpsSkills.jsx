@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const DevOpsSkills = () => {
+const DevOpsSkills = (props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSkills, setSelectedSkills] = useState([]);
 
@@ -91,13 +91,13 @@ const DevOpsSkills = () => {
   ];
 
   // Filter job roles based on search
-  const filteredRoles = jobRoles.filter(role => 
+  const filteredRoles = props.jobRoles.filter(role => 
     role.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     role.company.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Filter skills based on search
-  const filteredSkills = skills.filter(skill => 
+  const filteredSkills = props.skills.filter(skill => 
     skill.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -175,7 +175,7 @@ const DevOpsSkills = () => {
           key={index} 
           onClick={() => handleSkillClick(skill)}
           className={`
-            bg-gray-100 rounded-md py-1 sm:py-2 px-2 sm:px-3 text-center flex flex-col items-center justify-center cursor-pointer
+            bg-gray-200 rounded-md p-2 text-center flex flex-col items-center justify-center cursor-pointer h-full
             ${selectedSkills.includes(skill) ? 'border-2 border-blue-500' : ''}
             hover:bg-gray-200 transition-all duration-200
           `}

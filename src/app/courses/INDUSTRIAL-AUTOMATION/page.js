@@ -251,7 +251,89 @@ const courses5 = [
       "Industrial Live Project": "Working on an industrial live project, simulating real-world challenges and solutions"
     }
   }  
-]
+];
+const jobRoles = [
+  {
+    logo: '/coursePage/ABB.png',
+    logoAlt: 'ABB Logo',
+    title: 'ABB Group',
+    company: 'ABB Ltd'
+  },
+  {
+    logo: '/coursePage/adani-power.png',
+    logoAlt: 'Adani Logo',
+    title: 'Adani Group',
+    company: 'Adani Enterprises Ltd'
+  },
+  {
+    logo: '/coursePage/airbnb.svg',
+    logoAlt: 'Airbnb Logo',
+    title: 'Airbnb',
+    company: 'Airbnb Inc.'
+  },
+  {
+    logo: '/coursePage/emerson.png',
+    logoAlt: 'Emerson Logo',
+    title: 'Emerson Electric',
+    company: 'Emerson Electric Co.'
+  },
+  {
+    logo: '/coursePage/fuji.png',
+    logoAlt: 'Fuji Logo',
+    title: 'Fuji Electric',
+    company: 'Fuji Electric Co., Ltd.'
+  },
+  {
+    logo: '/coursePage/Honeywell.png',
+    logoAlt: 'Honeywell Logo',
+    title: 'Honeywell',
+    company: 'Honeywell International Inc.'
+  },
+  {
+    logo: '/coursePage/mitsubishi.png',
+    logoAlt: 'Mitsubishi Logo',
+    title: 'Mitsubishi Electric',
+    company: 'Mitsubishi Electric Corporation'
+  },
+  {
+    logo: '/coursePage/quantum.png',
+    logoAlt: 'Quantum Logo',
+    title: 'Quantum',
+    company: 'Quantum Corporation'
+  },
+  {
+    logo: '/coursePage/Rockwell.png',
+    logoAlt: 'Rockwell Logo',
+    title: 'Rockwell Automation',
+    company: 'Rockwell International'
+  },
+  {
+    logo: '/coursePage/Schneider.png',
+    logoAlt: 'Schneider Logo',
+    title: 'Schneider Electric',
+    company: 'Schneider Electric SE'
+  },
+  {
+    logo: '/coursePage/siemens.png',
+    logoAlt: 'Siemens Logo',
+    title: 'Siemens',
+    company: 'Siemens AG'
+  },
+  {
+    logo: '/coursePage/TECH-MAHINDRA.png',
+    logoAlt: 'Tech Mahindra Logo',
+    title: 'Tech Mahindra',
+    company: 'Tech Mahindra Ltd'
+  }
+];
+
+
+const skills = [
+  'PLC Programming', 'SCADA', 'HMI', 'Ladder Logic', 'Industrial IoT',
+  'Automation Studio', 'Sensors & Actuators', 'PID Control', 'Siemens TIA Portal', 'Allen-Bradley',
+  'Control Systems', 'Modbus', 'Ethernet/IP', 'Robotics', 'Industrial Safety'
+];
+
   return (
     <div className='h-auto w-full'>
         <Navbar />
@@ -414,7 +496,7 @@ const courses5 = [
             </ScrollReveal>
             <ScrollReveal animation='scaleUp' delay={800} easing='spring'>
                 <div className='w-full border-4 border-red-600 rounded-lg'>
-                    <DevOpsSkills />
+                    <DevOpsSkills skills={skills} jobRoles={jobRoles} />
                 </div>
             </ScrollReveal>
             </div>
