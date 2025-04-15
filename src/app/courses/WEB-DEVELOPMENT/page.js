@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaLaptopCode, FaShoppingCart, FaRocket } from "react-icons/fa";
+import { FaStore, FaTasks, FaChartBar, FaHospital, FaHome, FaGraduationCap } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
 
 function page(){
@@ -32,174 +32,207 @@ function page(){
       rating: 5,
     },
   ]
+
+  const projects = [
+    {
+      "title": "E-Commerce Platform",
+      "description": "Build a feature-rich online store with product listings, shopping cart and payment processing.",
+      "icon": <FaStore className="text-white text-3xl" />,
+      },
+    
+      {
+        "title": "Task Management System",
+        "description": "Create a collaborative project management tool with task tracking and team communication features.",
+        "icon": <FaTasks className="text-white text-3xl" />,
+        },
+        {
+          "title": "Social Media Dashboard",
+          "description": "Develop a platform that integrates multiple social accounts for posting and analytics.",
+          "icon": <FaChartBar className="text-white text-3xl" />,
+          },
+          {
+            "title": "Healthcare Appointment System",
+            "description": "Build a medical scheduling application with patient profiles and doctor availability calendars.",
+            "icon": <FaHospital className="text-white text-3xl" />,
+            },
+            {
+              "title": "Real Estate Portal",
+              "description": "Create a property marketplace with search filters, map integration and virtual tours.",
+              "icon": <FaHome className="text-white text-3xl" />,
+              },
+              {
+                "title": "Learning Management System",
+                "description": "Develop an educational platform with course creation tools and progress tracking features.",
+                "icon": <FaGraduationCap className="text-white text-3xl" />,
+                },
+    ];
+    const courseDesc = [
+      {
+        title: 'Full-Stack Career Opportunities',
+        description: 'Be job-ready for roles like Frontend Developer, Backend Developer, and Full-Stack Engineer with this all-in-one Web Development certification course.' 
+      },
+      {
+        title: 'Portfolio-Ready Projects',
+        description: 'Boost your resume by building 10+ real-world projects, from e-commerce platforms to social media dashboards—giving you the edge in any job interview.'
+      },
+      {
+        title: 'Real-World Coding & Deployment Mastery',
+        description: 'Dive into sandboxed coding challenges, Git/GitHub workflows, and deployment using Netlify, Vercel & AWS. Strengthen your dev skills with hands-on practice from start to scale.'
+      }
+    ];  
     const courses1 = [
       {
-        title: "PYTHON",
-        duration: "1 Month",
-        description: "Python is a crucial skill for DevOps engineers as it enables automation, configuration management, and scripting for cloud environments. Learning Python helps streamline DevOps workflows, improve efficiency, and enhance infrastructure management.",
-        topics: {
-          "Introduction to Python": "Python and its Role in DevOps",
-          "Understanding Variables and Data Types": "int, float, string, list, tuple, dictionary, set",
-          "Working with Operators (Arithmetic, Logical, Comparison, Bitwise)": "Assignment, Membership, Identity",
-          "Type Conversion and Type Casting": "Implicit and Explicit Type Casting"
+        "title": "INTRODUCTION TO FULL STACK DEVELOPMENT",
+        "duration": "1 Week",
+        "description": "Full Stack Development is essential for creating modern web applications by integrating frontend, backend, and database technologies. Learning the MERN stack provides developers with the skills to build scalable, efficient web applications from end to end while understanding the complete development lifecycle.",
+        "topics": {
+          "Overview of Full Stack Development": "Role of full-stack developers in modern web development",
+          "Introduction to the MERN Stack": "MongoDB, Express.js, React.js, Node.js ecosystem",
+          "Client-Server Architecture": "HTTP Protocol and RESTful services",
+          "Development Workflow": "Frontend, Backend, Database integration",
+          "Setting up a Development Environment": "Node.js, MongoDB, VS Code, Git configuration"
         }
       },
       {
-        title: "Data Structures and Algorithms (DSA)",
-        duration: "1 Month",
-        description: "DSA is a fundamental skill for software engineers, enabling efficient problem-solving and optimization of code. Mastering data structures and algorithms helps in tackling coding interviews, improving logical thinking, and building scalable applications. This course covers essential concepts like arrays, linked lists, recursion, trees, graphs, sorting, and searching techniques to enhance problem-solving abilities.",
-        topics: {
-          "Introduction to DSA": "Importance of DSA, Applications in Competitive Programming and Development",
-          "Arrays and Strings": "One-dimensional and Multi-dimensional arrays, String manipulation techniques",
-          "Linked Lists": "Singly Linked List, Doubly Linked List, Circular Linked List",
-          "Stack and Queue": "Stack operations, Queue operations, Priority Queue",
-          "Recursion and Backtracking": "Concept of Recursion, Backtracking Problems",
-          "Sorting and Searching Algorithms": "Bubble Sort, Merge Sort, Quick Sort, Binary Search",
-          "Trees and Graphs": "Binary Trees, Binary Search Trees, Graph representation and traversal (BFS & DFS)",
-          "Dynamic Programming": "Introduction to DP, Memoization vs Tabulation, Famous DP problems"
+        "title": "NODE.JS & EXPRESS.JS",
+        "duration": "1 Month",
+        "description": "Node.js and Express.js are fundamental technologies for backend development, enabling developers to build scalable server-side applications and RESTful APIs. Mastering these technologies allows for efficient database operations, server management, and the creation of robust web services essential for full-stack applications.",
+        "topics": {
+          "Introduction to Node.js and NPM": "Core concepts, event-driven architecture, package management",
+          "Basics of Express.js": "Setting up routes, middleware, request-response cycle",
+          "RESTful API concepts": "API design principles, endpoints, HTTP methods",
+          "Setting up a basic Express server": "Configuration, environment variables, error handling",
+          "Connecting Node.js with MongoDB": "Database integration and management",
+          "CRUD operations": "Create, Read, Update, Delete functionality implementation"
         }
       },
       {
-        title: "Linux",
-        duration: "1 Month",
-        description: "Linux is a powerful and widely used operating system in development, DevOps, and cybersecurity. Mastering Linux helps in system administration, shell scripting, server management, and understanding the core of open-source operating systems. This course covers essential Linux commands, file system management, process handling, networking, and security, equipping you with the skills needed for efficient system operations.",
-        topics: {
-          "Introduction to Linux": "History, Distributions, and Use Cases",
-          "Linux File System and Commands": "File system structure, Basic and Advanced Linux commands",
-          "User Management and Permissions": "Users, Groups, File permissions, Sudo and Root access",
-          "Process Management": "Foreground & Background processes, Job control, Signals",
-          "Shell Scripting": "Bash scripting, Variables, Loops, Conditional statements",
-          "Networking in Linux": "Networking commands, Firewall configuration, SSH and FTP",
-          "Package Management": "apt, yum, snap, rpm, Installing and Updating software",
-          "Linux Security and Hardening": "Firewall, SELinux, File encryption, Security best practices"
+        "title": "MONGODB DATABASE",
+        "duration": "1 Month",
+        "description": "MongoDB is a powerful NoSQL database solution that provides flexibility, scalability, and performance for modern web applications. Learning MongoDB enables developers to store and manage unstructured data efficiently, create complex data relationships, and seamlessly integrate database operations within full-stack applications.",
+        "topics": {
+          "Introduction to MongoDB and NoSQL Databases": "Document-oriented architecture, comparison with SQL databases",
+          "MongoDB Collections and Documents": "Schema design, document structure, BSON format",
+          "Using MongoDB with Mongoose": "Model Creation, Querying, Relationships",
+          "Basic MongoDB Commands": "insert, find, update, delete operations",
+          "Integrating MongoDB with Express": "Connection setup, middleware integration",
+          "Handling Database Connections": "Authentication, error handling, connection pooling"
         }
       }
     ];
-      const projects = [
-          {
-            title: "Responsive Portfolio Website",
-            description:
-              "Learn how to design and develop a modern, mobile-friendly personal portfolio using HTML, CSS, and JavaScript. Showcase your skills and stand out to recruiters.",
-            icon: <FaLaptopCode className="text-white text-3xl" />,
-          },
-          {
-            title: " E-Commerce Storefront",
-            description:
-              "Build a fully functional online store with shopping cart, product filters, and payment gateway using React.js, Node.js, and MongoDB.",
-            icon: <FaShoppingCart className="text-white text-3xl" />,
-          },
-          {
-            title: "Deploy & Optimize Web Apps",
-            description:
-              "Master deployment pipelines with GitHub, Netlify, and Vercel. Learn how to optimize performance and SEO to ensure blazing-fast, user-friendly experiences.",
-            icon: <FaRocket className="text-white text-3xl" />,
-          },
-          ];
-          const courseDesc = [
-            {
-              title: 'Full-Stack Career Opportunities',
-              description: 'Be job-ready for roles like Frontend Developer, Backend Developer, and Full-Stack Engineer with this all-in-one Web Development certification course.' 
-            },
-            {
-              title: 'Portfolio-Ready Projects',
-              description: 'Boost your resume by building 10+ real-world projects, from e-commerce platforms to social media dashboards—giving you the edge in any job interview.'
-            },
-            {
-              title: 'Real-World Coding & Deployment Mastery',
-              description: 'Dive into sandboxed coding challenges, Git/GitHub workflows, and deployment using Netlify, Vercel & AWS. Strengthen your dev skills with hands-on practice from start to scale.'
-            }
-          ];      
+         
     const courses2 = [
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
-        topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
-        }
-      },
-      {
-        "title": "AWS (Amazon Web Services)",
-        "duration": "1 Month",
-        "description": "AWS is the leading cloud platform, offering scalable and cost-effective solutions for hosting, storage, and computing. This course covers core AWS services, including EC2, S3, Lambda, and RDS, helping you gain expertise in cloud computing, deployment, and security.",
+        "title": "Authentication & Authorization",
+        "duration": "1 Week",
+        "description": "Authentication and authorization are critical for securing modern applications. This course covers implementing user authentication systems, managing secure sessions, and controlling access based on user roles. Learn to protect APIs, implement token-based authentication, and follow security best practices to build robust and secure full stack applications.",
         "topics": {
-          "Introduction to AWS": "AWS global infrastructure, Pricing, Free tier benefits",
-          "Compute Services": "EC2 instances, Auto Scaling, Load Balancers, Lambda functions",
-          "Storage Services": "S3, EBS, Glacier, File storage solutions",
-          "Database Services": "RDS, DynamoDB, Aurora, Redshift",
-          "Networking in AWS": "VPC, Route 53, CloudFront, AWS Private Link",
-          "Security and IAM": "IAM roles, Policies, AWS Shield, Security best practices",
-          "Serverless Computing": "AWS Lambda, API Gateway, Event-driven architecture",
-          "AWS Deployment and Management": "CloudFormation, Elastic Beanstalk, AWS CLI"
+          "User Authentication": "JWT implementation, Passport.js strategies, OAuth integration",
+          "Token-Based Authentication": "Securing APIs, token validation, refresh tokens",
+          "Role-Based Authorization": "Permission models, access control, policy enforcement",
+          "Session Management": "Secure cookies, session storage, expiration policies",
+          "Security Best Practices": "Password hashing, HTTPS, CSRF protection, input validation"
         }
       },
       {
-        title: "Infrastructure as Code (IAC)",
-        duration: "1 Month",
-        description: "Infrastructure as Code (IAC) enables automated, consistent, and scalable deployment of infrastructure using code. This course covers tools like Terraform, Ansible, and CloudFormation to manage cloud infrastructure efficiently.",
-        topics: {
-          "Introduction to Infrastructure as Code": "Concepts, Benefits, and Real-world use cases",
-          "Terraform Basics": "Installation, Providers, Resources, State management",
-          "Terraform Advanced Concepts": "Modules, Workspaces, Remote Backends",
-          "Ansible for Configuration Management": "Playbooks, Roles, Ansible Tower",
-          "AWS CloudFormation": "Templates, Stacks, Managing AWS infrastructure",
-          "CI/CD with IAC": "Automating infrastructure deployments",
-          "Monitoring and Logging": "Observability, Infrastructure monitoring tools"
+        "title": "REACT.JS",
+        "duration": "1 Week",
+        "description": "Introduction to React.js - Objective: Learn the fundamentals of React.js for frontend development.",
+        "topics": {
+          "Overview of React.js and Component-Based Architecture": "History and principles of React, component philosophy, virtual DOM",
+          "Creating Functional and Class Components": "Component syntax, lifecycle methods, hooks vs class components",
+          "JSX Syntax and Rendering Data": "JavaScript XML syntax, expressions, conditional rendering, lists",
+          "Props and State": "Component communication, one-way data flow, useState hook, state management",
+          "Event Handling in React": "Synthetic events, handlers, binding, forms and controlled components",
+          "Introduction to React Router (Single Page Application routing)": "Client-side routing setup, route parameters, navigation, nested routes"
         }
-      }
+      },
+      {
+        "title": "Advanced React.js",
+        "duration": "1 Month",
+        "description": "Advanced React.js Concepts - Objective: Dive deeper into React.js for building dynamic UIs.",
+        "topics": {
+          "React Hooks (useState, useEffect, useContext)": "Custom hooks, rules of hooks, optimizing performance",
+          "Component Lifecycle Methods": "Mounting, updating, unmounting phases, deprecated methods",
+          "Managing State with Context API": "Global state management, providers and consumers, context limitations",
+          "Form Handling and Validation": "Form libraries, controlled vs uncontrolled components, validation techniques",
+          "Handling API Requests in React (Fetching Data)": "Async operations, loading states, error handling, data caching",
+          "Error Boundaries and Debugging React Applications": "React DevTools, error capture, fallback UIs, performance profiling"
+        }
+      },
     ];
     const courses3 = [
       {
-        title: "System Design",
-        duration: "1 Month",
-        description: "System Design is a crucial skill for building scalable, efficient, and maintainable applications. This course covers architectural patterns, scalability strategies, database design, caching mechanisms, and real-world case studies to help engineers create robust systems.",
-        topics: {
-          "Introduction to System Design": "Key principles, High-level design vs. Low-level design",
-          "Scalability and Load Balancing": "Horizontal vs. Vertical Scaling, Load balancers",
-          "Database Design": "SQL vs. NoSQL, Sharding, Replication, CAP Theorem",
-          "Caching Strategies": "Redis, Memcached, Cache invalidation techniques",
-          "Microservices Architecture": "Advantages, API Gateway, Inter-service communication",
-          "Message Queues and Streaming": "Kafka, RabbitMQ, Event-driven systems",
-          "Security and Rate Limiting": "Authentication, Authorization, Rate Limiting",
-          "Real-world Case Studies": "Designing scalable systems like Uber, Netflix, WhatsApp"
+        "title": "Frontend + Backend Integration",
+        "duration": "1 Month",
+        "description": "Building Full Stack Applications (Frontend + Backend Integration) - Objective: Learn how to integrate frontend (React) with backend (Node/Express).",
+        "topics": {
+          "Sending and Receiving Data between React and Express": "Request lifecycle, data formats, RESTful API design",
+          "Fetching Data from Backend using Axios or Fetch API": "Promise handling, async/await, request configuration",
+          "Handling API Responses and Error States in React": "Loading states, error handling, response processing",
+          "Managing State with Redux (Optional)": "Action creators, reducers, store configuration, middleware",
+          "Setting up CORS for Frontend-Backend Communication": "Security considerations, CORS policies, proxy configuration"
         }
       },
       {
-        title: "Advanced Data Structures and Algorithms",
-        duration: "1 Month",
-        description: "Advanced DSA builds on fundamental concepts to solve complex problems efficiently. This course covers advanced topics like graph algorithms, segment trees, tries, and dynamic programming optimizations to enhance problem-solving skills for competitive programming and technical interviews.",
-        topics: {
-          "Advanced Graph Algorithms": "Dijkstra, Floyd-Warshall, Bellman-Ford, Topological Sorting",
-          "Segment Trees and Fenwick Trees": "Range Queries, Lazy Propagation",
-          "Tries and Suffix Trees": "String searching, Autocomplete, Pattern matching",
-          "Advanced Dynamic Programming": "Bitmasking, Matrix Exponentiation, DP on Trees",
-          "Greedy and Divide & Conquer": "Greedy strategies, Advanced Divide & Conquer techniques",
-          "Network Flow Algorithms": "Ford-Fulkerson, Edmonds-Karp",
-          "Competitive Programming Techniques": "Heuristic approaches, Problem-solving strategies",
-          "Real-world Applications": "How DSA is used in large-scale systems"
+        "title": "Styling and Frontend Design",
+        "duration": "1 Week",
+        "description": "Objective: Improve the visual appeal of your frontend.",
+        "topics": {
+          "CSS Flexbox and Grid Layout": "Modern layout systems, responsive containers, alignment techniques",
+          "Styling React Components using CSS, SASS, and CSS Modules": "Component-scoped styles, preprocessors, style organization",
+          "Introduction to Material-UI or Bootstrap": "Component libraries, design systems, theming customization",
+          "Creating Responsive Web Designs (Media Queries)": "Mobile-first approach, breakpoints, adaptive layouts",
+          "Integrating External APIs (e.g., Google Maps, Weather API)": "API authentication, data visualization, third-party services",
+          "Creating Interactive UIs with React": "Animations, transitions, user experience enhancements"
         }
       },
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
-        topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+        "title": "Deploying Full Stack Applications",
+        "duration": "1 Month",
+        "description": "Objective: Learn how to deploy MERN applications to the cloud.",
+        "topics": {
+          "Deployment options for MERN applications (Heroku, AWS, DigitalOcean)": "Platform comparison, cost factors, scalability considerations",
+          "Preparing a Node.js App for Production": "Performance optimization, security hardening, build processes",
+          "Setting up Environment Variables and Configurations": "Secret management, configuration patterns, multi-environment setup",
+          "Deploying the Backend (Express.js API) to Heroku": "Platform setup, continuous deployment, monitoring",
+          "Deploying the Frontend (React) to Netlify or Vercel": "Static site hosting, build configurations, CDN distribution",
+          "Database Deployment with MongoDB Atlas": "Cloud database setup, connection security, scaling options"
         }
       }
       ];
+      const courses4 = [
+        {
+          "title": "Testing Full Stack Applications",
+          "duration": "1 Month",
+          "description": "Objective: Implement testing for both frontend and backend.",
+          "topics": {
+            "Introduction to Testing in JavaScript (Jest, Mocha, Chai)": "Testing frameworks, assertion libraries, test runners",
+            "Unit Testing Backend with Mocha/Chai": "API endpoint testing, database testing, middleware testing",
+            "Testing React Components with Jest and Enzyme": "Component rendering, state testing, snapshot testing",
+            "End-to-End Testing with Cypress or Puppeteer": "User flow simulation, browser automation, test reporting",
+            "Mocking API Calls for Testing": "Mock services, intercepting requests, stubbing responses",
+            "Debugging and Troubleshooting Techniques": "Breakpoints, logging strategies, performance profiling"
+          }
+        },
+        {
+          "title": "FINAL PROJECT AND BEST PRACTICES",
+          "duration": "1 Month",
+          "description": "The final project provides an opportunity to demonstrate mastery of full-stack development by building and deploying a complete MERN application. This module focuses on applying best practices in code organization, version control, and performance optimization while delivering a professional-quality application.",
+          "topics": {
+            "Guidelines for Final Project": "Combining React, Node, Express, and MongoDB",
+            "Code Organization and Project Structure Best Practices": "Folder structures, modular design, separation of concerns",
+            "Version Control with Git/GitHub": "Branching strategies, collaborative workflows, CI/CD integration",
+            "Performance Optimization in MERN Stack Applications": "Lazy loading, code splitting, caching strategies",
+            "Review of Advanced Features and Concepts": "Authentication, state management, real-time features",
+            "Final Project Presentation and Peer Review": "Deployment strategies, documentation, feedback incorporation"
+          }
+        },
+        
+      ];
+
+
+
   return (
     <div className='h-auto w-full'>
         {/* <Navbar /> */}
@@ -222,7 +255,7 @@ function page(){
                 </ScrollReveal>
                 <ScrollReveal animation='slideUp' delay={500} easing='smooth'>
                   <p className='lg:text-xl sm:text-lg tracking-wide'>
-                  Full Stack Development is a course that covers the end-to-end process of building web applications, from designing user interfaces to managing server-side logic and databases. It focuses on both frontend and backend development, enabling learners to create dynamic, responsive, and fully functional applications. The course also explores essential tools, frameworks, and best practices used in modern software development, equipping students to work seamlessly across the entire technology stack.
+                  The Full Stack Software Development Training Program at Careertronic is a career-focused course that equips learners with in-demand skills in front-end and back-end development, UI/UX design, mobile and web apps, cloud computing, and DevOps. Guided by expert instructors, students engage in hands-on learning through live projects to build a strong portfolio. Careertronic’s 100% placement support includes personalized coaching to help secure high-paying roles at top tech companies. With a focus on real-world experience and cutting-edge technologies, the program prepares you to thrive in the fast-paced tech industry. Join Careertronic today to launch your successful software development career
                   </p>
                 </ScrollReveal>
                 <ScrollReveal animation='scaleUp' delay={700} easing='bouncy'>
@@ -381,13 +414,14 @@ function page(){
         
         <CourseRoadmap courses={courses1} show={false}/>
         <CourseRoadmap courses={courses2} show={true} texts={{ 
-            heading:'READY FOR DEVOPS & CLOUD COMPUTING ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+            heading:'READY FOR WEB DEVELOPMENT ROLES', 
+            subHeading:'Covering all modules above makes you ready to apply for Web Development roles' 
         }} />
         <CourseRoadmap courses={courses3} show={true} texts={{ 
-            heading:'YOU\'RE NOW READY FOR SRE ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+            heading:'YOU\'RE NOW READY FOR WEB DEVELOPMENT ROLES', 
+            subHeading:'Covering all modules above makes you ready to apply for Web Development  roles' 
         }} />
+        <CourseRoadmap courses={courses4} show={false}/>
         
         {/* Download Brochure Section */}
         <div className='w-full bg-white p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-start gap-3 sm:gap-4 md:gap-7'>

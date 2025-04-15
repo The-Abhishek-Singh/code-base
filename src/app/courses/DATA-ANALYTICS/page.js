@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaLock, FaCogs, FaCloud } from "react-icons/fa";
+import { FaChartBar, FaChartLine, FaUsers, FaRobot, FaHashtag, FaMoneyBillWave } from 'react-icons/fa';
 import ScrollReveal from '@/components/ScrollReveal';
 
 
@@ -35,172 +35,491 @@ function page(){
   ]
   const projects = [
     {
-      title: "Secure Cloud Architecture",
-      description:
-        "Design and deploy a secure, scalable infrastructure on AWS using EC2, VPC, IAM, and Security Groups. Learn the best practices of cloud security and access control.",
-      icon: <FaLock className="text-white text-3xl" />,
+      icon: <FaChartBar className='text-white text-3xl' />,
+      title: "Data Analytics Dashboard ",
+      description: "Build an interactive analytics dashboard using Python, Pandas, and visualization tools like Tableau or PowerBI. Extract insights from complex datasets and create compelling visualizations that drive data-informed decision-making."
     },
     {
-      title: "Serverless App with Lambda & API Gateway",
-      description:
-        "Build a fully serverless backend using AWS Lambda, API Gateway, and DynamoDB. Trigger functions on-demand and manage APIs with zero server maintenance.",
-      icon: <FaCogs className="text-white text-3xl" />,
+      icon: <FaChartLine className='text-white text-3xl' />,
+      title: "Market Trend Analysis",
+      description: "Analyze market data to identify emerging trends and patterns using R or Python. Apply time series analysis, regression models, and forecasting techniques to predict future market movements and provide actionable business recommendations."
     },
     {
-      title: "S3 + CloudFront Website Hosting",
-      description:
-        "Host a static website using Amazon S3 and deliver it globally with CloudFront. Learn to configure buckets, set permissions, and optimize for performance and low latency.",
-      icon: <FaCloud className="text-white text-3xl" />,
+      icon: <FaUsers className='text-white text-3xl' />,
+      title: "Customer Segmentation Analysis",
+      description: "Use clustering algorithms and demographic data to segment customers into meaningful groups. Implement K-means and RFM analysis to identify high-value customer segments and develop targeted marketing strategies."
     },
+    {
+      icon: <FaRobot className='text-white text-3xl' />,
+      title: "Predictive Analytics Model",
+      description: "Develop machine learning models to predict business outcomes using historical data. Apply classification, regression, and ensemble methods to forecast sales, customer churn, or product demand with scikit-learn and TensorFlow."
+    },
+    {
+      icon: <FaHashtag className='text-white text-3xl' />,
+      title: "Social Media Analytics",
+      description: "Analyze social media data to extract user sentiment and engagement patterns. Use NLP techniques and sentiment analysis to process text data, identify trends, and measure campaign effectiveness across multiple platforms."
+    },
+    {
+      icon: <FaMoneyBillWave className='text-white text-3xl' />,
+      title: "Financial Data Analysis",
+      description: "Perform comprehensive analysis of financial data to identify investment opportunities and risks. Create financial models, conduct ratio analysis, and develop interactive reports to support investment decisions and portfolio management."
+    }
     ];
   const courseDesc = [
     {
-      title: 'High-Demand Cloud Roles',
-      description: 'Be job-ready for roles like Cloud Engineer, Solutions Architect, and DevOps Engineer with this comprehensive AWS certification course designed for today’s tech landscape.' 
+      title: 'High-Demand Data Analytics Roles',
+      description: 'Be job-ready for roles like Data Analyst, Data Engineer, and Business Intelligence Analyst with this comprehensive data analytics program built for today’s data-driven world.'
     },
     {
       title: 'Certification-Driven Learning',
-      description: 'Prepare for industry-recognized AWS certifications like Cloud Practitioner, Solutions Architect Associate & more—with structured modules, quizzes, and expert mentoring to maximize success.'
+      description: 'Prepare for industry-recognized certifications like Microsoft PL-300, Google Data Analytics, and AWS Data Analytics—with structured modules, hands-on projects, quizzes, and expert mentoring to boost your success.'
     },
     {
-      title: 'Hands-On Cloud Infrastructure Mastery',
-      description: 'Gain real-world experience with live AWS environments. Set up EC2 instances, configure S3, deploy scalable apps, and automate with IAM & Lambda. Practice what the pros do—hands-on.'
+      title: 'Hands-On Data Analytics Mastery',
+      description: 'Gain real-world experience with tools like SQL, Excel, Power BI, and Python. Clean and analyze datasets, build dashboards, and uncover insights that drive decisions. Practice like a pro—hands-on.'
     }
   ];
     const courses1 = [
       {
-        title: "PYTHON",
-        duration: "1 Month",
-        description: "Python is a crucial skill for DevOps engineers as it enables automation, configuration management, and scripting for cloud environments. Learning Python helps streamline DevOps workflows, improve efficiency, and enhance infrastructure management.",
+        title: "Python Basics",
+        duration: "1 Week",
+        description: "This course covers fundamental Python programming concepts essential for beginners and those seeking to strengthen their foundation. Students will learn core Python syntax, built-in data structures, and basic operations while developing practical coding skills applicable to various domains including scripting, automation, and application development.",
         topics: {
-          "Introduction to Python": "Python and its Role in DevOps",
-          "Understanding Variables and Data Types": "int, float, string, list, tuple, dictionary, set",
-          "Working with Operators (Arithmetic, Logical, Comparison, Bitwise)": "Assignment, Membership, Identity",
-          "Type Conversion and Type Casting": "Implicit and Explicit Type Casting"
+          "The print statement": "Basic syntax, String formatting, Multiple arguments, End and separator parameters",
+          "Comments": "Single-line comments, Multi-line comments, Docstrings, Best practices",
+          "Python Data Structures & Data Types": "Lists, Dictionaries, Tuples, Sets, Numbers, Strings, Boolean",
+          "String Operations in Python": "Concatenation, Slicing, Formatting, String methods",
+          "Simple Input & Output": "Input function, Command-line arguments, File handling, Standard streams",
+          "Simple Output Formatting": "F-strings, Format method, String modulo operator, Template strings",
+          "Deep copy": "Copy module, Deep copying collections, Custom object copying, Performance considerations",
+          "Shallow copy": "List slicing, Dictionary copy method, Shallow copy limitations, Nested data structures",
+          "Operators in python": "Arithmetic, Logical, Comparison, Assignment, Bitwise, Identity, Membership"
         }
       },
       {
-        title: "Data Structures and Algorithms (DSA)",
-        duration: "1 Month",
-        description: "DSA is a fundamental skill for software engineers, enabling efficient problem-solving and optimization of code. Mastering data structures and algorithms helps in tackling coding interviews, improving logical thinking, and building scalable applications. This course covers essential concepts like arrays, linked lists, recursion, trees, graphs, sorting, and searching techniques to enhance problem-solving abilities.",
+        title: "Business Statistics",
+        duration: "1 Week",
+        description: "Business Statistics provides essential analytical tools for data-driven decision making in corporate environments. This course focuses on statistical methods used to analyze business data, interpret results, and draw meaningful conclusions. Students will learn fundamental statistical concepts, probability theory, hypothesis testing, and regression analysis to solve real-world business problems and support strategic planning.",
         topics: {
-          "Introduction to DSA": "Importance of DSA, Applications in Competitive Programming and Development",
-          "Arrays and Strings": "One-dimensional and Multi-dimensional arrays, String manipulation techniques",
-          "Linked Lists": "Singly Linked List, Doubly Linked List, Circular Linked List",
-          "Stack and Queue": "Stack operations, Queue operations, Priority Queue",
-          "Recursion and Backtracking": "Concept of Recursion, Backtracking Problems",
-          "Sorting and Searching Algorithms": "Bubble Sort, Merge Sort, Quick Sort, Binary Search",
-          "Trees and Graphs": "Binary Trees, Binary Search Trees, Graph representation and traversal (BFS & DFS)",
-          "Dynamic Programming": "Introduction to DP, Memoization vs Tabulation, Famous DP problems"
+          "Introduction to Statistical Analysis": "Types of data, Descriptive vs. Inferential statistics, Statistical thinking in business, Measuring central tendency and dispersion",
+          "Counting, Probability, and Probability Distributions": "Basic counting principles, Probability rules, Normal distribution, Binomial and Poisson distributions",
+          "Sampling Distributions": "Central limit theorem, Standard error, Sampling techniques, Confidence intervals",
+          "Estimation and Hypothesis Testing": "Point and interval estimation, Null and alternative hypotheses, Type I and Type II errors, p-values and significance levels",
+          "Scatter Diagram": "Interpreting scatter plots, Identifying relationships, Outliers detection, Visualization techniques",
+          "Anova and Chisquare": "One-way and two-way ANOVA, F-test interpretation, Chi-square test of independence, Goodness-of-fit tests",
+          "Imputation Techniques": "Handling missing data, Mean/median imputation, Regression imputation, Multiple imputation methods",
+          "Data Cleaning": "Identifying data quality issues, Handling outliers, Data transformation, Standardization and normalization",
+          "Correlation and Regression": "Correlation coefficients, Simple linear regression, Multiple regression analysis, Model evaluation and diagnostics"
         }
       },
       {
-        title: "Linux",
-        duration: "1 Month",
-        description: "Linux is a powerful and widely used operating system in development, DevOps, and cybersecurity. Mastering Linux helps in system administration, shell scripting, server management, and understanding the core of open-source operating systems. This course covers essential Linux commands, file system management, process handling, networking, and security, equipping you with the skills needed for efficient system operations.",
+        title: "Introduction to Data Analytics",
+        duration: "1 Week",
+        description: "Data Analytics is an essential discipline that enables organizations to extract meaningful insights from raw data. This course provides a comprehensive foundation in data analytics concepts, methodologies, and applications across industries. Students will learn the different types of analytics approaches, data interpretation techniques, and how analytics drives business decision-making and strategic planning.",
         topics: {
-          "Introduction to Linux": "History, Distributions, and Use Cases",
-          "Linux File System and Commands": "File system structure, Basic and Advanced Linux commands",
-          "User Management and Permissions": "Users, Groups, File permissions, Sudo and Root access",
-          "Process Management": "Foreground & Background processes, Job control, Signals",
-          "Shell Scripting": "Bash scripting, Variables, Loops, Conditional statements",
-          "Networking in Linux": "Networking commands, Firewall configuration, SSH and FTP",
-          "Package Management": "apt, yum, snap, rpm, Installing and Updating software",
-          "Linux Security and Hardening": "Firewall, SELinux, File encryption, Security best practices"
+          "Data Analytics Overview": "Definition, History of data analytics, Analytics lifecycle, Industry applications",
+          "Importance of Data Analytics": "Business value creation, Data-driven decision making, Competitive advantage, Performance optimization",
+          "Types of Data Analytics": "Classification of analytics methods, Comparison of approaches, Use case selection, Implementation considerations",
+          "Descriptive Analytics": "Historical data analysis, Summary statistics, Data visualization, KPI development",
+          "Diagnostic Analytics": "Root cause analysis, Correlation vs. causation, Investigation methods, Anomaly detection",
+          "Predictive Analytics": "Forecasting techniques, Predictive modeling, Machine learning applications, Pattern recognition",
+          "Prescriptive Analytics": "Optimization methods, Decision modeling, Recommendation systems, Automated decision-making",
+          "Benefits of Data Analytics": "Cost reduction, Faster decision making, Risk mitigation, Revenue growth opportunities",
+          "Data Visualization for Decision Making": "Visualization principles, Chart selection, Interactive dashboards, Storytelling with data",
+          "Data Types, Measure Of central tendency, Measures of Dispersion": "Categorical vs numerical data, Mean/median/mode, Standard deviation, Range and IQR",
+          "Graphical Techniques, Skewness & Kurtosis, Box Plot": "Histograms, Distribution shapes, Outlier identification, Visual data analysis",
+          "Descriptive Stats": "Statistical summaries, Data profiling, Variable relationships, Cross-tabulation analysis",
+          "Sampling Funnel, Sampling Variation, Central Limit Theorem, Confidence interval": "Sample selection methods, Distribution of sample means, Statistical inference, Margin of error"
         }
       }
     ];
     const courses2 = [
       {
-        title: "Program Tools",
+        title: "Excel: Basics ",
         duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        description: "Microsoft Excel is a powerful spreadsheet application widely used for data analysis, financial modeling, and business reporting. This comprehensive course takes students from Excel fundamentals to advanced techniques, covering essential functions, data manipulation, visualization, and automation to enhance productivity and analytical capabilities in professional environments.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Excel tutorial": "Interface navigation, Workbook structure, Basic formatting, Keyboard shortcuts",
+          "Text to Columns": "Delimiter selection, Fixed width splitting, Advanced options, Data cleanup",
+          "Concatenate": "String joining methods, Multiple cell combinations, Error handling, Text manipulation",
+          "The Concatenate Function": "Syntax and parameters, Formula construction, Alternative methods, Practical applications",
+          "The Right Function with Concatenation": "Text extraction techniques, Combined function usage, Character counting, Format conversion",
+          "Absolute Cell References": "$A$1 notation, Mixed references, Formula copying, Reference management",
+          "Data Validation": "Input restrictions, Drop-down lists, Custom validation rules, Error alerts",
+          "Time and Date Calculations": "Date functions, Duration calculations, Working days, Custom date formats",
+          "Conditional Formatting": "Rule types, Visual indicators, Formula-based conditions, Managing multiple rules",
+          "Exploring Styles and Clearing Formatting": "Cell styles, Style inheritance, Format clearing options, Style management",
+          "Using Conditional Formatting to Hide Cells": "Visual hiding techniques, Custom formatting rules, Zero-height rows, White text methods",
+          "Using the IF Function": "Logical tests, TRUE/FALSE conditions, Nested IF statements, Error trapping",
+          "Changing the \"Value if false\" Condition to Text": "Text outputs, Multiple conditions, Combining with other functions, Format considerations",
+          "Pivot Tables": "Data source preparation, Table structure, Field configuration, Refresh options",
+          "Creating a Pivot Table": "Data selection, Field arrangement, Value summarization, Layout options",
+          "Specifying PivotTable Data": "Data source management, External data connections, Field selection, Dynamic ranges",
+          "Changing a PivotTables Calculation": "Value field settings, Custom calculations, Summarization methods, Number formatting",
+          "Filtering and Sorting a PivotTable": "Filter fields, Slicer implementation, Sort orders, Top/bottom filters",
+          "Creating a PivotChart": "Chart type selection, Field mapping, Visual customization, Interactive elements",
+          "Grouping Items": "Date grouping, Numeric grouping, Custom groups, Hierarchy creation",
+          "Updating a PivotTable": "Data refresh techniques, Automatic updates, Change detection, Source modifications",
+          "Formatting a PivotTable": "Style applications, Custom formatting, Banded rows/columns, Conditional formats",
+          "Using Slicers": "Slicer creation, Multi-selection, Visual customization, Connections to multiple PivotTables",
+          "Charts": "Chart types overview, Data selection, Chart elements, Design principles",
+          "Creating a Simple Chart": "Basic chart creation, Data range selection, Chart positioning, Quick analysis tools",
+          "Charting Non-Adjacent Cells": "Discontinuous range selection, Custom data series, Series formula editing, Organization techniques",
+          "Creating a Chart Using the Chart Wizard": "Step-by-step process, Chart customization, Advanced options, Finalizing charts",
+          "Modifying Charts": "Element editing, Data range changes, Design adjustments, Format options",
+          "Moving an Embedded Chart": "Positioning techniques, Sheet relocation, Chart objects, Alignment tools",
+          "Sizing an Embedded Chart": "Dimension adjustment, Aspect ratio, Precision sizing, Print considerations",
+          "Changing the Chart Type": "Type conversion, Mixed chart types, Appropriate visualization selection, Format preservation",
+          "Chart Types": "Column, Bar, Line, Pie, Scatter, Area, Surface, Radar, Treemap, Sunburst",
+          "Changing the Way Data is Displayed": "Axis scaling, Data labels, Trendlines, Secondary axes",
+          "Moving the Legend": "Legend positioning, Custom legend entries, Format customization, Visibility options"
         }
       },
       {
-        "title": "AWS (Amazon Web Services)",
-        "duration": "1 Month",
-        "description": "AWS is the leading cloud platform, offering scalable and cost-effective solutions for hosting, storage, and computing. This course covers core AWS services, including EC2, S3, Lambda, and RDS, helping you gain expertise in cloud computing, deployment, and security.",
-        "topics": {
-          "Introduction to AWS": "AWS global infrastructure, Pricing, Free tier benefits",
-          "Compute Services": "EC2 instances, Auto Scaling, Load Balancers, Lambda functions",
-          "Storage Services": "S3, EBS, Glacier, File storage solutions",
-          "Database Services": "RDS, DynamoDB, Aurora, Redshift",
-          "Networking in AWS": "VPC, Route 53, CloudFront, AWS Private Link",
-          "Security and IAM": "IAM roles, Policies, AWS Shield, Security best practices",
-          "Serverless Computing": "AWS Lambda, API Gateway, Event-driven architecture",
-          "AWS Deployment and Management": "CloudFormation, Elastic Beanstalk, AWS CLI"
+        title: "Excel: Advanced",
+        duration: "1 Month",
+        description: "Advanced Excel skills are critical for data analysis, financial modeling, and business intelligence. This comprehensive course builds on Excel fundamentals to explore sophisticated features including advanced charting, data analysis techniques, range management, lookup functions, and pivot table mastery, enabling professionals to handle complex data manipulation tasks efficiently.",
+        topics: {
+          "Formatting Charts": "Custom chart templates, Advanced formatting options, Theme customization, Professional chart styling",
+          "Adding Chart Items": "Axis titles, Data labels, Error bars, Trendlines, Secondary axes, Chart annotations",
+          "Formatting All Text": "Global text styles, Font schemes, Conditional text formatting, Text rotation and alignment",
+          "Formatting and Aligning Numbers": "Custom number formats, Currency display options, Data alignment techniques, Decimal precision control",
+          "Formatting the Plot Area": "Background customization, Gridlines configuration, Plot area borders, 3D effects management",
+          "Formatting Data Markers": "Custom marker styles, Data point customization, Series overlap settings, Gap width adjustments",
+          "Pie Charts": "Pie chart variations, Donut charts, Exploded views, Percentage vs. value display options",
+          "Creating a Pie Chart": "Data selection strategies, Optimal data arrangement, Category grouping techniques, Proper data proportions",
+          "Moving the Pie Chart to its Own Sheet": "Chart sheet creation, Sheet organization, Navigation enhancements, Printing optimization",
+          "Adding Data Labels": "Label position options, Data label content selection, Custom label formatting, Multi-level labeling",
+          "Exploding a Slice of a Pie Chart": "Single slice explosion, Multiple slice adjustments, Percentage offset control, Visual emphasis techniques",
+          "Data Analysis − Overview": "Analysis principles, Excel analysis capabilities, Statistical methods, Data interpretation approaches",
+          "Types of Data Analysis": "Descriptive analysis, Inferential analysis, Predictive modeling, What-if scenario planning",
+          "Data Analysis Process": "Data collection, Data cleaning, Analysis methodology, Result interpretation and presentation",
+          "Working with Range Names": "Named range benefits, Dynamic ranges, Name scope management, Formula readability improvements",
+          "Copying Name using Formula Autocomplete": "Autocomplete techniques, Efficient formula building, Name selection shortcuts, Cross-sheet referencing",
+          "Range Name Syntax Rules": "Naming conventions, Invalid characters, Reserved names, Name length limitations",
+          "Creating Range Names": "Different methods for creating names, Range name dialog, Name from selection, Table-based naming",
+          "Creating Names for Constants": "Formula-defined constants, Workbook constants, Global constants, Constant referencing",
+          "Managing Names": "Name manager interface, Bulk name operations, Name auditing, Scope visualization",
+          "Scope of a Name": "Workbook-level names, Sheet-level names, Scope conflicts, Precedence rules",
+          "Editing Names": "Name modification techniques, Reference updates, Scope changes, Name dependency management",
+          "Applying Names": "Converting cell references to names, Apply names dialog, Formula updates, Name application options",
+          "Using Names in a Formula": "Name-based formulas, Name validation, Error handling with names, Complex name references",
+          "Viewing Names in a Workbook": "Name listing methods, Usage identification, Reference tracing, Dependency visualization",
+          "Copying Formulas with Names": "Preserving name references, Relative vs. absolute name usage, Cross-sheet formula copying, Name adaptation",
+          "Difference between Tables and Ranges": "Table advantages, Structured references, Dynamic expansion, Table vs. range functionality",
+          "Create Table": "Table creation process, Header row options, Table sizing considerations, Source data preparation",
+          "Table Name": "Naming conventions, Name uniqueness, Table name usage, References using table names",
+          "Managing Names in a Table": "Structured references, Column header references, Formula construction, Table element navigation",
+          "Table Headers replacing Column Letters": "Structured reference syntax, Header-based formulas, Formula readability, Dynamic column references",
+          "Propagation of a Formula in a Table": "Auto-fill behavior, Column formula consistency, Formula adjustments, Reference management",
+          "Resize Table": "Manual resizing, Automatic expansion, Header row preservation, Data inclusion management",
+          "Remove Duplicates": "Duplicate detection settings, Unique value identification, Column-based deduplication, Data preprocessing",
+          "Convert to Range": "Table conversion process, Reference preservation, Format retention, Post-conversion management",
+          "Table Style Options": "Banded rows/columns, Header row formatting, Total row customization, First/last column emphasis",
+          "Table Styles": "Built-in style gallery, Custom table styles, Conditional formatting integration, Corporate style matching",
+          "Cleaning Data with Text Functions": "TRIM, CLEAN, SUBSTITUTE, REPLACE, Text parsing techniques, Character removal strategies",
+          "Removing Unwanted Characters from Text": "Space elimination, Control character removal, Special character handling, Consistent text formatting",
+          "Extracting Data Values from Text": "Text parsing functions, Regular expressions, Text-to-columns alternatives, Pattern-based extraction",
+          "Formatting Data with Text Functions": "PROPER, UPPER, LOWER, concatenation techniques, Case transformation, Text standardization",
+          "Date Formats": "Custom date formats, International date standards, Date component extraction, Date conversion techniques",
+          "Conditional Formatting": "Advanced rules, Icon sets, Data bars, Color scales, Multi-condition formatting, Formula-based conditions",
+          "Sorting": "Multi-level sort criteria, Custom sort lists, Case-sensitive sorting, Sorting with formulas, Sort by color/icon",
+          "Filtering": "Advanced filter criteria, Custom filters, Filter by selection, Complex conditions, Wildcard filtering",
+          "Lookup Functions": "VLOOKUP, HLOOKUP, INDEX-MATCH, XLOOKUP, Approximate vs. exact matching, Lookup array optimization",
+          "Pivoting": "Advanced pivot table techniques, Calculated fields, Report layouts, Grouping options, Multiple data sources, Power Pivot integration"
         }
       },
       {
-        title: "Infrastructure as Code (IAC)",
+        title: "SQL Database Management",
         duration: "1 Month",
-        description: "Infrastructure as Code (IAC) enables automated, consistent, and scalable deployment of infrastructure using code. This course covers tools like Terraform, Ansible, and CloudFormation to manage cloud infrastructure efficiently.",
+        description: "SQL is the standard language for relational database management systems. This course covers Oracle Database fundamentals, data manipulation, query optimization, and database administration to help you effectively manage and retrieve data.",
         topics: {
-          "Introduction to Infrastructure as Code": "Concepts, Benefits, and Real-world use cases",
-          "Terraform Basics": "Installation, Providers, Resources, State management",
-          "Terraform Advanced Concepts": "Modules, Workspaces, Remote Backends",
-          "Ansible for Configuration Management": "Playbooks, Roles, Ansible Tower",
-          "AWS CloudFormation": "Templates, Stacks, Managing AWS infrastructure",
-          "CI/CD with IAC": "Automating infrastructure deployments",
-          "Monitoring and Logging": "Observability, Infrastructure monitoring tools"
+          "Introduction to Oracle Database": "Database concepts, Architecture, Installation",
+          "Retrieve Data using the SQL SELECT Statement": "Basic queries, Column aliases, Concatenation",
+          "Learn to Restrict and Sort Data": "WHERE clause, ORDER BY, Comparison operators",
+          "Usage of Single-Row Functions to Customize Output": "Character, Number, Date functions",
+          "Invoke Conversion Functions and Conditional Expressions": "TO_CHAR, TO_DATE, CASE statements",
+          "Aggregate Data Using the Group Functions": "SUM, AVG, COUNT, GROUP BY, HAVING",
+          "Display Data from Multiple Tables Using Joins": "INNER, OUTER, SELF joins",
+          "Use Sub-Queries to Solve Queries": "Single-row, Multiple-row subqueries",
+          "The SET Operators": "UNION, INTERSECT, MINUS",
+          "Data Manipulation Statements": "INSERT, UPDATE, DELETE, MERGE",
+          "Use of DDL Statements to Create and Manage Tables": "CREATE, ALTER, DROP commands",
+          "Other Schema Objects": "Views, Sequences, Indexes, Synonyms",
+          "Control User Access": "Privileges, Roles, Security policies",
+          "Management of Schema Objects": "Table maintenance, Constraints",
+          "Manage Objects with Data Dictionary Views": "System catalogs, Metadata queries",
+          "Manipulate Large Data Sets": "Bulk operations, Performance considerations",
+          "Data Management in Different Time Zones": "Timestamp with timezone, Conversions",
+          "Retrieve Data Using Sub-queries": "Correlated subqueries, Inline views",
+          "Regular Expression Support": "REGEXP functions, Pattern matching"
         }
-      }
+      },
     ];
     const courses3 = [
       {
-        title: "System Design",
+        title: "Tableau Course Material",
         duration: "1 Month",
-        description: "System Design is a crucial skill for building scalable, efficient, and maintainable applications. This course covers architectural patterns, scalability strategies, database design, caching mechanisms, and real-world case studies to help engineers create robust systems.",
+        description: "Tableau is a powerful data visualization tool that enables users to create interactive and shareable dashboards. This course covers connection to various data sources, data manipulation techniques, and visualization best practices to help analysts effectively communicate insights through visual representations.",
         topics: {
-          "Introduction to System Design": "Key principles, High-level design vs. Low-level design",
-          "Scalability and Load Balancing": "Horizontal vs. Vertical Scaling, Load balancers",
-          "Database Design": "SQL vs. NoSQL, Sharding, Replication, CAP Theorem",
-          "Caching Strategies": "Redis, Memcached, Cache invalidation techniques",
-          "Microservices Architecture": "Advantages, API Gateway, Inter-service communication",
-          "Message Queues and Streaming": "Kafka, RabbitMQ, Event-driven systems",
-          "Security and Rate Limiting": "Authentication, Authorization, Rate Limiting",
-          "Real-world Case Studies": "Designing scalable systems like Uber, Netflix, WhatsApp"
+          "Start Page": "Navigation overview, Interface fundamentals",
+          "Show Me": "Visualization recommendations, Chart selection guide",
+          "Connecting to Excel Files": "Import methods, Data source configuration",
+          "Connecting to Text Files": "CSV handling, Delimiter options, Text formatting",
+          "Connect to Microsoft SQL Server": "Database connections, SQL queries, Live connection vs extract",
+          "Connecting to Microsoft Analysis Services": "OLAP cubes, Dimensions, Measures",
+          "Creating and Removing Hierarchies": "Custom hierarchies, Drill-down functionality",
+          "Bins": "Data grouping, Range creation, Distribution analysis",
+          "Joining Tables": "Inner joins, Left joins, Data relationships",
+          "Data Blending": "Multi-source visualization, Primary and secondary sources"
         }
       },
       {
-        title: "Advanced Data Structures and Algorithms",
+        title: "Learn Tableau Basic Reports",
         duration: "1 Month",
-        description: "Advanced DSA builds on fundamental concepts to solve complex problems efficiently. This course covers advanced topics like graph algorithms, segment trees, tries, and dynamic programming optimizations to enhance problem-solving skills for competitive programming and technical interviews.",
+        description: "Tableau Basic Reports focuses on essential reporting techniques to transform data into meaningful visualizations. This course covers parameters, grouping methods, sets, data organization, and formatting options to help analysts create professional, insightful reports for effective data communication.",
         topics: {
-          "Advanced Graph Algorithms": "Dijkstra, Floyd-Warshall, Bellman-Ford, Topological Sorting",
-          "Segment Trees and Fenwick Trees": "Range Queries, Lazy Propagation",
-          "Tries and Suffix Trees": "String searching, Autocomplete, Pattern matching",
-          "Advanced Dynamic Programming": "Bitmasking, Matrix Exponentiation, DP on Trees",
-          "Greedy and Divide & Conquer": "Greedy strategies, Advanced Divide & Conquer techniques",
-          "Network Flow Algorithms": "Ford-Fulkerson, Edmonds-Karp",
-          "Competitive Programming Techniques": "Heuristic approaches, Problem-solving strategies",
-          "Real-world Applications": "How DSA is used in large-scale systems"
+          "Parameters": "Dynamic inputs, User interactivity, Parameter controls",
+          "Grouping Example 1": "Basic grouping techniques, Manual grouping, Group visualization",
+          "Grouping Example 2": "Advanced grouping methods, Automatic grouping options",
+          "Edit Groups": "Modifying existing groups, Group management, Renaming",
+          "Set": "Creating custom sets, Fixed sets, Condition-based sets",
+          "Combined Sets": "Set operations, Unions, Intersections, Set actions",
+          "Creating a First Report": "Report structure, Layout options, Best practices",
+          "Data Labels": "Label formatting, Customization, Dynamic labeling",
+          "Create Folders": "Organizing fields, Folder management, Workspace optimization",
+          "Sorting Data": "Sort options, Custom sorts, Hierarchical sorting",
+          "Add Totals, Sub Totals and Grand Totals to Report": "Summary calculations, Table calculations, Aggregation methods"
         }
       },
       {
-        title: "Program Tools",
+        title: "Learn Tableau Charts",
         duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        description: "Visualization charts are fundamental to effective data storytelling and analysis. This course covers a comprehensive range of Tableau chart types from basic to advanced, teaching you when and how to use each visualization technique. Master these charts to transform complex data into clear, compelling visual insights.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Area Chart": "Filled time series, Stacked areas, Showing volumes over time",
+          "Bar Chart": "Categorical comparisons, Standard bars, Horizontal and vertical orientation",
+          "Box Plot": "Statistical distribution, Quartiles, Outlier detection",
+          "Bubble Chart": "Multi-dimensional data, Size and color encoding, Scatter variations",
+          "Bump Chart": "Ranking changes over time, Position shifts, Comparative rankings",
+          "Bullet Graph": "Performance against targets, Compact metrics, Stephen Few's design",
+          "Circle Views": "Packed bubbles, Circle packing, Proportional visualization",
+          "Dual Combination Chart": "Multiple measures, Mixed chart types, Dual axes",
+          "Dual Lines Chart": "Two y-axes, Comparing different scales, Time series comparison",
+          "Funnel Chart": "Process stages, Conversion visualization, Drop-off analysis",
+          "Traditional Funnel Charts": "Sales pipeline, Step reduction, Conversion rates",
+          "Gantt Chart": "Project timelines, Task duration, Schedule visualization",
+          "Grouped Bar or Side by Side Bars Chart": "Multi-category comparison, Clustered bars",
+          "Heatmap": "Color intensity matrices, Value concentration, Pattern recognition",
+          "Highlight Table": "Cell coloring, Tabular data visualization, Conditional formatting",
+          "Histogram": "Frequency distribution, Data ranges, Value clustering",
+          "Cumulative Histogram": "Running totals, Accumulation visualization, Progressive counts",
+          "Line Chart": "Time series trends, Continuous data, Connection visualization",
+          "Lollipop Chart": "Dot-line combination, Space-efficient bars, Categorical comparison",
+          "Pareto Chart": "80/20 rule, Sorted bars with line, Cumulative percentage",
+          "Pie Chart": "Part-to-whole relationships, Proportional slices, Categorical breakdown",
+          "Scatter Plot": "Correlation analysis, X-Y plotting, Point distribution",
+          "Stacked Bar Chart": "Component parts, Accumulating values, Part-to-whole over categories",
+          "Text Label": "Numeric displays, KPI visualization, Pure text representation",
+          "Tree Map": "Hierarchical data, Nested rectangles, Size and color dimensions",
+          "Word Cloud": "Text frequency, Term importance, Word sizing by value",
+          "Waterfall Chart": "Sequential additions/subtractions, Running total, Financial flows"
         }
-      }
+      },
       ];
+
+      const courses4 = [
+        {
+          title: "Learn Tableau Advanced Reports",
+          duration: "1 Week",
+          description: "This course covers advanced Tableau reporting techniques essential for data analysts and visualization professionals. Students will master dual axis visualizations, reference lines, advanced mapping, and custom backgrounds while developing practical skills applicable to complex data storytelling, geographic analysis, and professional dashboard creation.",
+          topics: {
+            "Dual Axis Reports": "Combining multiple measures, Synchronized axes, Mixed mark types, Custom visualizations",
+            "Blended Axis": "Combining related data sources, Axis alignment, Integration techniques, Relationship building",
+            "Individual Axis": "Separate axis control, Independent scaling, Custom range settings, Multi-measure displays",
+            "Add Reference Lines": "Static and dynamic references, Constant lines, Statistical markers, Performance indicators",
+            "Reference Bands": "Range highlighting, Confidence intervals, Target zones, Comparative regions",
+            "Reference Distributions": "Statistical distributions, Percentile markers, Box plots, Distribution curves",
+            "Basic Maps": "Geographic visualization basics, Coordinate mapping, Regional data display, Choropleth maps",
+            "Symbol Map": "Custom markers, Size encoding, Color encoding, Multi-dimension geographic visualization",
+            "Use Google Maps": "Google integration, Interactive mapping, Street views, Custom location overlays",
+            "Mapbox Maps as a Background Map": "Custom map styles, Mapbox integration, Interactive backgrounds, Geographic layers",
+            "WMS Server Map as a Background Map": "Web Map Service connection, Custom geographic data sources, Enterprise mapping"
+          }
+        },
+        {
+          title: "Learn Tableau Calculations & Filters",
+          duration: "1 Week",
+          description: "Tableau Calculations & Filters provides essential techniques for data manipulation and analysis in Tableau. This course focuses on creating calculated fields, ranking methods, running totals, and implementing various filtering approaches. Students will learn fundamental calculation concepts, filter types, and optimization techniques to transform raw data into actionable insights and create dynamic, interactive visualizations.",
+          topics: {
+            "Calculated Fields": "Creating custom calculations, Formula syntax, Common functions, Logic operations, Aggregation methods",
+            "Basic Approach to Calculate Rank": "Standard ranking methods, Rank functions, Parameter-based ranking, Sorting with ranks",
+            "Advanced Approach to Calculate Ra": "Complex ranking scenarios, Multi-level ranking, Dynamic rank calculations, Custom rank display",
+            "Calculating Running Total": "Progressive summation, Table calculations, Running total options, Quick table calculations",
+            "Filters Introduction": "Filter types overview, Filter mechanics, Order of operations, Filter architecture",
+            "Quick Filters": "Interactive dashboard controls, User-facing filters, Quick filter customization, Filter actions",
+            "Filters on Dimensions": "Categorical filtering, Include/exclude methods, Custom lists, Wildcard filtering",
+            "Conditional Filters": "Logical filtering, IF/THEN conditions, Formula-based filters, Dynamic conditional filters",
+            "Top and Bottom Filters": "N-value filtering, Top/bottom parameters, Dynamic top N analysis, Comparative filtering",
+            "Filters on Measures": "Numeric range filters, Continuous vs. discrete filtering, Relative filtering, Value distribution",
+            "Context Filters": "Performance optimization, Filter hierarchy, Context setting, Dependent calculations",
+            "Slicing Fliters": "Cross-dimensional filtering, Matrix analysis, Categorical segmentation, Comparative slicing",
+            "Data Source Filters": "Connection-level filtering, Pre-processing data, Source optimization, Extract preparation",
+            "Extract Filters": "Optimizing extracts, Incremental extracts, Extract efficiency, Data reduction techniques"
+          }
+        },
+        {
+          title: "Learn Tableau Dashboards",
+          duration: "1 Month",
+          description: "Tableau Dashboards are powerful tools for combining multiple visualizations into cohesive, interactive business intelligence displays. This course provides a comprehensive foundation in dashboard design, layout, interactivity, and storytelling techniques. Students will learn essential dashboard development skills, best practices for user experience, and methods to create compelling data narratives for stakeholders.",
+          topics: {
+            "Create a Dashboard": "Dashboard fundamentals, Worksheet integration, Size and layout options, Design principles",
+            "Format Dashboard Layout": "Grid vs. floating elements, Container types, Size control, Visual hierarchy, White space management",
+            "Create a Device Preview of a Dashboard": "Mobile-responsive design, Device-specific layouts, Dashboard sizing, Optimization for different screens",
+            "Create Filters on Dashboard": "Global filters, Local filters, Filter actions, Interactive filtering techniques, Parameter controls",
+            "Dashboard Objects": "Text objects, Image integration, Web page objects, Blank objects, Navigation buttons, Layout containers",
+            "Create a Story": "Sequential narratives, Point structure, Story design, Progressive data revelation, Guided analytics"
+          }
+        }
+      ];
+
+      const courses5 = [
+        {
+          title: "Tableau Server",
+          duration: "1 Week",
+          description: "This course covers essential Tableau Server concepts necessary for publishing, sharing, and managing Tableau content in enterprise environments. Students will learn cloud and on-premises deployment options, publishing workflows, and content management while developing practical administration skills applicable to organizational business intelligence and data governance requirements.",
+          topics: {
+            "Tableau online": "Cloud-based deployment, Subscription management, User permissions, Content organization, Collaboration features",
+            "Overview of Tableau Server": "Architecture components, Server roles, Site management, Authentication methods, Deployment options",
+            "Publishing Tableau objects and scheduling/subscription": "Publishing workflows, Data source management, Extract refreshes, Subscription setup, Report distribution, Automated delivery"
+          }
+        },
+        {
+          title: "Introduction to Power BI",
+          duration: "1 Week",
+          description: "Introduction to Power BI provides essential foundations for data visualization and business intelligence using Microsoft's Power BI platform. This course focuses on setup, data connectivity, and basic reporting techniques for effective data analysis. Students will learn fundamental Power BI concepts, connection methods, visualization basics, and portal navigation to create insightful reports and dashboards for business data analysis.",
+          topics: {
+            "Get Started with Power BI": "Installation process, Desktop vs. Service, Power BI ecosystem, First steps for beginners",
+            "Overview: Power BI concepts": "Core components, Design philosophy, Data transformation workflow, Report distribution",
+            "Sign up for Power BI": "Account creation, Subscription options, License types, Organization setup",
+            "Overview: Power BI data sources": "Data connector types, Native integrations, Connection methods, Data refresh options",
+            "Connect to a SaaS solution": "Cloud service connections, API integration, Authentication methods, Service data access",
+            "Upload a local CSV file": "File import process, Data preview, Column type detection, Import settings",
+            "Connect to Excel data that can be refreshed": "Excel workbook connections, Data model import, Refresh settings, OneDrive integration",
+            "Connect to a sample": "Sample datasets, Learning resources, Practice data, Quick start templates",
+            "Create a Report with Visualizations": "Visualization types, Report canvas, Layout options, Interaction settings",
+            "Explore the Power BI portal": "Navigation structure, Workspace management, Content organization, Sharing options"
+          }
+        },
+        {
+          title: " Viz and Tiles",
+          duration: "1 Week",
+          description: "This module focuses on data visualization techniques and tools that transform raw data into meaningful visual representations. Students will learn how to create, format, and arrange various types of visualizations to effectively communicate insights. The module covers essential skills for building interactive dashboards, implementing filters, and customizing visualizations to meet specific analytical needs.",
+          topics: {
+            "Overview: Visualizations": "Visualization fundamentals, Types of visualizations, Visual perception principles, Choosing appropriate visualizations",
+            "Using visualizations": "Visualization purposes, Data-to-visual mapping, Effective use cases, Visualization limitations",
+            "Create a new report": "Report setup, Data source connections, Report configuration, Layout planning",
+            "Create and arrange visualizations": "Visualization placement, Layout strategies, Visual hierarchy, Dashboard organization",
+            "Format a visualization": "Appearance customization, Color schemes, Labeling strategies, Design consistency",
+            "Create chart visualizations": "Bar/column charts, Line charts, Pie/donut charts, Scatter plots and bubble charts",
+            "Use text, map, and gauge visualizations and save a report": "Text elements integration, Geographic visualization, KPI gauges, Report saving and sharing",
+            "Use a slicer to filter visualizations": "Slicer creation, Filter types, Cross-filtering, Interactive filtering techniques",
+            "Sort, copy, and paste visualizations": "Sorting mechanisms, Visualization duplication, Format consistency, Layout adjustments",
+            "Download and use a custom visual from the gallery": "Custom visual sources, Installation process, Custom visual configuration, Visual marketplace exploration"
+          }
+        }
+      ];
+
+      const courses6 = [
+        {
+          title: "Reports and Dashboards",
+          duration: "1 Week",
+          description: "This course explores the creation and management of professional reports and interactive dashboards for effective data storytelling. Students will learn techniques for report customization, dashboard design, content distribution, and natural language querying. The course emphasizes practical skills for building compelling visual analytics solutions that drive business insights and decision-making.",
+          topics: {
+            "Modify and Print a Report": "Report customization, Layout adjustments, Visual formatting, Content organization, Print settings",
+            "Rename and delete report pages": "Page management, Organizing multi-page reports, Restructuring content, Report navigation",
+            "Add a filter to a page or report": "Filter creation, Filter types, Scope configuration, Interactive filtering, Cross-filtering",
+            "Set visualization interactions": "Cross-highlighting, Drill-through actions, Tooltip customization, Synchronizing visuals",
+            "Print a report page": "Print formatting, Export options, Page setup, Print resolution, Output optimization",
+            "Send a report to PowerPoint": "Export workflows, Slide configuration, Maintaining interactivity, Presentation formatting",
+            "Create a Dashboard": "Dashboard planning, Layout design, Visual arrangement, Information hierarchy, User experience",
+            "Create and manage dashboards": "Dashboard creation, Template usage, Theme application, Mobile optimization",
+            "Pin a report tile to a dashboard": "Pinning workflows, Tile configuration, Size adjustment, Position management",
+            "Pin a live report page to a dashboard": "Live connections, Auto-refresh settings, Interactive elements, Full page integration",
+            "Pin a tile from another dashboard": "Cross-dashboard referencing, Content reuse, Visual consistency, Update behavior",
+            "Pin an Excel element to a dashboard": "Excel integration, Data connection, Element selection, Refresh settings",
+            "Manage pinned elements in Excel": "Element configuration, Data updates, Format management, Link maintenance",
+            "Add a tile to a dashboard": "Custom tiles, Text elements, Media integration, Web content, Custom visuals",
+            "Build a dashboard with Quick Insights": "Automated analysis, Insight generation, Pattern detection, Visual suggestions",
+            "Set a Featured (default) dashboard": "Default configuration, Navigation settings, User experience, Landing page setup",
+            "Ask Questions about Your Data": "Natural language queries, Question formulation, Query optimization, Result interpretation",
+            "Ask a question with Power BI Q&A": "Q&A interface, Query syntax, Visual generation, Follow-up questions",
+            "Tweak your dataset for Q&A": "Dataset optimization, Synonym configuration, Question suggestions, Phrasing improvements",
+            "Enable Cortana for Power BI": " Query setup, Cortana configuration, Voice command customization"
+          }
+        },
+        {
+          title: "Publishing Workbooks and Workspace",
+          duration: "1 Week",
+          description: "This course focuses on collaborative aspects of business intelligence through effective sharing and publishing of Power BI content. Students will learn enterprise content distribution methods, workspace management, and embedding techniques for integrating reports into organizational platforms. The course covers essential skills for content governance, team collaboration, and audience-targeted analytics delivery in professional environments.",
+          topics: {
+            "Share Data with Colleagues and Others": "Sharing permissions, Distribution methods",
+            "Publish a report to the web": "Public publishing workflow, URL generation",
+            "Manage published reports": "Version control, Update processes, Audience management, Usage monitoring",
+            "Share a dashboard": "Dashboard permissions, Direct sharing, Link distribution, Access level configuration",
+            "Create an app workspace and add users": "Workspace setup, User role assignment, Collaboration settings, Content organization",
+            "Use an app workspace": "Collaborative editing, Content management, Team workflows, Development lifecycle",
+            "Publish an app": "App creation, Content packaging, Distribution settings, Audience targeting",
+            "Create a QR code to share a tile": "QR generation process, Mobile access, Scan functionality, Dynamic linking",
+            "Embed a report in SharePoint Online": "SharePoint integration, Web part configuration, Authentication flow, Interactive embedding"
+          }
+        },
+
+       {
+  title: "Other Power BI Components and Table Relationship",
+  duration: "1 Week",
+  description: "This module explores advanced Power BI components and data modeling techniques essential for comprehensive business intelligence solutions. Students will learn mobile app functionality, desktop application capabilities, and data relationship concepts. The course covers both consumption and development aspects of the Power BI ecosystem, providing skills for creating end-to-end analytics solutions across multiple platforms.",
+  topics: {
+    "Use Power BI Mobile Apps": "Mobile platform overview, App navigation, Mobile-optimized features, Offline capabilities",
+    "Get Power BI for mobile": "Installation process, Device compatibility, App configuration, Authentication setup",
+    "View reports and dashboards in the iPad app": "iPad interface, Touch interactions, Layout adaptation, Optimization techniques",
+    "Use workspaces in the mobile app": "Mobile workspace access, Content navigation, Permission management, Collaboration features",
+    "Sharing from Power BI Mobile": "Mobile sharing options, Link generation, Access control, Recipient management",
+    "Use Power BI Desktop": "Desktop application overview, Development environment, Advanced features, Desktop workflow",
+    "Install and launch Power BI Desktop": "System requirements, Installation process, Application setup, Configuration options",
+    "Get data": "Data source connections, Import vs. DirectQuery, Advanced connectors, Connection parameters",
+    "Reduce data": "Data filtering, Column selection, Row limitations, Performance optimization",
+    "Transform data": "Data cleaning operations, Column transformations, Custom calculations, Query editor features",
+    "Relate tables": "Relationship creation, Cardinality settings, Filter direction, Model optimization",
+    "Get Power BI Desktop data with the Power BI service": "Desktop-to-service workflow, Publishing process, Gateway configuration, Refresh settings",
+    "Export a report from Power BI service to Desktop": "Export functionality, File management, Version control, Development transitions"
+  }
+}
+      ];
+
+      
+      const courses7 = [
+        {
+          title: "DAX Functions",
+          duration: "1 Week",
+          description: "This course provides comprehensive coverage of Data Analysis Expressions (DAX) functions essential for advanced data modeling and analytics in Power BI. Students will learn various function categories and their applications for creating calculated columns, measures, and tables. The course develops practical skills for implementing complex calculations, time intelligence, and custom business logic to enhance data models and deliver sophisticated business intelligence solutions.",
+          topics: {
+            "New DAX functions": "Latest additions, Function enhancements, Usage improvements, Compatibility considerations",
+            "Date and time functions": "Calendar manipulation, Time period calculations, Date formatting, Date table creation",
+            "Time intelligence functions": "Year-to-date analysis, Period comparisons, Rolling calculations, Fiscal period handling",
+            "Filter functions": "Context manipulation, Filter propagation, Relationship traversal, Custom filtering logic",
+            "Information functions": "Data type evaluation, Error handling, Value testing, Metadata access",
+            "Logical functions": "Conditional expressions, Boolean operations, Branching logic, Comparison techniques",
+            "Math & trig functions": "Arithmetic operations, Statistical calculations, Scientific functions, Rounding methods",
+            "Parent and child functions": "Hierarchy navigation, Path analysis, Level identification, Recursive calculations",
+            "Text functions": "String manipulation, Concatenation operations, Text extraction, Format conversion"
+          }
+        }
+      ]
+
+
+
+
   return (
     <div className='h-auto w-full'>
         <Navbar />
@@ -212,18 +531,18 @@ function page(){
             <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
                 <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
-                <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
-                ONLINE INFORMATION security COURSE
+                <div className='rounded-3xl border-2 sm:text-base text-xs border-white md:w-max sm:text-left text-center w-auto sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
+                ONLINE Data Analytics COURSE
                 </div>
                 </ScrollReveal>
                 <ScrollReveal animation='fadeIn' delay={300} easing='spring'>
                   <h1 className='xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-bold'>
-                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Information Security</span>
+                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Data Analytics</span>
                   </h1>
                 </ScrollReveal>
                 <ScrollReveal animation='slideUp' delay={500} easing='smooth'>
                   <p className='lg:text-xl sm:text-lg tracking-wide'>
-                  Information Security is a course that focuses on protecting data and systems from unauthorized access, disruption, or destruction. It covers key areas such as cryptography, network security, ethical hacking, and risk management. The course equips learners with the knowledge and tools to identify vulnerabilities, implement security measures, and ensure the confidentiality, integrity, and availability of information in digital environments.
+                 Data Analytics is a course that focuses on examining raw data to uncover patterns, draw conclusions, and support decision-making. It covers key areas such as statistical analysis, data visualization, predictive modeling, and business intelligence. The course equips learners with the knowledge and tools to collect, process, and interpret complex datasets, extract meaningful insights, and communicate findings effectively to drive strategic actions across various organizational contexts.
                   </p>
                 </ScrollReveal>
                 <ScrollReveal animation='scaleUp' delay={700} easing='bouncy'>
@@ -282,7 +601,7 @@ function page(){
     <div className='w-full lg:w-[55%] flex p-4 sm:p-6 md:p-10 lg:p-20 flex-col justify-around relative'>
         <ScrollReveal animation='fadeIn' delay={200} easing='smooth'>
             <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight capitalize'>
-                How Can We Turn You Into an Expert in infoemation security?
+                How Can We Turn You Into an Expert in data analysts?
             </h1>
         </ScrollReveal>
         
@@ -371,7 +690,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <CourseSection courseName={'nformation Security'} courseDescription={courseDesc}/>
+            <CourseSection courseName={'data analytics'} courseDescription={courseDesc}/>
         </div>
 
         {/* Our Curriculum Section */}
@@ -382,13 +701,28 @@ function page(){
         
         <CourseRoadmap courses={courses1} show={false}/>
         <CourseRoadmap courses={courses2} show={true} texts={{ 
-            heading:'READY FOR DEVOPS & CLOUD COMPUTING ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+            heading:'READY FOR DATA ANALYST ROLES', 
+            subHeading:'Covering all modules above makes you ready to apply for Data Analyst roles' 
         }} />
         <CourseRoadmap courses={courses3} show={true} texts={{ 
             heading:'YOU\'RE NOW READY FOR SRE ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+            subHeading:'Covering all modules above makes you ready to apply for Data Analyst roles' 
         }} />
+        
+
+
+       <CourseRoadmap courses={courses4} show={false}/>
+
+       <CourseRoadmap courses={courses5} show={true} texts={{ 
+            heading:'YOU\'RE NOW READY FOR Power BI', 
+            subHeading:'Covering all modules above makes you ready to apply for Power BI roles' 
+        }} />
+
+        <CourseRoadmap courses={courses6} show={false}/>
+        <CourseRoadmap courses={courses7} show={false}/>
+
+     
+
         
         {/* Download Brochure Section */}
         <div className='w-full bg-white p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-start gap-3 sm:gap-4 md:gap-7'>
@@ -434,7 +768,7 @@ function page(){
           delay={200}
           easing="gentle">
           <h3 className="text-lg font-semibold text-gray-500 uppercase">
-            Gain Real-World DevOps & Cloud Experience!
+            Gain Real-World Data Analytics Experience!
           </h3>
           </ScrollReveal>
           <ScrollReveal
@@ -461,7 +795,7 @@ function page(){
 
                <div
                  key={index}
-                 className="p-6 rounded-xl bg-gradient-to-br from-black via-gray-900 to-gray-800 shadow-lg text-white flex flex-col items-start h-64"
+                 className="p-6 rounded-xl bg-gradient-to-br from-black via-gray-900 to-gray-800 shadow-lg text-white flex flex-col items-start h-full"
                  >
                  <div className="mb-4">{project.icon}</div>
                  <h3 className="text-xl font-bold">{project.title}</h3>
@@ -484,7 +818,7 @@ function page(){
             delay={200}
             easing="smooth">
            <h2 className="text-lg font-semibold text-gray-400 uppercase">
-             DevOps & Cloud Computing Curriculum
+             Data Analytics Curriculum
            </h2>
           </ScrollReveal>
           <ScrollReveal
@@ -1103,7 +1437,7 @@ function page(){
                Meet Mentors & Instructors
              </h2>
              <h1 className="text-4xl font-bold text-center mb-12">
-               Tap into the wisdom of DevOps & Cloud Computing Experts
+               Tap into the wisdom of Data Analytics Experts
              </h1>
             </ScrollReveal>
 
@@ -1191,7 +1525,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure />
+            <FeeStructure courseName={'Data Analytics'}/>
         </div>
 
         {/* FAQ Section */}
