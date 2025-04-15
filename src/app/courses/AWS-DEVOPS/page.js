@@ -268,7 +268,7 @@ function page(){
           company: 'Wipro Limited'
         },
         {
-          logo: '/coursePage/Wonololo.jpeg',
+          logo: '/coursePage/wonololo.png',
           logoAlt: 'Wonolo Logo',
           title: 'Wonolo',
           company: 'Work Now Locally'
@@ -292,7 +292,7 @@ function page(){
           company: 'Suruhanjaya Syarikat Malaysia'
         },
         {
-          logo: '/coursePage/Skit.jpg',
+          logo: '/coursePage/skit.png',
           logoAlt: 'Skit Logo',
           title: 'Skit AI',
           company: 'Skit'
@@ -316,7 +316,7 @@ function page(){
           company: 'Groww (Nextbillion Technology)'
         },
         {
-          logo: '/coursePage/Digit.webp',
+          logo: '/coursePage/digit.png',
           logoAlt: 'Digit Logo',
           title: 'Digit Insurance',
           company: 'Go Digit General Insurance'
