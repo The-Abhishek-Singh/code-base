@@ -14,7 +14,7 @@ const CourseCard = ({ title, duration, description, topics }) => {
   <div className="bg-zinc-950 text-white rounded-lg overflow-hidden shadow-lg w-full grid grid-rows-auto">
   <div className="px-6 py-4 flex justify-between items-center bg-gradient-to-r from-[#960000] via-[#AF0000] to-[#960000] rounded p-10 mb-2 min-h-[5%]">
     <div className="h-full flex flex-col items-start gap-5">
-      <h2 className="text-3xl font-bold">{title}</h2>
+      <h2 className="text-2xl font-bold">{title}</h2>
       <div className="bg-white bg-opacity-20 px-2 py-1 rounded">
         {duration}
       </div>
@@ -22,7 +22,7 @@ const CourseCard = ({ title, duration, description, topics }) => {
     <Image className='flex-shrink-0 hidden sm:block' src="/coursePage/hexImg.png" alt="..." height={100} width={100} />
   </div>
   <div className='p-4 flex flex-col justify-center'>
-    <h3 className="font-semibold mb-2">Why learn this</h3>
+    <h3 className="font-semibold mb-2">Why Learn This</h3>
     <p className="text-sm">{description}</p>
   </div>
   <div className="px-6 pb-4">
@@ -52,10 +52,10 @@ const CourseCard = ({ title, duration, description, topics }) => {
             <p className="text-xs mb-2">
               <strong>{index + 1}.{value}</strong> <br />
             </p>
-            <div className="flex justify-between text-xs">
+            {/* <div className="flex justify-between text-xs">
               <span>Recommended Duration: 1-2 weeks</span>
               <span>Difficulty: Beginner</span>
-            </div>
+            </div> */}
           </div>
           <div
             className={`

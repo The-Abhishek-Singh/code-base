@@ -47,7 +47,7 @@ const ChevronUpIcon = ({ className }) => (
   </svg>
 );
 
-const FAQItem = ({ question }) => {
+const FAQItem = ({ question, answer }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -75,9 +75,7 @@ const FAQItem = ({ question }) => {
           >
             <div className="bg-gray-50 p-3 sm:p-4 rounded-lg">
               <p className="text-sm sm:text-base text-gray-600">
-                Detailed answer for the question: {question}. This is a placeholder
-                answer that provides more context and information about the specific
-                topic the user is inquiring about.
+                {answer? answer: `Detailed Answer For ${question}`}
               </p>
             </div>
           </div>
@@ -95,9 +93,11 @@ const FAQSection = () => {
   const sections = ['General', 'Pricing', 'Features', 'Support', 'Security'];
   const faqData = {
     General: [
-      {id: 1, question: 'What is your product?'},
-      {id: 2, question: 'How do I get started?'},
-      {id: 3, question: 'Is there a free trial?'}
+      {id: 1, question: ' Who can take up this course?', answer: 'The course is specifically designed for Engineering students doing bachelor and master degree who wish to expand their knowledge in Automation Industrial persons and faculty members who would like to develop capabilities in Automation Individuals seeking career in domains in Industrial automation applications Graduates who seek job in electrical, instrumentation, automation domain.'},
+      {id: 2, question: 'What is included in your course?', answer: 'This course is designed to include all requirements for a power electronic / Automation engineer or those required for research level jobs.'},
+      {id: 3, question: 'What will the student gain from your course?', answer: 'With the evolution of automation technologies, the importance of Instrumentation, Control and Automation usage is increased significantly. Therefore, it is essential for an electrical / instrumentation engineer to understand this field thoroughly. In this course, students will get detailed theoretical knowledge and design insights with their control schemes. With this knowledge, students will be able to design, simulate and analyze the machine or process better.'},
+      {id: 4, question: 'How is this course going to help a student get a job?', answer: 'As mentioned earlier as well, this course is designed to not only cover the basic concepts but also applications in the industrial systems. Further, from basic switching mode converter to details on the modulation scheme principle, all basics are covered in detail. Additionally, the techniques to control the industry scale products are also discussed. The challenges and projects given in this course, which students will be solving are indegineously designed to train them in handling any industrial problem. Therefore, the skill sets obtained by the student as a part of this course will help him to not only crack the entrance or technical interview for such jobs but also to lead any industrial challenge as a part of his job profile related to this field.'},
+      {id: 5, question: 'What are the job opportunities in this field?', answer: ' Today, Automation components are prominently used in majorly all industrial system since the industrial revolution in Industry 4.0 has taken by storm. The major players in this area are ABB, Siemens, Fuji, Rockwell, Emerson, Mitsubishi, Alstom, Hitachi etc. These companies supply and use various products like PLC, HMI, DCS, SCADA, HMI, IIoT, Field Instrumentation, Analyzers etc. The techniques taught in this course will be directly applied to design and analyse these systems and thus in above mentioned industries.'}
     ],
     Pricing: [
       {id: 4, question: 'How much does it cost?'},
@@ -105,19 +105,20 @@ const FAQSection = () => {
       {id: 6, question: 'What payment methods do you accept?'}
     ],
     Features: [
-      {id: 7, question: 'What are the key features?'},
-      {id: 8, question: 'How does feature X work?'},
-      {id: 9, question: 'Can I integrate with other tools?'}
+      {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: 'This course cover relevant software tools viz MATLAB / Ltspice, relevant programming software of PLC/HMI & SCADA. MATLAB is predominantly used in the industry for analysis of power electronic circuits. While, Ltspice is an open source software tool, which is exactly similar to Pspice/Simetrix used in most of the industries. '},
+      {id: 8, question: ' How will I access the softwares required for programming?', answer: ' We provide free use version softwares for practice to the students, which they can download in their laptops & practice at their own convenience.'}, 
+      {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: 'The course content is designed to cover real world applications of PLCs in simple  machine application to complex process automation. In this course, students will be learning various applications used every day in real life. The analytical methods and software tools taught in this course can be directly applied to the architecture in these applications.'},
+      {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: 'This course is designed to not only cover the applications of the PLC, SCADA and DCS System but it also emphasize on the basic concepts in the field of instrumentation and inverter systems. Further, the techniques to explore new configurations are also discussed, which will directly help for reseach field. Typically for MS and PhD these skill sets are required and thus, this course will definately help student to gain tremendous focus on the reseach path. As well as it will help to crack any entrance exam questions related to these field.'}
     ],
     Support: [
-      {id: 10, question: 'How can I contact support?'},
-      {id: 11, question: 'What are your support hours?'},
-      {id: 12, question: 'Do you have documentation?'}
+      {id: 11, question: 'How can I contact support?'},
+      {id: 12, question: 'What are your support hours?'},
+      {id: 13, question: 'Do you have documentation?'}
     ],
     Security: [
-      {id: 13, question: 'Is my data secure?'},
-      {id: 14, question: 'Do you support 2FA?'},
-      {id: 15, question: 'What encryption do you use?'}
+      {id: 14, question: 'Is my data secure?'},
+      {id: 15, question: 'Do you support 2FA?'},
+      {id: 16, question: 'What encryption do you use?'}
     ]
   };
 
@@ -228,7 +229,7 @@ const FAQSection = () => {
           </h3>
           <div className="space-y-4">
             {faqData[activeSection].map((item) => (
-              <FAQItem key={item.id} question={item.question} />
+              <FAQItem key={item.id} question={item.question} answer={item.answer} />
             ))}
           </div>
           </ScrollReveal>

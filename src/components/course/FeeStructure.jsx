@@ -6,7 +6,7 @@ const FeeStructure = (props) => {
   return (
     <div className="h-auto bg-zinc-950 p-4 sm:p-6 md:p-8 text-white">
     <div>
-      <ScrollReveal
+      {/* <ScrollReveal
         animation='slideLeft'
         duration={800}
         delay={0}
@@ -17,7 +17,7 @@ const FeeStructure = (props) => {
       <h3 className="text-lg sm:text-xl mb-6 sm:mb-8 capitalize">
         Tap into the wisdom of {props.courseName} Experts
       </h3>
-      </ScrollReveal>
+      </ScrollReveal> */}
   
       {/* Cards container - responsive flex column on mobile, row on larger screens */}
       <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 w-full">

@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaLock, FaCogs, FaCloud } from "react-icons/fa";
+import { FaIndustry, FaProjectDiagram, FaWatchmanMonitoring } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
 
 
@@ -35,172 +35,223 @@ function page(){
   ]
   const projects = [
     {
-      title: "Secure Cloud Architecture",
+      title: "Design & Simulation of Control Systems",
       description:
-        "Design and deploy a secure, scalable infrastructure on AWS using EC2, VPC, IAM, and Security Groups. Learn the best practices of cloud security and access control.",
-      icon: <FaLock className="text-white text-3xl" />,
+      "Master the fundamentals of designing, modeling and testing automated control systems using industry-standard simulation software. Create functional prototypes that demonstrate your ability to optimize industrial processes.",
+      icon: <FaProjectDiagram className="text-white text-3xl" />,
     },
     {
-      title: "Serverless App with Lambda & API Gateway",
+      title: "Design & Implementation of Control Scheme Remote Monitoring",
       description:
-        "Build a fully serverless backend using AWS Lambda, API Gateway, and DynamoDB. Trigger functions on-demand and manage APIs with zero server maintenance.",
-      icon: <FaCogs className="text-white text-3xl" />,
+      "Develop skills to implement robust remote monitoring solutions that allow real-time supervision of industrial processes from anywhere. Learn to configure secure data transmission and intuitive visualization dashboards.",
+      icon: <FaWatchmanMonitoring className="text-white text-3xl" />,
     },
     {
-      title: "S3 + CloudFront Website Hosting",
+      title: "Industrial Live Project",
       description:
-        "Host a static website using Amazon S3 and deliver it globally with CloudFront. Learn to configure buckets, set permissions, and optimize for performance and low latency.",
-      icon: <FaCloud className="text-white text-3xl" />,
+      "Apply all your learnings in a capstone project addressing real industrial challenges. Work with actual automation equipment to design, implement and troubleshoot a complete control system solution.",
+      icon: <FaIndustry className="text-white text-3xl" />,
     },
     ];
   const courseDesc = [
     {
-      title: 'High-Demand Cloud Roles',
-      description: 'Be job-ready for roles like Cloud Engineer, Solutions Architect, and DevOps Engineer with this comprehensive AWS certification course designed for today’s tech landscape.' 
+      title: 'Versatile Industry Applications',
+      description: 'Become qualified for roles like Automation Engineer, Control Systems Specialist, and Manufacturing Technologist with this comprehensive industrial automation certification course.'
     },
     {
-      title: 'Certification-Driven Learning',
-      description: 'Prepare for industry-recognized AWS certifications like Cloud Practitioner, Solutions Architect Associate & more—with structured modules, quizzes, and expert mentoring to maximize success.'
+      title: 'Expert-Level Certification',
+      description: 'Enhance your professional profile by preparing for industry-recognized certifications and significantly improve your marketability to leading manufacturing employers.'
     },
     {
-      title: 'Hands-On Cloud Infrastructure Mastery',
-      description: 'Gain real-world experience with live AWS environments. Set up EC2 instances, configure S3, deploy scalable apps, and automate with IAM & Lambda. Practice what the pros do—hands-on.'
+      title: 'Practical Automation Mastery',
+      description: 'Experience our state-of-the-art simulation laboratory featuring 40+ industry-standard scenarios. Develop your industrial automation expertise through hands-on troubleshooting and real equipment configuration.'
     }
   ];
     const courses1 = [
       {
-        title: "PYTHON",
-        duration: "1 Month",
-        description: "Python is a crucial skill for DevOps engineers as it enables automation, configuration management, and scripting for cloud environments. Learning Python helps streamline DevOps workflows, improve efficiency, and enhance infrastructure management.",
+        title: "Introduction to Industrial Automation",
+        duration: "1 Week",
+        description: "This module provides an overview of industrial automation, covering the fundamental concepts, key components, and various control systems used in automated industries. It lays the foundation for understanding how automation improves efficiency, consistency, and safety in industrial processes.",
         topics: {
-          "Introduction to Python": "Python and its Role in DevOps",
-          "Understanding Variables and Data Types": "int, float, string, list, tuple, dictionary, set",
-          "Working with Operators (Arithmetic, Logical, Comparison, Bitwise)": "Assignment, Membership, Identity",
-          "Type Conversion and Type Casting": "Implicit and Explicit Type Casting"
+          "What is Automation?": "Understanding the concept and significance of automation in industrial settings",
+          "Components Used in Automation": "Exploring essential components such as sensors, actuators, controllers, and interfaces",
+          "Control Systems in Automation": "Introduction to different types of control systems including PLCs, SCADA, and DCS"
         }
       },
       {
-        title: "Data Structures and Algorithms (DSA)",
-        duration: "1 Month",
-        description: "DSA is a fundamental skill for software engineers, enabling efficient problem-solving and optimization of code. Mastering data structures and algorithms helps in tackling coding interviews, improving logical thinking, and building scalable applications. This course covers essential concepts like arrays, linked lists, recursion, trees, graphs, sorting, and searching techniques to enhance problem-solving abilities.",
+        title: "Instrumentation & Sensor Basics",
+        duration: "1 Week",
+        description: "This module introduces the foundational concepts of instrumentation and sensors used in industrial automation. Students will explore measurement principles, commonly used sensors in factory and process automation, and key control elements for managing industrial processes.",
         topics: {
-          "Introduction to DSA": "Importance of DSA, Applications in Competitive Programming and Development",
-          "Arrays and Strings": "One-dimensional and Multi-dimensional arrays, String manipulation techniques",
-          "Linked Lists": "Singly Linked List, Doubly Linked List, Circular Linked List",
-          "Stack and Queue": "Stack operations, Queue operations, Priority Queue",
-          "Recursion and Backtracking": "Concept of Recursion, Backtracking Problems",
-          "Sorting and Searching Algorithms": "Bubble Sort, Merge Sort, Quick Sort, Binary Search",
-          "Trees and Graphs": "Binary Trees, Binary Search Trees, Graph representation and traversal (BFS & DFS)",
-          "Dynamic Programming": "Introduction to DP, Memoization vs Tabulation, Famous DP problems"
+          "Measurement Basics": "Understanding the fundamental principles of industrial measurements",
+          "Widely Used Sensors in FA & PA": "Overview of commonly used sensors in Factory Automation (FA) and Process Automation (PA)",
+          "Process Instrumentation Fundamentals": "Basics of measuring Temperature, Pressure, Flow, and Level in industrial systems",
+          "Machine Monitoring Sensors": "Introduction to Load Cells, Speed Transducers, and Proximity Sensors used for machine condition monitoring",
+          "Control Elements": "Working with control devices like Solenoid Valves and Control Valves for process regulation"
         }
       },
       {
-        title: "Linux",
-        duration: "1 Month",
-        description: "Linux is a powerful and widely used operating system in development, DevOps, and cybersecurity. Mastering Linux helps in system administration, shell scripting, server management, and understanding the core of open-source operating systems. This course covers essential Linux commands, file system management, process handling, networking, and security, equipping you with the skills needed for efficient system operations.",
+        title: "Programmable Logic Controller (PLC)",
+        duration: "1 Week",
+        description: "This module provides a comprehensive introduction to Programmable Logic Controllers (PLCs), covering their evolution, architecture, types, and configurations. It also explores PLC programming interfaces, safety considerations, and limitations, equipping learners with the knowledge to understand and work with PLC systems in industrial environments.",
         topics: {
-          "Introduction to Linux": "History, Distributions, and Use Cases",
-          "Linux File System and Commands": "File system structure, Basic and Advanced Linux commands",
-          "User Management and Permissions": "Users, Groups, File permissions, Sudo and Root access",
-          "Process Management": "Foreground & Background processes, Job control, Signals",
-          "Shell Scripting": "Bash scripting, Variables, Loops, Conditional statements",
-          "Networking in Linux": "Networking commands, Firewall configuration, SSH and FTP",
-          "Package Management": "apt, yum, snap, rpm, Installing and Updating software",
-          "Linux Security and Hardening": "Firewall, SELinux, File encryption, Security best practices"
+          "Introduction and Evolution of PLC": "Overview of the development and significance of PLCs in industrial automation",
+          "Architecture of a PLC": "Understanding the internal structure and working of a PLC system",
+          "Elements of PLC": "Exploring the core components that make up a PLC",
+          "PLC Family – Nano, Micro, Small & Large": "Classification of PLCs based on size and functionality",
+          "Evaluation of PLC Power": "Assessing the performance and power requirements of various PLCs",
+          "PLC Configuration – Simplex & Redundant": "Understanding different PLC configurations for reliability and fault tolerance",
+          "Programming Console": "Introduction to PLC programming interfaces and tools",
+          "Earthing and Protection Circuits": "Safety and grounding practices in PLC systems",
+          "Limitations of PLC": "Identifying the challenges and constraints of using PLCs in industrial applications"
         }
-      }
+      }      
     ];
     const courses2 = [
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Motors & Variable Speed Drives",
+        duration: "1 Week",
+        description: "This module focuses on the fundamentals of electric motors and variable speed drives, essential for controlling industrial machinery. Learners will gain an understanding of motor control principles, starting methods, types of drives, and electrical panel design used in automation systems.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Understanding of Motor and Terminology": "Basics of electric motors and key terms used in motor control",
+          "Primary Purpose of Motor Control": "Exploring why motor control is essential in industrial operations",
+          "Motor Starting Solutions": "Different techniques for starting motors efficiently and safely",
+          "Introduction to AC Drive": "Understanding AC drives and their role in controlling motor speed",
+          "Types of AC Drive": "Various types of AC drives and their applications",
+          "Introduction to DC Drives": "Overview of DC drives and their use in specific industrial scenarios",
+          "Electrical Switchgears & Panel Design": "Introduction to switchgear components and fundamentals of electrical panel design"
         }
       },
       {
-        "title": "AWS (Amazon Web Services)",
-        "duration": "1 Month",
-        "description": "AWS is the leading cloud platform, offering scalable and cost-effective solutions for hosting, storage, and computing. This course covers core AWS services, including EC2, S3, Lambda, and RDS, helping you gain expertise in cloud computing, deployment, and security.",
-        "topics": {
-          "Introduction to AWS": "AWS global infrastructure, Pricing, Free tier benefits",
-          "Compute Services": "EC2 instances, Auto Scaling, Load Balancers, Lambda functions",
-          "Storage Services": "S3, EBS, Glacier, File storage solutions",
-          "Database Services": "RDS, DynamoDB, Aurora, Redshift",
-          "Networking in AWS": "VPC, Route 53, CloudFront, AWS Private Link",
-          "Security and IAM": "IAM roles, Policies, AWS Shield, Security best practices",
-          "Serverless Computing": "AWS Lambda, API Gateway, Event-driven architecture",
-          "AWS Deployment and Management": "CloudFormation, Elastic Beanstalk, AWS CLI"
+        title: "HMI & SCADA",
+        duration: "1 Week",
+        description: "This module introduces Human Machine Interface (HMI) and Supervisory Control and Data Acquisition (SCADA) systems, which are crucial for monitoring and controlling industrial processes. Students will explore the concepts, hardware types, configuration techniques, and communication protocols that enable real-time visualization and control.",
+        topics: {
+          "Concept of HMI & SCADA": "Introduction to the roles and functions of HMI and SCADA systems in industrial automation",
+          "Hardware HMI Types & Selection": "Overview of different HMI hardware and how to select the appropriate type for an application",
+          "PC Based HMI": "Understanding how PC-based HMI systems are designed and implemented",
+          "Industrial Data Communication": "Exploring communication protocols and networking in industrial systems",
+          "Features of SCADA": "Key features and benefits of SCADA systems for remote monitoring and control",
+          "Configuring Graphics, Alarms, Trends & Reports": "Hands-on configuration of SCADA elements like graphics, alarm management, trend analysis, and report generation"
         }
       },
       {
-        title: "Infrastructure as Code (IAC)",
-        duration: "1 Month",
-        description: "Infrastructure as Code (IAC) enables automated, consistent, and scalable deployment of infrastructure using code. This course covers tools like Terraform, Ansible, and CloudFormation to manage cloud infrastructure efficiently.",
+        title: "PLC & HMI Programming",
+        duration: "1 Week",
+        description: "This module focuses on programming techniques for PLCs and HMIs based on the IEC 61131-3 standard. Learners will understand the various programming languages used in industrial automation, develop skills in creating logic using Ladder, FBD, ST, and SFC, and explore how to program HMIs and SCADA systems for effective user interaction and control.",
         topics: {
-          "Introduction to Infrastructure as Code": "Concepts, Benefits, and Real-world use cases",
-          "Terraform Basics": "Installation, Providers, Resources, State management",
-          "Terraform Advanced Concepts": "Modules, Workspaces, Remote Backends",
-          "Ansible for Configuration Management": "Playbooks, Roles, Ansible Tower",
-          "AWS CloudFormation": "Templates, Stacks, Managing AWS infrastructure",
-          "CI/CD with IAC": "Automating infrastructure deployments",
-          "Monitoring and Logging": "Observability, Infrastructure monitoring tools"
+          "Concept of IEC 61131-3 & PLC Programming": "Overview of the international standard for PLC programming and its importance",
+          "Programming Devices": "Understanding devices used to program and configure PLCs",
+          "Understanding and Using Ladder, Function Block, Structured Text, Sequence Flow Chart": "Hands-on with key PLC programming languages and methodologies",
+          "Diagnostics & Troubleshooting": "Techniques to identify and resolve issues in PLC programs and hardware",
+          "HMI Programming": "Developing interactive HMI screens for industrial applications",
+          "SCADA Programming": "Building SCADA configurations for monitoring, control, and visualization"
         }
-      }
+      }      
     ];
     const courses3 = [
       {
-        title: "System Design",
-        duration: "1 Month",
-        description: "System Design is a crucial skill for building scalable, efficient, and maintainable applications. This course covers architectural patterns, scalability strategies, database design, caching mechanisms, and real-world case studies to help engineers create robust systems.",
+        title: "Factory Automation Applications",
+        duration: "1 Week",
+        description: "This module provides real-world insights into the application of automation technologies across various industrial domains. Learners will explore how factory automation is implemented in different machinery, enhancing efficiency, precision, and production capabilities.",
         topics: {
-          "Introduction to System Design": "Key principles, High-level design vs. Low-level design",
-          "Scalability and Load Balancing": "Horizontal vs. Vertical Scaling, Load balancers",
-          "Database Design": "SQL vs. NoSQL, Sharding, Replication, CAP Theorem",
-          "Caching Strategies": "Redis, Memcached, Cache invalidation techniques",
-          "Microservices Architecture": "Advantages, API Gateway, Inter-service communication",
-          "Message Queues and Streaming": "Kafka, RabbitMQ, Event-driven systems",
-          "Security and Rate Limiting": "Authentication, Authorization, Rate Limiting",
-          "Real-world Case Studies": "Designing scalable systems like Uber, Netflix, WhatsApp"
+          "Plastic Injection Moulding & Extrusion Machine": "Understanding automation systems used in plastic processing machines for molding and extrusion",
+          "Pharmaceutical Machine": "Exploring automated systems in pharmaceutical manufacturing and packaging processes",
+          "Textile Machine": "Automation technologies in textile machinery for improved speed and quality",
+          "Packaging Machine": "Implementation of automation in modern packaging lines to ensure consistency and productivity"
         }
       },
       {
-        title: "Advanced Data Structures and Algorithms",
-        duration: "1 Month",
-        description: "Advanced DSA builds on fundamental concepts to solve complex problems efficiently. This course covers advanced topics like graph algorithms, segment trees, tries, and dynamic programming optimizations to enhance problem-solving skills for competitive programming and technical interviews.",
+        title: "Process Automation Applications",
+        duration: "1 Week",
+        description: "This module explores the implementation of automation systems in various process industries. Students will gain an understanding of how automation enhances efficiency, safety, and scalability in complex industrial environments such as steel, chemical, power, oil & gas, and more.",
         topics: {
-          "Advanced Graph Algorithms": "Dijkstra, Floyd-Warshall, Bellman-Ford, Topological Sorting",
-          "Segment Trees and Fenwick Trees": "Range Queries, Lazy Propagation",
-          "Tries and Suffix Trees": "String searching, Autocomplete, Pattern matching",
-          "Advanced Dynamic Programming": "Bitmasking, Matrix Exponentiation, DP on Trees",
-          "Greedy and Divide & Conquer": "Greedy strategies, Advanced Divide & Conquer techniques",
-          "Network Flow Algorithms": "Ford-Fulkerson, Edmonds-Karp",
-          "Competitive Programming Techniques": "Heuristic approaches, Problem-solving strategies",
-          "Real-world Applications": "How DSA is used in large-scale systems"
+          "Steel Plant Applications": "Automation in steel manufacturing processes including material handling and furnace control",
+          "Chemical Plant Applications": "Use of automation in chemical processing for precision, safety, and batch control",
+          "Power Plant Applications": "Automation strategies in power generation and distribution systems",
+          "O&G Applications": "Process automation in oil and gas industries for drilling, refining, and distribution",
+          "Sugar Plant Applications": "Controlling and monitoring of sugar production processes through automation",
+          "Pulp & Paper Applications": "Automation in paper production for continuous process control and quality assurance"
         }
       },
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Process Controllers – Single & Multi-loop PID Controllers",
+        duration: "1 Week",
+        description: "This module dives deep into process control systems with a focus on PID controllers. Students will explore control strategies, tuning methods, and control algorithms. The module also introduces advanced control configurations and the capabilities of multi-loop controllers used in industrial automation.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Understanding PID – Mother of all Controls": "Introduction to Proportional-Integral-Derivative (PID) control and its industrial relevance",
+          "Overview of Various Control Strategies": "Examination of On-Off, Manual Tuning, Fuzzy Logic, Auto-Tune, and Self-Tune techniques",
+          "Overview of Control Algorithm": "Exploring control algorithms including Feedback, Feed-forward, Cascade, and Ratio control",
+          "Capabilities of Multi-Loop Controllers": "Advanced features, applications, and programming techniques of multi-loop controllers"
         }
-      }
+      }      
       ];
+const courses4 = [
+  {
+    title: "DCS Systems",
+    duration: "1 Week",
+    description: "This module introduces Distributed Control Systems (DCS), covering their architecture, components, and applications in industrial automation. Students will learn how DCS systems are configured, programmed, and integrated with field devices and communication protocols for comprehensive process control.",
+    topics: {
+      "Introduction and Evolution of DCS": "Understanding the history and development of Distributed Control Systems",
+      "DCS System Hardware and Firmware": "Overview of controllers, I/O modules, and their embedded firmware",
+      "DCS System Software and Protocols": "Exploring DCS software architecture, communication protocols, and system operations",
+      "Basic DCS Controller Configuration": "Configuring controllers for process control and system monitoring",
+      "Communication for DCS & OIS": "Introduction to communication channels between DCS and Operator Interface Systems",
+      "Local Area Network Systems": "Understanding the role of LANs in DCS communication and integration",
+      "Integration of Fieldbus Systems": "Connecting field devices using fieldbus protocols for seamless automation",
+      "Programming of DCS Systems": "Developing and managing control logic and strategies within DCS platforms",
+      "Alarm System Management": "Setting up and managing alarms for efficient plant operation and safety",
+      "DCS System Reporting": "Generating reports for operational analysis and regulatory compliance"
+    }
+  },
+  {
+    title: "Industrial Data Communication & Networking",
+    duration: "1 Week",
+    description: "This module introduces industrial data communication systems and networking concepts essential for automation. Students will explore network types, topologies, and protocols used in industrial settings, alongside the importance of interoperability, media, and devices for effective communication.",
+    topics: {
+      "What is Industrial Data Communication?": "Understanding the role of data communication in industrial automation and control",
+      "What is a Network?": "Exploring the fundamentals of computer networks in industrial contexts",
+      "Examples & Types of Network": "Different network types used in industrial automation, including LAN, WAN, and field networks",
+      "Network Topologies": "Understanding different network architectures and how they impact communication efficiency",
+      "Selection Criteria of Suitable Network for Given Application": "Evaluating and selecting the appropriate network for specific industrial applications",
+      "Interoperability Between Different Networks": "Ensuring seamless communication between various industrial network types and systems",
+      "Media, Switch, and Protocol Converter Usage": "Using media, switches, and protocol converters to facilitate reliable communication in industrial networks",
+      "Key Applications of Popular Network Types": "Exploring real-world applications of common industrial networks like Profibus, Ethernet/IP, and Modbus"
+    }
+  },
+  {
+    title: "Industrial IoT & Infrastructure Automation Applications",
+    duration: "1 Week",
+    description: "This module introduces Industrial Internet of Things (IIoT) concepts, its infrastructure, and applications in automation. Students will learn about IIoT hardware, how IoT works in an industrial context, and real-world case studies showcasing its applications in industry.",
+    topics: {
+      "What is Industrial IoT?": "Exploring the fundamentals of Industrial IoT (IIoT) and its impact on modern automation",
+      "How IoT Works & Its Enterprise View": "Understanding IoT systems from both a technical and enterprise perspective",
+      "Industrial IoT Framework": "Overview of the architectural framework for deploying IIoT solutions",
+      "IIoT Hardware – Gateways, IO Modules, Remote Access, Cloud-Box": "Exploring key IIoT hardware components like gateways, input-output modules, and cloud-box systems",
+      "3C – Connect, Collect, Consume": "Understanding the three core stages of IoT data lifecycle: connecting devices, collecting data, and consuming information",
+      "Application Notes": "Exploring common use cases and application scenarios of IIoT in industrial environments",
+      "Case Studies of Installed Applications": "Real-world examples and case studies of successful IIoT implementations in various industries"
+    }
+  }    
+];
+const courses5 = [
+  {
+    title: "Projects 1 & 2",
+    duration: "2 Weeks",
+    description: "This module focuses on the design, simulation, and implementation of control systems. Students will work on real-world projects, including remote monitoring and control scheme development, along with project execution planning, documentation, and safety protocols. Professional grooming and interview skill training will also be covered to prepare students for industry roles.",
+    topics: {
+      "Design & Simulation of Control Systems": "Designing and simulating control systems for automation applications",
+      "Design & Implementation of Control Scheme Remote Monitoring": "Developing and implementing control schemes for remote monitoring in industrial environments",
+      "Project Execution Planning - Theory": "Understanding the theoretical concepts behind effective project planning and execution",
+      "Projects Documentation": "Documenting project plans, processes, and results for professional presentation",
+      "Basic Safety in Sites": "Learning safety protocols and procedures for working in industrial environments",
+      "Professional Grooming Sessions": "Developing professional skills required for industry roles, including communication and teamwork",
+      "Basic Lab": "Hands-on experience with control systems and automation technologies in a lab setting",
+      "Interview Skill Training": "Training on how to effectively present yourself in interviews and market your skills",
+      "Industrial Live Project": "Working on an industrial live project, simulating real-world challenges and solutions"
+    }
+  }  
+]
   return (
     <div className='h-auto w-full'>
         <Navbar />
@@ -209,10 +260,10 @@ function page(){
         <div className='min-h-[75vh] 2xl:min-h-[50vh] w-full bg-zinc-950 relative'>
             <div className='absolute h-[200px] w-[200px] top-32 left-48 rounded-full bg-[#1DD9FF] blur-[180px]'/>
             <Image src='/coursePage/100.png' alt='#' width={600} height={600} className='absolute bottom-0 h-auto w-full'/>
-            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
+            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col items-center jsutify-center'>
                 <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
-                <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
+                <div className='rounded-3xl border-2 sm:text-base text-xs border-white md:w-max sm:text-left text-center w-auto sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
                 ONLINE Industrial Automation COURSE
                 </div>
                 </ScrollReveal>
@@ -230,7 +281,7 @@ function page(){
                 <Button text='Enquire Now' />
                 </ScrollReveal>   
                 </div>
-                  <div className='right h-fit xl:w-1/2 w-full xl:p-28 md:px-48 p-4'>
+                  <div className='right h-fit xl:w-1/2 w-full xl:p-20 md:px-48 p-4'>
                   <ScrollReveal animation='slideLeft' delay={400} easing='smooth'>
                       <div className='h-full w-full'>
                       <Form text='Free Career Counselling is just a call away!'/>
@@ -382,12 +433,14 @@ function page(){
         
         <CourseRoadmap courses={courses1} show={false}/>
         <CourseRoadmap courses={courses2} show={true} texts={{ 
-            heading:'READY FOR DEVOPS & CLOUD COMPUTING ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+          heading:'READY FOR INDUSTRIAL AUTOMATION ROLES', 
+          subHeading:'Covering all modules above makes you ready to apply for industrial automation roles' 
         }} />
-        <CourseRoadmap courses={courses3} show={true} texts={{ 
-            heading:'YOU\'RE NOW READY FOR SRE ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+        <CourseRoadmap courses={courses3} show={false} />
+        <CourseRoadmap courses={courses4} show={false}/>
+        <CourseRoadmap courses={courses5} show={true} texts={{ 
+          heading:'YOU\'RE NOW READY FOR INDUSTRIAL AUTOMATION ROLES',
+          subHeading:'Covering all modules above makes you ready to apply for industrial automation roles' 
         }} />
         
         {/* Download Brochure Section */}
@@ -434,7 +487,7 @@ function page(){
           delay={200}
           easing="gentle">
           <h3 className="text-lg font-semibold text-gray-500 uppercase">
-            Gain Real-World DevOps & Cloud Experience!
+            Gain Real-World INDUSTRIAL AUTOMATION Experience!
           </h3>
           </ScrollReveal>
           <ScrollReveal
@@ -461,7 +514,7 @@ function page(){
 
                <div
                  key={index}
-                 className="p-6 rounded-xl bg-gradient-to-br from-black via-gray-900 to-gray-800 shadow-lg text-white flex flex-col items-start h-64"
+                 className="p-6 rounded-xl bg-gradient-to-br from-black via-gray-900 to-gray-800 shadow-lg text-white flex flex-col items-start h-full"
                  >
                  <div className="mb-4">{project.icon}</div>
                  <h3 className="text-xl font-bold">{project.title}</h3>
@@ -484,7 +537,7 @@ function page(){
             delay={200}
             easing="smooth">
            <h2 className="text-lg font-semibold text-gray-400 uppercase">
-             DevOps & Cloud Computing Curriculum
+            industrial automation Curriculum
            </h2>
           </ScrollReveal>
           <ScrollReveal
@@ -1102,8 +1155,8 @@ function page(){
              <h2 className="text-lg font-semibold text-black uppercase text-center mb-4">
                Meet Mentors & Instructors
              </h2>
-             <h1 className="text-4xl font-bold text-center mb-12">
-               Tap into the wisdom of DevOps & Cloud Computing Experts
+             <h1 className="text-4xl font-bold text-center mb-12 capitalize">
+               Tap into the wisdom of industrial automation Experts
              </h1>
             </ScrollReveal>
 
@@ -1191,7 +1244,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure />
+            <FeeStructure courseName={'Industrial Automation'} />
         </div>
 
         {/* FAQ Section */}

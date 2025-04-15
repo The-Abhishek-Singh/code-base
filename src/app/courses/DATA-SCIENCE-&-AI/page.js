@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaLock, FaCogs, FaCloud } from "react-icons/fa";
+import { FaLock, FaUserSecret, FaUserShield, FaCamera, FaComments, FaUtensils, FaDatabase, FaBook, FaUser, FaHome, FaChartPie, FaLaugh, FaVideo } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
 
 
@@ -33,174 +33,280 @@ function page(){
       rating: 5,
     },
   ]
-   const projects = [
-       {
-         title: "Secure Cloud Architecture",
-         description:
-           "Design and deploy a secure, scalable infrastructure on AWS using EC2, VPC, IAM, and Security Groups. Learn the best practices of cloud security and access control.",
-         icon: <FaLock className="text-white text-3xl" />,
-       },
-       {
-         title: "Serverless App with Lambda & API Gateway",
-         description:
-           "Build a fully serverless backend using AWS Lambda, API Gateway, and DynamoDB. Trigger functions on-demand and manage APIs with zero server maintenance.",
-         icon: <FaCogs className="text-white text-3xl" />,
-       },
-       {
-         title: "S3 + CloudFront Website Hosting",
-         description:
-           "Host a static website using Amazon S3 and deliver it globally with CloudFront. Learn to configure buckets, set permissions, and optimize for performance and low latency.",
-         icon: <FaCloud className="text-white text-3xl" />,
-       },
-       ];
-     const courseDesc = [
-       {
-         title: 'High-Demand Cloud Roles',
-         description: 'Be job-ready for roles like Cloud Engineer, Solutions Architect, and DevOps Engineer with this comprehensive AWS certification course designed for today’s tech landscape.' 
-       },
-       {
-         title: 'Certification-Driven Learning',
-         description: 'Prepare for industry-recognized AWS certifications like Cloud Practitioner, Solutions Architect Associate & more—with structured modules, quizzes, and expert mentoring to maximize success.'
-       },
-       {
-         title: 'Hands-On Cloud Infrastructure Mastery',
-         description: 'Gain real-world experience with live AWS environments. Set up EC2 instances, configure S3, deploy scalable apps, and automate with IAM & Lambda. Practice what the pros do—hands-on.'
-       }
-     ];
+  const projects = [
+    {
+      title: "Penetration Testing Lab",
+      description:
+        "Set up and conduct penetration testing on simulated networks using tools like Metasploit and Kali Linux. Learn to identify vulnerabilities and secure systems effectively.",
+      icon: < FaUserShield className="text-white text-3xl" />, // Shield icon for security testing
+    },
+    {
+      title: "Ethical Hacking Challenge",
+      description:
+        "Perform ethical hacking exercises to exploit and patch system weaknesses. Master techniques like phishing detection, SQL injection, and malware analysis in a controlled environment.",
+      icon: <FaUserSecret className="text-white text-3xl" />, // User-secret icon for ethical hacking
+    },
+    {
+      title: "IT Security Framework Implementation",
+      description:
+        "Design and implement an IT security framework using standards like ISO 27001 and NIST. Focus on risk assessment, incident response, and secure data management.",
+      icon: <FaLock className="text-white text-3xl" />, // Lock icon for security framework
+    },
+    {
+      title: "Face Detection",
+      description:
+        "Use Python 3.5(64-bit) with OpenCV for face detection. As an important requirement, learners need to ensure that the system detect multiple faces in a single image while working with essential libraries like cv2 and glob.",
+      icon: <FaCamera className="text-white text-3xl" />, // Camera icon for face detection
+    },
+    {
+      title: "AI Chatbot",
+      description:
+        "In this interesting project, work with IBM Watson AI Chatbot. Create your own AI Chatbot and see how IBM Cloud platform helps you to create the chatbot on the backs of possibly the most advanced Machine Learning systems available.",
+      icon: <FaComments className="text-white text-3xl" />, // Comments icon for chatbot
+    },
+    {
+      title: "Restaurant Revenue Prediction",
+      description:
+        "Work with Ensemble Model for predicting annual restaurant sales using various features like opening date, type of city, type of restaurant. Work with packages like caret, Boruta, dplyr to analyze the dataset and predict the sales.",
+      icon: <FaUtensils className="text-white text-3xl" />, // Utensils icon for restaurant revenue
+    },
+    {
+      title: "Work with PySpark & RDD",
+      description:
+        "Work with PySpark which is a Python API for Spark and use the RDD using Py4j package. As an important part of this project, you will also work with SparkConf provides configurations for running a Spark Application.",
+      icon: <FaDatabase className="text-white text-3xl" />, // Database icon for PySpark/RDD
+    },
+    {
+      title: "Build the Book Recommender Application",
+      description:
+        "Work with packages like a recommended to lab, dplyr, tidy, stringr, corpus and many others to create your book recommender engine using the user-based collaborative filtering model that recommends the books based on past ratings.",
+      icon: <FaBook className="text-white text-3xl" />, // Book icon for recommender system
+    },
+    {
+      title: "Census Project",
+      description:
+        "Work with census income dataset from UCI Machine Learning repository that contains information of more than 48k individuals. Use data handling techniques to handle missing values and also predict the annual income of people.",
+      icon: <FaUser className="text-white text-3xl" />, // Users icon for census data
+    },
+    {
+      title: "Housing Price Prediction",
+      description:
+        "In this project on housing price prediction, get practical exposure on how to work with house price dataset and predict the sale price for each house with 79 explanatory variables describing every aspect of the residential houses.",
+      icon: <FaHome className="text-white text-3xl" />, // Home icon for housing prediction
+    },
+    {
+      title: "HR Analytics",
+      description:
+        "Learn to work with the HR Analytics dataset and understand how the HR can help you to re-imagine HR problem statements. Understand the features of the dataset and in the end, evaluate the model by metric identification process.",
+      icon: <FaChartPie className="text-white text-3xl" />, // Chart-pie icon for HR analytics
+    },
+    {
+      title: "Joke Rating Prediction",
+      description:
+        "Work with the dataset taken from the famous jester online Joke Recommender system and successfully create a model to predict the ratings for jokes that will be given by the users (the same users who earlier rated another joke).",
+      icon: <FaLaugh className="text-white text-3xl" />, // Laugh icon for joke rating
+    },
+    {
+      title: "Build Recommendation Engine",
+      description:
+        "Create your own recommendation engine using the SVD algorithm to predict the ratings on Netflix based on the past ratings of the user. Work with various packages like NumPy, pandas, matplotlib, plotly to handle missing values from the dataset.",
+      icon: <FaVideo className="text-white text-3xl" />, // Video icon for recommendation engine
+    },
+  ];
+       const courseDesc = [
+        {
+          title: 'High-Demand Data Science Roles',
+          description: 'Prepare for sought-after roles like Data Scientist, Machine Learning Engineer, and AI Specialist with this comprehensive course tailored for the growing data-driven industry.',
+        },
+        {
+          title: 'Certification-Driven AI Learning',
+          description: 'Train for industry-recognized certifications like TensorFlow Developer and Microsoft AI Engineer, with structured modules, practical projects, and expert mentorship for career success.',
+        },
+        {
+          title: 'Hands-On AI and Data Mastery',
+          description: 'Gain real-world experience with live datasets and AI models. Master data analysis, machine learning algorithms, and neural networks through hands-on coding and real-time projects.',
+        },
+  ];
      const courses1 = [
       {
-        title: "PYTHON",
-        duration: "1 Month",
-        description: "Python is a crucial skill for DevOps engineers as it enables automation, configuration management, and scripting for cloud environments. Learning Python helps streamline DevOps workflows, improve efficiency, and enhance infrastructure management.",
+        title: "Preparatory Sessions - Python & Linux",
+        duration: "1 Week",
+        description: "This module is designed to prepare students with foundational knowledge in Python and Linux, essential for DevOps and cloud environments. It covers basic to intermediate concepts in Python including object-oriented programming, and introduces core Linux commands and environment handling through hands-on practice.",
         topics: {
-          "Introduction to Python": "Python and its Role in DevOps",
-          "Understanding Variables and Data Types": "int, float, string, list, tuple, dictionary, set",
-          "Working with Operators (Arithmetic, Logical, Comparison, Bitwise)": "Assignment, Membership, Identity",
-          "Type Conversion and Type Casting": "Implicit and Explicit Type Casting"
+          "Introduction to Python and IDEs": "Overview of Python programming and setting up development environments",
+          "Python Basics": "Basic syntax, data types, control structures, and functions in Python",
+          "Object Oriented Programming": "Understanding classes, objects, inheritance, and other OOP principles in Python",
+          "Hands-on Sessions and Assignments (Python)": "Practical exercises to reinforce Python concepts",
+          "Introduction to Linux": "Understanding the Linux operating system and its role in development environments",
+          "Linux Basics": "Core Linux commands, file system navigation, and basic shell scripting",
+          "Hands-on Sessions and Assignments (Linux)": "Practical Linux exercises to build command-line proficiency"
         }
       },
       {
-        title: "Data Structures and Algorithms (DSA)",
-        duration: "1 Month",
-        description: "DSA is a fundamental skill for software engineers, enabling efficient problem-solving and optimization of code. Mastering data structures and algorithms helps in tackling coding interviews, improving logical thinking, and building scalable applications. This course covers essential concepts like arrays, linked lists, recursion, trees, graphs, sorting, and searching techniques to enhance problem-solving abilities.",
+        title: "Data Analysis With MS-Excel",
+        duration: "1 Week",
+        description: "This module focuses on using Microsoft Excel for data analysis tasks, including data exploration, visualization, and solving analytical problems. It covers key Excel features and tools used in the data analytics workflow, empowering learners to perform classification, regression, and statistical analysis within Excel.",
         topics: {
-          "Introduction to DSA": "Importance of DSA, Applications in Competitive Programming and Development",
-          "Arrays and Strings": "One-dimensional and Multi-dimensional arrays, String manipulation techniques",
-          "Linked Lists": "Singly Linked List, Doubly Linked List, Circular Linked List",
-          "Stack and Queue": "Stack operations, Queue operations, Priority Queue",
-          "Recursion and Backtracking": "Concept of Recursion, Backtracking Problems",
-          "Sorting and Searching Algorithms": "Bubble Sort, Merge Sort, Quick Sort, Binary Search",
-          "Trees and Graphs": "Binary Trees, Binary Search Trees, Graph representation and traversal (BFS & DFS)",
-          "Dynamic Programming": "Introduction to DP, Memoization vs Tabulation, Famous DP problems"
+          "Excel Fundamentals": "Understanding Excel interface, formulas, functions, and data management basics",
+          "Excel For Data Analytics": "Using Excel tools for data cleaning, transformation, and exploratory data analysis",
+          "Data Visualization with Excel": "Creating charts, pivot tables, and dashboards for data insights",
+          "Excel Power Tools": "Introduction to Power Query, Power Pivot, and advanced Excel features",
+          "Classification Problems Using Excel": "Applying Excel techniques to solve classification problems",
+          "Information Measure in Excel": "Using Excel to calculate statistical and information-based metrics",
+          "Regression Problems Using Excel": "Performing regression analysis using Excel tools and functions"
         }
       },
       {
-        title: "Linux",
-        duration: "1 Month",
-        description: "Linux is a powerful and widely used operating system in development, DevOps, and cybersecurity. Mastering Linux helps in system administration, shell scripting, server management, and understanding the core of open-source operating systems. This course covers essential Linux commands, file system management, process handling, networking, and security, equipping you with the skills needed for efficient system operations.",
+        title: "Data Wrangling with SQL",
+        duration: "1 Week",
+        description: "This module provides comprehensive training on using SQL for data wrangling tasks. It covers foundational and advanced SQL concepts, including user-defined functions and performance optimization, enabling learners to efficiently manipulate and query data in relational databases.",
         topics: {
-          "Introduction to Linux": "History, Distributions, and Use Cases",
-          "Linux File System and Commands": "File system structure, Basic and Advanced Linux commands",
-          "User Management and Permissions": "Users, Groups, File permissions, Sudo and Root access",
-          "Process Management": "Foreground & Background processes, Job control, Signals",
-          "Shell Scripting": "Bash scripting, Variables, Loops, Conditional statements",
-          "Networking in Linux": "Networking commands, Firewall configuration, SSH and FTP",
-          "Package Management": "apt, yum, snap, rpm, Installing and Updating software",
-          "Linux Security and Hardening": "Firewall, SELinux, File encryption, Security best practices"
+          "SQL Basics": "Introduction to SQL syntax, SELECT statements, filtering, sorting, and joining tables",
+          "Advanced SQL": "Nested queries, window functions, aggregations, and set operations",
+          "Deep Dive into User Defined Functions": "Creating and using UDFs for custom SQL operations",
+          "SQL Optimization and Performance": "Best practices for writing efficient SQL queries and improving database performance"
         }
-      }
-    ];
+      }      
+  ];
     const courses2 = [
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Python With Data Science",
+        duration: "1 Week",
+        description: "This module introduces the use of Python in data science workflows, focusing on essential libraries and techniques for extracting, transforming, and loading data. Learners will gain hands-on experience in data handling, preprocessing, and visualization using popular Python libraries like NumPy, Pandas, and Matplotlib.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Extract Transform Load": "Understanding the ETL process using Python for structured data pipelines",
+          "Data Handling with NumPy": "Efficient numerical operations and array manipulations with NumPy",
+          "Data Manipulation Using Pandas": "Using Pandas for data cleaning, filtering, grouping, and reshaping",
+          "Data Preprocessing": "Preparing data for modeling through encoding, scaling, and imputation techniques",
+          "Data Visualization": "Creating insightful plots and charts using Matplotlib and Seaborn"
         }
       },
       {
-        "title": "AWS (Amazon Web Services)",
-        "duration": "1 Month",
-        "description": "AWS is the leading cloud platform, offering scalable and cost-effective solutions for hosting, storage, and computing. This course covers core AWS services, including EC2, S3, Lambda, and RDS, helping you gain expertise in cloud computing, deployment, and security.",
-        "topics": {
-          "Introduction to AWS": "AWS global infrastructure, Pricing, Free tier benefits",
-          "Compute Services": "EC2 instances, Auto Scaling, Load Balancers, Lambda functions",
-          "Storage Services": "S3, EBS, Glacier, File storage solutions",
-          "Database Services": "RDS, DynamoDB, Aurora, Redshift",
-          "Networking in AWS": "VPC, Route 53, CloudFront, AWS Private Link",
-          "Security and IAM": "IAM roles, Policies, AWS Shield, Security best practices",
-          "Serverless Computing": "AWS Lambda, API Gateway, Event-driven architecture",
-          "AWS Deployment and Management": "CloudFormation, Elastic Beanstalk, AWS CLI"
+        title: "Linear Algebra and Advanced Statistics",
+        duration: "1 Week",
+        description: "This module covers the mathematical foundations essential for data science, focusing on linear algebra and advanced statistical methods. Students will learn key concepts in descriptive and inferential statistics, as well as probability theory, which are crucial for building and understanding machine learning models.",
+        topics: {
+          "Descriptive Statistics": "Summarizing and describing data using mean, median, mode, variance, and standard deviation",
+          "Probability": "Understanding basic probability concepts, distributions, and their applications in data science",
+          "Inferential Statistics": "Hypothesis testing, confidence intervals, and drawing conclusions from sample data"
         }
       },
       {
-        title: "Infrastructure as Code (IAC)",
-        duration: "1 Month",
-        description: "Infrastructure as Code (IAC) enables automated, consistent, and scalable deployment of infrastructure using code. This course covers tools like Terraform, Ansible, and CloudFormation to manage cloud infrastructure efficiently.",
+        title: "Machine Learning",
+        duration: "1 Week",
+        description: "This module introduces the fundamentals of machine learning, covering both supervised and unsupervised learning techniques. Students will explore key algorithms such as regression, classification, and clustering, along with essential performance metrics to evaluate model effectiveness.",
         topics: {
-          "Introduction to Infrastructure as Code": "Concepts, Benefits, and Real-world use cases",
-          "Terraform Basics": "Installation, Providers, Resources, State management",
-          "Terraform Advanced Concepts": "Modules, Workspaces, Remote Backends",
-          "Ansible for Configuration Management": "Playbooks, Roles, Ansible Tower",
-          "AWS CloudFormation": "Templates, Stacks, Managing AWS infrastructure",
-          "CI/CD with IAC": "Automating infrastructure deployments",
-          "Monitoring and Logging": "Observability, Infrastructure monitoring tools"
+          "Introduction to Machine Learning": "Overview of machine learning concepts, types, and real-world applications",
+          "Regression": "Understanding and implementing linear and logistic regression models",
+          "Classification": "Exploring classification algorithms like decision trees, SVM, and k-NN",
+          "Clustering": "Applying clustering techniques such as k-means and hierarchical clustering",
+          "Supervised Learning": "Training models on labeled data using regression and classification methods",
+          "Unsupervised Learning": "Discovering hidden patterns in data without predefined labels using clustering",
+          "Performance Metrics": "Evaluating model performance using metrics like accuracy, precision, recall, and F1-score"
         }
-      }
-    ];
+      }      
+  ];
     const courses3 = [
       {
-        title: "System Design",
-        duration: "1 Month",
-        description: "System Design is a crucial skill for building scalable, efficient, and maintainable applications. This course covers architectural patterns, scalability strategies, database design, caching mechanisms, and real-world case studies to help engineers create robust systems.",
+        title: "Deep Learning Using TensorFlow",
+        duration: "1 Week",
+        description: "This module introduces the foundations of deep learning using TensorFlow, covering the basics of artificial intelligence and neural networks. Students will explore how deep learning models work and how to implement and train neural networks using TensorFlow.",
         topics: {
-          "Introduction to System Design": "Key principles, High-level design vs. Low-level design",
-          "Scalability and Load Balancing": "Horizontal vs. Vertical Scaling, Load balancers",
-          "Database Design": "SQL vs. NoSQL, Sharding, Replication, CAP Theorem",
-          "Caching Strategies": "Redis, Memcached, Cache invalidation techniques",
-          "Microservices Architecture": "Advantages, API Gateway, Inter-service communication",
-          "Message Queues and Streaming": "Kafka, RabbitMQ, Event-driven systems",
-          "Security and Rate Limiting": "Authentication, Authorization, Rate Limiting",
-          "Real-world Case Studies": "Designing scalable systems like Uber, Netflix, WhatsApp"
+          "Artificial Intelligence Basics": "Introduction to AI, its types, and real-world use cases",
+          "Neural Networks": "Understanding perceptrons, hidden layers, activation functions, and backpropagation",
+          "Deep Learning": "Building and training deep neural networks using TensorFlow"
         }
       },
       {
-        title: "Advanced Data Structures and Algorithms",
-        duration: "1 Month",
-        description: "Advanced DSA builds on fundamental concepts to solve complex problems efficiently. This course covers advanced topics like graph algorithms, segment trees, tries, and dynamic programming optimizations to enhance problem-solving skills for competitive programming and technical interviews.",
+        title: "Power BI",
+        duration: "1 Week",
+        description: "This module focuses on data visualization and business intelligence using Power BI. Learners will understand the basics of Power BI, work with DAX for data modeling, and build interactive dashboards for analytical insights.",
         topics: {
-          "Advanced Graph Algorithms": "Dijkstra, Floyd-Warshall, Bellman-Ford, Topological Sorting",
-          "Segment Trees and Fenwick Trees": "Range Queries, Lazy Propagation",
-          "Tries and Suffix Trees": "String searching, Autocomplete, Pattern matching",
-          "Advanced Dynamic Programming": "Bitmasking, Matrix Exponentiation, DP on Trees",
-          "Greedy and Divide & Conquer": "Greedy strategies, Advanced Divide & Conquer techniques",
-          "Network Flow Algorithms": "Ford-Fulkerson, Edmonds-Karp",
-          "Competitive Programming Techniques": "Heuristic approaches, Problem-solving strategies",
-          "Real-world Applications": "How DSA is used in large-scale systems"
+          "Power BI Basics": "Overview of Power BI interface, data connections, and report building",
+          "DAX": "Data Analysis Expressions for calculated columns, measures, and advanced analytics",
+          "Data Visualization with Analytics": "Creating dashboards and visuals for data storytelling and insights"
         }
       },
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Deploying Machine Learning Models With Cloud",
+        duration: "1 Week",
+        description: "This module introduces the principles of MLOps and focuses on deploying machine learning models using cloud platforms. Learners will gain practical knowledge of operationalizing ML models and integrating them into scalable cloud-based environments.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Introduction to MLOps": "Understanding the MLOps lifecycle, CI/CD for ML, and the importance of model deployment",
+          "Deploying Machine Learning Models": "Techniques and tools for deploying ML models on cloud services such as AWS, Azure, or GCP"
         }
-      }
-      ];
+      }      
+  ];
+const courses4 = [
+  {
+    title: "GIT",
+    duration: "1 Week",
+    description: "This module focuses on version control using GIT, an essential tool for collaborative software development. Learners will understand how to track changes, manage code versions, and collaborate effectively using GIT repositories.",
+    topics: {
+      "Version Control": "Introduction to version control systems and the importance of code management",
+      "GIT": "Using GIT for initializing repositories, committing changes, branching, merging, and working with remote repositories like GitHub"
+    }
+  },
+  {
+    title: "Data Science Capstone Project",
+    duration: "1 Week",
+    description: "This final module is a culmination of all the skills and concepts learned throughout the course. Students will work on a comprehensive capstone project that involves solving a real-world problem using data science techniques such as data preprocessing, analysis, machine learning, and deployment.",
+    topics: {
+      "Capstone Project": "Apply data science workflow—from data collection and cleaning to model building, evaluation, and deployment—to a real-world problem"
+    }
+  },
+  {
+    title: "Business Case Studies",
+    duration: "1 Week",
+    description: "This module covers a variety of business case studies where data science and machine learning techniques are applied to real-world scenarios. Students will work on projects involving recommendation engines, prediction models, object detection, and financial analysis, gaining practical experience in solving complex business problems.",
+    topics: {
+      "Recommendation Engine": "Building and evaluating a recommendation system for personalized suggestions",
+      "Rating Predictions": "Predicting ratings and feedback scores using regression techniques",
+      "Census": "Analyzing census data to derive insights and trends",
+      "Housing": "Predicting housing prices and analyzing factors that affect real estate",
+      "Object Detection": "Implementing machine learning models to detect objects in images",
+      "Stock Market Analysis": "Analyzing stock market trends and predicting future stock prices",
+      "Banking Problem": "Solving a real-world banking problem using machine learning algorithms",
+      "AI Chatbot": "Building a conversational AI chatbot using natural language processing techniques"
+    }
+  }      
+  ];
+const courses5 = [
+  {
+    title: "Natural Language Processing",
+    duration: "1 Week",
+    description: "This module introduces the fundamentals of Natural Language Processing (NLP), covering techniques for text mining, cleaning, and pre-processing. Students will explore methods for text classification, sentiment analysis, sequence tagging, and building AI chatbots and recommendation systems using NLP.",
+    topics: {
+      "Text Mining, Cleaning, and Pre-processing": "Techniques for extracting useful information from text data, including cleaning and preparation",
+      "Text Classification, NLTK, Sentiment Analysis": "Using NLTK for text classification tasks and performing sentiment analysis on textual data",
+      "Sentence Structure, Sequence Tagging, Sequence Tasks, and Language Modeling": "Understanding sentence structures, tagging sequences, and implementing language models",
+      "AI Chatbots and Recommendations Engine": "Building AI chatbots using NLP and recommendation engines based on user preferences"
+    }
+  },
+  {
+    title: "Computer Vision",
+    duration: "1 Week",
+    description: "This module delves into the concepts and techniques used in computer vision, focusing on deep learning models like RBM, DBNs, and Variational Autoencoders. Students will explore object detection, image generation, and reinforcement learning, as well as the deployment of deep learning models for real-world applications.",
+    topics: {
+      "RBM and DBNs & Variational AutoEncoder": "Understanding Restricted Boltzmann Machines (RBM), Deep Belief Networks (DBNs), and Variational Autoencoders for feature extraction and generation tasks",
+      "Object Detection using Convolutional Neural Net": "Implementing CNNs for detecting objects in images and videos",
+      "Generating images with Neural Style and Working with Deep Generative Models": "Using neural style transfer to generate artistic images and working with GANs for image creation",
+      "Distributed & Parallel Computing for Deep Learning Models": "Utilizing distributed and parallel computing techniques to scale deep learning model training",
+      "Reinforcement Learning": "Understanding and implementing reinforcement learning algorithms for decision-making problems",
+      "Deploying Deep Learning Models and Beyond": "Techniques for deploying and scaling deep learning models for production environments"
+    }
+  },
+  {
+    title: "Data Science at Scale with PySpark",
+    duration: "1 Week",
+    description: "This module introduces the concepts of Big Data processing using PySpark. Students will learn how to scale data science workflows with Spark, work with Resilient Distributed Datasets (RDDs), and explore advanced concepts like integrating Spark with Hive for efficient big data querying.",
+    topics: {
+      "Introduction to Big Data and Spark": "Overview of Big Data concepts and how Apache Spark enables distributed data processing",
+      "RDDs": "Understanding Resilient Distributed Datasets (RDDs) for distributed data storage and computation",
+      "Advanced Concepts & Spark-Hive": "Advanced Spark functionalities and integrating Spark with Hive for big data querying and analysis"
+    }
+  }      
+  ];
   return (
     <div className='h-auto w-full'>
         <Navbar />
@@ -209,16 +315,16 @@ function page(){
         <div className='min-h-[75vh] 2xl:min-h-[50vh] w-full bg-zinc-950 relative'>
             <div className='absolute h-[200px] w-[200px] top-32 left-48 rounded-full bg-[#1DD9FF] blur-[180px]'/>
             <Image src='/coursePage/100.png' alt='#' width={600} height={600} className='absolute bottom-0 h-auto w-full'/>
-            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
-                <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
+            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col items-center justify-center'>
+                <div className='left h-fit xl:w-1/2 w-full xl:px-20 xl:py-16 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
-                <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
+                <div className='rounded-3xl border-2 sm:text-base text-xs border-white md:w-max sm:text-left text-center w-auto sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
                 ONLINE DATA SCIENCE & AI COURSE
                 </div>
                 </ScrollReveal>
                 <ScrollReveal animation='fadeIn' delay={300} easing='spring'>
                   <h1 className='xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-bold'>
-                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Data Sceince & AI</span>
+                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Data Sceince & Artificial Intelligence</span>
                   </h1>
                 </ScrollReveal>
                 <ScrollReveal animation='slideUp' delay={500} easing='smooth'>
@@ -230,7 +336,7 @@ function page(){
                 <Button text='Enquire Now' />
                 </ScrollReveal>   
                 </div>
-                  <div className='right h-fit xl:w-1/2 w-full xl:p-28 md:px-48 p-4'>
+                  <div className='right xl:w-1/2 w-full xl:px-20 md:px-48 p-4'>
                   <ScrollReveal animation='slideLeft' delay={400} easing='smooth'>
                       <div className='h-full w-full'>
                       <Form text='Free Career Counselling is just a call away!'/>
@@ -382,13 +488,15 @@ function page(){
         
         <CourseRoadmap courses={courses1} show={false}/>
         <CourseRoadmap courses={courses2} show={true} texts={{ 
-            heading:'READY FOR DEVOPS & CLOUD COMPUTING ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+          heading:'READY FOR DATA SCIENCE & AI ROLES', 
+          subHeading:'Covering all modules above makes you ready to apply for data science & AI roles' 
         }} />
-        <CourseRoadmap courses={courses3} show={true} texts={{ 
-            heading:'YOU\'RE NOW READY FOR SRE ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
-        }} />
+        <CourseRoadmap courses={courses3} />
+        <CourseRoadmap courses={courses4} show={false}/>
+        <CourseRoadmap courses={courses5}  show={true} texts={{ 
+          heading:'YOU\'RE NOW READY FOR DATA SCIENCE & AI ROLES', 
+          subHeading:'Covering all modules above makes you ready to apply for data science & AI roles' 
+        }}/>
         
         {/* Download Brochure Section */}
         <div className='w-full bg-white p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-start gap-3 sm:gap-4 md:gap-7'>
@@ -434,7 +542,7 @@ function page(){
           delay={200}
           easing="gentle">
           <h3 className="text-lg font-semibold text-gray-500 uppercase">
-            Gain Real-World DevOps & Cloud Experience!
+            Gain Real-World Data Science & AI Experience!
           </h3>
           </ScrollReveal>
           <ScrollReveal
@@ -461,7 +569,7 @@ function page(){
 
                <div
                  key={index}
-                 className="p-6 rounded-xl bg-gradient-to-br from-black via-gray-900 to-gray-800 shadow-lg text-white flex flex-col items-start h-64"
+                 className="p-6 rounded-xl bg-gradient-to-br from-black via-gray-900 to-gray-800 shadow-lg text-white flex flex-col items-start h-full"
                  >
                  <div className="mb-4">{project.icon}</div>
                  <h3 className="text-xl font-bold">{project.title}</h3>
@@ -484,7 +592,7 @@ function page(){
             delay={200}
             easing="smooth">
            <h2 className="text-lg font-semibold text-gray-400 uppercase">
-             DevOps & Cloud Computing Curriculum
+            Data Science & AI Curriculum
            </h2>
           </ScrollReveal>
           <ScrollReveal
@@ -1102,13 +1210,13 @@ function page(){
              <h2 className="text-lg font-semibold text-black uppercase text-center mb-4">
                Meet Mentors & Instructors
              </h2>
-             <h1 className="text-4xl font-bold text-center mb-12">
-               Tap into the wisdom of DevOps & Cloud Computing Experts
+             <h1 className="text-4xl font-bold text-center mb-12 capitalize">
+               Tap into the wisdom of Data Science & AI Experts
              </h1>
             </ScrollReveal>
 
              {/* Mentors Grid */}
-             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                {/* Mentor Card Template */}
                {[
                  {
@@ -1154,7 +1262,7 @@ function page(){
              </div>
 
              {/* Reviews Section */}
-             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                {reviews.map((review, index) => (
                    <div
                      key={index}
@@ -1178,7 +1286,7 @@ function page(){
                          </div>
                        </div>
                      </div>
-                     <p className="text-gray-400">
+                     <p className="text-gray-400 text-xs sm:text-sm">
                        {review.review}
                      </p>
                     </ScrollReveal>
@@ -1191,7 +1299,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure />
+            <FeeStructure courseName={'Data Science & AI'}/>
         </div>
 
         {/* FAQ Section */}

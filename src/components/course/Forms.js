@@ -46,7 +46,7 @@ const Form = (props) => {
           flex-direction: column;
           align-self: center;
           font-family: inherit;
-          height: auto;
+          height: 100%;
           padding-inline: 2em;
           padding-bottom: 0.2em;
           background-color: #fff;

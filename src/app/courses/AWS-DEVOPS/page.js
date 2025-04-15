@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaLock, FaCogs, FaCloud } from "react-icons/fa";
+import { FaBug, FaCloud, FaSync } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
 
 
@@ -34,170 +34,175 @@ function page(){
     },
   ]
   const projects = [
-      {
-        title: "Secure Cloud Architecture",
-        description:
-          "Design and deploy a secure, scalable infrastructure on AWS using EC2, VPC, IAM, and Security Groups. Learn the best practices of cloud security and access control.",
-        icon: <FaLock className="text-white text-3xl" />,
-      },
-      {
-        title: "Serverless App with Lambda & API Gateway",
-        description:
-          "Build a fully serverless backend using AWS Lambda, API Gateway, and DynamoDB. Trigger functions on-demand and manage APIs with zero server maintenance.",
-        icon: <FaCogs className="text-white text-3xl" />,
-      },
-      {
-        title: "S3 + CloudFront Website Hosting",
-        description:
-          "Host a static website using Amazon S3 and deliver it globally with CloudFront. Learn to configure buckets, set permissions, and optimize for performance and low latency.",
-        icon: <FaCloud className="text-white text-3xl" />,
-      },
-      ];
+    {
+      title: "Master Production Issue Handling",
+      description:
+        "Learn how to detect, classify, communicate, and resolve production issues, along with providing a workaround and RCA.",
+      icon: <FaBug className="text-white text-3xl" />
+    },
+    {
+      title: "Effortless Infrastructure Setup",
+      description:
+        "Set up and manage scalable infrastructure on AWS using EC2, VPC, and IAM, ensuring high availability and performance.",
+      icon: <FaCloud className="text-white text-3xl" />
+    },
+    {
+      title: "Streamline CI/CD Process",
+      description:
+        "Implement a CI/CD pipeline using AWS CodePipeline and CodeBuild to automate testing and deployment of applications.",
+      icon: <FaSync  className="text-white text-3xl" />
+    },
+  ];
     const courseDesc = [
       {
-        title: 'High-Demand Cloud Roles',
-        description: 'Be job-ready for roles like Cloud Engineer, Solutions Architect, and DevOps Engineer with this comprehensive AWS certification course designed for today’s tech landscape.' 
+        title: 'Integrated Cloud & DevOps Mastery',
+        description: 'Master AWS and DevOps together—learn to deploy, automate, and manage cloud-native applications using EC2, S3, Docker, Jenkins, and Kubernetes. Build CI/CD pipelines and adopt Infrastructure as Code with real-world tools like Terraform and CloudFormation.'
       },
       {
-        title: 'Certification-Driven Learning',
-        description: 'Prepare for industry-recognized AWS certifications like Cloud Practitioner, Solutions Architect Associate & more—with structured modules, quizzes, and expert mentoring to maximize success.'
+        title: 'Real-World DevOps on AWS',
+        description: 'Work hands-on in live AWS environments while applying DevOps principles. Set up pipelines, containerize apps with Docker, orchestrate with Kubernetes, and automate workflows with Jenkins and Lambda.'
       },
       {
-        title: 'Hands-On Cloud Infrastructure Mastery',
-        description: 'Gain real-world experience with live AWS environments. Set up EC2 instances, configure S3, deploy scalable apps, and automate with IAM & Lambda. Practice what the pros do—hands-on.'
+        title: 'From Cloud Fundamentals to Automation',
+        description: 'Start with core AWS services and scale up to advanced DevOps automation. Learn to provision infrastructure, manage deployments, and monitor performance—all aligned with industry best practices and certification goals.'
       }
     ]
     const courses1 = [
       {
-        title: "PYTHON",
-        duration: "1 Month",
-        description: "Python is a crucial skill for DevOps engineers as it enables automation, configuration management, and scripting for cloud environments. Learning Python helps streamline DevOps workflows, improve efficiency, and enhance infrastructure management.",
+        title: "Overview of DevOps",
+        duration: "1 Week",
+        description: "This module introduces the fundamentals of DevOps, focusing on its purpose, principles, and role in modern software development. You'll explore why DevOps is important, how it bridges the gap between development and operations, and the skills required to become a DevOps engineer. The module also covers the DevOps delivery pipeline and ecosystem, along with current market trends.",
         topics: {
-          "Introduction to Python": "Python and its Role in DevOps",
-          "Understanding Variables and Data Types": "int, float, string, list, tuple, dictionary, set",
-          "Working with Operators (Arithmetic, Logical, Comparison, Bitwise)": "Assignment, Membership, Identity",
-          "Type Conversion and Type Casting": "Implicit and Explicit Type Casting"
+          "Why DevOps?": "Understanding the need for DevOps in modern software development",
+          "What is DevOps?": "Exploring the definition, principles, and goals of DevOps",
+          "DevOps Market Trends": "Current trends, adoption stats, and industry insights",
+          "DevOps Engineer Skills": "Key technical and soft skills required for DevOps roles",
+          "DevOps Delivery Pipeline": "Overview of the DevOps delivery pipeline from development to deployment",
+          "DevOps Ecosystem": "Tools, platforms, and practices that make up the DevOps environment"
         }
       },
       {
-        title: "Data Structures and Algorithms (DSA)",
-        duration: "1 Month",
-        description: "DSA is a fundamental skill for software engineers, enabling efficient problem-solving and optimization of code. Mastering data structures and algorithms helps in tackling coding interviews, improving logical thinking, and building scalable applications. This course covers essential concepts like arrays, linked lists, recursion, trees, graphs, sorting, and searching techniques to enhance problem-solving abilities.",
+        title: "Version Control with Git",
+        duration: "1 Week",
+        description: "This module introduces version control systems with a focus on Git, the most widely used version control tool in the DevOps ecosystem. You'll learn the fundamentals of version control, understand Git’s role in collaborative development, and explore common Git commands. The module also covers working with remote repositories and installing Git for your development environment.",
         topics: {
-          "Introduction to DSA": "Importance of DSA, Applications in Competitive Programming and Development",
-          "Arrays and Strings": "One-dimensional and Multi-dimensional arrays, String manipulation techniques",
-          "Linked Lists": "Singly Linked List, Doubly Linked List, Circular Linked List",
-          "Stack and Queue": "Stack operations, Queue operations, Priority Queue",
-          "Recursion and Backtracking": "Concept of Recursion, Backtracking Problems",
-          "Sorting and Searching Algorithms": "Bubble Sort, Merge Sort, Quick Sort, Binary Search",
-          "Trees and Graphs": "Binary Trees, Binary Search Trees, Graph representation and traversal (BFS & DFS)",
-          "Dynamic Programming": "Introduction to DP, Memoization vs Tabulation, Famous DP problems"
+          "Version Control Basics": "What is version control and why it's essential in software development",
+          "Introduction to Git": "Understanding what Git is and how it works",
+          "Organizational Benefits": "Why Git is a valuable tool for your organization",
+          "Installing Git": "How to install and configure Git on different operating systems",
+          "Git Commands": "Common Git commands for managing repositories",
+          "Remote Repositories": "Working with remote repositories for collaboration and code sharing"
         }
       },
       {
-        title: "Linux",
-        duration: "1 Month",
-        description: "Linux is a powerful and widely used operating system in development, DevOps, and cybersecurity. Mastering Linux helps in system administration, shell scripting, server management, and understanding the core of open-source operating systems. This course covers essential Linux commands, file system management, process handling, networking, and security, equipping you with the skills needed for efficient system operations.",
+        title: "Git, Jenkins & Maven Integration",
+        duration: "1 Week",
+        description: "This module covers advanced Git practices and introduces key DevOps tools—Jenkins and Maven. You'll explore branching and merging strategies, learn standard Git workflows, and utilize a Git cheatsheet for efficient usage. The module also introduces Continuous Integration (CI), its importance in modern development, and how Jenkins automates builds and deployments. Additionally, you'll gain insight into Maven for project build and dependency management.",
         topics: {
-          "Introduction to Linux": "History, Distributions, and Use Cases",
-          "Linux File System and Commands": "File system structure, Basic and Advanced Linux commands",
-          "User Management and Permissions": "Users, Groups, File permissions, Sudo and Root access",
-          "Process Management": "Foreground & Background processes, Job control, Signals",
-          "Shell Scripting": "Bash scripting, Variables, Loops, Conditional statements",
-          "Networking in Linux": "Networking commands, Firewall configuration, SSH and FTP",
-          "Package Management": "apt, yum, snap, rpm, Installing and Updating software",
-          "Linux Security and Hardening": "Firewall, SELinux, File encryption, Security best practices"
+          "Git Branching & Merging": "Working with branches and merging changes in Git",
+          "Git Workflows": "Understanding common Git workflows like GitFlow and feature branching",
+          "Git Cheatsheet": "Quick reference guide to essential Git commands",
+          "Continuous Integration (CI)": "What is CI and why it is important in modern development pipelines",
+          "Introduction to Jenkins": "Overview of Jenkins with its architecture and use in CI",
+          "Introduction to Maven": "Understanding Maven for project build automation and dependency management"
         }
       }
     ];
     const courses2 = [
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Continuous Integration using Jenkins",
+        duration: "1 Week",
+        description: "This module dives deeper into Continuous Integration by focusing on Jenkins. You’ll learn how to manage Jenkins, configure slave nodes, and implement a complete CI pipeline. The module emphasizes 'Pipeline as Code' for automating workflows and walks through building and executing pipelines to streamline the delivery process.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Jenkins Management": "Managing Jenkins configurations and system settings",
+          "Slave Node Configuration": "Adding and configuring slave nodes in Jenkins",
+          "Delivery Pipeline": "Building a continuous delivery pipeline in Jenkins",
+          "Pipeline as Code": "Implementing pipelines using Jenkinsfile and scripted/declarative syntax",
+          "Jenkins Implementation": "Setting up and running Jenkins for CI workflows",
+          "Pipeline Jobs": "Creating and managing a series of pipeline jobs using Jenkins"
         }
       },
       {
-        "title": "AWS (Amazon Web Services)",
-        "duration": "1 Month",
-        "description": "AWS is the leading cloud platform, offering scalable and cost-effective solutions for hosting, storage, and computing. This course covers core AWS services, including EC2, S3, Lambda, and RDS, helping you gain expertise in cloud computing, deployment, and security.",
-        "topics": {
-          "Introduction to AWS": "AWS global infrastructure, Pricing, Free tier benefits",
-          "Compute Services": "EC2 instances, Auto Scaling, Load Balancers, Lambda functions",
-          "Storage Services": "S3, EBS, Glacier, File storage solutions",
-          "Database Services": "RDS, DynamoDB, Aurora, Redshift",
-          "Networking in AWS": "VPC, Route 53, CloudFront, AWS Private Link",
-          "Security and IAM": "IAM roles, Policies, AWS Shield, Security best practices",
-          "Serverless Computing": "AWS Lambda, API Gateway, Event-driven architecture",
-          "AWS Deployment and Management": "CloudFormation, Elastic Beanstalk, AWS CLI"
+        title: "Continuous Deployment: Containerization with Docker",
+        duration: "1 Week",
+        description: "This module introduces Docker as a tool for containerization in the deployment phase of DevOps. You’ll learn the fundamentals of Docker containers, how to create and manage them, and how to build custom images using Dockerfiles. The module also covers Docker Compose for managing multi-container applications and publishing images to Docker Hub for sharing.",
+        topics: {
+          "Docker Introduction": "Understanding Docker and the role of containerization in DevOps",
+          "Images and Containers": "Differences between Docker images and containers",
+          "First Docker App": "Running 'Hello World' in Docker",
+          "Container Concepts": "Introduction to containers and their life cycle",
+          "Image Management": "Sharing and copying base images",
+          "Dockerfile": "Creating custom images using Dockerfile",
+          "Working with Containers": "Running and managing Docker containers",
+          "Publishing Images": "Publishing Docker images to Docker Hub",
+          "Docker Compose": "Using Docker Compose to manage multi-container applications"
         }
       },
       {
-        title: "Infrastructure as Code (IAC)",
-        duration: "1 Month",
-        description: "Infrastructure as Code (IAC) enables automated, consistent, and scalable deployment of infrastructure using code. This course covers tools like Terraform, Ansible, and CloudFormation to manage cloud infrastructure efficiently.",
+        title: "Containerization using Kubernetes",
+        duration: "1 Week",
+        description: "This module focuses on Kubernetes, the leading container orchestration platform. You'll learn the fundamentals of Kubernetes architecture, how to install and configure a cluster, and work with essential concepts like pods, namespaces, and replica sets. The module also covers deploying applications using YAML and Helm, managing services, and using the Kubernetes Dashboard for visualization and control.",
         topics: {
-          "Introduction to Infrastructure as Code": "Concepts, Benefits, and Real-world use cases",
-          "Terraform Basics": "Installation, Providers, Resources, State management",
-          "Terraform Advanced Concepts": "Modules, Workspaces, Remote Backends",
-          "Ansible for Configuration Management": "Playbooks, Roles, Ansible Tower",
-          "AWS CloudFormation": "Templates, Stacks, Managing AWS infrastructure",
-          "CI/CD with IAC": "Automating infrastructure deployments",
-          "Monitoring and Logging": "Observability, Infrastructure monitoring tools"
+          "Kubernetes Introduction": "Overview of Kubernetes and its role in container orchestration",
+          "K8s Architecture": "Understanding the components of Kubernetes architecture",
+          "K8s Installation": "Installing and setting up Kubernetes",
+          "Core Concepts": "Working with Pods, Namespaces, Clusters, and Replica Sets",
+          "Cluster Setup": "Spinning up a Kubernetes cluster on Ubuntu VMs",
+          "Cluster Exploration": "Exploring and interacting with your Kubernetes cluster",
+          "YAML in Kubernetes": "Using YAML files for resource configuration",
+          "HELM Charts": "Introduction to HELM and managing applications with Helm Charts",
+          "Kubernetes Deployment": "Creating deployments using YAML files",
+          "Kubernetes Services": "Creating and managing services in Kubernetes",
+          "Kubernetes Dashboard": "Installing and using the Kubernetes Dashboard",
+          "App Deployment via Dashboard": "Deploying applications through the Kubernetes Dashboard",
+          "Rolling Updates": "Implementing rolling updates in Kubernetes",
+          "Container Orchestration": "Understanding container orchestration and Kubernetes's role"
         }
       }
+      
     ];
     const courses3 = [
       {
-        title: "System Design",
-        duration: "1 Month",
-        description: "System Design is a crucial skill for building scalable, efficient, and maintainable applications. This course covers architectural patterns, scalability strategies, database design, caching mechanisms, and real-world case studies to help engineers create robust systems.",
+        title: "Configuration Management with Ansible",
+        duration: "1 Week",
+        description: "This module introduces Ansible, an open-source automation tool for configuration management, application deployment, and task automation. You’ll learn about Ansible's architecture, installation, and the essential concepts like inventory, hosts, and groups. The module also covers YAML scripting and writing effective Ansible playbooks to automate tasks across your infrastructure.",
         topics: {
-          "Introduction to System Design": "Key principles, High-level design vs. Low-level design",
-          "Scalability and Load Balancing": "Horizontal vs. Vertical Scaling, Load balancers",
-          "Database Design": "SQL vs. NoSQL, Sharding, Replication, CAP Theorem",
-          "Caching Strategies": "Redis, Memcached, Cache invalidation techniques",
-          "Microservices Architecture": "Advantages, API Gateway, Inter-service communication",
-          "Message Queues and Streaming": "Kafka, RabbitMQ, Event-driven systems",
-          "Security and Rate Limiting": "Authentication, Authorization, Rate Limiting",
-          "Real-world Case Studies": "Designing scalable systems like Uber, Netflix, WhatsApp"
+          "Ansible Introduction": "Overview of Ansible and its role in configuration management",
+          "Basics & Installation": "Installing and setting up Ansible on your system",
+          "Ansible Architecture": "Understanding the architecture and components of Ansible",
+          "Control Machine Requirements": "Requirements for the Ansible control machine",
+          "Node Machine Requirements": "Setting up and configuring node machines for Ansible management",
+          "Inventory": "Working with Ansible inventory files to define hosts and groups",
+          "Hosts & Groups": "Organizing hosts and grouping them for easier management",
+          "YAML Introduction": "Introduction to YAML for writing Ansible scripts",
+          "Playbooks": "Writing and executing Ansible playbooks to automate tasks",
+          "Writing Playbooks": "Best practices for writing efficient and maintainable Ansible playbooks"
         }
       },
       {
-        title: "Advanced Data Structures and Algorithms",
-        duration: "1 Month",
-        description: "Advanced DSA builds on fundamental concepts to solve complex problems efficiently. This course covers advanced topics like graph algorithms, segment trees, tries, and dynamic programming optimizations to enhance problem-solving skills for competitive programming and technical interviews.",
+        title: "Continuous Monitoring with Nagios & ELK",
+        duration: "1 Week",
+        description: "This module covers continuous monitoring using Nagios and the ELK stack. You'll learn the fundamentals of monitoring, how to install Nagios and ELK, and configure Nagios plugins for enhanced monitoring. The module also explores using Nagios commands and notifications, and working with the ELK stack for log management and visualization.",
         topics: {
-          "Advanced Graph Algorithms": "Dijkstra, Floyd-Warshall, Bellman-Ford, Topological Sorting",
-          "Segment Trees and Fenwick Trees": "Range Queries, Lazy Propagation",
-          "Tries and Suffix Trees": "String searching, Autocomplete, Pattern matching",
-          "Advanced Dynamic Programming": "Bitmasking, Matrix Exponentiation, DP on Trees",
-          "Greedy and Divide & Conquer": "Greedy strategies, Advanced Divide & Conquer techniques",
-          "Network Flow Algorithms": "Ford-Fulkerson, Edmonds-Karp",
-          "Competitive Programming Techniques": "Heuristic approaches, Problem-solving strategies",
-          "Real-world Applications": "How DSA is used in large-scale systems"
+          "Continuous Monitoring": "Introduction to continuous monitoring and its importance in DevOps",
+          "Nagios & ELK Introduction": "Overview of Nagios and the ELK stack for monitoring and logging",
+          "Installing Nagios & ELK": "Installing and setting up Nagios and the ELK stack",
+          "Nagios Plugins": "Using Nagios plugins (NRPE) for extended monitoring capabilities",
+          "Nagios Commands & Notification": "Configuring Nagios commands and setting up notifications for alerts",
+          "Working with ELK": "Leveraging the ELK stack (Elasticsearch, Logstash, Kibana) for log collection, storage, and visualization"
         }
       },
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Introduction to DevOps on Cloud",
+        duration: "1 Week",
+        description: "This module introduces cloud computing and the role of DevOps in cloud environments. You will learn why cloud adoption is essential in modern development and how DevOps enhances the cloud experience. The module covers an overview of AWS, its services, and how to use AWS for implementing DevOps practices.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Why Cloud": "Understanding the need for cloud computing in modern software development",
+          "Cloud Computing Introduction": "Introduction to cloud computing concepts and models (IaaS, PaaS, SaaS)",
+          "DevOps on Cloud": "Why DevOps is crucial in cloud environments and its benefits",
+          "AWS Introduction": "Introduction to Amazon Web Services (AWS) and its significance in DevOps",
+          "AWS Services": "Overview of key AWS services used in DevOps workflows (EC2, S3, Lambda, etc.)",
+          "DevOps using AWS": "Implementing DevOps practices using AWS tools and services"
         }
       }
       ];
@@ -209,28 +214,28 @@ function page(){
         <div className='min-h-[75vh] 2xl:min-h-[50vh] w-full bg-zinc-950 relative'>
             <div className='absolute h-[200px] w-[200px] top-32 left-48 rounded-full bg-[#1DD9FF] blur-[180px]'/>
             <Image src='/coursePage/100.png' alt='#' width={600} height={600} className='absolute bottom-0 h-auto w-full'/>
-            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
-                <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
+            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col items-center justify-center'>
+                <div className='left h-fit xl:w-1/2 w-full xl:px-20 xl:py-16 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
-                <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
-                ONLINE Amazon Web Services COURSE
+                <div className='rounded-3xl border-2 sm:text-base text-xs border-white md:w-max sm:text-left text-center w-auto sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
+                ONLINE Amazon Web Services & DevOps COURSE
                 </div>
                 </ScrollReveal>
                 <ScrollReveal animation='fadeIn' delay={300} easing='spring'>
                   <h1 className='xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-bold'>
-                  Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>AWS</span>
+                  Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>AWS & DevOps</span>
                   </h1>
                 </ScrollReveal>
                 <ScrollReveal animation='slideUp' delay={500} easing='smooth'>
                   <p className='lg:text-xl sm:text-lg tracking-wide'>
-                  Amazon Web Services (AWS) is a course that introduces the core services, architecture, and best practices of the leading cloud computing platform. It focuses on building, deploying, and managing scalable applications using AWS tools such as EC2, S3, RDS, Lambda, and more. The course also explores cloud infrastructure, security, and cost optimization, preparing learners for real-world cloud solutions and certification paths like AWS Certified Solutions Architect or Developer.
+                  This course covers the fundamentals of AWS cloud services and DevOps practices. It focuses on deploying and managing scalable applications using tools like EC2, S3, Lambda, Docker, Jenkins, and Kubernetes. Learners gain hands-on experience with CI/CD pipelines, infrastructure as code, and cloud automation. Ideal for those preparing for roles in cloud engineering or certifications like AWS Solutions Architect or DevOps Engineer.
                   </p>
                 </ScrollReveal>
                 <ScrollReveal animation='scaleUp' delay={700} easing='bouncy'>
                 <Button text='Enquire Now' />
                 </ScrollReveal>   
                 </div>
-                  <div className='right h-fit xl:w-1/2 w-full xl:p-28 md:px-48 p-4'>
+                  <div className='right h-fit xl:w-1/2 w-full xl:p-20 md:px-48 p-4'>
                   <ScrollReveal animation='slideLeft' delay={400} easing='smooth'>
                       <div className='h-full w-full'>
                       <Form text='Free Career Counselling is just a call away!'/>
@@ -247,7 +252,7 @@ function page(){
                 <div className='flex flex-col sm:flex-row w-full text-black gap-5'>
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                     <div className='h-auto'><p className='text-base md:text-lg'>Propgram Duration</p></div>
-                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>12</span> Months</p></div>
+                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>3.5</span> Months</p></div>
                    </div> 
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                    <div className='h-auto'><p className='text-base md:text-lg'>Time Commitment</p></div>
@@ -284,7 +289,7 @@ function page(){
     <div className='w-full lg:w-[55%] flex p-4 sm:p-6 md:p-10 lg:p-20 flex-col justify-around relative'>
         <ScrollReveal animation='fadeIn' delay={200} easing='smooth'>
             <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight capitalize'>
-                How Can We Turn You Into an Expert in AWS?
+                How Can We Turn You Into an Expert in AWS & DevOps?
             </h1>
         </ScrollReveal>
         
@@ -373,7 +378,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <CourseSection courseName={'AWS'} courseDescription={courseDesc}/>
+            <CourseSection courseName={'AWS & DevOps'} courseDescription={courseDesc}/>
         </div>
 
         {/* Our Curriculum Section */}
@@ -384,12 +389,12 @@ function page(){
         
         <CourseRoadmap courses={courses1} show={false}/>
         <CourseRoadmap courses={courses2} show={true} texts={{ 
-            heading:'READY FOR DEVOPS & CLOUD COMPUTING ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+            heading:'READY FOR AWS & DEVOPS ROLES', 
+            subHeading:'Covering all modules above makes you ready to apply for AWS & DevOps roles' 
         }} />
         <CourseRoadmap courses={courses3} show={true} texts={{ 
-            heading:'YOU\'RE NOW READY FOR SRE ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+            heading:'YOU\'RE NOW READY FOR AWS DEVOPS ENGINEER ROLES', 
+            subHeading:'Covering all modules above makes you ready to apply for AWS & DevOps roles' 
         }} />
         
         {/* Download Brochure Section */}
@@ -436,7 +441,7 @@ function page(){
           delay={200}
           easing="gentle">
           <h3 className="text-lg font-semibold text-gray-500 uppercase">
-            Gain Real-World AWS Experience!
+            Gain Real-World AWS & DevOps Experience!
           </h3>
           </ScrollReveal>
           <ScrollReveal
@@ -486,7 +491,7 @@ function page(){
             delay={200}
             easing="smooth">
            <h2 className="text-lg font-semibold text-gray-400 uppercase">
-             DevOps & Cloud Computing Curriculum
+             AWS & DevOps Curriculum
            </h2>
           </ScrollReveal>
           <ScrollReveal
@@ -1105,7 +1110,7 @@ function page(){
                Meet Mentors & Instructors
              </h2>
              <h1 className="text-4xl font-bold text-center mb-12 capitalize">
-               Tap into the wisdom of AWS Experts
+               Tap into the wisdom of AWS & DevOps Experts
              </h1>
             </ScrollReveal>
 
@@ -1193,7 +1198,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure courseName={'AWS'} />
+            <FeeStructure courseName={'AWS & DevOps'} />
         </div>
 
         {/* FAQ Section */}

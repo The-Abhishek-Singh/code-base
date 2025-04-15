@@ -38,155 +38,251 @@ function page(){
         title: "Master UI/UX Implementation",
         description:
         "Learn to craft intuitive and responsive user interfaces using frameworks like React or Vue. Apply real-world design patterns and build seamless user experiences across devices.",
-        icon: <FaPencilAlt className="text-white text-3xl" />,
+        icon: <FaPencilAlt className="text-white text-3xl" />
       },
       {
         title: "Seamless Backend Integration",
         description:
           "Build powerful backends with Node.js or Django. Learn to create and integrate RESTful APIs, handle authentication, and manage scalable databases using real-world architectures.",
-        icon: <FaDatabase className="text-white text-3xl" />,
+        icon: <FaDatabase className="text-white text-3xl" />
       },
       {
         title: "Automated App Deployment",
         description:
           "Master the deployment lifecycle using platforms like Heroku, Vercel, or AWS. Implement CI/CD pipelines and ensure smooth version control and rollout of full-stack applications.",
-        icon: <FaCloudUploadAlt className="text-white text-3xl" />,
-      },
+        icon: <FaCloudUploadAlt className="text-white text-3xl" />
+      }
     ];
   const courses1 = [
       {
-        title: "PYTHON",
-        duration: "1 Month",
-        description: "Python is a crucial skill for DevOps engineers as it enables automation, configuration management, and scripting for cloud environments. Learning Python helps streamline DevOps workflows, improve efficiency, and enhance infrastructure management.",
+        title: "Introduction to Android Development",
+        duration: "1 Week",
+        description: "This module introduces the fundamentals of Android development, covering the Android ecosystem, development environment setup, and creating your first Android application. You'll learn to use Android Studio, work with the Android SDK, understand project structure, and run apps on emulators and physical devices.",
         topics: {
-          "Introduction to Python": "Python and its Role in DevOps",
-          "Understanding Variables and Data Types": "int, float, string, list, tuple, dictionary, set",
-          "Working with Operators (Arithmetic, Logical, Comparison, Bitwise)": "Assignment, Membership, Identity",
-          "Type Conversion and Type Casting": "Implicit and Explicit Type Casting"
+        "Introduction to Android": "What is Android? Android architecture and ecosystem",
+        "Android Studio": "Setup and installation, IDE features, Project structure",
+        "Android SDK and Tools": "Introduction to the Android SDK, AVD (Android Virtual Device)",
+        "Project Structure": "Android Project structure (XML, Java/Kotlin, Resources)",
+        "Understanding Structure": "Understanding the project files and structure",
+        "Hands-on Practice": "Creating and running a simple 'Hello World' app",
+        "Android Emulator": "Introduction to Android Emulator and testing on a physical device"
         }
       },
       {
-        title: "Data Structures and Algorithms (DSA)",
-        duration: "1 Month",
-        description: "DSA is a fundamental skill for software engineers, enabling efficient problem-solving and optimization of code. Mastering data structures and algorithms helps in tackling coding interviews, improving logical thinking, and building scalable applications. This course covers essential concepts like arrays, linked lists, recursion, trees, graphs, sorting, and searching techniques to enhance problem-solving abilities.",
+        title: "Kotlin Basics for Android Development",
+        duration: "1 Week",
+        description: "This module covers the fundamentals of Kotlin programming language specifically for Android development. You'll learn Kotlin syntax, object-oriented programming concepts, and how to implement Android UI elements using Kotlin. This foundation will prepare you for building more complex Android applications.",
         topics: {
-          "Introduction to DSA": "Importance of DSA, Applications in Competitive Programming and Development",
-          "Arrays and Strings": "One-dimensional and Multi-dimensional arrays, String manipulation techniques",
-          "Linked Lists": "Singly Linked List, Doubly Linked List, Circular Linked List",
-          "Stack and Queue": "Stack operations, Queue operations, Priority Queue",
-          "Recursion and Backtracking": "Concept of Recursion, Backtracking Problems",
-          "Sorting and Searching Algorithms": "Bubble Sort, Merge Sort, Quick Sort, Binary Search",
-          "Trees and Graphs": "Binary Trees, Binary Search Trees, Graph representation and traversal (BFS & DFS)",
-          "Dynamic Programming": "Introduction to DP, Memoization vs Tabulation, Famous DP problems"
+          "Introduction to Kotlin Syntax": "Variables, Data Types, Functions, and Control Flow",
+          "Null Safety": "Nullable types and null safety in Kotlin",
+          "Kotlin Collections": "Collections and Iterators in Kotlin (List, Set, Map)",
+          "OOP Concepts in Kotlin": "Classes, Inheritance, Interfaces, and Abstract Classes",
+          "Advanced Kotlin Features": "Extension functions and higher-order functions",
+          "Functional Programming": "Working with lambdas and anonymous functions",
+          "Android UI with Kotlin": "Views and ViewGroups: TextView, Button, ImageView, etc.",
+          "Layout Structures": "Basic layout structures: LinearLayout, RelativeLayout, and ConstraintLayout"
         }
       },
       {
-        title: "Linux",
-        duration: "1 Month",
-        description: "Linux is a powerful and widely used operating system in development, DevOps, and cybersecurity. Mastering Linux helps in system administration, shell scripting, server management, and understanding the core of open-source operating systems. This course covers essential Linux commands, file system management, process handling, networking, and security, equipping you with the skills needed for efficient system operations.",
+        title: "Java for Android Development",
+        duration: "1 Week",
+        description: "This module focuses on Java programming fundamentals for Android development and explores the interoperability between Java and Kotlin. You'll learn Java syntax, object-oriented programming principles in Java, and how to effectively use both Java and Kotlin together in Android projects.",
         topics: {
-          "Introduction to Linux": "History, Distributions, and Use Cases",
-          "Linux File System and Commands": "File system structure, Basic and Advanced Linux commands",
-          "User Management and Permissions": "Users, Groups, File permissions, Sudo and Root access",
-          "Process Management": "Foreground & Background processes, Job control, Signals",
-          "Shell Scripting": "Bash scripting, Variables, Loops, Conditional statements",
-          "Networking in Linux": "Networking commands, Firewall configuration, SSH and FTP",
-          "Package Management": "apt, yum, snap, rpm, Installing and Updating software",
-          "Linux Security and Hardening": "Firewall, SELinux, File encryption, Security best practices"
+          "Java Programming Fundamentals": "Java syntax: Variables, Data Types, Operators, Loops, and Conditionals",
+          "Object-Oriented Programming in Java": "OOP in Java: Classes, Objects, Inheritance, and Polymorphism",
+          "Java Collections Framework": "Collections in Java: List, Set, Map",
+          "Error Management": "Exception Handling in Java",
+          "Kotlin-Java Interoperability": "Understanding Kotlin-Java interoperability",
+          "Cross-Language Integration": "How to call Java code from Kotlin and vice versa",
+          "Java to Kotlin Migration": "Converting Java classes to Kotlin"
         }
       }
     ];
   const courses2 = [
-      {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
-        topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
-        }
-      },
-      {
-        "title": "AWS (Amazon Web Services)",
-        "duration": "1 Month",
-        "description": "AWS is the leading cloud platform, offering scalable and cost-effective solutions for hosting, storage, and computing. This course covers core AWS services, including EC2, S3, Lambda, and RDS, helping you gain expertise in cloud computing, deployment, and security.",
-        "topics": {
-          "Introduction to AWS": "AWS global infrastructure, Pricing, Free tier benefits",
-          "Compute Services": "EC2 instances, Auto Scaling, Load Balancers, Lambda functions",
-          "Storage Services": "S3, EBS, Glacier, File storage solutions",
-          "Database Services": "RDS, DynamoDB, Aurora, Redshift",
-          "Networking in AWS": "VPC, Route 53, CloudFront, AWS Private Link",
-          "Security and IAM": "IAM roles, Policies, AWS Shield, Security best practices",
-          "Serverless Computing": "AWS Lambda, API Gateway, Event-driven architecture",
-          "AWS Deployment and Management": "CloudFormation, Elastic Beanstalk, AWS CLI"
-        }
-      },
-      {
-        title: "Infrastructure as Code (IAC)",
-        duration: "1 Month",
-        description: "Infrastructure as Code (IAC) enables automated, consistent, and scalable deployment of infrastructure using code. This course covers tools like Terraform, Ansible, and CloudFormation to manage cloud infrastructure efficiently.",
-        topics: {
-          "Introduction to Infrastructure as Code": "Concepts, Benefits, and Real-world use cases",
-          "Terraform Basics": "Installation, Providers, Resources, State management",
-          "Terraform Advanced Concepts": "Modules, Workspaces, Remote Backends",
-          "Ansible for Configuration Management": "Playbooks, Roles, Ansible Tower",
-          "AWS CloudFormation": "Templates, Stacks, Managing AWS infrastructure",
-          "CI/CD with IAC": "Automating infrastructure deployments",
-          "Monitoring and Logging": "Observability, Infrastructure monitoring tools"
-        }
+    {
+      title: "Android UI Components and Layouts",
+      duration: "1 Week",
+      description: "This module provides an in-depth exploration of Android UI components and layout systems. You'll learn how to work with various UI widgets, implement different layout structures, handle user interactions, and create responsive designs that adapt to various screen sizes and orientations.",
+      topics: {
+        "UI Components Deep Dive": "Understanding UI components: Button, TextView, EditText, CheckBox, RadioButton, etc.",
+        "Layout Types and Usage": "LinearLayout, RelativeLayout, FrameLayout, and ConstraintLayout",
+        "User Interaction": "Handling user input and displaying data on the screen",
+        "Layout Optimization": "Layout optimization and best practices for responsive design",
+        "Advanced ConstraintLayout": "Introduction to ConstraintLayout for flexible UI design",
+        "Adaptive UI": "Creating adaptive layouts for different screen sizes (phones, tablets)"
       }
+    },
+    {
+      title: "Advanced Android UI and Interactivity",
+      duration: "1 Week",
+      description: "This module covers advanced Android UI components and interactive elements. You'll learn how to implement dynamic lists with RecyclerView, create custom adapters, handle user interactions, and work with various dialog types and menu systems to enhance your app's user experience.",
+      topics: {
+        "RecyclerView Fundamentals": "Introduction to RecyclerView and ViewHolder",
+        "Custom Adapters": "Implementing a simple RecyclerView with a custom Adapter",
+        "User Interaction in Lists": "Handling item clicks and implementing item touch events",
+        "Dialog Implementation": "Using AlertDialog, Custom Dialogs",
+        "Menu Systems": "Handling OptionMenus and ContextMenus"
+      }
+    },
+    {
+      title: "Activities, Intents, and Navigation",
+      duration: "1 Week",
+      description: "This module explores the fundamental components of Android navigation and screen management. You'll learn about the Activity lifecycle, Intent-based navigation, data passing between screens, and Fragment implementation for modular UI development and advanced navigation patterns.",
+      topics: {
+        "Activity Lifecycle": "Activity lifecycle: onCreate, onStart, onResume, onPause, onStop, onDestroy",
+        "State Management": "Managing state with onSaveInstanceState",
+        "Intent Types": "Explicit vs. Implicit Intents",
+        "Data Communication": "Passing data with Intents",
+        "Screen Navigation": "Navigating between activities and fragments",
+        "Fragment Fundamentals": "Fragment lifecycle and fragment transactions",
+        "Modular UI Design": "Using Fragments for modular UI development",
+        "Advanced Navigation Patterns": "Implementing TabLayout and ViewPager for swipeable content"
+      }
+    }
     ];
   const courses3 = [
-      {
-        title: "System Design",
-        duration: "1 Month",
-        description: "System Design is a crucial skill for building scalable, efficient, and maintainable applications. This course covers architectural patterns, scalability strategies, database design, caching mechanisms, and real-world case studies to help engineers create robust systems.",
-        topics: {
-          "Introduction to System Design": "Key principles, High-level design vs. Low-level design",
-          "Scalability and Load Balancing": "Horizontal vs. Vertical Scaling, Load balancers",
-          "Database Design": "SQL vs. NoSQL, Sharding, Replication, CAP Theorem",
-          "Caching Strategies": "Redis, Memcached, Cache invalidation techniques",
-          "Microservices Architecture": "Advantages, API Gateway, Inter-service communication",
-          "Message Queues and Streaming": "Kafka, RabbitMQ, Event-driven systems",
-          "Security and Rate Limiting": "Authentication, Authorization, Rate Limiting",
-          "Real-world Case Studies": "Designing scalable systems like Uber, Netflix, WhatsApp"
-        }
-      },
-      {
-        title: "Advanced Data Structures and Algorithms",
-        duration: "1 Month",
-        description: "Advanced DSA builds on fundamental concepts to solve complex problems efficiently. This course covers advanced topics like graph algorithms, segment trees, tries, and dynamic programming optimizations to enhance problem-solving skills for competitive programming and technical interviews.",
-        topics: {
-          "Advanced Graph Algorithms": "Dijkstra, Floyd-Warshall, Bellman-Ford, Topological Sorting",
-          "Segment Trees and Fenwick Trees": "Range Queries, Lazy Propagation",
-          "Tries and Suffix Trees": "String searching, Autocomplete, Pattern matching",
-          "Advanced Dynamic Programming": "Bitmasking, Matrix Exponentiation, DP on Trees",
-          "Greedy and Divide & Conquer": "Greedy strategies, Advanced Divide & Conquer techniques",
-          "Network Flow Algorithms": "Ford-Fulkerson, Edmonds-Karp",
-          "Competitive Programming Techniques": "Heuristic approaches, Problem-solving strategies",
-          "Real-world Applications": "How DSA is used in large-scale systems"
-        }
-      },
-      {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
-        topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
-        }
+    {
+      title: "Advanced Kotlin and Android Programming",
+      duration: "1 Week",
+      description: "This module explores advanced Android development concepts with Kotlin. You'll learn asynchronous programming using Coroutines, network communication with RESTful APIs, and modern dependency injection techniques with Hilt. These skills are essential for building robust, maintainable Android applications that follow best practices.",
+      topics: {
+        "Kotlin Coroutines Basics": "Introduction to Kotlin Coroutines and async/await patterns",
+        "Coroutine Dispatchers": "Working with Dispatchers (Main, IO, Default)",
+        "Background Processing": "Using coroutines for background tasks and UI updates",
+        "Networking with Retrofit": "Making network requests using Retrofit",
+        "JSON Processing": "Parsing JSON with Gson or Moshi",
+        "Error Handling": "Handling network errors gracefully",
+        "Dependency Injection Concepts": "Introduction to Dependency Injection",
+        "Hilt Implementation": "Using Hilt for DI in Android apps"
       }
+    },
+    {
+      title: "Introduction to React Native",
+      duration: "1 Week",
+      description: "This module transitions from native Android development to cross-platform development with React Native. You'll learn React Native fundamentals, set up your development environment, understand core components and styling approaches, and implement navigation between screens in React Native applications.",
+      topics: {
+        "React Native Fundamentals": "Overview of React Native and its architecture",
+        "Development Environment": "Setting up the development environment (Node.js, npm, React Native CLI)",
+        "First React Native App": "Creating a simple \"Hello World\" app in React Native",
+        "Core Components": "Core components: View, Text, Image, Button, ScrollView, etc.",
+        "Styling System": "Styling in React Native using StyleSheet",
+        "Layout Techniques": "Layout with Flexbox in React Native",
+        "Navigation Setup": "Setting up React Navigation",
+        "Navigation Types": "StackNavigator and TabNavigator for navigation between screens"
+      }
+    },
+    {
+      title: "React Native Advanced Concepts",
+      duration: "1 Week",
+      description: "This module builds on your React Native foundation by exploring advanced user interaction and animation techniques. You'll learn how to handle user input through various form components, manage component state effectively, implement form validation, and create fluid animations that enhance the user experience.",
+      topics: {
+        "User Input Components": "Using TextInput, TouchableOpacity, and handling form data",
+        "State Management": "Managing state with useState and useReducer",
+        "Form Handling": "Form validation and submission",
+        "Animation Fundamentals": "Introduction to Animated API",
+        "Basic Animation Types": "Creating basic animations (fades, moves, scaling)",
+        "Layout Animations": "Working with LayoutAnimation and transitions"
+      }
+    }
     ];
+  const courses4 = [
+    {
+      title: "Working with Databases and Persistence in Android",
+      duration: "1 Week",
+      description: "This module focuses on local data storage and persistence in Android applications. You'll learn how to work with SQLite databases, implement the Room persistence library, perform CRUD operations, and create reactive UIs that automatically update when data changes. These skills are essential for developing apps that can store and manage data efficiently.",
+      topics: {
+        "SQLite Fundamentals": "Introduction to SQLite in Android",
+        "Database Operations": "CRUD operations with SQLite",
+        "Room Database Setup": "Setting up Room Database for local storage",
+        "Room Architecture": "Entities, DAOs, and Database classes",
+        "Reactive UI with LiveData": "Using LiveData and ViewModels for reactive UI",
+        "Data Observation": "Observing data changes and updating UI",
+        "Database Migration": "Data migration strategies in Room"
+      }
+    },
+    {
+      title: "Backend and Cloud Integration",
+      duration: "1 Week",
+      description: "This module introduces Firebase as a comprehensive backend solution for Android applications. You'll learn how to integrate Firebase services, work with cloud databases like Firestore, implement user authentication, and manage real-time data synchronization. These skills enable you to build apps with robust backend functionality without managing server infrastructure.",
+      topics: {
+        "Firebase Introduction": "Introduction to Firebase (Firebase Realtime Database, Firestore)",
+        "Firebase Setup": "Setting up Firebase in Android (Authentication, Firestore)",
+        "Cloud Data Management": "Writing and reading data to/from Firebase Firestore",
+        "User Authentication": "Setting up Firebase Authentication",
+        "Authentication Flows": "Signing up and signing in users with Firebase Auth",
+        "Session Management": "Handling user authentication states (Login/Logout)"
+      }
+    },
+    {
+      "title": "Advanced Networking and API Integration",
+      "duration": "1 Week",
+      "description": "This module focuses on advanced networking techniques for Android development using Retrofit and OkHttp. You'll learn how to make secure API calls, handle authentication methods like OAuth and JWT, upload files, and optimize network communication. Emphasis is also placed on improving performance through caching, interceptors, and offline support.",
+      "topics": {
+        "API Integration": "Making API calls with Retrofit and OkHttp",
+        "Authentication Handling": "Implementing OAuth and JWT token-based authentication",
+        "File Uploads": "Uploading files to servers using Retrofit",
+        "Request Optimization": "Using request interceptors and response caching",
+        "Rate Limiting and Retry": "Handling API rate limiting and implementing retry strategies",
+        "Offline Support": "Building a network-aware UI and supporting offline functionality"
+      }
+    }
+    ];
+  const courses5 = [
+    {
+      "title": "Advanced Features in Android Development",
+      "duration": "1 Week",
+      "description": "This module explores advanced Android features including background task management, push notifications, and security. You'll learn how to use Services, IntentServices, and WorkManager for handling background operations efficiently. The module also covers implementing push notifications with Firebase Cloud Messaging and securing your app through proper permission handling and secure data storage.",
+      "topics": {
+        "Background Services": "Understanding Services and IntentServices",
+        "WorkManager": "Using WorkManager for scheduling background tasks",
+        "Push Notifications": "Implementing push notifications using Firebase Cloud Messaging (FCM)",
+        "Runtime Permissions": "Requesting and handling runtime permissions",
+        "Secure Data Storage": "Storing sensitive data securely using Android Keystore",
+        "App Security": "Best practices for enhancing app security and data protection"
+      }
+    },
+    {
+      "title": "Testing and Debugging Android Apps",
+      "duration": "1 Week",
+      "description": "This module covers essential testing and debugging practices for Android development. You'll learn how to write unit tests using JUnit and Mockito to ensure the correctness of your code. UI testing is introduced through Espresso to validate user interactions. Additionally, you'll explore debugging techniques using Android Studio tools to identify and resolve issues related to performance and logic.",
+      "topics": {
+        "Unit Testing": "Writing unit tests with JUnit and Mockito",
+        "Component Testing": "Testing ViewModels, Repositories, and Services",
+        "UI Testing": "Setting up and writing UI tests with Espresso",
+        "Interaction Testing": "Testing user interactions and UI components with Espresso",
+        "Debugging Tools": "Using Android Studio Debugger and Logcat",
+        "Performance Analysis": "Analyzing memory and CPU usage using Profiler tools"
+      }
+    },
+    {
+      "title": "Preparing for App Release",
+      "duration": "1 Week",
+      "description": "This module guides you through the final stages of Android app development, focusing on optimizing, signing, and publishing your app. You'll learn techniques to reduce APK size and enhance performance. It also covers creating signed builds, managing versioning, and publishing to the Google Play Console. Additionally, you'll integrate analytics and crash reporting tools to monitor app performance post-release.",
+      "topics": {
+        "App Optimization": "Reducing APK size using Proguard and R8",
+        "Performance Tuning": "Optimizing app performance for memory, CPU, and battery",
+        "Build Signing": "Creating a signed APK or Android App Bundle (AAB)",
+        "Release Management": "Versioning and managing release builds",
+        "Play Store Publishing": "Publishing to Google Play Console with listings, screenshots, and descriptions",
+        "Analytics & Crash Reporting": "Integrating Firebase Analytics and Crashlytics for app usage tracking and error reporting"
+      }
+    }    
+    ];
+const courses6 = [
+  {
+    "title": "Final Project and Course Wrap-up",
+    "duration": "1 Week",
+    "description": "In the final week, students will apply everything they've learned by developing a complete Android or React Native application. The project should incorporate core components like networking, UI, authentication, and backend integration. Students will present their projects, discussing the architecture and technologies used. The week also includes a comprehensive course review, introduction to emerging tools, and guidance on preparing for careers in Android development.",
+    "topics": {
+      "Capstone Project": "Developing a fully functional Android or React Native app using course concepts",
+      "Backend Integration": "Incorporating Firebase or custom servers with features like authentication and real-time data",
+      "Project Presentation": "Presenting the app with an explanation of architecture and technologies used",
+      "Course Review": "Recap of key Android development principles and best practices",
+      "Emerging Tools": "Exploring new Android features like Jetpack Compose and Android 14+",
+      "Career Preparation": "Guidance for pursuing Android development careers and internships"
+    }
+  }  
+];
   const courseDesc = [
     {
       title: 'Full-Stack Development Skills',
@@ -209,10 +305,10 @@ function page(){
         <div className='min-h-[75vh] 2xl:min-h-[50vh] w-full bg-zinc-950 relative'>
             <div className='absolute h-[200px] w-[200px] top-32 left-48 rounded-full bg-[#1DD9FF] blur-[180px]'/>
             <Image src='/coursePage/100.png' alt='#' width={600} height={600} className='absolute bottom-0 left-0 h-auto w-full'/>
-            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
-                <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
+            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col items-center justify-center'>
+                <div className='left h-fit xl:w-1/2 w-full xl:px-20 xl:py-16 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
-                <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
+                <div className='rounded-3xl border-2 sm:text-base text-xs border-white md:w-max sm:text-left text-center w-auto sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
                 ONLINE mobile application development COURSE
                 </div>
                 </ScrollReveal>
@@ -230,7 +326,7 @@ function page(){
                 <Button text='Enquire Now' />
                 </ScrollReveal>   
                 </div>
-                  <div className='right h-fit xl:w-1/2 w-full xl:p-28 md:px-48 p-4'>
+                  <div className='right h-fit xl:w-1/2 w-full xl:p-20 md:px-48 p-4'>
                   <ScrollReveal animation='slideLeft' delay={400} easing='smooth'>
                       <div className='h-full w-full'>
                       <Form text='Free Career Counselling is just a call away!'/>
@@ -244,7 +340,7 @@ function page(){
                 <div className='flex flex-col sm:flex-row w-full text-black gap-5'>
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                     <div className='h-auto'><p className='text-base md:text-lg'>Propgram Duration</p></div>
-                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>12</span> Months</p></div>
+                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>4</span> Months</p></div>
                    </div> 
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                    <div className='h-auto'><p className='text-base md:text-lg'>Time Commitment</p></div>
@@ -381,13 +477,16 @@ function page(){
         
         <CourseRoadmap courses={courses1} show={false}/>
         <CourseRoadmap courses={courses2} show={true} texts={{ 
-            heading:'READY FOR DEVOPS & CLOUD COMPUTING ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+          heading:'READY FOR APP DEVELOPMENT ROLES', 
+          subHeading:'Covering all modules above makes you ready to apply for app development roles' 
         }} />
         <CourseRoadmap courses={courses3} show={true} texts={{ 
-            heading:'YOU\'RE NOW READY FOR SRE ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+          heading:'YOU\'RE NOW READY FOR SWE ROLES', 
+          subHeading:'Covering all modules above makes you ready to apply for app development roles' 
         }} />
+        <CourseRoadmap courses={courses4} show={false}/>
+        <CourseRoadmap courses={courses5} show={false}/>
+        <CourseRoadmap courses={courses6} show={false}/>
         
         {/* Download Brochure Section */}
         <div className='w-full bg-white p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-start gap-3 sm:gap-4 md:gap-7'>
@@ -483,7 +582,7 @@ function page(){
             delay={200}
             easing="smooth">
            <h2 className="text-lg font-semibold text-gray-400 uppercase">
-             DevOps & Cloud Computing Curriculum
+            Application Development Curriculum
            </h2>
           </ScrollReveal>
           <ScrollReveal
@@ -1102,7 +1201,7 @@ function page(){
                Meet Mentors & Instructors
              </h2>
              <h1 className="text-4xl font-bold text-center mb-12">
-               Tap into the wisdom of DevOps & Cloud Computing Experts
+               Tap into the wisdom of Application Development Experts
              </h1>
             </ScrollReveal>
 
@@ -1189,7 +1288,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure courseName={'application development'} />
+            <FeeStructure />
         </div>
 
         {/* FAQ Section */}

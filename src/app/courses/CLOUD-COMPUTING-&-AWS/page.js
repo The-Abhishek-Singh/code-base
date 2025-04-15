@@ -10,6 +10,7 @@ import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
 import { FaLock, FaCloud, FaCogs } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
+import Link from 'next/link';
 
 
 function page(){
@@ -53,154 +54,244 @@ function page(){
         icon: <FaCloud className="text-white text-3xl" />,
       },
       ];
-    const courseDesc = [
-      {
-        title: 'High-Demand Cloud Roles',
-        description: 'Be job-ready for roles like Cloud Engineer, Solutions Architect, and DevOps Engineer with this comprehensive AWS certification course designed for today’s tech landscape.' 
-      },
-      {
-        title: 'Certification-Driven Learning',
-        description: 'Prepare for industry-recognized AWS certifications like Cloud Practitioner, Solutions Architect Associate & more—with structured modules, quizzes, and expert mentoring to maximize success.'
-      },
-      {
-        title: 'Hands-On Cloud Infrastructure Mastery',
-        description: 'Gain real-world experience with live AWS environments. Set up EC2 instances, configure S3, deploy scalable apps, and automate with IAM & Lambda. Practice what the pros do—hands-on.'
-      }
-    ]
+      const courseDesc = [
+        {
+          title: 'Diverse Career Opportunities',
+          description: 'Be job-ready for roles like SRE, Platform Engineer, and Infrastructure Engineer with this DevOps and AWS certification course, tailored to boost your career in the cloud industry.',
+        },
+        {
+          title: 'Architect-Level Certification',
+          description: 'Boost your resume by preparing for architect-level AWS certifications, enhancing your chances of getting shortlisted with expert-led training and certification support.',
+        },
+        {
+          title: 'Real-World DevOps and Cloud Mastery',
+          description: 'Dive into our exclusive sandbox environment with 50+ real-life case studies. Strengthen your DevOps and AWS skills through hands-on debugging, practical experience, and infrastructure management.',
+        },
+      ];
     const courses1 = [
       {
-        title: "PYTHON",
-        duration: "1 Month",
-        description: "Python is a crucial skill for DevOps engineers as it enables automation, configuration management, and scripting for cloud environments. Learning Python helps streamline DevOps workflows, improve efficiency, and enhance infrastructure management.",
+        title: "Overview of Cloud",
+        duration: "1 Week",
+        description: "This module introduces the foundational concepts of cloud computing. You'll explore what cloud computing is, why it is widely adopted, and the different types of cloud environments including public, private, and hybrid. The module also discusses cloud deployment models and the role of virtualization in enabling cloud services.",
         topics: {
-          "Introduction to Python": "Python and its Role in DevOps",
-          "Understanding Variables and Data Types": "int, float, string, list, tuple, dictionary, set",
-          "Working with Operators (Arithmetic, Logical, Comparison, Bitwise)": "Assignment, Membership, Identity",
-          "Type Conversion and Type Casting": "Implicit and Explicit Type Casting"
+          "What is Cloud Computing": "Understanding the definition and core principles of cloud computing",
+          "Why Cloud Computing": "Exploring the benefits and business drivers of adopting cloud technology",
+          "Cloud Types": "Distinguishing between Public, Private, and Hybrid cloud environments",
+          "Deployment Models": "Understanding different cloud deployment models (IaaS, PaaS, SaaS)",
+          "Virtualization": "Exploring virtualization technology and its role in cloud infrastructure"
         }
       },
       {
-        title: "Data Structures and Algorithms (DSA)",
-        duration: "1 Month",
-        description: "DSA is a fundamental skill for software engineers, enabling efficient problem-solving and optimization of code. Mastering data structures and algorithms helps in tackling coding interviews, improving logical thinking, and building scalable applications. This course covers essential concepts like arrays, linked lists, recursion, trees, graphs, sorting, and searching techniques to enhance problem-solving abilities.",
+        title: "AWS Overview",
+        duration: "1 Week",
+        description: "This module provides an introduction to Amazon Web Services (AWS), the leading cloud services provider. You will learn what AWS is, explore its marketplace, and create your own AWS Free Tier account. The module also covers navigating the AWS Management Console, understanding regions and availability zones, and exploring various AWS services.",
         topics: {
-          "Introduction to DSA": "Importance of DSA, Applications in Competitive Programming and Development",
-          "Arrays and Strings": "One-dimensional and Multi-dimensional arrays, String manipulation techniques",
-          "Linked Lists": "Singly Linked List, Doubly Linked List, Circular Linked List",
-          "Stack and Queue": "Stack operations, Queue operations, Priority Queue",
-          "Recursion and Backtracking": "Concept of Recursion, Backtracking Problems",
-          "Sorting and Searching Algorithms": "Bubble Sort, Merge Sort, Quick Sort, Binary Search",
-          "Trees and Graphs": "Binary Trees, Binary Search Trees, Graph representation and traversal (BFS & DFS)",
-          "Dynamic Programming": "Introduction to DP, Memoization vs Tabulation, Famous DP problems"
+          "What is AWS": "Introduction to Amazon Web Services and its significance in cloud computing",
+          "AWS Marketplace": "Exploring the AWS Marketplace for pre-built solutions and services",
+          "Free Tier Account": "Creating and configuring a Free Tier AWS account",
+          "AWS Console": "Navigating the AWS Management Console and Dashboard",
+          "Regions & Availability Zones": "Understanding AWS infrastructure through regions and availability zones",
+          "Exploring Services": "Overview of core AWS services across compute, storage, networking, and more"
         }
       },
       {
-        title: "Linux",
-        duration: "1 Month",
-        description: "Linux is a powerful and widely used operating system in development, DevOps, and cybersecurity. Mastering Linux helps in system administration, shell scripting, server management, and understanding the core of open-source operating systems. This course covers essential Linux commands, file system management, process handling, networking, and security, equipping you with the skills needed for efficient system operations.",
+        title: "Computing and AMI",
+        duration: "1 Week",
+        description: "This module explores AWS compute services with a focus on EC2 and AMI. You'll learn about different EC2 instance types, launch your first EC2 machine, and understand the role of key pairs and security groups. The module also introduces additional compute services like Elastic Beanstalk, Lightsail, and Lambda for deploying and managing applications in the cloud.",
         topics: {
-          "Introduction to Linux": "History, Distributions, and Use Cases",
-          "Linux File System and Commands": "File system structure, Basic and Advanced Linux commands",
-          "User Management and Permissions": "Users, Groups, File permissions, Sudo and Root access",
-          "Process Management": "Foreground & Background processes, Job control, Signals",
-          "Shell Scripting": "Bash scripting, Variables, Loops, Conditional statements",
-          "Networking in Linux": "Networking commands, Firewall configuration, SSH and FTP",
-          "Package Management": "apt, yum, snap, rpm, Installing and Updating software",
-          "Linux Security and Hardening": "Firewall, SELinux, File encryption, Security best practices"
+          "What is EC2": "Introduction to Amazon EC2 and its use for scalable virtual computing",
+          "Termination Protection": "Enabling protection to prevent accidental instance termination",
+          "EC2 Instance Types": "Understanding different EC2 families and use cases",
+          "What is AMI": "Amazon Machine Images (AMI) for creating customized EC2 instances",
+          "Compute Resources": "Overview of resources used in AWS compute services",
+          "Key Pairs": "Using key pairs for secure SSH access to EC2 instances",
+          "Creating EC2 Instance": "Launching your first EC2 machine step-by-step",
+          "Security Groups": "Setting up security groups for managing inbound and outbound traffic",
+          "Elastic Beanstalk": "Introduction to AWS Elastic Beanstalk for application deployment",
+          "Lightsail": "Simplified cloud hosting with AWS Lightsail",
+          "Lambda": "Overview of AWS Lambda for serverless computing"
         }
       }
+      
     ];
     const courses2 = [
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Linux Fundamentals",
+        duration: "1 Week",
+        description: "This module introduces the basics of Linux, a critical operating system in the world of cloud computing and DevOps. You’ll learn core Linux commands, work with file systems, directories, and editors like Vi and Nano. The module also covers user permissions and package management for software installation and updates.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Linux Overview": "Introduction to the Linux operating system and its importance in DevOps",
+          "Basic Linux Commands": "Essential commands for navigating and managing Linux systems",
+          "Vi and Nano Editors": "Using Vi and Nano editors for file editing in the terminal",
+          "Files and Directories": "Working with files and directories in Linux",
+          "File Systems": "Understanding Linux file system structure and navigation",
+          "Permissions": "Managing user and group permissions for security",
+          "Package Manager": "Installing and managing software packages using package managers like apt or yum"
         }
       },
       {
-        "title": "AWS (Amazon Web Services)",
-        "duration": "1 Month",
-        "description": "AWS is the leading cloud platform, offering scalable and cost-effective solutions for hosting, storage, and computing. This course covers core AWS services, including EC2, S3, Lambda, and RDS, helping you gain expertise in cloud computing, deployment, and security.",
-        "topics": {
-          "Introduction to AWS": "AWS global infrastructure, Pricing, Free tier benefits",
-          "Compute Services": "EC2 instances, Auto Scaling, Load Balancers, Lambda functions",
-          "Storage Services": "S3, EBS, Glacier, File storage solutions",
-          "Database Services": "RDS, DynamoDB, Aurora, Redshift",
-          "Networking in AWS": "VPC, Route 53, CloudFront, AWS Private Link",
-          "Security and IAM": "IAM roles, Policies, AWS Shield, Security best practices",
-          "Serverless Computing": "AWS Lambda, API Gateway, Event-driven architecture",
-          "AWS Deployment and Management": "CloudFormation, Elastic Beanstalk, AWS CLI"
+        title: "Storage & Backup",
+        duration: "1 Week",
+        description: "This module covers AWS storage services and backup strategies. You'll learn how to work with Elastic Block Storage (EBS) and Simple Storage Service (S3), including uploading files, setting permissions, and understanding S3 policies. The module also introduces long-term storage options like Glacier, network storage concepts, and managing snapshots for data backup and recovery.",
+        topics: {
+          "Elastic Block Storage (EBS)": "Using EBS for persistent block-level storage with EC2 instances",
+          "Object-Based Storage (S3)": "Storing and retrieving data using Amazon S3",
+          "File Uploading on S3": "Uploading files and managing objects in S3 buckets",
+          "S3 Permission & Policy": "Controlling access with S3 permissions and bucket policies",
+          "Glacier Storage": "Using Amazon Glacier for low-cost, long-term data archiving",
+          "S3 Transfer Acceleration": "Speeding up uploads with S3 Transfer Acceleration",
+          "Network Storage": "Understanding network-attached storage solutions in AWS",
+          "Snapshot & Backup": "Creating and managing snapshots for backup and recovery"
         }
       },
       {
-        title: "Infrastructure as Code (IAC)",
-        duration: "1 Month",
-        description: "Infrastructure as Code (IAC) enables automated, consistent, and scalable deployment of infrastructure using code. This course covers tools like Terraform, Ansible, and CloudFormation to manage cloud infrastructure efficiently.",
+        title: "Identity and Access Management (IAM)",
+        duration: "1 Week",
+        description: "This module introduces AWS Identity and Access Management (IAM), which allows you to manage access to AWS services and resources securely. You'll learn how to protect your AWS account, create and manage IAM users, groups, roles, and define custom policies to enforce fine-grained permissions.",
         topics: {
-          "Introduction to Infrastructure as Code": "Concepts, Benefits, and Real-world use cases",
-          "Terraform Basics": "Installation, Providers, Resources, State management",
-          "Terraform Advanced Concepts": "Modules, Workspaces, Remote Backends",
-          "Ansible for Configuration Management": "Playbooks, Roles, Ansible Tower",
-          "AWS CloudFormation": "Templates, Stacks, Managing AWS infrastructure",
-          "CI/CD with IAC": "Automating infrastructure deployments",
-          "Monitoring and Logging": "Observability, Infrastructure monitoring tools"
+          "IAM Overview": "Understanding the purpose and benefits of Identity and Access Management in AWS",
+          "AWS Account Protection": "Best practices for securing your AWS account using IAM",
+          "IAM Users & Groups": "Creating and managing users and user groups for access control",
+          "Custom Policies": "Writing custom IAM policies to define specific access rules",
+          "Creating Roles": "Setting up IAM roles for secure access delegation across AWS services"
         }
-      }
+      }      
     ];
     const courses3 = [
       {
-        title: "System Design",
-        duration: "1 Month",
-        description: "System Design is a crucial skill for building scalable, efficient, and maintainable applications. This course covers architectural patterns, scalability strategies, database design, caching mechanisms, and real-world case studies to help engineers create robust systems.",
+        title: "Load Balancing & Auto Scaling",
+        duration: "1 Week",
+        description: "This module focuses on optimizing application availability and performance using AWS Load Balancing and Auto Scaling services. You'll learn how to distribute incoming traffic using different types of load balancers and automatically scale resources based on demand using Auto Scaling policies.",
         topics: {
-          "Introduction to System Design": "Key principles, High-level design vs. Low-level design",
-          "Scalability and Load Balancing": "Horizontal vs. Vertical Scaling, Load balancers",
-          "Database Design": "SQL vs. NoSQL, Sharding, Replication, CAP Theorem",
-          "Caching Strategies": "Redis, Memcached, Cache invalidation techniques",
-          "Microservices Architecture": "Advantages, API Gateway, Inter-service communication",
-          "Message Queues and Streaming": "Kafka, RabbitMQ, Event-driven systems",
-          "Security and Rate Limiting": "Authentication, Authorization, Rate Limiting",
-          "Real-world Case Studies": "Designing scalable systems like Uber, Netflix, WhatsApp"
+          "Load Balancer Introduction": "Overview of load balancing and its role in high availability",
+          "Types of Load Balancer": "Exploring the different types of AWS load balancers (ALB, NLB, CLB)",
+          "Using Load Balancer": "Configuring and implementing load balancers in AWS",
+          "Auto Scaling Introduction": "Understanding auto scaling for resource optimization and fault tolerance",
+          "Types of Auto Scaling": "Different approaches to auto scaling in AWS (dynamic, scheduled, predictive)",
+          "Using Auto Scaling": "Setting up auto scaling groups and configurations",
+          "Auto Scaling Policies": "Defining and applying scaling policies based on custom metrics and thresholds"
         }
       },
       {
-        title: "Advanced Data Structures and Algorithms",
-        duration: "1 Month",
-        description: "Advanced DSA builds on fundamental concepts to solve complex problems efficiently. This course covers advanced topics like graph algorithms, segment trees, tries, and dynamic programming optimizations to enhance problem-solving skills for competitive programming and technical interviews.",
+        title: "Virtual Private Cloud (VPC)",
+        duration: "1 Week",
+        description: "This module provides an in-depth understanding of AWS Virtual Private Cloud (VPC), which allows you to create isolated network environments for your resources. You'll learn about key networking concepts, components of VPC, creating custom subnets, and how to establish secure connections using VPC peering.",
         topics: {
-          "Advanced Graph Algorithms": "Dijkstra, Floyd-Warshall, Bellman-Ford, Topological Sorting",
-          "Segment Trees and Fenwick Trees": "Range Queries, Lazy Propagation",
-          "Tries and Suffix Trees": "String searching, Autocomplete, Pattern matching",
-          "Advanced Dynamic Programming": "Bitmasking, Matrix Exponentiation, DP on Trees",
-          "Greedy and Divide & Conquer": "Greedy strategies, Advanced Divide & Conquer techniques",
-          "Network Flow Algorithms": "Ford-Fulkerson, Edmonds-Karp",
-          "Competitive Programming Techniques": "Heuristic approaches, Problem-solving strategies",
-          "Real-world Applications": "How DSA is used in large-scale systems"
+          "VPC Introduction": "Overview of Virtual Private Cloud and its importance in AWS networking",
+          "IP Addressing": "Understanding IP Addresses, MAC Addresses, and CIDR notation",
+          "Elastic IP": "Allocating and using Elastic IPs for public-facing resources",
+          "VPC Components": "Exploring components like subnets, route tables, internet gateways, and NAT gateways",
+          "Custom VPC & Subnets": "Creating custom VPCs with private and public subnets",
+          "VPC Peering": "Establishing secure communication between VPCs using VPC peering"
         }
       },
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Relational Database Service (RDS)",
+        duration: "1 Week",
+        description: "This module introduces Amazon RDS, a managed relational database service in AWS. You'll understand the basics of DBMS, explore different database engines supported by RDS, and learn how to set up and manage RDS instances. The module also highlights differences between traditional DB hosting methods and managed services, along with using snapshots for backup and recovery.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "What is DBMS & RDS": "Understanding database management systems and the benefits of using Amazon RDS",
+          "Database Engines": "Overview of supported database engines such as MySQL, PostgreSQL, Oracle, and SQL Server",
+          "DB Hosting Comparison": "Differences between on-premise DB servers, DB on EC2, and managed RDS",
+          "Creating RDS Instance": "Step-by-step guide to creating and configuring an RDS instance",
+          "DB Snapshot": "Taking and managing database snapshots for backup and recovery"
         }
-      }
+      }      
       ];
+const courses4 = [
+  {
+    title: "AWS CloudFront",
+    duration: "1 Week",
+    description: "This module covers Amazon CloudFront, a fast content delivery network (CDN) service. You'll learn how CloudFront works to deliver content with low latency and high transfer speeds. The module also includes steps to create a CloudFront distribution and understand caching mechanisms for optimized performance.",
+    topics: {
+      "What is CloudFront": "Introduction to Amazon CloudFront and its role as a CDN in AWS",
+      "Creating CloudFront Distribution": "Setting up a CloudFront distribution to serve content globally",
+      "Cache Memory": "Understanding how CloudFront uses caching to reduce latency and improve performance"
+    }
+  },
+  {
+    title: "Amazon Route 53",
+    duration: "1 Week",
+    description: "This module introduces Amazon Route 53, AWS's scalable and highly available Domain Name System (DNS) service. You'll learn how Route 53 helps in domain name registration, DNS routing, and health checking. The module also covers creating hosted zones and managing domain names in AWS.",
+    topics: {
+      "What is Route 53": "Overview of Amazon Route 53 and its role in DNS management",
+      "Domain Names & Hosting": "Understanding domain names, DNS hosting, and how Route 53 facilitates this",
+      "Hosted Zones": "Introduction to hosted zones in Route 53 for managing DNS records",
+      "Creating Hosted Zones": "Step-by-step guide on creating hosted zones in Route 53",
+      "Domain Name Registration": "How to register and manage domain names using Route 53"
+    }
+  },
+  {
+    title: "Monitoring Services",
+    duration: "1 Week",
+    "description": "This module covers AWS monitoring services, focusing on CloudWatch and CloudTrail. You'll learn how to set up dashboards and alarms in CloudWatch for monitoring your AWS resources. The module also introduces CloudTrail for tracking API calls and resource changes across your AWS environment.",
+    "topics": {
+      "Introduction to CloudWatch": "Overview of Amazon CloudWatch for monitoring AWS resources and applications",
+      "Dashboard Creation": "Creating and configuring CloudWatch dashboards for visual monitoring",
+      "Alarm Creation": "Setting up alarms to trigger actions based on specified thresholds in CloudWatch",
+      "Reading Dashboard Details": "Interpreting metrics and logs displayed on CloudWatch dashboards",
+      "CloudTrail": "Using CloudTrail to monitor API activity and maintain a record of all actions in your AWS account"
+    }
+  }    
+];
+
+const courses5 = [
+  {
+    title: "Application Services",
+    duration: "1 Week",
+    description: "This module covers AWS Application Services, specifically SNS (Simple Notification Service), SES (Simple Email Service), and SQS (Simple Queue Service). You’ll learn how to set up messaging systems, create topics, and manage subscriptions for various communication use cases in AWS.",
+    topics: {
+      "Introduction to SNS, SES, SQS": "Overview of Amazon SNS, SES, and SQS and their use cases in messaging and communication",
+      "Topic Creation": "Creating topics in SNS for message broadcasting",
+      "Subscription": "Managing subscriptions to SNS topics and handling message delivery to endpoints"
+    }
+  },
+  {
+    title: "AWS Troubleshooting",
+    duration: "1 Week",
+    description: "This module focuses on troubleshooting AWS services, with a specific emphasis on EC2 instances, CloudWatch, ELB, and CloudFront. You’ll learn how to identify and resolve issues in these services using various monitoring and diagnostic tools.",
+    topics: {
+      "Troubleshooting EC2 Instance": "Techniques for diagnosing and fixing issues with EC2 instances",
+      "Troubleshooting Using CloudWatch": "Using CloudWatch logs and metrics to identify problems in your AWS environment",
+      "Troubleshooting Using ELB": "Diagnosing and resolving issues with Elastic Load Balancers (ELB)",
+      "Troubleshooting Using CloudFront": "Identifying and troubleshooting issues related to CloudFront distributions"
+    }
+  },  
+  {
+    title: "AWS Security",
+    duration: "1 Week",
+    description: "This module covers the security services provided by AWS to protect your resources. You'll learn how to use AWS Firewall, Guard, Amazon Inspector, and WAF & Shield to secure your applications and infrastructure from threats and vulnerabilities.",
+    topics: {
+      "AWS Firewall": "Using AWS Firewall to control network traffic and secure your environment",
+      "AWS Guard": "Overview of AWS Guard for proactive threat detection and security monitoring",
+      "Amazon Inspector": "Automating security assessments with Amazon Inspector to identify vulnerabilities",
+      "WAF & Shield": "Implementing AWS Web Application Firewall (WAF) and Shield for protection against DDoS attacks"
+    }
+  }  
+];
+const courses6 = [
+  {
+    title: "Architecture, Design, Recovery & Migration",
+    duration: "1 Week",
+    description: "This module covers best practices for designing high-availability systems, disaster recovery strategies, and migration processes in AWS. You will learn how to implement backup solutions, plan for disaster recovery, and ensure high availability in your architecture, along with strategies for migrating applications and data to AWS.",
+    topics: {
+      "Backup": "Designing and implementing backup strategies for AWS resources and data",
+      "Disaster Recovery": "Planning and executing disaster recovery strategies to ensure business continuity",
+      "High Availability Design": "Designing highly available and fault-tolerant systems in AWS",
+      "Migration": "Understanding the best practices for migrating applications, databases, and infrastructure to AWS"
+    }
+  }, 
+  {
+    title: "AWS Cost Management",
+    duration: "1 Week",
+    description: "This module introduces AWS cost management tools, including AWS Budgets, Cost Explorer, and Billing. You’ll learn how to monitor and manage your AWS costs, set budgets, and explore detailed cost data to optimize spending on AWS services.",
+    topics: {
+      "AWS Budget": "Setting up and managing AWS Budgets to track and control your AWS spending",
+      "Cost Explorer": "Using AWS Cost Explorer to analyze and visualize your AWS usage and cost patterns",
+      "Billing": "Understanding the AWS billing process and how to manage your billing and payments effectively"
+    }
+  }  
+]
   return (
     <div className='h-auto w-full'>
         <Navbar />
@@ -209,28 +300,28 @@ function page(){
         <div className='min-h-[75vh] 2xl:min-h-[50vh] w-full bg-zinc-950 relative'>
             <div className='absolute h-[200px] w-[200px] top-32 left-48 rounded-full bg-[#1DD9FF] blur-[180px]'/>
             <Image src='/coursePage/100.png' alt='#' width={600} height={600} className='absolute bottom-0 h-auto w-full'/>
-            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
-                <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
+            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col items-center justify-center'>
+                <div className='left h-fit xl:w-1/2 w-full xl:px-20 xl:py-16 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
-                <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
-                  ONLINE CLOUD COMPUTING COURSE
+                <div className='rounded-3xl border-2 sm:text-base text-xs border-white md:w-max sm:text-left text-center w-auto sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
+                  ONLINE CLOUD COMPUTING(AWS) COURSE
                 </div>
                 </ScrollReveal>
                 <ScrollReveal animation='fadeIn' delay={300} easing='spring'>
                   <h1 className='xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-bold'>
-                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Cloud Computing</span>
+                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Cloud Computing(AWS)</span>
                   </h1>
                 </ScrollReveal>
                 <ScrollReveal animation='slideUp' delay={500} easing='smooth'>
                   <p className='lg:text-xl sm:text-lg tracking-wide'>
-                  Cloud Computing is a course that introduces the fundamentals of delivering computing services over the internet. It covers key concepts such as virtualization, cloud service models (IaaS, PaaS, SaaS), deployment models (public, private, hybrid), and cloud architecture. The course also explores platforms like AWS, Microsoft Azure, and Google Cloud, providing hands-on experience in deploying and managing cloud-based applications and infrastructure efficiently and securely.
+                  This Cloud Computing(AWS) course introduces the fundamentals of delivering computing services over the internet, focusing on virtualization, cloud service models (IaaS, PaaS, SaaS), deployment models (public, private, hybrid), and cloud architecture. It dives deep into AWS, offering hands-on experience in deploying, managing, and securing cloud-based applications and infrastructure using services like EC2, S3, and IAM.
                   </p>
                 </ScrollReveal>
                 <ScrollReveal animation='scaleUp' delay={700} easing='bouncy'>
                 <Button text='Enquire Now' />
                 </ScrollReveal>   
                 </div>
-                  <div className='right h-fit xl:w-1/2 w-full xl:p-28 md:px-48 p-4'>
+                  <div className='right h-fit xl:w-1/2 w-full xl:p-20 md:px-48 p-4'>
                   <ScrollReveal animation='slideLeft' delay={400} easing='smooth'>
                       <div className='h-full w-full'>
                       <Form text='Free Career Counselling is just a call away!'/>
@@ -245,7 +336,7 @@ function page(){
                 <div className='flex flex-col sm:flex-row w-full text-black gap-5'>
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                     <div className='h-auto'><p className='text-base md:text-lg'>Propgram Duration</p></div>
-                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>12</span> Months</p></div>
+                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>5</span> Months</p></div>
                    </div> 
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                    <div className='h-auto'><p className='text-base md:text-lg'>Time Commitment</p></div>
@@ -282,7 +373,7 @@ function page(){
     <div className='w-full lg:w-[55%] flex p-4 sm:p-6 md:p-10 lg:p-20 flex-col justify-around relative'>
         <ScrollReveal animation='fadeIn' delay={200} easing='smooth'>
             <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight capitalize'>
-                How Can We Turn You Into an Expert in Cloud Computing?
+                How Can We Turn You Into an Expert in Cloud Computing(AWS)?
             </h1>
         </ScrollReveal>
         
@@ -371,7 +462,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <CourseSection courseName={'Cloud computing'} courseDescription={courseDesc}/>
+            <CourseSection courseName={'Cloud Computing(AWS)'} courseDescription={courseDesc}/>
         </div>
 
         {/* Our Curriculum Section */}
@@ -382,14 +473,17 @@ function page(){
         
         <CourseRoadmap courses={courses1} show={false}/>
         <CourseRoadmap courses={courses2} show={true} texts={{ 
-            heading:'READY FOR DEVOPS & CLOUD COMPUTING ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+          heading:'READY FOR CLOUD COMPUTING ROLES', 
+          subHeading:'Covering all modules above makes you ready to apply for cloud computing roles' 
         }} />
-        <CourseRoadmap courses={courses3} show={true} texts={{ 
-            heading:'YOU\'RE NOW READY FOR SRE ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
-        }} />
-        
+        <CourseRoadmap courses={courses3} show={false} />
+        <CourseRoadmap courses={courses4} show={false}/>
+        <CourseRoadmap courses={courses5} show={false}/>
+        <CourseRoadmap courses={courses6} show={true} texts={{ 
+            heading:'YOU\'RE NOW READY FOR CLOUD COMPUTING ROLES', 
+            subHeading:'Covering all modules above makes you ready to apply for cloud computing roles' 
+        }}/>
+
         {/* Download Brochure Section */}
         <div className='w-full bg-white p-4 sm:p-6 md:p-8 rounded-lg flex flex-col items-start gap-3 sm:gap-4 md:gap-7'>
             <ScrollReveal
@@ -406,9 +500,9 @@ function page(){
           duration={1200}
           delay={600}
           easing="gentle">
-          <h1 className='text-lg sm:text-xl md:text-2xl text-black'>
+          <button className='text-lg sm:text-xl md:text-2xl text-black'>
             Download Our Brochure for a Complete Overview!
-          </h1>
+          </button>
           </ScrollReveal>
           <ScrollReveal
           animation="slideUp"
@@ -484,7 +578,7 @@ function page(){
             delay={200}
             easing="smooth">
            <h2 className="text-lg font-semibold text-gray-400 uppercase">
-             DevOps & Cloud Computing Curriculum
+            Cloud Computing Curriculum
            </h2>
           </ScrollReveal>
           <ScrollReveal
@@ -1103,7 +1197,7 @@ function page(){
                Meet Mentors & Instructors
              </h2>
              <h1 className="text-4xl font-bold text-center mb-12">
-               Tap into the wisdom of DevOps & Cloud Computing Experts
+               Tap into the wisdom of Cloud Computing Experts
              </h1>
             </ScrollReveal>
 
@@ -1191,7 +1285,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure />
+            <FeeStructure courseName={'Cloud Computing(AWS)'} />
         </div>
 
         {/* FAQ Section */}

@@ -8,7 +8,7 @@ import CourseSection from '@/components/course/CourseSection';
 import CourseRoadmap from '@/components/course/CourseRoadmap';
 import FAQSection from '@/components/course/FAQSection';
 import FeeStructure from '@/components/course/FeeStructure';
-import { FaLock, FaCogs, FaCloud } from "react-icons/fa";
+import { FaLock, FaShieldAlt, FaUserSecret } from "react-icons/fa";
 import ScrollReveal from '@/components/ScrollReveal';
 
 
@@ -35,169 +35,224 @@ function page(){
   ]
   const projects = [
     {
-      title: "Secure Cloud Architecture",
+      title: "Penetration Testing Lab",
       description:
-        "Design and deploy a secure, scalable infrastructure on AWS using EC2, VPC, IAM, and Security Groups. Learn the best practices of cloud security and access control.",
-      icon: <FaLock className="text-white text-3xl" />,
+        "Set up and conduct penetration testing on simulated networks using tools like Metasploit and Kali Linux. Learn to identify vulnerabilities and secure systems effectively.",
+      icon: <FaShieldAlt className="text-white text-3xl" />
     },
     {
-      title: "Serverless App with Lambda & API Gateway",
+      title: "Ethical Hacking Challenge",
       description:
-        "Build a fully serverless backend using AWS Lambda, API Gateway, and DynamoDB. Trigger functions on-demand and manage APIs with zero server maintenance.",
-      icon: <FaCogs className="text-white text-3xl" />,
+        "Perform ethical hacking exercises to exploit and patch system weaknesses. Master techniques like phishing detection, SQL injection, and malware analysis in a controlled environment.",
+      icon: <FaUserSecret className="text-white text-3xl" />
     },
     {
-      title: "S3 + CloudFront Website Hosting",
+      title: "IT Security Framework Implementation",
       description:
-        "Host a static website using Amazon S3 and deliver it globally with CloudFront. Learn to configure buckets, set permissions, and optimize for performance and low latency.",
-      icon: <FaCloud className="text-white text-3xl" />,
+        "Design and implement an IT security framework using standards like ISO 27001 and NIST. Focus on risk assessment, incident response, and secure data management.",
+      icon: <FaLock className="text-white text-3xl" />
     },
-    ];
-  const courseDesc = [
-    {
-      title: 'High-Demand Cloud Roles',
-      description: 'Be job-ready for roles like Cloud Engineer, Solutions Architect, and DevOps Engineer with this comprehensive AWS certification course designed for today’s tech landscape.' 
-    },
-    {
-      title: 'Certification-Driven Learning',
-      description: 'Prepare for industry-recognized AWS certifications like Cloud Practitioner, Solutions Architect Associate & more—with structured modules, quizzes, and expert mentoring to maximize success.'
-    },
-    {
-      title: 'Hands-On Cloud Infrastructure Mastery',
-      description: 'Gain real-world experience with live AWS environments. Set up EC2 instances, configure S3, deploy scalable apps, and automate with IAM & Lambda. Practice what the pros do—hands-on.'
-    }
   ];
-    const courses1 = [
+    const courseDesc = [
       {
-        title: "PYTHON",
-        duration: "1 Month",
-        description: "Python is a crucial skill for DevOps engineers as it enables automation, configuration management, and scripting for cloud environments. Learning Python helps streamline DevOps workflows, improve efficiency, and enhance infrastructure management.",
-        topics: {
-          "Introduction to Python": "Python and its Role in DevOps",
-          "Understanding Variables and Data Types": "int, float, string, list, tuple, dictionary, set",
-          "Working with Operators (Arithmetic, Logical, Comparison, Bitwise)": "Assignment, Membership, Identity",
-          "Type Conversion and Type Casting": "Implicit and Explicit Type Casting"
-        }
+        title: 'In-Demand Cybersecurity Roles',
+        description: 'Prepare for high-demand roles like Cybersecurity Analyst, Ethical Hacker, and IT Security Specialist with this comprehensive course designed for the evolving digital threat landscape.',
       },
       {
-        title: "Data Structures and Algorithms (DSA)",
-        duration: "1 Month",
-        description: "DSA is a fundamental skill for software engineers, enabling efficient problem-solving and optimization of code. Mastering data structures and algorithms helps in tackling coding interviews, improving logical thinking, and building scalable applications. This course covers essential concepts like arrays, linked lists, recursion, trees, graphs, sorting, and searching techniques to enhance problem-solving abilities.",
-        topics: {
-          "Introduction to DSA": "Importance of DSA, Applications in Competitive Programming and Development",
-          "Arrays and Strings": "One-dimensional and Multi-dimensional arrays, String manipulation techniques",
-          "Linked Lists": "Singly Linked List, Doubly Linked List, Circular Linked List",
-          "Stack and Queue": "Stack operations, Queue operations, Priority Queue",
-          "Recursion and Backtracking": "Concept of Recursion, Backtracking Problems",
-          "Sorting and Searching Algorithms": "Bubble Sort, Merge Sort, Quick Sort, Binary Search",
-          "Trees and Graphs": "Binary Trees, Binary Search Trees, Graph representation and traversal (BFS & DFS)",
-          "Dynamic Programming": "Introduction to DP, Memoization vs Tabulation, Famous DP problems"
-        }
+        title: 'Certification-Focused Training',
+        description: 'Gear up for industry-recognized certifications like CEH, CISSP, and CompTIA Security+ with structured lessons, hands-on labs, and expert guidance to ensure certification success.',
       },
       {
-        title: "Linux",
-        duration: "1 Month",
-        description: "Linux is a powerful and widely used operating system in development, DevOps, and cybersecurity. Mastering Linux helps in system administration, shell scripting, server management, and understanding the core of open-source operating systems. This course covers essential Linux commands, file system management, process handling, networking, and security, equipping you with the skills needed for efficient system operations.",
-        topics: {
-          "Introduction to Linux": "History, Distributions, and Use Cases",
-          "Linux File System and Commands": "File system structure, Basic and Advanced Linux commands",
-          "User Management and Permissions": "Users, Groups, File permissions, Sudo and Root access",
-          "Process Management": "Foreground & Background processes, Job control, Signals",
-          "Shell Scripting": "Bash scripting, Variables, Loops, Conditional statements",
-          "Networking in Linux": "Networking commands, Firewall configuration, SSH and FTP",
-          "Package Management": "apt, yum, snap, rpm, Installing and Updating software",
-          "Linux Security and Hardening": "Firewall, SELinux, File encryption, Security best practices"
-        }
-      }
+        title: 'Practical Ethical Hacking Skills',
+        description: 'Gain real-world experience with simulated hacking environments. Master penetration testing, vulnerability assessment, and IT security protocols through hands-on exercises and real-time scenarios.',
+      },
     ];
-    const courses2 = [
-      {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
-        topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
-        }
-      },
-      {
-        "title": "AWS (Amazon Web Services)",
-        "duration": "1 Month",
-        "description": "AWS is the leading cloud platform, offering scalable and cost-effective solutions for hosting, storage, and computing. This course covers core AWS services, including EC2, S3, Lambda, and RDS, helping you gain expertise in cloud computing, deployment, and security.",
-        "topics": {
-          "Introduction to AWS": "AWS global infrastructure, Pricing, Free tier benefits",
-          "Compute Services": "EC2 instances, Auto Scaling, Load Balancers, Lambda functions",
-          "Storage Services": "S3, EBS, Glacier, File storage solutions",
-          "Database Services": "RDS, DynamoDB, Aurora, Redshift",
-          "Networking in AWS": "VPC, Route 53, CloudFront, AWS Private Link",
-          "Security and IAM": "IAM roles, Policies, AWS Shield, Security best practices",
-          "Serverless Computing": "AWS Lambda, API Gateway, Event-driven architecture",
-          "AWS Deployment and Management": "CloudFormation, Elastic Beanstalk, AWS CLI"
-        }
-      },
-      {
-        title: "Infrastructure as Code (IAC)",
-        duration: "1 Month",
-        description: "Infrastructure as Code (IAC) enables automated, consistent, and scalable deployment of infrastructure using code. This course covers tools like Terraform, Ansible, and CloudFormation to manage cloud infrastructure efficiently.",
-        topics: {
-          "Introduction to Infrastructure as Code": "Concepts, Benefits, and Real-world use cases",
-          "Terraform Basics": "Installation, Providers, Resources, State management",
-          "Terraform Advanced Concepts": "Modules, Workspaces, Remote Backends",
-          "Ansible for Configuration Management": "Playbooks, Roles, Ansible Tower",
-          "AWS CloudFormation": "Templates, Stacks, Managing AWS infrastructure",
-          "CI/CD with IAC": "Automating infrastructure deployments",
-          "Monitoring and Logging": "Observability, Infrastructure monitoring tools"
-        }
+  const courses1 = [
+    {
+      title: "Introduction to Cybersecurity",
+      duration: "1 Week",
+      description: "This module introduces fundamental cybersecurity concepts and ethical hacking principles, providing students with an understanding of the cybersecurity landscape, threat actors, attack methodologies, and professional opportunities in the field of information security.",
+      topics: {
+          "What is Hacking": "Definition and history of hacking, technical fundamentals of security exploitation, and the difference between ethical and malicious hacking activities",
+          "Types Of Hackers": "Classification of hackers based on intent and methodology, including white hat, black hat, grey hat, script kiddies, hacktivists, and state-sponsored actors",
+          "Types Of Hacking": "Overview of common hacking methodologies and attack vectors including social engineering, password cracking, phishing, ransomware, DDoS, and system vulnerabilities",
+          "Career in Hacking": "Exploration of professional cybersecurity roles, ethical hacking certifications, career paths, and the growing importance of security professionals in protecting digital infrastructure"
       }
+  },
+  {
+    title: "Networking Concepts",
+    duration: "1 Weeks",
+    description: "This course provides essential knowledge of computer networking concepts critical for cybersecurity professionals and IT engineers. Understanding networking principles enables proper implementation of security measures, effective troubleshooting, and design of robust network infrastructures. Students will learn network architecture, protocols, addressing schemes, and communication processes that form the backbone of modern digital communications.",
+    topics: {
+        "What is Networking": "Introduction to computer networks, network types (LAN, WAN, MAN), network topologies, and the fundamental principles of digital communication",
+        "OSI Models": "Comprehensive breakdown of the seven-layer OSI reference model, layer-specific protocols, and the relationship between layers in data transmission",
+        "TCP/IP Address": "IPv4 and IPv6 addressing schemes, subnetting, CIDR notation, public vs private IP ranges, and address resolution protocols",
+        "Networking Devices": "Functionality and operation of switches, routers, firewalls, load balancers, and other critical networking hardware components",
+        "Ports & Services": "Common network ports, well-known services, socket programming concepts, and the role of ports in application communication",
+        "3 Way Handshake": "TCP connection establishment process, session management, connection termination, and the technical details of reliable data transmission"
+    }
+},
+{
+  title: "Operating Systems & Virtualization",
+  duration: "1 Weeks",
+  description: "This course provides a comprehensive foundation in operating system concepts with special focus on security applications. Understanding various operating systems and virtualization technologies is essential for cybersecurity professionals to create testing environments, analyze vulnerabilities, and implement security measures across different platforms. Students will learn about major OS types, their security implications, and practical virtualization skills.",
+  topics: {
+      "Types of OS": "Overview of major operating system families including Windows, Linux, macOS, and mobile operating systems, their architectures, and security models",
+      "OS Used In Hacking": "Specialized security-focused operating systems like Kali Linux, Parrot OS, and BlackArch, their tools, and applications in ethical hacking and penetration testing",
+      "Details of virtualization and OS Installation": "Virtualization concepts, hypervisors (Type 1 and Type 2), virtual machine creation, resource allocation, and secure OS installation techniques",
+      "Overview of Linux": "Linux architecture, distributions comparison, kernel operations, file system structure, and security features relevant to cybersecurity professionals",
+      "Basic Commands of Linux": "Essential Linux command-line operations for system navigation, file manipulation, user management, networking, and security assessment"
+  }
+}
+  ];
+  const courses2 = [
+    {
+      title: "Lab Creation",
+      duration: "1 Weeks",
+      description: "Creating secure testing environments is essential for practicing cybersecurity concepts and vulnerability analysis without affecting production systems. This module covers setting up isolated virtual labs with security-focused operating systems and intentionally vulnerable applications for hands-on practice in a controlled environment.",
+      topics: {
+        "Installation of Virtualbox / VM ware": "Platform setup, resource allocation, networking configuration, snapshot management",
+        "Installation of Linux OS (Kali/Parrot etc)": "Security distribution setup, system updates, package management, user configuration",
+        "Web Server Installation": "Apache/Nginx deployment, virtual hosts, SSL setup, basic security configurations",
+        "Installation of Vulnerable Web Applications": "DVWA, OWASP WebGoat, Juice Shop, isolated environment configuration"
+      }
+    },
+    {
+      title: "Information Gathering & Footprinting",
+      duration: "1 Weeks",
+      description: "Information gathering is the critical first phase of any security assessment or penetration test. This course covers methodologies and tools for collecting intelligence about target systems, networks, and organizations through passive and active reconnaissance techniques, providing the foundation for effective vulnerability assessment.",
+      topics: {
+        "Overview": "Reconnaissance types, OSINT framework, Ethical considerations, Legal boundaries",
+        "Tools & Resources used": "Maltego, Shodan, Recon-ng, theHarvester, Social-Engineer Toolkit",
+        "What Information to Gather": "Domain information, Network ranges, Employee details, Technology stack, Business relationships",
+        "Information to Gather for Network & Web": "DNS records, Subdomains, IP blocks, Open ports, Web technologies, CMS identification",
+        "Google Dorks": "Advanced search operators, Custom dork creation, Automation techniques, Resource discovery"
+      }
+    },
+    {
+      title: "Scanning Networks",
+      duration: "1 Weeks",
+      description: "Network scanning is a crucial phase in security assessment that identifies live systems, open ports, and running services. This course covers techniques and tools for discovering network topology, operating systems, and security controls, providing essential skills for network enumeration and vulnerability assessment.",
+      topics: {
+        "OS Discovery": "Fingerprinting techniques, TTL analysis, Banner grabbing, Stack behavior analysis",
+        "Ports and Services Discovery": "Port scanning methodologies, Service enumeration, Version detection, Protocol analysis",
+        "Firewall, IDS, IPS, Antivirus, Honeypots": "Evasion techniques, Rule detection, False positive generation, Defense system identification"
+      }
+    },
+  ];
+  const courses3 = [
+    {
+      title: "Enumeration & Vulnerability Analysis",
+      duration: "1 Weeks",
+      description: "Enumeration and vulnerability analysis are essential phases in security assessments that identify system weaknesses and potential attack vectors. This course covers methodologies and tools for deep system enumeration and vulnerability detection across networks, applications, and infrastructure components.",
+      topics: {
+        "What is Enumeration": "SMTP enumeration, DNS enumeration, LDAP enumeration, SMB enumeration",
+        "What is Vulnerability": "Vulnerability categories, CVSS scoring, Vulnerability lifecycle, Exploitation prerequisites",
+        "Tools used in Enumeration & Vulnerability finding": "Nmap scripts, Nessus, OpenVAS, Metasploit Framework, Burp Suite"
+      }
+    },
+    {
+      title: "System Hacking",
+      duration: "1 Weeks",
+      description: "System Hacking explores techniques to exploit system vulnerabilities to gain unauthorized access. This course covers methodical approaches to penetration testing, including password attacks, privilege escalation, persistence mechanisms, and ethical exploitation techniques essential for security professionals.",
+      topics: {
+        "Gaining Access": "Password cracking, Hash attacks, Authentication bypasses, Social engineering",
+        "Maintaining Access": "Backdoors, Rootkits, Persistence techniques, Privilege escalation",
+        "Tools Used in Hacking": "John the Ripper, Hashcat, Mimikatz, PowerShell Empire, Cobalt Strike",
+        "Exploiting using Vulnerability": "Exploit development, Metasploit framework, Buffer overflows, Command injection"
+      }
+    },
+    {
+      title: "Social Engineering",
+      duration: "2 Weeks",
+      description: "Social Engineering exploits human psychology to gain unauthorized access to systems and information. This course examines the psychological principles behind social engineering attacks, common techniques used by attackers, and defensive strategies to protect organizations from manipulation-based security breaches.",
+      topics: {
+        "What is Social Engineering": "Attack vectors, Manipulation techniques, Real-world examples",
+        "Understanding Human Psychology": "Psychological triggers, Persuasion principles, Trust relationships",
+        "Tools Used SET": "Social-Engineer Toolkit, Phishing campaigns, Credential harvesting, Spear phishing"
+      }
+    },
     ];
-    const courses3 = [
+const courses4 = [
+    {
+      title: "Website Working & DDOS",
+      duration: "1 Week",
+      description: "Understanding website architecture and denial-of-service attacks is crucial for both web developers and security professionals. This course explores the fundamental mechanics of websites and the destructive potential of DOS/DDOS attacks, covering detection, mitigation strategies, and tools used in these widespread attack vectors.",
+      topics: {
+        "How Website Works": "HTTP/HTTPS protocols, Client-server architecture, DNS resolution, Web hosting",
+        "What is DOS Attack": "Resource exhaustion, Service disruption, Attack vectors, Impact assessment",
+        "What is DDOS": "Distributed attack infrastructure, Amplification techniques, Botnet operations, Attack signatures",
+        "Tools used in DDOS": "LOIC, HOIC, Slowloris, Mirai, Defense mechanisms"
+      }
+    },
+    {
+      title: "Malware",
+      duration: "1 Week",
+      description: "Malware analysis is critical for understanding cyber threats and developing effective defenses. This course explores various types of malicious software, their infection vectors, behaviors, and detection methods, while providing hands-on experience with isolation techniques and analysis tools in secure environments.",
+      topics: {
+        "Virus": "Propagation methods, Infection techniques, Types of viruses, Anti-virus evasion",
+        "Trojan": "Payload types, Delivery mechanisms, Command and control, Defense evasion",
+        "RAT": "Remote Access Trojans, Covert communication, Capabilities, Detection methods",
+        "Ransomware": "Encryption techniques, Payment mechanisms, Prevention strategies, Recovery options",
+        "Sandbox Tools": "Cuckoo Sandbox, ANY.RUN, VirusTotal, Joe Sandbox, Hybrid Analysis",
+        "How to Use Sandbox": "Sample submission, Result analysis, Behavioral indicators, Safe handling procedures"
+      }
+    },
+    {
+      title: "Password Cracking",
+      duration: "1 Week",
+      description: "Password cracking techniques are essential knowledge for security professionals performing penetration testing and security assessments. This course explores methodologies and tools for testing password security, covering both offline and online attack vectors while emphasizing the ethical application of these techniques.",
+      topics: {
+        "Dictionary Attack": "Wordlist creation, Rule-based modifications, Custom dictionaries, Language-specific approaches",
+        "Brute Force": "Character set selection, Mask attacks, Time complexity, GPU acceleration techniques"
+      }
+    },
+    ];
+    const courses5 = [
       {
-        title: "System Design",
-        duration: "1 Month",
-        description: "System Design is a crucial skill for building scalable, efficient, and maintainable applications. This course covers architectural patterns, scalability strategies, database design, caching mechanisms, and real-world case studies to help engineers create robust systems.",
+        title: "Trace Covering",
+        duration: "1 Week",
+        description: "Digital footprints can reveal sensitive information about users and organizations. This module explores techniques used to conceal digital traces and maintain anonymity online, covering log analysis, IP/MAC address manipulation, and advanced routing methods. Understanding these concepts is essential for both security professionals defending networks and those seeking to protect legitimate privacy concerns.",
         topics: {
-          "Introduction to System Design": "Key principles, High-level design vs. Low-level design",
-          "Scalability and Load Balancing": "Horizontal vs. Vertical Scaling, Load balancers",
-          "Database Design": "SQL vs. NoSQL, Sharding, Replication, CAP Theorem",
-          "Caching Strategies": "Redis, Memcached, Cache invalidation techniques",
-          "Microservices Architecture": "Advantages, API Gateway, Inter-service communication",
-          "Message Queues and Streaming": "Kafka, RabbitMQ, Event-driven systems",
-          "Security and Rate Limiting": "Authentication, Authorization, Rate Limiting",
-          "Real-world Case Studies": "Designing scalable systems like Uber, Netflix, WhatsApp"
+          "Logs reading": "System log analysis, Log file structures, Event correlation, Forensic timeline reconstruction",
+          "Creating Traces": "Digital footprint management, Anti-forensics techniques, Metadata removal, Evidence planting",
+          "IP Spoofing": "Address forgery methods, Source address validation, Packet manipulation, Detection techniques",
+          "MAC Spoofing": "Hardware address modification, Layer 2 security, MAC filtering bypass, Network access control",
+          "Onion Router": "Tor architecture, Multi-layer encryption, Anonymous communication, Exit node vulnerabilities",
+          "Proxy Chain": "Multi-hop configurations, Proxy types and protocols, Chain management, Anonymity networks"
         }
       },
       {
-        title: "Advanced Data Structures and Algorithms",
-        duration: "1 Month",
-        description: "Advanced DSA builds on fundamental concepts to solve complex problems efficiently. This course covers advanced topics like graph algorithms, segment trees, tries, and dynamic programming optimizations to enhance problem-solving skills for competitive programming and technical interviews.",
+        title: "Web Server & OWASP Top 10",
+        duration: "1 Week",
+        description: "This course examines web server fundamentals and the OWASP Top 10 security vulnerabilities that affect web applications. Students will learn about web server configuration, vulnerability assessment, and practical exploitation and mitigation techniques while developing the skills to identify, analyze, and remediate common web application security flaws.",
         topics: {
-          "Advanced Graph Algorithms": "Dijkstra, Floyd-Warshall, Bellman-Ford, Topological Sorting",
-          "Segment Trees and Fenwick Trees": "Range Queries, Lazy Propagation",
-          "Tries and Suffix Trees": "String searching, Autocomplete, Pattern matching",
-          "Advanced Dynamic Programming": "Bitmasking, Matrix Exponentiation, DP on Trees",
-          "Greedy and Divide & Conquer": "Greedy strategies, Advanced Divide & Conquer techniques",
-          "Network Flow Algorithms": "Ford-Fulkerson, Edmonds-Karp",
-          "Competitive Programming Techniques": "Heuristic approaches, Problem-solving strategies",
-          "Real-world Applications": "How DSA is used in large-scale systems"
+          "What is Web Server": "Server architecture, Web server types, HTTP/HTTPS protocols, Server-side processing",
+          "Use Of Web Server": "Hosting applications, Content delivery, API endpoints, Authentication services",
+          "Installation Of Web Server": "Apache, Nginx, IIS configuration, Performance tuning",
+          "Installation of Tools": "Burp Suite, OWASP ZAP, Nikto, Dirb, SQLmap",
+          "Scanning of Web Vulnerabilities": "Methodology, Automated scanning, Manual testing techniques, Report interpretation",
+          "XSS": "Reflected XSS, Stored XSS, DOM-based XSS, Input sanitization",
+          "SQL Injection": "Basic injection, Blind SQL injection, Second-order injection, Prevention methods",
+          "Server Misconfiguration": "Default settings, Insufficient hardening, Information leakage, Security headers",
+          "Malicious File Upload": "Upload vulnerabilities, Bypass techniques, Content validation, File processing",
+          "LFI & RFI": "Path traversal, Inclusion techniques, Remote code execution, Input validation",
+          "Session Management": "Cookie security, Session fixation, Token management, Secure session handling",
+          "Broken Authentication": "Credential management, Multi-factor authentication, Password policies, Authentication workflows",
+          "Components With Known Vulnerability": "Outdated libraries, CVE tracking, Patch management, Dependency scanning"
         }
       },
       {
-        title: "Program Tools",
-        duration: "1 Month",
-        description: "Program tools are essential for software development, debugging, and collaboration. Mastering various development tools improves productivity, version control, and automation. This course covers tools like Git, Docker, Kubernetes, CI/CD pipelines, and IDEs, equipping you with the necessary skills to streamline the development process.",
+        title: "Labs & Pre-requisite Tools",
+        duration: "1 Week",
+        description: "This course provides practical industry-relevant penetration testing scenarios and lab environments to simulate real-world security assessments. Students will learn to configure and use essential penetration testing tools and vulnerable target systems while developing methodical approaches to identifying, exploiting, and documenting security vulnerabilities.",
         topics: {
-          "Introduction to Development Tools": "Overview of essential software development tools",
-          "Version Control with Git & GitHub": "Git commands, Branching, Merging, Pull requests",
-          "Docker and Containerization": "Docker installation, Containers vs. Virtual Machines, Docker Compose",
-          "Kubernetes Basics": "Pod, Deployment, Service, Helm charts",
-          "Continuous Integration & Deployment (CI/CD)": "Jenkins, GitHub Actions, Automating deployments",
-          "Integrated Development Environments (IDEs)": "VS Code, IntelliJ, Vim, Debugging techniques",
-          "Monitoring and Logging": "Prometheus, Grafana, Logging with ELK stack"
+          "Windows Lab": "Domain setup, Active Directory configuration, User permissions, Network services",
+          "Kali / Parrot OS": "Tool suites, Custom configurations, Persistence setup, Optimization techniques",
+          "Vm Ware / Virtualbox": "Network configuration, Snapshot management, Resource allocation, Host interactions",
+          "Metasploitable & Metasploitable II": "Service enumeration, Vulnerability identification, Exploitation techniques, Privilege escalation",
+          "Bwapp Application": "Web application vulnerabilities, Authentication bypass, Injection techniques, Client-side attacks",
+          "Goat": "WebGoat challenges, OWASP benchmarks, Security control testing, Remediation practices"
         }
       }
       ];
@@ -209,16 +264,16 @@ function page(){
         <div className='min-h-[75vh] 2xl:min-h-[50vh] w-full bg-zinc-950 relative'>
             <div className='absolute h-[200px] w-[200px] top-32 left-48 rounded-full bg-[#1DD9FF] blur-[180px]'/>
             <Image src='/coursePage/100.png' alt='#' width={600} height={600} className='absolute bottom-0 h-auto w-full'/>
-            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col'>
-                <div className='left h-fit xl:w-1/2 w-full xl:px-24 xl:py-20 p-4 flex flex-col gap-10 items-start'>
+            <div className='relative top-0 left-0 w-full h-full flex xl:flex-row flex-col items-center justify-center'>
+                <div className='left h-fit xl:w-1/2 w-full xl:px-20 xl:py-16 p-4 flex flex-col gap-10 items-start'>
                 <ScrollReveal animation='slightRight' delay={100} easing='gentle'>
-                <div className='rounded-3xl border-2 sm:text-base text-xs border-white sm:w-max w-max sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
-                ONLINE Cybersecurity COURSE
+                <div className='rounded-3xl border-2 sm:text-base text-xs border-white md:w-max sm:text-left text-center w-auto sm:px-10 sm:py-2 p-2 font-bold bg-black uppercase'>
+                ONLINE Cybersecurity, Ethical Hacking & Information Security COURSE
                 </div>
                 </ScrollReveal>
                 <ScrollReveal animation='fadeIn' delay={300} easing='spring'>
                   <h1 className='xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-bold'>
-                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Cybersecurity</span>
+                      Your Ultimate Handbook for Mastering <span className='text-red-600 capitalize'>Cybersecurity, Ethical Hacking & Information Security</span>
                   </h1>
                 </ScrollReveal>
                 <ScrollReveal animation='slideUp' delay={500} easing='smooth'>
@@ -230,7 +285,7 @@ function page(){
                 <Button text='Enquire Now' />
                 </ScrollReveal>   
                 </div>
-                  <div className='right h-fit xl:w-1/2 w-full xl:p-28 md:px-48 p-4'>
+                  <div className='right h-full xl:w-1/2 w-full xl:p-20 md:px-48 p-4'>
                   <ScrollReveal animation='slideLeft' delay={400} easing='smooth'>
                       <div className='h-full w-full'>
                       <Form text='Free Career Counselling is just a call away!'/>
@@ -245,7 +300,7 @@ function page(){
                 <div className='flex flex-col sm:flex-row w-full text-black gap-5'>
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                     <div className='h-auto'><p className='text-base md:text-lg'>Propgram Duration</p></div>
-                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>12</span> Months</p></div>
+                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>4</span> Months</p></div>
                    </div> 
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                    <div className='h-auto'><p className='text-base md:text-lg'>Time Commitment</p></div>
@@ -371,7 +426,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <CourseSection courseName={'Cyber Security'} courseDescription={courseDesc} />
+            <CourseSection courseName={'Cyber Security, Ethical Hacking & Information Security'} courseDescription={courseDesc} />
         </div>
 
         {/* Our Curriculum Section */}
@@ -382,12 +437,14 @@ function page(){
         
         <CourseRoadmap courses={courses1} show={false}/>
         <CourseRoadmap courses={courses2} show={true} texts={{ 
-            heading:'READY FOR DEVOPS & CLOUD COMPUTING ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+          heading:'READY FOR CYBER SECURITY ROLES', 
+          subHeading:'Covering all modules above makes you ready to apply for cyber security roles' 
         }} />
-        <CourseRoadmap courses={courses3} show={true} texts={{ 
-            heading:'YOU\'RE NOW READY FOR SRE ROLES', 
-            subHeading:'Covering all modules above makes you ready to apply for DevOps roles' 
+        <CourseRoadmap courses={courses3} />
+        <CourseRoadmap courses={courses4} show={false}/>
+        <CourseRoadmap courses={courses5} show={true} texts={{ 
+          heading:'YOU\'RE NOW READY FOR CYBER SECURITY ROLES', 
+          subHeading:'Covering all modules above makes you ready to apply for cyber security roles' 
         }} />
         
         {/* Download Brochure Section */}
@@ -434,7 +491,7 @@ function page(){
           delay={200}
           easing="gentle">
           <h3 className="text-lg font-semibold text-gray-500 uppercase">
-            Gain Real-World DevOps & Cloud Experience!
+            Gain Real-World Cyber security, Ethical Hacking & Information Security Experience!
           </h3>
           </ScrollReveal>
           <ScrollReveal
@@ -484,7 +541,7 @@ function page(){
             delay={200}
             easing="smooth">
            <h2 className="text-lg font-semibold text-gray-400 uppercase">
-             DevOps & Cloud Computing Curriculum
+            Cyber security, Ethical Hacking & Information Security Curriculum
            </h2>
           </ScrollReveal>
           <ScrollReveal
@@ -1103,7 +1160,7 @@ function page(){
                Meet Mentors & Instructors
              </h2>
              <h1 className="text-4xl font-bold text-center mb-12">
-               Tap into the wisdom of DevOps & Cloud Computing Experts
+               Tap into the wisdom of Cybersecurity Experts
              </h1>
             </ScrollReveal>
 
@@ -1191,7 +1248,7 @@ function page(){
      </div>
         {/* Fee Structure */}
         <div className='w-full bg-black'>
-            <FeeStructure />
+            <FeeStructure courseName={'Cybersecurity, Ethical Hacking & Information Security'} />
         </div>
 
         {/* FAQ Section */}

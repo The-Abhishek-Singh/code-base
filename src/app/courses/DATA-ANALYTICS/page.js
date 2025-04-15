@@ -371,7 +371,7 @@ function page(){
 
         {/* DevOps Section */}
         <div className='h-auto w-full overflow-hidden'>
-            <CourseSection courseName={'information security'} courseDescription={courseDesc}/>
+            <CourseSection courseName={'nformation Security'} courseDescription={courseDesc}/>
         </div>
 
         {/* Our Curriculum Section */}

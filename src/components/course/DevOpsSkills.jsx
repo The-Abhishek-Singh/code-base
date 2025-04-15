@@ -8,76 +8,76 @@ const DevOpsSkills = () => {
 
   const jobRoles = [
     { 
-      logo: '/coursePage/meta-3.svg', 
-      logoAlt: 'Meta Logo', 
-      title: 'DevOps Engineer',
-      company: 'Meta'
+      logo: '/coursePage/fuji.png', 
+      logoAlt: 'Fuji Electric', 
+      title: 'Fuji Electric',
+      company: 'Innovation Energy Technology',
     },
     { 
-      logo: '/coursePage/logo-amazon.svg', 
-      logoAlt: 'Amazon Logo', 
-      title: 'Site Reliability Engineer (SRE)',
-      company: 'Amazon'
+      logo: '/coursePage/adani-power.png', 
+      logoAlt: 'Adani Power', 
+      title: 'Adani Power',
+      company: 'Limited'
     },
     { 
-      logo: '/coursePage/netflix-logo-icon.svg', 
-      logoAlt: 'Netflix Logo', 
-      title: 'DevOps Architect',
-      company: 'Netflix'
+      logo: '/coursePage/Tata-Projects.png', 
+      logoAlt: 'Tata Logo', 
+      title: '  TATA PROJECTS',
+      company: 'Simplify.Create'
     },
     { 
-      logo: '/coursePage/google-1-1.svg', 
-      logoAlt: 'Google Logo', 
-      title: 'Cloud Engineer',
-      company: 'Google'
+      logo: '/coursePage/mitsubishi.png', 
+      logoAlt: 'Mitsubishi Logo', 
+      title: 'Mitsubishi Electric',
+      company: 'Automation'
     },
     { 
-      logo: '/coursePage/microsoft-5.svg', 
-      logoAlt: 'Microsoft Logo', 
-      title: 'Platform Engineer',
-      company: 'Microsoft'
+      logo: '/coursePage/siemens.png', 
+      logoAlt: 'simenns Logo', 
+      title: 'Siemens Multinational',
+      company: 'Technology'
     },
     { 
-      logo: '/coursePage/spotify-2.svg', 
-      logoAlt: 'Spotify Logo', 
-      title: 'Infrastructure Specialist',
-      company: 'Spotify'
+      logo: '/coursePage/SSM.png', 
+      logoAlt: 'ssm Logo', 
+      title: 'E-info',
+      company: 'Suruhanjaya Syarikat Malaysia'
     },
     { 
-      logo: '/coursePage/uber-2.svg', 
-      logoAlt: 'Uber Logo', 
-      title: 'Cloud Infrastructure Engineer',
-      company: 'Uber'
+      logo: '/coursePage/Rockwell.png', 
+      logoAlt: 'Rockbell Logo', 
+      title: 'Rockbell International',
+      company: 'Software'
     },
     { 
-      logo: '/coursePage/airbnb.svg', 
-      logoAlt: 'Airbnb Logo', 
-      title: 'Continuous Delivery Engineer',
-      company: 'Airbnb'
+      logo: '/coursePage/msp.png', 
+      logoAlt: 'msp Logo', 
+      title: 'Managed Service Provider',
+      company: 'MSP'
     },
     { 
-      logo: '/coursePage/stripe-3.svg', 
-      logoAlt: 'Stripe Logo', 
-      title: 'DevOps Automation Engineer',
-      company: 'Stripe'
+      logo: '/coursePage/ABB.png', 
+      logoAlt: 'Abb Logo', 
+      title: 'ABB Group',
+      company: 'Automation'
     },
     { 
-      logo: '/coursePage/linkedin-icon-2.svg', 
-      logoAlt: 'LinkedIn Logo', 
-      title: 'Cloud Operations Specialist',
-      company: 'LinkedIn'
+      logo: '/coursePage/Schneider.png',
+      logoAlt: 'Scheider Logo',  
+      title: 'Schneider Electric',
+      company: 'Electric'
     },
     { 
-      logo: '/coursePage/twitter-6.svg', 
-      logoAlt: 'Twitter Logo', 
-      title: 'Kubernetes Architect',
-      company: 'Twitter'
+      logo: '/coursePage/philips.jpeg', 
+      logoAlt: 'Philips Logo', 
+      title: 'Philips Engineering',
+      company: 'Solutions'
     },
     { 
-      logo: '/coursePage/salesforce.png', 
-      logoAlt: 'Salesforce Logo', 
-      title: 'Cloud Security Engineer',
-      company: 'Salesforce'
+      logo: '/coursePage/Honeywell.png',
+      logoAlt: 'Honeywell Logo',    
+      title: 'American multinational conglomerate ',
+      company: 'Corporation'
     }
   ];
 
@@ -135,7 +135,7 @@ const DevOpsSkills = () => {
     </div>
     
     {/* Job Roles Grid - Responsive columns */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
       {filteredRoles.map((role, index) => (
         <div key={index} className="flex items-center space-x-2 sm:space-x-3 p-2 rounded-md hover:bg-gray-300 transition-colors">
           <Image
@@ -143,7 +143,7 @@ const DevOpsSkills = () => {
             alt={role.logoAlt}
             height={50}
             width={50}
-            className="w-8 h-8 sm:w-10 sm:h-10 object-contain flex-shrink-0"
+            className="w-28 h-28 sm:w-16 sm:h-10 object-contain flex-shrink-0"
           />
           <div className="min-w-0"> {/* Prevents text overflow */}
             <span className="text-sm sm:text-base font-medium block truncate">{role.title}</span>
