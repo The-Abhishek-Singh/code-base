@@ -35,24 +35,6 @@ function page(){
   ]
   const projects = [
     {
-      title: "Penetration Testing Lab",
-      description:
-        "Set up and conduct penetration testing on simulated networks using tools like Metasploit and Kali Linux. Learn to identify vulnerabilities and secure systems effectively.",
-      icon: < FaUserShield className="text-white text-3xl" />, // Shield icon for security testing
-    },
-    {
-      title: "Ethical Hacking Challenge",
-      description:
-        "Perform ethical hacking exercises to exploit and patch system weaknesses. Master techniques like phishing detection, SQL injection, and malware analysis in a controlled environment.",
-      icon: <FaUserSecret className="text-white text-3xl" />, // User-secret icon for ethical hacking
-    },
-    {
-      title: "IT Security Framework Implementation",
-      description:
-        "Design and implement an IT security framework using standards like ISO 27001 and NIST. Focus on risk assessment, incident response, and secure data management.",
-      icon: <FaLock className="text-white text-3xl" />, // Lock icon for security framework
-    },
-    {
       title: "Face Detection",
       description:
         "Use Python 3.5(64-bit) with OpenCV for face detection. As an important requirement, learners need to ensure that the system detect multiple faces in a single image while working with essential libraries like cv2 and glob.",

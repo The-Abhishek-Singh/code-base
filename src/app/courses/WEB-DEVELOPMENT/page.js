@@ -95,7 +95,7 @@ function page(){
       },
       {
         "title": "NODE.JS & EXPRESS.JS",
-        "duration": "1 Month",
+        "duration": "1 Week",
         "description": "Node.js and Express.js are fundamental technologies for backend development, enabling developers to build scalable server-side applications and RESTful APIs. Mastering these technologies allows for efficient database operations, server management, and the creation of robust web services essential for full-stack applications.",
         "topics": {
           "Introduction to Node.js and NPM": "Core concepts, event-driven architecture, package management",
@@ -108,7 +108,7 @@ function page(){
       },
       {
         "title": "MONGODB DATABASE",
-        "duration": "1 Month",
+        "duration": "1 Week",
         "description": "MongoDB is a powerful NoSQL database solution that provides flexibility, scalability, and performance for modern web applications. Learning MongoDB enables developers to store and manage unstructured data efficiently, create complex data relationships, and seamlessly integrate database operations within full-stack applications.",
         "topics": {
           "Introduction to MongoDB and NoSQL Databases": "Document-oriented architecture, comparison with SQL databases",
@@ -149,7 +149,7 @@ function page(){
       },
       {
         "title": "Advanced React.js",
-        "duration": "1 Month",
+        "duration": "1 Week",
         "description": "Advanced React.js Concepts - Objective: Dive deeper into React.js for building dynamic UIs.",
         "topics": {
           "React Hooks (useState, useEffect, useContext)": "Custom hooks, rules of hooks, optimizing performance",
@@ -164,7 +164,7 @@ function page(){
     const courses3 = [
       {
         "title": "Frontend + Backend Integration",
-        "duration": "1 Month",
+        "duration": "1 Week",
         "description": "Building Full Stack Applications (Frontend + Backend Integration) - Objective: Learn how to integrate frontend (React) with backend (Node/Express).",
         "topics": {
           "Sending and Receiving Data between React and Express": "Request lifecycle, data formats, RESTful API design",
@@ -189,7 +189,7 @@ function page(){
       },
       {
         "title": "Deploying Full Stack Applications",
-        "duration": "1 Month",
+        "duration": "1 Week",
         "description": "Objective: Learn how to deploy MERN applications to the cloud.",
         "topics": {
           "Deployment options for MERN applications (Heroku, AWS, DigitalOcean)": "Platform comparison, cost factors, scalability considerations",
@@ -204,7 +204,7 @@ function page(){
       const courses4 = [
         {
           "title": "Testing Full Stack Applications",
-          "duration": "1 Month",
+          "duration": "1 Week",
           "description": "Objective: Implement testing for both frontend and backend.",
           "topics": {
             "Introduction to Testing in JavaScript (Jest, Mocha, Chai)": "Testing frameworks, assertion libraries, test runners",
@@ -217,7 +217,7 @@ function page(){
         },
         {
           "title": "FINAL PROJECT AND BEST PRACTICES",
-          "duration": "1 Month",
+          "duration": "1 Week",
           "description": "The final project provides an opportunity to demonstrate mastery of full-stack development by building and deploying a complete MERN application. This module focuses on applying best practices in code organization, version control, and performance optimization while delivering a professional-quality application.",
           "topics": {
             "Guidelines for Final Project": "Combining React, Node, Express, and MongoDB",
