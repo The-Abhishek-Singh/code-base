@@ -151,9 +151,9 @@ const Hero = () => {
             }}
           >
             {/* TOGGLE BUTTON */}
-            <PlayButton />
+            <PlayButton text={'EXPLORE'}/>
             {/* TOGGLE BUTTON */}
-            <PlayButton />
+            <PlayButton text={'CONTACT'} />
           </div>
         </div>
         

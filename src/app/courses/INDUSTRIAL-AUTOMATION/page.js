@@ -359,8 +359,9 @@ const skills = [
                   Industrial Automation is a course that focuses on the technologies, systems, and processes used to automate industrial operations. It covers the integration of control systems such as PLCs, SCADA, sensors, and robotics to improve efficiency, safety, and precision in manufacturing environments. The course also explores the principles of automation, industrial communication protocols, and real-time monitoring, preparing learners to design and implement smart automated systems in modern industries.
                   </p>
                 </ScrollReveal>
-                <ScrollReveal animation='scaleUp' delay={700} easing='bouncy'>
-                <Button text='Enquire Now' />
+                <ScrollReveal animation='scaleUp' delay={700} easing='bouncy' className='flex gap-4 items-start'>
+                <Button text='Enquire Now' link={'/contact'} />
+                <Button text='Enroll Now' link={'https://courses.careertronic.com/courses'}/>
                 </ScrollReveal>   
                 </div>
                   <div className='right h-fit xl:w-1/2 w-full xl:p-20 md:px-48 p-4'>
@@ -403,11 +404,11 @@ const skills = [
     {/* Image Section - Hidden on small screens, visible on medium and up */}
     <div className='w-full lg:w-[45%] relative hidden lg:block'>
         <div className="relative h-full">
-            <Image src='/coursePage/103.png' alt='.' width={450} height={450} className='absolute -bottom-1 left-0 w-auto h-auto max-w-full max-h-[60vh]'/>
+            <Image src='/coursePage/103.png' alt='Image1' width={450} height={450} className='absolute -bottom-1 left-0 w-auto h-auto max-w-full max-h-[60vh]'/>
             <ScrollReveal animation='fadeIn' delay={700} easing='spring' className='relative h-full'> 
-                <Image src='/coursePage/102.png' alt='..' width={400} height={400} className='absolute bottom-80 left-72 w-auto h-auto max-w-[80%] hidden lg:block'/>
+                <Image src='/coursePage/105.png' alt='Image2' width={400} height={400} className='absolute bottom-40 left-72 w-auto h-auto max-w-[80%] hidden lg:block'/>
             </ScrollReveal>
-                <Image src='/coursePage/101.png' alt='...' width={1000} height={1000} className='absolute -bottom-1 left-0 h-auto xl:max-w-full 2xl:w-[700px] w-full'/>
+                <Image src='/coursePage/101.png' alt='Image3' width={1000} height={1000} className='absolute -bottom-1 left-0 h-auto xl:max-w-full 2xl:w-[700px] w-full'/>
         </div>
     </div>
     

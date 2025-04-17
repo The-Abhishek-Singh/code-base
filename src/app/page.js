@@ -84,7 +84,6 @@ const OnboardingSection = () => {
             <span className="mt-2">that will make your business grow</span>
           </h2>
         </div>
-        
         <Kai />
       </div>
     </>

@@ -110,7 +110,7 @@ const CoursesRoadmap = (props) => {
           easing="bouncy"
           className="w-full mt-8 md:mt-16"
         >
-          <div className="bg-[#A87600] w-full flex flex-col md:flex-row justify-between px-3 py-4 rounded-lg">
+          <div className="bg-[#fff] w-full flex flex-col md:flex-row justify-between px-3 py-4 rounded-lg">
             {/* Left Image - Hidden on small screens */}
             <ScrollReveal
               animation="fadeSlideRight"
@@ -119,11 +119,11 @@ const CoursesRoadmap = (props) => {
               easing="spring"
               className="hidden md:block"
             >
-              <Image src='/coursePage/infImg.png' alt='...' height={150} width={180} />
+              <Image src='/coursePage/infImg.png' alt='...' height={150} width={180} className='bg-[#000] rounded-full' />
             </ScrollReveal>
             
             {/* Center Text */}
-            <div className='w-full text-center flex flex-col justify-center gap-2 md:gap-4 px-2'>
+            <div className='w-full text-center text-[#000] flex flex-col justify-center gap-2 md:gap-4 px-2'>
               <ScrollReveal
                 animation="fadeIn"
                 duration={1200}
@@ -155,7 +155,7 @@ const CoursesRoadmap = (props) => {
               easing="spring"
               className="hidden md:block"
             >
-              <Image src='/coursePage/infImg.png' alt='...' height={150} width={180} />
+              <Image src='/coursePage/infImg.png' alt='...' height={150} width={180} className='bg-[#000] rounded-full'/>
             </ScrollReveal>
           </div>
         </ScrollReveal>

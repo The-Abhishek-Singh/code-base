@@ -51,7 +51,7 @@ export default function Home() {
   const featuredCourses = [
     {
       id: 1,
-      title: "Web-Development",
+      title: "Full Stack Development",
       rating: 5,
       category: "Development",
       image: "/Course/wd1.webp",
@@ -59,7 +59,7 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "App-Development",
+      title: "Application Development",
       rating: 5,
       category: "Programming",
       image: "/Course/app1.jpg",

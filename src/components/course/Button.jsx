@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Button = (props) => {
   return (
     <>
-    <Link href={'/contact'}>
+    <Link href={`${props.link}`}>
       <button className='btn-Comp'> {props.text}</button>
       <style>{`
         .btn-Comp {

@@ -300,122 +300,6 @@ const skills = [
   'Calculus', 'Probability', 'EDA', 'Feature Engineering', 'Deep Learning',
   'Machine Learning', 'NLP', 'Computer Vision', 'Reinforcement Learning', 'Data Wrangling'
   ];
-  const jobRoles = [
-    { 
-      logo: '/coursePage/Amazon.png', 
-      logoAlt: 'Amazon Logo', 
-      title: 'Amazon',
-      company: 'Amazon'
-    },
-    { 
-      logo: '/coursePage/msp.png', 
-      logoAlt: 'MSP Logo', 
-      title: 'Managed Service Provider',
-      company: 'MSP'
-    },
-    { 
-      logo: '/coursePage/philips.jpeg', 
-      logoAlt: 'Philips Logo', 
-      title: 'Philips',
-      company: 'Philips Engineering Solutions'
-    },
-    {
-      logo: '/coursePage/IBM.png',
-      logoAlt: 'IBM Logo',
-      title: 'IBM',
-      company: 'International Business Machines'
-    },
-    {
-      logo: '/coursePage/MICROSOFT.jpg',
-      logoAlt: 'Microsoft Logo',
-      title: 'Microsoft',
-      company: 'Microsoft Corporation'
-    },
-    {
-      logo: '/coursePage/Relince.jpg',
-      logoAlt: 'Reliance Logo',
-      title: 'Reliance Industries',
-      company: 'Reliance'
-    },
-    {
-      logo: '/coursePage/paytm.jpeg',
-      logoAlt: 'Paytm Logo',
-      title: 'Paytm',
-      company: 'One97 Communications'
-    },
-    {
-      logo: '/coursePage/samsung.jpeg',
-      logoAlt: 'Samsung Logo',
-      title: 'Samsung',
-      company: 'Samsung Electronics'
-    },
-    {
-      logo: '/coursePage/salesforce.png',
-      logoAlt: 'Salesforce Logo',
-      title: 'Salesforce',
-      company: 'Salesforce Inc.'
-    },
-    {
-      logo: '/coursePage/wipro.jpg',
-      logoAlt: 'Wipro Logo',
-      title: 'Wipro',
-      company: 'Wipro Limited'
-    },
-    {
-      logo: '/coursePage/wonololo.png',
-      logoAlt: 'Wonolo Logo',
-      title: 'Wonolo',
-      company: 'Work Now Locally'
-    },
-    {
-      logo: '/coursePage/Zensar.webp',
-      logoAlt: 'Zensar Logo',
-      title: 'Zensar Technologies',
-      company: 'Zensar'
-    },
-    {
-      logo: '/coursePage/tcs.png',
-      logoAlt: 'TCS Logo',
-      title: 'TCS',
-      company: 'Tata Consultancy Services'
-    },
-    {
-      logo: '/coursePage/SSM.png',
-      logoAlt: 'SSM Logo',
-      title: 'E-info',
-      company: 'Suruhanjaya Syarikat Malaysia'
-    },
-    {
-      logo: '/coursePage/skit.png',
-      logoAlt: 'Skit Logo',
-      title: 'Skit AI',
-      company: 'Skit'
-    },
-    {
-      logo: '/coursePage/Presistent.jpg',
-      logoAlt: 'Persistent Logo',
-      title: 'Persistent Systems',
-      company: 'Persistent'
-    },
-    {
-      logo: '/coursePage/ola.jpg',
-      logoAlt: 'Ola Logo',
-      title: 'Ola Cabs',
-      company: 'ANI Technologies Pvt. Ltd.'
-    },
-    {
-      logo: '/coursePage/grow.webp',
-      logoAlt: 'Groww Logo',
-      title: 'Groww',
-      company: 'Groww (Nextbillion Technology)'
-    },
-    {
-      logo: '/coursePage/digit.png',
-      logoAlt: 'Digit Logo',
-      title: 'Digit Insurance',
-      company: 'Go Digit General Insurance'
-    }
-  ];
 
   return (
     <div className='h-auto w-full'>
@@ -442,8 +326,9 @@ const skills = [
                   Data Science and Artificial Intelligence is a course that delves into the techniques, tools, and methodologies used to extract insights from data and build intelligent systems. It focuses on Data Science, which involves data collection, cleaning, analysis, and visualization to support data-driven decision making. The course also explores Artificial Intelligence, enabling machines to mimic human intelligence through machine learning, deep learning, and natural language processing.
                   </p>
                 </ScrollReveal>
-                <ScrollReveal animation='scaleUp' delay={700} easing='bouncy'>
-                <Button text='Enquire Now' />
+                <ScrollReveal animation='scaleUp' delay={700} easing='bouncy' className='flex gap-4 items-start'>
+                <Button text='Enquire Now' link={'/contact'} />
+                <Button text='Enroll Now' link={'https://courses.careertronic.com/courses'}/>
                 </ScrollReveal>   
                 </div>
                   <div className='right xl:w-1/2 w-full xl:px-20 md:px-48 p-4'>
@@ -486,11 +371,11 @@ const skills = [
     {/* Image Section - Hidden on small screens, visible on medium and up */}
     <div className='w-full lg:w-[45%] relative hidden lg:block'>
         <div className="relative h-full">
-            <Image src='/coursePage/103.png' alt='.' width={450} height={450} className='absolute -bottom-1 left-0 w-auto h-auto max-w-full max-h-[60vh]'/>
+            <Image src='/coursePage/103.png' alt='Image1' width={450} height={450} className='absolute -bottom-1 left-0 w-auto h-auto max-w-full max-h-[60vh]'/>
             <ScrollReveal animation='fadeIn' delay={700} easing='spring' className='relative h-full'> 
-                <Image src='/coursePage/102.png' alt='..' width={400} height={400} className='absolute bottom-80 left-72 w-auto h-auto max-w-[80%] hidden lg:block'/>
+                <Image src='/coursePage/105.png' alt='Image2' width={400} height={400} className='absolute bottom-40 left-72 w-auto h-auto max-w-[80%] hidden lg:block'/>
             </ScrollReveal>
-                <Image src='/coursePage/101.png' alt='...' width={1000} height={1000} className='absolute -bottom-1 left-0 h-auto xl:max-w-full 2xl:w-[700px] w-full'/>
+                <Image src='/coursePage/101.png' alt='Image3' width={1000} height={1000} className='absolute -bottom-1 left-0 h-auto xl:max-w-full 2xl:w-[700px] w-full'/>
         </div>
     </div>
     
@@ -579,7 +464,7 @@ const skills = [
             </ScrollReveal>
             <ScrollReveal animation='scaleUp' delay={800} easing='spring'>
                 <div className='w-full border-4 border-red-600 rounded-lg'>
-                    <DevOpsSkills skills={skills} jobRoles={jobRoles}/>
+                    <DevOpsSkills skills={skills}/>
                 </div>
             </ScrollReveal>
             </div>

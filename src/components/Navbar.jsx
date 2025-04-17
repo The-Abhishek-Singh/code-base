@@ -6,6 +6,7 @@ import { Menu, X, LogIn } from "lucide-react";
 import SearchModal from "./UI/search/SearchModal";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
@@ -80,14 +81,40 @@ const Navbar = () => {
             {/* Search button */}
             <SearchModal />
             {/* Login button */}
-            <Link href="/Login">
-            <button className="flex items-center justify-center bg-transparent border border-red-700 text-white p-2 rounded-lg hover:bg-red-700 transition-colors md:w-[90px] md:h-[40px]">
-              <LogIn className="w-4 xl:w-4.5 h-4 xl:h-4.5" />
-              <span className="ml-2 hidden sm:inline text-xs xl:text-sm">
-                Login
-              </span>
-            </button>
-            </Link>
+            <div className="relative inline-block text-left">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="flex items-center justify-center bg-transparent border border-red-700 text-white p-2 rounded-lg hover:bg-red-700 transition-colors md:w-[120px] md:h-[40px]"
+              >
+                <LogIn className="w-4 xl:w-4.5 h-4 xl:h-4.5" />
+                <span className="ml-2 hidden sm:inline text-xs xl:text-sm">
+                  Login
+                </span>
+                <svg
+                  className="w-3 h-3 ml-1 mt-0.5 fill-white"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M5.5 7l4.5 4 4.5-4H5.5z" />
+                </svg>
+              </button>
+
+              {isOpen && (
+                <div className="absolute left-0 mt-2 w-full bg-white text-black rounded-lg shadow-md z-20">
+                  <Link
+                    href="https://courses.careertronic.com/"
+                    className="block px-4 py-2 text-sm hover:bg-red-100 hover:text-red-700 rounded-t-lg"
+                  >
+                    Course Login
+                  </Link>
+                  <Link
+                    href={"/Login"}
+                    className="block px-4 py-2 text-sm hover:bg-red-100 hover:text-red-700 rounded-b-lg"
+                  >
+                    Job Login
+                  </Link>
+                </div>
+              )}
+            </div>
             {/* Mobile menu button */}
             <button
               onClick={toggleMenu}

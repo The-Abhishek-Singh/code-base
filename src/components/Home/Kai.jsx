@@ -30,6 +30,7 @@ const ServicesList = () => {
     {
       number: "1",
       title: "Software development &  export services",
+      link: "https://www.google.com",
       description:
         "We specialize in software development and export services, delivering cutting-edge technology solutions tailored to your business needs. Our expertise spans custom software, web and mobile applications, AI-driven solutions, and cloud integrations, ensuring seamless digital transformation.",
       icon: "/ourteam/first1.png",
@@ -37,6 +38,7 @@ const ServicesList = () => {
     {
       number: "2",
       title: "IT & industrial automation training",
+      link: "https://www.facebook.com",
       description:
         "We provide IT and Industrial Automation Training, equipping professionals with the latest skills and knowledge to excel in a technology-driven world. Our comprehensive programs cover software development.",
       icon: "/ourteam/first2.png",
@@ -314,9 +316,9 @@ const ServicesList = () => {
             </span>
             <span className="text-white font-medium leading-tight relative inline-block pb-2 text-[1.25rem] max-[425px]:text-[1.25rem]">
               {/* Title with Line Break at "&" */}
-              <div className="text-lg-custom font-medium text-start max-[375px]:text-[0.95rem] max-[320px]:text-[0.85rem] max-[425px]:text-[1.00rem] max-[425px]:leading-tight relative">
+              <div className="text-lg-custom text-start max-[375px]:text-[1rem] max-[320px]:text-[0.95rem] max-[425px]:text-[1.25rem] max-[425px]:leading-tight relative capitalize font-semibold p-2 bg-gradient-to-r from-zinc-300 via-zinc-600 to-zinc-900 bg-clip-text text-transparent">
                 {service.title === "IT & industrial automation training" ? (
-                  <>
+                  <Link href='/services/IT-TRAINING-&-CERTIFICATION'>
                     IT & industrial
                     <br />
                     <span className="whitespace-nowrap">
@@ -326,9 +328,9 @@ const ServicesList = () => {
                       className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
                       style={{ width: "140%" }}
                     ></span>
-                  </>
+                  </Link>
                 ) : service.title === "Corporate & industrial training" ? (
-                  <>
+                  <Link href='/services/CORPORATE-&-INDUSTRIAL-TRAINING'>
                     Corporate
                     <br />
                     <span className="whitespace-nowrap">
@@ -338,19 +340,27 @@ const ServicesList = () => {
                       className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
                       style={{ width: "143%" }}
                     ></span>
-                  </>
+                  </Link>
                 ) : service.title ===
-                    "Global education & study abroad programs" ||
-                  service.title ===
-                    "Software development &  export services" ? (
-                  <>
+                    "Global education & study abroad programs" ? (
+                  <Link href='/services/Study-Abroad'>
                     {service.title}
                     {/* Custom underline only for these specific titles */}
                     <span
                       className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
                       style={{ width: "107%", right: "-2rem" }}
                     ></span>
-                  </>
+                  </Link>
+                ) : service.title ===
+                    "Software development &  export services" ? (
+                  <Link href='/services/SOFTWARE-DEVELOPMENT-&-EXPORT-SERVICES'>
+                    {service.title}
+                    {/* Custom underline only for these specific titles */}
+                    <span
+                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                      style={{ width: "107%", right: "-2rem" }}
+                    ></span>
+                  </Link>
                 ) : (
                   <>
                     {service.title.split(" & ").map((part, i) => (

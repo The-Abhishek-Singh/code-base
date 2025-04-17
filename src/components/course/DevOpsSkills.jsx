@@ -3,11 +3,110 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 const DevOpsSkills = (props) => {
+  const JobRoles = [
+    { 
+      logo: '/coursePage/Amazon.png', 
+      logoAlt: 'Amazon Logo', 
+      title: 'Amazon',
+      company: 'Amazon'
+    },
+    { 
+      logo: '/coursePage/philips.jpeg', 
+      logoAlt: 'Philips Logo', 
+      title: 'Philips',
+      company: 'Philips Engineering Solutions'
+    },
+    {
+      logo: '/coursePage/IBM.png',
+      logoAlt: 'IBM Logo',
+      title: 'IBM',
+      company: 'International Business Machines'
+    },
+    {
+      logo: '/coursePage/MICROSOFT.jpg',
+      logoAlt: 'Microsoft Logo',
+      title: 'Microsoft',
+      company: 'Microsoft Corporation'
+    },
+    {
+      logo: '/coursePage/Relince.jpg',
+      logoAlt: 'Reliance Logo',
+      title: 'Reliance Industries',
+      company: 'Reliance'
+    },
+    {
+      logo: '/coursePage/paytm.jpeg',
+      logoAlt: 'Paytm Logo',
+      title: 'Paytm',
+      company: 'One97 Communications'
+    },
+    {
+      logo: '/coursePage/samsung.jpeg',
+      logoAlt: 'Samsung Logo',
+      title: 'Samsung',
+      company: 'Samsung Electronics'
+    },
+    {
+      logo: '/coursePage/salesforce.png',
+      logoAlt: 'Salesforce Logo',
+      title: 'Salesforce',
+      company: 'Salesforce Inc.'
+    },
+    {
+      logo: '/coursePage/wipro.jpg',
+      logoAlt: 'Wipro Logo',
+      title: 'Wipro',
+      company: 'Wipro Limited'
+    },
+    {
+      logo: '/coursePage/wonololo.png',
+      logoAlt: 'Wonolo Logo',
+      title: 'Wonolo',
+      company: 'Work Now Locally'
+    },
+    {
+      logo: '/coursePage/Zensar.webp',
+      logoAlt: 'Zensar Logo',
+      title: 'Zensar Technologies',
+      company: 'Zensar'
+    },
+    {
+      logo: '/coursePage/tcs.png',
+      logoAlt: 'TCS Logo',
+      title: 'TCS',
+      company: 'Tata Consultancy Services'
+    },
+    {
+      logo: '/coursePage/Presistent.jpg',
+      logoAlt: 'Persistent Logo',
+      title: 'Persistent Systems',
+      company: 'Persistent'
+    },
+    {
+      logo: '/coursePage/ola.jpg',
+      logoAlt: 'Ola Logo',
+      title: 'Ola Cabs',
+      company: 'ANI Technologies Pvt. Ltd.'
+    },
+    {
+      logo: '/coursePage/grow.webp',
+      logoAlt: 'Groww Logo',
+      title: 'Groww',
+      company: 'Groww (Nextbillion Technology)'
+    },
+    {
+      logo: '/coursePage/digit.png',
+      logoAlt: 'Digit Logo',
+      title: 'Digit Insurance',
+      company: 'Go Digit General Insurance'
+    }
+  ];        
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedSkills, setSelectedSkills] = useState([]);
 
   // Filter job roles based on search
-  const filteredRoles = props.jobRoles.filter(role => 
+  const filteredRoles = props.jobRoles?props.jobRoles:JobRoles.filter(role => 
     role.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     role.company.toLowerCase().includes(searchTerm.toLowerCase())
   );
