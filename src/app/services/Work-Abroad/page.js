@@ -163,7 +163,7 @@ const WorkAbroadPage = () => {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-transparent"></div>
           <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-l from-gray-500 to-transparent"></div>
         </div>
-        <div className="container mx-auto px-4 py-32 relative z-10">
+        <div className="container mx-auto flex justify-center px-4 py-32 relative z-10">
           <div className={`transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 animate-text-gradient">
               Work Abroad Opportunities

@@ -305,119 +305,136 @@ const ServicesList = () => {
         ></div>
       </div>
       {services.map((service, index) => (
-        <div
-          key={index}
-          ref={index === 0 ? firstNodeRef : null}
-          className="flex w-full max-w-[67rem] justify-between items-center relative py-8  "
-        >
-          <div className="w-[61%] text-right pr-52 flex items-center relative lg:pl-[53px] min-[1440px]:pl-[13px]  md:pl-[28px]">
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-black text-5xl font-extrabold mr-[1.5rem] -mt-[20px]">
-              {service.number}
-            </span>
-            <span className="text-white font-medium leading-tight relative inline-block pb-2 text-[1.25rem] max-[425px]:text-[1.25rem]">
-              {/* Title with Line Break at "&" */}
-              <div className="text-lg-custom text-start max-[375px]:text-[1rem] max-[320px]:text-[0.95rem] max-[425px]:text-[1.25rem] max-[425px]:leading-tight relative capitalize font-semibold p-2 bg-gradient-to-r from-zinc-300 via-zinc-600 to-zinc-900 bg-clip-text text-transparent">
-                {service.title === "IT & industrial automation training" ? (
-                  <Link href='/services/IT-TRAINING-&-CERTIFICATION'>
-                    IT & industrial
-                    <br />
-                    <span className="whitespace-nowrap">
-                      automation training
-                    </span>
-                    <span
-                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "140%" }}
-                    ></span>
-                  </Link>
-                ) : service.title === "Corporate & industrial training" ? (
-                  <Link href='/services/CORPORATE-&-INDUSTRIAL-TRAINING'>
-                    Corporate
-                    <br />
-                    <span className="whitespace-nowrap">
-                      industrial training
-                    </span>
-                    <span
-                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "143%" }}
-                    ></span>
-                  </Link>
-                ) : service.title ===
-                    "Global education & study abroad programs" ? (
-                  <Link href='/services/Study-Abroad'>
-                    {service.title}
-                    {/* Custom underline only for these specific titles */}
-                    <span
-                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "107%", right: "-2rem" }}
-                    ></span>
-                  </Link>
-                ) : service.title ===
-                    "Software development &  export services" ? (
-                  <Link href='/services/SOFTWARE-DEVELOPMENT-&-EXPORT-SERVICES'>
-                    {service.title}
-                    {/* Custom underline only for these specific titles */}
-                    <span
-                      className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "107%", right: "-2rem" }}
-                    ></span>
-                  </Link>
-                ) : (
-                  <>
-                    {service.title.split(" & ").map((part, i) => (
-                      <React.Fragment key={i}>
-                        {part}
-                        {i < service.title.split(" & ").length - 1 && <br />}
-                        {i < service.title.split(" & ").length - 1 && " &"}
-                      </React.Fragment>
-                    ))}
-                    <span
-                      className="absolute left-0 bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
-                      style={{ width: "auto", right: 0 }}
-                    ></span>
-                  </>
-                )}
+  <div
+    key={index}
+    ref={index === 0 ? firstNodeRef : null}
+    className="flex w-full max-w-[67rem] justify-between items-center relative py-8"
+  >
+    <div className="w-[61%] text-right pr-52 flex items-center relative lg:pl-[53px] min-[1440px]:pl-[13px] md:pl-[28px]">
+      <span className="text-transparent bg-clip-text bg-gradient-to-b from-gray-400 to-black text-5xl font-extrabold mr-[1.5rem] -mt-[20px]">
+        {service.number}
+      </span>
+      <span className="text-white font-medium leading-tight relative inline-block pb-2 text-[1.25rem] max-[425px]:text-[1.25rem]">
+        {/* Title with Line Break at "&" */}
+        <div className="text-lg-custom text-start max-[375px]:text-[1rem] max-[320px]:text-[0.95rem] max-[425px]:text-[1.25rem] max-[425px]:leading-tight relative p-2">
+          {service.title === "IT & industrial automation training" ? (
+            <div className="group relative p-2">
+              <Link className="capitalize font-semibold" href='/services/IT-TRAINING-&-CERTIFICATION'>
+                IT & industrial
+                <br />
+                <span className="whitespace-nowrap">
+                  automation training 
+                </span>
+                <span
+                  className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                  style={{ width: "140%" }}
+                ></span>
+              </Link>
+              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+                Navigate to this page
               </div>
-            </span>
-            <div className="w-[57%] hidden min-[769px]:flex md:hidden">
-              <img
-                src={service.icon}
-                alt={service.title}
-                className="w-16 h-16 md:w-20 md:h-20 md:mx-auto"
-              />
             </div>
-          </div>
-          <div
-            className="absolute w-6 h-6 bg-black border-2 border-white rounded-full
- left-1/2
- max-[425px]:-translate-x-[-5%]
- sm:-translate-x-[200%]
- md:-translate-x-[200%]
- lg:-translate-x-[205%]
- xl:-translate-x-[200%]
- 2xl:-translate-x-[200%]
- top-9
- sm:top-9
- flex items-center justify-center
- timeline-dot"
-            style={{
-              zIndex: 10,
-              boxShadow: "0 0 0 1px rgba(255,255,255,0.1)",
-            }}
-          >
-            {/* Optional: Add a small red dot in the center to enhance line alignment */}
-            <div className="w-2 h-2 bg-red-700 rounded-full"></div>
-          </div>
-          <div
-            ref={index === services.length - 1 ? lastDescriptionRef : null}
-            className="w-1/2 text-left  pl-0 max-[425px]:pl-0 flex items-center  lg:pl-0 md:w-[50%]"
-          >
-            <p className="text-white lg:text-[16px] md:pr-[25px]">
-              {service.description}
-            </p>
-          </div>
+          ) : service.title === "Corporate & industrial training" ? (
+            <div className="group relative p-2">
+              <Link className="capitalize font-semibold" href='/services/CORPORATE-&-INDUSTRIAL-TRAINING'>
+                Corporate
+                <br />
+                <span className="whitespace-nowrap">
+                  industrial training
+                </span>
+                <span
+                  className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                  style={{ width: "143%" }}
+                ></span>
+              </Link>
+              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+                Navigate to this page
+              </div>
+            </div>
+          ) : service.title === "Global education & study abroad programs" ? (
+            <div className="group relative p-2">
+              <Link className="capitalize font-semibold" href='/services/Study-Abroad'>
+                {service.title}
+                {/* Custom underline only for these specific titles */}
+                <span
+                  className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                  style={{ width: "107%", right: "-2rem" }}
+                ></span>
+              </Link>
+              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+                Navigate to this page
+              </div>
+            </div>
+          ) : service.title === "Software development &  export services" ? (
+            <div className="group relative p-2">
+              <Link className="capitalize font-semibold" href='/services/SOFTWARE-DEVELOPMENT-&-EXPORT-SERVICES'>
+                {service.title}
+                {/* Custom underline only for these specific titles */}
+                <span
+                  className="absolute left-[-4rem] bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                  style={{ width: "107%", right: "-2rem" }}
+                ></span>
+              </Link>
+              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+                Navigate to this page
+              </div>
+            </div>
+          ) : (
+            <>
+              {service.title.split(" & ").map((part, i) => (
+                <React.Fragment key={i}>
+                  {part}
+                  {i < service.title.split(" & ").length - 1 && <br />}
+                  {i < service.title.split(" & ").length - 1 && " &"}
+                </React.Fragment>
+              ))}
+              <span
+                className="absolute left-0 bottom-0 h-1 bg-gradient-to-l from-gray-500 to-transparent"
+                style={{ width: "auto", right: 0 }}
+              ></span>
+            </>
+          )}
         </div>
-      ))}
-
+      </span>
+      <div className="w-[57%] hidden min-[769px]:flex md:hidden">
+        <img
+          src={service.icon}
+          alt={service.title}
+          className="w-16 h-16 md:w-20 md:h-20 md:mx-auto"
+        />
+      </div>
+    </div>
+    <div
+      className="absolute w-6 h-6 bg-black border-2 border-white rounded-full
+      left-1/2
+      max-[425px]:-translate-x-[-5%]
+      sm:-translate-x-[200%]
+      md:-translate-x-[200%]
+      lg:-translate-x-[205%]
+      xl:-translate-x-[200%]
+      2xl:-translate-x-[200%]
+      top-9
+      sm:top-9
+      flex items-center justify-center
+      timeline-dot"
+      style={{
+        zIndex: 10,
+        boxShadow: "0 0 0 1px rgba(255,255,255,0.1)",
+      }}
+    >
+      {/* Optional: Add a small red dot in the center to enhance line alignment */}
+      <div className="w-2 h-2 bg-red-700 rounded-full"></div>
+    </div>
+    <div
+      ref={index === services.length - 1 ? lastDescriptionRef : null}
+      className="w-1/2 text-left pl-0 max-[425px]:pl-0 flex items-center lg:pl-0 md:w-[50%]"
+    >
+      <p className="text-white lg:text-[16px] md:pr-[25px]">
+        {service.description}
+      </p>
+    </div>
+  </div>
+))}
       {/* Our Gallery section starts from here */}
 
       <div className="bg-black text-white py-10">

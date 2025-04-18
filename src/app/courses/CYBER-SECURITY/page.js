@@ -331,26 +331,26 @@ const skills = [
         {/* Steps Secction */}
         <div className='h-auto w-full bg-[#212121] relative flex lg:flex-row justify-around lg:pt-28 md:pt-20 sm:pt-40 pt-40 z-10'>
     {/* Image Section - Hidden on small screens, visible on medium and up */}
-    <div className='w-full lg:w-[45%] relative hidden lg:block'>
+    <div className='w-full lg:w-[40%] relative hidden lg:block'>
         <div className="relative h-full">
             <Image src='/coursePage/103.png' alt='Image1' width={450} height={450} className='absolute -bottom-1 left-0 w-auto h-auto max-w-full max-h-[60vh]'/>
             <ScrollReveal animation='fadeIn' delay={700} easing='spring' className='relative h-full'> 
-                <Image src='/coursePage/105.png' alt='Image2' width={400} height={400} className='absolute bottom-40 left-72 w-auto h-auto max-w-[80%] hidden lg:block'/>
+                {/* <Image src='/coursePage/105.png' alt='Image2' width={400} height={400} className='absolute bottom-40 left-72 w-auto h-auto max-w-[80%] hidden lg:block'/> */}
             </ScrollReveal>
-                <Image src='/coursePage/101.png' alt='Image3' width={1000} height={1000} className='absolute -bottom-1 left-0 h-auto xl:max-w-full 2xl:w-[700px] w-full'/>
+                <Image src='/coursePage/101.png' alt='Image3' width={1000} height={1000} className='absolute -bottom-1 left-0 h-auto xl:max-w-full 2xl:w-[630px] w-full'/>
         </div>
     </div>
     
     {/* Content Section */}
-    <div className='w-full lg:w-[55%] flex p-4 sm:p-6 md:p-10 lg:p-20 flex-col justify-around relative'>
+    <div className='w-full lg:w-[60%] flex p-4 sm:p-6 md:p-10 lg:p-16 flex-col justify-around relative'>
         <ScrollReveal animation='fadeIn' delay={200} easing='smooth'>
-            <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight capitalize'>
+            <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight capitalize'>
                 How Can We Turn You Into an Expert in Cyber Security?
             </h1>
         </ScrollReveal>
         
         {/* Steps Section - Reorganizes on smaller screens */}
-        <div className="flex flex-col md:flex-row w-full p-2 md:p-4 gap-6 md:gap-2 lg:gap-4 xl:gap-8 mt-8 lg:mt-0">
+        <div className="flex flex-col justify-evenly md:flex-row w-full p-2 md:p-4 gap-6 md:gap-2 lg:gap-4 xl:gap-8 mt-8 lg:mt-0">
             {/* Step 1 */}
             <ScrollReveal animation='scaleUp' delay={600} easing='spring'>
                 <div className="flex flex-col items-center mb-2 sm:mb-4 md:mb-0 flex-1">
