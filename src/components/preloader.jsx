@@ -253,9 +253,9 @@ const AdvancedPreloader = ({ onComplete }) => {
       <h1
         ref={textRef}
         className="text-5xl font-bold  tracking-wide text-center 
-                   text-white drop-shadow-[0_0_20px_rgba(239,68,68,0.3)]"
+                   text-white drop-shadow-[0_0_20px_rgba(239,68,68,0.3)] font-['BaronNeueBlack']"
       >
-        Careertronic
+        CAREERTRONIC
       </h1>
       <div className="absolute bottom-10 w-full flex justify-center">
         <div

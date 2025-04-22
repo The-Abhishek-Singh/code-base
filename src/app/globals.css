@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'BaronNeueBlack';
+  src:url('./fonts/BaronNeueBlack.ttf.woff') format('woff'),
+      url('./fonts/BaronNeueBlack.ttf.svg#BaronNeueBlack') format('svg'),
+      url('./fonts/BaronNeueBlack.ttf.eot'),
+      url('./fonts/BaronNeueBlack.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --background: #0a0a0a;

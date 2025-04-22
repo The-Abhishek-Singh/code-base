@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PlayButton from './Techbutton';
+import Link from 'next/link';
 
 const Hero = () => {
   const [scrollPosition, setScrollPosition] = useState(0);

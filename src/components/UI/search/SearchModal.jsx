@@ -135,7 +135,7 @@ const SearchModal = () => {
         aria-label="Search"
       >
         <Search size={16} />
-        <span className="ml-2 hidden md:inline text-xs xl:text-sm">Search</span>
+        <span className="ml-2 hidden md:inline text-xs xl:text-sm px-2 py-[1.35px]">Search</span>
       </button>
 
       {/* Search modal */}
