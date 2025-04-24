@@ -222,7 +222,7 @@ const page = () => {
 
       {/* Second founder section */}
       <div className="h-auto bg-[#161616] text-white p-8 mt-20">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
           {/* Content Container */}
           <div className="w-full md:w-1/2 space-y-6">
             <ScrollReveal
@@ -362,6 +362,148 @@ const page = () => {
               >
                 <p className="text-lg text-gray-300">
                   Experience: <span className="font-semibold">7yr+</span>
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="h-auto bg-[#161616] text-white p-8 mt-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          {/* Content Container */}
+          <div className="w-full md:w-1/2 space-y-6">
+          {/* Image Container */}
+              <div className="w-full md:w-1/2">
+                <ScrollReveal
+                  animation="slideRight"
+                  duration={800}
+                  easing="spring"
+                  delay={50}
+                >
+                  <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-900 p-1">
+                    <img
+                      src="/ourteam/Frame 341.png"
+                      alt="Portrait of company founder"
+                      className="w-full rounded-2xl"
+                    />
+                  </div>
+                </ScrollReveal>
+              </div>
+            <ScrollReveal
+              animation="slideLeft"
+              duration={800}
+              easing="spring"
+              delay={50}
+              stagger={150}
+            >
+              <h2 className="text-3xl font-bold text-white">Founder & CEO</h2>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="slideLeft"
+              duration={800}
+              easing="spring"
+              delay={0}
+              stagger={150}
+            >
+              <h3 className="text-2xl font-medium text-white">
+                Miss. Himanshi Bhagwani
+              </h3>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="slideLeft"
+              duration={800}
+              easing="spring"
+              delay={100}
+              stagger={150}
+            >
+              <p className="text-base text-gray-300 leading-relaxed">
+                The driving force behind the vision, the Founder leads with
+                innovation and a passion for technology. With a strong focus on
+                digital transformation and problem-solving, they established the
+                company to bridge the gap between business needs and modern IT
+                solutions. Their leadership ensures continuous growth in IT
+                services, training, and global career opportunities.
+              </p>
+            </ScrollReveal>
+            <div className="pt-4">
+              <ScrollReveal
+                animation="slideLeft"
+                duration={800}
+                easing="spring"
+                delay={200}
+                stagger={150}
+              >
+                <p className="text-lg text-gray-300">
+                  Experience: <span className="font-semibold">5yr+</span>
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2 space-y-6">
+          {/* Image Container */}
+          <div className="w-full md:w-1/2">
+            <ScrollReveal
+              animation="slideRight"
+              duration={800}
+              easing="spring"
+              delay={50}
+            >
+              <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-900 p-1">
+                <img
+                  src="/ourteam/Frame 341.png"
+                  alt="Portrait of company founder"
+                  className="w-full rounded-2xl"
+                />
+              </div>
+            </ScrollReveal>
+          </div>
+            <ScrollReveal
+              animation="slideLeft"
+              duration={800}
+              easing="spring"
+              delay={50}
+              stagger={150}
+            >
+              <h2 className="text-3xl font-bold text-white">Founder & CEO</h2>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="slideLeft"
+              duration={800}
+              easing="spring"
+              delay={0}
+              stagger={150}
+            >
+              <h3 className="text-2xl font-medium text-white">
+                Miss. Himanshi Bhagwani
+              </h3>
+            </ScrollReveal>
+            <ScrollReveal
+              animation="slideLeft"
+              duration={800}
+              easing="spring"
+              delay={100}
+              stagger={150}
+              >
+              <p className="text-base text-gray-300 leading-relaxed">
+                The driving force behind the vision, the Founder leads with
+                innovation and a passion for technology. With a strong focus on
+                digital transformation and problem-solving, they established the
+                company to bridge the gap between business needs and modern IT
+                solutions. Their leadership ensures continuous growth in IT
+                services, training, and global career opportunities.
+              </p>
+            </ScrollReveal>
+            <div className="pt-4">
+              <ScrollReveal
+                animation="slideLeft"
+                duration={800}
+                easing="spring"
+                delay={200}
+                stagger={150}
+              >
+                <p className="text-lg text-gray-300">
+                  Experience: <span className="font-semibold">5yr+</span>
                 </p>
               </ScrollReveal>
             </div>

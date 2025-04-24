@@ -152,9 +152,13 @@ const Hero = () => {
             }}
           >
             {/* TOGGLE BUTTON */}
+            <Link href={'/services'}>
             <PlayButton text={'EXPLORE'}/>
+            </Link>
             {/* TOGGLE BUTTON */}
+            <Link href={'/contact'}>
             <PlayButton text={'CONTACT'} />
+            </Link>
           </div>
         </div>
         

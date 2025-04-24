@@ -389,6 +389,7 @@ const IndustrialAutomationPage = () => {
               <span className="absolute -inset-px bg-gradient-to-r from-red-600 to-red-700 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500"></span>
             </button>
           </Link>
+          <Link href={'https://wa.me/message/2AZNGYPJ2BTYO1'}>
             <button className="bg-transparent border-2 border-gray-500 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-500 transform hover:scale-105 hover:border-red-400 hover:bg-black hover:bg-opacity-50 group relative overflow-hidden">
               <span className="relative z-10 flex items-center justify-center">
                 Request Program Guide
@@ -396,6 +397,7 @@ const IndustrialAutomationPage = () => {
               </span>
               <span className="absolute -inset-px bg-gradient-to-r from-red-500 to-transparent rounded-lg opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-500"></span>
             </button>
+          </Link>
           </div>
         </div>
       </div>
