@@ -99,7 +99,7 @@ const Navbar = () => {
               </button>
 
               {isOpen && (
-                <div className="absolute left-0 mt-2 w-full bg-white text-black rounded-lg shadow-md z-20">
+                <div className="absolute right-0 sm:left-0 mt-2 w-28 sm:w-full bg-white text-black rounded-lg shadow-md z-20">
                   <Link
                     href="https://courses.careertronic.com/"
                     className="block px-4 py-2 text-sm hover:bg-red-100 hover:text-red-700 rounded-t-lg"

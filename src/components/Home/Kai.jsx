@@ -840,7 +840,7 @@ const ServicesList = () => {
       className="bg-white text-black py-10 px-4 flex flex-col md:flex-row justify-evenly items-center space-y-6 md:space-y-0 md:space-x-16 lg:space-x-24 w-screen max-w-[110rem] mx-auto my-20"
     >
       <div>
-        <h3 className="text-red-500 text-3xl font-bold pb-2">
+        <h3 className="text-red-500 text-3xl font-bold pb-2 text-center">
           {count1.toLocaleString()}
         </h3>
         <p className="text-sm md:text-base">
@@ -850,7 +850,7 @@ const ServicesList = () => {
         </p>
       </div>
       <div>
-        <h3 className="text-red-500 text-3xl font-bold pb-2">
+        <h3 className="text-red-500 text-3xl font-bold pb-2 text-center">
           {count2.toLocaleString()}
         </h3>
         <p className="text-sm md:text-base">
@@ -860,7 +860,7 @@ const ServicesList = () => {
         </p>
       </div>
       <div className="text-center">
-        <h3 className="text-red-500 text-3xl font-bold pb-2">Top {topCount}</h3>
+        <h3 className="text-red-500 text-3xl font-bold pb-2 text-center">Top {topCount}</h3>
         <p className="text-sm md:text-base">
           in SaaS, fintech and more <br /> subcategories
         </p>
