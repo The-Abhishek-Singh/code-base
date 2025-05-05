@@ -28,6 +28,11 @@ const CertificateCarousel = () => {
           id: 5,
           image: '/coursePage/certificate5.jpg',
           title: 'Program Completion (DS)'
+        },
+        {
+          id: 6,
+          image: '/coursePage/certificate6.jpg',
+          title: 'Program Completion (IA)'
         }
     
       ];

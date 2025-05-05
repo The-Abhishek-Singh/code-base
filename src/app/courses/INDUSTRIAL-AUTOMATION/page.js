@@ -379,11 +379,11 @@ const skills = [
                 <div className='flex flex-col sm:flex-row w-full text-black gap-5'>
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                     <div className='h-auto'><p className='text-base md:text-lg'>Propgram Duration</p></div>
-                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>12</span> Months</p></div>
+                    <div className='sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'><span className='text-3xl'>6</span> Months</p></div>
                    </div> 
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                    <div className='h-auto'><p className='text-base md:text-lg'>Time Commitment</p></div>
-                   <div className='h-3/4 sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'>12-15 Hrs/Week</p></div>
+                   <div className='h-3/4 sm:border-r-4 flex items-center'><p className='font-bold text-lg md:text-2xl'>10-12 Hrs/Week</p></div>
                    </div> 
                    <div className='h-full flex-1 px-3 gap-5 flex flex-row sm:flex-col shrink-0 justify-between sm:justify-around'>
                    <div className='h-auto'><p className='text-base md:text-lg'>Placement Support</p></div>
@@ -416,7 +416,7 @@ const skills = [
     <div className='w-full lg:w-[60%] flex p-4 sm:p-6 md:p-10 lg:p-16 flex-col justify-around relative'>
         <ScrollReveal animation='fadeIn' delay={200} easing='smooth'>
             <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center lg:text-left mb-6 sm:mb-10 lg:mb-0 text-white leading-tight capitalize'>
-                How Can We Turn You Into an Expert in insdustrial automation?
+                How Can We Turn You Into an Expert in industrial automation?
             </h1>
         </ScrollReveal>
         
@@ -551,7 +551,7 @@ const skills = [
           duration={1400}
           delay={900}
           easing="bouncy">
-        <Button text='Download Brochure' />
+        <Button link='/coursePage/files/CGSPL Industrial automation (1).pdf' text='Download Brochure' download={'true'}/>
         </ScrollReveal>
         </div>
     </div>
