@@ -1,8 +1,85 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import ScrollReveal from "@/components/ScrollReveal";
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+  name: '',
+  email: '',
+  number: '',
+  subject: '',
+  message: ''
+});
+
+const [submitStatus, setSubmitStatus] = useState(null);
+const [submitting, setSubmitting] = useState(false);
+
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value
+  }));
+};
+
+const validateForm = () => {
+  return (
+    formData.name.trim() &&
+    formData.email.trim() &&
+    formData.subject.trim() &&
+    formData.message.trim()
+  );
+};
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  if (!validateForm()) return;
+
+  setSubmitting(true);
+  setSubmitStatus(null);
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "c821188b-ce06-4d31-b732-818ea907ac99", // Ma'am's access key 
+        // access_key: "6cfa41c1-dc52-4fa2-aa2e-3e853d8a68a6", // My access key
+        name: formData.name,
+        email: formData.email,
+        number: formData.number,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+    });
+
+    const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          number: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 3000);
+    }
+  };
+
+
   return (
     <>
       <Head>
@@ -101,97 +178,98 @@ export default function ContactPage() {
                     to you as soon as possible.
                   </p>
 
-                  <form className="space-y-5 relative">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                      <div>
-                        <label
-                          htmlFor="name"
-                          className="block text-gray-300 mb-2 text-sm"
-                        >
-                          Your Name <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          required
-                          className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          placeholder="John Doe"
-                        />
-                      </div>
-
-                      <div>
-                        <label
-                          htmlFor="email"
-                          className="block text-gray-300 mb-2 text-sm"
-                        >
-                          Email Address <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          type="email"
-                          id="email"
-                          required
-                          className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                          placeholder="your@email.com"
-                        />
-                      </div>
-                    </div>
-
+                 <form className="space-y-5 relative" onSubmit={handleSubmit}>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-gray-300 mb-2 text-sm"
-                      >
-                        Phone Number (Optional)
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                        placeholder="+1 (123) 456-7890"
-                      />
-                    </div>
-
-                    <div>
-                      <label
-                        htmlFor="subject"
-                        className="block text-gray-300 mb-2 text-sm"
-                      >
-                        Subject <span className="text-red-500">*</span>
+                      <label htmlFor="name" className="block text-gray-300 mb-2 text-sm">
+                        Your Name <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
-                        id="subject"
+                        id="name"
+                        name="name"
                         required
+                        value={formData.name}
+                        onChange={handleChange}
                         className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                        placeholder="How can we help you?"
+                        placeholder="John Doe"
                       />
                     </div>
 
                     <div>
-                      <label
-                        htmlFor="message"
-                        className="block text-gray-300 mb-2 text-sm"
-                      >
-                        Message <span className="text-red-500">*</span>
+                      <label htmlFor="email" className="block text-gray-300 mb-2 text-sm">
+                        Email Address <span className="text-red-500">*</span>
                       </label>
-                      <textarea
-                        id="message"
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
                         required
-                        rows={5}
-                        className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-none"
-                        placeholder="Please provide details about your inquiry..."
-                      ></textarea>
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                        placeholder="your@email.com"
+                      />
                     </div>
+                  </div>
 
-                    <div>
-                      <button
-                        type="submit"
-                        className="bg-gradient-to-r from-red-600 to-red-700 text-white font-medium px-8 py-3 rounded-lg relative overflow-hidden"
-                      >
-                        Submit
-                      </button>
-                    </div>
-                  </form>
+                  <div>
+                    <label htmlFor="number" className="block text-gray-300 mb-2 text-sm">
+                      Phone Number (Optional)
+                    </label>
+                    <input
+                      type="tel"
+                      id="number"
+                      name="number"
+                      value={formData.number}
+                      onChange={handleChange}
+                      className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      placeholder="1234567890"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="subject" className="block text-gray-300 mb-2 text-sm">
+                      Subject <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      required
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                      placeholder="How can we help you?"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-gray-300 mb-2 text-sm">
+                      Message <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-none"
+                      placeholder="Please provide details about your inquiry..."
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <button
+                      type="submit"
+                      className="bg-gradient-to-r from-red-600 to-red-700 text-white font-medium px-8 py-3 rounded-lg relative overflow-hidden"
+                    >
+                      {submitting ? 'Submitting...' : 'Submit'}
+                    </button>
+                  </div>
+                </form>
+
                 </div>
               </ScrollReveal>
             </div>

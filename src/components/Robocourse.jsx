@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Link from 'next/link';
 import ShineButton from './ShineButton';
 
 const Robocourse = () => {

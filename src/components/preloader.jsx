@@ -235,7 +235,7 @@ const AdvancedPreloader = ({ onComplete }) => {
       <div
         ref={logoRef}
         className="relative mb-4 w-32 h-32 bg-black rounded-full flex items-center 
-                   justify-center shadow-2xl transform hover:rotate-[360deg] 
+                   justify-center shadow-2xl transform
                    transition-transform duration-1000 group"
       >
         <img
@@ -252,7 +252,7 @@ const AdvancedPreloader = ({ onComplete }) => {
       </div>
       <h1
         ref={textRef}
-        className="text-5xl font-bold  tracking-wide text-center 
+        className="text-4xl sm:text-5xl font-bold  tracking-wide text-center 
                    text-white drop-shadow-[0_0_20px_rgba(239,68,68,0.3)] font-['BaronNeueBlack']"
       >
         CAREERTRONIC

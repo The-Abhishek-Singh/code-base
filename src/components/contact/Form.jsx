@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 const Form = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  name: '',
+  email: '',
+  number: '',
+  subject: '',
+  message: ''
+});
   const [submitting, setSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [errors, setErrors] = useState({});
@@ -32,6 +33,7 @@ const Form = () => {
     if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
     if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = 'Email is invalid';
+    if (!formData.number.trim()) newErrors.number = 'Phone number is required';
     if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
     
@@ -40,27 +42,51 @@ const Form = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    if (!validateForm()) return;
-    
-    setSubmitting(true);
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+  e.preventDefault();
+
+  if (!validateForm()) return;
+
+  setSubmitting(true);
+  setSubmitStatus(null);
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "6cfa41c1-dc52-4fa2-aa2e-3e853d8a68a6",
+        name: formData.name,
+        email: formData.email,
+        number: formData.number,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
       setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+      setFormData({
+        name: '',
+        email: '',
+        number: '',
+        subject: '',
+        message: ''
+      });
+    } else {
       setSubmitStatus('error');
-    } finally {
-      setSubmitting(false);
-      // Reset success message after 3 seconds
-      if (submitStatus === 'success') {
-        setTimeout(() => setSubmitStatus(null), 3000);
-      }
     }
-  };
+  } catch (error) {
+    setSubmitStatus('error');
+  } finally {
+    setSubmitting(false);
+    setTimeout(() => setSubmitStatus(null), 3000);
+  }
+};
 
   return (
     <StyledWrapper>
@@ -94,7 +120,20 @@ const Form = () => {
               />
               {errors.email && <span className="error-message">{errors.email}</span>}
             </div>
-            
+
+            <div className={`form-field ${errors.number ? 'error' : ''}`}>
+              <input
+                required
+                placeholder="Phone Number"
+                name="number"
+                value={formData.number}
+                onChange={handleChange}
+                className="input-field"
+                type="text"
+              />
+              {errors.number && <span className="error-message">{errors.number}</span>}
+            </div>
+
             <div className={`form-field subject-field ${errors.subject ? 'error' : ''}`}>
               <select
                 required

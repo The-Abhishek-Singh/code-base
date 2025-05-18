@@ -74,7 +74,7 @@ const OnboardingSection = () => {
         
         {/* Card Area */}
         <div className="flex items-center justify-center min-h-auto bg-black p-4">
-          <h2 className="text-white text-5xl text-center font-light mt-24 gap-2">
+          <h2 className="text-white text-3xl sm:text-5xl text-center font-light mt-24 gap-2">
             Discover the{" "}
             <span className="text-red-500 font-bold relative inline-block">
               unique features

@@ -330,7 +330,7 @@ const ServicesList = () => {
                   style={{ width: "140%" }}
                 ></span>
               </Link>
-              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+              <div className="absolute opacity-0 group-hover:opacity-100 hidden sm:block transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
                 Navigate to this page
               </div>
             </div>
@@ -347,7 +347,7 @@ const ServicesList = () => {
                   style={{ width: "143%" }}
                 ></span>
               </Link>
-              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+              <div className="absolute opacity-0 group-hover:opacity-100 hidden sm:block transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
                 Navigate to this page
               </div>
             </div>
@@ -361,7 +361,7 @@ const ServicesList = () => {
                   style={{ width: "107%", right: "-2rem" }}
                 ></span>
               </Link>
-              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+              <div className="absolute opacity-0 group-hover:opacity-100 hidden sm:block transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
                 Navigate to this page
               </div>
             </div>
@@ -375,7 +375,7 @@ const ServicesList = () => {
                   style={{ width: "107%", right: "-2rem" }}
                 ></span>
               </Link>
-              <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
+              <div className="absolute opacity-0 group-hover:opacity-100 hidden sm:block transition-opacity duration-300 bg-zinc-800 font-thin text-white text-sm py-1 px-2 rounded -top-8 left-1/2 transform -translate-x-1/2 z-20 whitespace-nowrap">
                 Navigate to this page
               </div>
             </div>
@@ -877,7 +877,7 @@ const ServicesList = () => {
             <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
           </h2>
           {/* Description */}
-          <p className="max-w-3xl mx-auto text-xl leading-relaxed my-16">
+          <p className="max-w-3xl mx-auto text-base sm:text-xl leading-relaxed my-16">
             At Careertronic Global Services, our strength lies in our skilled
             and passionate team, dedicated to delivering innovative solutions
             for your success. From software developers and IT trainers to
