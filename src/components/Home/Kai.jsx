@@ -5,7 +5,8 @@ import React, { useEffect, useState, useRef } from "react";
 import ScrollReveal from "../ScrollReveal";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const ServicesList = () => {
+const ServicesList = () => {   
+  
   const slides = ["/Partnerbg.png", "/partnerpg.png", "/OurTeam.png"];
   const [currentSlide, setCurrentSlide] = useState(0);
 
