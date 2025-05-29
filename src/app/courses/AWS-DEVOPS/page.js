@@ -14,6 +14,36 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 
 function page(){
+    const faqData = {
+    General: [
+      {id: 1, question: ' Who can take up this course?', answer: "Anyone interested in starting or advancing a career in AWS Cloud and DevOps can enroll. Whether you're a student, working professional, or someone switching careers, this course is structured for all levels."},
+      {id: 2, question: 'What is included in your course?', answer: "This course covers foundational to advanced topics in AWS Cloud and DevOps, including Linux, EC2, IAM, VPC, S3, CI/CD, Docker, Kubernetes, Jenkins, Infrastructure as Code (Terraform), and monitoring tools. It blends practical hands-on labs with theoretical knowledge to prepare you for real-world roles."},
+      {id: 3, question: 'What will the student gain from your course?', answer: "Students will gain deep insight into cloud architecture, automation, containerization, and deployment strategies. You'll be able to build, manage, and deploy cloud infrastructure using AWS and DevOps tools efficiently—skills highly sought after in today’s job market."},
+      {id: 4, question: 'How is this course going to help a student get a job?', answer: "This course is aligned with industry standards and includes practical projects, real-time scenarios, and resume-building guidance. It prepares students for AWS certifications (like AWS Certified Solutions Architect – Associate) and equips them with DevOps practices used by top tech companies, helping them crack technical interviews and perform confidently in professional roles."},
+      {id: 5, question: 'What are the job opportunities in this field?', answer: "Cloud and DevOps roles are among the most in-demand across tech sectors. Companies like Amazon, Google, Microsoft, Infosys, TCS, Accenture, Capgemini, and countless startups seek professionals skilled in AWS, CI/CD pipelines, Docker, Kubernetes, and infrastructure automation. This course provides the exact skill set these companies are hiring for."}
+    ],
+    Pricing: [
+      {id: 4, question: 'How much does it cost?', answer: "The course pricing starts at ₹35,000."},
+      {id: 5, question: 'Do you offer discounts?',answer: "Yes, we offer early-bird, referral-based, and seasonal discounts. Reach out to our team to check current offers."},
+      {id: 6, question: 'What payment methods do you accept?', answer: "We accept UPI, credit/debit cards, net banking, and major digital wallets. EMI options are available on request."}
+    ],
+    Features: [
+      {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: "You’ll learn essential DevOps tools like Git, Jenkins, Docker, Kubernetes, Ansible, Terraform, and monitoring tools like Prometheus & Grafana. On the AWS side, you’ll master services like EC2, Lambda, S3, RDS, CloudFormation, and more—all of which are widely used in enterprise environments."},
+      {id: 8, question: ' How will I access the softwares required for programming?', answer: "We guide you through installing and accessing all required tools, many of which are open-source or available via AWS Free Tier. Virtual lab access or cloud practice environments will also be provided."}, 
+      {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: "You’ll work on use-cases such as deploying a full-stack application using CI/CD, automating infrastructure with Terraform, container orchestration with Kubernetes, and configuring monitoring dashboards. These mimic real-world DevOps and AWS project scenarios."},
+      {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: "This course builds a strong foundation in cloud infrastructure and automation—skills that are highly beneficial for research in scalable systems, distributed computing, and systems automation. It’s also great preparation for academic research involving cloud-native or hybrid computing environments."}
+    ],
+    Support: [
+      {id: 11, question: 'How can I contact support?' , answer: "You can contact our support team via email, WhatsApp, or through the chat function on our website. Contact details are listed on the course page."},
+      {id: 12, question: 'What are your support hours?', answer: "Our support team is available from 10:00 AM to 6:00 PM IST, Monday to Saturday."},
+      {id: 13, question: 'Do you have documentation?', answer: "Yes, we provide full documentation, reference materials, GitHub repositories, and recorded sessions to support your learning journey."}
+    ],
+    Security: [
+      {id: 14, question: 'Is my data secure?', answer: "Yes, we follow best practices in data privacy and security. Your data is securely stored and protected."},
+      {id: 15, question: 'Do you support 2FA?', answer: "Yes, we support two-factor authentication (2FA) for secure account access."},
+      {id: 16, question: 'What encryption do you use?', answer: "We use AES-256 encryption and secure HTTPS protocols to protect all user data during transmission and at rest."}
+    ]
+  };
   const reviews = [
     {
       initials: "A",
@@ -1215,7 +1245,7 @@ const skills = [
 
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
-            <FAQSection />
+            <FAQSection faqData={faqData} />
         </div>
 
     </div>

@@ -14,6 +14,36 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 
 function page(){
+    const faqData = {
+    General: [
+      {id: 1, question: ' Who can take up this course?', answer: "Anyone curious about working with data—students, recent graduates, working professionals, or career changers—can take up this course. Prior experience in programming or analytics is helpful but not mandatory. A basic understanding of Excel and logical thinking is enough to get started."},
+      {id: 2, question: 'What is included in your course?', answer: "This course covers the complete data analytics lifecycle—data collection, data cleaning, visualization, statistical analysis, and reporting. It includes hands-on training in Excel, SQL, Python (Pandas, Matplotlib), Power BI, Tableau, and business intelligence concepts."},
+      {id: 3, question: 'What will the student gain from your course?', answer: "You’ll gain the ability to interpret data, create visual dashboards, generate insights, and support data-driven decision-making. By the end of the course, students will be able to independently analyze datasets, automate reports, and present findings in a business context."},
+      {id: 4, question: 'How is this course going to help a student get a job?', answer: "The course is tailored to industry requirements with job-ready skills and real-world projects like sales analysis, customer churn, or market segmentation. You'll also get interview prep, resume support, and a strong portfolio—opening doors to roles such as Data Analyst, Business Analyst, or Reporting Analyst."},
+      {id: 5, question: 'What are the job opportunities in this field?', answer: "Data analytics is one of the fastest-growing domains across industries including finance, healthcare, retail, logistics, and tech. Companies like Deloitte, Accenture, Amazon, TCS, and numerous startups actively hire analysts to support their data-driven strategies."}
+    ],
+    Pricing: [
+      {id: 4, question: 'How much does it cost?', answer: "The course pricing starts at ₹35,000."},
+      {id: 5, question: 'Do you offer discounts?', answer: "Yes, we offer discounts for early birds, college students, group enrollments, and special seasonal promotions. Get in touch with our support team to check current offers."},
+      {id: 6, question: 'What payment methods do you accept?', answer: "We accept UPI, net banking, credit/debit cards, and major wallets. EMI options are available through supported payment gateways."}
+    ],
+    Features: [
+      {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: "We teach Excel (Advanced), SQL (for querying databases), Python (Pandas, NumPy, Matplotlib), Power BI, and Tableau. These tools are industry standards used by professionals to analyze and visualize data effectively."},
+      {id: 8, question: ' How will I access the softwares required for programming?', answer: "All tools taught are either free, open-source, or have community editions. You'll use platforms like Google Colab, MySQL Workbench, Tableau Public, and Power BI Desktop, all of which are supported with guided installation and access instructions."}, 
+      {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: "These tools are used for building dashboards, tracking KPIs, forecasting trends, analyzing customer behavior, and making data-backed business decisions. The projects in this course simulate real scenarios from sales, marketing, operations, and finance departments."},
+      {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: "This course builds a strong analytical foundation with statistical reasoning, data storytelling, and tools often used in research. It’s an excellent starting point for graduate programs in Business Analytics, Data Science, or Applied Statistics, and prepares students for research-based data interpretation."}
+    ],
+    Support: [
+      {id: 11, question: 'How can I contact support?', answer: "You can contact our team through email, live chat on the website, or WhatsApp. We are always ready to assist with technical or academic queries."},
+      {id: 12, question: 'What are your support hours?', answer: "Our support team is available from 10:00 AM to 6:00 PM IST, Monday through Saturday."},
+      {id: 13, question: 'Do you have documentation?', answer: "Yes, we provide comprehensive PDF manuals, reference guides, wiring diagrams, software tutorials, and recorded video sessions for every module covered in the course."}
+    ],
+    Security: [
+      {id: 14, question: 'Is my data secure?', answer: "Absolutely. We use industry-standard practices to protect your personal data and learning progress, including encrypted data storage and secure servers."},
+      {id: 15, question: 'Do you support 2FA?', answer: "Yes, we offer two-factor authentication (2FA) to ensure secure access to your student portal and course-related tools."},
+      {id: 16, question: 'What encryption do you use?', answer: "We follow modern data protection standards and use AES-256 encryption and HTTPS protocol to safeguard your data during storage and transmission."}
+    ]
+  };
   const reviews = [
     {
       initials: "A",
@@ -1536,7 +1566,7 @@ const skills = [
 
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
-            <FAQSection />
+            <FAQSection faqData={faqData} />
         </div>
 
     </div>

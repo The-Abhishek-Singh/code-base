@@ -14,6 +14,36 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 
 function page(){
+    const faqData = {
+      General: [
+        {id: 1, question: ' Who can take up this course?', answer: "This course is open to anyone interested in building mobile or desktop applications—from beginners to intermediate developers. Whether you’re a student, tech enthusiast, or working professional aiming to enter app development, this course is structured for you."},
+        {id: 2, question: 'What is included in your course?', answer: "The course covers full-cycle application development including UI/UX design, front-end logic, back-end integration, and deployment. We cover platforms like Android (using Java/Kotlin), iOS (using Swift), and cross-platform tools like Flutter and React Native. You’ll also learn about REST APIs, databases, and state management."},
+        {id: 3, question: 'What will the student gain from your course?', answer: "Students will gain hands-on experience in building real-world applications from scratch. You’ll learn to design intuitive UIs, integrate databases, connect APIs, handle authentication, and publish apps to platforms like Google Play Store and Apple App Store."},
+        {id: 4, question: 'How is this course going to help a student get a job?', answer: "This course equips students with industry-relevant skills through project-based learning. You'll build a portfolio with apps such as chat apps, e-commerce platforms, and productivity tools. Combined with resume and interview prep, you'll be ready for roles like App Developer, Mobile Engineer, or Full-Stack App Developer."},
+        {id: 5, question: 'What are the job opportunities in this field?', answer: "App development is one of the fastest-growing domains in tech. Companies building consumer apps, enterprise tools, or startups focusing on digital products constantly hire app developers skilled in Flutter, React Native, Android, iOS, and Firebase. Freelancing and indie app publishing are also major opportunities in this field."}
+      ],
+      Pricing: [
+        {id: 4, question: 'How much does it cost?', answer: "The course pricing starts at ₹35,000."},
+        {id: 5, question: 'Do you offer discounts?', answer: "Yes, we offer discounts for early enrollments, referrals, students, and during special promotions. Contact support for current deals."},
+        {id: 6, question: 'What payment methods do you accept?', answer: "We accept UPI, credit/debit cards, net banking, and major digital wallets. EMI options are available based on your preferred gateway."}
+      ],
+      Features: [
+        {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: "You’ll learn tools like Android Studio, Xcode, Flutter, Firebase, Git, Figma, and Postman. These are the same tools used by professionals in companies like Google, Meta, Swiggy, and Flipkart to build scalable applications."},
+        {id: 8, question: ' How will I access the softwares required for programming?', answer: "All necessary tools are either open-source or have free versions. We guide you through installation and setup for Android, iOS (Mac users), and cross-platform development environments."}, 
+        {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: "Students will build production-ready apps that involve real-time data handling, user authentication, push notifications, in-app navigation, and deployment. These are standard components in apps used daily in domains like social networking, health, education, and e-commerce."},
+        {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: "The course provides a strong practical and conceptual foundation in mobile computing and software architecture—ideal for MS/PhD in Computer Science or Human-Computer Interaction. It also prepares you for publishing research-oriented applications or building prototypes for academic submissions."}
+      ],
+      Support: [
+        {id: 11, question: 'How can I contact support?', answer: "Support is available via email, website chat, and WhatsApp. Contact details are listed on our course page for immediate assistance."},
+        {id: 12, question: 'What are your support hours?', answer: "Support is active from 10:00 AM to 6:00 PM IST, Monday through Saturday."},
+        {id: 13, question: 'Do you have documentation?', answer: "Yes, we provide complete documentation, source code templates, project guides, cheat sheets, and access to recorded sessions to ensure a smooth learning experience."}
+      ],
+      Security: [
+        {id: 14, question: 'Is my data secure?', answer: "Absolutely. We prioritize your data privacy with industry-standard security protocols and storage policies."},
+        {id: 15, question: 'Do you support 2FA?', answer: "Yes, we support two-factor authentication (2FA) for secure logins to your student portal and code"},
+        {id: 16, question: 'What encryption do you use?', answer: "We use AES-256 encryption and HTTPS across our platform to secure all communications and personal data."}
+      ]
+    };
   const reviews = [
     {
       initials: "A",
@@ -1305,7 +1335,7 @@ const skills = [
 
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
-            <FAQSection />
+            <FAQSection faqData={faqData} />
         </div>
 
     </div>

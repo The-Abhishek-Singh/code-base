@@ -14,6 +14,36 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 
 function page(){
+    const faqData = {
+    General: [
+      {id: 1, question: ' Who can take up this course?', answer: "Anyone interested in protecting digital systems and data—whether you're a student, IT professional, or career switcher—can take this course. No prior experience in cybersecurity is required, but a basic understanding of networking and operating systems is beneficial."},
+      {id: 2, question: 'What is included in your course?', answer: "The course covers a broad range of topics including network security, ethical hacking, penetration testing, cryptography, vulnerability assessment, SIEM tools, firewall management, and secure coding practices. It also includes hands-on labs and simulations of real-world cyber attacks."},
+      {id: 3, question: 'What will the student gain from your course?', answer: "You’ll gain practical skills in identifying vulnerabilities, defending systems against cyber threats, securing networks, and conducting ethical hacking. By the end, you’ll be confident in handling real security challenges and conducting risk assessments."},
+      {id: 4, question: 'How is this course going to help a student get a job?', answer: "The course is aligned with industry certifications like CEH, CompTIA Security+, and CISSP. You'll build a strong portfolio of penetration testing reports, incident response strategies, and security audits—skills highly sought after by employers in the cybersecurity space."},
+      {id: 5, question: 'What are the job opportunities in this field?', answer: "Cybersecurity is a high-demand field with job roles like Security Analyst, Ethical Hacker, SOC Analyst, Penetration Tester, and Cybersecurity Engineer. Companies across IT, banking, healthcare, and government actively hire cybersecurity professionals to secure digital infrastructure."}
+    ],
+    Pricing: [
+      {id: 4, question: 'How much does it cost?', answer: "The course pricing starts at ₹35,000."},
+      {id: 5, question: 'Do you offer discounts?', answer: "Yes, we offer discounts for early birds, college students, group enrollments, and special seasonal promotions. Get in touch with our support team to check current offers."},
+      {id: 6, question: 'What payment methods do you accept?', answer: "We accept UPI, net banking, credit/debit cards, and major wallets. EMI options are available through supported payment gateways."}
+    ],
+    Features: [
+      {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: "We teach widely used tools such as Wireshark, Nmap, Burp Suite, Metasploit, Nessus, Kali Linux, and Splunk. These are core tools in the industry for network monitoring, vulnerability scanning, penetration testing, and incident detection."},
+      {id: 8, question: ' How will I access the softwares required for programming?', answer: "We provide links to download open-source and community editions of all required tools. Virtual machines and cloud labs are also included so you can safely practice offensive and defensive security techniques in isolated environments."}, 
+      {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: "The skills taught are used every day in securing enterprise networks, performing red/blue team exercises, analyzing malware, and preventing data breaches. You'll work on simulations that reflect actual threats companies face today."},
+      {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: "This course lays a strong foundation in core cybersecurity principles and practices—essential for advanced research in cryptography, cyber forensics, or security policy. It equips students with the knowledge needed for academic publications, thesis work, or research assistant roles in the field of cybersecurity."}
+    ],
+    Support: [
+      {id: 11, question: 'How can I contact support?', answer: "You can contact our team through email, live chat on the website, or WhatsApp. We are always ready to assist with technical or academic queries."},
+      {id: 12, question: 'What are your support hours?', answer: "Our support team is available from 10:00 AM to 6:00 PM IST, Monday through Saturday."},
+      {id: 13, question: 'Do you have documentation?', answer: "Yes, we provide comprehensive PDF manuals, reference guides, wiring diagrams, software tutorials, and recorded video sessions for every module covered in the course."}
+    ],
+    Security: [
+      {id: 14, question: 'Is my data secure?', answer: "Absolutely. We use industry-standard practices to protect your personal data and learning progress, including encrypted data storage and secure servers."},
+      {id: 15, question: 'Do you support 2FA?', answer: "Yes, we offer two-factor authentication (2FA) to ensure secure access to your student portal and course-related tools."},
+      {id: 16, question: 'What encryption do you use?', answer: "We follow modern data protection standards and use AES-256 encryption and HTTPS protocol to safeguard your data during storage and transmission."}
+    ]
+  };
   const reviews = [
     {
       initials: "A",
@@ -1262,7 +1292,7 @@ const skills = [
 
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
-            <FAQSection />
+            <FAQSection faqData={faqData} />
         </div>
 
     </div>

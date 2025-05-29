@@ -14,6 +14,36 @@ import ScrollReveal from '@/components/ScrollReveal';
 
 
 function page(){
+    const faqData = {
+    General: [
+      {id: 1, question: ' Who can take up this course?', answer: "This course is ideal for students, recent graduates, software engineers, analysts, or anyone with a keen interest in data and problem-solving. A basic understanding of mathematics and programming (preferably Python) is helpful but not mandatory."},
+      {id: 2, question: 'What is included in your course?', answer: "The course covers the complete data science pipeline—from data collection and cleaning to visualization, statistical analysis, machine learning, and model deployment. It also includes Python programming, libraries like Pandas, NumPy, Scikit-learn, TensorFlow, and tools like Jupyter, Git, and cloud platforms."},
+      {id: 3, question: 'What will the student gain from your course?', answer: "Students will gain hands-on experience in solving real-world data problems. By the end of the course, they’ll be able to build machine learning models, create data visualizations, work with large datasets, and deploy models using tools like Flask or Streamlit."},
+      {id: 4, question: 'How is this course going to help a student get a job?', answer: "The course is designed with industry use-cases, resume projects, and interview preparation content. You'll build a strong portfolio with projects like customer segmentation, fraud detection, or sales forecasting—making you ready for roles such as Data Analyst, Data Scientist, or ML Engineer."},
+      {id: 5, question: 'What are the job opportunities in this field?', answer: "Data science is a top in-demand career across industries like finance, healthcare, e-commerce, logistics, and IT. Companies like Google, Amazon, Accenture, Deloitte, and many startups actively hire for roles in analytics, machine learning, and AI development."}
+    ],
+    Pricing: [
+      {id: 4, question: 'How much does it cost?', answer: "The course pricing starts at ₹35,000."},
+      {id: 5, question: 'Do you offer discounts?', answer: "Yes, we offer discounts for early birds, college students, group enrollments, and special seasonal promotions. Get in touch with our support team to check current offers."},
+      {id: 6, question: 'What payment methods do you accept?', answer: "We accept UPI, net banking, credit/debit cards, and major wallets. EMI options are available through supported payment gateways."}
+    ],
+    Features: [
+      {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: "We teach tools such as Python (with Pandas, NumPy, Matplotlib, Scikit-learn), SQL, Power BI, Tableau, Jupyter Notebooks, and Git. These are widely used by data professionals globally to perform analysis, build models, and communicate results."},
+      {id: 8, question: ' How will I access the softwares required for programming?', answer: "All tools used in this course are free or open-source. Installation guides and cloud-based options like Google Colab or Kaggle Notebooks are provided, so you can practice without any local setup hassles."}, 
+      {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: "Everything taught—from EDA to machine learning—is used by businesses to solve real problems like churn prediction, stock forecasting, NLP-based chatbots, or recommender systems. You'll work on similar projects that directly simulate these real-world applications."},
+      {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: "The course builds a strong foundation in statistics, machine learning, and data modeling—key components for research in fields like AI, bioinformatics, computational finance, and more. It also prepares students to publish project-based research or build prototypes for academic submission."}
+    ],
+    Support: [
+      {id: 11, question: 'How can I contact support?', answer: "You can contact our team through email, live chat on the website, or WhatsApp. We are always ready to assist with technical or academic queries."},
+      {id: 12, question: 'What are your support hours?', answer: "Our support team is available from 10:00 AM to 6:00 PM IST, Monday through Saturday."},
+      {id: 13, question: 'Do you have documentation?', answer: "Yes, we provide comprehensive PDF manuals, reference guides, wiring diagrams, software tutorials, and recorded video sessions for every module covered in the course."}
+    ],
+    Security: [
+      {id: 14, question: 'Is my data secure?', answer: "Absolutely. We use industry-standard practices to protect your personal data and learning progress, including encrypted data storage and secure servers."},
+      {id: 15, question: 'Do you support 2FA?', answer: "Yes, we offer two-factor authentication (2FA) to ensure secure access to your student portal and course-related tools."},
+      {id: 16, question: 'What encryption do you use?', answer: "We follow modern data protection standards and use AES-256 encryption and HTTPS protocol to safeguard your data during storage and transmission."}
+    ]
+  };
   const reviews = [
     {
       initials: "A",
@@ -1300,7 +1330,7 @@ const skills = [
 
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
-            <FAQSection />
+            <FAQSection faqData={faqData} />
         </div>
 
     </div>

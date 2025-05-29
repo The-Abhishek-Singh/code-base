@@ -328,6 +328,36 @@ const jobRoles = [
   }
 ];
 
+  const faqData = {
+    General: [
+      {id: 1, question: ' Who can take up this course?', answer: "Anyone interested in automation technologies—including students, diploma holders, and professionals from Electrical, Electronics, Instrumentation, or Mechanical backgrounds—can join. No prior industrial experience is required; we start from fundamentals and go up to industry-level applications."},
+      {id: 2, question: 'What is included in your course?', answer: "This course includes PLC programming, SCADA systems, HMI interfaces, DCS concepts, industrial sensors, VFDs, panel wiring basics, and IIoT integration. It blends theoretical knowledge with hands-on simulations and real-world case studies from power plants, manufacturing units, and process industries."},
+      {id: 3, question: 'What will the student gain from your course?', answer: "Students gain deep insights into how industrial systems are automated and monitored. You'll learn to program PLCs, create SCADA interfaces, configure sensors/actuators, troubleshoot processes, and apply automation logic to real machines and production lines."},
+      {id: 4, question: 'How is this course going to help a student get a job?', answer: "The course builds job-ready skills through practical exposure to tools used in actual industrial environments. From ladder logic programming to real-time SCADA design and industrial protocols like Modbus, students gain experience aligned with job roles in automation companies, OEMs, EPC firms, and manufacturing industries."},
+      {id: 5, question: 'What are the job opportunities in this field?', answer: "Industrial automation is a core pillar of smart manufacturing and Industry 4.0. Career opportunities exist in companies like Siemens, ABB, Rockwell, Schneider, Honeywell, Mitsubishi, and Larsen & Toubro for roles such as Automation Engineer, PLC Programmer, Instrumentation Engineer, SCADA Engineer, or Control System Designer."}
+    ],
+    Pricing: [
+      {id: 4, question: 'How much does it cost?', answer: "The course pricing starts at ₹35,000."},
+      {id: 5, question: 'Do you offer discounts?', answer: "Yes, we offer discounts for early birds, college students, group enrollments, and special seasonal promotions. Get in touch with our support team to check current offers."},
+      {id: 6, question: 'What payment methods do you accept?', answer: "We accept UPI, net banking, credit/debit cards, and major wallets. EMI options are available through supported payment gateways."}
+    ],
+    Features: [
+      {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: "We train on software tools like Siemens TIA Portal, Allen Bradley RSLogix, Delta WPLSoft, WinCC, FactoryTalk View, and SCADA platforms like Wonderware or iFIX. These tools are widely used in real-world automation and industrial control systems."},
+      {id: 8, question: ' How will I access the softwares required for programming?', answer: "We provide access to simulation software or licensed educational/trial versions of PLC and SCADA tools. Detailed setup instructions are shared, and students can practice directly on their laptops or in our virtual labs."}, 
+      {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: "Everything taught is directly applicable in industries like power generation, steel, cement, oil & gas, pharmaceuticals, and food processing. From packaging machines to control rooms of power plants, these tools run automated operations globally."},
+      {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: "The course provides a strong foundation in automation, control theory, and instrumentation—essential for research in areas like robotics, process control, mechatronics, or industrial IoT. It prepares students to handle research tools, write automation code, and develop prototypes for academic projects or thesis work."}
+    ],
+    Support: [
+      {id: 11, question: 'How can I contact support?', answer: "You can contact our team through email, live chat on the website, or WhatsApp. We are always ready to assist with technical or academic queries."},
+      {id: 12, question: 'What are your support hours?', answer: "Our support team is available from 10:00 AM to 6:00 PM IST, Monday through Saturday."},
+      {id: 13, question: 'Do you have documentation?', answer: "Yes, we provide comprehensive PDF manuals, reference guides, wiring diagrams, software tutorials, and recorded video sessions for every module covered in the course."}
+    ],
+    Security: [
+      {id: 14, question: 'Is my data secure?', answer: "Absolutely. We use industry-standard practices to protect your personal data and learning progress, including encrypted data storage and secure servers."},
+      {id: 15, question: 'Do you support 2FA?', answer: "Yes, we offer two-factor authentication (2FA) to ensure secure access to your student portal and course-related tools."},
+      {id: 16, question: 'What encryption do you use?', answer: "We follow modern data protection standards and use AES-256 encryption and HTTPS protocol to safeguard your data during storage and transmission."}
+    ]
+  };
 
 const skills = [
   'PLC Programming', 'SCADA', 'HMI', 'Ladder Logic', 'Industrial IoT',
@@ -1333,7 +1363,7 @@ const skills = [
 
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
-            <FAQSection />
+            <FAQSection faqData={faqData} />
         </div>
 
     </div>

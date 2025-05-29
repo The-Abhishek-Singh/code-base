@@ -115,7 +115,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between items-center mt-6">
           {/* Social Media */}
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a href="https://www.linkedin.com/company/careertronic/posts/?feedView=all                                   " className="text-gray-400 hover:text-white">
               <FaLinkedinIn size={20} />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
@@ -124,7 +124,7 @@ const Footer = () => {
             <a href="#" className="text-gray-400 hover:text-white">
               <FaFacebookF size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            <a href="https://www.instagram.com/careertronic_edu/" className="text-gray-400 hover:text-white">
               <FaInstagram size={20} />
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
