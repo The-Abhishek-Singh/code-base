@@ -13,6 +13,36 @@ import { FaStore, FaTasks, FaChartBar, FaHospital, FaHome, FaGraduationCap } fro
 import ScrollReveal from '@/components/ScrollReveal';
 
 function page(){
+    const faqData = {
+    General: [
+      {id: 1, question: ' Who can take up this course?', answer: 'Anyone interested in learning web development—from absolute beginners to those wanting to upgrade from front-end to full-stack—can join this course. No prior coding experience is required; we start from scratch.'},
+      {id: 2, question: 'What is included in your course?', answer: 'This course covers everything from HTML, CSS, and JavaScript to advanced front-end frameworks (like React or Vue), back-end technologies (Node.js, Express), databases (MongoDB, MySQL), REST APIs, version control with Git, deployment, and best practices for responsive and accessible web design.'},
+      {id: 3, question: 'What will the student gain from your course?', answer: "By the end of this course, students will be able to build modern, scalable web applications from scratch. You'll understand how the web works, write clean code, connect front-end and back-end systems, deploy apps to cloud platforms, and follow real-world development workflows using Git and GitHub."},
+      {id: 4, question: 'How is this course going to help a student get a job?', answer: "The course is project-based and industry-focused. You’ll build a full portfolio including real-world projects like e-commerce sites, blogs, dashboards, and portfolio websites. These hands-on experiences, along with GitHub repositories and resume assistance, make you job-ready for roles like Frontend Developer, Backend Developer, or Full-Stack Developer."},
+      {id: 5, question: 'What are the job opportunities in this field?', answer: "Web development continues to be one of the most in-demand skills in tech. Companies of all sizes—from startups to tech giants like Google, Meta, TCS, Infosys, and Wipro—are always looking for web developers skilled in modern technologies. Freelancing, remote work, and product development are also viable career paths."}
+    ],
+    Pricing: [
+      {id: 4, question: 'How much does it cost?', answer: "The course pricing starts at ₹35,000 INR."},
+      {id: 5, question: 'Do you offer discounts?', answer: "Yes, we provide discounts for early registrations, group enrollments, students, and occasionally offer special seasonal promotions. Contact our support for the latest offers."},
+      {id: 6, question: 'What payment methods do you accept?', answer: "We accept UPI, credit/debit cards, net banking, and digital wallets. EMI options are available for certain payment gateways."}
+    ],
+    Features: [
+      {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: "You’ll master tools like VS Code, Git, GitHub, Chrome DevTools, Postman, and platforms like Netlify, Vercel, and Heroku. We also teach frameworks such as React, Bootstrap, and Tailwind, which are widely used in the industry for fast, responsive development."},
+      {id: 8, question: 'How will I access the softwares required for programming?', answer: "All tools used in the course are open-source or free to use. We guide you through downloading, installing, and setting them up on your own machine for hands-on practice."}, 
+      {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: "Every tool and concept taught is aligned with industry practices. You’ll learn how to build and deploy websites, create responsive designs, manage APIs, handle authentication, integrate databases, and set up DevOps workflows for modern web applications."},
+      {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: "Strong knowledge of web technologies is essential for MS or research in fields like Human-Computer Interaction (HCI), Software Engineering, or Information Systems. This course helps you build a solid portfolio, understand full-stack systems, and prepare for technical interviews or research project development."}
+    ],
+    Support: [
+      {id: 11, question: 'How can I contact support?', answer: "You can reach out via email, website chat, or WhatsApp. Our contact details are listed on the course page for quick assistance."},
+      {id: 12, question: 'What are your support hours?', answer: "Our support team is available Monday to Saturday, from 10:00 AM to 6:00 PM IST."},
+      {id: 13, question: 'Do you have documentation?', answer: "Yes, we provide complete documentation, reference guides, GitHub repositories, recorded lectures, and cheat sheets to support your learning process."}
+    ],
+    Security: [
+      {id: 14, question: 'Is my data secure?', answer: "Absolutely. We take data privacy seriously and follow industry-standard security practices to protect your personal information."},
+      {id: 15, question: 'Do you support 2FA?', answer: "Yes, we support two-factor authentication (2FA) to ensure secure access to your student portal and course materials."},
+      {id: 16, question: 'What encryption do you use?', answer: "We use AES-256 encryption and enforce HTTPS across our platform to keep all user data safe during storage and transmission."}
+    ]
+  };
   const reviews = [
     {
       initials: "A",
@@ -1239,7 +1269,7 @@ const skills = [
 
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
-            <FAQSection />
+            <FAQSection faqData={faqData} />
         </div>
 
     </div>

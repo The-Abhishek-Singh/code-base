@@ -796,7 +796,7 @@ const ServicesList = () => {
 
               {/* AI-Assisted Problem Solving */}
               <ScrollReveal
-                animation="slideLeft"
+                animation="scaleUp"
                 duration={900}
                 delay={300}
                 easing="spring"
@@ -814,7 +814,7 @@ const ServicesList = () => {
 
               {/* Teaching Assistance */}
               <ScrollReveal
-                animation="slideLeft"
+                animation="scaleUp"
                 duration={900}
                 delay={300}
                 easing="spring"

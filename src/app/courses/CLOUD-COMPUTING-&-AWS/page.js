@@ -15,6 +15,36 @@ import Link from 'next/link';
 
 
 function page(){
+    const faqData = {
+    General: [
+      {id: 1, question: ' Who can take up this course?', answer: "This course is designed for students, IT professionals, system administrators, developers, and anyone interested in cloud technologies. Whether you're a beginner or looking to upskill for cloud-based roles, this course covers everything from foundational concepts to advanced deployment on AWS."},
+      {id: 2, question: 'What is included in your course?', answer: "The course includes core cloud computing principles, AWS architecture, services like EC2, S3, RDS, Lambda, IAM, VPC, CloudFormation, auto-scaling, load balancing, and real-world deployment practices. It also covers DevOps integration, monitoring, and cloud security basics."},
+      {id: 3, question: 'What will the student gain from your course?', answer: "Students will gain hands-on experience in deploying scalable, fault-tolerant applications on AWS. You'll learn how to design cloud infrastructure, manage storage and databases, automate deployments, and prepare for industry certifications like AWS Certified Solutions Architect and AWS DevOps Engineer."},
+      {id: 4, question: 'How is this course going to help a student get a job?', answer: "Cloud computing is one of the most in-demand skills globally. This course prepares students for AWS certifications and builds a job-ready portfolio through real-world projects—making them eligible for roles like Cloud Engineer, AWS Solutions Architect, DevOps Engineer, or Infrastructure Specialist."},
+      {id: 5, question: 'What are the job opportunities in this field?', answer: "Companies across all industries are shifting to the cloud. This opens up roles in startups, enterprise IT, and global cloud service providers like Amazon, Microsoft, Google, Accenture, and Infosys. Cloud and DevOps roles are consistently among the highest-paying tech jobs today."}
+    ],
+    Pricing: [
+      {id: 4, question: 'How much does it cost?', answer: "The course pricing starts at ₹35,000 INR."},
+      {id: 5, question: 'Do you offer discounts?', answer: "Yes, we offer discounts for early birds, college students, group enrollments, and special seasonal promotions. Get in touch with our support team to check current offers."},
+      {id: 6, question: 'What payment methods do you accept?', answer: "We accept UPI, net banking, credit/debit cards, and major wallets. EMI options are available through supported payment gateways."}
+    ],
+    Features: [
+      {id: 7, question: 'What software skills are you teaching and how well are these tools used in the industry?', answer: "You will learn to work with AWS CLI, EC2, S3, Lambda, RDS, CloudWatch, CloudFormation, IAM, and networking tools. The course also introduces infrastructure as code (IaC) using Terraform, and DevOps tools like Git, Jenkins, and Docker—all of which are used in modern cloud-based environments."},
+      {id: 8, question: ' How will I access the softwares required for programming?', answer: "We guide you in setting up your own AWS Free Tier account so you can practice on actual cloud infrastructure. You’ll also use local tools like VS Code and Postman, and cloud IDEs like AWS Cloud9. Setup instructions and support are included."}, 
+      {id: 9, question: 'What is the real world application for the tools and techniques will you teach in this course?', answer: "These tools are used daily by cloud professionals to deploy microservices, host applications, automate infrastructure, manage data, and monitor systems. You’ll build real projects like hosting a dynamic website on AWS, deploying serverless functions, and automating backups and alerts."},
+      {id: 10, question: "How is your course going to help a student's path to MS or PhD?", answer: "This course provides a solid grounding in cloud infrastructure, distributed systems, and automation—topics commonly researched in computer science graduate programs. It also prepares students for academic research in cloud-native computing, serverless architecture, and scalable system design."}
+    ],
+    Support: [
+      {id: 11, question: 'How can I contact support?', answer: "You can contact our team through email, live chat on the website, or WhatsApp. We are always ready to assist with technical or academic queries."},
+      {id: 12, question: 'What are your support hours?', answer: "Our support team is available from 10:00 AM to 6:00 PM IST, Monday through Saturday."},
+      {id: 13, question: 'Do you have documentation?', answer: "Yes, we provide comprehensive PDF manuals, reference guides, wiring diagrams, software tutorials, and recorded video sessions for every module covered in the course."}
+    ],
+    Security: [
+      {id: 14, question: 'Is my data secure?', answer: "Absolutely. We use industry-standard practices to protect your personal data and learning progress, including encrypted data storage and secure servers."},
+      {id: 15, question: 'Do you support 2FA?', answer: "Yes, we offer two-factor authentication (2FA) to ensure secure access to your student portal and course-related tools."},
+      {id: 16, question: 'What encryption do you use?', answer: "We follow modern data protection standards and use AES-256 encryption and HTTPS protocol to safeguard your data during storage and transmission."}
+    ]
+  };
   const reviews = [
     {
       initials: "A",
@@ -1299,7 +1329,7 @@ const skills = [
 
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
-            <FAQSection />
+            <FAQSection faqData={faqData}/>
         </div>
 
     </div>

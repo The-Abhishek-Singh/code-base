@@ -112,7 +112,7 @@ const Hero = () => {
   return (
     <div className='mb-36 px-5 md:px-10 lg:p-0'>
       <div 
-        className='h-screen md:h-[80vh] lg:h-screen w-full bg-black flex relative mt-[-13vh] lg:mt-[0%] xl:mt-[0%] flex-col justify-center min-h-[90vh-6rem]'
+        className='max-[500px]-h-[80vw] w-full bg-black flex flex-col justify-center relative mt-[-10vh] lg:mt-48'
         style={{ 
           opacity: scrollFade,
           transform: heroTransform,
@@ -121,7 +121,7 @@ const Hero = () => {
       >
         {/* CONTENT DIV */}
         <div
-        className='sm:mt-[25vh] md:mt-[34vh] md:min-w-[20rem] max-[642px]:mt-[10rem] max-[490px]:mt-[10rem] max-[485px]:mt-[15rem] md:ml-[4%] xl:ml-[5%] lg:mt-[-20vh] xl:mt-[-25vh] 2xl:mt-[-9vh] z-40 max-[425px]:mt-[-5vh] text-[1rem] max-[484px]:mt-[15vh] max-[485px]:text-[0.8rem]' 
+        className='sm:mt-[25vh] md:mt-[34vh] md:min-w-[20rem] max-[642px]:mt-[10rem] max-[490px]:mt-[10rem] max-[485px]:mt-[15rem] md:ml-[3%] xl:ml-[4%] lg:mt-[-20vh] xl:mt-[-25vh] 2xl:mt-[-9vh] z-40 max-[425px]:mt-[-5vh] text-[1rem] max-[484px]:mt-[15vh] max-[485px]:text-[0.8rem]' 
         >
           <h1 
           className='sm:max-w-full md:max-w-[50rem] lg:max-w-[40rem] xl:max-w-[50rem] 2xl:max-w-[60rem] text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold tracking-wide my-[2rem] z-40 max-[425px]:text-3xl'
