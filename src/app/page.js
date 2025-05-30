@@ -9,7 +9,8 @@ import ResumeBuilderLanding from "@/components/Resume";
 import JobPortalLanding from "@/components/job";
 import Hero from "@/components/Hero";
 import AdvancedPreloader from "@/components/preloader";
-
+import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
+ 
 const OnboardingSection = () => {
   const [scrollY, setScrollY] = useState(0);
   const [lineHeight, setLineHeight] = useState("0%");
@@ -95,7 +96,9 @@ const OnboardingSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="Image w-full md:w-1/2 bg-[#222] md:rounded-e-lg md:h-auto h-96"></div>
+              <div className="Image w-full md:w-1/2 bg-[#222] md:rounded-e-lg md:h-auto h-96">
+                <Image src={'/mainHome/resumes.png'} height={600} width={600} alt="E-commerce" layout="responsive" objectFit="cover" />
+              </div>
             </div>              
             {/* Job Portal */}
             <div className="flex flex-col md:flex-row-reverse">
@@ -119,7 +122,9 @@ const OnboardingSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="Image w-full md:w-1/2 bg-[#222] md:rounded-s-lg md:h-auto h-96"></div>
+              <div className="Image w-full md:w-1/2 bg-[#222] md:rounded-s-lg md:h-auto h-96">
+                <Image src={'/mainHome/jobs.png'} height={600} width={600} alt="E-commerce" layout="responsive" objectFit="cover" />
+              </div>
             </div>
 
           </div>
@@ -163,7 +168,9 @@ const OnboardingSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="Image w-full md:w-1/2 bg-[#222] md:rounded-e-lg md:h-auto h-96"></div>
+              <div className="Image w-full md:w-1/2 bg-[#222] md:rounded-e-lg md:h-auto h-96"> 
+                <Image src={'/mainHome/inno.png'} height={600} width={600} alt="E-commerce" layout="responsive" objectFit="cover" />
+              </div>
               </div>
 
               {/* Project 2 */}
@@ -188,16 +195,57 @@ const OnboardingSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="Image w-full md:w-1/2 bg-[#222] md:rounded-s-lg md:h-auto h-96"></div>
+              <div className="Image w-full md:w-1/2 bg-[#222] md:rounded-s-lg md:h-auto h-96">
+                <Image src={'/mainHome/e-com.png'} height={600} width={600} alt="E-commerce" layout="responsive" objectFit="cover" />
+              </div>
               </div>
             </div>
           </div>
       </section>
 
+
+      {/* <section className="bg-black text-white px-6 py-16">
+        FEATURES WE SERVE 
+        <div className="mb-24">
+          <h2 className="text-4xl font-extrabold mb-4">
+            FEATURES <span className="text-red-600">WE SERVE</span>
+          </h2>
+          <p className="text-lg text-gray-300 max-w-2xl mb-10 leading-relaxed">
+            The quick brown fox jumps over the lazy. The quick brown fox jumps over the lazy. 
+            The quick brown fox jumps over the lazy.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-gray-800 h-64 rounded-lg shadow-lg"></div>
+            <div className="bg-gray-800 h-64 rounded-lg shadow-lg"></div>
+            <div className="bg-gray-800 h-64 rounded-lg shadow-lg"></div>
+            <div className="bg-gray-800 h-64 rounded-lg shadow-lg"></div>
+          </div>
+        </div>
+
+        OUR PROJECTS 
+        <div>
+          <h2 className="text-4xl font-extrabold mb-4">OUR PROJECTS</h2>
+          <p className="text-lg text-gray-300 max-w-2xl mb-10 leading-relaxed">
+            The quick brown fox jumps over the lazy. The quick brown fox jumps over the lazy. 
+            The quick brown fox jumps over the lazy.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-gray-800 h-64 rounded-lg shadow-lg"></div>
+            <div className="bg-gray-800 h-64 rounded-lg shadow-lg"></div>
+            <div className="bg-gray-800 h-64 rounded-lg shadow-lg"></div>
+            <div className="bg-gray-800 h-64 rounded-lg shadow-lg"></div>
+          </div>
+        </div>
+      </section> */}
+
+
+
+
+
       {/* New Gallery Section  */}
-      <section className="bg-gradient-to-br from-black via-zinc-900 to-black text-white py-16 px-6 md:px-20">
+      {/* <section className="bg-gradient-to-br from-black via-zinc-900 to-black text-white py-16 px-6 md:px-20">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          {/* Left: Large Image */}
+          Left: Large Image
           <div className="relative w-full aspect-square rounded overflow-hidden shadow-lg">
             <Image
               src="/images/gallery/main.jpg" // Replace with your real image path
@@ -207,12 +255,12 @@ const OnboardingSection = () => {
             />
           </div>
 
-          {/* Right: Text & Grid */}
+          Right: Text & Grid
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Gallery</h2>
             <p className="text-gray-400 mb-6">This is our gallery. Check it out.</p>
 
-            {/* Image grid */}
+            Image grid
             <div className="grid grid-cols-3 gap-3 mb-6">
               {[
                 "/images/gallery/1.jpg",
@@ -233,13 +281,21 @@ const OnboardingSection = () => {
               ))}
             </div>
 
-            {/* View All button */}
+            View All button
             <button className="px-6 py-2 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition">
               View All
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
+  
+
+
+ 
+
+
+
+
 
 
       

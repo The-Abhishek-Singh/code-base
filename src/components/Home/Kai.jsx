@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState, useRef } from "react";
 import ScrollReveal from "../ScrollReveal";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
 const ServicesList = () => {
   const slides = ["/Partnerbg.png", "/partnerpg.png", "/OurTeam.png"];
@@ -264,6 +264,63 @@ const ServicesList = () => {
     if (ref.current) ref.current.pause();
   };
 
+
+    // Main carousel images
+  const mainImages = [
+    {
+      src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop",
+      alt: "Featured gallery image 1"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop", 
+      alt: "Featured gallery image 2"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      alt: "Featured gallery image 3"
+    }
+  ];
+
+  // Gallery grid images
+  const gridImages = [
+    { src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=200&h=150&fit=crop", alt: "Gallery image 1" },
+    { src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=150&fit=crop", alt: "Gallery image 2" },
+    { src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=200&h=150&fit=crop", alt: "Gallery image 3" },
+    { src: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=200&h=150&fit=crop", alt: "Gallery image 4" },
+    { src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=200&h=150&fit=crop", alt: "Gallery image 5" },
+    { src: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=200&h=150&fit=crop", alt: "Gallery image 6" }
+  ];
+
+  const [currentSlide1, setCurrentSlide1] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // Auto-advance carousel
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % mainImages.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, mainImages.length]);
+
+  const nextSlide1 = () => {
+    setCurrentSlide((prev) => (prev + 1) % mainImages.length);
+  };
+
+  const prevSlide1 = () => {
+    setCurrentSlide((prev) => (prev - 1 + mainImages.length) % mainImages.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const toggleAutoPlay = () => {
+    setIsAutoPlaying(!isAutoPlaying);
+  };
+
   return (
     <div
       ref={sectionRef}
@@ -436,27 +493,7 @@ const ServicesList = () => {
   </div>
 ))}
       {/* Our Gallery section starts from here */}
-
-      <div className="bg-black text-white py-10">
-        {/* Title Section */}
-        {/* <div className="text-center relative w-full">
-        <h2 className="text-3xl font-bold inline-block relative pb-2">
-          <span className="text-white relative z-10">OUR </span>
-          <span className="text-red-500 relative z-10">GALLERY</span>
-          <div className="absolute left-0 bottom-0 w-[130%] h-1 bg-gradient-to-r from-white to-transparent"></div>
-        </h2>
-      </div>
-      {/* Image Section */}
-        {/* <div className="flex justify-center w-[87vw] mx-auto mt-20 mb-40 h-[35vw] ">
-  <img
-    src="/ourteam/gallery.jpg"
-    alt="Gallery"
-    width={800}
-    height={400}
-    className="w-full rounded-lg shadow-lg object-cover"
-  />
-</div> */}
-
+      {/* <div className="bg-black text-white py-10">
         <div className="px-4 sm:px-8 lg:px-16 space-y-10 w-full lg:w-[100%] p-20">
           <div className="text-center py-8 sm:py-10 relative">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-poppins inline-block relative">
@@ -466,9 +503,7 @@ const ServicesList = () => {
           </div>
 
           <div className="bg-black text-white">
-            {/* Mobile layout - single column for extra small screens with much larger size */}
             <div className="grid grid-cols-1 gap-8 sm:hidden mx-auto w-[18rem]">
-              {/* Live Classroom - Featured item first on mobile with significantly increased height */}
               <ScrollReveal
                 animation="slideUp"
                 duration={600}
@@ -490,7 +525,6 @@ const ServicesList = () => {
                 </div>
               </ScrollReveal>
 
-              {/* Other items with significantly increased height */}
               <ScrollReveal
                 animation="slideUp"
                 duration={600}
@@ -603,9 +637,7 @@ const ServicesList = () => {
               </ScrollReveal>
             </div>
 
-            {/* Small tablet layout - modified for screens between sm and md breakpoints */}
             <div className="hidden sm:grid sm:grid-cols-2 gap-8 md:hidden mx-auto w-[35rem] px-4">
-              {/* Live Classroom - Featured item with larger size */}
               <div className="col-span-2 bg-black text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-96">
                 <div className="absolute inset-0 z-0">
                   <video
@@ -621,7 +653,6 @@ const ServicesList = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-10 text-center"></div>
               </div>
 
-              {/* Other items with increased height */}
               <div className="bg-black col-span-2 text-white rounded-lg border border-white border-opacity-20 hover:border-opacity-50 transition-all duration-300 relative h-80">
                 <div className="absolute inset-0 z-0 overflow-hidden">
                   <img
@@ -691,9 +722,7 @@ const ServicesList = () => {
               </div>
             </div>
 
-            {/* Desktop layout - complex grid */}
             <div className="hidden md:grid md:grid-cols-4 md:grid-rows-6 md:gap-4 md:h-[700px] relative w-full">
-              {/* Practice with Assignments */}
               <ScrollReveal
                 animation="slightLeft"
                 duration={700}
@@ -711,7 +740,6 @@ const ServicesList = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
               </ScrollReveal>
 
-              {/* 1:1 Guidance */}
               <ScrollReveal
                 animation="fadeIn"
                 duration={900}
@@ -729,7 +757,6 @@ const ServicesList = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
               </ScrollReveal>
 
-              {/* Situational Problem & Solution */}
               <ScrollReveal
                 animation="fadeIn"
                 duration={900}
@@ -747,7 +774,6 @@ const ServicesList = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
               </ScrollReveal>
 
-              {/* Live Classroom */}
               <ScrollReveal
                 animation="slideUp"
                 duration={900}
@@ -771,7 +797,6 @@ const ServicesList = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center"></div>
               </ScrollReveal>
 
-              {/* Cloud Sandbox */}
               <ScrollReveal
                 animation="fadeIn"
                 duration={900}
@@ -794,7 +819,6 @@ const ServicesList = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-10"></div>
               </ScrollReveal>
 
-              {/* AI-Assisted Problem Solving */}
               <ScrollReveal
                 animation="scaleUp"
                 duration={900}
@@ -812,7 +836,6 @@ const ServicesList = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center"></div>
               </ScrollReveal>
 
-              {/* Teaching Assistance */}
               <ScrollReveal
                 animation="scaleUp"
                 duration={900}
@@ -832,8 +855,6 @@ const ServicesList = () => {
             </div>
           </div>
         </div>
-
-        {/* Stats Section */}
 
         <div 
       ref={statsRef}
@@ -867,16 +888,13 @@ const ServicesList = () => {
       </div>
     </div>
 
-        {/* Our Team section start here */}
 
         <div className="bg-black text-white py-10 px-4 text-center">
-          {/* Title Section */}
           <h2 className="text-3xl font-bold inline-block relative pb-2">
             The Minds Behind <span className="text-red-500">CAREERTRONIC</span>{" "}
             TEAM
             <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
           </h2>
-          {/* Description */}
           <p className="max-w-3xl mx-auto text-base sm:text-xl leading-relaxed my-16">
             At Careertronic Global Services, our strength lies in our skilled
             and passionate team, dedicated to delivering innovative solutions
@@ -888,7 +906,6 @@ const ServicesList = () => {
             to drive your success.
           </p>
 
-          {/* Image Section */}
           <div className="mt-6 flex justify-center w-[70vw]  h-[30vw] mx-auto mb-20">
             <Image
               src="/ourteam/leader.jpeg"
@@ -899,7 +916,6 @@ const ServicesList = () => {
             />
           </div>
 
-          {/* Button */}
           <div className="mt-6">
             <Link href={"/ourteam"}>
               <button className="bg-red-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
@@ -908,7 +924,305 @@ const ServicesList = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      {/* New Gallery Section  */}
+      <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-950 to-gray-700 px-6 py-16 lg:px-12">
+        {/* <!-- Background decorative shapes --> */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-gray-800 rounded-2xl opacity-40 transform rotate-12"></div>
+            <div className="absolute top-40 right-20 w-24 h-24 bg-gray-500 rounded-xl opacity-30 transform -rotate-6"></div>
+            <div className="absolute bottom-32 left-20 w-40 h-20 bg-gray-700 rounded-full opacity-35"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto">
+            {/* <!-- Title Section --> */}
+            <div className="flex justify-end mb-12">
+                <div className="text-right">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 font-sans">Our Gallery</h2>
+                    <div className="w-24 h-0.5 bg-white ml-auto"></div>
+                </div>
+            </div>
+
+            {/* <!-- Main Content Grid --> */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                {/* <!-- Left Side - Main Image --> */}
+                <div className="relative">
+                  {/* Background shape for depth */}
+                  <div className="absolute -inset-4 bg-gray-800 rounded-3xl opacity-50 transform rotate-1"></div>
+                  <div className="absolute -inset-2 bg-gray-600 rounded-3xl opacity-40 transform -rotate-1"></div>
+                  
+                  {/* Main Image Container */}
+                  <div className="relative bg-gray-800 rounded-2xl p-2 shadow-2xl border border-gray-600 group">
+                    <div className="relative overflow-hidden rounded-xl">
+                      <img 
+                        src={mainImages[currentSlide].src}
+                        alt={mainImages[currentSlide].alt}
+                        className="w-full h-64 md:h-80 lg:h-96 object-cover transition-all duration-500 ease-in-out"
+                      />
+                      
+                      {/* Navigation arrows */}
+                      <button
+                        onClick={prevSlide1}
+                        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+                      >
+                        <ChevronLeft size={20} />
+                      </button>
+                      <button
+                        onClick={nextSlide1}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+                      >
+                        <ChevronRight size={20} />
+                      </button>
+
+                      {/* Auto-play toggle */}
+                      <button
+                        onClick={toggleAutoPlay}
+                        className="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:scale-110"
+                      >
+                        {isAutoPlaying ? <Pause size={16} /> : <Play size={16} />}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Carousel Indicators */}
+                  <div className="flex justify-center mt-6 space-x-2">
+                    {mainImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => goToSlide(index)}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 hover:scale-125 ${
+                          index === currentSlide 
+                            ? 'bg-white shadow-lg' 
+                            : 'bg-gray-500 hover:bg-gray-400'
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* Progress indicator */}
+                  {isAutoPlaying && (
+                    <div className="mt-4 bg-gray-700 rounded-full h-1 overflow-hidden">
+                      <div 
+                        className="h-full bg-white transition-all duration-100 ease-linear"
+                        style={{
+                          width: '100%',
+                          animation: 'progress 4s linear infinite'
+                        }}
+                      />
+                    </div>
+                  )}
+                </div>
+
+                {/* <!-- Right Side - Description and Grid --> */}
+                <div className="space-y-8">
+                    {/* <!-- Description --> */}
+                    <p className="text-gray-300 text-lg font-sans leading-relaxed">
+                        This is our gallery. Check it out.
+                    </p>
+
+                    {/* <!-- Image Grid --> */}
+                    <div className="relative">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div className="bg-gray-800 rounded-lg p-1 shadow-lg border border-gray-600 hover:border-gray-500 transition-colors">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=200&h=150&fit=crop" 
+                                    alt="Gallery image 1" 
+                                    className="w-full h-20 md:h-24 object-cover rounded"
+                                />
+                            </div>
+                            <div className="bg-gray-800 rounded-lg p-1 shadow-lg border border-gray-600 hover:border-gray-500 transition-colors">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200&h=150&fit=crop" 
+                                    alt="Gallery image 2" 
+                                    className="w-full h-20 md:h-24 object-cover rounded"
+                                />
+                            </div>
+                            <div className="bg-gray-800 rounded-lg p-1 shadow-lg border border-gray-600 hover:border-gray-500 transition-colors">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=200&h=150&fit=crop" 
+                                    alt="Gallery image 3" 
+                                    className="w-full h-20 md:h-24 object-cover rounded"
+                                />
+                            </div>
+                            <div className="bg-gray-800 rounded-lg p-1 shadow-lg border border-gray-600 hover:border-gray-500 transition-colors">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=200&h=150&fit=crop" 
+                                    alt="Gallery image 4" 
+                                    className="w-full h-20 md:h-24 object-cover rounded"
+                                />
+                            </div>
+                            <div className="bg-gray-800 rounded-lg p-1 shadow-lg border border-gray-600 hover:border-gray-500 transition-colors">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=200&h=150&fit=crop" 
+                                    alt="Gallery image 5" 
+                                    className="w-full h-20 md:h-24 object-cover rounded"
+                                />
+                            </div>
+                            <div className="bg-gray-800 rounded-lg p-1 shadow-lg border border-gray-600 hover:border-gray-500 transition-colors">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=200&h=150&fit=crop" 
+                                    alt="Gallery image 6" 
+                                    className="w-full h-20 md:h-24 object-cover rounded"
+                                />
+                            </div>
+                        </div>
+
+                        {/* <!-- View All Button --> */}
+                        <div className="flex justify-end mt-6">
+                            <button className="px-6 py-3 bg-transparent border-2 border-gray-400 text-white font-sans font-medium rounded-full hover:border-white hover:bg-white hover:bg-opacity-10 transition-all duration-300 ease-in-out transform hover:scale-105">
+                                View All
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* <!-- Additional decorative elements --> */}
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50"></div>
+      </section>
+
+        {/* Good Life Begins With a Good Company */}
+       <section className="relative bg-black px-4 lg:px-16 py-10">
+        {/* Main Hero Content  */}
+        <div className="max-w-7xl mx-auto">
+            {/* Hero Layout - Flex container  */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12 mb-10">
+                
+                 {/* Left Column - Image  */}
+                <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+                    <div className="relative max-w-md w-full">
+                        <Image 
+                            src={'/mainHome/jobs.png'} 
+                            height={600}
+                            width={600}
+                            alt="Glowing microchip technology" 
+                            className="w-full md:h-auto h-96 object-contain rounded-2xl shadow-2xl border border-gray-800"
+                        />
+                         {/* Subtle glow effect  */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl"></div>
+                    </div>
+                </div>
+
+                {/* Right Column - Text Content  */}
+                <div className="w-full lg:w-1/2 text-center lg:text-left space-y-6">
+                    {/* Main Title  */}
+                    <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
+                        Good Life Begins With
+                        <br/>
+                        <span className="text-white">A Good Company</span>
+                    </h1>
+
+                    {/* Subtitle Paragraph  */}
+                    <p className="text-gray-300 text-base lg:text-base max-w-md mx-auto lg:mx-0 leading-relaxed">
+                        Ultricies purus vitae sem tincidunt ut cursus purus. Ultricies proin magna molestie 
+                        amet eros at elementum. Sed vel nunc ut bibendum eros ornare sodales commodo.
+                        augue semper porta bibendum semper lorem euismod feugiat euismod volutpat.
+                    </p>
+
+                    {/* Buttons  */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+                            Search Job
+                        </button>
+                        <a href="#" className="text-sm text-gray-300 hover:text-white underline transition-colors duration-300">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            {/* Stats Section  */}
+            <div className="border-t border-dashed border-gray-700 pt-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    
+                    {/* Stat 1 */}
+                    <div className="text-center lg:text-left space-y-2">
+                        <div className="text-red-600 text-3xl lg:text-4xl font-bold">12K+</div>
+                        <h3 className="text-white font-semibold text-lg">Clients worldwide</h3>
+                        <p className="text-sm text-gray-400 max-w-xs mx-auto lg:mx-0">
+                            Sit et tempor pharetra aliquet magna lacus ut cursus placiti. Blandit ut massa 
+                            elementum.
+                        </p>
+                    </div>
+
+                    {/* Stat 2  */}
+                    <div className="text-center lg:text-left space-y-2">
+                        <div className="text-red-600 text-3xl lg:text-4xl font-bold">20K+</div>
+                        <h3 className="text-white font-semibold text-lg">Active resume</h3>
+                        <p className="text-sm text-gray-400 max-w-xs mx-auto lg:mx-0">
+                            Sit et tempor pharetra aliquet magna lacus ut cursus placiti. Blandit ut massa 
+                            elementum.
+                        </p>
+                    </div>
+
+                    {/* Stat 3  */}
+                    <div className="text-center lg:text-left space-y-2">
+                        <div className="text-red-600 text-3xl lg:text-4xl font-bold">18K+</div>
+                        <h3 className="text-white font-semibold text-lg">Companies</h3>
+                        <p className="text-sm text-gray-400 max-w-xs mx-auto lg:mx-0">
+                            Sit et tempor pharetra aliquet magna lacus ut cursus placiti. Blandit ut massa 
+                            elementum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+            <div className="absolute top-20 right-10 w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+            <div className="absolute bottom-40 left-20 w-1 h-1 bg-red-400 rounded-full animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse delay-500"></div>
+        </div>
+      </section>
+
+       {/* Image Section */}
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image  */}
+        <div className="absolute inset-0 z-0">
+            <img 
+                src="/mainHome/7468d10cfa116929f0f6e9849b0e2cb9b9989823.png" 
+                alt="Video conference meeting on monitor" 
+                className="w-full h-full object-cover"
+            />
+             {/* Dark overlay for better text readability  */}
+            <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        {/* Content Container  */}
+        <div className="relative z-10 h-full flex items-center justify-start px-6 md:px-12 lg:px-16">
+             {/* Glassmorphism CTA Box  */}
+            <div className="bg-black/40 backdrop-blur border border-white/20 rounded-2xl p-6 md:p-8 max-w-md shadow-2xl">
+                {/* Title  */}
+                <div className="mb-6">
+                    <h1 className="text-white text-2xl md:text-3xl font-bold leading-tight mb-2">
+                        Innovate with Purpose
+                    </h1>
+                    <h2 className="text-white text-xl md:text-2xl font-semibold leading-tight">
+                        Transforming Learning for the Next Generation
+                    </h2>
+                </div>
+
+                {/* Description  */}
+                <p className="text-sm text-gray-200 leading-relaxed mb-6 max-w-sm">
+                    At our learning premium broadcast meet ligula at eleifend aliquet. Blandit et massa elementum id 
+                    facilisis adipiscing platea tellus. Imerdiet ullamcorper urna egestas sagittis donec. Consequat 
+                    posuere ridiculus tortor cursus ut pulvinar gravida. Sapien sodales mauris nam lacinia velit vel lorem.
+                </p>
+
+                {/* CTA Button  */}
+                <button className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                    Start Growing
+                </button>
+            </div>
+        </div>
+
+        {/* <!-- Additional decorative elements for depth --> */}
+        <div className="absolute top-20 right-20 w-3 h-3 bg-white/20 rounded-full animate-pulse hidden md:block"></div>
+        <div className="absolute bottom-32 right-32 w-2 h-2 bg-white/15 rounded-full animate-pulse delay-1000 hidden lg:block"></div>
+      </section>
     </div>
   );
 };
