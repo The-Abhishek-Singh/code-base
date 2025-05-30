@@ -1331,6 +1331,7 @@ const skills = [
         {/* FAQ Section */}
         <div className='w-full h-auto bg-white'>
             <FAQSection faqData={faqData} />
+            <FAQSection faqData={faqData} />
         </div>
 
     </div>

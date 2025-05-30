@@ -112,7 +112,7 @@ const Hero = () => {
   return (
     <div className='mb-36 px-5 md:px-10 lg:p-0'>
       <div 
-        className='max-[500px]-h-[80vw] w-full bg-black flex flex-col justify-center relative mt-[-10vh] lg:mt-48'
+        className='h-screen md:h-[80vh] lg:h-screen w-full bg-black flex relative mt-[-13vh] lg:mt-[0%] xl:mt-[0%] flex-col justify-center min-h-[90vh-6rem]'
         style={{ 
           opacity: scrollFade,
           transform: heroTransform,
