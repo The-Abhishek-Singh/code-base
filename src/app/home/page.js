@@ -2,11 +2,13 @@
 
 import Mrq from "@/components/Home/Mrq";
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Kai from "@/components/Home/Kai";
 import StickyCard from "@/components/StickyCard";
 import ResumeBuilderLanding from "@/components/Resume";
 import JobPortalLanding from "@/components/job";
 import Hero from "@/components/Hero";
+import OurProject from "@/components/Home/OurProject";
 
 const OnboardingSection = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -51,6 +53,11 @@ const OnboardingSection = () => {
       <div className="relative z-20">
         <StickyCard />
       </div>
+
+      <div>
+        <OurProject />
+      </div>
+
       
       {/* Rest of your content */}
       <div className="w-full h-auto min-h-screen bg-gradient-to-r from-black">

@@ -887,43 +887,6 @@ const ServicesList = () => {
         </p>
       </div>
     </div>
-
-
-        <div className="bg-black text-white py-10 px-4 text-center">
-          <h2 className="text-3xl font-bold inline-block relative pb-2">
-            The Minds Behind <span className="text-red-500">CAREERTRONIC</span>{" "}
-            TEAM
-            <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
-          </h2>
-          <p className="max-w-3xl mx-auto text-base sm:text-xl leading-relaxed my-16">
-            At Careertronic Global Services, our strength lies in our skilled
-            and passionate team, dedicated to delivering innovative solutions
-            for your success. From software developers and IT trainers to
-            business consultants and education advisors, we bring expertise
-            across all our services. We collaborate, innovate, and grow,
-            ensuring cutting-edge solutions tailored to your needs. With a
-            commitment to continuous learning, we stay ahead of industry trends
-            to drive your success.
-          </p>
-
-          <div className="mt-6 flex justify-center w-[70vw]  h-[30vw] mx-auto mb-20">
-            <Image
-              src="/ourteam/leader.jpeg"
-              alt="Gallery"
-              width={800}
-              height={400}
-              className="w-full rounded-lg shadow-lg object-cover"
-            />
-          </div>
-
-          <div className="mt-6">
-            <Link href={"/ourteam"}>
-              <button className="bg-red-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
-                Show All
-              </button>
-            </Link>
-          </div>
-        </div>
       </div> */}
 
       {/* New Gallery Section  */}
@@ -1079,7 +1042,7 @@ const ServicesList = () => {
             </div>
         </div>
 
-        {/* <!-- Additional decorative elements --> */}
+        {/* Additional decorative elements */}
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent opacity-50"></div>
       </section>
 
@@ -1098,7 +1061,7 @@ const ServicesList = () => {
                             height={600}
                             width={600}
                             alt="Glowing microchip technology" 
-                            className="w-full md:h-auto h-96 object-contain rounded-2xl shadow-2xl border border-gray-800"
+                            className="w-full md:h-auto object-contain rounded-2xl shadow-2xl border border-gray-800"
                         />
                          {/* Subtle glow effect  */}
                         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl"></div>
@@ -1219,9 +1182,135 @@ const ServicesList = () => {
             </div>
         </div>
 
-        {/* <!-- Additional decorative elements for depth --> */}
+        {/* Additional decorative elements for depth */}
         <div className="absolute top-20 right-20 w-3 h-3 bg-white/20 rounded-full animate-pulse hidden md:block"></div>
         <div className="absolute bottom-32 right-32 w-2 h-2 bg-white/15 rounded-full animate-pulse delay-1000 hidden lg:block"></div>
+      </section>
+
+      {/* Testimonial  */}
+      <section className="py-16 px-6 md:px-20">
+        <div className="max-w-7xl mx-auto">
+          {/* Blue border container */}
+          <div className="lg:p-8 md:p-12 bg-black">
+            {/* Section Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Testimonials from <span className="text-red-700">Our</span> Customers
+              </h2>
+              <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
+                At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id...
+              </p>
+            </div>
+
+            {/* Testimonials Grid */}
+            <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
+              {/* Testimonial 1 */}
+              <div className="bg-zinc-950 border border-gray-700 rounded-lg p-6 relative">
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-red-700 text-lg">★</span>
+                  ))}
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-white text-xl font-semibold mb-4">Amazing services</h3>
+                
+                {/* Review Text */}
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 italic">
+                  Metus faucibus sed turpis lectus feugiat tincidunt. Rhoncus sed tristique in dolor. 
+                  Mus etiam et vestibulum venenatis
+                </p>
+                
+                {/* Quote Icon */}
+                <div className="absolute bottom-6 right-6">
+                  <span className="text-red-700 text-4xl font-bold">"</span>
+                </div>
+                
+                {/* Client Info */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm font-medium">MK</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Marco Kihn</p>
+                    <p className="text-gray-400 text-sm">Happy Client</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="bg-zinc-950 border border-gray-700 rounded-lg p-6 relative">
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-red-700 text-lg">★</span>
+                  ))}
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-white text-xl font-semibold mb-4">Everything simple</h3>
+                
+                {/* Review Text */}
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 italic">
+                  Mus etiam et vestibulum venenatis viverra ut. Elit morbi bibendum ullamcorper 
+                  augue faucibus
+                </p>
+                
+                {/* Quote Icon */}
+                <div className="absolute bottom-6 right-6">
+                  <span className="text-red-700 text-4xl font-bold">"</span>
+                </div>
+                
+                {/* Client Info */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm font-medium">KH</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Kristin Hester</p>
+                    <p className="text-gray-400 text-sm">Happy Client</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="bg-zinc-950 border border-gray-700 rounded-lg p-6 relative">
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-red-700 text-lg">★</span>
+                  ))}
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-white text-xl font-semibold mb-4">Awesome, thank you!</h3>
+                
+                {/* Review Text */}
+                <p className="text-gray-400 text-sm leading-relaxed mb-6 italic">
+                  Rhoncus sed tristique in dolor. Mus etiam et vestibulum venenatis viverra ut. Elit morbi 
+                  bibendum ullamcorper augue faucibus. Nulla et tempor montes
+                </p>
+                
+                {/* Quote Icon */}
+                <div className="absolute bottom-6 right-6">
+                  <span className="text-red-700 text-4xl font-bold">"</span>
+                </div>
+                
+                {/* Client Info */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm font-medium">ZC</span>
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Zion Cisneros</p>
+                    <p className="text-gray-400 text-sm">Happy Client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

@@ -51,7 +51,7 @@ export default function Home() {
   const featuredCourses = [
     {
       id: 1,
-      title: "Full Stack Development",
+      title: "Full Stack Web Development",
       rating: 5,
       category: "Development",
       image: "/Course/wd1.webp",

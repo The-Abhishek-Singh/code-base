@@ -145,6 +145,145 @@ const page = () => {
         </div>
       </div>
 
+      <section className="bg-black text-white relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-5">
+          <ScrollReveal animation="fadeIn" duration={1200} delay={200}>
+            <div className="absolute top-20 left-10 w-32 h-32 border border-gray-600 rounded-full"></div>
+          </ScrollReveal>
+          <ScrollReveal animation="scaleUp" duration={1000} delay={400}>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-gray-600 rounded-full"></div>
+          </ScrollReveal>
+          <ScrollReveal animation="fadeIn" duration={800} delay={600}>
+            <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-red-500 rounded-full"></div>
+          </ScrollReveal>
+          <ScrollReveal animation="fadeIn" duration={800} delay={800}>
+            <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-yellow-500 rounded-full"></div>
+          </ScrollReveal>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-14 py-10 md:py-16">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+            
+            {/* Left Column - Content */}
+            <div className="space-y-8">
+              {/* Section Title */}
+              <ScrollReveal animation="slideRight" duration={1000} delay={100}>
+                <div>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                    <span className="text-white">OUR</span>{' '}
+                    <br className="hidden md:block" />
+                    <span className="text-red-500">TEAM</span>
+                  </h2>
+                </div>
+              </ScrollReveal>
+
+              {/* Content Paragraphs */}
+              <div className="space-y-6 text-gray-300 leading-relaxed">
+                <ScrollReveal animation="slightRight" duration={800} delay={300}>
+                  <p className="text-base md:text-lg">
+                    At <span className="text-white font-semibold">Careertronic Global Services</span>, our greatest asset is our <span className="text-white font-semibold">exceptional team</span> of passionate, skilled, and experienced professionals, each dedicated to delivering <span className="text-white font-semibold">innovative solutions</span> that drive your success.
+                  </p>
+                </ScrollReveal>
+                
+                <ScrollReveal animation="slightRight" duration={800} delay={500}>
+                  <p className="text-base md:text-lg">
+                    From <span className="text-white font-semibold">software developers</span> and <span className="text-white font-semibold">IT trainers</span> to <span className="text-white font-semibold">business consultants</span> and <span className="text-white font-semibold">global education advisors</span>, we have a diverse group of experts across every area of our service offerings, ensuring that you receive the highest level of <span className="text-white font-semibold">expertise</span>, <span className="text-white font-semibold">care</span>, and <span className="text-white font-semibold">support</span>.
+                  </p>
+                </ScrollReveal>
+                
+                <ScrollReveal animation="slightRight" duration={800} delay={700}>
+                  <p className="text-base md:text-lg">
+                    Our team thrives on <span className="text-white font-semibold">collaboration</span>, constantly sharing insights, ideas, and best practices to create solutions that are <span className="text-white font-semibold">customized</span> to your unique needs. We are committed to fostering a <span className="text-white font-semibold">culture of continuous learning</span> and <span className="text-white font-semibold">growth</span>, staying ahead of industry trends to deliver the most <span className="text-white font-semibold">relevant</span>, <span className="text-white font-semibold">cutting-edge services</span> to our clients.
+                  </p>
+                </ScrollReveal>
+              </div>
+
+              {/* Bottom accent line */}
+              <ScrollReveal animation="slideRight" duration={1200} delay={900}>
+                <div className="flex items-center gap-4">
+                  <div className="h-1 w-16 bg-gradient-to-r from-red-500 to-yellow-500"></div>
+                  <div className="h-px flex-1 bg-gradient-to-r from-yellow-500 to-transparent"></div>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Right Column - Visual Element */}
+            <div className="relative">
+              {/* Main visual container */}
+              <ScrollReveal animation="slideLeft" duration={1000} delay={200}>
+                <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12 border border-gray-700">
+                  {/* Team representation visual */}
+                  <div className="space-y-6">
+                    {/* Header */}
+                    <ScrollReveal animation="fadeSlideDown" duration={800} delay={600}>
+                      <div className="text-center">
+                        <h3 className="text-2xl font-bold text-white mb-2">Our Diverse Expertise</h3>
+                        <p className="text-gray-400">Professionals across multiple domains</p>
+                      </div>
+                    </ScrollReveal>
+                    
+                    {/* Team roles grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <ScrollReveal animation="slightBottomLeft" duration={600} delay={800}>
+                        <div className="bg-gray-800 rounded-lg p-4 border border-gray-600 hover:border-red-500 transition-colors">
+                          <div className="w-8 h-8 bg-red-500 rounded-full mb-3 flex items-center justify-center">
+                            <span className="text-xs font-bold">💻</span>
+                          </div>
+                          <h4 className="text-white font-semibold text-sm mb-1">Software Developers</h4>
+                          <p className="text-gray-400 text-xs">Building innovative solutions</p>
+                        </div>
+                      </ScrollReveal>
+                      
+                      <ScrollReveal animation="slightBottomRight" duration={600} delay={900}>
+                        <div className="bg-gray-800 rounded-lg p-4 border border-gray-600 hover:border-red-500 transition-colors">
+                          <div className="w-8 h-8 bg-blue-500 rounded-full mb-3 flex items-center justify-center">
+                            <span className="text-xs font-bold">🎓</span>
+                          </div>
+                          <h4 className="text-white font-semibold text-sm mb-1">IT Trainers</h4>
+                          <p className="text-gray-400 text-xs">Empowering through education</p>
+                        </div>
+                      </ScrollReveal>
+                      
+                      <ScrollReveal animation="slightBottomLeft" duration={600} delay={1000}>
+                        <div className="bg-gray-800 rounded-lg p-4 border border-gray-600 hover:border-red-500 transition-colors">
+                          <div className="w-8 h-8 bg-green-500 rounded-full mb-3 flex items-center justify-center">
+                            <span className="text-xs font-bold">📊</span>
+                          </div>
+                          <h4 className="text-white font-semibold text-sm mb-1">Business Consultants</h4>
+                          <p className="text-gray-400 text-xs">Strategic guidance</p>
+                        </div>
+                      </ScrollReveal>
+                      
+                      <ScrollReveal animation="slightBottomRight" duration={600} delay={1100}>
+                        <div className="bg-gray-800 rounded-lg p-4 border border-gray-600 hover:border-red-500 transition-colors">
+                          <div className="w-8 h-8 bg-purple-500 rounded-full mb-3 flex items-center justify-center">
+                            <span className="text-xs font-bold">🌍</span>
+                          </div>
+                          <h4 className="text-white font-semibold text-sm mb-1">Education Advisors</h4>
+                          <p className="text-gray-400 text-xs">Global opportunities</p>
+                        </div>
+                      </ScrollReveal>
+                    </div>
+                  </div>
+                  
+                  {/* Decorative elements */}
+                  <ScrollReveal animation="spinIn" duration={1000} delay={1200}>
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500 rounded-full opacity-20"></div>
+                  </ScrollReveal>
+                  <ScrollReveal animation="spinIn" duration={1000} delay={1300}>
+                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-yellow-500 rounded-full opacity-20"></div>
+                  </ScrollReveal>
+                </div>
+              </ScrollReveal>
+              
+              {/* Background accent */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-red-500/10 to-yellow-500/10 rounded-3xl -z-10"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* First founder section */}
       <div className="h-auto bg-[#161616] text-white p-8 mt-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">

@@ -1,6 +1,7 @@
 import React from "react";
 // import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/UI/button";
 import StatsAndCommitments from "@/components/About/StatsAndCommitments";
 import BlueNWhite from "@/components/About/BlueNWhite";
@@ -11,26 +12,28 @@ import ScrollReveal from "@/components/ScrollReveal";
 function page() {
   const missionTitle = "Our Mission";
   const missionPoints = [
-    "Our mission is to harness the power of cutting-edge technology and innovative strategies to provide sustainable solutions that drive growth, enhance productivity, and improve well-being.",
-    "At Careertronic, we believe in blending traditional values with modern advancements to create a future that benefits everyone.",
+    "At Careertronic Global Services Pvt. Ltd. (CGSPL), our mission is to empower individuals and businesses through technology, training, and global opportunities—offering advanced software, world-class programs, and innovative education services.",
+    "We deliver value by improving business processes, upskilling people, and enabling access to education. Our client-focused approach ensures customized solutions that drive measurable impact and long-term growth.",
+    "We go beyond services to build lasting partnerships. By helping clients navigate digital complexities, we unlock new possibilities, foster innovation, and drive lasting success in the digital age."
   ];
 
   const missionImage = "/about/mission.svg";
 
   const visionTitle = "Our Vision";
   const visionPoints = [
-    "To be a global leader in providing innovative and transformative solutions across industries, helping businesses grow, and empowering individuals to take charge of their health and success.",
-    "We envision a world where technology seamlessly integrates with everyday life, creating opportunities, fostering meaningful relationships, and improving quality of life.",
+    "At Careertronic Global Services Pvt. Ltd. (CGSPL), our vision is to be a global leader in IT solutions, training, and education, renowned for our ability to deliver innovative, transformational, and high-quality services. We aspire to be the partner of choice for businesses and individuals worldwide, driving digital transformation, career advancement, and organizational growth in an increasingly dynamic and interconnected world.",
+    "We are committed to empowering both individuals and organizations to realize their full potential, equipping them with the tools, knowledge, and skills necessary to thrive in a constantly evolving landscape. By fostering a culture of innovation, adaptability, and continuous learning, we enable our clients and students to not only succeed but lead in the face of change and uncertainty.",
+    "Our goal is to create lasting impact through our cutting-edge solutions, expert-led training, and global education opportunities, shaping the future of work and learning for generations to come."
   ];
 
   const visionImage = "/about/vision.svg";
   const valuesTitle = "Our Values";
   const valuesPoints = [
-    "Innovation: Constantly evolving to incorporate the latest technology and advancements in our solutions.",
-    "Excellence: Delivering the highest quality service and results for our clients.",
-    "Integrity: Building trust through transparency, reliability, and ethical practices.",
-    "Customer-Centric: Understanding our clients' needs and delivering solutions that are tailored to their specific goals and challenges.",
-    "Collaboration: Working together with clients, partners, and stakeholders to achieve shared success.",
+    "Innovation: We stay ahead of industry trends by embracing emerging technologies and delivering forward-thinking solutions that meet both current and future needs.",
+    "Excellence: We strive for excellence in everything we do, offering reliable software and training solutions that ensure the best outcomes for our clients.",
+    "Integrity: We act with honesty, transparency, and fairness, building strong relationships through trust and ethical practices.",
+    "Customer-Centric: Our clients are our priority. We listen, understand, and create tailored solutions to meet their specific goals and drive long-term success.",
+    "Collaboration: We believe in the power of teamwork, working closely with clients and partners to build inclusive, enduring partnerships based on shared vision.",
   ];
 
   const valuesImage = "/about/values.svg"; // Update this with the actual image path
@@ -82,13 +85,12 @@ function page() {
                 easing="gentle"
               >
                 <p className="text-gray-300 text-lg">
-                  At Careertronics, we are a forward-thinking,
-                  results-driven company that strives to create impactful
-                  solutions for businesses and individuals.
+                  At Careertronic Global Services Pvt. Ltd. (CGSPL), we are driven by a singular purpose: to empower businesses and individuals to thrive in a fast-changing, interconnected world. Founded with a vision to provide innovative, high-quality services, we have grown into a trusted global leader in Software Development, IT Training, Industrial Automation Training, Corporate & Industrial Training, Global Education, and Business Consulting.
+
                 </p>
               </ScrollReveal>
 
-              <ScrollReveal
+              {/* <ScrollReveal
                 animation="slightUp"
                 duration={800}
                 delay={800}
@@ -110,7 +112,7 @@ function page() {
                   </Button>
                 </Link>
                 </div>
-              </ScrollReveal>
+              </ScrollReveal> */}
             </div>
 
             <div
@@ -191,6 +193,43 @@ function page() {
         visionNumber={4}
         noPoints={1}
       />
+
+      <div className="bg-black text-white py-10 px-4 text-center">
+          <h2 className="text-3xl font-bold inline-block relative pb-2">
+            The Minds Behind <span className="text-red-500">CAREERTRONIC</span>{" "}
+            TEAM
+            <div className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-white to-transparent"></div>
+          </h2>
+          <p className="max-w-3xl mx-auto text-base sm:text-xl leading-relaxed my-16">
+            At Careertronic Global Services, our strength lies in our skilled
+            and passionate team, dedicated to delivering innovative solutions
+            for your success. From software developers and IT trainers to
+            business consultants and education advisors, we bring expertise
+            across all our services. We collaborate, innovate, and grow,
+            ensuring cutting-edge solutions tailored to your needs. With a
+            commitment to continuous learning, we stay ahead of industry trends
+            to drive your success.
+          </p>
+
+          <div className="mt-6 flex justify-center w-[70vw]  h-[30vw] mx-auto mb-20">
+            <Image
+              src="/ourteam/leader.jpeg"
+              alt="Gallery"
+              width={800}
+              height={400}
+              className="w-full rounded-lg shadow-lg object-cover"
+            />
+          </div>
+
+          <div className="mt-6">
+            <Link href={"/ourteam"}>
+              <button className="bg-red-500 text-white px-6 py-2 rounded-full text-lg font-semibold">
+                Show All
+              </button>
+            </Link>
+          </div>
+        </div>
+
       <WhyChooseInnovetix />
     </>
   );
