@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const OurProject = () => {
   return (
@@ -36,10 +37,12 @@ const OurProject = () => {
                   </p>
                 </div>
                 <div className="mt-6 flex items-center gap-2">
-                  <button className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded flex items-center gap-1">
-                    Try It Now
-                    <span className="text-xl">↗</span>
-                  </button>
+                  <Link href={'https://resume-builder-three-rho.vercel.app/Resumehero'} legacyBehavior>
+                    <a target='_blank' rel="noopener noreferrer" className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded flex items-center gap-1">
+                      Try It Now
+                      <span className="text-xl">↗</span>
+                    </a>
+                  </Link>
                 </div>
               </div>
               <div className="w-full md:w-1/2 md:rounded-e-lg overflow-hidden relative min-h-[200px] md:h-full">
@@ -66,10 +69,12 @@ const OurProject = () => {
                   </p>
                 </div>
                 <div className="mt-6 flex items-center gap-2">
-                  <button className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded flex items-center gap-1">
-                    Try It Now
-                    <span className="text-xl">↗</span>
-                  </button>
+                  <Link href={'https://resume-builder-three-rho.vercel.app/'} legacyBehavior>
+                    <a target='_blank' rel="noopener noreferrer" className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded flex items-center gap-1">
+                      Try It Now
+                      <span className="text-xl">↗</span>
+                    </a>
+                  </Link>
                 </div>
               </div>
               <div className="w-full md:w-1/2 md:rounded-s-lg overflow-hidden relative min-h-[200px] md:h-full">
@@ -116,10 +121,12 @@ const OurProject = () => {
                   </p>
                 </div>
                 <div className="mt-6 flex items-center gap-2">
-                  <button className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded flex items-center gap-1">
-                    Try It Now
-                    <span className="text-xl">↗</span>
-                  </button>
+                  <Link href={'https://innovetix.vercel.app/'} legacyBehavior>
+                    <a target='_blank' rel="noopener noreferrer" className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded flex items-center gap-1">
+                      Try It Now
+                      <span className="text-xl">↗</span>
+                    </a>
+                  </Link>
                 </div>
               </div>
               <div className="w-full md:w-1/2 md:rounded-e-lg overflow-hidden relative min-h-[200px] md:h-full">
@@ -147,10 +154,12 @@ const OurProject = () => {
                   </p>
                 </div>
                 <div className="mt-6 flex items-center gap-2">
-                  <button className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded flex items-center gap-1">
-                    Try It Now
-                    <span className="text-xl">↗</span>
-                  </button>
+                  <Link href={'https://office-ecom.vercel.app/'} legacyBehavior>
+                    <a target='_blank' rel="noopener noreferrer" className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded flex items-center gap-1">
+                      Try It Now
+                      <span className="text-xl">↗</span>
+                    </a>
+                  </Link>
                 </div>
               </div>
               <div className="w-full md:w-1/2 md:rounded-s-lg overflow-hidden relative min-h-[200px] md:h-full">

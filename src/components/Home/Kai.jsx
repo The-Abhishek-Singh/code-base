@@ -1086,12 +1086,11 @@ const ServicesList = () => {
 
                     {/* Buttons  */}
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-                            Search Job
-                        </button>
-                        <a href="#" className="text-sm text-gray-300 hover:text-white underline transition-colors duration-300">
-                            Learn more
-                        </a>
+                        <Link href={'https://resume-builder-three-rho.vercel.app/'} legacyBehavior>
+                          <a target='_blank' rel="noopener noreferrer" className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded ">
+                            Search Jobs
+                          </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -1176,9 +1175,11 @@ const ServicesList = () => {
                 </p>
 
                 {/* CTA Button  */}
-                <button className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
-                    Start Growing
-                </button>
+                <Link href={'/courses'}> 
+                  <button className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                      Start Growing
+                  </button>
+                </Link>
             </div>
         </div>
 
