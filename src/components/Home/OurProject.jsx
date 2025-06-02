@@ -15,25 +15,21 @@ const OurProject = () => {
                 <span className="text-gray-400">PROJECTS</span>
               </h2>
               <p className="text-sm md:text-base text-gray-400 mt-2">
-                the quick brown fox jumps over the lazy the quick brown fox jumps over the lazy<br />
-                the quick brown fox jumps over the lazy
+                Explore the innovative solutions we’ve crafted — from career advancement platforms to smart digital services, our projects are built to empower users and businesses alike.
               </p>
             </div>
 
           {/* Product Grid */}
-          <div className="grid md:grid-cols-1 gap-10 md:gap-0">
+          <div className="grid md:grid-cols-1 gap-12">
 
             {/* Resume Builder */}
             <div className="flex flex-col-reverse md:flex-row">
-              <div className="w-full md:w-1/2 bg-[#111111] h-auto md:h-full p-3 md:p-8 md:rounded-s-lg flex flex-col justify-between shadow-md">
+              <div className="w-full md:w-1/2 bg-[#111111] h-auto md:h-full p-3 md:p-8 rounded-br-lg rounded-bl-lg md:rounded-br-none md:rounded-tl-lg flex flex-col justify-between shadow-md">
                 <div>
                   <h3 className="text-5xl font-bold text-transparent mb-4 bg-gradient-to-b from-[#FFF] to-[#999] bg-clip-text">1</h3>
                   <h4 className="text-xl font-semibold uppercase mb-3">Resume Builder</h4>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    We specialize in software development and export services, delivering cutting-edge
-                    technology solutions tailored to your business needs. Our expertise spans custom
-                    software, web and mobile applications, AI-driven solutions, and cloud integrations,
-                    ensuring seamless digital transformation.
+                    We developed a powerful and user-friendly Resume Builder platform designed to help job seekers create ATS-optimized resumes effortlessly. With professionally crafted templates, AI-powered content suggestions, and seamless PDF export features, users can showcase their skills and experience in the most impactful way possible. This tool helps candidates stand out and secure their dream job with ease.
                   </p>
                 </div>
                 <div className="mt-6 flex items-center gap-2">
@@ -45,7 +41,7 @@ const OurProject = () => {
                   </Link>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 md:rounded-e-lg overflow-hidden relative min-h-[200px] md:h-full">
+              <div className="w-full md:w-1/2 rounded-t-lg md:rounded-r-lg md:rounded-t-none overflow-hidden relative min-h-[200px] md:h-full">
                 <Image 
                     src={'/mainHome/resumes.png'} 
                     height={600} 
@@ -57,15 +53,12 @@ const OurProject = () => {
             </div>              
             {/* Job Portal */}
             <div className="flex flex-col-reverse md:flex-row-reverse">
-              <div className="w-full md:w-1/2 bg-[#111111] h-auto md:h-full p-3 md:p-8 md:rounded-e-lg flex flex-col justify-between shadow-md">
+              <div className="w-full md:w-1/2 bg-[#111111] h-auto md:h-full p-3 md:p-8 rounded-br-lg rounded-bl-lg md:rounded-bl-none md:rounded-tr-lg flex flex-col justify-between shadow-md">
                 <div>
                   <h3 className="text-5xl font-bold text-transparent mb-4 bg-gradient-to-b from-[#FFF] to-[#999] bg-clip-text">2</h3>
                   <h4 className="text-xl font-semibold uppercase mb-3">Job Portal</h4>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    We specialize in software development and export services, delivering cutting-edge
-                    technology solutions tailored to your business needs. Our expertise spans custom
-                    software, web and mobile applications, AI-driven solutions, and cloud integrations,
-                    ensuring seamless digital transformation.
+                    Our Job Portal connects talented professionals with top companies through an intelligent matching algorithm and clean user interface. The platform allows users to search and apply for jobs, build resumes, and network with recruiters—all in one place. Employers benefit from AI-driven candidate filtering, making the hiring process faster and more efficient.
                   </p>
                 </div>
                 <div className="mt-6 flex items-center gap-2">
@@ -77,7 +70,7 @@ const OurProject = () => {
                   </Link>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 md:rounded-s-lg overflow-hidden relative min-h-[200px] md:h-full">
+              <div className="w-full md:w-1/2 rounded-t-lg md:rounded-l-lg md:rounded-t-none overflow-hidden relative min-h-[200px] md:h-full">
                 <Image 
                     src={'/mainHome/jobs.png'} 
                     height={600} 
@@ -101,23 +94,19 @@ const OurProject = () => {
                 <span className="text-gray-400">PROJECTS</span>
               </h2>
               <p className="text-sm md:text-base text-gray-400 mt-2">
-                the quick brown fox jumps over the lazy the quick brown fox jumps over the lazy<br />
-                the quick brown fox jumps over the lazy
+                From AI-powered platforms to advanced ecommerce systems, we deliver modern solutions that push innovation and growth across industries.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-1 gap-10 md:gap-0">
+            <div className="grid md:grid-cols-1 gap-12">
               {/* Project 1 */}
               <div className="flex flex-col-reverse md:flex-row">
-              <div className="w-full md:w-1/2 bg-[#111111] h-auto md:h-full p-3 md:p-8 md:rounded-s-lg flex flex-col justify-between shadow-md">
+              <div className="w-full md:w-1/2 bg-[#111111] h-auto md:h-full p-3 md:p-8 rounded-br-lg rounded-bl-lg md:rounded-br-none md:rounded-tl-lg flex flex-col justify-between shadow-md">
                 <div>
                   <h3 className="text-5xl font-bold text-transparent mb-4 bg-gradient-to-b from-[#FFF] to-[#999] bg-clip-text">1</h3>
-                  <h4 className="text-xl font-semibold uppercase mb-3">Innovetix</h4>
+                  <h4 className="text-xl font-semibold uppercase mb-3">IGPT</h4>
                   <p className="text-gray-400 text-sm leading-relaxed">
-                    We specialize in software development and export services, delivering cutting-edge
-                    technology solutions tailored to your business needs. Our expertise spans custom
-                    software, web and mobile applications, AI-driven solutions, and cloud integrations,
-                    ensuring seamless digital transformation.
+                    IGPT is a cutting-edge digital transformation platform where AI meets creativity. We crafted this solution to help businesses unlock scalable innovation through intelligent automation, enhanced user experiences, and data-driven strategies. With a strong focus on merging design with advanced technology, Innovetix empowers companies to stay ahead in today’s rapidly evolving digital world
                   </p>
                 </div>
                 <div className="mt-6 flex items-center gap-2">
@@ -129,7 +118,7 @@ const OurProject = () => {
                   </Link>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 md:rounded-e-lg overflow-hidden relative min-h-[200px] md:h-full">
+              <div className="w-full md:w-1/2 rounded-t-lg md:rounded-r-lg md:rounded-t-none overflow-hidden relative min-h-[200px] md:h-full">
                 <Image 
                     src={'/mainHome/inno.png'} 
                     height={600} 
@@ -142,7 +131,7 @@ const OurProject = () => {
 
               {/* Project 2 */}
               <div className="flex flex-col-reverse md:flex-row-reverse">
-              <div className="w-full md:w-1/2 bg-[#111111] h-auto md:h-full p-3 md:p-8 md:rounded-e-lg flex flex-col justify-between shadow-md">
+              <div className="w-full md:w-1/2 bg-[#111111] h-auto md:h-full p-3 md:p-8  rounded-br-lg rounded-bl-lg md:rounded-bl-none md:rounded-tr-lg flex flex-col justify-between shadow-md">
                 <div>
                   <h3 className="text-5xl font-bold text-transparent mb-4 bg-gradient-to-b from-[#FFF] to-[#999] bg-clip-text">2</h3>
                   <h4 className="text-xl font-semibold uppercase mb-3">Ecommerce</h4>
@@ -162,7 +151,7 @@ const OurProject = () => {
                   </Link>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 md:rounded-s-lg overflow-hidden relative min-h-[200px] md:h-full">
+              <div className="w-full md:w-1/2 rounded-t-lg md:rounded-l-lg md:rounded-t-none overflow-hidden relative min-h-[200px] md:h-full">
                 <Image 
                     src={'/mainHome/e-com.png'} 
                     height={600} 

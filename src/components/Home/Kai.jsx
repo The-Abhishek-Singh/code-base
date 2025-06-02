@@ -1079,9 +1079,7 @@ const ServicesList = () => {
 
                     {/* Subtitle Paragraph  */}
                     <p className="text-gray-300 text-base lg:text-base max-w-md mx-auto lg:mx-0 leading-relaxed">
-                        Ultricies purus vitae sem tincidunt ut cursus purus. Ultricies proin magna molestie 
-                        amet eros at elementum. Sed vel nunc ut bibendum eros ornare sodales commodo.
-                        augue semper porta bibendum semper lorem euismod feugiat euismod volutpat.
+                        Discover opportunities that match your passion, skills, and ambitions. At Careertronic, we bridge the gap between top talent and leading companies around the world. Whether you're just starting your career or looking to take the next step, we help you land your ideal job.
                     </p>
 
                     {/* Buttons  */}
@@ -1104,8 +1102,7 @@ const ServicesList = () => {
                         <div className="text-red-600 text-3xl lg:text-4xl font-bold">12K+</div>
                         <h3 className="text-white font-semibold text-lg">Clients worldwide</h3>
                         <p className="text-sm text-gray-400 max-w-xs mx-auto lg:mx-0">
-                            Sit et tempor pharetra aliquet magna lacus ut cursus placiti. Blandit ut massa 
-                            elementum.
+                          We’ve helped thousands of companies around the globe find top-tier talent through our trusted hiring platform.
                         </p>
                     </div>
 
@@ -1114,8 +1111,7 @@ const ServicesList = () => {
                         <div className="text-red-600 text-3xl lg:text-4xl font-bold">20K+</div>
                         <h3 className="text-white font-semibold text-lg">Active resume</h3>
                         <p className="text-sm text-gray-400 max-w-xs mx-auto lg:mx-0">
-                            Sit et tempor pharetra aliquet magna lacus ut cursus placiti. Blandit ut massa 
-                            elementum.
+                            Our platform hosts over 20,000 up-to-date, professional resumes from qualified candidates across diverse industries.
                         </p>
                     </div>
 
@@ -1124,8 +1120,7 @@ const ServicesList = () => {
                         <div className="text-red-600 text-3xl lg:text-4xl font-bold">18K+</div>
                         <h3 className="text-white font-semibold text-lg">Companies</h3>
                         <p className="text-sm text-gray-400 max-w-xs mx-auto lg:mx-0">
-                            Sit et tempor pharetra aliquet magna lacus ut cursus placiti. Blandit ut massa 
-                            elementum.
+                            Trusted by startups and Fortune 500 companies alike to connect with skilled professionals and fill critical roles.
                         </p>
                     </div>
                 </div>
@@ -1169,9 +1164,7 @@ const ServicesList = () => {
 
                 {/* Description  */}
                 <p className="text-sm text-gray-200 leading-relaxed mb-6 max-w-sm">
-                    At our learning premium broadcast meet ligula at eleifend aliquet. Blandit et massa elementum id 
-                    facilisis adipiscing platea tellus. Imerdiet ullamcorper urna egestas sagittis donec. Consequat 
-                    posuere ridiculus tortor cursus ut pulvinar gravida. Sapien sodales mauris nam lacinia velit vel lorem.
+                    We empower the future of education through innovative digital learning solutions. Our platform is designed to enhance engagement, inspire curiosity, and foster knowledge retention in learners of all ages. With a focus on creativity, adaptability, and results, we help educators and institutions build the skills of tomorrow, today.
                 </p>
 
                 {/* CTA Button  */}
@@ -1199,7 +1192,7 @@ const ServicesList = () => {
                 Testimonials from <span className="text-red-700">Our</span> Customers
               </h2>
               <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
-                At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id...
+               See how our clients are experiencing real success with our platform.
               </p>
             </div>
 
@@ -1219,8 +1212,7 @@ const ServicesList = () => {
                 
                 {/* Review Text */}
                 <p className="text-gray-400 text-sm leading-relaxed mb-6 italic">
-                  Metus faucibus sed turpis lectus feugiat tincidunt. Rhoncus sed tristique in dolor. 
-                  Mus etiam et vestibulum venenatis
+                  “The platform exceeded my expectations. It's intuitive, efficient, and genuinely helped me connect with top opportunities.”
                 </p>
                 
                 {/* Quote Icon */}
@@ -1254,8 +1246,7 @@ const ServicesList = () => {
                 
                 {/* Review Text */}
                 <p className="text-gray-400 text-sm leading-relaxed mb-6 italic">
-                  Mus etiam et vestibulum venenatis viverra ut. Elit morbi bibendum ullamcorper 
-                  augue faucibus
+                  “From start to finish, the process was seamless. I was able to get set up and start applying within minutes.”
                 </p>
                 
                 {/* Quote Icon */}
@@ -1289,8 +1280,7 @@ const ServicesList = () => {
                 
                 {/* Review Text */}
                 <p className="text-gray-400 text-sm leading-relaxed mb-6 italic">
-                  Rhoncus sed tristique in dolor. Mus etiam et vestibulum venenatis viverra ut. Elit morbi 
-                  bibendum ullamcorper augue faucibus. Nulla et tempor montes
+                  “Outstanding support and an easy-to-use interface. This platform helped me land my current role faster than I imagined.”
                 </p>
                 
                 {/* Quote Icon */}

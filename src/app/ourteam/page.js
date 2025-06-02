@@ -71,7 +71,7 @@ const page = () => {
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10" />
         {/* Main content container */}
-        <div className="relative z-10 container mx-auto lg:pl-28 py-5 pl-8 flex flex-col lg:pr-0 pr-8  md:flex-row items-center justify-between gap-12 mb-14">
+        <div className="relative z-10 container mx-auto lg:pl-28 py-5 pl-8 flex flex-col lg:pr-0 pr-8  md:flex-row items-center justify-between gap-12 mb-6">
           {/* Text content section */}
           <div className="w-full md:w-1/2 space-y-32">
             <div className="space-y-2">
@@ -162,7 +162,7 @@ const page = () => {
           </ScrollReveal>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-14 py-10 md:py-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-14 py-10 md:py-16">
           <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
             
             {/* Left Column - Content */}
