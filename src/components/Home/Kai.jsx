@@ -1047,7 +1047,7 @@ const ServicesList = () => {
       </section>
 
         {/* Good Life Begins With a Good Company */}
-       <section className="relative bg-black px-4 lg:px-16 py-10">
+       <section id='goodCompany' className="relative bg-black px-4 lg:px-16 py-10">
         {/* Main Hero Content  */}
         <div className="max-w-7xl mx-auto">
             {/* Hero Layout - Flex container  */}
@@ -1088,6 +1088,11 @@ const ServicesList = () => {
                           <a target='_blank' rel="noopener noreferrer" className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded ">
                             Search Jobs
                           </a>
+                        </Link>
+                        <Link href={'/internship'}>
+                          <button className="bg-red-600 hover:bg-red-800 text-white px-4 py-2 rounded ">
+                            Search Internships
+                          </button>
                         </Link>
                     </div>
                 </div>

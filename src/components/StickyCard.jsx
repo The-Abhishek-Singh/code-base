@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,6 +14,7 @@ export default function Home() {
       subtitle: "Discover the future of digital experiences",
       imageUrl: "/Dholu.png", // Replace with your image path
       ctaText: "Get Started",
+      redirectUrl: "/about"
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export default function Home() {
       subtitle: "Designed for modern businesses",
       imageUrl: "/paglu.png", // Placeholder image
       ctaText: "Learn More",
+      redirectUrl: "/services"
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ export default function Home() {
       subtitle: "Connect with industry experts",
       imageUrl: "/Bholu.png", // Placeholder image
       ctaText: "Sign Up Now",
+      redirectUrl: "/Login"
     },
   ];
 
@@ -106,9 +109,11 @@ export default function Home() {
                   {slide.subtitle}
                 </p>
                 <div className="flex justify-center">
-                  <button className="bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-md font-medium text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg">
+                  <Link href={slide.redirectUrl}>
+                  <div className="bg-red-600 hover:bg-red-700 text-white py-3 px-8 rounded-md font-medium text-lg transition-transform duration-300 transform hover:scale-105 shadow-lg">
                     {slide.ctaText}
-                  </button>
+                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
